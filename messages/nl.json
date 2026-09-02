@@ -6,26 +6,26 @@
     "services": "Diensten",
     "membership": "Lidmaatschap",
     "contact": "Contact",
-    "wealth": "Wealth & Investment",
-    "clientLogin": "Client Login",
+    "wealth": "Vermogen & Beleggen",
+    "clientLogin": "Klant Login",
     "capitalAccess": "Capital Access"
   },
   "hero": {
-    "headline": "Wereldwijd Vertrouwen. Zwitserse Beveiliging.",
-    "subtext": "Discrete kluisopslagdiensten voor particuliere investeerders, instellingen en soevereine cliënten.",
+    "headline": "Zwitserse Veiligheid. Wereldwijd Vermogen.",
+    "subtext": "Discrete kluisopslag en portfoliobeheer voor particuliere investeerders, family offices en soevereine cliënten.",
     "requestAccess": "Toegang Aanvragen",
     "investorRelations": "Investeerder Relaties",
-    "clientLogin": "Client Login"
+    "clientLogin": "Klant Login"
   },
   "footer": {
     "copyright": "Swiss Bullion Depository Vault — Zwitserse Precisie. Wereldwijd Vertrouwen.",
-    "headquarters": "Headquarters",
-    "globalOffices": "Global Offices",
-    "legal": "Legal",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
-    "regulatory": "Regulatory Disclosures",
-    "investorRelations": "Investor Relations",
+    "headquarters": "Hoofdkantoor",
+    "globalOffices": "Wereldwijde Kantoren",
+    "legal": "Juridisch",
+    "privacy": "Privacybeleid",
+    "terms": "Servicevoorwaarden",
+    "regulatory": "Regelgevingsinformatie",
+    "investorRelations": "Investeerdersrelaties",
     "offices": {
       "zurich": {
         "city": "Zurich",
@@ -56,14 +56,14 @@
         "country": "United States"
       }
     },
-    "jurisdictionNote": "Swiss legal foundation. Multi-jurisdiction accessibility for global clients."
+    "jurisdictionNote": "Zwitserse juridische basis. Multi-jurisdictionele toegankelijkheid voor wereldwijde cliënten."
   },
   "about": {
     "title": "Over Ons",
     "heroTitle": "Waar Vertrouwen Technologie Ontmoet",
     "heroSubtitle": "Een particuliere Zwitserse instelling die wereldwijd vermogen beschermt met onvoorwaardelijke beveiliging en Zwitserse precisie.",
     "sectionTitle": "Over SBDV",
-    "sectionDescription": "Swiss Bullion Depository Vault (SBDV) staat als een bastion van absolute beveiliging en vertrouwelijkheid. Opgericht in Zwitserland — het wereldwijde epicentrum van vertrouwen en discretie — combineert SBDV geavanceerde bescherming met tijdloze Zwitserse precisie. Onze missie is om te bewaren en te beveiligen wat het belangrijkst is: uw vermogen, uw nalatenschap, uw gemoedsrust.",
+    "sectionDescription": "Swiss Bullion Depository Vault (SBDV) staat voor absolute veiligheid en vertrouwelijkheid. Opgericht in Zwitserland — het wereldwijde centrum van vertrouwen en discretie — combineert SBDV geavanceerde bescherming met tijdloze Zwitserse precisie. Onze missie: behouden wat het belangrijkst is — uw vermogen, uw nalatenschap, uw gemoedsrust.",
     "missionTitle": "Onze Missie",
     "missionText": "Om vermogen en vertrouwen te bewaren met Zwitserse precisie, discretie en integriteit. We zijn toegewijd aan het beschermen van niet alleen activa, maar ook het vertrouwen en de gemoedsrust die komt met het weten dat uw vermogen wordt beschermd door de hoogste normen van Zwitserse excellentie.",
     "visionTitle": "Onze Visie",
@@ -99,20 +99,20 @@
     "title": "Kluis & Beveiliging",
     "heroTitle": "De Kluis",
     "heroSubtitle": "Waar uw vermogen in absolute veiligheid rust.",
-    "vaultsTitle": "Onze Kluizen",
-    "vaultsDescription": "Onze ondergrondse goudvoorraadfaciliteiten zijn gebouwd met gelaagde verdediging, 24/7 bewaking en zero-compromise engineering.",
+    "vaultsTitle": "Onze kluizen",
+    "vaultsDescription": "Onze ondergrondse bullionfaciliteiten zijn gebouwd met gelaagde verdediging, 24/7-bewaking en compromisloze engineering.",
     "vaultFeatures": {
       "multiTiered": {
-        "title": "Gelaagde Verdediging",
-        "description": "Gelaagde beveiligingssystemen die uw activa op elk niveau beschermen."
+        "title": "Gelaagde verdediging",
+        "description": "Gelaagde beveiligingssystemen beschermen uw activa op elk niveau."
       },
       "surveillance": {
-        "title": "24/7 Bewaking",
+        "title": "24/7-bewaking",
         "description": "Continue monitoring met state-of-the-art technologie."
       },
       "engineering": {
-        "title": "Zero-Compromise Engineering",
-        "description": "Gebouwd volgens de hoogste normen van Zwitserse precisie."
+        "title": "Compromisloze engineering",
+        "description": "Gebouwd volgens de hoogste standaarden van Zwitserse precisie."
       }
     },
     "vaultPageTitle": "De Kluis",
@@ -179,20 +179,20 @@
     "sectionTitle": "Beveiligingsdiensten",
     "services": {
       "privateVault": {
-        "title": "Particuliere Kluisverhuur",
-        "description": "Veilige toewijzing voor individuen, bedrijven en familie kantoren."
+        "title": "Private kluisverhuur",
+        "description": "Veilige toewijzing voor particulieren, bedrijven en family offices."
       },
       "bullionStorage": {
-        "title": "Goudopslag",
-        "description": "LBMA-gecertificeerde audits en opslag voor edelmetalen en goud."
+        "title": "Bullionopslag",
+        "description": "LBMA-gecertificeerde audits en opslag voor edelmetalen en bullion."
       },
       "insurance": {
-        "title": "Verzekering & Auditrapportage",
-        "description": "Volledige dekking en transparantie via wereldwijde verzekeraars met uitgebreide rapportage."
+        "title": "Verzekering & auditrapportage",
+        "description": "Volledige dekking en transparantie via mondiale verzekeraars met uitgebreide rapportage."
       },
       "vipRooms": {
-        "title": "VIP Privé Bekijkingsruimtes",
-        "description": "Alleen op afspraak, met conciërgeservice voor exclusieve cliënttoegang."
+        "title": "VIP privé-bezichtigingsruimtes",
+        "description": "Alleen op afspraak, met conciergeservice voor exclusieve klanttoegang."
       }
     },
     "gridTitle": "Service Aanbiedingen",
@@ -382,61 +382,61 @@
     }
   },
   "cta": {
-    "title": "Klaar om Uw Erfenis te Beveiligen?",
-    "subtitle": "Ervaar de ongeëvenaarde beveiliging en discretie die alleen Zwitserse precisie kan bieden.",
-    "button": "Boek een Privé Consultatie"
+    "title": "Klaar om uw nalatenschap te beschermen?",
+    "subtitle": "Ervaar de ongeëvenaarde veiligheid en discretie die alleen Zwitserse precisie kan bieden.",
+    "button": "Privéconsultatie boeken"
   },
   "home": {
-    "swissStandardTitle": "De Zwitserse Standaard",
+    "swissStandardTitle": "De Zwitserse standaard",
     "swissStandard": {
       "precision": {
         "title": "Precisie",
-        "description": "Zwitserse nauwkeurigheid in elk detail, waardoor een foutloze uitvoering van onze beveiligingsprotocollen wordt gegarandeerd."
+        "description": "Zwitserse nauwkeurigheid in elk detail, voor een foutloze uitvoering van onze beveiligingsprotocollen."
       },
       "privacy": {
         "title": "Privacy",
-        "description": "Absolute discretie en vertrouwelijkheid in alle cliëntinteracties en transacties."
+        "description": "Absolute discretie en vertrouwelijkheid in alle klantinteracties en transacties."
       },
       "permanence": {
-        "title": "Permanentie",
-        "description": "Gebouwd op vertrouwen, bewezen door tijd. Een erfenis van beveiliging die generaties lang standhoudt."
+        "title": "Bestendigheid",
+        "description": "Gebouwd op vertrouwen, bewezen door de tijd. Een erfenis van veiligheid voor generaties."
       }
     },
-    "globalAccessTitle": "Wereldwijde Toegang",
-    "globalAccessDescription": "Lidmaatschap is alleen op uitnodiging. Goedgekeurde cliënten genieten van wereldwijde toegankelijkheid via ons veilige verificatiesysteem.",
-    "globalAccessLabel": "Veilig Verificatiesysteem",
-    "testimonialsTitle": "Cliëntgetuigenissen",
+    "globalAccessTitle": "Wereldwijde toegang",
+    "globalAccessDescription": "Lidmaatschap is uitsluitend op uitnodiging. Goedgekeurde cliënten genieten wereldwijde toegankelijkheid via ons beveiligde klantportaal en regionale kantoren.",
+    "globalAccessLabel": "Beveiligd klantportaal",
+    "testimonialsTitle": "Klantgetuigenissen",
     "testimonials": {
       "testimonial1": {
-        "quote": "Discretie ongeëvenaard.",
-        "author": "Particuliere Cliënt"
+        "quote": "Ongeëvenaarde discretie.",
+        "author": "Particuliere cliënt"
       },
       "testimonial2": {
-        "quote": "Zwitserse precisie op zijn best. Onze activa zijn nog nooit zo veilig geweest.",
-        "author": "Institutionele Investeerder"
+        "quote": "Zwitserse precisie op zijn best. Onze activa waren nog nooit zo veilig.",
+        "author": "Institutionele belegger"
       },
       "testimonial3": {
-        "quote": "Het toppunt van vertrouwen en vertrouwelijkheid in vermogensbehoud.",
-        "author": "Familie Kantoor"
+        "quote": "Het toonbeeld van vertrouwen en vertrouwelijkheid in vermogensbehoud.",
+        "author": "Family office"
       },
       "testimonial4": {
-        "quote": "Uitzonderlijke service die verwachtingen overtreft. SBDV is een integraal onderdeel geworden van onze vermogensbeheerstrategie.",
-        "author": "Vermogensbeheerbedrijf"
+        "quote": "Uitzonderlijke service die verwachtingen overtreft. SBDV is essentieel in onze vermogensstrategie.",
+        "author": "Vermogensbeheerder"
       },
       "testimonial5": {
-        "quote": "Het niveau van beveiliging en professionaliteit is ongeëvenaard. We vertrouwen SBDV met onze meest waardevolle activa.",
-        "author": "Vermogend Individu"
+        "quote": "Een ongeëvenaard niveau van beveiliging en professionaliteit. Wij vertrouwen SBDV onze waardevolste activa toe.",
+        "author": "Vermogende particulier"
       },
       "testimonial6": {
-        "quote": "Absolute gemoedsrust. Weten dat onze activa worden beschermd door Zwitserse normen geeft ons volledig vertrouwen.",
-        "author": "Internationale Corporatie"
+        "quote": "Absolute gemoedsrust. Weten dat onze activa volgens Zwitserse standaarden beschermd zijn, geeft volledig vertrouwen.",
+        "author": "Internationale onderneming"
       }
     },
     "globalNetworkTitle": "Global Network",
-    "globalNetworkDescription": "Discreetly serving clients across the world's financial capitals with partner vault facilities and secure logistics worldwide.",
-    "wealthTeaserTitle": "Wealth & Investment",
-    "wealthTeaserDescription": "Beyond custody — strategic portfolio management, investment advisory, and consolidated reporting through your private client portal.",
-    "wealthTeaserButton": "Explore Wealth Services"
+    "globalNetworkDescription": "Discreet cliënten bedienen in de financiële hoofdsteden van de wereld met partnerkluizen en wereldwijde logistiek.",
+    "wealthTeaserTitle": "Vermogen & Beleggen",
+    "wealthTeaserDescription": "Meer dan alleen opslag — strategisch portfoliobeheer, beleggingsadvies en geconsolideerde rapportage via uw private klantportaal.",
+    "wealthTeaserButton": "Ontdek Vermogensdiensten"
   },
   "common": {
     "loading": "Laden...",

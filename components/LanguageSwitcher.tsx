@@ -8,9 +8,17 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const languageNames: Record<Locale, string> = {
   en: "English",
-  nl: "Nederlands",
+  de: "Deutsch",
   fr: "Français",
   it: "Italiano",
+  nl: "Nederlands",
+  es: "Español",
+  pt: "Português",
+  ru: "Русский",
+  zh: "中文",
+  ja: "日本語",
+  ko: "한국어",
+  ar: "العربية",
 };
 
 export default function LanguageSwitcher() {
@@ -18,15 +26,11 @@ export default function LanguageSwitcher() {
   const pathname = usePathname();
   const router = useRouter();
 
-  // Extract current locale from pathname
   const currentLocale =
     (pathname.split("/")[1] as Locale) || ("en" as Locale);
 
   const switchLocale = (newLocale: Locale) => {
-    // Remove current locale from pathname
     const pathWithoutLocale = pathname.replace(`/${currentLocale}`, "") || "/";
-    
-    // Navigate to new locale
     router.push(`/${newLocale}${pathWithoutLocale}`);
     setIsOpen(false);
   };
@@ -40,14 +44,15 @@ export default function LanguageSwitcher() {
         aria-expanded={isOpen}
       >
         <Globe className="w-4 h-4" />
-        <span className="hidden sm:inline">{languageNames[currentLocale]}</span>
+        <span className="hidden sm:inline">
+          {languageNames[currentLocale] || languageNames.en}
+        </span>
         <span className="sm:hidden uppercase">{currentLocale}</span>
       </button>
 
       <AnimatePresence>
         {isOpen && (
           <>
-            {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -55,25 +60,24 @@ export default function LanguageSwitcher() {
               onClick={() => setIsOpen(false)}
               className="fixed inset-0 z-40"
             />
-            
-            {/* Dropdown */}
+
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="absolute right-0 mt-2 w-48 bg-white rounded-sm shadow-lg border border-charcoal/10 z-50 overflow-hidden"
+              className="absolute right-0 mt-2 w-52 max-h-[70vh] overflow-y-auto bg-white rounded-sm shadow-lg border border-charcoal/10 z-50"
             >
               {locales.map((locale) => (
                 <button
                   key={locale}
                   onClick={() => switchLocale(locale)}
-                  className={`w-full text-left px-4 py-3 text-sm font-body transition-colors duration-200 ${
+                  className={`w-full text-left px-4 py-2.5 text-sm font-body transition-colors duration-200 ${
                     currentLocale === locale
                       ? "bg-gold/10 text-gold font-medium"
                       : "text-charcoal/80 hover:bg-charcoal/5 hover:text-gold"
                   }`}
                 >
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between gap-3">
                     <span>{languageNames[locale]}</span>
                     {currentLocale === locale && (
                       <span className="text-gold">✓</span>
@@ -88,4 +92,3 @@ export default function LanguageSwitcher() {
     </div>
   );
 }
-

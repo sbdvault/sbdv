@@ -6,26 +6,26 @@
     "services": "Servizi",
     "membership": "Membri",
     "contact": "Contatto",
-    "wealth": "Wealth & Investment",
-    "clientLogin": "Client Login",
+    "wealth": "Patrimonio & Investimenti",
+    "clientLogin": "Accesso Clienti",
     "capitalAccess": "Capital Access"
   },
   "hero": {
-    "headline": "Fiducia Globale. Sicurezza Svizzera.",
-    "subtext": "Servizi di deposito discreti per investitori privati, istituzioni e clienti sovrani.",
+    "headline": "Sicurezza Svizzera. Patrimonio Globale.",
+    "subtext": "Custodia discreta e gestione del portafoglio per investitori privati, family office e clienti sovrani.",
     "requestAccess": "Richiedi Accesso",
     "investorRelations": "Relazioni Investitori",
-    "clientLogin": "Client Login"
+    "clientLogin": "Accesso Clienti"
   },
   "footer": {
     "copyright": "Swiss Bullion Depository Vault — Precisione Svizzera. Fiducia Globale.",
-    "headquarters": "Headquarters",
-    "globalOffices": "Global Offices",
-    "legal": "Legal",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
-    "regulatory": "Regulatory Disclosures",
-    "investorRelations": "Investor Relations",
+    "headquarters": "Sede Centrale",
+    "globalOffices": "Uffici Globali",
+    "legal": "Legale",
+    "privacy": "Informativa sulla Privacy",
+    "terms": "Termini di Servizio",
+    "regulatory": "Informativa Regolamentare",
+    "investorRelations": "Relazioni con gli Investitori",
     "offices": {
       "zurich": {
         "city": "Zurich",
@@ -56,14 +56,14 @@
         "country": "United States"
       }
     },
-    "jurisdictionNote": "Swiss legal foundation. Multi-jurisdiction accessibility for global clients."
+    "jurisdictionNote": "Fondamento giuridico svizzero. Accessibilità multi-giurisdizionale per clienti globali."
   },
   "about": {
     "title": "Chi Siamo",
     "heroTitle": "Dove la Fiducia Incontra la Tecnologia",
     "heroSubtitle": "Un'istituzione privata svizzera che protegge la ricchezza globale con sicurezza senza compromessi e precisione svizzera.",
-    "sectionTitle": "Chi Siamo - SBDV",
-    "sectionDescription": "Swiss Bullion Depository Vault (SBDV) si erge come un bastione di sicurezza assoluta e riservatezza. Fondato in Svizzera — l'epicentro globale della fiducia e della discrezione — SBDV combina protezione all'avanguardia con precisione svizzera senza tempo. La nostra missione è preservare e proteggere ciò che conta di più: la vostra ricchezza, il vostro patrimonio, la vostra tranquillità.",
+    "sectionTitle": "Chi è SBDV",
+    "sectionDescription": "Swiss Bullion Depository Vault (SBDV) è un bastione di sicurezza e riservatezza assolute. Fondata in Svizzera — epicentro mondiale di fiducia e discrezione — SBDV unisce protezione all'avanguardia e precisione svizzera senza tempo. La nostra missione: preservare ciò che conta di più — il vostro patrimonio, il vostro lascito, la vostra serenità.",
     "missionTitle": "La Nostra Missione",
     "missionText": "Preservare la ricchezza e la fiducia con precisione, discrezione e integrità svizzere. Siamo impegnati a salvaguardare non solo gli asset, ma anche la fiducia e la tranquillità che derivano dal sapere che la vostra ricchezza è protetta dai più alti standard di eccellenza svizzera.",
     "visionTitle": "La Nostra Visione",
@@ -99,11 +99,11 @@
     "title": "Deposito & Sicurezza",
     "heroTitle": "Il Deposito",
     "heroSubtitle": "Dove la tua ricchezza riposa in assoluta sicurezza.",
-    "vaultsTitle": "I Nostri Depositi",
-    "vaultsDescription": "Le nostre strutture sotterranee per lingotti sono costruite con difesa multistrato, sorveglianza 24/7 e ingegneria senza compromessi.",
+    "vaultsTitle": "I nostri caveau",
+    "vaultsDescription": "Le nostre strutture sotterranee per lingotti sono costruite con difesa multi-livello, sorveglianza 24/7 e ingegneria senza compromessi.",
     "vaultFeatures": {
       "multiTiered": {
-        "title": "Difesa Multistrato",
+        "title": "Difesa multi-livello",
         "description": "Sistemi di sicurezza a strati che proteggono i vostri asset a ogni livello."
       },
       "surveillance": {
@@ -111,8 +111,8 @@
         "description": "Monitoraggio continuo con tecnologia all'avanguardia."
       },
       "engineering": {
-        "title": "Ingegneria Senza Compromessi",
-        "description": "Costruito secondo i più alti standard di precisione svizzera."
+        "title": "Ingegneria senza compromessi",
+        "description": "Realizzata secondo i più alti standard di precisione svizzera."
       }
     },
     "vaultPageTitle": "Il Deposito",
@@ -176,22 +176,22 @@
     "title": "Servizi",
     "heroTitle": "I Nostri Servizi",
     "heroSubtitle": "Soluzioni di sicurezza complete su misura per le tue esigenze.",
-    "sectionTitle": "Servizi di Sicurezza",
+    "sectionTitle": "Servizi di sicurezza",
     "services": {
       "privateVault": {
-        "title": "Affitto Deposito Privato",
-        "description": "Assegnazione sicura per individui, aziende e family office."
+        "title": "Affitto caveau privato",
+        "description": "Allocazione sicura per privati, società e family office."
       },
       "bullionStorage": {
-        "title": "Deposito Lingotti",
-        "description": "Audit certificati LBMA e deposito per metalli preziosi e lingotti."
+        "title": "Custodia di lingotti",
+        "description": "Audit e stoccaggio certificati LBMA per metalli preziosi e lingotti."
       },
       "insurance": {
-        "title": "Assicurazione & Report di Audit",
-        "description": "Copertura completa e trasparenza tramite assicuratori globali con report completi."
+        "title": "Assicurazione e report di audit",
+        "description": "Copertura completa e trasparenza tramite assicuratori globali con reporting completo."
       },
       "vipRooms": {
-        "title": "Sale di Visualizzazione VIP Private",
+        "title": "Sale di visione VIP private",
         "description": "Solo su appuntamento, con servizio concierge per accesso clienti esclusivo."
       }
     },
@@ -382,61 +382,61 @@
     }
   },
   "cta": {
-    "title": "Pronto a Proteggere il Tuo Patrimonio?",
-    "subtitle": "Sperimenta la sicurezza e la discrezione senza pari che solo la precisione svizzera può offrire.",
-    "button": "Prenota una Consulenza Privata"
+    "title": "Pronti a proteggere il vostro lascito?",
+    "subtitle": "Scoprite la sicurezza e la discrezione ineguagliabili che solo la precisione svizzera può offrire.",
+    "button": "Prenota una consulenza privata"
   },
   "home": {
-    "swissStandardTitle": "Lo Standard Svizzero",
+    "swissStandardTitle": "Lo standard svizzero",
     "swissStandard": {
       "precision": {
         "title": "Precisione",
-        "description": "Precisione svizzera in ogni dettaglio, garantendo un'esecuzione impeccabile dei nostri protocolli di sicurezza."
+        "description": "Accuratezza svizzera in ogni dettaglio, per un'esecuzione impeccabile dei protocolli di sicurezza."
       },
       "privacy": {
         "title": "Privacy",
-        "description": "Discrezione assoluta e riservatezza in tutte le interazioni e transazioni con i clienti."
+        "description": "Discrezione e riservatezza assolute in ogni interazione e transazione con i clienti."
       },
       "permanence": {
         "title": "Permanenza",
         "description": "Costruito sulla fiducia, provato dal tempo. Un'eredità di sicurezza che dura per generazioni."
       }
     },
-    "globalAccessTitle": "Accesso Globale",
-    "globalAccessDescription": "L'adesione è solo su invito. I clienti approvati godono di accessibilità mondiale attraverso il nostro sistema di verifica sicuro.",
-    "globalAccessLabel": "Sistema di Verifica Sicuro",
-    "testimonialsTitle": "Testimonianze Clienti",
+    "globalAccessTitle": "Accesso globale",
+    "globalAccessDescription": "L'adesione è solo su invito. I clienti approvati godono di accessibilità mondiale tramite il portale clienti sicuro e gli uffici regionali.",
+    "globalAccessLabel": "Portale clienti sicuro",
+    "testimonialsTitle": "Testimonianze dei clienti",
     "testimonials": {
       "testimonial1": {
-        "quote": "Discrezione senza pari.",
-        "author": "Cliente Privato"
+        "quote": "Discrezione ineguagliabile.",
+        "author": "Cliente privato"
       },
       "testimonial2": {
-        "quote": "Precisione svizzera al suo meglio. I nostri asset non sono mai stati così sicuri.",
-        "author": "Investitore Istituzionale"
+        "quote": "Precisione svizzera al massimo. I nostri asset non sono mai stati così al sicuro.",
+        "author": "Investitore istituzionale"
       },
       "testimonial3": {
-        "quote": "L'epitome della fiducia e della riservatezza nella preservazione della ricchezza.",
-        "author": "Family Office"
+        "quote": "L'epitome di fiducia e riservatezza nella conservazione del patrimonio.",
+        "author": "Family office"
       },
       "testimonial4": {
-        "quote": "Servizio eccezionale che supera le aspettative. SBDV è diventato parte integrante della nostra strategia di gestione patrimoniale.",
-        "author": "Società di Gestione Patrimoniale"
+        "quote": "Servizio eccezionale che supera le aspettative. SBDV è parte integrante della nostra strategia patrimoniale.",
+        "author": "Società di gestione patrimoniale"
       },
       "testimonial5": {
-        "quote": "Il livello di sicurezza e professionalità è senza pari. Affidiamo a SBDV i nostri asset più preziosi.",
-        "author": "Individuo ad Alto Patrimonio"
+        "quote": "Livello di sicurezza e professionalità senza pari. Affidiamo a SBDV i nostri asset più preziosi.",
+        "author": "Privato ad alto patrimonio"
       },
       "testimonial6": {
-        "quote": "Tranquillità assoluta. Sapere che i nostri asset sono protetti dagli standard svizzeri ci dà piena fiducia.",
-        "author": "Corporazione Internazionale"
+        "quote": "Assoluta tranquillità. Sapere che i nostri asset sono protetti secondo gli standard svizzeri ci dà piena fiducia.",
+        "author": "Società internazionale"
       }
     },
     "globalNetworkTitle": "Global Network",
-    "globalNetworkDescription": "Discreetly serving clients across the world's financial capitals with partner vault facilities and secure logistics worldwide.",
-    "wealthTeaserTitle": "Wealth & Investment",
-    "wealthTeaserDescription": "Beyond custody — strategic portfolio management, investment advisory, and consolidated reporting through your private client portal.",
-    "wealthTeaserButton": "Explore Wealth Services"
+    "globalNetworkDescription": "Serviamo discretamente i clienti nelle capitali finanziarie mondiali con caveau partner e logistica sicura.",
+    "wealthTeaserTitle": "Patrimonio & Investimenti",
+    "wealthTeaserDescription": "Oltre la custodia — gestione strategica del portafoglio, consulenza agli investimenti e reporting consolidato tramite il portale clienti privato.",
+    "wealthTeaserButton": "Esplora i Servizi Patrimoniali"
   },
   "common": {
     "loading": "Caricamento...",

@@ -1,14 +1,30 @@
 import { Locale } from "@/proxy";
 import en from "@/messages/en.json";
-import nl from "@/messages/nl.json";
+import de from "@/messages/de.json";
 import fr from "@/messages/fr.json";
 import it from "@/messages/it.json";
+import nl from "@/messages/nl.json";
+import es from "@/messages/es.json";
+import pt from "@/messages/pt.json";
+import ru from "@/messages/ru.json";
+import zh from "@/messages/zh.json";
+import ja from "@/messages/ja.json";
+import ko from "@/messages/ko.json";
+import ar from "@/messages/ar.json";
 
 export const translations = {
   en,
-  nl,
+  de,
   fr,
   it,
+  nl,
+  es,
+  pt,
+  ru,
+  zh,
+  ja,
+  ko,
+  ar,
 } as const;
 
 export type TranslationKey = keyof typeof en;
@@ -23,7 +39,7 @@ export function getNestedTranslation(
 
 // Main translation function
 export function t(locale: Locale, key: string): string | string[] {
-  const translation = translations[locale];
+  const translation = translations[locale] ?? translations.en;
   const value = getNestedTranslation(translation, key);
 
   if (value === undefined || value === null) {
@@ -34,4 +50,3 @@ export function t(locale: Locale, key: string): string | string[] {
 
   return value;
 }
-

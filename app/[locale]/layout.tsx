@@ -1,10 +1,10 @@
-import { Locale } from "@/proxy";
+import { Locale, locales } from "@/proxy";
 import Layout from "@/layouts/Layout";
 import Providers from "@/components/Providers";
 import LocaleHtmlLang from "@/components/LocaleHtmlLang";
 
 export async function generateStaticParams() {
-  return [{ locale: "en" }, { locale: "nl" }, { locale: "fr" }, { locale: "it" }];
+  return locales.map((locale) => ({ locale }));
 }
 
 export default async function LocaleLayout({

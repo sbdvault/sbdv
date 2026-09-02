@@ -2,10 +2,33 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { getToken } from "next-auth/jwt";
 
-export const locales = ["en", "nl", "fr", "it"] as const;
+export const locales = [
+  "en",
+  "de",
+  "fr",
+  "it",
+  "nl",
+  "es",
+  "pt",
+  "ru",
+  "zh",
+  "ja",
+  "ko",
+  "ar",
+] as const;
 export type Locale = (typeof locales)[number];
 
 export const defaultLocale: Locale = "en";
+
+/** Locales that render right-to-left */
+export const rtlLocales: readonly Locale[] = ["ar"];
+
+const localePathPattern = locales.join("|");
+const portalAuthPath = new RegExp(`^/(${localePathPattern})/portal(/|$)`);
+const adminAuthPath = new RegExp(`^/(${localePathPattern})/admin(/|$)`);
+const capitalAuthPath = new RegExp(
+  `^/(${localePathPattern})/capital-access/portal(/|$)`
+);
 
 function getLocale(request: NextRequest): Locale {
   const acceptLanguage = request.headers.get("accept-language");
@@ -32,9 +55,9 @@ function getLocale(request: NextRequest): Locale {
 export async function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
-  const isPortal = /\/(en|nl|fr|it)\/portal/.test(pathname);
-  const isAdmin = /\/(en|nl|fr|it)\/admin/.test(pathname);
-  const isCapitalPortal = /\/(en|nl|fr|it)\/capital-access\/portal/.test(pathname);
+  const isPortal = portalAuthPath.test(pathname);
+  const isAdmin = adminAuthPath.test(pathname);
+  const isCapitalPortal = capitalAuthPath.test(pathname);
 
   if (isPortal || isAdmin || isCapitalPortal) {
     const token = await getToken({
