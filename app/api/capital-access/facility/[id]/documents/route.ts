@@ -7,6 +7,7 @@ import {
 import { NextRequest, NextResponse } from "next/server";
 import { writeFile, mkdir } from "fs/promises";
 import path from "path";
+import { getUploadsRoot } from "@/lib/data-paths";
 
 export async function POST(
   request: NextRequest,
@@ -60,7 +61,7 @@ export async function POST(
     );
   }
 
-  const uploadDir = path.join(process.cwd(), "uploads", "capital-access", id);
+  const uploadDir = getUploadsRoot("capital-access", id);
   await mkdir(uploadDir, { recursive: true });
 
   const buffer = Buffer.from(await file.arrayBuffer());

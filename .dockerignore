@@ -1,0 +1,35 @@
+# dependencies
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# next.js
+.next
+out
+
+# env / secrets
+.env
+.env.*
+!.env.example
+
+# local data
+prisma/dev.db
+prisma/dev.db-journal
+uploads
+
+# git / ide
+.git
+.gitignore
+.vscode
+.idea
+*.md
+!README.md
+
+# misc
+coverage
+.turbo
+*.tsbuildinfo
+DEPLOYMENT_CHECKLIST.md
+DEPLOY_DIRECT.md
+I18N_GUIDE.md

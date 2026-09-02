@@ -2,7 +2,7 @@ import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { NextRequest, NextResponse } from "next/server";
 import { writeFile, mkdir } from "fs/promises";
-import path from "path";
+import { getUploadsRoot } from "@/lib/data-paths";
 
 export async function GET() {
   const session = await auth();
@@ -41,11 +41,11 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "No file provided" }, { status: 400 });
   }
 
-  const uploadDir = path.join(process.cwd(), "uploads", profile.id);
+  const uploadDir = getUploadsRoot(profile.id);
   await mkdir(uploadDir, { recursive: true });
 
   const buffer = Buffer.from(await file.arrayBuffer());
-  const filePath = path.join(uploadDir, `${Date.now()}-${file.name}`);
+  const filePath = `${uploadDir}/${Date.now()}-${file.name}`;
   await writeFile(filePath, buffer);
 
   const document = await prisma.document.create({
