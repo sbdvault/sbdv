@@ -57,10 +57,16 @@ export default function LoginPage() {
 
     const sessionRes = await fetch("/api/auth/session");
     const session = await sessionRes.json();
+    if (!session?.user) {
+      // Usually AUTH_URL / cookie host mismatch (e.g. wrong Amvera hostname).
+      setError(t("login.invalidCredentials"));
+      return;
+    }
+
     let destination = getLocalizedHref("/portal");
-    if (session?.user?.role === "ADMIN") {
+    if (session.user.role === "ADMIN") {
       destination = getLocalizedHref("/admin");
-    } else if (session?.user?.role === "BORROWER") {
+    } else if (session.user.role === "BORROWER") {
       destination = getLocalizedHref("/capital-access/portal");
     }
     router.push(destination);

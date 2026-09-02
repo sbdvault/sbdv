@@ -3,6 +3,13 @@ set -e
 
 mkdir -p /data/uploads
 
+# Canonical public host (hyphen). Wrong AUTH_URL (e.g. sbdv.sbdvault…) breaks login cookies.
+PUBLIC_URL="${PUBLIC_SITE_URL:-https://sbdv-sbdvault.amvera.io}"
+export AUTH_URL="$PUBLIC_URL"
+export AUTH_TRUST_HOST=true
+export NEXT_PUBLIC_SITE_URL="$PUBLIC_URL"
+echo "Auth/site URL: $AUTH_URL"
+
 if [ -z "$DATABASE_URL" ]; then
   echo "ERROR: DATABASE_URL is not set (expected Supabase Postgres pooler URL)"
   exit 1
