@@ -1,5 +1,5 @@
 # Multi-stage Next.js 16 standalone image for Amvera Cloud
-# Persistent data (SQLite + uploads) lives on /data
+# Persistent data (SQLite + uploads) lives on /data (Amvera mounts this as root)
 
 FROM node:20-bookworm-slim AS deps
 WORKDIR /app
@@ -26,11 +26,9 @@ ENV HOSTNAME=0.0.0.0
 ENV DATA_DIR=/data
 ENV DATABASE_URL="file:/data/sbdv.db"
 
+# Run as root so Amvera's /data mount is writable (platform mounts over image perms)
 RUN apt-get update -y && apt-get install -y openssl ca-certificates && rm -rf /var/lib/apt/lists/* \
-  && groupadd --system --gid 1001 nodejs \
-  && useradd --system --uid 1001 --gid nodejs nextjs \
-  && mkdir -p /data /app/prisma \
-  && chown -R nextjs:nodejs /data /app
+  && mkdir -p /data /app/prisma
 
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
@@ -39,16 +37,10 @@ COPY --from=builder /app/prisma ./prisma
 COPY --from=builder /app/node_modules/.prisma ./node_modules/.prisma
 COPY --from=builder /app/node_modules/@prisma ./node_modules/@prisma
 COPY --from=builder /app/node_modules/prisma ./node_modules/prisma
-COPY --from=builder /app/node_modules/tsx ./node_modules/tsx
-COPY --from=builder /app/node_modules/esbuild ./node_modules/esbuild
-COPY --from=builder /app/node_modules/get-tsconfig ./node_modules/get-tsconfig
-COPY --from=builder /app/node_modules/resolve-pkg-maps ./node_modules/resolve-pkg-maps
 COPY --from=builder /app/package.json ./package.json
 COPY docker-entrypoint.sh ./docker-entrypoint.sh
 
-RUN chmod +x ./docker-entrypoint.sh && chown -R nextjs:nodejs /app /data
-
-USER nextjs
+RUN chmod +x ./docker-entrypoint.sh
 
 EXPOSE 3000
 
