@@ -22,7 +22,7 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
-ENV PORT=3000
+ENV PORT=80
 ENV HOSTNAME=0.0.0.0
 ENV DATA_DIR=/data
 ENV DATABASE_URL="file:/data/sbdv.db"
@@ -43,6 +43,6 @@ COPY docker-entrypoint.sh ./docker-entrypoint.sh
 
 RUN chmod +x ./docker-entrypoint.sh
 
-EXPOSE 3000
+EXPOSE 80
 
 CMD ["./docker-entrypoint.sh"]

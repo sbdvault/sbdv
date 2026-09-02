@@ -1,5 +1,6 @@
 # Amvera Cloud — Next.js Docker config
 # Docs: https://docs.amvera.ru/applications/configuration/docker.html
+# Amvera ingress defaults to port 80 — keep app on 80 for free domains.
 
 meta:
   environment: docker
@@ -10,5 +11,6 @@ build:
   dockerfile: Dockerfile
 
 run:
-  containerPort: 3000
+  containerPort: 80
+  servicePort: 80
   persistenceMount: /data
