@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { signIn } from "next-auth/react";
-import { useRouter, useParams } from "next/navigation";
+import { useParams } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Lock, AlertCircle } from "lucide-react";
@@ -12,7 +12,6 @@ import Logo from "@/components/Logo";
 export default function LoginPage() {
   const { t, locale } = useTranslations();
   const params = useParams();
-  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [mfaCode, setMfaCode] = useState("");
@@ -69,8 +68,8 @@ export default function LoginPage() {
     } else if (session.user.role === "BORROWER") {
       destination = getLocalizedHref("/capital-access/portal");
     }
-    router.push(destination);
-    router.refresh();
+    // Full navigation so the session cookie is always sent on the next request.
+    window.location.assign(destination);
   };
 
   return (

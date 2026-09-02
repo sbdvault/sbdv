@@ -60,9 +60,20 @@ export async function proxy(request: NextRequest) {
   const isCapitalPortal = capitalAuthPath.test(pathname);
 
   if (isPortal || isAdmin || isCapitalPortal) {
+    // Behind Amvera TLS, the app often sees http:// internally while Auth.js
+    // still sets `__Secure-authjs.session-token`. Without secureCookie:true,
+    // getToken misses the cookie → bounce back to /login after a successful sign-in.
+    const useSecureCookies =
+      (process.env.AUTH_URL ?? process.env.NEXT_PUBLIC_SITE_URL ?? "").startsWith(
+        "https://"
+      ) ||
+      request.headers.get("x-forwarded-proto") === "https" ||
+      request.nextUrl.protocol === "https:";
+
     const token = await getToken({
       req: request,
       secret: process.env.AUTH_SECRET,
+      secureCookie: useSecureCookies,
     });
 
     const locale = pathname.split("/")[1] || defaultLocale;
