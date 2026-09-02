@@ -1,0 +1,928 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Chi Siamo",
+    "vault": "Deposito & Sicurezza",
+    "services": "Servizi",
+    "membership": "Membri",
+    "contact": "Contatto",
+    "wealth": "Wealth & Investment",
+    "clientLogin": "Client Login",
+    "capitalAccess": "Capital Access"
+  },
+  "hero": {
+    "headline": "Fiducia Globale. Sicurezza Svizzera.",
+    "subtext": "Servizi di deposito discreti per investitori privati, istituzioni e clienti sovrani.",
+    "requestAccess": "Richiedi Accesso",
+    "investorRelations": "Relazioni Investitori",
+    "clientLogin": "Client Login"
+  },
+  "footer": {
+    "copyright": "Swiss Bullion Depository Vault — Precisione Svizzera. Fiducia Globale.",
+    "headquarters": "Headquarters",
+    "globalOffices": "Global Offices",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "regulatory": "Regulatory Disclosures",
+    "investorRelations": "Investor Relations",
+    "offices": {
+      "zurich": {
+        "city": "Zurich",
+        "label": "Global Headquarters",
+        "address": "Bahnhofstrasse 45, 8001 Zurich, Switzerland",
+        "timezone": "CET (UTC+1)",
+        "country": "Switzerland"
+      },
+      "dubai": {
+        "city": "Dubai",
+        "label": "Middle East & Africa",
+        "address": "DIFC Gate Village 10, Dubai, UAE",
+        "timezone": "GST (UTC+4)",
+        "country": "United Arab Emirates"
+      },
+      "singapore": {
+        "city": "Singapore",
+        "label": "Asia Pacific",
+        "address": "10 Collyer Quay, Ocean Financial Centre, Singapore",
+        "timezone": "SGT (UTC+8)",
+        "country": "Singapore"
+      },
+      "newYork": {
+        "city": "New York",
+        "label": "Americas",
+        "address": "280 Park Avenue, New York, NY 10017, USA",
+        "timezone": "EST (UTC-5)",
+        "country": "United States"
+      }
+    },
+    "jurisdictionNote": "Swiss legal foundation. Multi-jurisdiction accessibility for global clients."
+  },
+  "about": {
+    "title": "Chi Siamo",
+    "heroTitle": "Dove la Fiducia Incontra la Tecnologia",
+    "heroSubtitle": "Un'istituzione privata svizzera che protegge la ricchezza globale con sicurezza senza compromessi e precisione svizzera.",
+    "sectionTitle": "Chi Siamo - SBDV",
+    "sectionDescription": "Swiss Bullion Depository Vault (SBDV) si erge come un bastione di sicurezza assoluta e riservatezza. Fondato in Svizzera — l'epicentro globale della fiducia e della discrezione — SBDV combina protezione all'avanguardia con precisione svizzera senza tempo. La nostra missione è preservare e proteggere ciò che conta di più: la vostra ricchezza, il vostro patrimonio, la vostra tranquillità.",
+    "missionTitle": "La Nostra Missione",
+    "missionText": "Preservare la ricchezza e la fiducia con precisione, discrezione e integrità svizzere. Siamo impegnati a salvaguardare non solo gli asset, ma anche la fiducia e la tranquillità che derivano dal sapere che la vostra ricchezza è protetta dai più alti standard di eccellenza svizzera.",
+    "visionTitle": "La Nostra Visione",
+    "visionText": "Essere il deposito privato più affidabile al mondo — un guardiano silenzioso per gli investitori globali. Immaginiamo un futuro in cui SBDV sia riconosciuto come la destinazione principale per coloro che richiedono sicurezza senza compromessi, discrezione assoluta e affidabilità senza tempo.",
+    "aboutTitle": "Chi Siamo - SBDV",
+    "aboutParagraph1": "Swiss Bullion Depository Vault (SBDV) si erge come un bastione di sicurezza assoluta e riservatezza. Fondato in Svizzera — l'epicentro globale della fiducia e della discrezione — SBDV combina protezione all'avanguardia con precisione svizzera senza tempo.",
+    "aboutParagraph2": "La nostra missione è preservare e proteggere ciò che conta di più: la vostra ricchezza, il vostro patrimonio, la vostra tranquillità. Comprendiamo che la vera protezione della ricchezza richiede più della semplice sicurezza fisica—richiede discrezione assoluta, eccellenza ingegneristica svizzera e un impegno incrollabile all'integrità.",
+    "aboutParagraph3": "Ogni aspetto della nostra operazione riflette i valori svizzeri: precisione nell'esecuzione, discrezione in tutte le questioni, e integrità in ogni interazione. Non siamo solo un deposito; siamo un guardiano silenzioso, che protegge ciò che conta di più per i clienti più esigenti al mondo.",
+    "valuesTitle": "I Nostri Valori",
+    "values": {
+      "discretion": {
+        "title": "Discrezione",
+        "description": "La privacy è la nostra base. Ogni interazione con il cliente è gestita con assoluta riservatezza."
+      },
+      "precision": {
+        "title": "Precisione",
+        "description": "Precisione svizzera in ogni dettaglio. Dai protocolli di sicurezza al servizio clienti, la precisione non è negoziabile."
+      },
+      "security": {
+        "title": "Sicurezza",
+        "description": "Protezione a strati senza compromessi. Sistemi di difesa multipli che lavorano in armonia."
+      },
+      "integrity": {
+        "title": "Integrità",
+        "description": "Costruito sulla fiducia, provato dal tempo. La nostra parola è il nostro impegno, e le nostre azioni riflettono i nostri valori."
+      }
+    },
+    "locationTitle": "Presenza Globale, Fondazione Svizzera",
+    "locationDescription": "Con sede a Zurigo, serviamo clienti in tutto il mondo. La nostra fondazione svizzera fornisce il fondamento di fiducia e precisione, mentre la nostra portata globale garantisce l'accessibilità per la nostra clientela internazionale.",
+    "worldwideAccessibility": "Accessibilità Mondiale"
+  },
+  "vault": {
+    "title": "Deposito & Sicurezza",
+    "heroTitle": "Il Deposito",
+    "heroSubtitle": "Dove la tua ricchezza riposa in assoluta sicurezza.",
+    "vaultsTitle": "I Nostri Depositi",
+    "vaultsDescription": "Le nostre strutture sotterranee per lingotti sono costruite con difesa multistrato, sorveglianza 24/7 e ingegneria senza compromessi.",
+    "vaultFeatures": {
+      "multiTiered": {
+        "title": "Difesa Multistrato",
+        "description": "Sistemi di sicurezza a strati che proteggono i vostri asset a ogni livello."
+      },
+      "surveillance": {
+        "title": "Sorveglianza 24/7",
+        "description": "Monitoraggio continuo con tecnologia all'avanguardia."
+      },
+      "engineering": {
+        "title": "Ingegneria Senza Compromessi",
+        "description": "Costruito secondo i più alti standard di precisione svizzera."
+      }
+    },
+    "vaultPageTitle": "Il Deposito",
+    "vaultPageDescription": "Dove la sicurezza assoluta incontra la precisione svizzera senza tempo. Una fortezza progettata per preservare ciò che conta di più.",
+    "vaultPageFeatures": {
+      "defense": {
+        "title": "Difesa Multistrato",
+        "description": "Sicurezza avanzata a ogni livello"
+      },
+      "monitoring": {
+        "title": "Monitoraggio 24/7",
+        "description": "Sistemi di sorveglianza continui"
+      },
+      "impenetrable": {
+        "title": "Impenetrabile",
+        "description": "Protezione progettata in Svizzera"
+      },
+      "technology": {
+        "title": "All'Avanguardia",
+        "description": "Tecnologia all'avanguardia"
+      }
+    },
+    "securityArchitectureTitle": "Architettura di Sicurezza",
+    "securityArchitectureDescription": "Il nostro sistema di sicurezza multistrato combina tecnologia all'avanguardia con ingegneria di precisione svizzera.",
+    "securityFeatures": {
+      "biometrics": {
+        "title": "Biometria",
+        "description": "Sistemi di autenticazione biometrica avanzati che garantiscono che solo il personale autorizzato possa accedere alle aree sicure."
+      },
+      "seismic": {
+        "title": "Sensori Sismici",
+        "description": "Monitoraggio sismico all'avanguardia per rilevare eventuali tentativi di accesso non autorizzati o anomalie strutturali."
+      },
+      "accessControl": {
+        "title": "Controllo Accessi",
+        "description": "Autenticazione multifattore con protocolli di accesso crittografati e verifica dell'autorizzazione in tempo reale."
+      },
+      "insurance": {
+        "title": "Assicurazione",
+        "description": "Copertura completa attraverso i principali assicuratori globali, fornendo piena protezione per tutti gli asset memorizzati."
+      }
+    },
+    "accessProtocolTitle": "Protocollo di Accesso",
+    "accessProtocolDescription": "Ogni richiesta di accesso subisce un processo di verifica dell'identità in più fasi. Il nostro protocollo garantisce che solo gli individui autorizzati possano accedere alle aree sicure, mantenendo i più alti standard di sicurezza e discrezione.",
+    "accessProtocolSteps": {
+      "step1": {
+        "title": "Verifica dell'Identità",
+        "description": "Processo di autenticazione multifattore"
+      },
+      "step2": {
+        "title": "Revisione dell'Autorizzazione",
+        "description": "Approvazione preventiva richiesta"
+      },
+      "step3": {
+        "title": "Accesso Sicuro",
+        "description": "Ingresso esclusivo concesso"
+      }
+    }
+  },
+  "services": {
+    "title": "Servizi",
+    "heroTitle": "I Nostri Servizi",
+    "heroSubtitle": "Soluzioni di sicurezza complete su misura per le tue esigenze.",
+    "sectionTitle": "Servizi di Sicurezza",
+    "services": {
+      "privateVault": {
+        "title": "Affitto Deposito Privato",
+        "description": "Assegnazione sicura per individui, aziende e family office."
+      },
+      "bullionStorage": {
+        "title": "Deposito Lingotti",
+        "description": "Audit certificati LBMA e deposito per metalli preziosi e lingotti."
+      },
+      "insurance": {
+        "title": "Assicurazione & Report di Audit",
+        "description": "Copertura completa e trasparenza tramite assicuratori globali con report completi."
+      },
+      "vipRooms": {
+        "title": "Sale di Visualizzazione VIP Private",
+        "description": "Solo su appuntamento, con servizio concierge per accesso clienti esclusivo."
+      }
+    },
+    "gridTitle": "Offerte di Servizi",
+    "gridSubtitle": "Ogni servizio è progettato con precisione svizzera e standard di sicurezza senza compromessi.",
+    "gridServices": {
+      "privateVault": {
+        "title": "Affitto Deposito Privato",
+        "description": "Assegnazione sicura per individui, aziende e family office. Soluzioni di deposito personalizzate su misura per le vostre esigenze specifiche.",
+        "features": [
+          "Spazio deposito dedicato",
+          "Controllo accessi 24/7",
+          "Servizio personalizzato"
+        ]
+      },
+      "bullionCustody": {
+        "title": "Custodia & Verifica Lingotti",
+        "description": "Audit certificati LBMA e deposito per metalli preziosi. Documentazione completa della catena di custodia e verifica regolare.",
+        "features": [
+          "Certificazione LBMA",
+          "Audit regolari",
+          "Documentazione completa"
+        ]
+      },
+      "insurance": {
+        "title": "Assicurazione & Report di Audit",
+        "description": "Copertura completa e trasparenza tramite assicuratori globali. Report completi e documentazione di audit regolare.",
+        "features": [
+          "Copertura assicurativa globale",
+          "Report regolari",
+          "Piena trasparenza"
+        ]
+      },
+      "vipRooms": {
+        "title": "Sale di Visualizzazione VIP Private",
+        "description": "Solo su appuntamento, con servizio concierge. Accesso esclusivo per visualizzare i vostri asset in un ambiente privato e sicuro.",
+        "features": [
+          "Solo su appuntamento",
+          "Servizio concierge",
+          "Visualizzazione privata"
+        ]
+      }
+    },
+    "wealthGridTitle": "Wealth & Investment Services",
+    "wealthGridSubtitle": "Strategic portfolio management integrated with Swiss custody excellence.",
+    "wealthGridServices": {
+      "advisory": {
+        "title": "Investment Advisory",
+        "description": "Personalized investment strategy for high-net-worth individuals and family offices.",
+        "features": [
+          "Goal-based planning",
+          "Risk profiling",
+          "Asset allocation"
+        ]
+      },
+      "portfolio": {
+        "title": "Portfolio Management",
+        "description": "Discretionary and advisory mandates with quarterly rebalancing and performance reporting.",
+        "features": [
+          "Discretionary mandates",
+          "Quarterly rebalancing",
+          "Performance reports"
+        ]
+      },
+      "alternatives": {
+        "title": "Alternative Investments",
+        "description": "Access to private markets, structured products, and collectibles as part of a diversified strategy.",
+        "features": [
+          "Private markets",
+          "Structured products",
+          "Collectibles"
+        ]
+      },
+      "reporting": {
+        "title": "Consolidated Reporting",
+        "description": "Unified view of vault holdings and financial portfolio in one secure client portal.",
+        "features": [
+          "Unified dashboard",
+          "Audit documentation",
+          "Fee transparency"
+        ]
+      }
+    }
+  },
+  "membership": {
+    "title": "Membri",
+    "heroTitle": "Membri",
+    "heroSubtitle": "Accesso esclusivo alla precisione e sicurezza svizzere.",
+    "tiersTitle": "Livelli di Membri",
+    "tiersSubtitle": "Tre livelli distinti progettati per soddisfare le diverse esigenze della nostra clientela globale.",
+    "tiers": {
+      "standard": {
+        "title": "Custodia Standard",
+        "subtitle": "Livello di Ingresso",
+        "minimum": "Minimo: $250k",
+        "description": "Servizi di custodia sicuri per investitori individuali e portafogli più piccoli. Accesso completo ai nostri protocolli di sicurezza standard e report regolari.",
+        "features": [
+          "Minimo $250k in asset",
+          "Protocolli di sicurezza standard",
+          "Report regolari",
+          "Monitoraggio 24/7",
+          "Copertura assicurativa"
+        ]
+      },
+      "executive": {
+        "title": "Deposito Esecutivo",
+        "subtitle": "Solo su Invito",
+        "minimum": "Minimo: Personalizzato",
+        "description": "Solo su invito, soluzioni di deposito personalizzate per individui ad alto patrimonio netto, family office e aziende. Privacy migliorata e servizio dedicato.",
+        "features": [
+          "Accesso solo su invito",
+          "Deposito personalizzato",
+          "Account manager dedicato",
+          "Protocolli di privacy migliorati",
+          "Accesso prioritario"
+        ]
+      },
+      "sovereign": {
+        "title": "Livello Sovrano",
+        "subtitle": "Istituzionale",
+        "minimum": "Minimo: Istituzionale",
+        "description": "Sicurezza di livello istituzionale e governativo per fondi sovrani, banche centrali e grandi istituzioni. Il più alto livello di sicurezza e servizio.",
+        "features": [
+          "Sicurezza di livello istituzionale",
+          "Protocolli di livello governativo",
+          "Soluzioni personalizzate",
+          "Strutture dedicate",
+          "Servizio di lusso"
+        ]
+      }
+    },
+    "complianceTitle": "Conformità & Sicurezza",
+    "complianceText": "Tutti i membri subiscono screening di conformità nell'ambito dei framework KYC e AML svizzeri. Manteniamo i più alti standard di due diligence per garantire l'integrità e la sicurezza delle nostre operazioni di deposito.",
+    "formTitle": "Richiedi Membri",
+    "formSubtitle": "Inizia il tuo viaggio con Swiss Bullion Depository Vault.",
+    "formSuccessTitle": "Richiesta Ricevuta",
+    "formSuccessText": "Grazie per il tuo interesse. Esamineremo la tua richiesta e ti contatteremo a breve.",
+    "formLabels": {
+      "name": "Nome Completo",
+      "email": "Indirizzo Email",
+      "phone": "Numero di Telefono",
+      "country": "Paese",
+      "assetRange": "Fascia di Asset",
+      "message": "Messaggio"
+    },
+    "formPlaceholders": {
+      "name": "Inserisci il tuo nome completo",
+      "email": "tua.email@esempio.com",
+      "phone": "+39 06 1234 5678",
+      "country": "Seleziona il tuo paese",
+      "assetRange": "Seleziona la fascia di asset",
+      "message": "Raccontaci delle tue esigenze di deposito..."
+    }
+  },
+  "contact": {
+    "title": "Contatto",
+    "heroTitle": "Contatto & Richiesta Privata",
+    "heroSubtitle": "Mettiti in contatto con il nostro team per consultazioni confidenziali.",
+    "formSuccessTitle": "La tua richiesta è stata inviata in modo sicuro.",
+    "formSuccessText": "Abbiamo ricevuto la tua richiesta e ti contatteremo a breve. Tutte le comunicazioni sono gestite con la massima discrezione e sicurezza.",
+    "formSecureLabel": "Sicuro & Confidenziale",
+    "formLabels": {
+      "name": "Nome Completo",
+      "email": "Indirizzo Email",
+      "phone": "Numero di Telefono",
+      "country": "Paese",
+      "interest": "Interesse di Investimento",
+      "message": "Messaggio"
+    },
+    "formPlaceholders": {
+      "name": "Inserisci il tuo nome completo",
+      "email": "tua.email@esempio.com",
+      "phone": "+39 06 1234 5678",
+      "country": "Seleziona il tuo paese",
+      "interest": "Seleziona interesse di investimento",
+      "message": "Raccontaci della tua richiesta..."
+    },
+    "interestOptions": {
+      "privateVault": "Private Vault Leasing",
+      "bullionCustody": "Bullion Custody & Verification",
+      "insurance": "Insurance & Audit Reporting",
+      "vipViewing": "VIP Private Viewing Rooms",
+      "investmentAdvisory": "Investment Advisory",
+      "portfolioManagement": "Portfolio Management",
+      "alternativeInvestments": "Alternative Investments",
+      "membership": "Membership Inquiry",
+      "general": "General Inquiry"
+    }
+  },
+  "cta": {
+    "title": "Pronto a Proteggere il Tuo Patrimonio?",
+    "subtitle": "Sperimenta la sicurezza e la discrezione senza pari che solo la precisione svizzera può offrire.",
+    "button": "Prenota una Consulenza Privata"
+  },
+  "home": {
+    "swissStandardTitle": "Lo Standard Svizzero",
+    "swissStandard": {
+      "precision": {
+        "title": "Precisione",
+        "description": "Precisione svizzera in ogni dettaglio, garantendo un'esecuzione impeccabile dei nostri protocolli di sicurezza."
+      },
+      "privacy": {
+        "title": "Privacy",
+        "description": "Discrezione assoluta e riservatezza in tutte le interazioni e transazioni con i clienti."
+      },
+      "permanence": {
+        "title": "Permanenza",
+        "description": "Costruito sulla fiducia, provato dal tempo. Un'eredità di sicurezza che dura per generazioni."
+      }
+    },
+    "globalAccessTitle": "Accesso Globale",
+    "globalAccessDescription": "L'adesione è solo su invito. I clienti approvati godono di accessibilità mondiale attraverso il nostro sistema di verifica sicuro.",
+    "globalAccessLabel": "Sistema di Verifica Sicuro",
+    "testimonialsTitle": "Testimonianze Clienti",
+    "testimonials": {
+      "testimonial1": {
+        "quote": "Discrezione senza pari.",
+        "author": "Cliente Privato"
+      },
+      "testimonial2": {
+        "quote": "Precisione svizzera al suo meglio. I nostri asset non sono mai stati così sicuri.",
+        "author": "Investitore Istituzionale"
+      },
+      "testimonial3": {
+        "quote": "L'epitome della fiducia e della riservatezza nella preservazione della ricchezza.",
+        "author": "Family Office"
+      },
+      "testimonial4": {
+        "quote": "Servizio eccezionale che supera le aspettative. SBDV è diventato parte integrante della nostra strategia di gestione patrimoniale.",
+        "author": "Società di Gestione Patrimoniale"
+      },
+      "testimonial5": {
+        "quote": "Il livello di sicurezza e professionalità è senza pari. Affidiamo a SBDV i nostri asset più preziosi.",
+        "author": "Individuo ad Alto Patrimonio"
+      },
+      "testimonial6": {
+        "quote": "Tranquillità assoluta. Sapere che i nostri asset sono protetti dagli standard svizzeri ci dà piena fiducia.",
+        "author": "Corporazione Internazionale"
+      }
+    },
+    "globalNetworkTitle": "Global Network",
+    "globalNetworkDescription": "Discreetly serving clients across the world's financial capitals with partner vault facilities and secure logistics worldwide.",
+    "wealthTeaserTitle": "Wealth & Investment",
+    "wealthTeaserDescription": "Beyond custody — strategic portfolio management, investment advisory, and consolidated reporting through your private client portal.",
+    "wealthTeaserButton": "Explore Wealth Services"
+  },
+  "common": {
+    "loading": "Caricamento...",
+    "submit": "Invia",
+    "submitting": "Invio...",
+    "success": "Successo",
+    "error": "Errore",
+    "tryAgain": "Riprova",
+    "required": "Richiesto",
+    "optional": "Opzionale",
+    "learnMore": "Learn More",
+    "backToHome": "Back to Home",
+    "cancel": "Cancel"
+  },
+  "wealth": {
+    "title": "Wealth & Investment",
+    "heroTitle": "Wealth & Investment",
+    "heroSubtitle": "Swiss custody meets strategic portfolio management for global investors.",
+    "pillarsTitle": "Our Wealth Philosophy",
+    "pillarsSubtitle": "Three integrated pillars: Secure custody, strategic investment, and transparent reporting.",
+    "pillars": {
+      "advisory": {
+        "title": "Investment Advisory",
+        "description": "Goal-based planning, asset allocation, and risk profiling tailored to your objectives and time horizon."
+      },
+      "portfolio": {
+        "title": "Portfolio Management",
+        "description": "Discretionary and advisory mandates with core equities and bonds plus satellite alternatives, bullion, and private markets."
+      },
+      "metals": {
+        "title": "Precious Metals Strategy",
+        "description": "LBMA bullion as a strategic portfolio allocation — not just storage, but integrated wealth preservation."
+      },
+      "reporting": {
+        "title": "Reporting & Transparency",
+        "description": "Performance reports, fee schedules, and audit documentation delivered through your secure client portal."
+      }
+    },
+    "approachTitle": "Core & Satellite Approach",
+    "approachDescription": "We build globally diversified portfolios with a stable core of equities and bonds, complemented by satellite allocations in alternatives, precious metals, and private markets — all aligned to your membership tier and risk profile.",
+    "feesTitle": "Fee Transparency",
+    "feesDescription": "Management fees are disclosed in writing before you commit. No hidden transaction costs, retrocessions, or kickbacks.",
+    "disclaimer": "Investment services may be subject to regulatory licensing requirements. Information on this page is for illustrative purposes and does not constitute investment advice. Please consult with your relationship manager and legal counsel.",
+    "ctaTitle": "Begin Your Wealth Journey",
+    "ctaSubtitle": "Schedule a confidential consultation with our investment team.",
+    "ctaButton": "Schedule Consultation"
+  },
+  "legal": {
+    "privacyTitle": "Privacy Policy",
+    "privacyIntro": "Swiss Bullion Depository Vault (SBDV) complies with the Swiss Federal Act on Data Protection (FADP) and international privacy standards.",
+    "privacyBody": "We collect personal information solely for the purpose of providing vault custody, investment, and membership services. Data is processed with strict confidentiality, stored securely, and never sold to third parties. Clients may request access, correction, or deletion of their personal data by contacting our data protection officer.",
+    "termsTitle": "Terms of Service",
+    "termsIntro": "These terms govern your use of SBDV services and client portal.",
+    "termsBody": "By engaging SBDV services, you agree to comply with Swiss KYC and AML requirements. Vault custody, investment advisory, and portfolio management services are provided subject to separate service agreements. SBDV reserves the right to modify services with appropriate notice to clients.",
+    "regulatoryTitle": "Regulatory Disclosures",
+    "regulatoryIntro": "Important information regarding our regulatory status and client protections.",
+    "regulatoryBody": "SBDV operates under Swiss financial security and privacy frameworks. Investment and portfolio management services may require appropriate licensing or be provided through regulated partners. All clients undergo KYC and AML screening. Risk disclosures: investments involve risk including possible loss of principal. Past performance is not indicative of future results.",
+    "investorRelationsTitle": "Investor Relations",
+    "investorRelationsIntro": "Governance, transparency, and institutional communications.",
+    "investorRelationsBody": "SBDV is committed to transparency with our clients and stakeholders. Annual reports, governance policies, and institutional disclosures will be published here as they become available. For institutional inquiries, please contact our investor relations team through the contact page."
+  },
+  "login": {
+    "title": "Client Login",
+    "subtitle": "Secure access to your portfolio and account documents.",
+    "email": "Email Address",
+    "password": "Password",
+    "mfaCode": "Authentication Code",
+    "mfaHint": "Enter the 6-digit code from your authenticator app.",
+    "signIn": "Sign In",
+    "signingIn": "Signing In...",
+    "forgotPassword": "Forgot password?",
+    "noAccount": "Not a client yet?",
+    "applyMembership": "Apply for Membership",
+    "invalidCredentials": "Invalid email or password.",
+    "mfaRequired": "Enter your authentication code to continue.",
+    "mfaInvalid": "Invalid authentication code.",
+    "error": "An error occurred. Please try again."
+  },
+  "portal": {
+    "title": "Client Portal",
+    "nav": {
+      "overview": "Overview",
+      "holdings": "Holdings",
+      "performance": "Performance",
+      "documents": "Documents",
+      "messages": "Messages",
+      "settings": "Settings",
+      "logout": "Sign Out",
+      "admin": "Admin Panel"
+    },
+    "overview": {
+      "title": "Portfolio Overview",
+      "netWorth": "Total Net Worth",
+      "asOf": "As of",
+      "allocation": "Asset Allocation",
+      "recentActivity": "Recent Activity",
+      "bullionValue": "Bullion & Custody",
+      "financialValue": "Financial Portfolio"
+    },
+    "holdings": {
+      "title": "Holdings",
+      "bullionTab": "Bullion & Custody",
+      "financialTab": "Financial Portfolio",
+      "weight": "Weight",
+      "purity": "Purity",
+      "location": "Vault Location",
+      "auditStatus": "Audit Status",
+      "quantity": "Quantity",
+      "costBasis": "Cost Basis",
+      "marketValue": "Market Value",
+      "verified": "Verified",
+      "pending": "Pending Audit"
+    },
+    "performance": {
+      "title": "Performance",
+      "period": "Period",
+      "return": "Return",
+      "benchmark": "Benchmark",
+      "ytd": "Year to Date",
+      "oneYear": "1 Year",
+      "threeYear": "3 Years",
+      "allTime": "All Time",
+      "disclaimer": "Performance data is for illustration. Past performance is not indicative of future results."
+    },
+    "documents": {
+      "title": "Document Vault",
+      "upload": "Upload Document",
+      "download": "Download",
+      "noDocuments": "No documents available.",
+      "types": {
+        "statement": "Statement",
+        "contract": "Contract",
+        "kyc": "KYC Document",
+        "report": "Report",
+        "other": "Other"
+      }
+    },
+    "messages": {
+      "title": "Advisor Messages",
+      "compose": "New Message",
+      "subject": "Subject",
+      "body": "Message",
+      "send": "Send",
+      "noMessages": "No messages yet.",
+      "encrypted": "End-to-end encrypted communication"
+    },
+    "settings": {
+      "title": "Account Settings",
+      "mfaTitle": "Two-Factor Authentication",
+      "mfaEnabled": "Enabled",
+      "mfaDisabled": "Not enabled",
+      "enableMfa": "Enable MFA",
+      "sessions": "Active Sessions",
+      "notifications": "Email Notifications"
+    }
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "applications": "Membership Applications",
+    "clients": "Clients",
+    "approve": "Approve",
+    "reject": "Reject",
+    "seedPortfolio": "Seed Portfolio",
+    "status": {
+      "pending": "Pending",
+      "approved": "Approved",
+      "rejected": "Rejected"
+    },
+    "subtitle": "Global institutional registry — disclosed custody slices only.",
+    "sovereignWealth": "Sovereign Wealth Funds by Country",
+    "privateWealth": "Monarchies, Royal Offices & Private Wealth",
+    "privateWealthNote": "Sultans, princes, ruling families, and UHNW individuals",
+    "disclosedNote": "Figures show disclosed SBDV custody fractions, not total fund AUM",
+    "entities": "entities",
+    "platformTitle": "Institutional Platform",
+    "platformBadge": "SBDV Global Operations",
+    "signedInAs": "Signed in as",
+    "overview": {
+      "title": "Operations Overview",
+      "subtitle": "Global sovereign and private wealth registry with mandate-aligned capital deployment.",
+      "topJurisdictions": "Top Sovereign Jurisdictions",
+      "recentDirectives": "Recent Investment Directives"
+    },
+    "nav": {
+      "overview": "Overview",
+      "sovereign": "Sovereign Registry",
+      "privateWealth": "Private Wealth",
+      "directives": "Investment Directives",
+      "applications": "Applications",
+      "clients": "Clients",
+      "clientPortal": "Client Portal",
+      "logout": "Sign Out",
+      "capitalAccess": "Capital Access"
+    },
+    "stats": {
+      "sovereignEntities": "Sovereign Entities",
+      "privateEntities": "Private Wealth Entities",
+      "activeDirectives": "Investment Directives",
+      "allocated": "allocated",
+      "globalCoverage": "Global Coverage",
+      "jurisdictions": "sovereign jurisdictions"
+    },
+    "disclosedSlice": "disclosed slice",
+    "allocated": "Capital allocated",
+    "allocateCapital": "Allocate Capital",
+    "viewMandate": "View mandate",
+    "hideMandate": "Hide mandate",
+    "fullMandate": "Investment Mandate",
+    "region": "Region",
+    "entitySingular": "entity",
+    "viewAll": "View all",
+    "loadError": "Unable to load admin data.",
+    "optional": "optional",
+    "cancel": "Cancel",
+    "applicationsSubtitle": "Review and approve new membership requests.",
+    "noApplications": "No membership applications at this time.",
+    "clientsSubtitle": "Manage client accounts and portfolio access.",
+    "clientsName": "Client",
+    "clientsTier": "Tier",
+    "directiveStatus": {
+      "pending": "Pending",
+      "active": "Active",
+      "executed": "Executed",
+      "cancelled": "Cancelled"
+    },
+    "assetClasses": {
+      "global_equities": "Global Equities",
+      "fixed_income": "Fixed Income",
+      "real_estate": "Real Estate",
+      "infrastructure": "Infrastructure",
+      "private_equity": "Private Equity",
+      "alternatives": "Alternatives",
+      "bullion_custody": "Bullion & Custody"
+    },
+    "directives": {
+      "subtitle": "Mandate-aligned capital deployment across sovereign and private wealth entities.",
+      "empty": "No investment directives yet. Allocate capital from the Sovereign or Private Wealth registry.",
+      "all": "All",
+      "entity": "Entity",
+      "amount": "Amount",
+      "assetClass": "Asset Class",
+      "investmentDirective": "Investment Directive",
+      "status": "Status",
+      "actions": "Actions",
+      "available": "Available to allocate",
+      "notes": "Internal notes",
+      "submit": "Submit Directive",
+      "activate": "Activate",
+      "markExecuted": "Mark Executed",
+      "invalidAmount": "Enter a valid allocation amount.",
+      "exceedsAvailable": "Amount exceeds available disclosed allocation.",
+      "directiveRequired": "Investment directive is required.",
+      "directivePlaceholder": "e.g. Deploy into European infrastructure aligned with long-term intergenerational mandate…",
+      "submitError": "Failed to submit directive."
+    },
+    "capitalAccess": {
+      "title": "Capital Access Requests",
+      "subtitle": "Review enterprise borrowing and investment applications against sovereign pools.",
+      "empty": "No capital access requests submitted yet.",
+      "review": "Mark Under Review",
+      "onboarding": "Post-Approval Onboarding",
+      "advanceTo": "Advance to",
+      "pendingVerification": "pending verification",
+      "documents": "Documents uploaded",
+      "reviewApprove": "Review & Approve",
+      "approveModalTitle": "Approve & Assign Escrow",
+      "approveModalDesc": "Enter the escrow account the partner must use for the security deposit of",
+      "approveWithEscrow": "Approve & Send Escrow Details",
+      "beneficiary": "Beneficiary",
+      "assignedEscrow": "Assigned Escrow Account",
+      "awaitingBorrowerDeposit": "Awaiting partner wire and payment slip.",
+      "paymentSlip": "Payment slip",
+      "noPaymentSlip": "No payment slip uploaded yet.",
+      "confirmPayment": "Confirm Payment Received",
+      "error": "Unable to complete that action. Please try again.",
+      "reviewApplication": "Review Application",
+      "escrowFormTitle": "Escrow Account for Security Deposit",
+      "assignEscrow": "Assign Escrow Account",
+      "saveEscrow": "Save Escrow Details"
+    }
+  },
+  "capitalAccess": {
+    "portalTitle": "Capital Access",
+    "portalBadge": "Enterprise Partner Portal",
+    "hero": {
+      "badge": "Institutional Capital Program",
+      "title": "Capital Access Program",
+      "subtitle": "Connect your enterprise to sovereign-grade capital pools. Structured lending with transparent terms, mandate alignment, and Swiss oversight.",
+      "applyAccess": "Apply for Access",
+      "partnerLogin": "Partner Login"
+    },
+    "features": {
+      "title": "Why Capital Access",
+      "subtitle": "A disciplined gateway between qualified enterprises and institutional sovereign capital.",
+      "globalPoolsTitle": "Global Sovereign Pools",
+      "globalPoolsDesc": "Access partially disclosed capital from sovereign wealth jurisdictions worldwide.",
+      "flexibleTermsTitle": "Flexible Repayment",
+      "flexibleTermsDesc": "Structure your facility with monthly or annual interest payments over 1–10 years.",
+      "enterpriseFocusTitle": "Enterprise-Grade",
+      "enterpriseFocusDesc": "Designed for established companies with audited financials and clear investment thesis.",
+      "structuredSecurityTitle": "Structured Security",
+      "structuredSecurityDesc": "10% security deposit with full KYC/AML compliance and mandate alignment review."
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "registerTitle": "Register as a Capital Partner",
+      "registerDesc": "Create your enterprise account and verify your company credentials.",
+      "exploreTitle": "Explore Available Pools",
+      "exploreDesc": "Browse partially disclosed sovereign capital pools aligned with your sector and region.",
+      "structureTitle": "Structure Your Request",
+      "structureDesc": "Define loan amount, term, repayment frequency, and review live interest calculations.",
+      "submitTitle": "Submit Company Profile",
+      "submitDesc": "Provide financials, investment areas, and accept the 10% security deposit condition.",
+      "decisionTitle": "Await Institutional Review",
+      "decisionDesc": "Your application enters our review queue. You will receive approval or rejection notification."
+    },
+    "nav": {
+      "overview": "Overview",
+      "pools": "Available Pools",
+      "request": "New Request",
+      "applications": "My Applications",
+      "programInfo": "Program Information",
+      "logout": "Sign Out",
+      "facility": "My Facility"
+    },
+    "overview": {
+      "title": "Welcome to Capital Access",
+      "subtitle": "Explore sovereign capital pools and submit mandate-aligned investment requests for your enterprise.",
+      "featuredPools": "Featured Capital Pools",
+      "ctaTitle": "Ready to structure your request?",
+      "ctaDesc": "Complete a guided application with live interest calculation and security deposit terms."
+    },
+    "steps": {
+      "explore": "Explore Pools",
+      "exploreDesc": "Review partially disclosed sovereign capital available for enterprise deployment.",
+      "apply": "Structure Request",
+      "applyDesc": "Define amount, term, and repayment schedule with live APR calculation.",
+      "review": "Institutional Review",
+      "reviewDesc": "Submit for approval. Track status in your applications dashboard."
+    },
+    "pools": {
+      "title": "Available Capital Pools",
+      "subtitle": "Institutional sovereign pools with limited disclosure. Full entity details available upon approved access."
+    },
+    "conditions": {
+      "title": "Access Conditions",
+      "minimumOperatingYears": "Minimum 2 years of operating history",
+      "auditedFinancials": "Audited or reviewed financial statements required",
+      "securityDeposit": "10% security deposit on requested facility amount",
+      "kycAml": "Full KYC/AML and beneficial ownership disclosure",
+      "mandateAlignment": "Investment thesis must align with pool mandate",
+      "minimumTicket": "Minimum request USD $500,000"
+    },
+    "restrictedPool": "Restricted Access Pool",
+    "availableRange": "Available Range",
+    "minTicket": "Minimum Ticket",
+    "interestFrom": "Interest from",
+    "securityDeposit": "Security Deposit",
+    "viewAllPools": "View all pools",
+    "requestFromPool": "Request from this pool",
+    "startRequest": "Start Capital Request",
+    "register": {
+      "title": "Register for Capital Access",
+      "subtitle": "Create your enterprise partner account to explore sovereign capital pools.",
+      "fullName": "Full Name",
+      "phone": "Phone (optional)",
+      "submit": "Create Partner Account",
+      "hasAccount": "Already registered?",
+      "error": "Registration failed. Please try again."
+    },
+    "request": {
+      "title": "Capital Request",
+      "subtitle": "Complete this guided application to request institutional capital for your enterprise.",
+      "selectPool": "Select Capital Pool",
+      "loanTerms": "Loan & Interest Terms",
+      "amount": "Requested Amount",
+      "term": "Loan Term",
+      "year": "year",
+      "years": "years",
+      "repayment": "Repayment Frequency",
+      "yearly": "Yearly",
+      "monthly": "Monthly",
+      "calculatedTerms": "Calculated Terms",
+      "apr": "Annual Interest Rate",
+      "totalInterest": "Total Interest",
+      "monthlyPayment": "Monthly Payment",
+      "yearlyPayment": "Yearly Payment",
+      "companyDetails": "Company & Financial Profile",
+      "companyName": "Company Name",
+      "registration": "Company Registration No.",
+      "country": "Country of Incorporation",
+      "industry": "Industry / Sector",
+      "annualRevenue": "Annual Revenue",
+      "investmentAreas": "Areas of Investment",
+      "investmentAreasPlaceholder": "Describe how capital will be deployed — expansion, infrastructure, R&D, acquisitions…",
+      "financials": "Financial Summary",
+      "financialsPlaceholder": "Summarize audited financials — revenue trend, EBITDA, debt/equity ratio, key assets…",
+      "review": "Review & Submit",
+      "selectedPool": "Selected Pool",
+      "termsAccept": "I accept the 10% security deposit requirement, institutional review process, and confirm all information provided is accurate.",
+      "back": "Back",
+      "continue": "Continue",
+      "submit": "Submit Application",
+      "submitError": "Failed to submit application.",
+      "submittedTitle": "Application Submitted",
+      "submittedDesc": "Your capital access request is now under institutional review. You will be notified upon approval or rejection.",
+      "viewApplications": "View My Applications"
+    },
+    "applications": {
+      "title": "My Applications",
+      "subtitle": "Track the status of your capital access requests.",
+      "empty": "You have not submitted any capital requests yet.",
+      "submitted": "Submitted"
+    },
+    "status": {
+      "pending": "Pending Review",
+      "under_review": "Under Review",
+      "approved": "Approved",
+      "rejected": "Rejected"
+    },
+    "onboarding": {
+      "title": "Facility Dashboard",
+      "subtitle": "Complete onboarding to activate your approved capital facility.",
+      "noFacility": "No Active Facility",
+      "noFacilityDesc": "Once your capital access application is approved, your facility dashboard will appear here.",
+      "progress": "Onboarding Progress",
+      "rm": "Relationship Manager",
+      "escrowTitle": "Security Deposit — Escrow Instructions",
+      "escrowDesc": "Transfer exactly 10% of your approved facility amount to the escrow account below. Use the wire reference exactly as shown.",
+      "bank": "Bank",
+      "account": "Account Name",
+      "wireReference": "Wire / Transfer Reference",
+      "amountDue": "Amount Due",
+      "wireRefPlaceholder": "Enter your bank wire reference number",
+      "confirmDeposit": "Confirm Wire Sent",
+      "depositSubmitted": "Deposit reference submitted. Awaiting verification.",
+      "depositPending": "Wire reference submitted — pending verification",
+      "documentsTitle": "Required Documentation",
+      "documentsDesc": "Upload all four documents within 14 business days of deposit confirmation.",
+      "upload": "Upload",
+      "docsCompleteNote": "All documents uploaded. Our team will review and advance your onboarding.",
+      "disbursementPending": "Disbursement in Progress",
+      "disbursementDesc": "Your facility has cleared compliance. Capital release is being processed.",
+      "disbursedOn": "Disbursed on",
+      "facilityActive": "Facility Active",
+      "installment": "Payment Amount",
+      "openFacility": "Open Facility Dashboard",
+      "error": "Something went wrong. Please try again.",
+      "phases": {
+        "awaiting_deposit": "Security Deposit",
+        "awaiting_documents": "Documentation",
+        "kyc_review": "KYC Review",
+        "ready_for_disbursement": "Disbursement",
+        "disbursed": "Disbursed",
+        "active": "Active"
+      },
+      "docTypes": {
+        "audited_financials": "Audited Financial Statements",
+        "facility_agreement": "Signed Facility Agreement",
+        "kyc_disclosure": "KYC / Beneficial Ownership Disclosure",
+        "deployment_plan": "Capital Deployment Plan"
+      },
+      "escrowPending": "Escrow payment details are being prepared by our capital desk. They will appear here as soon as your application is fully approved.",
+      "paymentSlipTitle": "Upload Payment Slip",
+      "paymentSlipDesc": "Upload a PDF or image of your bank transfer confirmation / payment receipt.",
+      "uploadSlip": "Upload Slip",
+      "paymentSlipUploaded": "Payment slip on file",
+      "slipRequiredFirst": "Upload your payment slip before submitting the wire reference.",
+      "awaitingAdminConfirm": "Our team will verify your transfer and unlock the documentation stage.",
+      "beginOnboarding": "Begin Onboarding",
+      "bankAddress": "Bank Address",
+      "beneficiaryAddress": "Beneficiary Address",
+      "accountNumber": "Account Number"
+    }
+  },
+  "chat": {
+    "open": "Ask SBDV",
+    "title": "SBDV Concierge",
+    "subtitle": "Private guidance · 24/7",
+    "greeting": "Welcome to SBDV. I'm your digital concierge — ask about vault custody, membership, wealth services, or our Capital Access Program.",
+    "greetingNamed": "Hello, {name}. I'm your SBDV concierge — I can help with your account, guide you through services, or answer questions about membership and capital access.",
+    "placeholder": "Ask a question…",
+    "send": "Send message",
+    "minimize": "Minimize chat",
+    "close": "Close and clear chat",
+    "error": "I'm sorry, I couldn't process that. Please try again or use the Contact page for direct assistance.",
+    "disclaimer": "AI-assisted guidance. For binding advice, contact your relationship manager."
+  }
+}
