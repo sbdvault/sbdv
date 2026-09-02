@@ -1,5 +1,6 @@
 # Multi-stage Next.js 16 standalone image for Amvera Cloud
-# Persistent data (SQLite + uploads) lives on /data (Amvera mounts this as root)
+# Database: Supabase Postgres (set DATABASE_URL + DIRECT_URL in Amvera Variables)
+# Uploads still on Amvera /data until Supabase Storage is wired
 
 FROM node:20-bookworm-slim AS deps
 WORKDIR /app
@@ -14,8 +15,10 @@ RUN apt-get update -y && apt-get install -y openssl ca-certificates && rm -rf /v
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
-ENV DATABASE_URL="file:./prisma/build.db"
-RUN npx prisma generate && npx prisma db push --skip-generate && npm run build
+# Dummy URLs so `prisma generate` succeeds at build time (no real DB needed)
+ENV DATABASE_URL="postgresql://user:pass@localhost:5432/sbdv?schema=public"
+ENV DIRECT_URL="postgresql://user:pass@localhost:5432/sbdv?schema=public"
+RUN npx prisma generate && npm run build
 
 FROM node:20-bookworm-slim AS runner
 WORKDIR /app
@@ -25,9 +28,7 @@ ENV NEXT_TELEMETRY_DISABLED=1
 ENV PORT=80
 ENV HOSTNAME=0.0.0.0
 ENV DATA_DIR=/data
-ENV DATABASE_URL="file:/data/sbdv.db"
 
-# Run as root so Amvera's /data mount is writable (platform mounts over image perms)
 RUN apt-get update -y && apt-get install -y openssl ca-certificates && rm -rf /var/lib/apt/lists/* \
   && mkdir -p /data /app/prisma
 

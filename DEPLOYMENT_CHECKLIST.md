@@ -2,8 +2,10 @@
 
 **Target stack:** [Amvera Cloud](https://amvera.ru/) (Next.js host) + **Supabase** (Postgres, Storage, seeds, portal data, chatbot context)
 
-**Last updated:** 2026-08-26
+**Live app (Amvera):** https://sbdv-sbdvault.amvera.io  
+**Last updated:** 2026-09-02
 
+Prisma is configured for **PostgreSQL**. Set `DATABASE_URL` (pooler, port 6543 + `?pgbouncer=true`) and `DIRECT_URL` (direct, port 5432) from the Supabase dashboard before deploying.
 Use this as the working todo list. Check items off as you complete them. Do not commit real secrets — use the Amvera / Supabase dashboards or a local `.env` that stays gitignored.
 
 ---
