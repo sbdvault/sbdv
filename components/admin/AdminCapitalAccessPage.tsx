@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useTranslations } from "@/hooks/useTranslations";
 import {
   getNextAdminAction,
+  hasDisburseBankDetails,
   hasPaymentSlip,
   hasRequiredDocuments,
   ONBOARDING_PHASES,
@@ -32,6 +33,16 @@ interface Application {
   relationshipManager: string | null;
   poolLabel: string;
   docsComplete?: boolean;
+  bankDetailsComplete?: boolean;
+  disburseBankName?: string | null;
+  disburseBankAddress?: string | null;
+  disburseAccountName?: string | null;
+  disburseAccountNumber?: string | null;
+  disburseIban?: string | null;
+  disburseSwift?: string | null;
+  disburseBeneficiary?: string | null;
+  disburseBeneficiaryAddress?: string | null;
+  bankDetailsSubmittedAt?: string | null;
   user: { name: string | null; email: string };
   documents: { id: string; type: string; name: string; uploadedAt?: string }[];
   escrow: {
@@ -303,6 +314,9 @@ export default function AdminCapitalAccessPage() {
               ? ONBOARDING_PHASES.indexOf(app.onboardingPhase as (typeof ONBOARDING_PHASES)[number])
               : -1;
             const awaitingDeposit = app.onboardingPhase === "AWAITING_DEPOSIT";
+            const awaitingBank = app.onboardingPhase === "AWAITING_BANK_DETAILS";
+            const bankReady =
+              app.bankDetailsComplete || hasDisburseBankDetails(app);
             const inDocReview =
               canApprove &&
               (app.onboardingPhase === "AWAITING_DOCUMENTS" ||
@@ -310,6 +324,13 @@ export default function AdminCapitalAccessPage() {
                 app.onboardingPhase === "DOCUMENTS_SUBMITTED" ||
                 !app.onboardingPhase);
             const docsSubmitted = app.onboardingPhase === "DOCUMENTS_SUBMITTED";
+
+            const canAdvanceOnboarding =
+              Boolean(nextPhase) &&
+              !awaitingDeposit &&
+              app.onboardingPhase !== "AWAITING_DOCUMENTS" &&
+              app.onboardingPhase !== "DOCUMENTS_REVISION" &&
+              !(awaitingBank && !bankReady);
 
             return (
               <div
@@ -635,19 +656,56 @@ export default function AdminCapitalAccessPage() {
                       </button>
                     )}
 
-                    {!awaitingDeposit &&
-                      nextPhase &&
-                      app.onboardingPhase !== "AWAITING_DOCUMENTS" &&
-                      app.onboardingPhase !== "DOCUMENTS_REVISION" && (
-                        <button
-                          onClick={() => advanceOnboarding(app.id)}
-                          disabled={saving}
-                          className="mt-2 px-4 py-2 bg-gold text-charcoal font-body text-sm rounded-sm disabled:opacity-50"
-                        >
-                          {t("admin.capitalAccess.advanceTo")}{" "}
-                          {t(`capitalAccess.onboarding.phases.${nextPhase.toLowerCase()}`)}
-                        </button>
+                    {(awaitingBank || bankReady) &&
+                      (app.disburseBankName || app.disburseIban) && (
+                        <div className="mb-3 p-3 bg-white border border-charcoal/10 rounded-sm text-sm font-body">
+                          <p className="text-xs uppercase tracking-wide text-charcoal/40 mb-2">
+                            {t("admin.capitalAccess.disburseBank")}
+                          </p>
+                          {bankReady ? (
+                            <p className="text-xs text-green-700 mb-2">
+                              {t("admin.capitalAccess.bankDetailsReceived")}
+                            </p>
+                          ) : (
+                            <p className="text-xs text-amber-700 mb-2">
+                              {t("admin.capitalAccess.awaitingBankDetails")}
+                            </p>
+                          )}
+                          <p>
+                            {app.disburseBankName} · {app.disburseAccountName}
+                          </p>
+                          {app.disburseBankAddress && (
+                            <p className="text-charcoal/60 text-xs mt-1 whitespace-pre-line">
+                              {app.disburseBankAddress}
+                            </p>
+                          )}
+                          <p className="font-mono text-xs mt-1">
+                            {app.disburseAccountNumber ? `${app.disburseAccountNumber} · ` : ""}
+                            {app.disburseIban} · {app.disburseSwift}
+                          </p>
+                          <p className="mt-2">
+                            {t("admin.capitalAccess.beneficiary")}:{" "}
+                            {app.disburseBeneficiary || app.companyName}
+                          </p>
+                        </div>
                       )}
+
+                    {awaitingBank && !bankReady && (
+                      <p className="font-body text-sm text-amber-700 mb-2">
+                        {t("admin.capitalAccess.awaitingBankDetails")}
+                      </p>
+                    )}
+
+                    {canAdvanceOnboarding && nextPhase && (
+                      <button
+                        onClick={() => advanceOnboarding(app.id)}
+                        disabled={saving}
+                        className="mt-2 px-4 py-2 bg-gold text-charcoal font-body text-sm rounded-sm disabled:opacity-50"
+                      >
+                        {t("admin.capitalAccess.advanceTo")}{" "}
+                        {t(`capitalAccess.onboarding.phases.${nextPhase.toLowerCase()}`)}
+                      </button>
+                    )}
 
                     {/* Legacy approved apps still collecting docs after deposit */}
                     {app.onboardingPhase === "AWAITING_DOCUMENTS" && (

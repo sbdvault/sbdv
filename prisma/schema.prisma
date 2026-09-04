@@ -242,6 +242,15 @@ model CapitalAccessRequest {
   depositSubmittedAt   DateTime?
   depositConfirmedAt   DateTime?
   kycCompletedAt       DateTime?
+  disburseBankName     String?
+  disburseBankAddress  String?
+  disburseAccountName  String?
+  disburseAccountNumber String?
+  disburseIban         String?
+  disburseSwift        String?
+  disburseBeneficiary  String?
+  disburseBeneficiaryAddress String?
+  bankDetailsSubmittedAt DateTime?
   disbursedAt          DateTime?
   relationshipManager  String?
   adminNotes           String?

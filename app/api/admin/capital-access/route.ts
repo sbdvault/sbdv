@@ -3,6 +3,7 @@ import { prisma } from "@/lib/prisma";
 import { getPoolTeaser } from "@/lib/capital-access";
 import {
   getEscrowInstructions,
+  hasDisburseBankDetails,
   hasRequiredDocuments,
   validateEscrowInput,
 } from "@/lib/capital-access-onboarding";
@@ -46,6 +47,7 @@ export async function GET() {
         poolLabel: getPoolTeaser(a.pool.country, a.pool.category).label,
         escrow: getEscrowInstructions(a.id, a.companyName, a),
         docsComplete: hasRequiredDocuments(a.documents.map((d) => d.type)),
+        bankDetailsComplete: hasDisburseBankDetails(a),
       })),
     });
   } catch (err) {

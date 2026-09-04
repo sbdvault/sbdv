@@ -694,6 +694,9 @@
       "paymentSlip": "Payment slip",
       "noPaymentSlip": "No payment slip uploaded yet.",
       "confirmPayment": "Confirm Payment Received",
+      "disburseBank": "Disbursement bank account",
+      "bankDetailsReceived": "Borrower bank details received",
+      "awaitingBankDetails": "Awaiting borrower disbursement bank details.",
       "error": "Unable to complete that action. Please try again."
     }
   },
@@ -880,8 +883,14 @@
       "submitDocsFailed": "Could not submit documents. Please try again.",
       "docsSubmittedNote": "Document package submitted — awaiting review.",
       "docsCompleteNote": "All documents uploaded. Our team will review them. If approved, escrow details for the 10% deposit will appear here.",
+      "bankDetailsTitle": "Disbursement Bank Details",
+      "bankDetailsDesc": "Enter the bank account where SBDV should disburse your approved facility amount. Bank name, account name, IBAN, and SWIFT are required.",
+      "submitBankDetails": "Submit Bank Details",
+      "bankSubmitSuccess": "Bank details submitted. Our team will verify and proceed to disbursement.",
+      "bankSubmitFailed": "Could not submit bank details. Please try again.",
+      "bankSubmittedNote": "Bank details submitted — awaiting disbursement.",
       "disbursementPending": "Disbursement in Progress",
-      "disbursementDesc": "Your facility has cleared compliance. Capital release is being processed.",
+      "disbursementDesc": "Your facility has cleared compliance. Capital release is being processed to your submitted bank account.",
       "disbursedOn": "Disbursed on",
       "facilityActive": "Facility Active",
       "installment": "Payment Amount",
@@ -894,6 +903,7 @@
         "documents_submitted": "Docs Submitted",
         "awaiting_deposit": "Security Deposit",
         "kyc_review": "KYC Review",
+        "awaiting_bank_details": "Bank Details",
         "ready_for_disbursement": "Disbursement",
         "disbursed": "Disbursed",
         "active": "Active"

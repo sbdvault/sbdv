@@ -4,11 +4,14 @@ import { getPoolTeaser } from "@/lib/capital-access";
 import {
   canBorrowerUploadDocuments,
   getEscrowInstructions,
+  hasDisburseBankDetails,
   hasRequiredDocuments,
   ONBOARDING_PHASES,
   PAYMENT_SLIP_TYPE,
+  validateDisburseBankInput,
 } from "@/lib/capital-access-onboarding";
 import {
+  sendBankDetailsSubmittedEmail,
   sendDepositSubmittedEmail,
   sendDocumentsSubmittedEmail,
   sendOnboardingPhaseEmail,
@@ -65,6 +68,7 @@ export async function GET(
         escrow: getEscrowInstructions(facility.id, facility.companyName, facility),
         paymentSlip: facility.documents.find((d) => d.type === PAYMENT_SLIP_TYPE) || null,
         docsComplete: hasRequiredDocuments(facility.documents.map((d) => d.type)),
+        bankDetailsComplete: hasDisburseBankDetails(facility),
         canUploadDocuments: canBorrowerUploadDocuments(facility.status, facility.onboardingPhase),
         phases: ONBOARDING_PHASES,
       },
@@ -86,7 +90,7 @@ export async function PATCH(
 
   const { id } = await params;
   const body = await request.json();
-  const { depositReference, action } = body;
+  const { depositReference, action, bank } = body;
 
   try {
     if (action === "submit_documents") {
@@ -139,6 +143,59 @@ export async function PATCH(
       }
 
       return NextResponse.json({ facility: updated });
+    }
+
+    if (action === "submit_bank_details") {
+      const facility = await prisma.capitalAccessRequest.findFirst({
+        where: {
+          id,
+          userId: session.user.id,
+          status: "APPROVED",
+          onboardingPhase: "AWAITING_BANK_DETAILS",
+        },
+      });
+
+      if (!facility) {
+        return NextResponse.json(
+          { error: "Bank details submission is not available at this stage" },
+          { status: 403 }
+        );
+      }
+
+      const validated = validateDisburseBankInput({
+        bankName: bank?.bankName,
+        bankAddress: bank?.bankAddress,
+        accountName: bank?.accountName,
+        accountNumber: bank?.accountNumber,
+        iban: bank?.iban,
+        swift: bank?.swift,
+        beneficiary: bank?.beneficiary,
+        beneficiaryAddress: bank?.beneficiaryAddress,
+      });
+      if (!validated.ok) {
+        return NextResponse.json({ error: validated.error }, { status: 400 });
+      }
+
+      const updated = await prisma.capitalAccessRequest.update({
+        where: { id },
+        data: {
+          ...validated.data,
+          disburseBeneficiary: validated.data.disburseBeneficiary || facility.companyName,
+          bankDetailsSubmittedAt: new Date(),
+        },
+      });
+
+      const adminEmail = await getAdminEmail();
+      sendBankDetailsSubmittedEmail(adminEmail, facility.companyName, facility.id).catch(
+        console.error
+      );
+
+      return NextResponse.json({
+        facility: {
+          ...updated,
+          bankDetailsComplete: hasDisburseBankDetails(updated),
+        },
+      });
     }
 
     const facility = await prisma.capitalAccessRequest.findFirst({

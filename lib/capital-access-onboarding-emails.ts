@@ -48,10 +48,15 @@ const phaseMessages: Record<string, { subject: string; title: string; body: stri
     title: "Compliance review in progress",
     body: `<p>Your security deposit has been verified. Our compliance team is conducting final KYC/AML verification. No action required.</p>`,
   },
+  AWAITING_BANK_DETAILS: {
+    subject: "KYC Complete — Submit Disbursement Bank Details",
+    title: "Submit your disbursement bank account",
+    body: `<p>KYC review is complete. Please open <strong>Onboarding</strong> and submit the bank account where we should disburse your approved facility amount (bank name, account name, IBAN, and SWIFT are required).</p>`,
+  },
   READY_FOR_DISBURSEMENT: {
-    subject: "KYC Complete — Disbursement Pending",
+    subject: "Bank Details Received — Disbursement Pending",
     title: "Ready for capital release",
-    body: `<p>All compliance checks passed. Your facility is cleared for disbursement per your approved investment mandate. Funds will be released shortly.</p>`,
+    body: `<p>Your disbursement bank details have been accepted. Your facility is cleared for capital release per your approved investment mandate. Funds will be released shortly.</p>`,
   },
   DISBURSED: {
     subject: "Capital Disbursed",
@@ -133,6 +138,25 @@ export async function sendDocumentsSubmittedEmail(
     html: emailLayout(
       "Borrower submitted documentation package",
       `<p><strong>${companyName}</strong> has submitted all five required documents for review.</p>
+       <p><a href="${siteUrl}/en/admin/capital-access" style="display:inline-block;padding:12px 24px;background:#D4AF37;color:#1a1a1a;text-decoration:none;font-weight:bold;">Review in Admin</a></p>
+       <p style="font-size:12px;color:#888;">Application ID: ${applicationId}</p>`
+    ),
+  });
+}
+
+export async function sendBankDetailsSubmittedEmail(
+  adminEmail: string,
+  companyName: string,
+  applicationId: string
+) {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  await sendEmail({
+    to: adminEmail,
+    subject: `[Action] Disbursement Bank Details Submitted — ${companyName}`,
+    html: emailLayout(
+      "Borrower submitted disbursement bank details",
+      `<p><strong>${companyName}</strong> has submitted bank account details for capital disbursement.</p>
+       <p>Review the account in Admin, then advance to Ready for Disbursement when verified.</p>
        <p><a href="${siteUrl}/en/admin/capital-access" style="display:inline-block;padding:12px 24px;background:#D4AF37;color:#1a1a1a;text-decoration:none;font-weight:bold;">Review in Admin</a></p>
        <p style="font-size:12px;color:#888;">Application ID: ${applicationId}</p>`
     ),

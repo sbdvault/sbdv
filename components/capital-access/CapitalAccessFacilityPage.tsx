@@ -40,6 +40,16 @@ interface Facility {
   poolLabel: string;
   docsComplete: boolean;
   canUploadDocuments: boolean;
+  bankDetailsComplete?: boolean;
+  bankDetailsSubmittedAt?: string | null;
+  disburseBankName?: string | null;
+  disburseBankAddress?: string | null;
+  disburseAccountName?: string | null;
+  disburseAccountNumber?: string | null;
+  disburseIban?: string | null;
+  disburseSwift?: string | null;
+  disburseBeneficiary?: string | null;
+  disburseBeneficiaryAddress?: string | null;
   phases: string[];
   escrow: {
     bankName: string;
@@ -63,6 +73,7 @@ const phaseIcons: Record<string, typeof Circle> = {
   DOCUMENTS_SUBMITTED: FileText,
   AWAITING_DEPOSIT: Banknote,
   KYC_REVIEW: Shield,
+  AWAITING_BANK_DETAILS: Building2,
   READY_FOR_DISBURSEMENT: ArrowRightLeft,
   DISBURSED: CheckCircle2,
   ACTIVE: CheckCircle2,
@@ -79,6 +90,16 @@ export default function CapitalAccessFacilityPage() {
   const [uploading, setUploading] = useState(false);
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
+  const [bankForm, setBankForm] = useState({
+    bankName: "",
+    bankAddress: "",
+    accountName: "",
+    accountNumber: "",
+    iban: "",
+    swift: "",
+    beneficiary: "",
+    beneficiaryAddress: "",
+  });
 
   const getLocalizedHref = (href: string) =>
     `/${(params?.locale as string) || locale || "en"}${href}`;
@@ -206,6 +227,26 @@ export default function CapitalAccessFacilityPage() {
       return;
     }
     setMessage(t("capitalAccess.onboarding.submitDocsSuccess"));
+    loadData();
+  };
+
+  const submitBankDetails = async () => {
+    if (!facility) return;
+    setSubmitting(true);
+    setError("");
+    setMessage("");
+    const res = await fetch(`/api/capital-access/facility/${facility.id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ action: "submit_bank_details", bank: bankForm }),
+    });
+    const json = await res.json().catch(() => ({}));
+    setSubmitting(false);
+    if (!res.ok) {
+      setError(json.error || t("capitalAccess.onboarding.bankSubmitFailed"));
+      return;
+    }
+    setMessage(t("capitalAccess.onboarding.bankSubmitSuccess"));
     loadData();
   };
 
@@ -567,6 +608,125 @@ export default function CapitalAccessFacilityPage() {
                     </div>
                   )}
                 </>
+              )}
+            </div>
+          )}
+
+          {facility.onboardingPhase === "AWAITING_BANK_DETAILS" && (
+            <div className="mb-8 p-6 bg-white border border-gold/30 rounded-lg">
+              <h2 className="font-heading font-semibold text-charcoal mb-2 flex items-center gap-2">
+                <Building2 className="w-5 h-5 text-gold" />
+                {t("capitalAccess.onboarding.bankDetailsTitle")}
+              </h2>
+              <p className="font-body text-sm text-charcoal/70 mb-6">
+                {t("capitalAccess.onboarding.bankDetailsDesc")}
+              </p>
+
+              {facility.bankDetailsComplete ? (
+                <div className="space-y-3">
+                  <p className="font-body text-sm text-green-800 bg-green-50 p-3 rounded-sm">
+                    {t("capitalAccess.onboarding.bankSubmittedNote")}
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-off-white rounded-sm font-body text-sm">
+                    <div>
+                      <span className="text-charcoal/50">{t("capitalAccess.onboarding.bank")}</span>
+                      <p className="font-medium">{facility.disburseBankName}</p>
+                      {facility.disburseBankAddress && (
+                        <p className="text-charcoal/60 text-xs mt-1 whitespace-pre-line">
+                          {facility.disburseBankAddress}
+                        </p>
+                      )}
+                    </div>
+                    <div>
+                      <span className="text-charcoal/50">{t("capitalAccess.onboarding.account")}</span>
+                      <p className="font-medium">{facility.disburseAccountName}</p>
+                    </div>
+                    {facility.disburseAccountNumber && (
+                      <div>
+                        <span className="text-charcoal/50">
+                          {t("capitalAccess.onboarding.accountNumber")}
+                        </span>
+                        <p className="font-medium font-mono">{facility.disburseAccountNumber}</p>
+                      </div>
+                    )}
+                    <div>
+                      <span className="text-charcoal/50">IBAN</span>
+                      <p className="font-medium font-mono">{facility.disburseIban}</p>
+                    </div>
+                    <div>
+                      <span className="text-charcoal/50">SWIFT</span>
+                      <p className="font-medium font-mono">{facility.disburseSwift}</p>
+                    </div>
+                    <div>
+                      <span className="text-charcoal/50">{t("admin.capitalAccess.beneficiary")}</span>
+                      <p className="font-medium">{facility.disburseBeneficiary || facility.companyName}</p>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className="space-y-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {(
+                      [
+                        ["bankName", t("capitalAccess.onboarding.bank"), false],
+                        ["accountName", t("capitalAccess.onboarding.account"), false],
+                        ["accountNumber", t("capitalAccess.onboarding.accountNumber"), false],
+                        ["iban", "IBAN", false],
+                        ["swift", "SWIFT", false],
+                        ["beneficiary", t("admin.capitalAccess.beneficiary"), false],
+                        ["bankAddress", t("capitalAccess.onboarding.bankAddress"), true],
+                        [
+                          "beneficiaryAddress",
+                          t("capitalAccess.onboarding.beneficiaryAddress"),
+                          true,
+                        ],
+                      ] as const
+                    ).map(([key, label, multiline]) => (
+                      <label
+                        key={key}
+                        className={`block ${multiline ? "md:col-span-2" : ""}`}
+                      >
+                        <span className="font-body text-xs text-charcoal/50 uppercase tracking-wide">
+                          {label}
+                        </span>
+                        {multiline ? (
+                          <textarea
+                            value={bankForm[key]}
+                            onChange={(e) =>
+                              setBankForm((prev) => ({ ...prev, [key]: e.target.value }))
+                            }
+                            rows={2}
+                            className="mt-1 w-full px-3 py-2.5 border border-charcoal/20 rounded-sm font-body text-sm focus:outline-none focus:border-gold resize-y"
+                          />
+                        ) : (
+                          <input
+                            value={bankForm[key]}
+                            onChange={(e) =>
+                              setBankForm((prev) => ({ ...prev, [key]: e.target.value }))
+                            }
+                            className="mt-1 w-full px-3 py-2.5 border border-charcoal/20 rounded-sm font-body text-sm focus:outline-none focus:border-gold"
+                          />
+                        )}
+                      </label>
+                    ))}
+                  </div>
+                  <button
+                    type="button"
+                    onClick={submitBankDetails}
+                    disabled={
+                      submitting ||
+                      !bankForm.bankName.trim() ||
+                      !bankForm.accountName.trim() ||
+                      !bankForm.iban.trim() ||
+                      !bankForm.swift.trim()
+                    }
+                    className="px-6 py-3 bg-gold text-charcoal font-body rounded-sm disabled:opacity-40"
+                  >
+                    {submitting
+                      ? t("common.loading")
+                      : t("capitalAccess.onboarding.submitBankDetails")}
+                  </button>
+                </div>
               )}
             </div>
           )}

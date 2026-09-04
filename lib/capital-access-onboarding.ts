@@ -4,6 +4,7 @@ export const ONBOARDING_PHASES = [
   "DOCUMENTS_SUBMITTED",
   "AWAITING_DEPOSIT",
   "KYC_REVIEW",
+  "AWAITING_BANK_DETAILS",
   "READY_FOR_DISBURSEMENT",
   "DISBURSED",
   "ACTIVE",
@@ -53,6 +54,20 @@ export interface EscrowInstructions {
   beneficiaryAddress: string | null;
   configured: boolean;
 }
+
+export interface DisburseBankFields {
+  disburseBankName?: string | null;
+  disburseBankAddress?: string | null;
+  disburseAccountName?: string | null;
+  disburseAccountNumber?: string | null;
+  disburseIban?: string | null;
+  disburseSwift?: string | null;
+  disburseBeneficiary?: string | null;
+  disburseBeneficiaryAddress?: string | null;
+  bankDetailsSubmittedAt?: DateTimeLike | null;
+}
+
+type DateTimeLike = Date | string;
 
 export function getEscrowInstructions(
   applicationId: string,
@@ -126,6 +141,55 @@ export function validateEscrowInput(input: {
   };
 }
 
+export function validateDisburseBankInput(input: {
+  bankName?: string;
+  bankAddress?: string;
+  accountName?: string;
+  accountNumber?: string;
+  iban?: string;
+  swift?: string;
+  beneficiary?: string;
+  beneficiaryAddress?: string;
+}) {
+  const bankName = input.bankName?.trim() || "";
+  const bankAddress = input.bankAddress?.trim() || "";
+  const accountName = input.accountName?.trim() || "";
+  const accountNumber = input.accountNumber?.trim() || "";
+  const iban = input.iban?.trim() || "";
+  const swift = input.swift?.trim() || "";
+  const beneficiary = input.beneficiary?.trim() || "";
+  const beneficiaryAddress = input.beneficiaryAddress?.trim() || "";
+
+  if (!bankName || !accountName || !iban || !swift) {
+    return { ok: false as const, error: "Bank name, account name, IBAN, and SWIFT are required" };
+  }
+
+  return {
+    ok: true as const,
+    data: {
+      disburseBankName: bankName,
+      disburseBankAddress: bankAddress || null,
+      disburseAccountName: accountName,
+      disburseAccountNumber: accountNumber || null,
+      disburseIban: iban,
+      disburseSwift: swift,
+      disburseBeneficiary: beneficiary || null,
+      disburseBeneficiaryAddress: beneficiaryAddress || null,
+    },
+  };
+}
+
+export function hasDisburseBankDetails(stored?: DisburseBankFields | null): boolean {
+  if (!stored) return false;
+  return Boolean(
+    stored.disburseBankName?.trim() &&
+      stored.disburseAccountName?.trim() &&
+      stored.disburseIban?.trim() &&
+      stored.disburseSwift?.trim() &&
+      stored.bankDetailsSubmittedAt
+  );
+}
+
 export function getPhaseIndex(phase: string | null | undefined): number {
   if (!phase) return -1;
   return ONBOARDING_PHASES.indexOf(phase as OnboardingPhase);
@@ -149,8 +213,8 @@ export function canBorrowerUploadDocuments(
 
 /**
  * Next phase after admin advance (post-approval path).
- * Docs are collected before approval; after deposit we go to KYC.
- * Legacy apps still on AWAITING_DOCUMENTS after deposit can advance to KYC.
+ * Docs are collected before approval; after deposit we go to KYC;
+ * after KYC the borrower submits disbursement bank details.
  */
 export function getNextAdminAction(phase: string | null | undefined): OnboardingPhase | null {
   switch (phase) {
@@ -160,6 +224,8 @@ export function getNextAdminAction(phase: string | null | undefined): Onboarding
       // Legacy post-deposit docs stage only (new apps leave this phase via approval)
       return "KYC_REVIEW";
     case "KYC_REVIEW":
+      return "AWAITING_BANK_DETAILS";
+    case "AWAITING_BANK_DETAILS":
       return "READY_FOR_DISBURSEMENT";
     case "READY_FOR_DISBURSEMENT":
       return "DISBURSED";

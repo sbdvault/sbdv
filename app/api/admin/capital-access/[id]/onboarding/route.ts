@@ -2,6 +2,7 @@ import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import {
   getNextAdminAction,
+  hasDisburseBankDetails,
   hasPaymentSlip,
   hasRequiredDocuments,
 } from "@/lib/capital-access-onboarding";
@@ -66,12 +67,22 @@ export async function PATCH(
         return NextResponse.json({ error: "Required documents not yet uploaded" }, { status: 400 });
       }
 
+      if (
+        facility.onboardingPhase === "AWAITING_BANK_DETAILS" &&
+        !hasDisburseBankDetails(facility)
+      ) {
+        return NextResponse.json(
+          { error: "Borrower has not submitted disbursement bank details yet" },
+          { status: 400 }
+        );
+      }
+
       const updateData: Record<string, unknown> = { onboardingPhase: nextPhase };
 
       if (facility.onboardingPhase === "AWAITING_DEPOSIT") {
         updateData.depositConfirmedAt = new Date();
       }
-      if (nextPhase === "READY_FOR_DISBURSEMENT") {
+      if (nextPhase === "AWAITING_BANK_DETAILS") {
         updateData.kycCompletedAt = new Date();
       }
       if (nextPhase === "DISBURSED") {

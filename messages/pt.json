@@ -513,7 +513,22 @@
     "invalidCredentials": "Invalid email or password.",
     "mfaRequired": "Enter your authentication code to continue.",
     "mfaInvalid": "Invalid authentication code.",
-    "error": "An error occurred. Please try again."
+    "error": "An error occurred. Please try again.",
+    "forgotTitle": "Forgot Password",
+    "forgotSubtitle": "Enter your account email and we will send a reset link.",
+    "sendResetLink": "Send Reset Link",
+    "resetEmailSent": "If an account exists for that email, a reset link has been sent. Check your inbox and spam folder.",
+    "backToSignIn": "Back to Sign In",
+    "resetTitle": "Reset Password",
+    "resetSubtitle": "Choose a new password for your account.",
+    "newPassword": "New Password",
+    "confirmPassword": "Confirm Password",
+    "updatePassword": "Update Password",
+    "passwordMismatch": "Passwords do not match.",
+    "resetLinkInvalid": "This reset link is missing or invalid.",
+    "resetSuccess": "Your password has been updated. You can sign in with the new password.",
+    "resetFailed": "Unable to reset password.",
+    "resetRequestFailed": "Unable to send reset email."
   },
   "portal": {
     "title": "Client Portal",
@@ -715,7 +730,24 @@
       "paymentSlip": "Payment slip",
       "noPaymentSlip": "No payment slip uploaded yet.",
       "confirmPayment": "Confirm Payment Received",
-      "error": "Unable to complete that action. Please try again."
+      "error": "Unable to complete that action. Please try again.",
+      "documentPackage": "Document package",
+      "docsComplete": "All 5 documents received",
+      "docsIncomplete": "Awaiting required documents",
+      "docsSubmitted": "Document package submitted",
+      "docsUploadedNotSubmitted": "Files uploaded — awaiting borrower submit",
+      "packageReceived": "Package submitted for review",
+      "missingDoc": "Missing",
+      "requestExtraTitle": "Request additional documents",
+      "requestExtraDesc": "If the package is incomplete or unsatisfactory, ask the borrower to upload or replace files.",
+      "extraNotesPlaceholder": "Describe what is missing or what must be corrected…",
+      "requestExtra": "Request Extra Documents",
+      "approveWithEscrowTitle": "Approve & assign escrow (10% deposit)",
+      "approveRequiresDocs": "All five required documents must be on file before you can approve.",
+      "approveRequiresSubmit": "Borrower must click Submit Documents before you can approve.",
+      "disburseBank": "Disbursement bank account",
+      "bankDetailsReceived": "Borrower bank details received",
+      "awaitingBankDetails": "Awaiting borrower disbursement bank details."
     }
   },
   "capitalAccess": {
@@ -849,7 +881,13 @@
       "title": "My Applications",
       "subtitle": "Track the status of your capital access requests.",
       "empty": "You have not submitted any capital requests yet.",
-      "submitted": "Submitted"
+      "submitted": "Submitted",
+      "uploadDocsTitle": "Documentation required",
+      "uploadDocsDesc": "Upload all five required documents (including ID / licence / passport), then click Submit Documents in Onboarding.",
+      "extraDocsTitle": "Additional documents requested",
+      "extraDocsDesc": "Our team asked for updates to your document package. Open onboarding to upload or replace files, then submit again.",
+      "openOnboarding": "Open Onboarding — Upload Documents",
+      "docsUnderReview": "Your document package was submitted and is under review."
     },
     "onboarding": {
       "title": "Facility Dashboard",
@@ -896,14 +934,37 @@
         "kyc_review": "KYC Review",
         "ready_for_disbursement": "Disbursement",
         "disbursed": "Disbursed",
-        "active": "Active"
+        "active": "Active",
+        "documents_revision": "Docs Revision",
+        "documents_submitted": "Docs Submitted",
+        "awaiting_bank_details": "Bank Details"
       },
       "docTypes": {
         "audited_financials": "Audited Financial Statements",
         "facility_agreement": "Signed Facility Agreement",
         "kyc_disclosure": "KYC / Beneficial Ownership Disclosure",
-        "deployment_plan": "Capital Deployment Plan"
-      }
+        "deployment_plan": "Capital Deployment Plan",
+        "government_id": "ID / Driver’s Licence / Passport"
+      },
+      "fileTypesHint": "Allowed file types: PDF, DOC, or JPEG only.",
+      "replace": "Replace",
+      "deleteFile": "Delete file",
+      "uploadSuccess": "File uploaded successfully.",
+      "uploadFailed": "Upload failed. Please try again.",
+      "deleteSuccess": "File deleted. You can upload a replacement.",
+      "deleteFailed": "Could not delete this file.",
+      "revisionRequested": "Additional documents requested",
+      "docsReadyToSubmit": "All five documents are uploaded. Submit the package for review.",
+      "submitDocuments": "Submit Documents",
+      "submitDocsSuccess": "Documents submitted. Our team will review your package.",
+      "submitDocsFailed": "Could not submit documents. Please try again.",
+      "docsSubmittedNote": "Document package submitted — awaiting review.",
+      "bankDetailsTitle": "Disbursement Bank Details",
+      "bankDetailsDesc": "Enter the bank account where SBDV should disburse your approved facility amount. Bank name, account name, IBAN, and SWIFT are required.",
+      "submitBankDetails": "Submit Bank Details",
+      "bankSubmitSuccess": "Bank details submitted. Our team will verify and proceed to disbursement.",
+      "bankSubmitFailed": "Could not submit bank details. Please try again.",
+      "bankSubmittedNote": "Bank details submitted — awaiting disbursement."
     },
     "status": {
       "pending": "Pending Review",
