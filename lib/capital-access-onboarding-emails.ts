@@ -14,20 +14,39 @@ function emailLayout(title: string, body: string) {
 }
 
 const phaseMessages: Record<string, { subject: string; title: string; body: string }> = {
+  AWAITING_DOCUMENTS: {
+    subject: "Capital Access — Submit Required Documents",
+    title: "Submit your documentation package",
+    body: `<p>Your capital access request has been received. Upload the <strong>five</strong> required documents in your <strong>Onboarding</strong> dashboard, then click <strong>Submit Documents</strong>:</p>
+    <ul>
+      <li>Audited Financial Statements</li>
+      <li>Signed Facility Agreement</li>
+      <li>KYC / Beneficial Ownership Disclosure</li>
+      <li>Capital Deployment Plan</li>
+      <li>Government ID / Driver’s Licence / Passport</li>
+    </ul>
+    <p>Accepted formats: <strong>PDF, DOC, or JPEG</strong>.</p>`,
+  },
+  DOCUMENTS_REVISION: {
+    subject: "Capital Access — Additional Documents Required",
+    title: "Additional documentation requested",
+    body: `<p>Our review requires further documentation before we can approve your facility. Please review the notes in Onboarding, upload or replace files, then click <strong>Submit Documents</strong> again.</p>
+    <p>Accepted formats: <strong>PDF, DOC, or JPEG</strong>.</p>`,
+  },
+  DOCUMENTS_SUBMITTED: {
+    subject: "Documents Received — Under Review",
+    title: "Your documents are under review",
+    body: `<p>We have received your documentation package. Our capital desk will review it and either approve with escrow instructions or request additional documents.</p>`,
+  },
   AWAITING_DEPOSIT: {
     subject: "Facility Approved — Security Deposit Required",
     title: "Your facility is approved",
-    body: `<p>Transfer your 10% security deposit using the escrow instructions in your <strong>Facility Dashboard</strong>. Include the wire reference exactly as shown.</p>`,
-  },
-  AWAITING_DOCUMENTS: {
-    subject: "Deposit Confirmed — Submit Documentation",
-    title: "Security deposit confirmed",
-    body: `<p>Your deposit has been verified. Upload audited financials, signed facility agreement, KYC disclosure, and deployment plan within <strong>14 business days</strong>.</p>`,
+    body: `<p>Your documents have been accepted and the facility is approved. Transfer your 10% security deposit using the escrow instructions in your <strong>Facility Dashboard</strong>. Include the wire reference exactly as shown.</p>`,
   },
   KYC_REVIEW: {
-    subject: "Documents Received — KYC Under Review",
+    subject: "Deposit Confirmed — KYC Under Review",
     title: "Compliance review in progress",
-    body: `<p>Your documentation package is complete. Our compliance team is conducting final KYC/AML verification. No action required.</p>`,
+    body: `<p>Your security deposit has been verified. Our compliance team is conducting final KYC/AML verification. No action required.</p>`,
   },
   READY_FOR_DISBURSEMENT: {
     subject: "KYC Complete — Disbursement Pending",
@@ -50,12 +69,21 @@ export async function sendOnboardingPhaseEmail(
   email: string,
   name: string | null,
   companyName: string,
-  phase: string
+  phase: string,
+  adminNotes?: string
 ) {
   const msg = phaseMessages[phase];
   if (!msg) return;
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  const notesBlock =
+    adminNotes?.trim()
+      ? `<p style="background:#f8f6f0;padding:12px;border-left:3px solid #D4AF37;"><strong>Review notes:</strong><br/>${adminNotes
+          .trim()
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/\n/g, "<br/>")}</p>`
+      : "";
 
   await sendEmail({
     to: email,
@@ -66,6 +94,7 @@ export async function sendOnboardingPhaseEmail(
       <p>Dear ${name || "Capital Partner"},</p>
       <p>Regarding <strong>${companyName}</strong>:</p>
       ${msg.body}
+      ${notesBlock}
       <p><a href="${siteUrl}/en/capital-access/portal/facility" style="display:inline-block;padding:12px 24px;background:#D4AF37;color:#1a1a1a;text-decoration:none;font-weight:bold;">Open Facility Dashboard</a></p>
       `
     ),
@@ -88,6 +117,24 @@ export async function sendDepositSubmittedEmail(
       "Borrower submitted deposit reference",
       `<p><strong>${companyName}</strong> has submitted a wire reference: <code>${depositReference}</code></p>
        <p>Expected amount: ${formatUsd(amount)}. Verify in admin and confirm deposit.</p>`
+    ),
+  });
+}
+
+export async function sendDocumentsSubmittedEmail(
+  adminEmail: string,
+  companyName: string,
+  applicationId: string
+) {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  await sendEmail({
+    to: adminEmail,
+    subject: `[Action] Documents Submitted — ${companyName}`,
+    html: emailLayout(
+      "Borrower submitted documentation package",
+      `<p><strong>${companyName}</strong> has submitted all five required documents for review.</p>
+       <p><a href="${siteUrl}/en/admin/capital-access" style="display:inline-block;padding:12px 24px;background:#D4AF37;color:#1a1a1a;text-decoration:none;font-weight:bold;">Review in Admin</a></p>
+       <p style="font-size:12px;color:#888;">Application ID: ${applicationId}</p>`
     ),
   });
 }

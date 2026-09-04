@@ -9,6 +9,8 @@ import {
   type RepaymentFrequency,
 } from "@/lib/capital-access";
 import { sendCapitalAccessSubmissionEmails } from "@/lib/capital-access-emails";
+import { sendOnboardingPhaseEmail } from "@/lib/capital-access-onboarding-emails";
+import { hasRequiredDocuments } from "@/lib/capital-access-onboarding";
 import { NextResponse } from "next/server";
 
 export async function GET() {
@@ -23,10 +25,20 @@ export async function GET() {
       orderBy: { createdAt: "desc" },
       include: {
         pool: { select: { country: true, region: true, category: true } },
+        documents: { select: { type: true } },
       },
     });
 
-    return NextResponse.json({ applications });
+    return NextResponse.json({
+      applications: applications.map((a) => ({
+        ...a,
+        docsComplete: hasRequiredDocuments(a.documents.map((d) => d.type)),
+        needsDocuments:
+          a.onboardingPhase === "AWAITING_DOCUMENTS" ||
+          a.onboardingPhase === "DOCUMENTS_REVISION",
+        documentsAwaitingReview: a.onboardingPhase === "DOCUMENTS_SUBMITTED",
+      })),
+    });
   } catch (err) {
     console.error("GET capital access applications:", err);
     return NextResponse.json({ error: "Failed to load applications" }, { status: 500 });
@@ -122,6 +134,8 @@ export async function POST(request: Request) {
         installmentUsd: terms.installmentUsd,
         termsAccepted: true,
         status: "PENDING",
+        onboardingPhase: "AWAITING_DOCUMENTS",
+        relationshipManager: "Capital Access Desk",
       },
     });
 
@@ -144,6 +158,13 @@ export async function POST(request: Request) {
         securityDepositUsd: application.securityDepositUsd,
         repaymentFrequency: application.repaymentFrequency,
       }).catch((err) => console.error("Submission email error:", err));
+
+      sendOnboardingPhaseEmail(
+        user.email,
+        user.name,
+        application.companyName,
+        "AWAITING_DOCUMENTS"
+      ).catch(console.error);
     }
 
     return NextResponse.json({ application }, { status: 201 });

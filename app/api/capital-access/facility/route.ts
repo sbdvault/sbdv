@@ -2,6 +2,7 @@ import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { getPoolTeaser } from "@/lib/capital-access";
 import {
+  canBorrowerUploadDocuments,
   getEscrowInstructions,
   hasRequiredDocuments,
   ONBOARDING_PHASES,
@@ -16,6 +17,20 @@ export async function GET() {
   }
 
   try {
+    // New apps start at docs; backfill older pending apps without a phase
+    await prisma.capitalAccessRequest.updateMany({
+      where: {
+        userId: session.user.id,
+        status: { in: ["PENDING", "UNDER_REVIEW"] },
+        onboardingPhase: null,
+      },
+      data: {
+        onboardingPhase: "AWAITING_DOCUMENTS",
+        relationshipManager: "Capital Access Desk",
+      },
+    });
+
+    // Legacy approved with no phase → deposit (old first step)
     await prisma.capitalAccessRequest.updateMany({
       where: {
         userId: session.user.id,
@@ -31,7 +46,8 @@ export async function GET() {
     const facilities = await prisma.capitalAccessRequest.findMany({
       where: {
         userId: session.user.id,
-        status: "APPROVED",
+        status: { in: ["PENDING", "UNDER_REVIEW", "APPROVED"] },
+        onboardingPhase: { not: null },
       },
       orderBy: { updatedAt: "desc" },
       include: {
@@ -43,6 +59,7 @@ export async function GET() {
     return NextResponse.json({
       facilities: facilities.map((f) => ({
         id: f.id,
+        status: f.status,
         companyName: f.companyName,
         requestedAmountUsd: f.requestedAmountUsd,
         securityDepositUsd: f.securityDepositUsd,
@@ -51,6 +68,7 @@ export async function GET() {
         repaymentFrequency: f.repaymentFrequency,
         installmentUsd: f.installmentUsd,
         onboardingPhase: f.onboardingPhase,
+        adminNotes: f.adminNotes,
         depositReference: f.depositReference,
         depositSubmittedAt: f.depositSubmittedAt,
         depositConfirmedAt: f.depositConfirmedAt,
@@ -62,6 +80,7 @@ export async function GET() {
         documents: f.documents,
         paymentSlip: f.documents.find((d) => d.type === PAYMENT_SLIP_TYPE) || null,
         docsComplete: hasRequiredDocuments(f.documents.map((d) => d.type)),
+        canUploadDocuments: canBorrowerUploadDocuments(f.status, f.onboardingPhase),
         phases: ONBOARDING_PHASES,
       })),
     });

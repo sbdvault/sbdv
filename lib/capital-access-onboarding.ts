@@ -1,6 +1,8 @@
 export const ONBOARDING_PHASES = [
-  "AWAITING_DEPOSIT",
   "AWAITING_DOCUMENTS",
+  "DOCUMENTS_REVISION",
+  "DOCUMENTS_SUBMITTED",
+  "AWAITING_DEPOSIT",
   "KYC_REVIEW",
   "READY_FOR_DISBURSEMENT",
   "DISBURSED",
@@ -9,11 +11,18 @@ export const ONBOARDING_PHASES = [
 
 export type OnboardingPhase = (typeof ONBOARDING_PHASES)[number];
 
+/** Phases where the borrower may upload / replace required docs (pre-approval). */
+export const DOCUMENT_UPLOAD_PHASES: OnboardingPhase[] = [
+  "AWAITING_DOCUMENTS",
+  "DOCUMENTS_REVISION",
+];
+
 export const REQUIRED_DOCUMENT_TYPES = [
   "AUDITED_FINANCIALS",
   "FACILITY_AGREEMENT",
   "KYC_DISCLOSURE",
   "DEPLOYMENT_PLAN",
+  "GOVERNMENT_ID",
 ] as const;
 
 export type RequiredDocumentType = (typeof REQUIRED_DOCUMENT_TYPES)[number];
@@ -130,11 +139,25 @@ export function hasPaymentSlip(uploadedTypes: string[]): boolean {
   return uploadedTypes.includes(PAYMENT_SLIP_TYPE);
 }
 
+export function canBorrowerUploadDocuments(
+  status: string,
+  phase: string | null | undefined
+): boolean {
+  if (!phase || !DOCUMENT_UPLOAD_PHASES.includes(phase as OnboardingPhase)) return false;
+  return status === "PENDING" || status === "UNDER_REVIEW" || status === "APPROVED";
+}
+
+/**
+ * Next phase after admin advance (post-approval path).
+ * Docs are collected before approval; after deposit we go to KYC.
+ * Legacy apps still on AWAITING_DOCUMENTS after deposit can advance to KYC.
+ */
 export function getNextAdminAction(phase: string | null | undefined): OnboardingPhase | null {
   switch (phase) {
     case "AWAITING_DEPOSIT":
-      return "AWAITING_DOCUMENTS";
+      return "KYC_REVIEW";
     case "AWAITING_DOCUMENTS":
+      // Legacy post-deposit docs stage only (new apps leave this phase via approval)
       return "KYC_REVIEW";
     case "KYC_REVIEW":
       return "READY_FOR_DISBURSEMENT";

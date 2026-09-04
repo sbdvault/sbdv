@@ -201,7 +201,11 @@ function getBorrowerApps(ctx: ChatUserContext): BorrowerApp[] {
 }
 
 function getActiveBorrowerFacility(ctx: ChatUserContext): BorrowerApp | undefined {
-  return getBorrowerApps(ctx).find((a) => a.status === "APPROVED");
+  const apps = getBorrowerApps(ctx);
+  return (
+    apps.find((a) => a.status === "APPROVED") ||
+    apps.find((a) => a.status === "PENDING" || a.status === "UNDER_REVIEW")
+  );
 }
 
 function replyApplicationStatus(ctx: ChatUserContext): string {
@@ -221,7 +225,7 @@ function replyApplicationStatus(ctx: ChatUserContext): string {
     if (approved.onboardingPhase === "AWAITING_DEPOSIT") {
       reply += `\n\nYour next step is the **security deposit** (${formatUsd(approved.securityDepositUsd)}). Ask me *"how do I make the payment?"* for wire instructions.`;
     } else if (approved.onboardingPhase === "AWAITING_DOCUMENTS") {
-      reply += `\n\nDeposit confirmed — please upload your four required documents in **My Facility**.`;
+      reply += `\n\nPlease upload your five required documents in **Onboarding**, then click Submit Documents.`;
     } else {
       reply += `\n\nOpen **My Facility** (/en/capital-access/portal/facility) for your current onboarding step.`;
     }
@@ -266,13 +270,16 @@ function replyNextSteps(ctx: ChatUserContext): string {
   if (ctx.role === "BORROWER") {
     const facility = getActiveBorrowerFacility(ctx);
     if (!facility) {
-      return "Once approved, onboarding follows four stages: **security deposit → documents → KYC review → disbursement**. Submit an application at **Capital Access → New Request** if you haven't yet.";
+      return "Once you submit a request, onboarding follows: **documents → review/approval + escrow → 10% deposit → KYC → disbursement**. Submit an application at **Capital Access → New Request** if you haven't yet.";
     }
     switch (facility.onboardingPhase) {
-      case "AWAITING_DEPOSIT":
-        return `For **${facility.company}**, you're at the **security deposit** stage.\n\n1. Wire ${formatUsd(facility.securityDepositUsd)} to the escrow account (see **My Facility** or ask *"how do I make the payment?"*)\n2. Submit your wire reference\n3. Our team confirms within 2–3 business days\n\nThen you'll move to document upload.`;
       case "AWAITING_DOCUMENTS":
-        return `Deposit confirmed for **${facility.company}**. Upload these in **My Facility**:\n• Audited financial statements\n• Signed facility agreement\n• KYC / beneficial ownership disclosure\n• Capital deployment plan\n\nOnce complete, we begin KYC review.`;
+      case "DOCUMENTS_REVISION":
+        return `For **${facility.company}**, upload the **five required documents** in **Onboarding** (PDF, DOC, or JPEG only):\n• Audited financial statements\n• Signed facility agreement\n• KYC / beneficial ownership disclosure\n• Capital deployment plan\n• ID / driver’s licence / passport\n\nThen click **Submit Documents**. After review and approval, you will receive escrow instructions for the 10% deposit.`;
+      case "DOCUMENTS_SUBMITTED":
+        return `Your documentation package for **${facility.company}** has been **submitted** and is under review. No further upload is needed unless we request revisions.`;
+      case "AWAITING_DEPOSIT":
+        return `For **${facility.company}**, you're at the **security deposit** stage.\n\n1. Wire ${formatUsd(facility.securityDepositUsd)} to the escrow account (see **My Facility** or ask *"how do I make the payment?"*)\n2. Submit your wire reference\n3. Our team confirms within 2–3 business days\n\nThen KYC review continues.`;
       case "KYC_REVIEW":
         return `**${facility.company}** is in **KYC review**. No action needed from you right now — our compliance team will contact you if anything further is required. Typical review: 5–10 business days.`;
       case "READY_FOR_DISBURSEMENT":
@@ -491,9 +498,9 @@ function ruleBasedReply(message: string, messages: ChatMessage[], ctx: ChatUserC
       return "Upload documents in **Client Portal → Documents**. Supported statements, contracts, and compliance files are stored securely.";
     }
     if (ctx.role === "BORROWER") {
-      return "After deposit confirmation, upload four documents in **My Facility**: audited financials, signed facility agreement, KYC disclosure, and capital deployment plan (PDF/DOC).";
+      return "Upload five documents in **Onboarding** (PDF, DOC, or JPEG): audited financials, signed facility agreement, KYC disclosure, capital deployment plan, and ID / driver’s licence / passport. Then click **Submit Documents**. You can delete and re-upload before submitting.";
     }
-    return "Document upload is available in the Client Portal (members) or Facility Dashboard (Capital Access partners after approval).";
+    return "Document upload is available in the Client Portal (members) or Facility Dashboard (Capital Access partners).";
   }
 
   if (
@@ -506,7 +513,7 @@ function ruleBasedReply(message: string, messages: ChatMessage[], ctx: ChatUserC
   }
 
   if (q.includes("capital access") || q.includes("borrow") || q.includes("loan")) {
-    return "**Capital Access Program** — qualified enterprises can access institutional sovereign capital pools.\n\n• Request: $500K – $100M\n• Terms: 1–10 years, monthly or yearly repayment\n• **10% security deposit** required\n• Apply at **/capital-access/register**\n\nAfter approval: deposit → documents → KYC → disbursement.";
+    return "**Capital Access Program** — qualified enterprises can access institutional sovereign capital pools.\n\n• Request: $500K – $100M\n• Terms: 1–10 years, monthly or yearly repayment\n• **10% security deposit** after document approval\n• Apply at **/capital-access/register**\n\nFlow: documents → approval + escrow → deposit → KYC → disbursement.";
   }
 
   if (q.includes("membership") || (q.includes("apply") && !q.includes("application")) || q.includes("join")) {

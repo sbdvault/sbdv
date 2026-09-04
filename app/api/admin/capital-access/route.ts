@@ -1,7 +1,11 @@
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { getPoolTeaser } from "@/lib/capital-access";
-import { getEscrowInstructions, validateEscrowInput } from "@/lib/capital-access-onboarding";
+import {
+  getEscrowInstructions,
+  hasRequiredDocuments,
+  validateEscrowInput,
+} from "@/lib/capital-access-onboarding";
 import { sendCapitalAccessDecisionEmail } from "@/lib/capital-access-emails";
 import { sendOnboardingPhaseEmail } from "@/lib/capital-access-onboarding-emails";
 import { NextResponse } from "next/server";
@@ -13,6 +17,17 @@ export async function GET() {
   }
 
   try {
+    await prisma.capitalAccessRequest.updateMany({
+      where: {
+        status: { in: ["PENDING", "UNDER_REVIEW"] },
+        onboardingPhase: null,
+      },
+      data: {
+        onboardingPhase: "AWAITING_DOCUMENTS",
+        relationshipManager: "Capital Access Desk",
+      },
+    });
+
     const applications = await prisma.capitalAccessRequest.findMany({
       orderBy: { createdAt: "desc" },
       include: {
@@ -30,6 +45,7 @@ export async function GET() {
         ...a,
         poolLabel: getPoolTeaser(a.pool.country, a.pool.category).label,
         escrow: getEscrowInstructions(a.id, a.companyName, a),
+        docsComplete: hasRequiredDocuments(a.documents.map((d) => d.type)),
       })),
     });
   } catch (err) {
@@ -50,6 +66,58 @@ export async function PATCH(request: Request) {
 
     if (!id) {
       return NextResponse.json({ error: "Application id required" }, { status: 400 });
+    }
+
+    if (action === "request_extra_documents") {
+      const existing = await prisma.capitalAccessRequest.findUnique({
+        where: { id },
+        include: { user: { select: { email: true, name: true } } },
+      });
+      if (
+        !existing ||
+        !["PENDING", "UNDER_REVIEW"].includes(existing.status) ||
+        existing.status === "APPROVED"
+      ) {
+        return NextResponse.json(
+          { error: "Extra documents can only be requested before approval" },
+          { status: 400 }
+        );
+      }
+
+      const notes = typeof adminNotes === "string" ? adminNotes.trim() : "";
+      if (!notes) {
+        return NextResponse.json(
+          { error: "Please include notes describing the additional documents required" },
+          { status: 400 }
+        );
+      }
+
+      const updated = await prisma.capitalAccessRequest.update({
+        where: { id },
+        data: {
+          status: "UNDER_REVIEW",
+          onboardingPhase: "DOCUMENTS_REVISION",
+          adminNotes: notes,
+        },
+        include: { user: { select: { name: true, email: true } } },
+      });
+
+      if (updated.user.email) {
+        sendOnboardingPhaseEmail(
+          updated.user.email,
+          updated.user.name,
+          updated.companyName,
+          "DOCUMENTS_REVISION",
+          notes
+        ).catch(console.error);
+      }
+
+      return NextResponse.json({
+        application: {
+          ...updated,
+          escrow: getEscrowInstructions(updated.id, updated.companyName, updated),
+        },
+      });
     }
 
     if (action === "update_escrow") {
@@ -107,6 +175,32 @@ export async function PATCH(request: Request) {
     let escrowData: ReturnType<typeof validateEscrowInput>["data"] | undefined;
 
     if (status === "APPROVED") {
+      const withDocs = await prisma.capitalAccessRequest.findUnique({
+        where: { id },
+        include: { documents: { select: { type: true } } },
+      });
+      if (!withDocs) {
+        return NextResponse.json({ error: "Application not found" }, { status: 404 });
+      }
+      if (!hasRequiredDocuments(withDocs.documents.map((d) => d.type))) {
+        return NextResponse.json(
+          {
+            error:
+              "All five required documents must be uploaded and submitted before approval.",
+          },
+          { status: 400 }
+        );
+      }
+      if (withDocs.onboardingPhase !== "DOCUMENTS_SUBMITTED") {
+        return NextResponse.json(
+          {
+            error:
+              "The borrower must click Submit Documents before you can approve.",
+          },
+          { status: 400 }
+        );
+      }
+
       const validated = validateEscrowInput({
         bankName: escrow?.bankName,
         bankAddress: escrow?.bankAddress,

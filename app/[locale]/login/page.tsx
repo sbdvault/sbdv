@@ -154,6 +154,15 @@ export default function LoginPage() {
               </div>
             )}
 
+            <div className="flex justify-end">
+              <Link
+                href={getLocalizedHref("/forgot-password")}
+                className="text-sm font-body text-gold hover:underline"
+              >
+                {t("login.forgotPassword")}
+              </Link>
+            </div>
+
             <button
               type="submit"
               disabled={loading}

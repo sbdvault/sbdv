@@ -35,7 +35,7 @@ export async function PATCH(
     }
 
     if (action === "confirm_deposit" || action === "advance") {
-      const nextPhase = getNextAdminAction(facility.onboardingPhase);
+      let nextPhase = getNextAdminAction(facility.onboardingPhase);
       if (!nextPhase) {
         return NextResponse.json({ error: "Cannot advance from current phase" }, { status: 400 });
       }
@@ -53,6 +53,10 @@ export async function PATCH(
             { status: 400 }
           );
         }
+        // Legacy: if docs were never collected before approval, collect them next
+        if (!hasRequiredDocuments(facility.documents.map((d) => d.type))) {
+          nextPhase = "AWAITING_DOCUMENTS";
+        }
       }
 
       if (
@@ -64,7 +68,7 @@ export async function PATCH(
 
       const updateData: Record<string, unknown> = { onboardingPhase: nextPhase };
 
-      if (nextPhase === "AWAITING_DOCUMENTS") {
+      if (facility.onboardingPhase === "AWAITING_DEPOSIT") {
         updateData.depositConfirmedAt = new Date();
       }
       if (nextPhase === "READY_FOR_DISBURSEMENT") {

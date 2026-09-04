@@ -1,11 +1,13 @@
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import {
+  canBorrowerUploadDocuments,
   PAYMENT_SLIP_TYPE,
   REQUIRED_DOCUMENT_TYPES,
 } from "@/lib/capital-access-onboarding";
+import { validateUploadFile } from "@/lib/upload-validation";
 import { NextRequest, NextResponse } from "next/server";
-import { writeFile, mkdir } from "fs/promises";
+import { writeFile, mkdir, unlink } from "fs/promises";
 import path from "path";
 import { getUploadsRoot } from "@/lib/data-paths";
 
@@ -29,6 +31,11 @@ export async function POST(
     return NextResponse.json({ error: "No file provided" }, { status: 400 });
   }
 
+  const fileCheck = validateUploadFile({ name: file.name, type: file.type });
+  if (!fileCheck.ok) {
+    return NextResponse.json({ error: fileCheck.error }, { status: 400 });
+  }
+
   const isPaymentSlip = type === PAYMENT_SLIP_TYPE;
   const isRequiredDoc = REQUIRED_DOCUMENT_TYPES.includes(
     type as (typeof REQUIRED_DOCUMENT_TYPES)[number]
@@ -42,15 +49,20 @@ export async function POST(
     where: {
       id,
       userId: session.user.id,
-      status: "APPROVED",
-      onboardingPhase: isPaymentSlip
-        ? "AWAITING_DEPOSIT"
-        : { in: ["AWAITING_DOCUMENTS", "KYC_REVIEW"] },
+      ...(isPaymentSlip
+        ? { status: "APPROVED", onboardingPhase: "AWAITING_DEPOSIT" }
+        : {
+            status: { in: ["PENDING", "UNDER_REVIEW", "APPROVED"] },
+          }),
     },
     include: { documents: true },
   });
 
   if (!facility) {
+    return NextResponse.json({ error: "Document upload not available at this stage" }, { status: 403 });
+  }
+
+  if (!isPaymentSlip && !canBorrowerUploadDocuments(facility.status, facility.onboardingPhase)) {
     return NextResponse.json({ error: "Document upload not available at this stage" }, { status: 403 });
   }
 
@@ -69,11 +81,15 @@ export async function POST(
   const filePath = path.join(uploadDir, `${Date.now()}-${safeName}`);
   await writeFile(filePath, buffer);
 
-  if (isPaymentSlip) {
-    const existing = facility.documents.filter((d) => d.type === PAYMENT_SLIP_TYPE);
+  // Replace prior file of same type (required docs + payment slip)
+  if (isPaymentSlip || isRequiredDoc) {
+    const existing = facility.documents.filter((d) => d.type === type);
+    for (const doc of existing) {
+      await unlink(doc.filePath).catch(() => {});
+    }
     if (existing.length) {
       await prisma.capitalAccessDocument.deleteMany({
-        where: { requestId: id, type: PAYMENT_SLIP_TYPE },
+        where: { requestId: id, type },
       });
     }
   }

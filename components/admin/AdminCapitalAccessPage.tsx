@@ -8,8 +8,9 @@ import {
   hasRequiredDocuments,
   ONBOARDING_PHASES,
   PAYMENT_SLIP_TYPE,
+  REQUIRED_DOCUMENT_TYPES,
 } from "@/lib/capital-access-onboarding";
-import { Building2, ChevronDown, ChevronUp } from "lucide-react";
+import { Building2, ChevronDown, ChevronUp, FileText } from "lucide-react";
 
 interface Application {
   id: string;
@@ -24,11 +25,13 @@ interface Application {
   investmentAreas: string;
   status: string;
   onboardingPhase: string | null;
+  adminNotes: string | null;
   depositReference: string | null;
   depositSubmittedAt: string | null;
   depositConfirmedAt: string | null;
   relationshipManager: string | null;
   poolLabel: string;
+  docsComplete?: boolean;
   user: { name: string | null; email: string };
   documents: { id: string; type: string; name: string; uploadedAt?: string }[];
   escrow: {
@@ -113,6 +116,7 @@ export default function AdminCapitalAccessPage() {
   const [applications, setApplications] = useState<Application[]>([]);
   const [loading, setLoading] = useState(true);
   const [reviewingId, setReviewingId] = useState<string | null>(null);
+  const [extraNotes, setExtraNotes] = useState("");
   const [escrowForm, setEscrowForm] = useState<EscrowForm>({
     bankName: "",
     bankAddress: "",
@@ -146,6 +150,7 @@ export default function AdminCapitalAccessPage() {
       return;
     }
     setReviewingId(app.id);
+    setExtraNotes(app.adminNotes || "");
     setEscrowForm({
       bankName: app.escrow.configured ? app.escrow.bankName : "",
       bankAddress: app.escrow.bankAddress || "",
@@ -170,6 +175,28 @@ export default function AdminCapitalAccessPage() {
     setSaving(false);
     if (!res.ok) {
       const json = await res.json();
+      setError(json.error || t("admin.capitalAccess.error"));
+      return;
+    }
+    setReviewingId(null);
+    loadData();
+  };
+
+  const requestExtraDocuments = async (id: string) => {
+    setSaving(true);
+    setError("");
+    const res = await fetch("/api/admin/capital-access", {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        id,
+        action: "request_extra_documents",
+        adminNotes: extraNotes,
+      }),
+    });
+    const json = await res.json();
+    setSaving(false);
+    if (!res.ok) {
       setError(json.error || t("admin.capitalAccess.error"));
       return;
     }
@@ -276,6 +303,13 @@ export default function AdminCapitalAccessPage() {
               ? ONBOARDING_PHASES.indexOf(app.onboardingPhase as (typeof ONBOARDING_PHASES)[number])
               : -1;
             const awaitingDeposit = app.onboardingPhase === "AWAITING_DEPOSIT";
+            const inDocReview =
+              canApprove &&
+              (app.onboardingPhase === "AWAITING_DOCUMENTS" ||
+                app.onboardingPhase === "DOCUMENTS_REVISION" ||
+                app.onboardingPhase === "DOCUMENTS_SUBMITTED" ||
+                !app.onboardingPhase);
+            const docsSubmitted = app.onboardingPhase === "DOCUMENTS_SUBMITTED";
 
             return (
               <div
@@ -311,6 +345,21 @@ export default function AdminCapitalAccessPage() {
                         {t(`capitalAccess.onboarding.phases.${app.onboardingPhase.toLowerCase()}`)}
                       </span>
                     )}
+                    <span
+                      className={`text-xs font-body ${
+                        docsSubmitted
+                          ? "text-green-700"
+                          : docsComplete
+                            ? "text-amber-700"
+                            : "text-amber-700"
+                      }`}
+                    >
+                      {docsSubmitted
+                        ? t("admin.capitalAccess.docsSubmitted")
+                        : docsComplete
+                          ? t("admin.capitalAccess.docsUploadedNotSubmitted")
+                          : t("admin.capitalAccess.docsIncomplete")}
+                    </span>
                   </div>
                 </div>
 
@@ -333,6 +382,43 @@ export default function AdminCapitalAccessPage() {
                   </div>
                 </div>
 
+                {/* Document package */}
+                <div className="mb-4 p-4 bg-off-white border border-charcoal/5 rounded-lg">
+                  <p className="font-body text-xs uppercase tracking-wide text-charcoal/40 mb-3 flex items-center gap-2">
+                    <FileText className="w-3.5 h-3.5" />
+                    {t("admin.capitalAccess.documentPackage")}
+                  </p>
+                  <ul className="space-y-2">
+                    {REQUIRED_DOCUMENT_TYPES.map((docType) => {
+                      const doc = app.documents.find((d) => d.type === docType);
+                      return (
+                        <li key={docType} className="flex justify-between gap-3 text-sm font-body">
+                          <span className="text-charcoal/70">
+                            {t(`capitalAccess.onboarding.docTypes.${docType.toLowerCase()}`)}
+                          </span>
+                          {doc ? (
+                            <a
+                              href={`/api/admin/capital-access/${app.id}/documents/${doc.id}`}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="text-gold hover:underline truncate max-w-[50%]"
+                            >
+                              {doc.name}
+                            </a>
+                          ) : (
+                            <span className="text-amber-700 text-xs">{t("admin.capitalAccess.missingDoc")}</span>
+                          )}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                  {docsSubmitted && (
+                    <p className="mt-3 font-body text-xs text-green-800 bg-green-50 p-2 rounded-sm">
+                      {t("admin.capitalAccess.packageReceived")}
+                    </p>
+                  )}
+                </div>
+
                 {(canApprove || needsEscrow) && (
                   <div className="mb-4">
                     <button
@@ -340,9 +426,9 @@ export default function AdminCapitalAccessPage() {
                       className="inline-flex items-center gap-2 px-4 py-2 border border-gold/50 text-charcoal font-body text-sm rounded-sm hover:bg-gold/5"
                     >
                       <Building2 className="w-4 h-4 text-gold" />
-                      {canApprove
-                        ? t("admin.capitalAccess.reviewApplication")
-                        : t("admin.capitalAccess.assignEscrow")}
+                      {needsEscrow
+                        ? t("admin.capitalAccess.assignEscrow")
+                        : t("admin.capitalAccess.reviewApplication")}
                       {isReviewing ? (
                         <ChevronUp className="w-4 h-4" />
                       ) : (
@@ -352,35 +438,97 @@ export default function AdminCapitalAccessPage() {
                   </div>
                 )}
 
-                {isReviewing && (canApprove || needsEscrow) && (
-                  <div className="mb-4 p-5 bg-off-white border border-gold/20 rounded-lg">
-                    <h3 className="font-heading font-semibold text-charcoal mb-1">
-                      {t("admin.capitalAccess.escrowFormTitle")}
-                    </h3>
-                    <p className="font-body text-sm text-charcoal/60 mb-4">
-                      {t("admin.capitalAccess.approveModalDesc")}{" "}
-                      <strong>{formatUsd(app.securityDepositUsd)}</strong>
-                    </p>
-                    <EscrowFieldsForm form={escrowForm} onChange={setEscrowForm} t={t} />
-                    <div className="flex flex-wrap gap-3 mt-5">
-                      {canApprove && (
+                {isReviewing && inDocReview && (
+                  <div className="mb-4 p-5 bg-off-white border border-gold/20 rounded-lg space-y-5">
+                    <div>
+                      <h3 className="font-heading font-semibold text-charcoal mb-1">
+                        {t("admin.capitalAccess.requestExtraTitle")}
+                      </h3>
+                      <p className="font-body text-sm text-charcoal/60 mb-3">
+                        {t("admin.capitalAccess.requestExtraDesc")}
+                      </p>
+                      <textarea
+                        value={extraNotes}
+                        onChange={(e) => setExtraNotes(e.target.value)}
+                        rows={3}
+                        placeholder={t("admin.capitalAccess.extraNotesPlaceholder")}
+                        className="w-full px-3 py-2.5 border border-charcoal/20 rounded-sm font-body text-sm focus:outline-none focus:border-gold resize-y"
+                      />
+                      <button
+                        onClick={() => requestExtraDocuments(app.id)}
+                        disabled={saving || !extraNotes.trim()}
+                        className="mt-3 px-4 py-2 border border-amber-400 text-amber-900 font-body text-sm rounded-sm disabled:opacity-50"
+                      >
+                        {saving ? t("common.loading") : t("admin.capitalAccess.requestExtra")}
+                      </button>
+                    </div>
+
+                    <div className="border-t border-charcoal/10 pt-5">
+                      <h3 className="font-heading font-semibold text-charcoal mb-1">
+                        {t("admin.capitalAccess.approveWithEscrowTitle")}
+                      </h3>
+                      <p className="font-body text-sm text-charcoal/60 mb-4">
+                        {t("admin.capitalAccess.approveModalDesc")}{" "}
+                        <strong>{formatUsd(app.securityDepositUsd)}</strong>
+                      </p>
+                      {!docsComplete && (
+                        <p className="mb-3 font-body text-sm text-amber-800 bg-amber-50 p-3 rounded-sm">
+                          {t("admin.capitalAccess.approveRequiresDocs")}
+                        </p>
+                      )}
+                      {docsComplete && !docsSubmitted && (
+                        <p className="mb-3 font-body text-sm text-amber-800 bg-amber-50 p-3 rounded-sm">
+                          {t("admin.capitalAccess.approveRequiresSubmit")}
+                        </p>
+                      )}
+                      <EscrowFieldsForm form={escrowForm} onChange={setEscrowForm} t={t} />
+                      <div className="flex flex-wrap gap-3 mt-5">
                         <button
                           onClick={() => submitApproval(app.id)}
-                          disabled={saving}
+                          disabled={saving || !docsComplete || !docsSubmitted}
                           className="px-5 py-2.5 bg-gold text-charcoal font-body text-sm rounded-sm disabled:opacity-50"
                         >
                           {saving ? t("common.loading") : t("admin.approve")}
                         </button>
-                      )}
-                      {needsEscrow && (
                         <button
-                          onClick={() => saveEscrowOnly(app.id)}
+                          onClick={() => updateStatus(app.id, "UNDER_REVIEW")}
                           disabled={saving}
-                          className="px-5 py-2.5 bg-gold text-charcoal font-body text-sm rounded-sm disabled:opacity-50"
+                          className="px-4 py-2.5 border border-charcoal/20 font-body text-sm rounded-sm"
                         >
-                          {saving ? t("common.loading") : t("admin.capitalAccess.saveEscrow")}
+                          {t("admin.capitalAccess.review")}
                         </button>
-                      )}
+                        <button
+                          onClick={() => updateStatus(app.id, "REJECTED")}
+                          disabled={saving}
+                          className="px-4 py-2.5 border border-red-300 text-red-700 font-body text-sm rounded-sm"
+                        >
+                          {t("admin.reject")}
+                        </button>
+                        <button
+                          onClick={() => setReviewingId(null)}
+                          className="px-4 py-2.5 border border-charcoal/20 font-body text-sm rounded-sm"
+                        >
+                          {t("common.cancel")}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {isReviewing && needsEscrow && (
+                  <div className="mb-4 p-5 bg-off-white border border-gold/20 rounded-lg">
+                    <h3 className="font-heading font-semibold text-charcoal mb-1">
+                      {t("admin.capitalAccess.escrowFormTitle")}
+                    </h3>
+                    <EscrowFieldsForm form={escrowForm} onChange={setEscrowForm} t={t} />
+                    <div className="flex flex-wrap gap-3 mt-5">
+                      <button
+                        onClick={() => saveEscrowOnly(app.id)}
+                        disabled={saving}
+                        className="px-5 py-2.5 bg-gold text-charcoal font-body text-sm rounded-sm disabled:opacity-50"
+                      >
+                        {saving ? t("common.loading") : t("admin.capitalAccess.saveEscrow")}
+                      </button>
                       <button
                         onClick={() => setReviewingId(null)}
                         className="px-4 py-2.5 border border-charcoal/20 font-body text-sm rounded-sm"
@@ -487,44 +635,36 @@ export default function AdminCapitalAccessPage() {
                       </button>
                     )}
 
-                    {!awaitingDeposit && nextPhase && (
+                    {!awaitingDeposit &&
+                      nextPhase &&
+                      app.onboardingPhase !== "AWAITING_DOCUMENTS" &&
+                      app.onboardingPhase !== "DOCUMENTS_REVISION" && (
+                        <button
+                          onClick={() => advanceOnboarding(app.id)}
+                          disabled={saving}
+                          className="mt-2 px-4 py-2 bg-gold text-charcoal font-body text-sm rounded-sm disabled:opacity-50"
+                        >
+                          {t("admin.capitalAccess.advanceTo")}{" "}
+                          {t(`capitalAccess.onboarding.phases.${nextPhase.toLowerCase()}`)}
+                        </button>
+                      )}
+
+                    {/* Legacy approved apps still collecting docs after deposit */}
+                    {app.onboardingPhase === "AWAITING_DOCUMENTS" && (
                       <button
                         onClick={() => advanceOnboarding(app.id)}
-                        disabled={saving}
+                        disabled={saving || !docsComplete}
                         className="mt-2 px-4 py-2 bg-gold text-charcoal font-body text-sm rounded-sm disabled:opacity-50"
                       >
                         {t("admin.capitalAccess.advanceTo")}{" "}
-                        {t(`capitalAccess.onboarding.phases.${nextPhase.toLowerCase()}`)}
+                        {t("capitalAccess.onboarding.phases.kyc_review")}
                       </button>
                     )}
                   </div>
                 )}
 
-                {app.status === "PENDING" && !isReviewing && (
-                  <div className="flex gap-3">
-                    <button
-                      onClick={() => updateStatus(app.id, "UNDER_REVIEW")}
-                      className="px-4 py-2 border border-charcoal/20 font-body text-sm rounded-sm"
-                    >
-                      {t("admin.capitalAccess.review")}
-                    </button>
-                    <button
-                      onClick={() => openReview(app)}
-                      className="px-4 py-2 bg-gold text-charcoal font-body text-sm rounded-sm"
-                    >
-                      {t("admin.capitalAccess.reviewApplication")}
-                    </button>
-                    <button
-                      onClick={() => updateStatus(app.id, "REJECTED")}
-                      className="px-4 py-2 border border-red-300 text-red-700 font-body text-sm rounded-sm"
-                    >
-                      {t("admin.reject")}
-                    </button>
-                  </div>
-                )}
-
-                {app.status === "UNDER_REVIEW" && !isReviewing && (
-                  <div className="flex gap-3">
+                {canApprove && !isReviewing && (
+                  <div className="flex gap-3 flex-wrap">
                     <button
                       onClick={() => openReview(app)}
                       className="px-4 py-2 bg-gold text-charcoal font-body text-sm rounded-sm"

@@ -2,12 +2,17 @@ import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { getPoolTeaser } from "@/lib/capital-access";
 import {
+  canBorrowerUploadDocuments,
   getEscrowInstructions,
   hasRequiredDocuments,
   ONBOARDING_PHASES,
   PAYMENT_SLIP_TYPE,
 } from "@/lib/capital-access-onboarding";
-import { sendDepositSubmittedEmail } from "@/lib/capital-access-onboarding-emails";
+import {
+  sendDepositSubmittedEmail,
+  sendDocumentsSubmittedEmail,
+  sendOnboardingPhaseEmail,
+} from "@/lib/capital-access-onboarding-emails";
 import { getAdminEmail } from "@/lib/email";
 import { NextResponse } from "next/server";
 
@@ -27,7 +32,7 @@ export async function GET(
       where: {
         id,
         userId: session.user.id,
-        status: "APPROVED",
+        status: { in: ["PENDING", "UNDER_REVIEW", "APPROVED"] },
       },
       include: {
         pool: { select: { country: true, category: true } },
@@ -40,14 +45,16 @@ export async function GET(
     }
 
     if (!facility.onboardingPhase) {
+      const phase =
+        facility.status === "APPROVED" ? "AWAITING_DEPOSIT" : "AWAITING_DOCUMENTS";
       await prisma.capitalAccessRequest.update({
         where: { id },
         data: {
-          onboardingPhase: "AWAITING_DEPOSIT",
+          onboardingPhase: phase,
           relationshipManager: facility.relationshipManager || "Capital Access Desk",
         },
       });
-      facility.onboardingPhase = "AWAITING_DEPOSIT";
+      facility.onboardingPhase = phase;
       facility.relationshipManager = facility.relationshipManager || "Capital Access Desk";
     }
 
@@ -58,6 +65,7 @@ export async function GET(
         escrow: getEscrowInstructions(facility.id, facility.companyName, facility),
         paymentSlip: facility.documents.find((d) => d.type === PAYMENT_SLIP_TYPE) || null,
         docsComplete: hasRequiredDocuments(facility.documents.map((d) => d.type)),
+        canUploadDocuments: canBorrowerUploadDocuments(facility.status, facility.onboardingPhase),
         phases: ONBOARDING_PHASES,
       },
     });
@@ -78,9 +86,61 @@ export async function PATCH(
 
   const { id } = await params;
   const body = await request.json();
-  const { depositReference } = body;
+  const { depositReference, action } = body;
 
   try {
+    if (action === "submit_documents") {
+      const facility = await prisma.capitalAccessRequest.findFirst({
+        where: {
+          id,
+          userId: session.user.id,
+          status: { in: ["PENDING", "UNDER_REVIEW"] },
+          onboardingPhase: { in: ["AWAITING_DOCUMENTS", "DOCUMENTS_REVISION"] },
+        },
+        include: {
+          documents: true,
+          user: { select: { email: true, name: true } },
+        },
+      });
+
+      if (!facility) {
+        return NextResponse.json(
+          { error: "Document submission is not available at this stage" },
+          { status: 403 }
+        );
+      }
+
+      if (!hasRequiredDocuments(facility.documents.map((d) => d.type))) {
+        return NextResponse.json(
+          { error: "Upload all five required documents before submitting" },
+          { status: 400 }
+        );
+      }
+
+      const updated = await prisma.capitalAccessRequest.update({
+        where: { id },
+        data: {
+          status: "UNDER_REVIEW",
+          onboardingPhase: "DOCUMENTS_SUBMITTED",
+        },
+      });
+
+      const adminEmail = await getAdminEmail();
+      sendDocumentsSubmittedEmail(adminEmail, facility.companyName, facility.id).catch(
+        console.error
+      );
+      if (facility.user.email) {
+        sendOnboardingPhaseEmail(
+          facility.user.email,
+          facility.user.name,
+          facility.companyName,
+          "DOCUMENTS_SUBMITTED"
+        ).catch(console.error);
+      }
+
+      return NextResponse.json({ facility: updated });
+    }
+
     const facility = await prisma.capitalAccessRequest.findFirst({
       where: {
         id,
@@ -125,6 +185,6 @@ export async function PATCH(
     return NextResponse.json({ facility: updated });
   } catch (err) {
     console.error("PATCH facility:", err);
-    return NextResponse.json({ error: "Failed to submit deposit reference" }, { status: 500 });
+    return NextResponse.json({ error: "Failed to update facility" }, { status: 500 });
   }
 }
