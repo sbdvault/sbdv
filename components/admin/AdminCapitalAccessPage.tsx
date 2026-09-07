@@ -329,6 +329,8 @@ export default function AdminCapitalAccessPage() {
               app.onboardingPhase === "DOCUMENTS_REVISION" ||
               !app.onboardingPhase;
             const docsPackageAccepted = docsSubmitted || (!docsAwaitingSubmit && docsComplete);
+            const disbursedOrActive =
+              app.onboardingPhase === "DISBURSED" || app.onboardingPhase === "ACTIVE";
 
             const canAdvanceOnboarding =
               Boolean(nextPhase) &&
@@ -367,8 +369,18 @@ export default function AdminCapitalAccessPage() {
                       {t(`capitalAccess.status.${app.status.toLowerCase()}`)}
                     </span>
                     {app.onboardingPhase && (
-                      <span className="text-xs font-body text-charcoal/50">
-                        {t(`capitalAccess.onboarding.phases.${app.onboardingPhase.toLowerCase()}`)}
+                      <span
+                        className={`text-xs font-body ${
+                          disbursedOrActive
+                            ? "px-3 py-1 rounded-full bg-green-100 text-green-800"
+                            : "text-charcoal/50"
+                        }`}
+                      >
+                        {t(
+                          `capitalAccess.onboarding.phases.${
+                            disbursedOrActive ? "active" : app.onboardingPhase.toLowerCase()
+                          }`
+                        )}
                       </span>
                     )}
                     <span
@@ -571,11 +583,13 @@ export default function AdminCapitalAccessPage() {
                         <span
                           key={phase}
                           className={`text-xs px-2 py-1 rounded ${
-                            i < phaseIndex
+                            disbursedOrActive && (i <= phaseIndex || phase === "ACTIVE")
                               ? "bg-green-100 text-green-800"
-                              : i === phaseIndex
-                                ? "bg-gold/20 text-charcoal font-medium"
-                                : "bg-charcoal/5 text-charcoal/40"
+                              : i < phaseIndex
+                                ? "bg-green-100 text-green-800"
+                                : i === phaseIndex
+                                  ? "bg-gold/20 text-charcoal font-medium"
+                                  : "bg-charcoal/5 text-charcoal/40"
                           }`}
                         >
                           {t(`capitalAccess.onboarding.phases.${phase.toLowerCase()}`)}
