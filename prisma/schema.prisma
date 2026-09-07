@@ -1,9 +1,9 @@
 generator client {
   provider      = "prisma-client-js"
-  // Layero reports OpenSSL 1.1 but does not ship libssl.so.1.1. The binary
-  // engine does not need the host OpenSSL library.
+  // Layero mis-detects OpenSSL 1.1 and then cannot load libssl.so.1.1.
+  // Always generate the OpenSSL 3 engine; lib/prisma.ts pins that binary at runtime.
   engineType    = "binary"
-  binaryTargets = ["native", "debian-openssl-3.0.x", "debian-openssl-1.1.x"]
+  binaryTargets = ["native", "debian-openssl-3.0.x"]
 }
 
 datasource db {
