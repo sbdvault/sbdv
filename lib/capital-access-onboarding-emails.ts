@@ -126,6 +126,28 @@ export async function sendDepositSubmittedEmail(
   });
 }
 
+export async function sendRepaymentSubmittedEmail(
+  adminEmail: string,
+  companyName: string,
+  installment: number,
+  reference: string,
+  amount: number
+) {
+  const formatUsd = (n: number) =>
+    new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(n);
+
+  await sendEmail({
+    to: adminEmail,
+    subject: `[Action] Repayment Submitted — ${companyName}`,
+    html: emailLayout(
+      "Borrower submitted a repayment",
+      `<p><strong>${companyName}</strong> submitted proof for installment ${installment}.</p>
+       <p>Wire reference: <code>${reference}</code><br/>Amount: ${formatUsd(amount)}</p>
+       <p>Confirm the receipt in Admin to mark the installment paid.</p>`
+    ),
+  });
+}
+
 export async function sendDocumentsSubmittedEmail(
   adminEmail: string,
   companyName: string,

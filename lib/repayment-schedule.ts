@@ -1,10 +1,14 @@
 export type InstallmentPayment = {
   installment: number;
-  paidAt: string;
   amountUsd: number;
+  status: "SUBMITTED" | "PAID";
+  submittedAt: string;
+  paidAt: string | null;
+  reference: string;
+  documentId?: string | null;
 };
 
-export type InstallmentStatus = "PAID" | "DUE" | "UPCOMING";
+export type InstallmentStatus = "PAID" | "SUBMITTED" | "DUE" | "UPCOMING";
 
 export type ScheduleRow = {
   installment: number;
@@ -15,17 +19,45 @@ export type ScheduleRow = {
   interestUsd: number;
   status: InstallmentStatus;
   paidAt: string | null;
+  submittedAt: string | null;
+  reference: string | null;
 };
 
 export function parseInstallmentPayments(value: unknown): InstallmentPayment[] {
   if (!Array.isArray(value)) return [];
   return value.flatMap((item) => {
     if (!item || typeof item !== "object") return [];
-    const row = item as { installment?: unknown; paidAt?: unknown; amountUsd?: unknown };
+    const row = item as {
+      installment?: unknown;
+      paidAt?: unknown;
+      amountUsd?: unknown;
+      status?: unknown;
+      submittedAt?: unknown;
+      reference?: unknown;
+      documentId?: unknown;
+    };
     const installment = Number(row.installment);
     const amountUsd = Number(row.amountUsd);
-    if (!Number.isFinite(installment) || installment < 1 || typeof row.paidAt !== "string") return [];
-    return [{ installment, paidAt: row.paidAt, amountUsd: Number.isFinite(amountUsd) ? amountUsd : 0 }];
+    if (!Number.isFinite(installment) || installment < 1) return [];
+
+    const paidAt = typeof row.paidAt === "string" ? row.paidAt : null;
+    const submittedAt = typeof row.submittedAt === "string" ? row.submittedAt : paidAt;
+    if (!submittedAt && !paidAt) return [];
+
+    const status: InstallmentPayment["status"] =
+      row.status === "SUBMITTED" || !paidAt ? "SUBMITTED" : "PAID";
+
+    return [
+      {
+        installment,
+        amountUsd: Number.isFinite(amountUsd) ? amountUsd : 0,
+        status,
+        submittedAt: submittedAt || paidAt || new Date().toISOString(),
+        paidAt,
+        reference: typeof row.reference === "string" ? row.reference : "",
+        documentId: typeof row.documentId === "string" ? row.documentId : null,
+      },
+    ];
   });
 }
 
@@ -75,7 +107,9 @@ export function buildRepaymentSchedule(input: {
     const due = addPeriod(start, installment, input.repaymentFrequency);
     const payment = paid.get(installment);
     const status: InstallmentStatus = payment
-      ? "PAID"
+      ? payment.status === "SUBMITTED"
+        ? "SUBMITTED"
+        : "PAID"
       : due.getTime() <= now.getTime()
         ? "DUE"
         : "UPCOMING";
@@ -89,10 +123,16 @@ export function buildRepaymentSchedule(input: {
       interestUsd: interestEach,
       status,
       paidAt: payment?.paidAt ?? null,
+      submittedAt: payment?.status === "SUBMITTED" ? payment.submittedAt : null,
+      reference: payment?.reference || null,
     };
   });
 }
 
 export function nextUnpaidInstallment(rows: ScheduleRow[]): ScheduleRow | null {
   return rows.find((row) => row.status !== "PAID") ?? null;
+}
+
+export function repaymentReference(applicationId: string, installment: number): string {
+  return `REP-${applicationId.slice(-8).toUpperCase()}-${String(installment).padStart(2, "0")}`;
 }

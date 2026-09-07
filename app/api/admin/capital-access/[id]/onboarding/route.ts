@@ -134,11 +134,27 @@ export async function PATCH(
         return NextResponse.json({ error: "All installments are already recorded" }, { status: 400 });
       }
 
-      const paidAt = new Date();
-      const payments = [
-        ...parseInstallmentPayments(facility.installmentPayments),
-        { installment: next.installment, paidAt: paidAt.toISOString(), amountUsd: next.amountUsd },
-      ];
+      const paidAt = new Date().toISOString();
+      const existing = parseInstallmentPayments(facility.installmentPayments);
+      const payments =
+        next.status === "SUBMITTED"
+          ? existing.map((row) =>
+              row.installment === next.installment
+                ? { ...row, status: "PAID" as const, paidAt }
+                : row
+            )
+          : [
+              ...existing,
+              {
+                installment: next.installment,
+                amountUsd: next.amountUsd,
+                status: "PAID" as const,
+                submittedAt: paidAt,
+                paidAt,
+                reference: "",
+                documentId: null,
+              },
+            ];
 
       const updated = await prisma.capitalAccessRequest.update({
         where: { id },

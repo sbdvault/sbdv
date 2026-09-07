@@ -753,7 +753,10 @@ export default function AdminCapitalAccessPage() {
                                   disabled={saving}
                                   className="px-4 py-2 bg-gold text-charcoal font-body text-sm rounded-sm disabled:opacity-50"
                                 >
-                                  {t("admin.capitalAccess.recordInstallment")} · {installmentOrdinal(next.installment)}
+                                  {next.status === "SUBMITTED"
+                                    ? t("admin.capitalAccess.confirmInstallment")
+                                    : t("admin.capitalAccess.recordInstallment")}{" "}
+                                  · {installmentOrdinal(next.installment)}
                                 </button>
                               ) : (
                                 <p className="text-green-700">{t("admin.capitalAccess.allInstallmentsRecorded")}</p>

@@ -1,9 +1,25 @@
 "use client";
 
-import { buildRepaymentSchedule } from "@/lib/repayment-schedule";
+import { useState } from "react";
+import { buildRepaymentSchedule, repaymentReference } from "@/lib/repayment-schedule";
+import { ALLOWED_UPLOAD_ACCEPT, validateUploadFile } from "@/lib/upload-validation";
 import { Building2, CheckCircle2 } from "lucide-react";
 
+type EscrowAccount = {
+  bankName: string;
+  bankAddress: string | null;
+  accountName: string;
+  accountNumber: string | null;
+  iban: string;
+  swift: string;
+  reference: string;
+  beneficiary: string;
+  beneficiaryAddress: string | null;
+  configured: boolean;
+};
+
 type FacilityAccount = {
+  id: string;
   disbursedAt: string | null;
   termYears: number;
   repaymentFrequency: string;
@@ -20,6 +36,7 @@ type FacilityAccount = {
   disburseBeneficiary?: string | null;
   disburseBeneficiaryAddress?: string | null;
   companyName: string;
+  escrow: EscrowAccount;
 };
 
 function formatUsd(n: number) {
@@ -42,10 +59,17 @@ function formatDate(value: string | null) {
 export default function FacilityRepaymentStatement({
   facility,
   t,
+  onSubmitted,
 }: {
   facility: FacilityAccount;
   t: (key: string) => string;
+  onSubmitted: () => void;
 }) {
+  const [wireRef, setWireRef] = useState("");
+  const [slipName, setSlipName] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [formError, setFormError] = useState("");
+
   if (!facility.disbursedAt) return null;
 
   const schedule = buildRepaymentSchedule({
@@ -60,6 +84,53 @@ export default function FacilityRepaymentStatement({
   const next = schedule.find((row) => row.status !== "PAID") ?? null;
   const principalPaid = paid.reduce((sum, row) => sum + row.principalUsd, 0);
   const outstanding = Math.max(0, facility.requestedAmountUsd - principalPaid);
+  const payable = schedule.find((row) => row.status === "DUE" || row.status === "UPCOMING") ?? null;
+  const payRef = payable ? repaymentReference(facility.id, payable.installment) : "";
+
+  const uploadSlip = async (file: File) => {
+    const check = validateUploadFile({ name: file.name, type: file.type });
+    if (!check.ok) {
+      setFormError(check.error);
+      return;
+    }
+    setBusy(true);
+    setFormError("");
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("type", "REPAYMENT_SLIP");
+    formData.append("name", file.name);
+    const res = await fetch(`/api/capital-access/facility/${facility.id}/documents`, {
+      method: "POST",
+      body: formData,
+    });
+    const json = await res.json().catch(() => ({}));
+    setBusy(false);
+    if (!res.ok) {
+      setFormError(json.error || t("capitalAccess.statement.repayFailed"));
+      return;
+    }
+    setSlipName(file.name);
+  };
+
+  const submitRepayment = async () => {
+    setBusy(true);
+    setFormError("");
+    const res = await fetch(`/api/capital-access/facility/${facility.id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ action: "submit_repayment", reference: wireRef }),
+    });
+    const json = await res.json().catch(() => ({}));
+    setBusy(false);
+    if (!res.ok) {
+      setFormError(json.error || t("capitalAccess.statement.repayFailed"));
+      return;
+    }
+    setWireRef("");
+    setSlipName("");
+    onSubmitted();
+  };
+
   const frequencyLabel =
     facility.repaymentFrequency === "MONTHLY"
       ? t("capitalAccess.request.monthly")
@@ -187,9 +258,11 @@ export default function FacilityRepaymentStatement({
                         className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${
                           row.status === "PAID"
                             ? "bg-green-100 text-green-800"
-                            : row.status === "DUE"
-                              ? "bg-amber-100 text-amber-800"
-                              : "bg-charcoal/5 text-charcoal/50"
+                            : row.status === "SUBMITTED"
+                              ? "bg-blue-100 text-blue-800"
+                              : row.status === "DUE"
+                                ? "bg-amber-100 text-amber-800"
+                                : "bg-charcoal/5 text-charcoal/50"
                         }`}
                       >
                         {row.status === "PAID" && <CheckCircle2 className="w-3 h-3" />}
@@ -202,6 +275,71 @@ export default function FacilityRepaymentStatement({
               </tbody>
             </table>
           </div>
+
+          {payable && (
+            <div className="mt-6 p-4 border border-gold/30 bg-off-white rounded-sm">
+              <p className="font-heading font-semibold text-charcoal">
+                {t("capitalAccess.statement.makePayment")} · {payable.ordinal}
+              </p>
+              <p className="font-body text-sm text-charcoal/60 mt-1 mb-4">
+                {t("capitalAccess.statement.makePaymentDesc")} {formatUsd(payable.amountUsd)}
+              </p>
+              {facility.escrow.configured && (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4 font-body text-sm">
+                  <div>
+                    <p className="text-charcoal/45">{t("capitalAccess.onboarding.bank")}</p>
+                    <p className="font-medium">{facility.escrow.bankName}</p>
+                  </div>
+                  <div>
+                    <p className="text-charcoal/45">{t("capitalAccess.onboarding.account")}</p>
+                    <p className="font-medium">{facility.escrow.accountName}</p>
+                  </div>
+                  <div>
+                    <p className="text-charcoal/45">IBAN</p>
+                    <p className="font-mono break-all">{facility.escrow.iban}</p>
+                  </div>
+                  <div>
+                    <p className="text-charcoal/45">SWIFT</p>
+                    <p className="font-mono">{facility.escrow.swift}</p>
+                  </div>
+                  <div className="sm:col-span-2">
+                    <p className="text-charcoal/45">{t("capitalAccess.onboarding.wireReference")}</p>
+                    <p className="font-mono font-medium">{payRef}</p>
+                  </div>
+                </div>
+              )}
+              {formError && <p className="font-body text-sm text-red-700 mb-3">{formError}</p>}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <label className="px-4 py-2.5 border border-charcoal/20 bg-white font-body text-sm rounded-sm cursor-pointer">
+                  {slipName || t("capitalAccess.onboarding.uploadSlip")}
+                  <input
+                    type="file"
+                    accept={ALLOWED_UPLOAD_ACCEPT}
+                    className="hidden"
+                    onChange={(e) => {
+                      const file = e.target.files?.[0];
+                      e.target.value = "";
+                      if (file) uploadSlip(file);
+                    }}
+                  />
+                </label>
+                <input
+                  value={wireRef}
+                  onChange={(e) => setWireRef(e.target.value)}
+                  placeholder={t("capitalAccess.onboarding.wireRefPlaceholder")}
+                  className="flex-1 px-3 py-2.5 border border-charcoal/20 bg-white font-body text-sm rounded-sm"
+                />
+                <button
+                  type="button"
+                  onClick={submitRepayment}
+                  disabled={busy || !wireRef.trim() || !slipName}
+                  className="px-4 py-2.5 bg-gold text-charcoal font-body text-sm rounded-sm disabled:opacity-40"
+                >
+                  {busy ? t("common.loading") : t("capitalAccess.statement.submitRepayment")}
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

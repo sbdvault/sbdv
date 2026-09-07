@@ -698,6 +698,7 @@
       "bankDetailsReceived": "Borrower bank details received",
       "awaitingBankDetails": "Awaiting borrower disbursement bank details.",
       "recordInstallment": "Record installment received",
+      "confirmInstallment": "Confirm repayment received",
       "installmentRecorded": "Installment recorded",
       "allInstallmentsRecorded": "All installments recorded",
       "error": "Unable to complete that action. Please try again."
@@ -932,6 +933,10 @@
       "nextDue": "Next due date",
       "paidCount": "Installments paid",
       "complete": "Schedule complete",
+      "makePayment": "Make repayment",
+      "makePaymentDesc": "Transfer the installment to the SBDV account below, upload the payment slip, then submit your wire reference. Amount due:",
+      "submitRepayment": "Submit repayment",
+      "repayFailed": "Could not submit this repayment. Please try again.",
       "scheduleTitle": "Repayment schedule",
       "installment": "Installment",
       "due": "Due date",
@@ -940,6 +945,7 @@
       "paidOn": "Paid on",
       "statuses": {
         "paid": "Paid",
+        "submitted": "Submitted",
         "due": "Due",
         "upcoming": "Upcoming"
       }

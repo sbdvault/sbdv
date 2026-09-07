@@ -3,6 +3,7 @@ import { prisma } from "@/lib/prisma";
 import {
   canBorrowerUploadDocuments,
   PAYMENT_SLIP_TYPE,
+  REPAYMENT_SLIP_TYPE,
   REQUIRED_DOCUMENT_TYPES,
 } from "@/lib/capital-access-onboarding";
 import { validateUploadFile } from "@/lib/upload-validation";
@@ -37,11 +38,12 @@ export async function POST(
   }
 
   const isPaymentSlip = type === PAYMENT_SLIP_TYPE;
+  const isRepaymentSlip = type === REPAYMENT_SLIP_TYPE;
   const isRequiredDoc = REQUIRED_DOCUMENT_TYPES.includes(
     type as (typeof REQUIRED_DOCUMENT_TYPES)[number]
   );
 
-  if (!isPaymentSlip && !isRequiredDoc && type !== "OTHER") {
+  if (!isPaymentSlip && !isRepaymentSlip && !isRequiredDoc && type !== "OTHER") {
     return NextResponse.json({ error: "Invalid document type" }, { status: 400 });
   }
 
@@ -51,9 +53,11 @@ export async function POST(
       userId: session.user.id,
       ...(isPaymentSlip
         ? { status: "APPROVED", onboardingPhase: "AWAITING_DEPOSIT" }
-        : {
-            status: { in: ["PENDING", "UNDER_REVIEW", "APPROVED"] },
-          }),
+        : isRepaymentSlip
+          ? { status: "APPROVED", onboardingPhase: { in: ["DISBURSED", "ACTIVE"] } }
+          : {
+              status: { in: ["PENDING", "UNDER_REVIEW", "APPROVED"] },
+            }),
     },
     include: { documents: true },
   });
@@ -62,7 +66,7 @@ export async function POST(
     return NextResponse.json({ error: "Document upload not available at this stage" }, { status: 403 });
   }
 
-  if (!isPaymentSlip && !canBorrowerUploadDocuments(facility.status, facility.onboardingPhase)) {
+  if (!isPaymentSlip && !isRepaymentSlip && !canBorrowerUploadDocuments(facility.status, facility.onboardingPhase)) {
     return NextResponse.json({ error: "Document upload not available at this stage" }, { status: 403 });
   }
 
@@ -81,8 +85,8 @@ export async function POST(
   const filePath = path.join(uploadDir, `${Date.now()}-${safeName}`);
   await writeFile(filePath, buffer);
 
-  // Replace prior file of same type (required docs + payment slip)
-  if (isPaymentSlip || isRequiredDoc) {
+  // Replace prior file of same type (required docs + payment slips)
+  if (isPaymentSlip || isRepaymentSlip || isRequiredDoc) {
     const existing = facility.documents.filter((d) => d.type === type);
     for (const doc of existing) {
       await unlink(doc.filePath).catch(() => {});

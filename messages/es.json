@@ -750,7 +750,8 @@
       "awaitingBankDetails": "Awaiting borrower disbursement bank details.",
       "recordInstallment": "Record installment received",
       "installmentRecorded": "Installment recorded",
-      "allInstallmentsRecorded": "All installments recorded"
+      "allInstallmentsRecorded": "All installments recorded",
+      "confirmInstallment": "Confirm repayment received"
     }
   },
   "capitalAccess": {
@@ -997,8 +998,13 @@
       "statuses": {
         "paid": "Paid",
         "due": "Due",
-        "upcoming": "Upcoming"
-      }
+        "upcoming": "Upcoming",
+        "submitted": "Submitted"
+      },
+      "makePayment": "Make repayment",
+      "makePaymentDesc": "Transfer the installment to the SBDV account below, upload the payment slip, then submit your wire reference. Amount due:",
+      "submitRepayment": "Submit repayment",
+      "repayFailed": "Could not submit this repayment. Please try again."
     }
   },
   "chat": {

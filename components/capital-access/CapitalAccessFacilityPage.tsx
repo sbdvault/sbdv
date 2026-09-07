@@ -741,7 +741,9 @@ export default function CapitalAccessFacilityPage() {
             </div>
           )}
 
-          {facilityLive && <FacilityRepaymentStatement facility={facility} t={t} />}
+          {facilityLive && (
+            <FacilityRepaymentStatement facility={facility} t={t} onSubmitted={loadData} />
+          )}
 
           {facility.onboardingPhase === "READY_FOR_DISBURSEMENT" && (
             <div className="p-6 bg-charcoal text-off-white rounded-lg">

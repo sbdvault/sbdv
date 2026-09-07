@@ -8,6 +8,7 @@ import {
   hasRequiredDocuments,
   ONBOARDING_PHASES,
   PAYMENT_SLIP_TYPE,
+  REPAYMENT_SLIP_TYPE,
   validateDisburseBankInput,
 } from "@/lib/capital-access-onboarding";
 import {
@@ -15,7 +16,12 @@ import {
   sendDepositSubmittedEmail,
   sendDocumentsSubmittedEmail,
   sendOnboardingPhaseEmail,
+  sendRepaymentSubmittedEmail,
 } from "@/lib/capital-access-onboarding-emails";
+import {
+  buildRepaymentSchedule,
+  parseInstallmentPayments,
+} from "@/lib/repayment-schedule";
 import { getAdminEmail } from "@/lib/email";
 import { NextResponse } from "next/server";
 
@@ -90,7 +96,7 @@ export async function PATCH(
 
   const { id } = await params;
   const body = await request.json();
-  const { depositReference, action, bank } = body;
+  const { depositReference, action, bank, reference } = body;
 
   try {
     if (action === "submit_documents") {
@@ -196,6 +202,83 @@ export async function PATCH(
           bankDetailsComplete: hasDisburseBankDetails(updated),
         },
       });
+    }
+
+    if (action === "submit_repayment") {
+      const facility = await prisma.capitalAccessRequest.findFirst({
+        where: {
+          id,
+          userId: session.user.id,
+          status: "APPROVED",
+          onboardingPhase: { in: ["DISBURSED", "ACTIVE"] },
+        },
+        include: { documents: { orderBy: { uploadedAt: "desc" } } },
+      });
+
+      if (!facility || !facility.disbursedAt) {
+        return NextResponse.json(
+          { error: "Repayment is not available at this stage" },
+          { status: 403 }
+        );
+      }
+
+      const wireRef = typeof reference === "string" ? reference.trim() : "";
+      if (!wireRef) {
+        return NextResponse.json({ error: "Wire reference is required" }, { status: 400 });
+      }
+
+      const slip = facility.documents.find((d) => d.type === REPAYMENT_SLIP_TYPE);
+      if (!slip) {
+        return NextResponse.json(
+          { error: "Please upload your payment slip before submitting" },
+          { status: 400 }
+        );
+      }
+
+      const schedule = buildRepaymentSchedule({
+        disbursedAt: facility.disbursedAt,
+        termYears: facility.termYears,
+        repaymentFrequency: facility.repaymentFrequency,
+        principalUsd: facility.requestedAmountUsd,
+        installmentUsd: facility.installmentUsd,
+        payments: facility.installmentPayments,
+      });
+      const next = schedule.find((row) => row.status !== "PAID" && row.status !== "SUBMITTED");
+      if (!next) {
+        return NextResponse.json(
+          { error: "There is no installment waiting for payment" },
+          { status: 400 }
+        );
+      }
+
+      const payments = [
+        ...parseInstallmentPayments(facility.installmentPayments),
+        {
+          installment: next.installment,
+          amountUsd: next.amountUsd,
+          status: "SUBMITTED" as const,
+          submittedAt: new Date().toISOString(),
+          paidAt: null,
+          reference: wireRef,
+          documentId: slip.id,
+        },
+      ];
+
+      const updated = await prisma.capitalAccessRequest.update({
+        where: { id },
+        data: { installmentPayments: payments },
+      });
+
+      const adminEmail = await getAdminEmail();
+      sendRepaymentSubmittedEmail(
+        adminEmail,
+        facility.companyName,
+        next.installment,
+        wireRef,
+        next.amountUsd
+      ).catch(console.error);
+
+      return NextResponse.json({ facility: updated });
     }
 
     const facility = await prisma.capitalAccessRequest.findFirst({

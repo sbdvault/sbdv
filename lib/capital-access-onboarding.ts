@@ -29,6 +29,7 @@ export const REQUIRED_DOCUMENT_TYPES = [
 export type RequiredDocumentType = (typeof REQUIRED_DOCUMENT_TYPES)[number];
 
 export const PAYMENT_SLIP_TYPE = "PAYMENT_SLIP" as const;
+export const REPAYMENT_SLIP_TYPE = "REPAYMENT_SLIP" as const;
 
 export interface EscrowFields {
   escrowBankName?: string | null;
