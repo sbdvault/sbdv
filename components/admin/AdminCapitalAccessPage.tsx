@@ -324,6 +324,11 @@ export default function AdminCapitalAccessPage() {
                 app.onboardingPhase === "DOCUMENTS_SUBMITTED" ||
                 !app.onboardingPhase);
             const docsSubmitted = app.onboardingPhase === "DOCUMENTS_SUBMITTED";
+            const docsAwaitingSubmit =
+              app.onboardingPhase === "AWAITING_DOCUMENTS" ||
+              app.onboardingPhase === "DOCUMENTS_REVISION" ||
+              !app.onboardingPhase;
+            const docsPackageAccepted = docsSubmitted || (!docsAwaitingSubmit && docsComplete);
 
             const canAdvanceOnboarding =
               Boolean(nextPhase) &&
@@ -368,16 +373,12 @@ export default function AdminCapitalAccessPage() {
                     )}
                     <span
                       className={`text-xs font-body ${
-                        docsSubmitted
-                          ? "text-green-700"
-                          : docsComplete
-                            ? "text-amber-700"
-                            : "text-amber-700"
+                        docsPackageAccepted ? "text-green-700" : "text-amber-700"
                       }`}
                     >
-                      {docsSubmitted
+                      {docsPackageAccepted
                         ? t("admin.capitalAccess.docsSubmitted")
-                        : docsComplete
+                        : docsComplete && docsAwaitingSubmit
                           ? t("admin.capitalAccess.docsUploadedNotSubmitted")
                           : t("admin.capitalAccess.docsIncomplete")}
                     </span>
