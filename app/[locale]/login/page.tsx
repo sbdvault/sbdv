@@ -30,7 +30,7 @@ export default function LoginPage() {
     setError("");
 
     const result = await signIn("credentials", {
-      email,
+      email: email.trim().toLowerCase(),
       password,
       mfaCode: showMfa ? mfaCode : undefined,
       redirect: false,
@@ -54,18 +54,24 @@ export default function LoginPage() {
       return;
     }
 
-    const sessionRes = await fetch("/api/auth/session");
+    const signedInEmail = email.trim().toLowerCase();
+    const sessionRes = await fetch("/api/auth/destination", {
+      method: "POST",
+      cache: "no-store",
+      headers: { "Cache-Control": "no-cache" },
+    });
     const session = await sessionRes.json();
-    if (!session?.user) {
-      // Usually AUTH_URL / cookie host mismatch (e.g. wrong Amvera hostname).
+    const sessionEmail = typeof session?.email === "string" ? session.email.toLowerCase() : "";
+    if (!session?.role || sessionEmail !== signedInEmail) {
+      // Usually AUTH_URL / cookie host mismatch, or a cached session for another user.
       setError(t("login.invalidCredentials"));
       return;
     }
 
     let destination = getLocalizedHref("/portal");
-    if (session.user.role === "ADMIN") {
+    if (session.role === "ADMIN") {
       destination = getLocalizedHref("/admin");
-    } else if (session.user.role === "BORROWER") {
+    } else if (session.role === "BORROWER") {
       destination = getLocalizedHref("/capital-access/portal");
     }
     // Full navigation so the session cookie is always sent on the next request.
