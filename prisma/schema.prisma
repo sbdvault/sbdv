@@ -231,6 +231,8 @@ model CapitalAccessRequest {
   totalInterestUsd     Float
   installmentUsd       Float
   termsAccepted        Boolean  @default(false)
+  facilityTermsAcceptedAt DateTime?
+  facilityTermsVersion    String?
   status               String   @default("PENDING")
   onboardingPhase      String?
   escrowBankName       String?

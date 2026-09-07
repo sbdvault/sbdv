@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import { useRouter, useParams, useSearchParams } from "next/navigation";
 import { useTranslations } from "@/hooks/useTranslations";
 import {
@@ -351,15 +352,34 @@ export default function CapitalAccessRequestPage() {
               <div><p className="text-charcoal/50">{t("capitalAccess.request.investmentAreas")}</p><p className="font-medium">{investmentAreas}</p></div>
             </div>
 
-            <label className="flex items-start gap-3 p-4 border border-charcoal/10 rounded-sm cursor-pointer">
+            <div className="flex items-start gap-3 p-4 border border-charcoal/10 rounded-sm">
               <input
+                id="request-terms-accept"
                 type="checkbox"
                 checked={termsAccepted}
                 onChange={(e) => setTermsAccepted(e.target.checked)}
                 className="mt-1 accent-gold"
               />
-              <span className="font-body text-sm text-charcoal/80">{t("capitalAccess.request.termsAccept")}</span>
-            </label>
+              <label htmlFor="request-terms-accept" className="font-body text-sm text-charcoal/80 leading-relaxed cursor-pointer">
+                {t("capitalAccess.request.termsAcceptBefore")}{" "}
+                <Link
+                  href={`/${(params?.locale as string) || locale || "en"}/capital-access/terms`}
+                  className="text-gold underline underline-offset-2 font-medium"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    window.open(
+                      `/${(params?.locale as string) || locale || "en"}/capital-access/terms`,
+                      "_blank",
+                      "noopener,noreferrer"
+                    );
+                  }}
+                >
+                  {t("capitalAccess.facilityTerms.linkLabel")}
+                </Link>
+                {t("capitalAccess.request.termsAcceptAfter")}
+              </label>
+            </div>
 
             {error && <p className="text-sm text-red-600">{error}</p>}
           </div>

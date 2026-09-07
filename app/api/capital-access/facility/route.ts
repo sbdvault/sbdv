@@ -73,6 +73,8 @@ export async function GET() {
         depositReference: f.depositReference,
         depositSubmittedAt: f.depositSubmittedAt,
         depositConfirmedAt: f.depositConfirmedAt,
+        facilityTermsAcceptedAt: f.facilityTermsAcceptedAt,
+        facilityTermsVersion: f.facilityTermsVersion,
         kycCompletedAt: f.kycCompletedAt,
         disbursedAt: f.disbursedAt,
         relationshipManager: f.relationshipManager,

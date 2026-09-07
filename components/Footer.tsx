@@ -19,6 +19,7 @@ export default function Footer() {
   const legalLinks = [
     { key: "privacy", href: "/privacy" },
     { key: "terms", href: "/terms" },
+    { key: "facilityTerms", href: "/capital-access/terms" },
     { key: "regulatory", href: "/regulatory" },
     { key: "investorRelations", href: "/investor-relations" },
   ];

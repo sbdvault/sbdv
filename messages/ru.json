@@ -56,7 +56,8 @@
         "timezone": "EST (UTC-5)"
       }
     },
-    "jurisdictionNote": "Швейцарская правовая основа. Мульти-юрисдикционный доступ для глобальных клиентов."
+    "jurisdictionNote": "Швейцарская правовая основа. Мульти-юрисдикционный доступ для глобальных клиентов.",
+    "facilityTerms": "Facility Terms"
   },
   "about": {
     "title": "About",
@@ -883,7 +884,9 @@
       "submitError": "Failed to submit application.",
       "submittedTitle": "Application Submitted",
       "submittedDesc": "Your capital access request is now under institutional review. A confirmation email has been sent to your registered address.",
-      "viewApplications": "View My Applications"
+      "viewApplications": "View My Applications",
+      "termsAcceptBefore": "I accept the 10% security deposit requirement and the",
+      "termsAcceptAfter": ", the institutional review process, and I confirm that all information provided is accurate."
     },
     "applications": {
       "title": "My Applications",
@@ -1005,6 +1008,22 @@
       "makePaymentDesc": "Transfer the installment to the SBDV account below, upload the payment slip, then submit your wire reference. Amount due:",
       "submitRepayment": "Submit repayment",
       "repayFailed": "Could not submit this repayment. Please try again."
+    },
+    "facilityTerms": {
+      "eyebrow": "Capital Access Program",
+      "pageTitle": "Facility Terms and Conditions",
+      "intro": "These terms govern your capital facility, including the 10% security deposit, interest, repayment, default, and Swiss governing law. Read them in full before you accept.",
+      "versionLabel": "Document",
+      "effectiveLabel": "Effective",
+      "languageLabel": "Governing language",
+      "governingNote": "English is the governing language of this instrument. A translation, if provided, is for convenience only.",
+      "contents": "Contents",
+      "acceptBefore": "I have read and accept the",
+      "linkLabel": "Facility Terms and Conditions",
+      "acceptAfter": ", including the 10% security deposit, interest, repayment, default, and governing-law provisions, and I confirm that I am authorised to bind the borrower.",
+      "acceptedNote": "Facility Terms and Conditions accepted",
+      "print": "Print or save",
+      "backFacility": "Return to facility dashboard"
     }
   },
   "chat": {

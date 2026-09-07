@@ -1,6 +1,7 @@
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { getPoolTeaser } from "@/lib/capital-access";
+import { FACILITY_TERMS_VERSION } from "@/lib/facility-terms";
 import {
   canBorrowerUploadDocuments,
   getEscrowInstructions,
@@ -96,7 +97,7 @@ export async function PATCH(
 
   const { id } = await params;
   const body = await request.json();
-  const { depositReference, action, bank, reference } = body;
+  const { depositReference, action, bank, reference, facilityTermsAccepted } = body;
 
   try {
     if (action === "submit_documents") {
@@ -306,11 +307,20 @@ export async function PATCH(
       );
     }
 
+    if (facilityTermsAccepted !== true) {
+      return NextResponse.json(
+        { error: "You must accept the Facility Terms and Conditions before submitting the security deposit" },
+        { status: 400 }
+      );
+    }
+
     const updated = await prisma.capitalAccessRequest.update({
       where: { id },
       data: {
         depositReference: depositReference.trim(),
         depositSubmittedAt: new Date(),
+        facilityTermsAcceptedAt: new Date(),
+        facilityTermsVersion: FACILITY_TERMS_VERSION,
       },
     });
 

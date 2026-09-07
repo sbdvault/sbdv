@@ -34,6 +34,8 @@ interface Application {
   depositReference: string | null;
   depositSubmittedAt: string | null;
   depositConfirmedAt: string | null;
+  facilityTermsAcceptedAt?: string | null;
+  facilityTermsVersion?: string | null;
   relationshipManager: string | null;
   poolLabel: string;
   docsComplete?: boolean;
@@ -649,6 +651,12 @@ export default function AdminCapitalAccessPage() {
 
                     {awaitingDeposit && (
                       <div className="mb-3 space-y-2">
+                        {app.facilityTermsAcceptedAt && (
+                          <p className="font-body text-sm text-charcoal/70">
+                            {t("capitalAccess.facilityTerms.acceptedNote")}
+                            {app.facilityTermsVersion ? ` · ${app.facilityTermsVersion}` : ""}
+                          </p>
+                        )}
                         {app.depositReference ? (
                           <p className="font-body text-sm text-charcoal/70">
                             {t("capitalAccess.onboarding.wireReference")}:{" "}

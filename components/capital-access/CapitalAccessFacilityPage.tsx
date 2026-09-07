@@ -35,6 +35,8 @@ interface Facility {
   depositReference: string | null;
   depositSubmittedAt: string | null;
   depositConfirmedAt: string | null;
+  facilityTermsAcceptedAt?: string | null;
+  facilityTermsVersion?: string | null;
   kycCompletedAt: string | null;
   disbursedAt: string | null;
   relationshipManager: string | null;
@@ -88,6 +90,7 @@ export default function CapitalAccessFacilityPage() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [wireRef, setWireRef] = useState("");
+  const [facilityTermsAccepted, setFacilityTermsAccepted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [uploading, setUploading] = useState(false);
   const [message, setMessage] = useState("");
@@ -157,7 +160,7 @@ export default function CapitalAccessFacilityPage() {
     const res = await fetch(`/api/capital-access/facility/${facility.id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ depositReference: wireRef }),
+      body: JSON.stringify({ depositReference: wireRef, facilityTermsAccepted }),
     });
     const json = await res.json();
     setSubmitting(false);
@@ -539,6 +542,14 @@ export default function CapitalAccessFacilityPage() {
                       <p className="font-body text-xs text-charcoal/50">
                         {t("capitalAccess.onboarding.awaitingAdminConfirm")}
                       </p>
+                      {facility.facilityTermsAcceptedAt && (
+                        <p className="font-body text-xs text-charcoal/50">
+                          {t("capitalAccess.facilityTerms.acceptedNote")}
+                          {facility.facilityTermsVersion
+                            ? ` · ${facility.facilityTermsVersion}`
+                            : ""}
+                        </p>
+                      )}
                     </div>
                   ) : (
                     <div className="space-y-4">
@@ -595,6 +606,36 @@ export default function CapitalAccessFacilityPage() {
                           </label>
                         )}
                       </div>
+                      <div className="flex items-start gap-3 p-4 border border-charcoal/10 rounded-sm">
+                        <input
+                          id="facility-terms-accept"
+                          type="checkbox"
+                          checked={facilityTermsAccepted}
+                          onChange={(e) => setFacilityTermsAccepted(e.target.checked)}
+                          className="mt-1 accent-gold"
+                        />
+                        <label htmlFor="facility-terms-accept" className="font-body text-sm text-charcoal/80 leading-relaxed cursor-pointer">
+                          {t("capitalAccess.facilityTerms.acceptBefore")}{" "}
+                          <Link
+                            href={getLocalizedHref("/capital-access/terms")}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gold underline underline-offset-2 font-medium"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              window.open(
+                                getLocalizedHref("/capital-access/terms"),
+                                "_blank",
+                                "noopener,noreferrer"
+                              );
+                            }}
+                          >
+                            {t("capitalAccess.facilityTerms.linkLabel")}
+                          </Link>
+                          {t("capitalAccess.facilityTerms.acceptAfter")}
+                        </label>
+                      </div>
                       <div className="flex flex-col sm:flex-row gap-3">
                         <input
                           value={wireRef}
@@ -604,7 +645,12 @@ export default function CapitalAccessFacilityPage() {
                         />
                         <button
                           onClick={submitDepositRef}
-                          disabled={submitting || !wireRef.trim() || !facility.paymentSlip}
+                          disabled={
+                            submitting ||
+                            !wireRef.trim() ||
+                            !facility.paymentSlip ||
+                            !facilityTermsAccepted
+                          }
                           className="px-6 py-3 bg-gold text-charcoal font-body rounded-sm disabled:opacity-40"
                         >
                           {submitting ? t("common.loading") : t("capitalAccess.onboarding.confirmDeposit")}
