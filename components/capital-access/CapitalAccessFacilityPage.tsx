@@ -17,6 +17,7 @@ import {
   AlertCircle,
 } from "lucide-react";
 import { REQUIRED_DOCUMENT_TYPES } from "@/lib/capital-access-onboarding";
+import FacilityRepaymentStatement from "@/components/capital-access/FacilityRepaymentStatement";
 import { ALLOWED_UPLOAD_ACCEPT, validateUploadFile } from "@/lib/upload-validation";
 
 interface Facility {
@@ -42,6 +43,7 @@ interface Facility {
   canUploadDocuments: boolean;
   bankDetailsComplete?: boolean;
   bankDetailsSubmittedAt?: string | null;
+  installmentPayments?: unknown;
   disburseBankName?: string | null;
   disburseBankAddress?: string | null;
   disburseAccountName?: string | null;
@@ -144,6 +146,8 @@ export default function CapitalAccessFacilityPage() {
   const currentPhaseIndex = facility
     ? facility.phases.indexOf(facility.onboardingPhase)
     : -1;
+  const facilityLive =
+    facility?.onboardingPhase === "DISBURSED" || facility?.onboardingPhase === "ACTIVE";
 
   const submitDepositRef = async () => {
     if (!facility) return;
@@ -282,7 +286,11 @@ export default function CapitalAccessFacilityPage() {
         <h1 className="text-3xl font-heading font-semibold text-charcoal mb-2">
           {t("capitalAccess.onboarding.title")}
         </h1>
-        <p className="font-body text-charcoal/60">{t("capitalAccess.onboarding.subtitle")}</p>
+        <p className="font-body text-charcoal/60">
+          {facilityLive
+            ? t("capitalAccess.statement.disbursedAccountDesc")
+            : t("capitalAccess.onboarding.subtitle")}
+        </p>
       </div>
 
       {facilities.length > 1 && (
@@ -317,13 +325,14 @@ export default function CapitalAccessFacilityPage() {
             ))}
           </div>
 
+          {!facilityLive && (
           <div className="mb-10 p-6 bg-white border border-charcoal/10 rounded-lg">
             <h2 className="font-heading font-semibold text-charcoal mb-6">{t("capitalAccess.onboarding.progress")}</h2>
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-0">
               {facility.phases.map((phase, i) => {
                 const Icon = phaseIcons[phase] || Circle;
-                const done = i < currentPhaseIndex;
-                const current = i === currentPhaseIndex;
+                const done = facilityLive ? i <= currentPhaseIndex || phase === "ACTIVE" : i < currentPhaseIndex;
+                const current = !facilityLive && i === currentPhaseIndex;
                 return (
                   <div key={phase} className="flex items-center flex-1 min-w-0">
                     <div className="flex items-center gap-2 shrink-0">
@@ -346,6 +355,7 @@ export default function CapitalAccessFacilityPage() {
               })}
             </div>
           </div>
+          )}
 
           {error && (
             <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center gap-3">
@@ -731,30 +741,16 @@ export default function CapitalAccessFacilityPage() {
             </div>
           )}
 
-          {["READY_FOR_DISBURSEMENT", "DISBURSED", "ACTIVE"].includes(facility.onboardingPhase) && (
+          {facilityLive && <FacilityRepaymentStatement facility={facility} t={t} />}
+
+          {facility.onboardingPhase === "READY_FOR_DISBURSEMENT" && (
             <div className="p-6 bg-charcoal text-off-white rounded-lg">
               <h2 className="font-heading font-semibold mb-2">
-                {facility.onboardingPhase === "ACTIVE"
-                  ? t("capitalAccess.onboarding.facilityActive")
-                  : t("capitalAccess.onboarding.disbursementPending")}
+                {t("capitalAccess.onboarding.disbursementPending")}
               </h2>
               <p className="font-body text-sm text-off-white/70">
-                {facility.onboardingPhase === "DISBURSED" || facility.onboardingPhase === "ACTIVE"
-                  ? `${t("capitalAccess.onboarding.disbursedOn")} ${facility.disbursedAt ? new Date(facility.disbursedAt).toLocaleDateString() : "—"}`
-                  : t("capitalAccess.onboarding.disbursementDesc")}
+                {t("capitalAccess.onboarding.disbursementDesc")}
               </p>
-              {facility.onboardingPhase === "ACTIVE" && (
-                <div className="mt-4 grid grid-cols-2 gap-4 text-sm">
-                  <div>
-                    <p className="text-off-white/50">{t("capitalAccess.request.repayment")}</p>
-                    <p className="font-heading font-semibold capitalize">{facility.repaymentFrequency.toLowerCase()}</p>
-                  </div>
-                  <div>
-                    <p className="text-off-white/50">{t("capitalAccess.onboarding.installment")}</p>
-                    <p className="font-heading font-semibold text-gold">{formatUsd(facility.installmentUsd)}</p>
-                  </div>
-                </div>
-              )}
             </div>
           )}
 

@@ -747,7 +747,10 @@
       "approveRequiresSubmit": "Borrower must click Submit Documents before you can approve.",
       "disburseBank": "Disbursement bank account",
       "bankDetailsReceived": "Borrower bank details received",
-      "awaitingBankDetails": "Awaiting borrower disbursement bank details."
+      "awaitingBankDetails": "Awaiting borrower disbursement bank details.",
+      "recordInstallment": "Record installment received",
+      "installmentRecorded": "Installment recorded",
+      "allInstallmentsRecorded": "All installments recorded"
     }
   },
   "capitalAccess": {
@@ -975,6 +978,27 @@
       "bankSubmitSuccess": "Bank details submitted. Our team will verify and proceed to disbursement.",
       "bankSubmitFailed": "Could not submit bank details. Please try again.",
       "bankSubmittedNote": "Bank details submitted — awaiting disbursement."
+    },
+    "statement": {
+      "liveFacility": "Live facility",
+      "disbursedAccount": "Disbursement account",
+      "disbursedAccountDesc": "Capital was released to this account. Keep these details for your records.",
+      "principal": "Principal",
+      "outstanding": "Outstanding principal",
+      "nextDue": "Next due date",
+      "paidCount": "Installments paid",
+      "complete": "Schedule complete",
+      "scheduleTitle": "Repayment schedule",
+      "installment": "Installment",
+      "due": "Due date",
+      "amount": "Amount",
+      "status": "Status",
+      "paidOn": "Paid on",
+      "statuses": {
+        "paid": "Paid",
+        "due": "Due",
+        "upcoming": "Upcoming"
+      }
     }
   },
   "chat": {

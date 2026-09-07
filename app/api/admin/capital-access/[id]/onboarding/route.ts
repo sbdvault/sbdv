@@ -7,6 +7,10 @@ import {
   hasRequiredDocuments,
 } from "@/lib/capital-access-onboarding";
 import { sendOnboardingPhaseEmail } from "@/lib/capital-access-onboarding-emails";
+import {
+  buildRepaymentSchedule,
+  parseInstallmentPayments,
+} from "@/lib/repayment-schedule";
 import { NextResponse } from "next/server";
 
 export async function PATCH(
@@ -102,6 +106,47 @@ export async function PATCH(
           nextPhase
         ).catch(console.error);
       }
+
+      return NextResponse.json({ facility: updated });
+    }
+
+    if (action === "record_installment") {
+      if (!["DISBURSED", "ACTIVE"].includes(facility.onboardingPhase || "")) {
+        return NextResponse.json(
+          { error: "Installments can be recorded only after disbursement" },
+          { status: 400 }
+        );
+      }
+      if (!facility.disbursedAt) {
+        return NextResponse.json({ error: "Disbursement date is missing" }, { status: 400 });
+      }
+
+      const schedule = buildRepaymentSchedule({
+        disbursedAt: facility.disbursedAt,
+        termYears: facility.termYears,
+        repaymentFrequency: facility.repaymentFrequency,
+        principalUsd: facility.requestedAmountUsd,
+        installmentUsd: facility.installmentUsd,
+        payments: facility.installmentPayments,
+      });
+      const next = schedule.find((row) => row.status !== "PAID");
+      if (!next) {
+        return NextResponse.json({ error: "All installments are already recorded" }, { status: 400 });
+      }
+
+      const paidAt = new Date();
+      const payments = [
+        ...parseInstallmentPayments(facility.installmentPayments),
+        { installment: next.installment, paidAt: paidAt.toISOString(), amountUsd: next.amountUsd },
+      ];
+
+      const updated = await prisma.capitalAccessRequest.update({
+        where: { id },
+        data: {
+          installmentPayments: payments,
+          onboardingPhase: "ACTIVE",
+        },
+      });
 
       return NextResponse.json({ facility: updated });
     }

@@ -12,6 +12,7 @@ import {
   REQUIRED_DOCUMENT_TYPES,
 } from "@/lib/capital-access-onboarding";
 import { Building2, ChevronDown, ChevronUp, FileText } from "lucide-react";
+import { buildRepaymentSchedule, installmentOrdinal, nextUnpaidInstallment } from "@/lib/repayment-schedule";
 
 interface Application {
   id: string;
@@ -22,6 +23,9 @@ interface Application {
   interestRatePct: number;
   termYears: number;
   repaymentFrequency: string;
+  installmentUsd: number;
+  disbursedAt?: string | null;
+  installmentPayments?: unknown;
   securityDepositUsd: number;
   investmentAreas: string;
   status: string;
@@ -266,6 +270,23 @@ export default function AdminCapitalAccessPage() {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ action: confirmDeposit ? "confirm_deposit" : "advance" }),
+    });
+    const json = await res.json();
+    setSaving(false);
+    if (!res.ok) {
+      setError(json.error || t("admin.capitalAccess.error"));
+      return;
+    }
+    loadData();
+  };
+
+  const recordInstallment = async (id: string) => {
+    setSaving(true);
+    setError("");
+    const res = await fetch(`/api/admin/capital-access/${id}/onboarding`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ action: "record_installment" }),
     });
     const json = await res.json();
     setSaving(false);
@@ -704,6 +725,44 @@ export default function AdminCapitalAccessPage() {
                           </p>
                         </div>
                       )}
+
+                    {disbursedOrActive && app.disbursedAt && (
+                      <div className="mb-3 p-3 bg-white border border-charcoal/10 rounded-sm text-sm font-body">
+                        {(() => {
+                          const schedule = buildRepaymentSchedule({
+                            disbursedAt: app.disbursedAt,
+                            termYears: app.termYears,
+                            repaymentFrequency: app.repaymentFrequency,
+                            principalUsd: app.requestedAmountUsd,
+                            installmentUsd: app.installmentUsd,
+                            payments: app.installmentPayments,
+                          });
+                          const next = nextUnpaidInstallment(schedule);
+                          return (
+                            <>
+                              <p className="text-xs uppercase tracking-wide text-charcoal/40 mb-2">
+                                {t("capitalAccess.statement.scheduleTitle")}
+                              </p>
+                              <p className="text-charcoal/70 mb-3">
+                                {schedule.filter((row) => row.status === "PAID").length} / {schedule.length}{" "}
+                                {t("capitalAccess.statement.paidCount").toLowerCase()}
+                              </p>
+                              {next ? (
+                                <button
+                                  onClick={() => recordInstallment(app.id)}
+                                  disabled={saving}
+                                  className="px-4 py-2 bg-gold text-charcoal font-body text-sm rounded-sm disabled:opacity-50"
+                                >
+                                  {t("admin.capitalAccess.recordInstallment")} · {installmentOrdinal(next.installment)}
+                                </button>
+                              ) : (
+                                <p className="text-green-700">{t("admin.capitalAccess.allInstallmentsRecorded")}</p>
+                              )}
+                            </>
+                          );
+                        })()}
+                      </div>
+                    )}
 
                     {awaitingBank && !bankReady && (
                       <p className="font-body text-sm text-amber-700 mb-2">

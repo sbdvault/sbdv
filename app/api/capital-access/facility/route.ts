@@ -85,6 +85,7 @@ export async function GET() {
         disburseBeneficiary: f.disburseBeneficiary,
         disburseBeneficiaryAddress: f.disburseBeneficiaryAddress,
         bankDetailsSubmittedAt: f.bankDetailsSubmittedAt,
+        installmentPayments: f.installmentPayments,
         bankDetailsComplete: hasDisburseBankDetails(f),
         poolLabel: getPoolTeaser(f.pool.country, f.pool.category).label,
         escrow: getEscrowInstructions(f.id, f.companyName, f),
