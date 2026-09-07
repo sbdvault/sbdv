@@ -1,18 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import { signIn } from "next-auth/react";
-import { useRouter, useParams } from "next/navigation";
+import { useParams } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useTranslations } from "@/hooks/useTranslations";
 import Logo from "@/components/Logo";
-import { Building2, AlertCircle } from "lucide-react";
+import { Building2, AlertCircle, CheckCircle2 } from "lucide-react";
 
 export default function CapitalAccessRegisterPage() {
   const { t, locale } = useTranslations();
   const params = useParams();
-  const router = useRouter();
+  const [createdEmail, setCreatedEmail] = useState<string | null>(null);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -45,21 +44,8 @@ export default function CapitalAccessRegisterPage() {
       return;
     }
 
-    const signInRes = await signIn("credentials", {
-      email: form.email,
-      password: form.password,
-      redirect: false,
-    });
-
+    setCreatedEmail(form.email.trim());
     setLoading(false);
-
-    if (signInRes?.error) {
-      router.push(getLocalizedHref("/login"));
-      return;
-    }
-
-    router.push(getLocalizedHref("/capital-access/portal"));
-    router.refresh();
   };
 
   return (
@@ -74,15 +60,40 @@ export default function CapitalAccessRegisterPage() {
             <Logo height={100} className="mx-auto" />
           </Link>
           <div className="flex items-center justify-center gap-2 mb-2">
-            <Building2 className="w-5 h-5 text-gold" />
+            {createdEmail ? (
+              <CheckCircle2 className="w-5 h-5 text-gold" />
+            ) : (
+              <Building2 className="w-5 h-5 text-gold" />
+            )}
             <h1 className="text-2xl font-heading font-semibold text-charcoal">
-              {t("capitalAccess.register.title")}
+              {createdEmail
+                ? t("capitalAccess.register.welcomeTitle")
+                : t("capitalAccess.register.title")}
             </h1>
           </div>
-          <p className="text-charcoal/70 font-body text-sm">{t("capitalAccess.register.subtitle")}</p>
+          <p className="text-charcoal/70 font-body text-sm">
+            {createdEmail
+              ? t("capitalAccess.register.welcomeBody")
+              : t("capitalAccess.register.subtitle")}
+          </p>
         </div>
 
         <div className="bg-white border-2 border-gold/30 rounded-lg p-8 shadow-lg">
+          {createdEmail ? (
+            <div className="text-center">
+              <p className="font-body text-sm text-charcoal/50 uppercase tracking-wide">
+                {t("capitalAccess.register.welcomeEmail")}
+              </p>
+              <p className="font-body font-medium text-charcoal mt-1 mb-8">{createdEmail}</p>
+              <Link
+                href={getLocalizedHref("/login")}
+                className="inline-block w-full py-3 bg-gold text-charcoal font-body font-medium rounded-sm hover:bg-gold/90"
+              >
+                {t("capitalAccess.register.goToLogin")}
+              </Link>
+            </div>
+          ) : (
+            <>
           {error && (
             <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center gap-3">
               <AlertCircle className="w-5 h-5 text-red-600 shrink-0" />
@@ -129,6 +140,8 @@ export default function CapitalAccessRegisterPage() {
               {t("login.signIn")}
             </Link>
           </p>
+            </>
+          )}
         </div>
       </motion.div>
     </section>

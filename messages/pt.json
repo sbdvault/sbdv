@@ -837,7 +837,11 @@
       "phone": "Phone (optional)",
       "submit": "Create Partner Account",
       "hasAccount": "Already registered?",
-      "error": "Registration failed. Please try again."
+      "error": "Registration failed. Please try again.",
+      "welcomeTitle": "Account created successfully",
+      "welcomeBody": "Your Capital Access account is ready. Sign in with the email and password you just created.",
+      "welcomeEmail": "Email",
+      "goToLogin": "Go to login"
     },
     "request": {
       "title": "Capital Request",
