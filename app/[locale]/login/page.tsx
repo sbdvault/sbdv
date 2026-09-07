@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { signIn } from "next-auth/react";
+import { useEffect, useState } from "react";
+import { getCsrfToken, signIn } from "next-auth/react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -24,46 +24,66 @@ export default function LoginPage() {
     return `/${currentLocale}${href}`;
   };
 
+  useEffect(() => {
+    getCsrfToken().catch(() => undefined);
+  }, []);
+
+  const readDestination = async (signedInEmail: string) => {
+    for (let attempt = 0; attempt < 4; attempt += 1) {
+      const sessionRes = await fetch("/api/auth/destination", {
+        method: "POST",
+        cache: "no-store",
+        headers: { "Cache-Control": "no-cache" },
+      });
+      const session = await sessionRes.json();
+      const sessionEmail = typeof session?.email === "string" ? session.email.toLowerCase() : "";
+      if (session?.role && sessionEmail === signedInEmail) return session;
+      await new Promise((resolve) => setTimeout(resolve, 200 * (attempt + 1)));
+    }
+    return null;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError("");
 
-    const result = await signIn("credentials", {
+    const credentials = {
       email: email.trim().toLowerCase(),
       password,
       mfaCode: showMfa ? mfaCode : undefined,
-      redirect: false,
-    });
+      redirect: false as const,
+    };
 
-    setLoading(false);
+    let result = await signIn("credentials", credentials);
+    if (result?.error && result.error !== "MFA_REQUIRED" && result.error !== "MFA_INVALID") {
+      await getCsrfToken().catch(() => undefined);
+      result = await signIn("credentials", credentials);
+    }
 
     if (result?.error === "MFA_REQUIRED" || result?.code === "MFA_REQUIRED") {
+      setLoading(false);
       setShowMfa(true);
       setError(t("login.mfaRequired"));
       return;
     }
 
     if (result?.error === "MFA_INVALID" || result?.code === "MFA_INVALID") {
+      setLoading(false);
       setError(t("login.mfaInvalid"));
       return;
     }
 
     if (result?.error) {
+      setLoading(false);
       setError(t("login.invalidCredentials"));
       return;
     }
 
     const signedInEmail = email.trim().toLowerCase();
-    const sessionRes = await fetch("/api/auth/destination", {
-      method: "POST",
-      cache: "no-store",
-      headers: { "Cache-Control": "no-cache" },
-    });
-    const session = await sessionRes.json();
-    const sessionEmail = typeof session?.email === "string" ? session.email.toLowerCase() : "";
-    if (!session?.role || sessionEmail !== signedInEmail) {
-      // Usually AUTH_URL / cookie host mismatch, or a cached session for another user.
+    const session = await readDestination(signedInEmail);
+    if (!session?.role) {
+      setLoading(false);
       setError(t("login.invalidCredentials"));
       return;
     }
