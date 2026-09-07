@@ -3,11 +3,21 @@ import path from "path";
 import { PrismaClient } from "@prisma/client";
 
 /**
- * Layero's runtime reports debian-openssl-1.1.x but does not ship libssl.so.1.1.
- * Pin the OpenSSL 3 query-engine binary before Prisma resolves the engine path.
+ * Layero has neither libssl.so.1.1 nor libssl.so.3. Pin the OpenSSL 3 query
+ * engine and load the bundled libraries in prisma/engines before it starts.
  */
 function pinOpenSsl3QueryEngine() {
   if (process.platform !== "linux") return;
+
+  const libDir = path.join(process.cwd(), "prisma", "engines");
+  if (
+    fs.existsSync(path.join(libDir, "libssl.so.3")) &&
+    fs.existsSync(path.join(libDir, "libcrypto.so.3"))
+  ) {
+    const current = process.env.LD_LIBRARY_PATH;
+    process.env.LD_LIBRARY_PATH = current ? `${libDir}:${current}` : libDir;
+  }
+
   if (process.env.PRISMA_QUERY_ENGINE_BINARY) return;
 
   const engineName = "query-engine-debian-openssl-3.0.x";
