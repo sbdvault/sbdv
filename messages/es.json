@@ -8,7 +8,16 @@
     "services": "Services",
     "membership": "Membership",
     "contact": "Contact",
-    "clientLogin": "Acceso Clientes"
+    "clientLogin": "Acceso Clientes",
+    "firm": "La Casa",
+    "signIn": "Acceder",
+    "privateClients": {
+      "label": "Clientes privados",
+      "vaultDesc": "Custodia y protección física",
+      "wealthDesc": "Cartera y mandato",
+      "servicesDesc": "Arrendamiento de cámara y visita",
+      "membershipDesc": "Solicitar acceso como cliente privado"
+    }
   },
   "hero": {
     "headline": "Seguridad Suiza. Patrimonio Global.",
@@ -61,8 +70,8 @@
   },
   "about": {
     "title": "About",
-    "heroTitle": "Where Trust Meets Technology",
-    "heroSubtitle": "A private Swiss institution safeguarding global wealth with uncompromising security and Swiss precision.",
+    "heroTitle": "La Casa",
+    "heroSubtitle": "Una casa suiza para el patrimonio privado y el capital empresarial cualificado.",
     "sectionTitle": "Acerca de SBDV",
     "sectionDescription": "Swiss Bullion Depository Vault (SBDV) es un bastión de seguridad y confidencialidad absolutas. Fundada en Suiza — el epicentro mundial de la confianza y la discreción — SBDV combina protección de vanguardia con precisión suiza atemporal. Nuestra misión: preservar lo que más importa — su patrimonio, su legado, su tranquilidad.",
     "missionTitle": "Our Mission",
@@ -73,7 +82,7 @@
     "aboutParagraph1": "Swiss Bullion Depository Vault (SBDV) stands as a bastion of absolute security and confidentiality. Founded in Switzerland — the global epicenter of trust and discretion — SBDV combines cutting-edge protection with timeless Swiss precision.",
     "aboutParagraph2": "Our mission is to preserve and secure what matters most: your wealth, your legacy, your peace of mind. We understand that true wealth protection requires more than just physical security—it demands absolute discretion, Swiss engineering excellence, and an unwavering commitment to integrity.",
     "aboutParagraph3": "Every aspect of our operation reflects Swiss values: precision in execution, discretion in all matters, and integrity in every interaction. We are not just a vault; we are a silent guardian, protecting what matters most to the world's most discerning clients.",
-    "valuesTitle": "Our Values",
+    "valuesTitle": "Principios",
     "values": {
       "discretion": {
         "title": "Discretion",
@@ -94,7 +103,31 @@
     },
     "locationTitle": "Global Presence, Swiss Foundation",
     "locationDescription": "Headquartered in Zurich, serving clients worldwide. Our Swiss foundation provides the bedrock of trust and precision, while our global reach ensures accessibility for our international clientele.",
-    "worldwideAccessibility": "Worldwide Accessibility"
+    "worldwideAccessibility": "Worldwide Accessibility",
+    "eyebrow": "Swiss Bullion Depository Vault",
+    "whoTitle": "Quiénes somos",
+    "whoText": "Swiss Bullion Depository Vault tiene su sede en Zúrich. Conservamos el patrimonio privado con discreción y organizamos facilidades de capital institucional para empresas cualificadas, tras revisión documentada, un depósito de garantía del 10% y un calendario de reembolso.",
+    "practices": {
+      "privateLabel": "Clientes privados",
+      "privateTitle": "Custodia y patrimonio",
+      "privateText": "Protección en cámara, supervisión de cartera y membresía para inversores privados, family offices y clientes soberanos.",
+      "capitalLabel": "Empresas",
+      "capitalTitle": "Capital Access",
+      "capitalText": "Una facilidad estructurada para una sociedad cualificada. La aprobación sigue a la documentación, un depósito de garantía del 10% en efectivo y un plan de reembolso confirmado."
+    },
+    "serveTitle": "A quién servimos",
+    "serve": {
+      "investors": "Inversores privados que exigen custodia y discreción.",
+      "offices": "Family offices y clientes soberanos con horizonte largo.",
+      "enterprises": "Empresas establecidas que buscan una facilidad de capital documentada."
+    },
+    "close": {
+      "membership": "Solicitar la membresía de cliente privado",
+      "capital": "Revisar Capital Access"
+    },
+    "identityNameLabel": "Nombre",
+    "identitySeatLabel": "Sede",
+    "identityName": "Swiss Bullion Depository Vault"
   },
   "vault": {
     "title": "Vault & Security",

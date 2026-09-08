@@ -1,38 +1,26 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Building2, Shield } from "lucide-react";
 import { useTranslations } from "@/hooks/useTranslations";
 
 export default function AboutHeroSection() {
   const { t } = useTranslations();
 
   return (
-    <section className="relative min-h-[60vh] flex items-center justify-center bg-gradient-to-b from-off-white to-white pt-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="relative flex min-h-[52vh] items-end bg-off-white pb-16 pt-28">
+      <div className="mx-auto w-full max-w-3xl px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="flex flex-col items-center gap-8"
+          transition={{ duration: 0.7 }}
         >
-          <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex items-center gap-4"
-          >
-            <div className="w-20 h-20 rounded-full bg-gold/10 flex items-center justify-center">
-              <Building2 className="w-10 h-10 text-gold" />
-            </div>
-            <div className="w-16 h-16 rounded-full bg-gold/10 flex items-center justify-center">
-              <Shield className="w-8 h-8 text-gold" />
-            </div>
-          </motion.div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-semibold text-charcoal tracking-tight">
+          <p className="mb-4 font-body text-xs uppercase tracking-[0.22em] text-gold">
+            {t("about.eyebrow")}
+          </p>
+          <h1 className="font-heading text-4xl font-semibold tracking-tight text-charcoal md:text-6xl">
             {t("about.heroTitle")}
           </h1>
-          <p className="text-xl md:text-2xl text-charcoal/70 font-body max-w-2xl">
+          <p className="mt-6 max-w-2xl font-body text-lg leading-relaxed text-charcoal/70 md:text-xl">
             {t("about.heroSubtitle")}
           </p>
         </motion.div>
@@ -40,4 +28,3 @@ export default function AboutHeroSection() {
     </section>
   );
 }
-

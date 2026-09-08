@@ -8,7 +8,16 @@
     "services": "Services",
     "membership": "Membership",
     "contact": "Contact",
-    "clientLogin": "客户登录"
+    "clientLogin": "客户登录",
+    "firm": "本所",
+    "signIn": "登录",
+    "privateClients": {
+      "label": "私人客户",
+      "vaultDesc": "保管与实体防护",
+      "wealthDesc": "组合与授权",
+      "servicesDesc": "金库租用与参观",
+      "membershipDesc": "申请私人客户准入"
+    }
   },
   "hero": {
     "headline": "瑞士安全。全球财富。",
@@ -61,8 +70,8 @@
   },
   "about": {
     "title": "About",
-    "heroTitle": "Where Trust Meets Technology",
-    "heroSubtitle": "A private Swiss institution safeguarding global wealth with uncompromising security and Swiss precision.",
+    "heroTitle": "本所",
+    "heroSubtitle": "服务于私人财富与合格企业资本的瑞士机构。",
     "sectionTitle": "关于 SBDV",
     "sectionDescription": "Swiss Bullion Depository Vault（SBDV）是绝对安全与保密的堡垒。创立于瑞士——全球信任与审慎的中心——SBDV 将尖端防护与永恒的瑞士精准融为一体。我们的使命：守护最重要的一切——您的财富、您的传承、您的安心。",
     "missionTitle": "Our Mission",
@@ -73,7 +82,7 @@
     "aboutParagraph1": "Swiss Bullion Depository Vault (SBDV) stands as a bastion of absolute security and confidentiality. Founded in Switzerland — the global epicenter of trust and discretion — SBDV combines cutting-edge protection with timeless Swiss precision.",
     "aboutParagraph2": "Our mission is to preserve and secure what matters most: your wealth, your legacy, your peace of mind. We understand that true wealth protection requires more than just physical security—it demands absolute discretion, Swiss engineering excellence, and an unwavering commitment to integrity.",
     "aboutParagraph3": "Every aspect of our operation reflects Swiss values: precision in execution, discretion in all matters, and integrity in every interaction. We are not just a vault; we are a silent guardian, protecting what matters most to the world's most discerning clients.",
-    "valuesTitle": "Our Values",
+    "valuesTitle": "原则",
     "values": {
       "discretion": {
         "title": "Discretion",
@@ -94,7 +103,31 @@
     },
     "locationTitle": "Global Presence, Swiss Foundation",
     "locationDescription": "Headquartered in Zurich, serving clients worldwide. Our Swiss foundation provides the bedrock of trust and precision, while our global reach ensures accessibility for our international clientele.",
-    "worldwideAccessibility": "Worldwide Accessibility"
+    "worldwideAccessibility": "Worldwide Accessibility",
+    "eyebrow": "Swiss Bullion Depository Vault",
+    "whoTitle": "我们是谁",
+    "whoText": "Swiss Bullion Depository Vault 设于苏黎世。我们以审慎保管私人财富，并为合格企业安排机构资本安排，须经文件审查、10% 保证金及还款计划。",
+    "practices": {
+      "privateLabel": "私人客户",
+      "privateTitle": "保管与财富",
+      "privateText": "为私人投资者、家族办公室与主权客户提供金库防护、组合监督与会籍。",
+      "capitalLabel": "企业",
+      "capitalTitle": "Capital Access",
+      "capitalText": "面向合格公司的结构化安排。核准取决于文件、作为现金抵押的 10% 保证金，以及经确认的还款计划。"
+    },
+    "serveTitle": "我们服务的对象",
+    "serve": {
+      "investors": "需要保管与审慎的私人投资者。",
+      "offices": "着眼长期的家族办公室与主权客户。",
+      "enterprises": "寻求有文件记录的资本安排的成熟企业。"
+    },
+    "close": {
+      "membership": "申请私人客户会籍",
+      "capital": "了解 Capital Access"
+    },
+    "identityNameLabel": "名称",
+    "identitySeatLabel": "所在地",
+    "identityName": "Swiss Bullion Depository Vault"
   },
   "vault": {
     "title": "Vault & Security",

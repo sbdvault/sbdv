@@ -1,30 +1,33 @@
 "use client";
 
-import { motion } from "framer-motion";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 import { useTranslations } from "@/hooks/useTranslations";
 
 export default function AboutSection() {
-  const { t } = useTranslations();
+  const { t, locale } = useTranslations();
+  const params = useParams();
+  const currentLocale = (params?.locale as string) || locale || "en";
 
   return (
-    <section className="py-20 md:py-32 bg-off-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center"
+    <section className="bg-off-white py-20 md:py-28">
+      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <p className="font-body text-xs uppercase tracking-[0.22em] text-gold">
+          {t("about.eyebrow")}
+        </p>
+        <h2 className="mt-4 font-heading text-4xl font-semibold text-charcoal">
+          {t("about.heroTitle")}
+        </h2>
+        <p className="mt-6 font-body text-lg leading-relaxed text-charcoal/75">
+          {t("about.whoText")}
+        </p>
+        <Link
+          href={`/${currentLocale}/about`}
+          className="mt-8 inline-block border-b border-gold pb-0.5 font-body text-sm text-charcoal hover:text-gold"
         >
-          <h2 className="text-4xl md:text-5xl font-heading font-semibold text-charcoal mb-8">
-            {t("about.sectionTitle")}
-          </h2>
-          <p className="text-lg md:text-xl text-charcoal/80 font-body leading-relaxed">
-            {t("about.sectionDescription")}
-          </p>
-        </motion.div>
+          {t("nav.firm")}
+        </Link>
       </div>
     </section>
   );
 }
-

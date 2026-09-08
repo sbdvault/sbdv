@@ -8,7 +8,16 @@
     "services": "Services",
     "membership": "Membership",
     "contact": "Contact",
-    "clientLogin": "دخول العملاء"
+    "clientLogin": "دخول العملاء",
+    "firm": "الدار",
+    "signIn": "تسجيل الدخول",
+    "privateClients": {
+      "label": "العملاء الخاصون",
+      "vaultDesc": "الحفظ والحماية المادية",
+      "wealthDesc": "المحفظة والتفويض",
+      "servicesDesc": "تأجير الخزينة والزيارة",
+      "membershipDesc": "طلب وصول العميل الخاص"
+    }
   },
   "hero": {
     "headline": "أمان سويسري. ثروة عالمية.",
@@ -61,8 +70,8 @@
   },
   "about": {
     "title": "About",
-    "heroTitle": "Where Trust Meets Technology",
-    "heroSubtitle": "A private Swiss institution safeguarding global wealth with uncompromising security and Swiss precision.",
+    "heroTitle": "الدار",
+    "heroSubtitle": "دار سويسرية للثروة الخاصة ورأس مال المؤسسات المؤهلة.",
     "sectionTitle": "عن SBDV",
     "sectionDescription": "تُعد Swiss Bullion Depository Vault (SBDV) حصنًا للأمان والسرية المطلقة. تأسست في سويسرا — المركز العالمي للثقة والتحفظ — وتجمع SBDV بين الحماية المتقدمة والدقة السويسرية الخالدة. مهمتنا: حفظ ما يهم أكثر — ثروتك وإرثك وراحة بالك.",
     "missionTitle": "Our Mission",
@@ -73,7 +82,7 @@
     "aboutParagraph1": "Swiss Bullion Depository Vault (SBDV) stands as a bastion of absolute security and confidentiality. Founded in Switzerland — the global epicenter of trust and discretion — SBDV combines cutting-edge protection with timeless Swiss precision.",
     "aboutParagraph2": "Our mission is to preserve and secure what matters most: your wealth, your legacy, your peace of mind. We understand that true wealth protection requires more than just physical security—it demands absolute discretion, Swiss engineering excellence, and an unwavering commitment to integrity.",
     "aboutParagraph3": "Every aspect of our operation reflects Swiss values: precision in execution, discretion in all matters, and integrity in every interaction. We are not just a vault; we are a silent guardian, protecting what matters most to the world's most discerning clients.",
-    "valuesTitle": "Our Values",
+    "valuesTitle": "المبادئ",
     "values": {
       "discretion": {
         "title": "Discretion",
@@ -94,7 +103,31 @@
     },
     "locationTitle": "Global Presence, Swiss Foundation",
     "locationDescription": "Headquartered in Zurich, serving clients worldwide. Our Swiss foundation provides the bedrock of trust and precision, while our global reach ensures accessibility for our international clientele.",
-    "worldwideAccessibility": "Worldwide Accessibility"
+    "worldwideAccessibility": "Worldwide Accessibility",
+    "eyebrow": "Swiss Bullion Depository Vault",
+    "whoTitle": "من نحن",
+    "whoText": "يقع مقر Swiss Bullion Depository Vault في زيورخ. نحفظ الثروة الخاصة بتحفظ، ونرتب تسهيلات رأس مال مؤسسية للمؤسسات المؤهلة بعد مراجعة موثقة، ووديعة ضمان بنسبة 10%، وجدول سداد.",
+    "practices": {
+      "privateLabel": "العملاء الخاصون",
+      "privateTitle": "الحفظ والثروة",
+      "privateText": "حماية الخزينة، والإشراف على المحفظة، والعضوية للمستثمرين الخاصين ومكاتب العائلات والعملاء السياديين.",
+      "capitalLabel": "المؤسسات",
+      "capitalTitle": "Capital Access",
+      "capitalText": "تسهيل منظم لشركة مؤهلة. تأتي الموافقة بعد الوثائق، ووديعة ضمان بنسبة 10% كضمان نقدي، وخطة سداد مؤكدة."
+    },
+    "serveTitle": "من نخدم",
+    "serve": {
+      "investors": "مستثمرون خاصون يطلبون الحفظ والتحفظ.",
+      "offices": "مكاتب عائلات وعملاء سياديون بأفق طويل.",
+      "enterprises": "شركات راسخة تطلب تسهيل رأس مال موثق."
+    },
+    "close": {
+      "membership": "طلب عضوية العميل الخاص",
+      "capital": "مراجعة Capital Access"
+    },
+    "identityNameLabel": "الاسم",
+    "identitySeatLabel": "المقر",
+    "identityName": "Swiss Bullion Depository Vault"
   },
   "vault": {
     "title": "Vault & Security",

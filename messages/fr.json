@@ -8,7 +8,16 @@
     "contact": "Contact",
     "wealth": "Patrimoine & Investissement",
     "clientLogin": "Connexion Client",
-    "capitalAccess": "Capital Access"
+    "capitalAccess": "Capital Access",
+    "firm": "La Maison",
+    "signIn": "Connexion",
+    "privateClients": {
+      "label": "Clients privés",
+      "vaultDesc": "Conservation et protection physique",
+      "wealthDesc": "Portefeuille et mandat",
+      "servicesDesc": "Location de coffre et visite",
+      "membershipDesc": "Demander l'accès client privé"
+    }
   },
   "hero": {
     "headline": "Sécurité Suisse. Patrimoine Mondial.",
@@ -61,8 +70,8 @@
   },
   "about": {
     "title": "À Propos",
-    "heroTitle": "Où la Confiance Rencontre la Technologie",
-    "heroSubtitle": "Une institution privée suisse protégeant la richesse mondiale avec une sécurité sans compromis et une précision suisse.",
+    "heroTitle": "La Maison",
+    "heroSubtitle": "Une maison suisse pour le patrimoine privé et le capital d'entreprise qualifié.",
     "sectionTitle": "À propos de SBDV",
     "sectionDescription": "Swiss Bullion Depository Vault (SBDV) incarne la sécurité et la confidentialité absolues. Fondée en Suisse — épicentre mondial de la confiance et de la discrétion — SBDV allie protection de pointe et précision suisse intemporelle. Notre mission : préserver ce qui compte le plus — votre patrimoine, votre héritage, votre tranquillité.",
     "missionTitle": "Notre Mission",
@@ -73,7 +82,7 @@
     "aboutParagraph1": "Swiss Bullion Depository Vault (SBDV) se dresse comme un bastion de sécurité absolue et de confidentialité. Fondé en Suisse — l'épicentre mondial de la confiance et de la discrétion — SBDV combine une protection de pointe avec une précision suisse intemporelle.",
     "aboutParagraph2": "Notre mission est de préserver et de sécuriser ce qui compte le plus : votre richesse, votre héritage, votre tranquillité d'esprit. Nous comprenons que la véritable protection de la richesse exige plus qu'une simple sécurité physique—elle exige une discrétion absolue, l'excellence de l'ingénierie suisse et un engagement inébranlable envers l'intégrité.",
     "aboutParagraph3": "Chaque aspect de notre fonctionnement reflète les valeurs suisses : précision dans l'exécution, discrétion en toutes choses, et intégrité dans chaque interaction. Nous ne sommes pas seulement un coffre ; nous sommes un gardien silencieux, protégeant ce qui compte le plus pour les clients les plus exigeants au monde.",
-    "valuesTitle": "Nos Valeurs",
+    "valuesTitle": "Principes",
     "values": {
       "discretion": {
         "title": "Discrétion",
@@ -94,7 +103,31 @@
     },
     "locationTitle": "Présence Mondiale, Fondation Suisse",
     "locationDescription": "Basé à Zurich, servant des clients dans le monde entier. Notre fondation suisse fournit le socle de confiance et de précision, tandis que notre portée mondiale assure l'accessibilité pour notre clientèle internationale.",
-    "worldwideAccessibility": "Accessibilité Mondiale"
+    "worldwideAccessibility": "Accessibilité Mondiale",
+    "eyebrow": "Swiss Bullion Depository Vault",
+    "whoTitle": "Qui nous sommes",
+    "whoText": "Swiss Bullion Depository Vault a son siège à Zurich. Nous conservons le patrimoine privé avec discrétion et arrangeons des facilités de capital institutionnel pour des entreprises qualifiées, après examen documenté, un dépôt de garantie de 10 % et un échéancier de remboursement.",
+    "practices": {
+      "privateLabel": "Clients privés",
+      "privateTitle": "Conservation et patrimoine",
+      "privateText": "Protection en coffre, suivi de portefeuille et adhésion pour investisseurs privés, family offices et clients souverains.",
+      "capitalLabel": "Entreprises",
+      "capitalTitle": "Capital Access",
+      "capitalText": "Une facilité structurée pour une société qualifiée. L'approbation suit la documentation, un dépôt de garantie de 10 % détenu en numéraire et un plan de remboursement confirmé."
+    },
+    "serveTitle": "Qui nous servons",
+    "serve": {
+      "investors": "Investisseurs privés qui exigent conservation et discrétion.",
+      "offices": "Family offices et clients souverains à horizon long.",
+      "enterprises": "Sociétés établies en quête d'une facilité de capital documentée."
+    },
+    "close": {
+      "membership": "Demander l'adhésion client privé",
+      "capital": "Consulter Capital Access"
+    },
+    "identityNameLabel": "Nom",
+    "identitySeatLabel": "Siège",
+    "identityName": "Swiss Bullion Depository Vault"
   },
   "vault": {
     "title": "Coffre & Sécurité",

@@ -8,7 +8,16 @@
     "contact": "Contact",
     "wealth": "Vermogen & Beleggen",
     "clientLogin": "Klant Login",
-    "capitalAccess": "Capital Access"
+    "capitalAccess": "Capital Access",
+    "firm": "Het Huis",
+    "signIn": "Aanmelden",
+    "privateClients": {
+      "label": "Particuliere cliënten",
+      "vaultDesc": "Bewaring en fysieke bescherming",
+      "wealthDesc": "Portefeuille en mandaat",
+      "servicesDesc": "Kluisverhuur en bezichtiging",
+      "membershipDesc": "Toegang als particuliere cliënt aanvragen"
+    }
   },
   "hero": {
     "headline": "Zwitserse Veiligheid. Wereldwijd Vermogen.",
@@ -61,8 +70,8 @@
   },
   "about": {
     "title": "Over Ons",
-    "heroTitle": "Waar Vertrouwen Technologie Ontmoet",
-    "heroSubtitle": "Een particuliere Zwitserse instelling die wereldwijd vermogen beschermt met onvoorwaardelijke beveiliging en Zwitserse precisie.",
+    "heroTitle": "Het Huis",
+    "heroSubtitle": "Een Zwitsers huis voor particulier vermogen en gekwalificeerd ondernemingskapitaal.",
     "sectionTitle": "Over SBDV",
     "sectionDescription": "Swiss Bullion Depository Vault (SBDV) staat voor absolute veiligheid en vertrouwelijkheid. Opgericht in Zwitserland — het wereldwijde centrum van vertrouwen en discretie — combineert SBDV geavanceerde bescherming met tijdloze Zwitserse precisie. Onze missie: behouden wat het belangrijkst is — uw vermogen, uw nalatenschap, uw gemoedsrust.",
     "missionTitle": "Onze Missie",
@@ -73,7 +82,7 @@
     "aboutParagraph1": "Swiss Bullion Depository Vault (SBDV) staat als een bastion van absolute beveiliging en vertrouwelijkheid. Opgericht in Zwitserland — het wereldwijde epicentrum van vertrouwen en discretie — combineert SBDV geavanceerde bescherming met tijdloze Zwitserse precisie.",
     "aboutParagraph2": "Onze missie is om te bewaren en te beveiligen wat het belangrijkst is: uw vermogen, uw nalatenschap, uw gemoedsrust. We begrijpen dat echte vermogensbescherming meer vereist dan alleen fysieke beveiliging—het vereist absolute discretie, Zwitserse technische excellentie en een onwrikbare toewijding aan integriteit.",
     "aboutParagraph3": "Elk aspect van onze operatie weerspiegelt Zwitserse waarden: precisie in uitvoering, discretie in alle zaken, en integriteit in elke interactie. We zijn niet alleen een kluis; we zijn een stille bewaker, die beschermt wat het belangrijkst is voor 's werelds meest veeleisende cliënten.",
-    "valuesTitle": "Onze Waarden",
+    "valuesTitle": "Beginselen",
     "values": {
       "discretion": {
         "title": "Discretie",
@@ -94,7 +103,31 @@
     },
     "locationTitle": "Wereldwijde Aanwezigheid, Zwitserse Basis",
     "locationDescription": "Gevestigd in Zürich, wereldwijd cliënten bedienend. Onze Zwitserse basis biedt het fundament van vertrouwen en precisie, terwijl ons wereldwijde bereik toegankelijkheid voor onze internationale cliënten garandeert.",
-    "worldwideAccessibility": "Wereldwijde Toegankelijkheid"
+    "worldwideAccessibility": "Wereldwijde Toegankelijkheid",
+    "eyebrow": "Swiss Bullion Depository Vault",
+    "whoTitle": "Wie wij zijn",
+    "whoText": "Swiss Bullion Depository Vault is gezeteld in Zürich. Wij bewaren particulier vermogen met discretie en regelen institutionele kapitaalfaciliteiten voor gekwalificeerde ondernemingen, na gedocumenteerde beoordeling, een zekerheidsstelling van 10% en een aflossingsschema.",
+    "practices": {
+      "privateLabel": "Particuliere cliënten",
+      "privateTitle": "Bewaring en vermogen",
+      "privateText": "Kluisbescherming, portefeuilletoezicht en lidmaatschap voor particuliere beleggers, family offices en soevereine cliënten.",
+      "capitalLabel": "Ondernemingen",
+      "capitalTitle": "Capital Access",
+      "capitalText": "Een gestructureerde faciliteit voor een gekwalificeerde onderneming. Goedkeuring volgt documentatie, een zekerheidsstelling van 10% als contante zekerheid en een bevestigd aflossingsplan."
+    },
+    "serveTitle": "Wie wij dienen",
+    "serve": {
+      "investors": "Particuliere beleggers die bewaring en discretie verlangen.",
+      "offices": "Family offices en soevereine cliënten met een lange horizon.",
+      "enterprises": "Gevestigde ondernemingen die een gedocumenteerde kapitaalfaciliteit zoeken."
+    },
+    "close": {
+      "membership": "Lidmaatschap als particuliere cliënt aanvragen",
+      "capital": "Capital Access bekijken"
+    },
+    "identityNameLabel": "Naam",
+    "identitySeatLabel": "Zetel",
+    "identityName": "Swiss Bullion Depository Vault"
   },
   "vault": {
     "title": "Kluis & Beveiliging",

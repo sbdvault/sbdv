@@ -2,13 +2,22 @@
   "nav": {
     "home": "Home",
     "about": "About",
+    "firm": "The Firm",
     "vault": "Vault & Security",
     "wealth": "Wealth & Investment",
     "capitalAccess": "Capital Access",
     "services": "Services",
     "membership": "Membership",
     "contact": "Contact",
-    "clientLogin": "Client Login"
+    "clientLogin": "Client Login",
+    "signIn": "Sign in",
+    "privateClients": {
+      "label": "Private Clients",
+      "vaultDesc": "Custody and physical protection",
+      "wealthDesc": "Portfolio and mandate",
+      "servicesDesc": "Vault leasing and viewing",
+      "membershipDesc": "Apply for private-client access"
+    }
   },
   "hero": {
     "headline": "Swiss Security. Global Wealth.",
@@ -61,10 +70,16 @@
   },
   "about": {
     "title": "About",
-    "heroTitle": "Where Trust Meets Technology",
-    "heroSubtitle": "A private Swiss institution safeguarding global wealth with uncompromising security and Swiss precision.",
+    "eyebrow": "Swiss Bullion Depository Vault",
+    "heroTitle": "The Firm",
+    "heroSubtitle": "A Swiss institution for private wealth and qualified enterprise capital.",
+    "identityName": "Swiss Bullion Depository Vault",
+    "identityNameLabel": "Name",
+    "identitySeatLabel": "Seat",
+    "whoTitle": "Who we are",
+    "whoText": "Swiss Bullion Depository Vault is seated in Zurich. We keep private wealth in custody with discretion, and we arrange institutional capital facilities for qualified enterprises under documented review, a 10% security deposit, and a repayment schedule.",
     "sectionTitle": "About SBDV",
-    "sectionDescription": "Swiss Bullion Depository Vault (SBDV) stands as a bastion of absolute security and confidentiality. Founded in Switzerland — the global epicenter of trust and discretion — SBDV combines cutting-edge protection with timeless Swiss precision. Our mission is to preserve and secure what matters most: your wealth, your legacy, your peace of mind.",
+    "sectionDescription": "Seated in Zurich, SBDV keeps private wealth in custody and arranges documented capital facilities for qualified enterprises.",
     "missionTitle": "Our Mission",
     "missionText": "To preserve wealth and trust with Swiss precision, discretion, and integrity. We are committed to safeguarding not just assets, but the trust and peace of mind that comes with knowing your wealth is protected by the highest standards of Swiss excellence.",
     "visionTitle": "Our Vision",
@@ -73,7 +88,7 @@
     "aboutParagraph1": "Swiss Bullion Depository Vault (SBDV) stands as a bastion of absolute security and confidentiality. Founded in Switzerland — the global epicenter of trust and discretion — SBDV combines cutting-edge protection with timeless Swiss precision.",
     "aboutParagraph2": "Our mission is to preserve and secure what matters most: your wealth, your legacy, your peace of mind. We understand that true wealth protection requires more than just physical security—it demands absolute discretion, Swiss engineering excellence, and an unwavering commitment to integrity.",
     "aboutParagraph3": "Every aspect of our operation reflects Swiss values: precision in execution, discretion in all matters, and integrity in every interaction. We are not just a vault; we are a silent guardian, protecting what matters most to the world's most discerning clients.",
-    "valuesTitle": "Our Values",
+    "valuesTitle": "Principles",
     "values": {
       "discretion": {
         "title": "Discretion",
@@ -91,6 +106,24 @@
         "title": "Integrity",
         "description": "Built on trust, proven by time. Our word is our bond, and our actions reflect our values."
       }
+    },
+    "practices": {
+      "privateLabel": "Private clients",
+      "privateTitle": "Custody and wealth",
+      "privateText": "Vault protection, portfolio oversight, and membership for private investors, family offices, and sovereign clients.",
+      "capitalLabel": "Enterprises",
+      "capitalTitle": "Capital Access",
+      "capitalText": "A structured facility for a qualified company. Approval follows documentation, a 10% security deposit held as cash collateral, and a confirmed repayment plan."
+    },
+    "serveTitle": "Who we serve",
+    "serve": {
+      "investors": "Private investors who require custody and discretion.",
+      "offices": "Family offices and sovereign clients with a long horizon.",
+      "enterprises": "Established companies seeking a documented capital facility."
+    },
+    "close": {
+      "membership": "Apply for private-client membership",
+      "capital": "Review Capital Access"
     },
     "locationTitle": "Global Presence, Swiss Foundation",
     "locationDescription": "Headquartered in Zurich, serving clients worldwide. Our Swiss foundation provides the bedrock of trust and precision, while our global reach ensures accessibility for our international clientele.",
