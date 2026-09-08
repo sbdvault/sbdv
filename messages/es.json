@@ -2,12 +2,12 @@
   "nav": {
     "home": "Home",
     "about": "About",
-    "vault": "Vault & Security",
+    "vault": "Cámara y seguridad",
     "wealth": "Patrimonio e Inversión",
     "capitalAccess": "Capital Access",
     "services": "Services",
-    "membership": "Membership",
-    "contact": "Contact",
+    "membership": "Membresía",
+    "contact": "Contacto",
     "clientLogin": "Acceso Clientes",
     "firm": "La Casa",
     "signIn": "Acceder",
@@ -22,7 +22,7 @@
   "hero": {
     "headline": "Seguridad Suiza. Patrimonio Global.",
     "subtext": "Custodia discreta y gestión de carteras para inversores privados, family offices y clientes soberanos.",
-    "requestAccess": "Request Access",
+    "requestAccess": "Solicitar acceso",
     "clientLogin": "Acceso Clientes",
     "investorRelations": "Investor Relations"
   },
@@ -101,8 +101,8 @@
         "description": "Built on trust, proven by time. Our word is our bond, and our actions reflect our values."
       }
     },
-    "locationTitle": "Global Presence, Swiss Foundation",
-    "locationDescription": "Headquartered in Zurich, serving clients worldwide. Our Swiss foundation provides the bedrock of trust and precision, while our global reach ensures accessibility for our international clientele.",
+    "locationTitle": "Presencia mundial, sede suiza",
+    "locationDescription": "Sede en Zúrich, al servicio de clientes en todo el mundo. La sede suiza es el fundamento de la confianza y la precisión.",
     "worldwideAccessibility": "Worldwide Accessibility",
     "eyebrow": "Swiss Bullion Depository Vault",
     "whoTitle": "Quiénes somos",
@@ -149,7 +149,7 @@
         "description": "Construida según los más altos estándares de precisión suiza."
       }
     },
-    "vaultPageTitle": "The Vault",
+    "vaultPageTitle": "La cámara",
     "vaultPageDescription": "Where absolute security meets timeless Swiss precision. A fortress designed to preserve what matters most.",
     "vaultPageFeatures": {
       "defense": {
@@ -208,7 +208,7 @@
   },
   "services": {
     "title": "Services",
-    "heroTitle": "Our Services",
+    "heroTitle": "Nuestros servicios",
     "heroSubtitle": "Comprehensive security solutions tailored to your needs.",
     "sectionTitle": "Servicios de seguridad",
     "services": {
@@ -312,7 +312,7 @@
   },
   "wealth": {
     "title": "Wealth & Investment",
-    "heroTitle": "Wealth & Investment",
+    "heroTitle": "Patrimonio e inversión",
     "heroSubtitle": "Swiss custody meets strategic portfolio management for global investors.",
     "pillarsTitle": "Our Wealth Philosophy",
     "pillarsSubtitle": "Three integrated pillars: Secure custody, strategic investment, and transparent reporting.",
@@ -345,7 +345,7 @@
   },
   "membership": {
     "title": "Membership",
-    "heroTitle": "Membership",
+    "heroTitle": "Membresía",
     "heroSubtitle": "Exclusive access to Swiss precision and security.",
     "tiersTitle": "Membership Tiers",
     "tiersSubtitle": "Three distinct tiers designed to meet the diverse needs of our global clientele.",
@@ -415,7 +415,7 @@
   },
   "contact": {
     "title": "Contact",
-    "heroTitle": "Contact & Private Inquiry",
+    "heroTitle": "Contacto y consulta privada",
     "heroSubtitle": "Get in touch with our team for confidential consultations.",
     "formSuccessTitle": "Your inquiry has been securely submitted.",
     "formSuccessText": "We have received your inquiry and will contact you shortly. All communications are handled with the utmost discretion and security.",
@@ -506,13 +506,13 @@
     }
   },
   "common": {
-    "loading": "Loading...",
-    "submit": "Submit",
-    "submitting": "Submitting...",
-    "cancel": "Cancel",
+    "loading": "Cargando…",
+    "submit": "Enviar",
+    "submitting": "Enviando…",
+    "cancel": "Cancelar",
     "success": "Success",
     "error": "Error",
-    "tryAgain": "Try Again",
+    "tryAgain": "Intentar de nuevo",
     "required": "Required",
     "optional": "Optional",
     "learnMore": "Learn More",
@@ -533,18 +533,18 @@
     "investorRelationsBody": "SBDV is committed to transparency with our clients and stakeholders. Annual reports, governance policies, and institutional disclosures will be published here as they become available. For institutional inquiries, please contact our investor relations team through the contact page."
   },
   "login": {
-    "title": "Client Login",
-    "subtitle": "Secure access to your portfolio and account documents.",
-    "email": "Email Address",
-    "password": "Password",
+    "title": "Acceso de cliente",
+    "subtitle": "Acceso seguro a su cartera y documentos.",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
     "mfaCode": "Authentication Code",
     "mfaHint": "Enter the 6-digit code from your authenticator app.",
-    "signIn": "Sign In",
-    "signingIn": "Signing In...",
-    "forgotPassword": "Forgot password?",
-    "noAccount": "Not a client yet?",
-    "applyMembership": "Apply for Membership",
-    "invalidCredentials": "Invalid email or password.",
+    "signIn": "Entrar",
+    "signingIn": "Entrando…",
+    "forgotPassword": "¿Olvidó su contraseña?",
+    "noAccount": "¿Aún no es cliente?",
+    "applyMembership": "Solicitar membresía",
+    "invalidCredentials": "Correo o contraseña incorrectos.",
     "mfaRequired": "Enter your authentication code to continue.",
     "mfaInvalid": "Invalid authentication code.",
     "error": "An error occurred. Please try again.",
@@ -795,8 +795,8 @@
       "badge": "Institutional Capital Program",
       "title": "Capital Access Program",
       "subtitle": "Connect your enterprise to sovereign-grade capital pools. Structured lending with transparent terms, mandate alignment, and Swiss oversight.",
-      "applyAccess": "Apply for Access",
-      "partnerLogin": "Partner Login"
+      "applyAccess": "Solicitar acceso",
+      "partnerLogin": "Acceso de socio"
     },
     "features": {
       "title": "Why Capital Access",
@@ -864,7 +864,7 @@
     "availableRange": "Available Range",
     "minTicket": "Minimum Ticket",
     "interestFrom": "Interest from",
-    "securityDeposit": "Security Deposit",
+    "securityDeposit": "Depósito de garantía",
     "viewAllPools": "View all pools",
     "requestFromPool": "Request from this pool",
     "startRequest": "Start Capital Request",
@@ -882,7 +882,7 @@
       "goToLogin": "Go to login"
     },
     "request": {
-      "title": "Capital Request",
+      "title": "Solicitud de capital",
       "subtitle": "Complete this guided application to request institutional capital for your enterprise.",
       "selectPool": "Select Capital Pool",
       "loanTerms": "Loan & Interest Terms",
@@ -911,9 +911,9 @@
       "review": "Review & Submit",
       "selectedPool": "Selected Pool",
       "termsAccept": "I accept the 10% security deposit requirement, institutional review process, and confirm all information provided is accurate.",
-      "back": "Back",
-      "continue": "Continue",
-      "submit": "Submit Application",
+      "back": "Atrás",
+      "continue": "Continuar",
+      "submit": "Enviar solicitud",
       "submitError": "Failed to submit application.",
       "submittedTitle": "Application Submitted",
       "submittedDesc": "Your capital access request is now under institutional review. A confirmation email has been sent to your registered address.",
@@ -922,7 +922,7 @@
       "termsAcceptAfter": ", the institutional review process, and I confirm that all information provided is accurate."
     },
     "applications": {
-      "title": "My Applications",
+      "title": "Mis solicitudes",
       "subtitle": "Track the status of your capital access requests.",
       "empty": "You have not submitted any capital requests yet.",
       "submitted": "Submitted",
@@ -934,7 +934,7 @@
       "docsUnderReview": "Your document package was submitted and is under review."
     },
     "onboarding": {
-      "title": "Facility Dashboard",
+      "title": "Panel de la facilidad",
       "subtitle": "Complete onboarding to activate your approved capital facility.",
       "noFacility": "No Active Facility",
       "noFacilityDesc": "Once your capital access application is approved, your facility dashboard will appear here.",
@@ -943,7 +943,7 @@
       "escrowTitle": "Security Deposit — Escrow Instructions",
       "escrowDesc": "Transfer exactly 10% of your approved facility amount to the escrow account below. Use the wire reference exactly as shown.",
       "escrowPending": "Escrow payment details are being prepared by our capital desk. They will appear here as soon as your application is fully approved.",
-      "bank": "Bank",
+      "bank": "Banco",
       "bankAddress": "Bank Address",
       "account": "Account Name",
       "accountNumber": "Account Number",
@@ -951,7 +951,7 @@
       "wireReference": "Wire / Transfer Reference",
       "amountDue": "Amount Due",
       "wireRefPlaceholder": "Enter your bank wire reference number",
-      "confirmDeposit": "Submit Payment Proof",
+      "confirmDeposit": "Enviar comprobante de pago",
       "depositSubmitted": "Payment proof submitted. Awaiting verification by our capital desk.",
       "depositPending": "Payment submitted — pending verification",
       "paymentSlipTitle": "Upload Payment Slip",
@@ -960,7 +960,7 @@
       "paymentSlipUploaded": "Payment slip on file",
       "slipRequiredFirst": "Upload your payment slip before submitting the wire reference.",
       "awaitingAdminConfirm": "Our team will verify your transfer and unlock the documentation stage.",
-      "documentsTitle": "Required Documentation",
+      "documentsTitle": "Documentos requeridos",
       "documentsDesc": "Upload all four documents within 14 business days of deposit confirmation.",
       "upload": "Upload",
       "docsCompleteNote": "All documents uploaded. Our team will review and advance your onboarding.",
@@ -999,7 +999,7 @@
       "deleteFailed": "Could not delete this file.",
       "revisionRequested": "Additional documents requested",
       "docsReadyToSubmit": "All five documents are uploaded. Submit the package for review.",
-      "submitDocuments": "Submit Documents",
+      "submitDocuments": "Enviar documentos",
       "submitDocsSuccess": "Documents submitted. Our team will review your package.",
       "submitDocsFailed": "Could not submit documents. Please try again.",
       "docsSubmittedNote": "Document package submitted — awaiting review.",
@@ -1037,23 +1037,23 @@
         "upcoming": "Upcoming",
         "submitted": "Submitted"
       },
-      "makePayment": "Make repayment",
+      "makePayment": "Realizar un reembolso",
       "makePaymentDesc": "Transfer the installment to the SBDV account below, upload the payment slip, then submit your wire reference. Amount due:",
       "submitRepayment": "Submit repayment",
       "repayFailed": "Could not submit this repayment. Please try again."
     },
     "facilityTerms": {
       "eyebrow": "Capital Access Program",
-      "pageTitle": "Facility Terms and Conditions",
+      "pageTitle": "Condiciones de la facilidad",
       "intro": "These terms govern your capital facility, including the 10% security deposit, interest, repayment, default, and Swiss governing law. Read them in full before you accept.",
       "versionLabel": "Document",
       "effectiveLabel": "Effective",
       "languageLabel": "Governing language",
       "governingNote": "English is the governing language of this instrument. A translation, if provided, is for convenience only.",
       "contents": "Contents",
-      "acceptBefore": "I have read and accept the",
-      "linkLabel": "Facility Terms and Conditions",
-      "acceptAfter": ", including the 10% security deposit, interest, repayment, default, and governing-law provisions, and I confirm that I am authorised to bind the borrower.",
+      "acceptBefore": "He leído y acepto las",
+      "linkLabel": "Condiciones de la facilidad",
+      "acceptAfter": ", incluido el depósito de garantía del 10 %, los intereses, el reembolso, el incumplimiento y la ley aplicable, y confirmo que estoy autorizado para obligar al prestatario.",
       "acceptedNote": "Facility Terms and Conditions accepted",
       "print": "Print or save",
       "backFacility": "Return to facility dashboard"
