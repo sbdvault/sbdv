@@ -27,7 +27,7 @@ import {
   buildRepaymentSchedule,
   parseInstallmentPayments,
 } from "@/lib/repayment-schedule";
-import { getAdminEmail } from "@/lib/email";
+import { getAdminEmail, sendNotifications } from "@/lib/email";
 import { NextResponse } from "next/server";
 
 export async function GET(
@@ -141,22 +141,22 @@ export async function PATCH(
       });
 
       const adminEmail = await getAdminEmail();
-      sendDocumentsSubmittedEmail(adminEmail, facility.companyName, facility.id).catch(
-        console.error
-      );
-      if (facility.user.email) {
-        sendDocumentsReceiptEmail(
-          facility.user.email,
-          facility.user.name,
-          facility.companyName
-        ).catch(console.error);
-        sendOnboardingPhaseEmail(
-          facility.user.email,
-          facility.user.name,
-          facility.companyName,
-          "DOCUMENTS_SUBMITTED"
-        ).catch(console.error);
-      }
+      await sendNotifications([
+        sendDocumentsSubmittedEmail(adminEmail, facility.companyName, facility.id),
+        facility.user.email &&
+          sendDocumentsReceiptEmail(
+            facility.user.email,
+            facility.user.name,
+            facility.companyName
+          ),
+        facility.user.email &&
+          sendOnboardingPhaseEmail(
+            facility.user.email,
+            facility.user.name,
+            facility.companyName,
+            "DOCUMENTS_SUBMITTED"
+          ),
+      ]);
 
       return NextResponse.json({ facility: updated });
     }
@@ -203,16 +203,15 @@ export async function PATCH(
       });
 
       const adminEmail = await getAdminEmail();
-      sendBankDetailsSubmittedEmail(adminEmail, facility.companyName, facility.id).catch(
-        console.error
-      );
-      if (facility.user.email) {
-        sendBankDetailsReceiptEmail(
-          facility.user.email,
-          facility.user.name,
-          facility.companyName
-        ).catch(console.error);
-      }
+      await sendNotifications([
+        sendBankDetailsSubmittedEmail(adminEmail, facility.companyName, facility.id),
+        facility.user.email &&
+          sendBankDetailsReceiptEmail(
+            facility.user.email,
+            facility.user.name,
+            facility.companyName
+          ),
+      ]);
 
       return NextResponse.json({
         facility: {
@@ -291,23 +290,24 @@ export async function PATCH(
       });
 
       const adminEmail = await getAdminEmail();
-      sendRepaymentSubmittedEmail(
-        adminEmail,
-        facility.companyName,
-        next.installment,
-        wireRef,
-        next.amountUsd
-      ).catch(console.error);
-      if (facility.user.email) {
-        sendRepaymentReceiptEmail(
-          facility.user.email,
-          facility.user.name,
+      await sendNotifications([
+        sendRepaymentSubmittedEmail(
+          adminEmail,
           facility.companyName,
           next.installment,
           wireRef,
           next.amountUsd
-        ).catch(console.error);
-      }
+        ),
+        facility.user.email &&
+          sendRepaymentReceiptEmail(
+            facility.user.email,
+            facility.user.name,
+            facility.companyName,
+            next.installment,
+            wireRef,
+            next.amountUsd
+          ),
+      ]);
 
       return NextResponse.json({ facility: updated });
     }
@@ -358,21 +358,22 @@ export async function PATCH(
     });
 
     const adminEmail = await getAdminEmail();
-    sendDepositSubmittedEmail(
-      adminEmail,
-      facility.companyName,
-      depositReference.trim(),
-      facility.securityDepositUsd
-    ).catch(console.error);
-    if (facility.user.email) {
-      sendDepositReceiptEmail(
-        facility.user.email,
-        facility.user.name,
+    await sendNotifications([
+      sendDepositSubmittedEmail(
+        adminEmail,
         facility.companyName,
         depositReference.trim(),
         facility.securityDepositUsd
-      ).catch(console.error);
-    }
+      ),
+      facility.user.email &&
+        sendDepositReceiptEmail(
+          facility.user.email,
+          facility.user.name,
+          facility.companyName,
+          depositReference.trim(),
+          facility.securityDepositUsd
+        ),
+    ]);
 
     return NextResponse.json({ facility: updated });
   } catch (err) {

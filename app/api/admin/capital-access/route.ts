@@ -8,7 +8,11 @@ import {
   validateEscrowInput,
 } from "@/lib/capital-access-onboarding";
 import { sendCapitalAccessDecisionEmail } from "@/lib/capital-access-emails";
-import { sendOnboardingPhaseEmail } from "@/lib/capital-access-onboarding-emails";
+import {
+  sendEscrowUpdatedEmail,
+  sendOnboardingPhaseEmail,
+} from "@/lib/capital-access-onboarding-emails";
+import { sendNotifications } from "@/lib/email";
 import { NextResponse } from "next/server";
 
 export async function GET() {
@@ -105,13 +109,15 @@ export async function PATCH(request: Request) {
       });
 
       if (updated.user.email) {
-        sendOnboardingPhaseEmail(
-          updated.user.email,
-          updated.user.name,
-          updated.companyName,
-          "DOCUMENTS_REVISION",
-          notes
-        ).catch(console.error);
+        await sendNotifications([
+          sendOnboardingPhaseEmail(
+            updated.user.email,
+            updated.user.name,
+            updated.companyName,
+            "DOCUMENTS_REVISION",
+            notes
+          ),
+        ]);
       }
 
       return NextResponse.json({
@@ -160,7 +166,18 @@ export async function PATCH(request: Request) {
           escrowPaymentRef:
             validated.data.escrowPaymentRef || `CAP-${String(id).slice(-8).toUpperCase()}`,
         },
+        include: { user: { select: { name: true, email: true } } },
       });
+
+      if (updated.user.email) {
+        await sendNotifications([
+          sendEscrowUpdatedEmail(
+            updated.user.email,
+            updated.user.name,
+            updated.companyName
+          ),
+        ]);
+      }
 
       return NextResponse.json({
         application: {
@@ -256,24 +273,24 @@ export async function PATCH(request: Request) {
     });
 
     if (updated.user.email && ["APPROVED", "REJECTED", "UNDER_REVIEW"].includes(status)) {
-      sendCapitalAccessDecisionEmail({
-        borrowerEmail: updated.user.email,
-        borrowerName: updated.user.name,
-        companyName: updated.companyName,
-        status: status as "APPROVED" | "REJECTED" | "UNDER_REVIEW",
-        requestedAmountUsd: updated.requestedAmountUsd,
-        securityDepositUsd: updated.securityDepositUsd,
-        applicationId: updated.id,
-      }).catch((err) => console.error("Decision email error:", err));
-
-      if (status === "APPROVED") {
-        sendOnboardingPhaseEmail(
-          updated.user.email,
-          updated.user.name,
-          updated.companyName,
-          "AWAITING_DEPOSIT"
-        ).catch(console.error);
-      }
+      await sendNotifications([
+        sendCapitalAccessDecisionEmail({
+          borrowerEmail: updated.user.email,
+          borrowerName: updated.user.name,
+          companyName: updated.companyName,
+          status: status as "APPROVED" | "REJECTED" | "UNDER_REVIEW",
+          requestedAmountUsd: updated.requestedAmountUsd,
+          securityDepositUsd: updated.securityDepositUsd,
+          applicationId: updated.id,
+        }),
+        status === "APPROVED" &&
+          sendOnboardingPhaseEmail(
+            updated.user.email,
+            updated.user.name,
+            updated.companyName,
+            "AWAITING_DEPOSIT"
+          ),
+      ]);
     }
 
     return NextResponse.json({

@@ -31,7 +31,12 @@ function getTransporter() {
  * every transactional email is still receivable (original recipient is noted).
  * Leave unset in production once a domain is verified.
  */
-function resolveRecipient(to: string): { to: string; subjectPrefix: string; noteHtml: string; noteText: string } {
+function resolveRecipient(to: string): {
+  to: string;
+  subjectPrefix: string;
+  noteHtml: string;
+  noteText: string;
+} {
   const redirect = process.env.EMAIL_REDIRECT_TO?.trim();
   if (!redirect || redirect.toLowerCase() === to.toLowerCase()) {
     return { to, subjectPrefix: "", noteHtml: "", noteText: "" };
@@ -44,7 +49,7 @@ function resolveRecipient(to: string): { to: string; subjectPrefix: string; note
   };
 }
 
-export async function sendEmail(options: SendEmailOptions): Promise<boolean> {
+export async function sendEmail(options: SendEmailOptions): Promise<void> {
   const from = process.env.EMAIL_FROM || "SBDV <onboarding@resend.dev>";
   const routed = resolveRecipient(options.to);
   const subject = `${routed.subjectPrefix}${options.subject}`;
@@ -60,7 +65,7 @@ export async function sendEmail(options: SendEmailOptions): Promise<boolean> {
     console.log(`Subject: ${subject}`);
     console.log(text || html.replace(/<[^>]+>/g, " "));
     console.log("--- END EMAIL ---\n");
-    return true;
+    return;
   }
 
   try {
@@ -72,13 +77,31 @@ export async function sendEmail(options: SendEmailOptions): Promise<boolean> {
       text,
       replyTo: options.replyTo,
     });
-    if (routed.to !== options.to) {
-      console.log(`Email redirected: ${options.to} → ${routed.to} (${options.subject})`);
-    }
-    return true;
+    console.log(
+      `Email sent: "${options.subject}" → ${routed.to}${
+        routed.to !== options.to ? ` (was ${options.to})` : ""
+      }`
+    );
   } catch (err) {
     console.error("Email send failed:", err);
-    return false;
+    throw err;
+  }
+}
+
+/** Run notification emails before returning the HTTP response (avoids cut-off). */
+export async function sendNotifications(
+  jobs: Array<Promise<unknown> | false | null | undefined | "">
+): Promise<void> {
+  const pending = jobs.filter(
+    (job): job is Promise<unknown> =>
+      !!job && typeof (job as Promise<unknown>).then === "function"
+  );
+  if (!pending.length) return;
+  const results = await Promise.allSettled(pending);
+  for (const result of results) {
+    if (result.status === "rejected") {
+      console.error("Notification email failed:", result.reason);
+    }
   }
 }
 

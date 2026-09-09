@@ -6,11 +6,12 @@ import {
   hasPaymentSlip,
   hasRequiredDocuments,
 } from "@/lib/capital-access-onboarding";
-import { sendOnboardingPhaseEmail } from "@/lib/capital-access-onboarding-emails";
+import { sendOnboardingPhaseEmail, sendRepaymentConfirmedEmail } from "@/lib/capital-access-onboarding-emails";
 import {
   buildRepaymentSchedule,
   parseInstallmentPayments,
 } from "@/lib/repayment-schedule";
+import { sendNotifications } from "@/lib/email";
 import { NextResponse } from "next/server";
 
 export async function PATCH(
@@ -99,12 +100,14 @@ export async function PATCH(
       });
 
       if (facility.user.email) {
-        sendOnboardingPhaseEmail(
-          facility.user.email,
-          facility.user.name,
-          facility.companyName,
-          nextPhase
-        ).catch(console.error);
+        await sendNotifications([
+          sendOnboardingPhaseEmail(
+            facility.user.email,
+            facility.user.name,
+            facility.companyName,
+            nextPhase
+          ),
+        ]);
       }
 
       return NextResponse.json({ facility: updated });
@@ -163,6 +166,18 @@ export async function PATCH(
           onboardingPhase: "ACTIVE",
         },
       });
+
+      if (facility.user.email) {
+        await sendNotifications([
+          sendRepaymentConfirmedEmail(
+            facility.user.email,
+            facility.user.name,
+            facility.companyName,
+            next.installment,
+            next.amountUsd
+          ),
+        ]);
+      }
 
       return NextResponse.json({ facility: updated });
     }

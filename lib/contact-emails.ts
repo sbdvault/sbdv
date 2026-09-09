@@ -59,13 +59,14 @@ export async function sendContactInquiryEmail(params: {
     message: escapeHtml(params.message).replace(/\n/g, "<br />"),
   };
 
-  return sendEmail({
-    to,
-    replyTo: params.email,
-    subject: `[SBDV Inquiry] ${interest} — ${params.name}`,
-    html: emailLayout(
-      "New private inquiry",
-      `
+  try {
+    await sendEmail({
+      to,
+      replyTo: params.email,
+      subject: `[SBDV Inquiry] ${interest} — ${params.name}`,
+      html: emailLayout(
+        "New private inquiry",
+        `
       <p>A new contact form submission requires your attention.</p>
       <table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px;">
         <tr><td style="padding: 8px 0; color: #666; width: 140px;">Name</td><td style="padding: 8px 0;"><strong>${safe.name}</strong></td></tr>
@@ -92,5 +93,9 @@ export async function sendContactInquiryEmail(params: {
       "Message:",
       params.message,
     ].join("\n"),
-  });
+    });
+    return true;
+  } catch {
+    return false;
+  }
 }

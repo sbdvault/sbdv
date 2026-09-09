@@ -11,6 +11,7 @@ import {
 import { sendCapitalAccessSubmissionEmails } from "@/lib/capital-access-emails";
 import { sendOnboardingPhaseEmail } from "@/lib/capital-access-onboarding-emails";
 import { hasRequiredDocuments } from "@/lib/capital-access-onboarding";
+import { sendNotifications } from "@/lib/email";
 import { NextResponse } from "next/server";
 
 export async function GET() {
@@ -145,26 +146,27 @@ export async function POST(request: Request) {
     });
 
     if (user?.email) {
-      sendCapitalAccessSubmissionEmails({
-        applicationId: application.id,
-        borrowerEmail: user.email,
-        borrowerName: user.name,
-        companyName: application.companyName,
-        poolCountry: pool.country,
-        poolCategory: pool.category,
-        requestedAmountUsd: application.requestedAmountUsd,
-        interestRatePct: application.interestRatePct,
-        termYears: application.termYears,
-        securityDepositUsd: application.securityDepositUsd,
-        repaymentFrequency: application.repaymentFrequency,
-      }).catch((err) => console.error("Submission email error:", err));
-
-      sendOnboardingPhaseEmail(
-        user.email,
-        user.name,
-        application.companyName,
-        "AWAITING_DOCUMENTS"
-      ).catch(console.error);
+      await sendNotifications([
+        sendCapitalAccessSubmissionEmails({
+          applicationId: application.id,
+          borrowerEmail: user.email,
+          borrowerName: user.name,
+          companyName: application.companyName,
+          poolCountry: pool.country,
+          poolCategory: pool.category,
+          requestedAmountUsd: application.requestedAmountUsd,
+          interestRatePct: application.interestRatePct,
+          termYears: application.termYears,
+          securityDepositUsd: application.securityDepositUsd,
+          repaymentFrequency: application.repaymentFrequency,
+        }),
+        sendOnboardingPhaseEmail(
+          user.email,
+          user.name,
+          application.companyName,
+          "AWAITING_DOCUMENTS"
+        ),
+      ]);
     }
 
     return NextResponse.json({ application }, { status: 201 });

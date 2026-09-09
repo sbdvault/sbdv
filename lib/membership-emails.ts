@@ -80,3 +80,40 @@ export async function sendMembershipApplicationEmails(params: {
     text: "Thank you for applying to SBDV. Our membership desk will contact you shortly.",
   });
 }
+
+export async function sendMembershipDecisionEmail(params: {
+  email: string;
+  name: string;
+  decision: "APPROVED" | "REJECTED";
+}) {
+  const safeName = escapeHtml(params.name);
+  if (params.decision === "REJECTED") {
+    await sendEmail({
+      to: params.email,
+      subject: "SBDV Membership Application Update",
+      html: emailLayout(
+        "Application update",
+        `
+        <p>Dear ${safeName},</p>
+        <p>Thank you for your interest in Swiss Bullion Depository Vault. After careful review, we are unable to proceed with membership at this time.</p>
+        <p>You may contact us if you wish to discuss this decision or reapply in the future.</p>
+        `
+      ),
+      text: "Your SBDV membership application was not approved at this time.",
+    });
+    return;
+  }
+
+  await sendEmail({
+    to: params.email,
+    subject: "SBDV Membership Approved",
+    html: emailLayout(
+      "Membership approved",
+      `
+      <p>Dear ${safeName},</p>
+      <p>Your membership application has been approved. If portal credentials were issued, please check your email for sign-in details.</p>
+      `
+    ),
+    text: "Your SBDV membership application has been approved.",
+  });
+}

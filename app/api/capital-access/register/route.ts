@@ -2,6 +2,7 @@ import { prisma } from "@/lib/prisma";
 import bcrypt from "bcryptjs";
 import { NextResponse } from "next/server";
 import { sendCapitalAccessWelcomeEmail } from "@/lib/capital-access-emails";
+import { sendNotifications } from "@/lib/email";
 
 export async function POST(request: Request) {
   const body = await request.json();
@@ -31,13 +32,15 @@ export async function POST(request: Request) {
     },
   });
 
-  sendCapitalAccessWelcomeEmail({
-    email: user.email,
-    name: user.name,
-    companyName: companyName.trim(),
-    country: typeof country === "string" ? country : undefined,
-    phone: typeof phone === "string" ? phone : undefined,
-  }).catch(console.error);
+  await sendNotifications([
+    sendCapitalAccessWelcomeEmail({
+      email: user.email,
+      name: user.name,
+      companyName: companyName.trim(),
+      country: typeof country === "string" ? country : undefined,
+      phone: typeof phone === "string" ? phone : undefined,
+    }),
+  ]);
 
   return NextResponse.json(
     {

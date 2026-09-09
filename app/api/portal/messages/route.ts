@@ -1,5 +1,7 @@
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
+import { sendPortalMessageNotifyEmail } from "@/lib/client-portal-emails";
+import { sendNotifications } from "@/lib/email";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET() {
@@ -52,6 +54,37 @@ export async function POST(request: NextRequest) {
       encrypted: true,
     },
   });
+
+  const [sender, receiver] = await Promise.all([
+    prisma.user.findUnique({
+      where: { id: session.user.id },
+      select: { name: true, role: true },
+    }),
+    prisma.user.findUnique({
+      where: { id: targetReceiverId },
+      select: { email: true, name: true, role: true },
+    }),
+  ]);
+
+  if (receiver?.email) {
+    const portalHref =
+      receiver.role === "ADMIN"
+        ? "/en/admin"
+        : receiver.role === "BORROWER"
+          ? "/en/capital-access/portal"
+          : "/en/portal/messages";
+
+    await sendNotifications([
+      sendPortalMessageNotifyEmail({
+        toEmail: receiver.email,
+        toName: receiver.name,
+        fromName: sender?.name || session.user.name || null,
+        subject,
+        preview: body,
+        portalHref,
+      }),
+    ]);
+  }
 
   return NextResponse.json({ message });
 }

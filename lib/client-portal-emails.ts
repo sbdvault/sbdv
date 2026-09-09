@@ -56,3 +56,31 @@ export async function sendClientPortalWelcomeEmail(params: {
     text: `Client portal created for ${params.name} <${params.email}>`,
   });
 }
+
+export async function sendPortalMessageNotifyEmail(params: {
+  toEmail: string;
+  toName: string | null;
+  fromName: string | null;
+  subject: string;
+  preview: string;
+  portalHref: string;
+}) {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  const preview = params.preview.slice(0, 400);
+
+  await sendEmail({
+    to: params.toEmail,
+    subject: `[SBDV Message] ${params.subject}`,
+    html: emailLayout(
+      "New secure message",
+      `
+      <p>Dear ${params.toName || "Client"},</p>
+      <p><strong>${params.fromName || "SBDV"}</strong> sent you a message:</p>
+      <p style="font-size:16px;margin:16px 0;"><strong>${params.subject}</strong></p>
+      <div style="background:#f7f5f0;border-left:3px solid #D4AF37;padding:16px;font-size:14px;">${preview.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g, "<br/>")}</div>
+      <p><a href="${siteUrl}${params.portalHref}" style="display: inline-block; padding: 12px 24px; background: #D4AF37; color: #1a1a1a; text-decoration: none; font-weight: bold;">Open messages</a></p>
+      `
+    ),
+    text: `New message from ${params.fromName || "SBDV"}: ${params.subject}`,
+  });
+}

@@ -1,6 +1,8 @@
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { sendClientPortalWelcomeEmail } from "@/lib/client-portal-emails";
+import { sendMembershipDecisionEmail } from "@/lib/membership-emails";
+import { sendNotifications } from "@/lib/email";
 import bcrypt from "bcryptjs";
 import { NextRequest, NextResponse } from "next/server";
 
@@ -113,6 +115,13 @@ export async function POST(
       where: { id },
       data: { status: "REJECTED" },
     });
+    await sendNotifications([
+      sendMembershipDecisionEmail({
+        email: application.email,
+        name: application.name,
+        decision: "REJECTED",
+      }),
+    ]);
     return NextResponse.json({ success: true });
   }
 
@@ -154,11 +163,21 @@ export async function POST(
     });
 
     if (isNewUser) {
-      sendClientPortalWelcomeEmail({
-        email: user.email,
-        name: user.name,
-        tempPassword,
-      }).catch(console.error);
+      await sendNotifications([
+        sendClientPortalWelcomeEmail({
+          email: user.email,
+          name: user.name,
+          tempPassword,
+        }),
+      ]);
+    } else {
+      await sendNotifications([
+        sendMembershipDecisionEmail({
+          email: application.email,
+          name: application.name,
+          decision: "APPROVED",
+        }),
+      ]);
     }
 
     return NextResponse.json({

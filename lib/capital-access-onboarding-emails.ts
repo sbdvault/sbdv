@@ -271,3 +271,45 @@ export async function sendBankDetailsReceiptEmail(
     ),
   });
 }
+
+export async function sendEscrowUpdatedEmail(
+  borrowerEmail: string,
+  borrowerName: string | null,
+  companyName: string
+) {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  await sendEmail({
+    to: borrowerEmail,
+    subject: `Updated Escrow Instructions — ${companyName}`,
+    html: emailLayout(
+      "Escrow instructions were updated",
+      `<p>Dear ${borrowerName || "Capital Partner"},</p>
+       <p>The escrow / wire instructions for <strong>${companyName}</strong> have been updated by SBDV. Please open your Facility Dashboard and use the latest details before sending any funds.</p>
+       <p><a href="${siteUrl}/en/capital-access/portal/facility" style="display:inline-block;padding:12px 24px;background:#D4AF37;color:#1a1a1a;text-decoration:none;font-weight:bold;">View Escrow Instructions</a></p>`
+    ),
+  });
+}
+
+export async function sendRepaymentConfirmedEmail(
+  borrowerEmail: string,
+  borrowerName: string | null,
+  companyName: string,
+  installment: number,
+  amount: number
+) {
+  const formatUsd = (n: number) =>
+    new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(n);
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
+  await sendEmail({
+    to: borrowerEmail,
+    subject: `Repayment Confirmed — Installment ${installment}`,
+    html: emailLayout(
+      "Your repayment has been confirmed",
+      `<p>Dear ${borrowerName || "Capital Partner"},</p>
+       <p>SBDV has confirmed installment <strong>${installment}</strong> for <strong>${companyName}</strong> as paid (${formatUsd(amount)}).</p>
+       <p>Your facility repayment schedule has been updated accordingly.</p>
+       <p><a href="${siteUrl}/en/capital-access/portal/facility" style="display:inline-block;padding:12px 24px;background:#D4AF37;color:#1a1a1a;text-decoration:none;font-weight:bold;">Open Facility Dashboard</a></p>`
+    ),
+  });
+}
