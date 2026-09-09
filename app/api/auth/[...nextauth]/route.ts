@@ -15,16 +15,27 @@ function withNoStore(response: Response) {
     if (key.toLowerCase() === "set-cookie") return;
     headers.set(key, value);
   });
-  // Headers() drops extra Set-Cookie values. Auth.js sets the CSRF and session
-  // cookies together; losing one makes the first sign-in fail and the second work.
-  const cookies =
-    typeof response.headers.getSetCookie === "function" ? response.headers.getSetCookie() : [];
-  for (const cookie of cookies) {
-    headers.append("set-cookie", cookie);
+
+  // Headers() collapses duplicate Set-Cookie. Auth.js sets CSRF + session
+  // together; dropping one makes the first sign-in fail and the second work.
+  const fromGetter =
+    typeof response.headers.getSetCookie === "function"
+      ? response.headers.getSetCookie()
+      : [];
+
+  if (fromGetter.length > 0) {
+    for (const cookie of fromGetter) {
+      headers.append("set-cookie", cookie);
+    }
+  } else {
+    const raw = response.headers.get("set-cookie");
+    if (raw) headers.append("set-cookie", raw);
   }
+
   for (const [key, value] of Object.entries(noStore)) {
     headers.set(key, value);
   }
+
   return new NextResponse(response.body, {
     status: response.status,
     statusText: response.statusText,

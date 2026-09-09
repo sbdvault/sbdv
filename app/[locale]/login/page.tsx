@@ -9,6 +9,14 @@ import { Lock, AlertCircle } from "lucide-react";
 import { useTranslations } from "@/hooks/useTranslations";
 import Logo from "@/components/Logo";
 
+function isMfaRequired(result: { error?: string | null; code?: string } | undefined) {
+  return result?.error === "MFA_REQUIRED" || result?.code === "MFA_REQUIRED";
+}
+
+function isMfaInvalid(result: { error?: string | null; code?: string } | undefined) {
+  return result?.error === "MFA_INVALID" || result?.code === "MFA_INVALID";
+}
+
 export default function LoginPage() {
   const { t, locale } = useTranslations();
   const params = useParams();
@@ -18,6 +26,7 @@ export default function LoginPage() {
   const [showMfa, setShowMfa] = useState(false);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [csrfReady, setCsrfReady] = useState(false);
 
   const getLocalizedHref = (href: string) => {
     const currentLocale = (params?.locale as string) || locale || "en";
@@ -25,29 +34,35 @@ export default function LoginPage() {
   };
 
   useEffect(() => {
-    getCsrfToken().catch(() => undefined);
+    let cancelled = false;
+    (async () => {
+      try {
+        await getCsrfToken();
+      } catch {
+        /* retry on submit */
+      } finally {
+        if (!cancelled) setCsrfReady(true);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
-  const readDestination = async (signedInEmail: string) => {
-    for (let attempt = 0; attempt < 4; attempt += 1) {
-      const sessionRes = await fetch("/api/auth/destination", {
-        method: "POST",
-        cache: "no-store",
-        headers: { "Cache-Control": "no-cache" },
-      });
-      const session = await sessionRes.json();
-      const sessionEmail = typeof session?.email === "string" ? session.email.toLowerCase() : "";
-      if (session?.role && sessionEmail === signedInEmail) return session;
-      await new Promise((resolve) => setTimeout(resolve, 200 * (attempt + 1)));
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const err = new URLSearchParams(window.location.search).get("error");
+    if (err === "session") {
+      setError(t("login.invalidCredentials"));
     }
-    return null;
-  };
+  }, [t]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError("");
 
+    const currentLocale = (params?.locale as string) || locale || "en";
     const credentials = {
       email: email.trim().toLowerCase(),
       password,
@@ -55,20 +70,31 @@ export default function LoginPage() {
       redirect: false as const,
     };
 
+    // Always refresh CSRF before the first credentials POST.
+    await getCsrfToken().catch(() => undefined);
+
     let result = await signIn("credentials", credentials);
-    if (result?.error && result.error !== "MFA_REQUIRED" && result.error !== "MFA_INVALID") {
+
+    // CSRF miss: Auth.js returns a generic CredentialsSignin. Refresh and retry once.
+    // Do not retry MFA challenges — that would re-issue email OTPs.
+    if (
+      result?.error &&
+      !isMfaRequired(result) &&
+      !isMfaInvalid(result) &&
+      result.error === "CredentialsSignin"
+    ) {
       await getCsrfToken().catch(() => undefined);
       result = await signIn("credentials", credentials);
     }
 
-    if (result?.error === "MFA_REQUIRED" || result?.code === "MFA_REQUIRED") {
+    if (isMfaRequired(result)) {
       setLoading(false);
       setShowMfa(true);
       setError(t("login.mfaRequired"));
       return;
     }
 
-    if (result?.error === "MFA_INVALID" || result?.code === "MFA_INVALID") {
+    if (isMfaInvalid(result)) {
       setLoading(false);
       setError(t("login.mfaInvalid"));
       return;
@@ -80,22 +106,8 @@ export default function LoginPage() {
       return;
     }
 
-    const signedInEmail = email.trim().toLowerCase();
-    const session = await readDestination(signedInEmail);
-    if (!session?.role) {
-      setLoading(false);
-      setError(t("login.invalidCredentials"));
-      return;
-    }
-
-    let destination = getLocalizedHref("/portal");
-    if (session.role === "ADMIN") {
-      destination = getLocalizedHref("/admin");
-    } else if (session.role === "BORROWER") {
-      destination = getLocalizedHref("/capital-access/portal");
-    }
-    // Full navigation so the session cookie is always sent on the next request.
-    window.location.assign(destination);
+    // Full navigation so the session cookie from signIn is definitely sent.
+    window.location.assign(`/api/auth/post-login?locale=${encodeURIComponent(currentLocale)}`);
   };
 
   return (
@@ -193,7 +205,7 @@ export default function LoginPage() {
 
             <button
               type="submit"
-              disabled={loading}
+              disabled={loading || !csrfReady}
               className="gold-shimmer w-full px-8 py-3 bg-gold text-charcoal font-body font-medium rounded-sm hover:bg-gold/90 transition-all disabled:opacity-50"
             >
               {loading ? t("login.signingIn") : t("login.signIn")}
