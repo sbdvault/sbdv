@@ -13,10 +13,14 @@ import {
   validateDisburseBankInput,
 } from "@/lib/capital-access-onboarding";
 import {
+  sendBankDetailsReceiptEmail,
   sendBankDetailsSubmittedEmail,
+  sendDepositReceiptEmail,
   sendDepositSubmittedEmail,
+  sendDocumentsReceiptEmail,
   sendDocumentsSubmittedEmail,
   sendOnboardingPhaseEmail,
+  sendRepaymentReceiptEmail,
   sendRepaymentSubmittedEmail,
 } from "@/lib/capital-access-onboarding-emails";
 import {
@@ -141,6 +145,11 @@ export async function PATCH(
         console.error
       );
       if (facility.user.email) {
+        sendDocumentsReceiptEmail(
+          facility.user.email,
+          facility.user.name,
+          facility.companyName
+        ).catch(console.error);
         sendOnboardingPhaseEmail(
           facility.user.email,
           facility.user.name,
@@ -160,6 +169,7 @@ export async function PATCH(
           status: "APPROVED",
           onboardingPhase: "AWAITING_BANK_DETAILS",
         },
+        include: { user: { select: { email: true, name: true } } },
       });
 
       if (!facility) {
@@ -196,6 +206,13 @@ export async function PATCH(
       sendBankDetailsSubmittedEmail(adminEmail, facility.companyName, facility.id).catch(
         console.error
       );
+      if (facility.user.email) {
+        sendBankDetailsReceiptEmail(
+          facility.user.email,
+          facility.user.name,
+          facility.companyName
+        ).catch(console.error);
+      }
 
       return NextResponse.json({
         facility: {
@@ -213,7 +230,10 @@ export async function PATCH(
           status: "APPROVED",
           onboardingPhase: { in: ["DISBURSED", "ACTIVE"] },
         },
-        include: { documents: { orderBy: { uploadedAt: "desc" } } },
+        include: {
+          documents: { orderBy: { uploadedAt: "desc" } },
+          user: { select: { email: true, name: true } },
+        },
       });
 
       if (!facility || !facility.disbursedAt) {
@@ -278,6 +298,16 @@ export async function PATCH(
         wireRef,
         next.amountUsd
       ).catch(console.error);
+      if (facility.user.email) {
+        sendRepaymentReceiptEmail(
+          facility.user.email,
+          facility.user.name,
+          facility.companyName,
+          next.installment,
+          wireRef,
+          next.amountUsd
+        ).catch(console.error);
+      }
 
       return NextResponse.json({ facility: updated });
     }
@@ -289,7 +319,10 @@ export async function PATCH(
         status: "APPROVED",
         onboardingPhase: "AWAITING_DEPOSIT",
       },
-      include: { documents: true },
+      include: {
+        documents: true,
+        user: { select: { email: true, name: true } },
+      },
     });
 
     if (!facility) {
@@ -331,6 +364,15 @@ export async function PATCH(
       depositReference.trim(),
       facility.securityDepositUsd
     ).catch(console.error);
+    if (facility.user.email) {
+      sendDepositReceiptEmail(
+        facility.user.email,
+        facility.user.name,
+        facility.companyName,
+        depositReference.trim(),
+        facility.securityDepositUsd
+      ).catch(console.error);
+    }
 
     return NextResponse.json({ facility: updated });
   } catch (err) {

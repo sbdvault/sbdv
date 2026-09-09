@@ -126,6 +126,31 @@ export async function sendDepositSubmittedEmail(
   });
 }
 
+export async function sendDepositReceiptEmail(
+  borrowerEmail: string,
+  borrowerName: string | null,
+  companyName: string,
+  depositReference: string,
+  amount: number
+) {
+  const formatUsd = (n: number) =>
+    new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(n);
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
+  await sendEmail({
+    to: borrowerEmail,
+    subject: `Deposit Proof Received — ${companyName}`,
+    html: emailLayout(
+      "We received your security deposit proof",
+      `<p>Dear ${borrowerName || "Capital Partner"},</p>
+       <p>We received your payment proof for <strong>${companyName}</strong>.</p>
+       <p>Wire reference: <code>${depositReference}</code><br/>Amount: ${formatUsd(amount)}</p>
+       <p>Our capital desk will verify the transfer. You will receive another email when the deposit is confirmed.</p>
+       <p><a href="${siteUrl}/en/capital-access/portal/facility" style="display:inline-block;padding:12px 24px;background:#D4AF37;color:#1a1a1a;text-decoration:none;font-weight:bold;">Open Facility Dashboard</a></p>`
+    ),
+  });
+}
+
 export async function sendRepaymentSubmittedEmail(
   adminEmail: string,
   companyName: string,
@@ -148,6 +173,32 @@ export async function sendRepaymentSubmittedEmail(
   });
 }
 
+export async function sendRepaymentReceiptEmail(
+  borrowerEmail: string,
+  borrowerName: string | null,
+  companyName: string,
+  installment: number,
+  reference: string,
+  amount: number
+) {
+  const formatUsd = (n: number) =>
+    new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(n);
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
+  await sendEmail({
+    to: borrowerEmail,
+    subject: `Repayment Proof Received — Installment ${installment}`,
+    html: emailLayout(
+      "We received your repayment proof",
+      `<p>Dear ${borrowerName || "Capital Partner"},</p>
+       <p>We received your proof for installment <strong>${installment}</strong> on <strong>${companyName}</strong>.</p>
+       <p>Wire reference: <code>${reference}</code><br/>Amount: ${formatUsd(amount)}</p>
+       <p>Status will update to Paid after our capital desk confirms the transfer.</p>
+       <p><a href="${siteUrl}/en/capital-access/portal/facility" style="display:inline-block;padding:12px 24px;background:#D4AF37;color:#1a1a1a;text-decoration:none;font-weight:bold;">Open Facility Dashboard</a></p>`
+    ),
+  });
+}
+
 export async function sendDocumentsSubmittedEmail(
   adminEmail: string,
   companyName: string,
@@ -162,6 +213,24 @@ export async function sendDocumentsSubmittedEmail(
       `<p><strong>${companyName}</strong> has submitted all five required documents for review.</p>
        <p><a href="${siteUrl}/en/admin/capital-access" style="display:inline-block;padding:12px 24px;background:#D4AF37;color:#1a1a1a;text-decoration:none;font-weight:bold;">Review in Admin</a></p>
        <p style="font-size:12px;color:#888;">Application ID: ${applicationId}</p>`
+    ),
+  });
+}
+
+export async function sendDocumentsReceiptEmail(
+  borrowerEmail: string,
+  borrowerName: string | null,
+  companyName: string
+) {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  await sendEmail({
+    to: borrowerEmail,
+    subject: `Documents Received — ${companyName}`,
+    html: emailLayout(
+      "Your documents are under review",
+      `<p>Dear ${borrowerName || "Capital Partner"},</p>
+       <p>We received the documentation package for <strong>${companyName}</strong>. Our capital desk will review it and either approve with escrow instructions or request additional documents.</p>
+       <p><a href="${siteUrl}/en/capital-access/portal/facility" style="display:inline-block;padding:12px 24px;background:#D4AF37;color:#1a1a1a;text-decoration:none;font-weight:bold;">Open Facility Dashboard</a></p>`
     ),
   });
 }
@@ -181,6 +250,24 @@ export async function sendBankDetailsSubmittedEmail(
        <p>Review the account in Admin, then advance to Ready for Disbursement when verified.</p>
        <p><a href="${siteUrl}/en/admin/capital-access" style="display:inline-block;padding:12px 24px;background:#D4AF37;color:#1a1a1a;text-decoration:none;font-weight:bold;">Review in Admin</a></p>
        <p style="font-size:12px;color:#888;">Application ID: ${applicationId}</p>`
+    ),
+  });
+}
+
+export async function sendBankDetailsReceiptEmail(
+  borrowerEmail: string,
+  borrowerName: string | null,
+  companyName: string
+) {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  await sendEmail({
+    to: borrowerEmail,
+    subject: `Bank Details Received — ${companyName}`,
+    html: emailLayout(
+      "Disbursement bank details received",
+      `<p>Dear ${borrowerName || "Capital Partner"},</p>
+       <p>We received the disbursement bank details for <strong>${companyName}</strong>. Our team will verify the account and proceed toward capital release.</p>
+       <p><a href="${siteUrl}/en/capital-access/portal/facility" style="display:inline-block;padding:12px 24px;background:#D4AF37;color:#1a1a1a;text-decoration:none;font-weight:bold;">Open Facility Dashboard</a></p>`
     ),
   });
 }

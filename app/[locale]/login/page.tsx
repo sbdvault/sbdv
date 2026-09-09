@@ -176,7 +176,9 @@ export default function LoginPage() {
                   className="w-full px-4 py-3 border border-charcoal/20 rounded-sm focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold font-body tracking-widest text-center"
                   placeholder="000000"
                 />
-                <p className="text-xs text-charcoal/50 mt-2">{t("login.mfaHint")}</p>
+                <p className="text-xs text-charcoal/50 mt-2">
+                  Enter the code from your authenticator app, or the code emailed to you if email MFA is enabled.
+                </p>
               </div>
             )}
 

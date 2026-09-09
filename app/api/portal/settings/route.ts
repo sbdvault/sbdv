@@ -11,10 +11,13 @@ export async function GET() {
 
   const user = await prisma.user.findUnique({
     where: { id: session.user.id },
-    select: { mfaEnabled: true },
+    select: { mfaEnabled: true, mfaMethod: true },
   });
 
-  return NextResponse.json({ mfaEnabled: user?.mfaEnabled || false });
+  return NextResponse.json({
+    mfaEnabled: user?.mfaEnabled || false,
+    mfaMethod: user?.mfaMethod || null,
+  });
 }
 
 export async function POST(request: NextRequest) {
@@ -42,23 +45,51 @@ export async function POST(request: NextRequest) {
 
     await prisma.user.update({
       where: { id: session.user.id },
-      data: { mfaSecret: secret, mfaEnabled: true },
-    });
-
-    await prisma.auditEvent.create({
       data: {
-        userId: session.user.id,
-        action: "MFA_ENABLED",
+        mfaSecret: secret,
+        mfaEnabled: true,
+        mfaMethod: "TOTP",
+        emailOtpHash: null,
+        emailOtpExpiresAt: null,
       },
     });
 
-    return NextResponse.json({ success: true });
+    await prisma.auditEvent.create({
+      data: { userId: session.user.id, action: "MFA_ENABLED" },
+    });
+
+    return NextResponse.json({ success: true, mfaMethod: "TOTP" });
+  }
+
+  if (action === "enable_email") {
+    await prisma.user.update({
+      where: { id: session.user.id },
+      data: {
+        mfaEnabled: true,
+        mfaMethod: "EMAIL",
+        mfaSecret: null,
+        emailOtpHash: null,
+        emailOtpExpiresAt: null,
+      },
+    });
+
+    await prisma.auditEvent.create({
+      data: { userId: session.user.id, action: "MFA_EMAIL_ENABLED" },
+    });
+
+    return NextResponse.json({ success: true, mfaMethod: "EMAIL" });
   }
 
   if (action === "disable") {
     await prisma.user.update({
       where: { id: session.user.id },
-      data: { mfaSecret: null, mfaEnabled: false },
+      data: {
+        mfaSecret: null,
+        mfaEnabled: false,
+        mfaMethod: null,
+        emailOtpHash: null,
+        emailOtpExpiresAt: null,
+      },
     });
 
     return NextResponse.json({ success: true });

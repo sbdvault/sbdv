@@ -1,7 +1,8 @@
 import NextAuth, { CredentialsSignin } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
-import { verifyTotp, generateTotpSecret } from "@/lib/totp";
+import { verifyTotp } from "@/lib/totp";
+import { issueEmailOtp, usesEmailMfa, verifyEmailOtp } from "@/lib/email-otp";
 import { prisma } from "@/lib/prisma";
 
 class MFARequiredError extends CredentialsSignin {
@@ -16,6 +17,7 @@ declare module "next-auth" {
   interface User {
     role?: string;
     mfaEnabled?: boolean;
+    mfaMethod?: string | null;
   }
   interface Session {
     user: {
@@ -24,6 +26,7 @@ declare module "next-auth" {
       name?: string | null;
       role: string;
       mfaEnabled: boolean;
+      mfaMethod?: string | null;
     };
   }
 }
@@ -33,13 +36,13 @@ declare module "@auth/core/jwt" {
     id?: string;
     role?: string;
     mfaEnabled?: boolean;
+    mfaMethod?: string | null;
     mfaVerified?: boolean;
   }
 }
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   secret: process.env.AUTH_SECRET,
-  // Required for next start / reverse proxies (Amvera, etc.)
   trustHost: true,
   session: { strategy: "jwt", maxAge: 30 * 60 },
   pages: {
@@ -68,13 +71,19 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         const valid = await bcrypt.compare(password, user.passwordHash);
         if (!valid) return null;
 
-        if (user.mfaEnabled && user.mfaSecret) {
-          if (!mfaCode) {
-            throw new MFARequiredError();
-          }
-          const mfaResult = await verifyTotp({ token: mfaCode, secret: user.mfaSecret });
-          if (!mfaResult.valid) {
-            throw new MFAInvalidError();
+        if (user.mfaEnabled) {
+          const emailMfa = usesEmailMfa(user);
+          if (emailMfa) {
+            if (!mfaCode) {
+              await issueEmailOtp(user.id, user.email, user.name);
+              throw new MFARequiredError();
+            }
+            const ok = await verifyEmailOtp(user.id, mfaCode);
+            if (!ok) throw new MFAInvalidError();
+          } else if (user.mfaSecret) {
+            if (!mfaCode) throw new MFARequiredError();
+            const mfaResult = await verifyTotp({ token: mfaCode, secret: user.mfaSecret });
+            if (!mfaResult.valid) throw new MFAInvalidError();
           }
         }
 
@@ -84,6 +93,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           name: user.name,
           role: user.role,
           mfaEnabled: user.mfaEnabled,
+          mfaMethod: user.mfaMethod,
         };
       },
     }),
@@ -94,6 +104,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         token.id = user.id;
         token.role = user.role;
         token.mfaEnabled = user.mfaEnabled;
+        token.mfaMethod = user.mfaMethod;
         token.mfaVerified = true;
       }
       return token;
@@ -103,6 +114,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         session.user.id = token.id as string;
         session.user.role = (token.role as string) || "CLIENT";
         session.user.mfaEnabled = (token.mfaEnabled as boolean) || false;
+        session.user.mfaMethod = (token.mfaMethod as string | null) || null;
       }
       return session;
     },

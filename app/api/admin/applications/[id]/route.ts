@@ -1,5 +1,6 @@
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
+import { sendClientPortalWelcomeEmail } from "@/lib/client-portal-emails";
 import bcrypt from "bcryptjs";
 import { NextRequest, NextResponse } from "next/server";
 
@@ -151,6 +152,14 @@ export async function POST(
       where: { id },
       data: { status: "APPROVED" },
     });
+
+    if (isNewUser) {
+      sendClientPortalWelcomeEmail({
+        email: user.email,
+        name: user.name,
+        tempPassword,
+      }).catch(console.error);
+    }
 
     return NextResponse.json({
       success: true,

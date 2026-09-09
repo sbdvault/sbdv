@@ -7,14 +7,19 @@ import { useTranslations } from "@/hooks/useTranslations";
 export default function PortalSettingsPage() {
   const { t } = useTranslations();
   const [mfaEnabled, setMfaEnabled] = useState(false);
+  const [mfaMethod, setMfaMethod] = useState<string | null>(null);
   const [mfaSecret, setMfaSecret] = useState("");
   const [mfaCode, setMfaCode] = useState("");
   const [setupStep, setSetupStep] = useState<"idle" | "setup">("idle");
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
     fetch("/api/portal/settings")
       .then((res) => res.json())
-      .then((json) => setMfaEnabled(json.mfaEnabled));
+      .then((json) => {
+        setMfaEnabled(json.mfaEnabled);
+        setMfaMethod(json.mfaMethod || null);
+      });
   }, []);
 
   const startMfaSetup = async () => {
@@ -26,6 +31,7 @@ export default function PortalSettingsPage() {
     const json = await res.json();
     setMfaSecret(json.secret);
     setSetupStep("setup");
+    setMessage("");
   };
 
   const enableMfa = async () => {
@@ -36,8 +42,26 @@ export default function PortalSettingsPage() {
     });
     if (res.ok) {
       setMfaEnabled(true);
+      setMfaMethod("TOTP");
       setSetupStep("idle");
       setMfaCode("");
+      setMessage("");
+    } else {
+      setMessage("Invalid authenticator code.");
+    }
+  };
+
+  const enableEmailMfa = async () => {
+    const res = await fetch("/api/portal/settings", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ action: "enable_email" }),
+    });
+    if (res.ok) {
+      setMfaEnabled(true);
+      setMfaMethod("EMAIL");
+      setSetupStep("idle");
+      setMessage("");
     }
   };
 
@@ -48,6 +72,7 @@ export default function PortalSettingsPage() {
       body: JSON.stringify({ action: "disable" }),
     });
     setMfaEnabled(false);
+    setMfaMethod(null);
   };
 
   return (
@@ -69,8 +94,14 @@ export default function PortalSettingsPage() {
         </div>
 
         <p className="font-body text-charcoal/70 mb-6">
-          {mfaEnabled ? t("portal.settings.mfaEnabled") : t("portal.settings.mfaDisabled")}
+          {mfaEnabled
+            ? mfaMethod === "EMAIL"
+              ? "Email sign-in codes are enabled. A code will be sent to your account email after your password is accepted."
+              : t("portal.settings.mfaEnabled")
+            : t("portal.settings.mfaDisabled")}
         </p>
+
+        {message && <p className="mb-4 text-sm text-red-600 font-body">{message}</p>}
 
         {mfaEnabled ? (
           <button
@@ -82,7 +113,8 @@ export default function PortalSettingsPage() {
         ) : setupStep === "setup" ? (
           <div className="space-y-4">
             <p className="text-sm font-body text-charcoal/60">
-              Add this secret to your authenticator app: <code className="bg-off-white px-2 py-1 rounded text-xs break-all">{mfaSecret}</code>
+              Add this secret to your authenticator app:{" "}
+              <code className="bg-off-white px-2 py-1 rounded text-xs break-all">{mfaSecret}</code>
             </p>
             <input
               type="text"
@@ -100,12 +132,20 @@ export default function PortalSettingsPage() {
             </button>
           </div>
         ) : (
-          <button
-            onClick={startMfaSetup}
-            className="px-4 py-2 bg-gold text-charcoal font-body text-sm rounded-sm hover:bg-gold/90"
-          >
-            {t("portal.settings.enableMfa")}
-          </button>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <button
+              onClick={startMfaSetup}
+              className="px-4 py-2 bg-gold text-charcoal font-body text-sm rounded-sm hover:bg-gold/90"
+            >
+              {t("portal.settings.enableMfa")}
+            </button>
+            <button
+              onClick={enableEmailMfa}
+              className="px-4 py-2 border border-charcoal/20 text-charcoal font-body text-sm rounded-sm hover:border-gold"
+            >
+              Enable email codes
+            </button>
+          </div>
         )}
       </div>
     </div>

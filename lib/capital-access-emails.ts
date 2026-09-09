@@ -22,6 +22,54 @@ function emailLayout(title: string, body: string) {
 </html>`;
 }
 
+export async function sendCapitalAccessWelcomeEmail(params: {
+  email: string;
+  name: string | null;
+  companyName?: string;
+  country?: string;
+  phone?: string;
+}) {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  const company = params.companyName ? ` for <strong>${params.companyName}</strong>` : "";
+
+  await sendEmail({
+    to: params.email,
+    subject: "Welcome to SBDV Capital Access — account confirmed",
+    html: emailLayout(
+      "Registration confirmed",
+      `
+      <p>Dear ${params.name || "Capital Partner"},</p>
+      <p>Thank you for registering with Swiss Bullion Depository Vault Capital Access. Your partner account has been created${company}.</p>
+      <p>You can sign in at any time to review sovereign capital pools, submit a facility request, and track onboarding.</p>
+      <p><a href="${siteUrl}/en/login" style="display: inline-block; padding: 12px 24px; background: #D4AF37; color: #1a1a1a; text-decoration: none; font-weight: bold;">Sign in to Capital Access</a></p>
+      <p style="font-size:13px;color:#666;">If you did not create this account, contact SBDV immediately.</p>
+      `
+    ),
+    text: `Registration confirmed. Your SBDV Capital Access account is ready. Sign in at ${siteUrl}/en/login`,
+  });
+
+  const adminEmail = await getAdminEmail();
+  await sendEmail({
+    to: adminEmail,
+    replyTo: params.email,
+    subject: `[SBDV Capital Access] New partner registration — ${params.name || params.email}`,
+    html: emailLayout(
+      "New Capital Access registration",
+      `
+      <p>A new Capital Access partner account was created.</p>
+      <table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px;">
+        <tr><td style="padding: 8px 0; color: #666; width: 140px;">Name</td><td style="padding: 8px 0;"><strong>${params.name || "—"}</strong></td></tr>
+        <tr><td style="padding: 8px 0; color: #666;">Email</td><td style="padding: 8px 0;"><a href="mailto:${params.email}" style="color: #D4AF37;">${params.email}</a></td></tr>
+        <tr><td style="padding: 8px 0; color: #666;">Company</td><td style="padding: 8px 0;">${params.companyName || "—"}</td></tr>
+        <tr><td style="padding: 8px 0; color: #666;">Country</td><td style="padding: 8px 0;">${params.country || "—"}</td></tr>
+        <tr><td style="padding: 8px 0; color: #666;">Phone</td><td style="padding: 8px 0;">${params.phone || "—"}</td></tr>
+      </table>
+      `
+    ),
+    text: `New Capital Access registration: ${params.name} <${params.email}> — ${params.companyName || ""}`,
+  });
+}
+
 export async function sendCapitalAccessSubmissionEmails(params: {
   applicationId: string;
   borrowerEmail: string;
