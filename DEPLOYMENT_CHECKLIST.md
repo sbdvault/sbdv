@@ -10,6 +10,8 @@ Prisma is configured for **PostgreSQL**. Set `DATABASE_URL` (pooler, port 6543 +
 
 Use this as the working todo list. Check items off as you complete them. Do not commit real secrets — use the Layero / Supabase / Resend dashboards or a local `.env` that stays gitignored.
 
+> **Email modes:** Local/QA often uses `EMAIL_REDIRECT_TO` so every message lands in one Gmail inbox. **Go-live for real borrowers/clients requires a verified sending domain** and **removing** that redirect — see **section L**.
+
 > **Note:** `Dockerfile` / `amvera.yaml` remain in the repo from an earlier Amvera path. Production traffic is on Layero. Prefer Layero env + GitHub `main` unless you intentionally revive Amvera.
 
 ---
@@ -142,15 +144,23 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
 SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
 
 # Email via Resend SMTP
-# Testing: FROM onboarding@resend.dev (Resend only delivers to the account owner email)
-# Production: verify a domain in Resend, then set EMAIL_FROM to that domain
 SMTP_HOST=smtp.resend.com
 SMTP_PORT=465
 SMTP_USER=resend
 SMTP_PASS=re_your_resend_api_key
-EMAIL_FROM=SBDV <onboarding@resend.dev>
 CONTACT_EMAIL=sbdvault@gmail.com
 ADMIN_EMAIL=sbdvault@gmail.com
+
+# --- Testing (current / until domain is verified) ---
+# Resend only allows delivery TO the Resend account owner when FROM is onboarding@resend.dev.
+# EMAIL_REDIRECT_TO forces every outbound message into that inbox (subject notes the real recipient).
+EMAIL_FROM=SBDV <onboarding@resend.dev>
+EMAIL_REDIRECT_TO=sbdvault@gmail.com
+
+# --- Go-live (borrowers & clients receive mail at their own addresses) ---
+# 1) Verify your domain in Resend (DNS). 2) Switch EMAIL_FROM. 3) DELETE EMAIL_REDIRECT_TO entirely.
+# EMAIL_FROM=SBDV <noreply@your-verified-domain.com>
+# (do not set EMAIL_REDIRECT_TO)
 
 # Escrow (Capital Access) — shown to borrowers for deposits
 ESCROW_BANK_NAME=
@@ -173,6 +183,7 @@ OPENAI_MODEL=gpt-4o-mini
 - [ ] `.env*` listed in `.gitignore`
 - [ ] Rotate any tokens that were pasted into chat, docs, or screenshots
 - [ ] No Gmail App Password / legacy SMTP host left in production env
+- [ ] **Go-live email:** `EMAIL_FROM` uses verified domain; **`EMAIL_REDIRECT_TO` is unset** on Layero
 
 ---
 
@@ -242,34 +253,87 @@ OPENAI_MODEL=gpt-4o-mini
 6. [ ] **Layero env** mirroring local Resend + Auth URLs  
 7. [ ] **Push `main`** → Layero deploy  
 8. [ ] **Post-deploy verification** (section J + L)  
-9. [ ] Verify custom domain in Resend; switch `EMAIL_FROM` off `onboarding@resend.dev`
+9. [ ] **Go live with domain sending** (section L) — remove redirect so customers get their own mail
 
 ---
 
-## L. Email (Resend) — what must work
+## L. Email (Resend) — testing vs go-live domain sending
 
-Mail goes through `lib/email.ts` (nodemailer → Resend SMTP). No separate Resend SDK required.
+Mail goes through `lib/email.ts` (nodemailer → Resend SMTP). No separate Resend SDK required. Notifications are **awaited** before API responses so they actually send.
 
-### Provider setup
-- [ ] Resend account created; API key stored only in env as `SMTP_PASS`
-- [ ] Local smoke: with `EMAIL_REDIRECT_TO` (or register as account owner) until domain verified
-- [ ] Production: domain verified in Resend DNS → set `EMAIL_FROM="SBDV <noreply@your-domain>"` and **remove** `EMAIL_REDIRECT_TO`
-- [ ] Same SMTP block set on Layero as in local `.env`
+### Why Gmail redirect exists today
 
-### Product emails (fire-and-forget; failures log server-side)
-- [ ] **Capital Access register** → welcome to borrower
-- [ ] **Capital Access submit / decision / phase** → borrower (+ admin where implemented)
-- [ ] **Facility deposit / documents / bank / repayment** → admin alert + borrower receipt
-- [ ] **Membership application** → admin + applicant confirmation
+With `EMAIL_FROM=SBDV <onboarding@resend.dev>`, Resend’s **test mode** only delivers to the Resend account owner (e.g. `sbdvault@gmail.com`). Sending to any other address returns **550**.
+
+`EMAIL_REDIRECT_TO=sbdvault@gmail.com` (local / QA) rewrites every `to:` address into that inbox and prefixes the subject with `[originally to: user@…]` so you can still test the full product flow.
+
+**That redirect must not stay on for real customers.** While it is set, borrowers never receive mail in their own inboxes.
+
+### Step-by-step: go live so clients / borrowers get their own email
+
+1. **Pick a sending domain** you control (prefer the public brand domain), e.g. `sbdv.swiss` or `sbdvault.com`.
+2. **In [Resend → Domains](https://resend.com/domains):** Add the domain.
+3. **Add the DNS records Resend shows** (typically SPF, DKIM, and optionally DMARC) at your DNS host (registrar / Cloudflare / etc.).
+4. **Wait until Resend marks the domain Verified** (often minutes; can take up to 48h for DNS).
+5. **Create / confirm the From address** on that domain, e.g. `noreply@your-domain.com` or `capital@your-domain.com`.
+6. **Update Layero (and local `.env` when ready) environment variables:**
+
+| Variable | Testing (now) | Go-live (customers) |
+|---|---|---|
+| `EMAIL_FROM` | `SBDV <onboarding@resend.dev>` | `SBDV <noreply@your-verified-domain.com>` |
+| `EMAIL_REDIRECT_TO` | `sbdvault@gmail.com` | **Delete / leave unset** |
+| `SMTP_*` | Unchanged | Unchanged |
+| `ADMIN_EMAIL` / `CONTACT_EMAIL` | Ops Gmail (or alias) | Same or ops@your-domain |
+
+7. **Redeploy** Layero after saving env vars (so the running app picks them up).
+8. **Smoke-test without redirect:**
+   - [ ] Register a Capital Access user with a **non-Gmail test address you control** → welcome arrives in **that** inbox
+   - [ ] Submit documents / deposit → admin mail to `ADMIN_EMAIL` **and** borrower receipt to the borrower address
+   - [ ] Admin approve / advance phase → borrower receives decision / phase mail
+   - [ ] Forgot-password and email MFA OTP deliver to the user’s own address
+9. **Monitor** [Resend → Emails](https://resend.com/emails) for delivers, bounces, and spam complaints.
+
+### Local / QA after go-live
+
+- Keep `EMAIL_REDIRECT_TO` **only** in local `.env` if you still want all QA mail in one inbox.
+- Production Layero must **never** set `EMAIL_REDIRECT_TO`.
+- You may keep testing From as `onboarding@resend.dev` locally; production must use the verified domain.
+
+### Checklist — provider
+
+- [ ] Resend account created; API key only in env as `SMTP_PASS`
+- [ ] Domain added and **Verified** in Resend
+- [ ] DNS SPF + DKIM (and DMARC if recommended) live
+- [ ] Layero `EMAIL_FROM` uses `@your-verified-domain`
+- [ ] Layero has **no** `EMAIL_REDIRECT_TO`
+- [ ] Same SMTP host/user/pass as local; rotate key if it was ever exposed
+
+### Checklist — product emails (must work after go-live)
+
+- [ ] **Capital Access register** → welcome to **borrower’s email** + admin alert
+- [ ] **Capital Access application submit / decision / phase** → borrower (+ admin where implemented)
+- [ ] **Facility deposit / documents / bank / repayment** → admin `[Action]` alert + borrower receipt
+- [ ] **Admin escrow update / repayment confirm** → borrower notified
+- [ ] **Membership application** → admin + applicant; approve/reject → applicant
+- [ ] **Portal messages** → recipient notified
 - [ ] **Contact / private inquiry** → `CONTACT_EMAIL`
-- [ ] **Forgot password** → reset link
-- [ ] **Email MFA** → 6-digit sign-in code (10-minute TTL)
+- [ ] **Forgot password** → reset link to user
+- [ ] **Email MFA** → 6-digit code to user (10-minute TTL)
 
 ### MFA notes
+
 - [ ] Portal Settings: “Enable email codes” sets `mfaMethod=EMAIL`
 - [ ] Authenticator path still sets `mfaMethod=TOTP` + `mfaSecret`
 - [ ] Disable MFA clears secret + OTP fields
 - [ ] SMS / Twilio deferred (not in this deploy)
+
+### If mail still fails after domain verify
+
+1. Confirm Layero env: no `EMAIL_REDIRECT_TO`, `EMAIL_FROM` domain matches Resend verified domain exactly  
+2. Resend dashboard → Domains (status) and Emails (error body, e.g. still 550)  
+3. Layero app logs for `Email sent:` / `Email send failed:`  
+4. Do not use `onboarding@resend.dev` as From in production  
+5. Check spam folders; set DMARC once SPF/DKIM pass  
 
 ---
 
