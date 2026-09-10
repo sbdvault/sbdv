@@ -105,15 +105,34 @@ export function CapitalAccessFeaturesSection() {
 
 export function CapitalAccessHowItWorksSection() {
   const { t } = useTranslations();
+  const steps = ["prepare", "register", "submit", "review", "deposit", "kyc", "funding"] as const;
+  const who = ["worldwide", "enterprise", "ticket", "kyc", "sanctions", "currency"] as const;
+  const timeline = [
+    ["apply", "applyTime"],
+    ["dd", "ddTime"],
+    ["kyc", "kycTime"],
+    ["funding", "fundingTime"],
+  ] as const;
 
   return (
     <section className="py-20 px-4 bg-white">
       <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl font-heading font-semibold text-charcoal text-center mb-6">
+          {t("capitalAccess.whoCanApply.title")}
+        </h2>
+        <ul className="mb-16 space-y-3 max-w-3xl mx-auto">
+          {who.map((key) => (
+            <li key={key} className="font-body text-charcoal/70 leading-relaxed">
+              {t(`capitalAccess.whoCanApply.${key}`)}
+            </li>
+          ))}
+        </ul>
+
         <h2 className="text-3xl font-heading font-semibold text-charcoal text-center mb-12">
           {t("capitalAccess.howItWorks.title")}
         </h2>
         <div className="space-y-8">
-          {["register", "explore", "structure", "submit", "decision"].map((step, i) => (
+          {steps.map((step, i) => (
             <div key={step} className="flex gap-6 items-start">
               <span className="flex-shrink-0 w-10 h-10 rounded-full bg-gold text-charcoal font-heading font-semibold flex items-center justify-center">
                 {i + 1}
@@ -126,6 +145,27 @@ export function CapitalAccessHowItWorksSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-16 p-6 border border-charcoal/10 rounded-lg">
+          <h3 className="font-heading font-semibold text-charcoal text-center mb-2">
+            {t("capitalAccess.timeline.title")}
+          </h3>
+          <p className="font-body text-sm text-charcoal/50 text-center mb-6">
+            {t("capitalAccess.timeline.note")}
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {timeline.map(([label, time]) => (
+              <div key={label} className="text-center p-4 bg-off-white rounded-sm">
+                <p className="font-body text-xs uppercase tracking-wide text-charcoal/50 mb-1">
+                  {t(`capitalAccess.timeline.${label}`)}
+                </p>
+                <p className="font-heading font-semibold text-charcoal">
+                  {t(`capitalAccess.timeline.${time}`)}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

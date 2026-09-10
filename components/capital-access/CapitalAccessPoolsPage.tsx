@@ -55,6 +55,7 @@ export default function CapitalAccessPoolsPage() {
             "kycAml",
             "mandateAlignment",
             "minimumTicket",
+            "worldwide",
           ].map((key) => (
             <li key={key} className="flex items-start gap-2 font-body text-sm text-charcoal/70">
               <CheckCircle2 className="w-4 h-4 text-gold shrink-0 mt-0.5" />

@@ -16,8 +16,9 @@ import {
   Trash2,
   AlertCircle,
 } from "lucide-react";
-import { REQUIRED_DOCUMENT_TYPES } from "@/lib/capital-access-onboarding";
+import { REQUIRED_DOCUMENT_TYPES, DEPOSIT_SOF_SOURCES } from "@/lib/capital-access-onboarding";
 import FacilityRepaymentStatement from "@/components/capital-access/FacilityRepaymentStatement";
+import UboEditor, { type UboRecord } from "@/components/capital-access/UboEditor";
 import { ALLOWED_UPLOAD_ACCEPT, validateUploadFile } from "@/lib/upload-validation";
 
 interface Facility {
@@ -52,6 +53,7 @@ interface Facility {
   disburseAccountNumber?: string | null;
   disburseIban?: string | null;
   disburseSwift?: string | null;
+  disburseRouting?: string | null;
   disburseBeneficiary?: string | null;
   disburseBeneficiaryAddress?: string | null;
   phases: string[];
@@ -62,6 +64,7 @@ interface Facility {
     accountNumber: string | null;
     iban: string;
     swift: string;
+    routing?: string | null;
     reference: string;
     beneficiary: string;
     beneficiaryAddress: string | null;
@@ -69,6 +72,9 @@ interface Facility {
   };
   paymentSlip: { id: string; name: string; type: string; uploadedAt: string } | null;
   documents: { id: string; name: string; type: string; uploadedAt: string }[];
+  ubos?: UboRecord[];
+  depositSofSource?: string | null;
+  depositSofDetail?: string | null;
 }
 
 const phaseIcons: Record<string, typeof Circle> = {
@@ -102,9 +108,12 @@ export default function CapitalAccessFacilityPage() {
     accountNumber: "",
     iban: "",
     swift: "",
+    routing: "",
     beneficiary: "",
     beneficiaryAddress: "",
   });
+  const [sofSource, setSofSource] = useState("");
+  const [sofDetail, setSofDetail] = useState("");
 
   const getLocalizedHref = (href: string) =>
     `/${(params?.locale as string) || locale || "en"}${href}`;
@@ -160,7 +169,12 @@ export default function CapitalAccessFacilityPage() {
     const res = await fetch(`/api/capital-access/facility/${facility.id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ depositReference: wireRef, facilityTermsAccepted }),
+      body: JSON.stringify({
+        depositReference: wireRef,
+        facilityTermsAccepted,
+        depositSofSource: sofSource,
+        depositSofDetail: sofDetail,
+      }),
     });
     const json = await res.json();
     setSubmitting(false);
@@ -376,6 +390,16 @@ export default function CapitalAccessFacilityPage() {
             </div>
           )}
 
+          {showDocs && facility && (
+            <UboEditor
+              facilityId={facility.id}
+              ubos={facility.ubos || []}
+              canEdit={facility.canUploadDocuments}
+              t={t}
+              onChanged={loadData}
+            />
+          )}
+
           {showDocs && (
             <div className="mb-8 p-6 bg-white border border-charcoal/10 rounded-lg">
               <h2 className="font-heading font-semibold text-charcoal mb-4 flex items-center gap-2">
@@ -502,13 +526,19 @@ export default function CapitalAccessFacilityPage() {
                       </div>
                     )}
                     <div>
-                      <span className="text-charcoal/50">IBAN</span>
+                      <span className="text-charcoal/50">{t("capitalAccess.onboarding.ibanOptional")}</span>
                       <p className="font-medium font-mono">{facility.escrow.iban}</p>
                     </div>
                     <div>
-                      <span className="text-charcoal/50">SWIFT</span>
+                      <span className="text-charcoal/50">{t("capitalAccess.onboarding.swiftRequired")}</span>
                       <p className="font-medium font-mono">{facility.escrow.swift}</p>
                     </div>
+                    {facility.escrow.routing && (
+                      <div>
+                        <span className="text-charcoal/50">{t("capitalAccess.onboarding.routing")}</span>
+                        <p className="font-medium font-mono">{facility.escrow.routing}</p>
+                      </div>
+                    )}
                     <div>
                       <span className="text-charcoal/50">{t("admin.capitalAccess.beneficiary")}</span>
                       <p className="font-medium">{facility.escrow.beneficiary}</p>
@@ -606,6 +636,39 @@ export default function CapitalAccessFacilityPage() {
                           </label>
                         )}
                       </div>
+                      <div className="p-4 border border-charcoal/10 rounded-sm space-y-3">
+                        <p className="font-body font-medium text-charcoal">
+                          {t("capitalAccess.onboarding.sofTitle")}
+                        </p>
+                        <p className="font-body text-xs text-charcoal/50">
+                          {t("capitalAccess.onboarding.sofDesc")}
+                        </p>
+                        <select
+                          value={sofSource}
+                          onChange={(e) => setSofSource(e.target.value)}
+                          className="w-full px-4 py-3 border border-charcoal/20 rounded-sm font-body bg-white"
+                        >
+                          <option value="">{t("capitalAccess.onboarding.sofSource")}</option>
+                          {DEPOSIT_SOF_SOURCES.map((s) => (
+                            <option key={s} value={s}>
+                              {s === "OPERATING_CASH"
+                                ? t("capitalAccess.onboarding.sofOperating")
+                                : s === "SHAREHOLDER_LOAN"
+                                  ? t("capitalAccess.onboarding.sofShareholder")
+                                  : s === "ASSET_SALE"
+                                    ? t("capitalAccess.onboarding.sofAssetSale")
+                                    : t("capitalAccess.onboarding.sofOther")}
+                            </option>
+                          ))}
+                        </select>
+                        <textarea
+                          value={sofDetail}
+                          onChange={(e) => setSofDetail(e.target.value)}
+                          placeholder={t("capitalAccess.onboarding.sofDetail")}
+                          rows={2}
+                          className="w-full px-4 py-3 border border-charcoal/20 rounded-sm font-body resize-none"
+                        />
+                      </div>
                       <div className="flex items-start gap-3 p-4 border border-charcoal/10 rounded-sm">
                         <input
                           id="facility-terms-accept"
@@ -649,7 +712,8 @@ export default function CapitalAccessFacilityPage() {
                             submitting ||
                             !wireRef.trim() ||
                             !facility.paymentSlip ||
-                            !facilityTermsAccepted
+                            !facilityTermsAccepted ||
+                            !sofSource
                           }
                           className="px-6 py-3 bg-gold text-charcoal font-body rounded-sm disabled:opacity-40"
                         >
@@ -705,14 +769,22 @@ export default function CapitalAccessFacilityPage() {
                         <p className="font-medium font-mono">{facility.disburseAccountNumber}</p>
                       </div>
                     )}
+                    {facility.disburseIban && (
+                      <div>
+                        <span className="text-charcoal/50">{t("capitalAccess.onboarding.ibanOptional")}</span>
+                        <p className="font-medium font-mono">{facility.disburseIban}</p>
+                      </div>
+                    )}
                     <div>
-                      <span className="text-charcoal/50">IBAN</span>
-                      <p className="font-medium font-mono">{facility.disburseIban}</p>
-                    </div>
-                    <div>
-                      <span className="text-charcoal/50">SWIFT</span>
+                      <span className="text-charcoal/50">{t("capitalAccess.onboarding.swiftRequired")}</span>
                       <p className="font-medium font-mono">{facility.disburseSwift}</p>
                     </div>
+                    {facility.disburseRouting && (
+                      <div>
+                        <span className="text-charcoal/50">{t("capitalAccess.onboarding.routing")}</span>
+                        <p className="font-medium font-mono">{facility.disburseRouting}</p>
+                      </div>
+                    )}
                     <div>
                       <span className="text-charcoal/50">{t("admin.capitalAccess.beneficiary")}</span>
                       <p className="font-medium">{facility.disburseBeneficiary || facility.companyName}</p>
@@ -727,8 +799,9 @@ export default function CapitalAccessFacilityPage() {
                         ["bankName", t("capitalAccess.onboarding.bank"), false],
                         ["accountName", t("capitalAccess.onboarding.account"), false],
                         ["accountNumber", t("capitalAccess.onboarding.accountNumber"), false],
-                        ["iban", "IBAN", false],
-                        ["swift", "SWIFT", false],
+                        ["iban", t("capitalAccess.onboarding.ibanOptional"), false],
+                        ["swift", t("capitalAccess.onboarding.swiftRequired"), false],
+                        ["routing", t("capitalAccess.onboarding.routing"), false],
                         ["beneficiary", t("admin.capitalAccess.beneficiary"), false],
                         ["bankAddress", t("capitalAccess.onboarding.bankAddress"), true],
                         [
@@ -773,8 +846,8 @@ export default function CapitalAccessFacilityPage() {
                       submitting ||
                       !bankForm.bankName.trim() ||
                       !bankForm.accountName.trim() ||
-                      !bankForm.iban.trim() ||
-                      !bankForm.swift.trim()
+                      !bankForm.swift.trim() ||
+                      !(bankForm.iban.trim() || bankForm.accountNumber.trim())
                     }
                     className="px-6 py-3 bg-gold text-charcoal font-body rounded-sm disabled:opacity-40"
                   >

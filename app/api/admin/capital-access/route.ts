@@ -3,8 +3,8 @@ import { prisma } from "@/lib/prisma";
 import { getPoolTeaser } from "@/lib/capital-access";
 import {
   getEscrowInstructions,
+  hasCompleteKycPack,
   hasDisburseBankDetails,
-  hasRequiredDocuments,
   validateEscrowInput,
 } from "@/lib/capital-access-onboarding";
 import { sendCapitalAccessDecisionEmail } from "@/lib/capital-access-emails";
@@ -42,6 +42,7 @@ export async function GET() {
           select: { id: true, type: true, name: true, uploadedAt: true, fileSize: true },
           orderBy: { uploadedAt: "desc" },
         },
+        ubos: { orderBy: { createdAt: "asc" } },
       },
     });
 
@@ -50,7 +51,10 @@ export async function GET() {
         ...a,
         poolLabel: getPoolTeaser(a.pool.country, a.pool.category).label,
         escrow: getEscrowInstructions(a.id, a.companyName, a),
-        docsComplete: hasRequiredDocuments(a.documents.map((d) => d.type)),
+        docsComplete: hasCompleteKycPack(
+          a.documents.map((d) => d.type),
+          a.ubos.length
+        ),
         bankDetailsComplete: hasDisburseBankDetails(a),
       })),
     });
@@ -136,6 +140,7 @@ export async function PATCH(request: Request) {
         accountNumber: escrow?.accountNumber,
         iban: escrow?.iban,
         swift: escrow?.swift,
+        routing: escrow?.routing,
         beneficiary: escrow?.beneficiary,
         beneficiaryAddress: escrow?.beneficiaryAddress,
         paymentReference: escrow?.paymentReference,
@@ -161,6 +166,7 @@ export async function PATCH(request: Request) {
           escrowAccountNumber: validated.data.escrowAccountNumber,
           escrowIban: validated.data.escrowIban,
           escrowSwift: validated.data.escrowSwift,
+          escrowRouting: validated.data.escrowRouting,
           escrowBeneficiary: validated.data.escrowBeneficiary || existing.companyName,
           escrowBeneficiaryAddress: validated.data.escrowBeneficiaryAddress,
           escrowPaymentRef:
@@ -196,16 +202,16 @@ export async function PATCH(request: Request) {
     if (status === "APPROVED") {
       const withDocs = await prisma.capitalAccessRequest.findUnique({
         where: { id },
-        include: { documents: { select: { type: true } } },
+        include: { documents: { select: { type: true } }, ubos: { select: { id: true } } },
       });
       if (!withDocs) {
         return NextResponse.json({ error: "Application not found" }, { status: 404 });
       }
-      if (!hasRequiredDocuments(withDocs.documents.map((d) => d.type))) {
+      if (!hasCompleteKycPack(withDocs.documents.map((d) => d.type), withDocs.ubos.length)) {
         return NextResponse.json(
           {
             error:
-              "All five required documents must be uploaded and submitted before approval.",
+              "The required document pack and at least one beneficial owner must be on file before approval.",
           },
           { status: 400 }
         );
@@ -227,6 +233,7 @@ export async function PATCH(request: Request) {
         accountNumber: escrow?.accountNumber,
         iban: escrow?.iban,
         swift: escrow?.swift,
+        routing: escrow?.routing,
         beneficiary: escrow?.beneficiary,
         beneficiaryAddress: escrow?.beneficiaryAddress,
         paymentReference: escrow?.paymentReference,
@@ -260,6 +267,7 @@ export async function PATCH(request: Request) {
               escrowAccountNumber: escrowData.escrowAccountNumber,
               escrowIban: escrowData.escrowIban,
               escrowSwift: escrowData.escrowSwift,
+              escrowRouting: escrowData.escrowRouting,
               escrowBeneficiary: escrowData.escrowBeneficiary || existing.companyName,
               escrowBeneficiaryAddress: escrowData.escrowBeneficiaryAddress,
               escrowPaymentRef:

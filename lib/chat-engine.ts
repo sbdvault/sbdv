@@ -74,7 +74,7 @@ Portfolio oversight combining physical bullion with financial assets for private
 Three tiers — **Standard Custody**, **Executive Vault**, and **Sovereign Tier** — with access to the client portal, documents, and relationship management.
 
 **4. Capital Access Program**
-Institutional capital for qualified enterprises ($500K–$100M) from sovereign wealth pools, with structured onboarding.
+Institutional USD capital for qualified enterprises worldwide ($500K–$100M) from sovereign wealth pools, with Swiss KYC and structured onboarding.
 
 New here? Ask *"how do I get started?"* and I'll point you to the right path.`;
 }
@@ -225,7 +225,7 @@ function replyApplicationStatus(ctx: ChatUserContext): string {
     if (approved.onboardingPhase === "AWAITING_DEPOSIT") {
       reply += `\n\nYour next step is the **security deposit** (${formatUsd(approved.securityDepositUsd)}). Ask me *"how do I make the payment?"* for wire instructions.`;
     } else if (approved.onboardingPhase === "AWAITING_DOCUMENTS") {
-      reply += `\n\nPlease upload your five required documents in **Onboarding**, then click Submit Documents.`;
+      reply += `\n\nPlease upload the required documents and list beneficial owners in **Onboarding**, then click Submit Documents.`;
     } else {
       reply += `\n\nOpen **My Facility** (/en/capital-access/portal/facility) for your current onboarding step.`;
     }
@@ -275,7 +275,7 @@ function replyNextSteps(ctx: ChatUserContext): string {
     switch (facility.onboardingPhase) {
       case "AWAITING_DOCUMENTS":
       case "DOCUMENTS_REVISION":
-        return `For **${facility.company}**, upload the **five required documents** in **Onboarding** (PDF, DOC, or JPEG only):\n• Audited financial statements\n• Signed facility agreement\n• KYC / beneficial ownership disclosure\n• Capital deployment plan\n• ID / driver’s licence / passport\n\nThen click **Submit Documents**. After review and approval, you will receive escrow instructions for the 10% deposit.`;
+        return `For **${facility.company}**, upload the **required documents** in **Onboarding** (PDF, DOC, or JPEG). Local-register extracts and certified translations are accepted:\n• Audited financials (2–3 years)\n• Incorporation / commercial register\n• Articles\n• Structure chart\n• Board resolution\n• Signed facility agreement\n• Capital deployment plan\n• Signatory ID\n• Beneficial-owner list in the portal\n\nThen click **Submit Documents**. After review and approval, you will receive escrow instructions for the 10% deposit.`;
       case "DOCUMENTS_SUBMITTED":
         return `Your documentation package for **${facility.company}** has been **submitted** and is under review. No further upload is needed unless we request revisions.`;
       case "AWAITING_DEPOSIT":
@@ -498,7 +498,7 @@ function ruleBasedReply(message: string, messages: ChatMessage[], ctx: ChatUserC
       return "Upload documents in **Client Portal → Documents**. Supported statements, contracts, and compliance files are stored securely.";
     }
     if (ctx.role === "BORROWER") {
-      return "Upload five documents in **Onboarding** (PDF, DOC, or JPEG): audited financials, signed facility agreement, KYC disclosure, capital deployment plan, and ID / driver’s licence / passport. Then click **Submit Documents**. You can delete and re-upload before submitting.";
+      return "Upload the required pack in **Onboarding** (PDF, DOC, or JPEG): audited financials, local incorporation papers, articles, structure chart, board resolution, facility agreement, deployment plan, signatory ID, plus the beneficial-owner form. Then click **Submit Documents**. You can delete and re-upload before submitting.";
     }
     return "Document upload is available in the Client Portal (members) or Facility Dashboard (Capital Access partners).";
   }
@@ -513,7 +513,7 @@ function ruleBasedReply(message: string, messages: ChatMessage[], ctx: ChatUserC
   }
 
   if (q.includes("capital access") || q.includes("borrow") || q.includes("loan")) {
-    return "**Capital Access Program** — qualified enterprises can access institutional sovereign capital pools.\n\n• Request: $500K – $100M\n• Terms: 1–10 years, monthly or yearly repayment\n• **10% security deposit** after document approval\n• Apply at **/capital-access/register**\n\nFlow: documents → approval + escrow → deposit → KYC → disbursement.";
+    return "**Capital Access Program** — qualified enterprises **worldwide** can apply for institutional sovereign capital.\n\n• Request: $500K – $100M, USD\n• Terms: 1–10 years, monthly or yearly repayment\n• **10% security deposit** after document approval\n• Swiss KYC / UBO look-through (not a bank deposit)\n• Apply at **/capital-access/register**\n\nFlow: documents + UBOs → approval + escrow → deposit + origin of funds → KYC → disbursement.";
   }
 
   if (q.includes("membership") || (q.includes("apply") && !q.includes("application")) || q.includes("join")) {

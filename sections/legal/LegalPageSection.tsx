@@ -31,7 +31,11 @@ export default function LegalPageSection({
             {t(introKey)}
           </p>
           <div className="prose prose-charcoal font-body text-charcoal/70 leading-relaxed space-y-4">
-            <p>{t(bodyKey)}</p>
+            {t(bodyKey)
+              .split(/\n\n/)
+              .map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
           </div>
         </motion.div>
       </div>

@@ -10,8 +10,12 @@ import {
   MAX_REQUEST_USD,
   MIN_TERM_YEARS,
   MAX_TERM_YEARS,
+  MIN_OPERATING_YEARS,
   type RepaymentFrequency,
 } from "@/lib/capital-access";
+import { ACCOUNTING_STANDARDS } from "@/lib/capital-access-onboarding";
+import { isSanctionedCountry } from "@/lib/countries";
+import CountrySelect from "@/components/CountrySelect";
 import { ChevronLeft, ChevronRight, Calculator } from "lucide-react";
 
 interface Pool {
@@ -42,10 +46,21 @@ export default function CapitalAccessRequestPage() {
   const [companyName, setCompanyName] = useState("");
   const [companyRegistration, setCompanyRegistration] = useState("");
   const [country, setCountry] = useState("");
+  const [operatingCountry, setOperatingCountry] = useState("");
   const [industry, setIndustry] = useState("");
   const [investmentAreas, setInvestmentAreas] = useState("");
   const [financialsSummary, setFinancialsSummary] = useState("");
   const [annualRevenueUsd, setAnnualRevenueUsd] = useState("");
+  const [yearsOperating, setYearsOperating] = useState("2");
+  const [accountingStandard, setAccountingStandard] = useState("IFRS");
+  const [hasMaterialDebt, setHasMaterialDebt] = useState(false);
+  const [debtSummary, setDebtSummary] = useState("");
+  const [signatoryName, setSignatoryName] = useState("");
+  const [signatoryTitle, setSignatoryTitle] = useState("");
+  const [operatingCurrency, setOperatingCurrency] = useState("USD");
+  const [capitalControlsAttested, setCapitalControlsAttested] = useState(false);
+  const [fxRiskAcknowledged, setFxRiskAcknowledged] = useState(false);
+  const [sanctionsAttested, setSanctionsAttested] = useState(false);
   const [termsAccepted, setTermsAccepted] = useState(false);
 
   const getLocalizedHref = (href: string) =>
@@ -84,10 +99,21 @@ export default function CapitalAccessRequestPage() {
           companyName,
           companyRegistration,
           country,
+          operatingCountry,
           industry,
           investmentAreas,
           financialsSummary,
           annualRevenueUsd,
+          yearsOperating: parseInt(yearsOperating, 10),
+          accountingStandard,
+          hasMaterialDebt,
+          debtSummary,
+          signatoryName,
+          signatoryTitle,
+          capitalControlsAttested,
+          operatingCurrency,
+          fxRiskAcknowledged,
+          sanctionsAttested,
           requestedAmountUsd: parseFloat(requestedAmountUsd),
           termYears: parseInt(termYears, 10),
           repaymentFrequency,
@@ -281,8 +307,9 @@ export default function CapitalAccessRequestPage() {
             {[
               { label: t("capitalAccess.request.companyName"), value: companyName, set: setCompanyName },
               { label: t("capitalAccess.request.registration"), value: companyRegistration, set: setCompanyRegistration },
-              { label: t("capitalAccess.request.country"), value: country, set: setCountry },
               { label: t("capitalAccess.request.industry"), value: industry, set: setIndustry },
+              { label: t("capitalAccess.request.signatoryName"), value: signatoryName, set: setSignatoryName },
+              { label: t("capitalAccess.request.signatoryTitle"), value: signatoryTitle, set: setSignatoryTitle },
             ].map((field) => (
               <div key={field.label}>
                 <label className="block text-sm font-body font-medium text-charcoal mb-2">{field.label}</label>
@@ -296,6 +323,60 @@ export default function CapitalAccessRequestPage() {
             ))}
             <div>
               <label className="block text-sm font-body font-medium text-charcoal mb-2">
+                {t("capitalAccess.request.country")}
+              </label>
+              <CountrySelect value={country} onChange={setCountry} />
+            </div>
+            <div>
+              <label className="block text-sm font-body font-medium text-charcoal mb-2">
+                {t("capitalAccess.request.operatingCountry")}
+              </label>
+              <CountrySelect value={operatingCountry} onChange={setOperatingCountry} />
+            </div>
+            {(isSanctionedCountry(country) || isSanctionedCountry(operatingCountry)) && (
+              <p className="font-body text-sm text-red-700 bg-red-50 p-3 rounded-sm">
+                {t("capitalAccess.request.sanctionedCountry")}
+              </p>
+            )}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div>
+                <label className="block text-sm font-body font-medium text-charcoal mb-2">
+                  {t("capitalAccess.request.yearsOperating")}
+                </label>
+                <input
+                  type="number"
+                  min={MIN_OPERATING_YEARS}
+                  value={yearsOperating}
+                  onChange={(e) => setYearsOperating(e.target.value)}
+                  className="w-full px-4 py-3 border border-charcoal/20 rounded-sm focus:outline-none focus:border-gold font-body"
+                />
+                <p className="text-xs font-body text-charcoal/40 mt-1">
+                  {t("capitalAccess.request.yearsOperatingHint")}
+                </p>
+              </div>
+              <div>
+                <label className="block text-sm font-body font-medium text-charcoal mb-2">
+                  {t("capitalAccess.request.accountingStandard")}
+                </label>
+                <select
+                  value={accountingStandard}
+                  onChange={(e) => setAccountingStandard(e.target.value)}
+                  className="w-full px-4 py-3 border border-charcoal/20 rounded-sm focus:outline-none focus:border-gold font-body bg-white"
+                >
+                  {ACCOUNTING_STANDARDS.map((s) => (
+                    <option key={s} value={s}>
+                      {s === "IFRS"
+                        ? t("capitalAccess.request.ifrs")
+                        : s === "US_GAAP"
+                          ? t("capitalAccess.request.usGaap")
+                          : t("capitalAccess.request.localGaap")}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+            <div>
+              <label className="block text-sm font-body font-medium text-charcoal mb-2">
                 {t("capitalAccess.request.annualRevenue")} (USD)
               </label>
               <input
@@ -304,6 +385,53 @@ export default function CapitalAccessRequestPage() {
                 onChange={(e) => setAnnualRevenueUsd(e.target.value)}
                 className="w-full px-4 py-3 border border-charcoal/20 rounded-sm focus:outline-none focus:border-gold font-body"
               />
+            </div>
+            <div>
+              <p className="block text-sm font-body font-medium text-charcoal mb-2">
+                {t("capitalAccess.request.hasMaterialDebt")}
+              </p>
+              <div className="flex gap-3">
+                {[false, true].map((yes) => (
+                  <button
+                    key={String(yes)}
+                    type="button"
+                    onClick={() => setHasMaterialDebt(yes)}
+                    className={`flex-1 py-3 font-body text-sm rounded-sm border ${
+                      hasMaterialDebt === yes
+                        ? "bg-gold text-charcoal border-gold"
+                        : "border-charcoal/20 text-charcoal/70"
+                    }`}
+                  >
+                    {yes ? t("capitalAccess.request.debtYes") : t("capitalAccess.request.debtNo")}
+                  </button>
+                ))}
+              </div>
+            </div>
+            {hasMaterialDebt && (
+              <div>
+                <label className="block text-sm font-body font-medium text-charcoal mb-2">
+                  {t("capitalAccess.request.debtSummary")}
+                </label>
+                <textarea
+                  rows={2}
+                  value={debtSummary}
+                  onChange={(e) => setDebtSummary(e.target.value)}
+                  className="w-full px-4 py-3 border border-charcoal/20 rounded-sm focus:outline-none focus:border-gold font-body resize-none"
+                />
+              </div>
+            )}
+            <div>
+              <label className="block text-sm font-body font-medium text-charcoal mb-2">
+                {t("capitalAccess.request.operatingCurrency")}
+              </label>
+              <select
+                value={operatingCurrency}
+                onChange={(e) => setOperatingCurrency(e.target.value)}
+                className="w-full px-4 py-3 border border-charcoal/20 rounded-sm focus:outline-none focus:border-gold font-body bg-white"
+              >
+                <option value="USD">{t("capitalAccess.request.operatingCurrencyUsd")}</option>
+                <option value="OTHER">{t("capitalAccess.request.operatingCurrencyOther")}</option>
+              </select>
             </div>
             <div>
               <label className="block text-sm font-body font-medium text-charcoal mb-2">
@@ -331,6 +459,33 @@ export default function CapitalAccessRequestPage() {
                 className="w-full px-4 py-3 border border-charcoal/20 rounded-sm focus:outline-none focus:border-gold font-body resize-none"
               />
             </div>
+            <label className="flex items-start gap-3 font-body text-sm text-charcoal/80">
+              <input
+                type="checkbox"
+                checked={capitalControlsAttested}
+                onChange={(e) => setCapitalControlsAttested(e.target.checked)}
+                className="mt-1 accent-gold"
+              />
+              {t("capitalAccess.request.capitalControls")}
+            </label>
+            <label className="flex items-start gap-3 font-body text-sm text-charcoal/80">
+              <input
+                type="checkbox"
+                checked={fxRiskAcknowledged}
+                onChange={(e) => setFxRiskAcknowledged(e.target.checked)}
+                className="mt-1 accent-gold"
+              />
+              {t("capitalAccess.request.fxRisk")}
+            </label>
+            <label className="flex items-start gap-3 font-body text-sm text-charcoal/80">
+              <input
+                type="checkbox"
+                checked={sanctionsAttested}
+                onChange={(e) => setSanctionsAttested(e.target.checked)}
+                className="mt-1 accent-gold"
+              />
+              {t("capitalAccess.request.sanctionsAttest")}
+            </label>
           </div>
         )}
 
@@ -349,6 +504,8 @@ export default function CapitalAccessRequestPage() {
                 <div><p className="text-charcoal/50">{t("capitalAccess.securityDeposit")}</p><p className="font-medium">{formatUsd(terms?.securityDepositUsd || 0)}</p></div>
               </div>
               <div><p className="text-charcoal/50">{t("capitalAccess.request.companyName")}</p><p className="font-medium">{companyName}</p></div>
+              <div><p className="text-charcoal/50">{t("capitalAccess.request.country")}</p><p className="font-medium">{country}</p></div>
+              <div><p className="text-charcoal/50">{t("capitalAccess.request.operatingCountry")}</p><p className="font-medium">{operatingCountry}</p></div>
               <div><p className="text-charcoal/50">{t("capitalAccess.request.investmentAreas")}</p><p className="font-medium">{investmentAreas}</p></div>
             </div>
 
@@ -398,7 +555,25 @@ export default function CapitalAccessRequestPage() {
             <button
               type="button"
               onClick={() => setStep(step + 1)}
-              disabled={step === 0 && !poolId}
+              disabled={
+                (step === 0 && !poolId) ||
+                (step === 2 &&
+                  (!companyName.trim() ||
+                    !companyRegistration.trim() ||
+                    !country ||
+                    !operatingCountry ||
+                    !signatoryName.trim() ||
+                    !signatoryTitle.trim() ||
+                    !industry.trim() ||
+                    !investmentAreas.trim() ||
+                    !financialsSummary.trim() ||
+                    !capitalControlsAttested ||
+                    !fxRiskAcknowledged ||
+                    !sanctionsAttested ||
+                    parseInt(yearsOperating, 10) < MIN_OPERATING_YEARS ||
+                    isSanctionedCountry(country) ||
+                    isSanctionedCountry(operatingCountry)))
+              }
               className="flex items-center gap-1 px-6 py-2 bg-gold text-charcoal font-body text-sm rounded-sm disabled:opacity-40"
             >
               {t("capitalAccess.request.continue")} <ChevronRight className="w-4 h-4" />
@@ -407,7 +582,12 @@ export default function CapitalAccessRequestPage() {
             <button
               type="button"
               onClick={handleSubmit}
-              disabled={!termsAccepted || loading}
+              disabled={
+                !termsAccepted ||
+                loading ||
+                isSanctionedCountry(country) ||
+                isSanctionedCountry(operatingCountry)
+              }
               className="px-6 py-2 bg-gold text-charcoal font-body text-sm rounded-sm disabled:opacity-40"
             >
               {loading ? t("common.loading") : t("capitalAccess.request.submit")}

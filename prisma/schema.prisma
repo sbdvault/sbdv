@@ -221,10 +221,21 @@ model CapitalAccessRequest {
   companyName          String
   companyRegistration  String
   country              String
+  operatingCountry     String?
   industry             String
   investmentAreas      String
   financialsSummary    String
   annualRevenueUsd     Float
+  yearsOperating       Int?
+  accountingStandard   String?
+  hasMaterialDebt      Boolean  @default(false)
+  debtSummary          String?
+  signatoryName        String?
+  signatoryTitle       String?
+  capitalControlsAttested Boolean @default(false)
+  operatingCurrency    String?
+  fxRiskAcknowledged   Boolean  @default(false)
+  sanctionsAttested    Boolean  @default(false)
   requestedAmountUsd   Float
   termYears            Int
   repaymentFrequency   String
@@ -247,16 +258,24 @@ model CapitalAccessRequest {
   escrowBeneficiary    String?
   escrowBeneficiaryAddress String?
   escrowPaymentRef     String?
+  escrowRouting        String?
   depositReference     String?
   depositSubmittedAt   DateTime?
   depositConfirmedAt   DateTime?
+  depositSofSource     String?
+  depositSofDetail     String?
   kycCompletedAt       DateTime?
+  kycUboLookthrough    Boolean  @default(false)
+  kycSanctionsScreen   Boolean  @default(false)
+  kycSofAccepted       Boolean  @default(false)
+  kycEnhancedDd        Boolean  @default(false)
   disburseBankName     String?
   disburseBankAddress  String?
   disburseAccountName  String?
   disburseAccountNumber String?
   disburseIban         String?
   disburseSwift        String?
+  disburseRouting      String?
   disburseBeneficiary  String?
   disburseBeneficiaryAddress String?
   bankDetailsSubmittedAt DateTime?
@@ -270,6 +289,23 @@ model CapitalAccessRequest {
   user      User                      @relation(fields: [userId], references: [id], onDelete: Cascade)
   pool      GlobalWealthEntity        @relation(fields: [poolId], references: [id], onDelete: Cascade)
   documents CapitalAccessDocument[]
+  ubos      CapitalAccessUbo[]
+}
+
+model CapitalAccessUbo {
+  id              String   @id @default(cuid())
+  requestId       String
+  fullName        String
+  dateOfBirth     String?
+  nationality     String
+  domicileCountry String
+  ownershipPct    Float?
+  controlMethod   String
+  pep             Boolean  @default(false)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  request CapitalAccessRequest @relation(fields: [requestId], references: [id], onDelete: Cascade)
 }
 
 model CapitalAccessDocument {

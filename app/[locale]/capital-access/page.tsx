@@ -15,7 +15,7 @@ export async function generateMetadata({
   return {
     title: "Capital Access Program | Swiss Bullion Depository Vault",
     description:
-      "Access institutional sovereign capital for qualified enterprises. Structured lending with transparent terms, security deposit, and mandate-aligned investment.",
+      "Qualified enterprises worldwide may apply for institutional capital. Structured USD facilities with Swiss KYC, a 10% security deposit, and mandate-aligned investment.",
   };
 }
 

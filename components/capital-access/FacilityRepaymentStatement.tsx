@@ -12,6 +12,7 @@ type EscrowAccount = {
   accountNumber: string | null;
   iban: string;
   swift: string;
+  routing?: string | null;
   reference: string;
   beneficiary: string;
   beneficiaryAddress: string | null;

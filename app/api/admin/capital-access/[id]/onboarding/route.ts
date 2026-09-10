@@ -2,9 +2,10 @@ import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import {
   getNextAdminAction,
+  hasCompleteKycPack,
   hasDisburseBankDetails,
   hasPaymentSlip,
-  hasRequiredDocuments,
+  kycChecklistComplete,
 } from "@/lib/capital-access-onboarding";
 import { sendOnboardingPhaseEmail, sendRepaymentConfirmedEmail } from "@/lib/capital-access-onboarding-emails";
 import {
@@ -25,7 +26,7 @@ export async function PATCH(
 
   const { id } = await params;
   const body = await request.json();
-  const { action, relationshipManager } = body;
+  const { action, relationshipManager, kyc } = body;
 
   try {
     const facility = await prisma.capitalAccessRequest.findUnique({
@@ -33,11 +34,25 @@ export async function PATCH(
       include: {
         user: { select: { email: true, name: true } },
         documents: true,
+        ubos: { select: { id: true } },
       },
     });
 
     if (!facility || facility.status !== "APPROVED") {
       return NextResponse.json({ error: "Approved facility not found" }, { status: 404 });
+    }
+
+    if (action === "kyc_checklist") {
+      const updated = await prisma.capitalAccessRequest.update({
+        where: { id },
+        data: {
+          kycUboLookthrough: Boolean(kyc?.ubo),
+          kycSanctionsScreen: Boolean(kyc?.sanctions),
+          kycSofAccepted: Boolean(kyc?.sof),
+          kycEnhancedDd: Boolean(kyc?.enhancedDd),
+        },
+      });
+      return NextResponse.json({ facility: updated });
     }
 
     if (action === "confirm_deposit" || action === "advance") {
@@ -59,17 +74,30 @@ export async function PATCH(
             { status: 400 }
           );
         }
+        if (!facility.depositSofSource) {
+          return NextResponse.json(
+            { error: "Borrower has not declared origin of the security deposit" },
+            { status: 400 }
+          );
+        }
         // Legacy: if docs were never collected before approval, collect them next
-        if (!hasRequiredDocuments(facility.documents.map((d) => d.type))) {
+        if (!hasCompleteKycPack(facility.documents.map((d) => d.type), facility.ubos.length)) {
           nextPhase = "AWAITING_DOCUMENTS";
         }
       }
 
       if (
         facility.onboardingPhase === "AWAITING_DOCUMENTS" &&
-        !hasRequiredDocuments(facility.documents.map((d) => d.type))
+        !hasCompleteKycPack(facility.documents.map((d) => d.type), facility.ubos.length)
       ) {
         return NextResponse.json({ error: "Required documents not yet uploaded" }, { status: 400 });
+      }
+
+      if (facility.onboardingPhase === "KYC_REVIEW" && !kycChecklistComplete(facility)) {
+        return NextResponse.json(
+          { error: "Complete the KYC checklist (UBO, sanctions, origin of funds) before advancing" },
+          { status: 400 }
+        );
       }
 
       if (

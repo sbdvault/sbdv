@@ -5,6 +5,7 @@ export const MIN_REQUEST_USD = 500_000;
 export const MAX_REQUEST_USD = 100_000_000;
 export const MIN_TERM_YEARS = 1;
 export const MAX_TERM_YEARS = 10;
+export const MIN_OPERATING_YEARS = 2;
 
 export type RepaymentFrequency = "MONTHLY" | "YEARLY";
 

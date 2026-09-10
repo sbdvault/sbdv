@@ -6,11 +6,13 @@ import {
   MAX_REQUEST_USD,
   MIN_TERM_YEARS,
   MAX_TERM_YEARS,
+  MIN_OPERATING_YEARS,
   type RepaymentFrequency,
 } from "@/lib/capital-access";
 import { sendCapitalAccessSubmissionEmails } from "@/lib/capital-access-emails";
 import { sendOnboardingPhaseEmail } from "@/lib/capital-access-onboarding-emails";
-import { hasRequiredDocuments } from "@/lib/capital-access-onboarding";
+import { ACCOUNTING_STANDARDS, hasCompleteKycPack } from "@/lib/capital-access-onboarding";
+import { isSanctionedCountry } from "@/lib/countries";
 import { sendNotifications } from "@/lib/email";
 import { NextResponse } from "next/server";
 
@@ -27,13 +29,17 @@ export async function GET() {
       include: {
         pool: { select: { country: true, region: true, category: true } },
         documents: { select: { type: true } },
+        ubos: { select: { id: true } },
       },
     });
 
     return NextResponse.json({
       applications: applications.map((a) => ({
         ...a,
-        docsComplete: hasRequiredDocuments(a.documents.map((d) => d.type)),
+        docsComplete: hasCompleteKycPack(
+          a.documents.map((d) => d.type),
+          a.ubos.length
+        ),
         needsDocuments:
           a.onboardingPhase === "AWAITING_DOCUMENTS" ||
           a.onboardingPhase === "DOCUMENTS_REVISION",
@@ -63,10 +69,21 @@ export async function POST(request: Request) {
       companyName,
       companyRegistration,
       country,
+      operatingCountry,
       industry,
       investmentAreas,
       financialsSummary,
       annualRevenueUsd,
+      yearsOperating,
+      accountingStandard,
+      hasMaterialDebt,
+      debtSummary,
+      signatoryName,
+      signatoryTitle,
+      capitalControlsAttested,
+      operatingCurrency,
+      fxRiskAcknowledged,
+      sanctionsAttested,
       requestedAmountUsd,
       termYears,
       repaymentFrequency,
@@ -78,6 +95,9 @@ export async function POST(request: Request) {
       !companyName?.trim() ||
       !companyRegistration?.trim() ||
       !country ||
+      !operatingCountry ||
+      !signatoryName?.trim() ||
+      !signatoryTitle?.trim() ||
       !industry?.trim() ||
       !investmentAreas?.trim() ||
       !financialsSummary?.trim() ||
@@ -88,6 +108,29 @@ export async function POST(request: Request) {
     ) {
       return NextResponse.json({ error: "All required fields must be completed" }, { status: 400 });
     }
+
+    if (isSanctionedCountry(country) || isSanctionedCountry(operatingCountry)) {
+      return NextResponse.json(
+        { error: "SBDV cannot onboard applicants in comprehensively sanctioned jurisdictions." },
+        { status: 400 }
+      );
+    }
+
+    const years = parseInt(yearsOperating, 10);
+    if (!years || years < MIN_OPERATING_YEARS) {
+      return NextResponse.json(
+        { error: `A minimum of ${MIN_OPERATING_YEARS} years of operating history is required.` },
+        { status: 400 }
+      );
+    }
+
+    if (!capitalControlsAttested || !fxRiskAcknowledged || !sanctionsAttested) {
+      return NextResponse.json({ error: "Please complete all attestations before submitting." }, { status: 400 });
+    }
+
+    const standard = (ACCOUNTING_STANDARDS as readonly string[]).includes(accountingStandard)
+      ? accountingStandard
+      : "LOCAL_GAAP";
 
     const amount = parseFloat(requestedAmountUsd);
     const term = parseInt(termYears, 10);
@@ -121,10 +164,21 @@ export async function POST(request: Request) {
         companyName: companyName.trim(),
         companyRegistration: companyRegistration.trim(),
         country,
+        operatingCountry,
         industry: industry.trim(),
         investmentAreas: investmentAreas.trim(),
         financialsSummary: financialsSummary.trim(),
         annualRevenueUsd: parseFloat(annualRevenueUsd) || 0,
+        yearsOperating: years,
+        accountingStandard: standard,
+        hasMaterialDebt: Boolean(hasMaterialDebt),
+        debtSummary: typeof debtSummary === "string" ? debtSummary.trim() || null : null,
+        signatoryName: signatoryName.trim(),
+        signatoryTitle: signatoryTitle.trim(),
+        capitalControlsAttested: true,
+        operatingCurrency: operatingCurrency === "USD" ? "USD" : "OTHER",
+        fxRiskAcknowledged: true,
+        sanctionsAttested: true,
         requestedAmountUsd: amount,
         termYears: term,
         repaymentFrequency,

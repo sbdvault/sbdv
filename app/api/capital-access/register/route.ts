@@ -3,6 +3,7 @@ import bcrypt from "bcryptjs";
 import { NextResponse } from "next/server";
 import { sendCapitalAccessWelcomeEmail } from "@/lib/capital-access-emails";
 import { sendNotifications } from "@/lib/email";
+import { isSanctionedCountry } from "@/lib/countries";
 
 export async function POST(request: Request) {
   const body = await request.json();
@@ -10,6 +11,13 @@ export async function POST(request: Request) {
 
   if (!name?.trim() || !email?.trim() || !password || !companyName?.trim() || !country) {
     return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
+  }
+
+  if (isSanctionedCountry(country)) {
+    return NextResponse.json(
+      { error: "SBDV cannot onboard applicants in comprehensively sanctioned jurisdictions." },
+      { status: 400 }
+    );
   }
 
   if (password.length < 8) {

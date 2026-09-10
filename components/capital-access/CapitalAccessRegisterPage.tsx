@@ -6,6 +6,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useTranslations } from "@/hooks/useTranslations";
 import Logo from "@/components/Logo";
+import CountrySelect from "@/components/CountrySelect";
+import { isSanctionedCountry } from "@/lib/countries";
 import { Building2, AlertCircle, CheckCircle2 } from "lucide-react";
 
 export default function CapitalAccessRegisterPage() {
@@ -30,6 +32,12 @@ export default function CapitalAccessRegisterPage() {
     e.preventDefault();
     setLoading(true);
     setError("");
+
+    if (isSanctionedCountry(form.country)) {
+      setError(t("capitalAccess.request.sanctionedCountry"));
+      setLoading(false);
+      return;
+    }
 
     const regRes = await fetch("/api/capital-access/register", {
       method: "POST",
@@ -107,7 +115,6 @@ export default function CapitalAccessRegisterPage() {
               { key: "email", label: t("login.email"), type: "email" },
               { key: "password", label: t("login.password"), type: "password" },
               { key: "companyName", label: t("capitalAccess.request.companyName"), type: "text" },
-              { key: "country", label: t("capitalAccess.request.country"), type: "text" },
               { key: "phone", label: t("capitalAccess.register.phone"), type: "tel" },
             ].map((field) => (
               <div key={field.key}>
@@ -124,6 +131,15 @@ export default function CapitalAccessRegisterPage() {
                 />
               </div>
             ))}
+            <div>
+              <label className="block text-sm font-body font-medium text-charcoal mb-1">
+                {t("capitalAccess.request.country")}
+              </label>
+              <CountrySelect
+                value={form.country}
+                onChange={(country) => setForm({ ...form, country })}
+              />
+            </div>
 
             <button
               type="submit"

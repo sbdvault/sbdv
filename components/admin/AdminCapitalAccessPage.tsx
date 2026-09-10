@@ -4,9 +4,10 @@ import { useEffect, useState } from "react";
 import { useTranslations } from "@/hooks/useTranslations";
 import {
   getNextAdminAction,
+  hasCompleteKycPack,
   hasDisburseBankDetails,
   hasPaymentSlip,
-  hasRequiredDocuments,
+  kycChecklistComplete,
   ONBOARDING_PHASES,
   PAYMENT_SLIP_TYPE,
   REQUIRED_DOCUMENT_TYPES,
@@ -18,6 +19,8 @@ interface Application {
   id: string;
   companyName: string;
   country: string;
+  operatingCountry?: string | null;
+  yearsOperating?: number | null;
   industry: string;
   requestedAmountUsd: number;
   interestRatePct: number;
@@ -46,9 +49,25 @@ interface Application {
   disburseAccountNumber?: string | null;
   disburseIban?: string | null;
   disburseSwift?: string | null;
+  disburseRouting?: string | null;
   disburseBeneficiary?: string | null;
   disburseBeneficiaryAddress?: string | null;
   bankDetailsSubmittedAt?: string | null;
+  depositSofSource?: string | null;
+  depositSofDetail?: string | null;
+  kycUboLookthrough?: boolean;
+  kycSanctionsScreen?: boolean;
+  kycSofAccepted?: boolean;
+  kycEnhancedDd?: boolean;
+  ubos?: {
+    id: string;
+    fullName: string;
+    nationality: string;
+    domicileCountry: string;
+    ownershipPct: number | null;
+    controlMethod: string;
+    pep: boolean;
+  }[];
   user: { name: string | null; email: string };
   documents: { id: string; type: string; name: string; uploadedAt?: string }[];
   escrow: {
@@ -58,6 +77,7 @@ interface Application {
     accountNumber: string | null;
     iban: string;
     swift: string;
+    routing?: string | null;
     reference: string;
     beneficiary: string;
     beneficiaryAddress: string | null;
@@ -73,6 +93,7 @@ interface EscrowForm {
   accountNumber: string;
   iban: string;
   swift: string;
+  routing: string;
   beneficiary: string;
   beneficiaryAddress: string;
   paymentReference: string;
@@ -92,8 +113,9 @@ function EscrowFieldsForm({
     ["bankAddress", t("capitalAccess.onboarding.bankAddress")],
     ["accountName", t("capitalAccess.onboarding.account")],
     ["accountNumber", t("capitalAccess.onboarding.accountNumber")],
-    ["iban", "IBAN"],
-    ["swift", "SWIFT"],
+    ["iban", t("capitalAccess.onboarding.ibanOptional")],
+    ["swift", t("capitalAccess.onboarding.swiftRequired")],
+    ["routing", t("capitalAccess.onboarding.routing")],
     ["beneficiary", t("admin.capitalAccess.beneficiary")],
     ["beneficiaryAddress", t("capitalAccess.onboarding.beneficiaryAddress")],
     ["paymentReference", t("capitalAccess.onboarding.wireReference")],
@@ -118,7 +140,13 @@ function EscrowFieldsForm({
                 value={form[key]}
                 onChange={(e) => onChange({ ...form, [key]: e.target.value })}
                 className="mt-1 w-full px-3 py-2.5 border border-charcoal/20 rounded-sm font-body text-sm focus:outline-none focus:border-gold"
-                required={key !== "beneficiary" && key !== "paymentReference" && key !== "accountNumber"}
+                required={
+                  key !== "beneficiary" &&
+                  key !== "paymentReference" &&
+                  key !== "accountNumber" &&
+                  key !== "iban" &&
+                  key !== "routing"
+                }
               />
             )}
           </label>
@@ -141,6 +169,7 @@ export default function AdminCapitalAccessPage() {
     accountNumber: "",
     iban: "",
     swift: "",
+    routing: "",
     beneficiary: "",
     beneficiaryAddress: "",
     paymentReference: "",
@@ -175,6 +204,7 @@ export default function AdminCapitalAccessPage() {
       accountNumber: app.escrow.accountNumber || "",
       iban: app.escrow.configured ? app.escrow.iban : "",
       swift: app.escrow.configured ? app.escrow.swift : "",
+      routing: app.escrow.routing || "",
       beneficiary: app.escrow.beneficiary || app.companyName,
       beneficiaryAddress: app.escrow.beneficiaryAddress || "",
       paymentReference: app.escrow.reference || `CAP-${app.id.slice(-8).toUpperCase()}`,
@@ -282,6 +312,26 @@ export default function AdminCapitalAccessPage() {
     loadData();
   };
 
+  const saveKycChecklist = async (
+    id: string,
+    next: { ubo: boolean; sanctions: boolean; sof: boolean; enhancedDd: boolean }
+  ) => {
+    setSaving(true);
+    setError("");
+    const res = await fetch(`/api/admin/capital-access/${id}/onboarding`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ action: "kyc_checklist", kyc: next }),
+    });
+    const json = await res.json();
+    setSaving(false);
+    if (!res.ok) {
+      setError(json.error || t("admin.capitalAccess.error"));
+      return;
+    }
+    loadData();
+  };
+
   const recordInstallment = async (id: string) => {
     setSaving(true);
     setError("");
@@ -330,7 +380,9 @@ export default function AdminCapitalAccessPage() {
             const canApprove = app.status === "PENDING" || app.status === "UNDER_REVIEW";
             const needsEscrow = app.status === "APPROVED" && !app.escrow.configured;
             const nextPhase = app.onboardingPhase ? getNextAdminAction(app.onboardingPhase) : null;
-            const docsComplete = hasRequiredDocuments(app.documents.map((d) => d.type));
+            const docsComplete =
+              app.docsComplete ??
+              hasCompleteKycPack(app.documents.map((d) => d.type), app.ubos?.length ?? 0);
             const paymentSlip = app.documents.find((d) => d.type === PAYMENT_SLIP_TYPE);
             const slipReady = hasPaymentSlip(app.documents.map((d) => d.type));
             const phaseIndex = app.onboardingPhase
@@ -360,7 +412,8 @@ export default function AdminCapitalAccessPage() {
               !awaitingDeposit &&
               app.onboardingPhase !== "AWAITING_DOCUMENTS" &&
               app.onboardingPhase !== "DOCUMENTS_REVISION" &&
-              !(awaitingBank && !bankReady);
+              !(awaitingBank && !bankReady) &&
+              !(app.onboardingPhase === "KYC_REVIEW" && !kycChecklistComplete(app));
 
             return (
               <div
@@ -373,7 +426,11 @@ export default function AdminCapitalAccessPage() {
                   <div>
                     <p className="font-heading font-semibold text-charcoal text-lg">{app.companyName}</p>
                     <p className="font-body text-sm text-charcoal/60">
-                      {app.user.name || app.user.email} · {app.country} · {app.industry}
+                      {app.user.name || app.user.email} · {app.country}
+                      {app.operatingCountry && app.operatingCountry !== app.country
+                        ? ` / ${app.operatingCountry}`
+                        : ""}{" "}
+                      · {app.industry}
                     </p>
                     <p className="font-body text-xs text-gold mt-1">{app.poolLabel}</p>
                   </div>
@@ -469,6 +526,26 @@ export default function AdminCapitalAccessPage() {
                       );
                     })}
                   </ul>
+                  {(app.ubos?.length ?? 0) > 0 ? (
+                    <div className="mt-4 pt-3 border-t border-charcoal/10">
+                      <p className="font-body text-xs uppercase tracking-wide text-charcoal/40 mb-2">
+                        {t("admin.capitalAccess.uboTitle")}
+                      </p>
+                      <ul className="space-y-1">
+                        {app.ubos!.map((u) => (
+                          <li key={u.id} className="text-sm font-body text-charcoal/70">
+                            {u.fullName} · {u.nationality}
+                            {u.ownershipPct != null ? ` · ${u.ownershipPct}%` : ""}
+                            {u.pep ? " · PEP" : ""}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : (
+                    <p className="mt-3 font-body text-xs text-amber-700">
+                      {t("admin.capitalAccess.uboIncomplete")}
+                    </p>
+                  )}
                   {docsSubmitted && (
                     <p className="mt-3 font-body text-xs text-green-800 bg-green-50 p-2 rounded-sm">
                       {t("admin.capitalAccess.packageReceived")}
@@ -687,17 +764,63 @@ export default function AdminCapitalAccessPage() {
                             {t("admin.capitalAccess.noPaymentSlip")}
                           </p>
                         )}
+                        {app.depositSofSource ? (
+                          <p className="font-body text-sm text-charcoal/70">
+                            {t("admin.capitalAccess.sofLabel")}: {app.depositSofSource}
+                            {app.depositSofDetail ? ` — ${app.depositSofDetail}` : ""}
+                          </p>
+                        ) : app.depositSubmittedAt ? (
+                          <p className="font-body text-sm text-amber-700">
+                            {t("admin.capitalAccess.sofMissing")}
+                          </p>
+                        ) : null}
                       </div>
                     )}
 
                     {awaitingDeposit && app.depositSubmittedAt && slipReady && (
                       <button
                         onClick={() => advanceOnboarding(app.id, true)}
-                        disabled={saving}
+                        disabled={saving || !app.depositSofSource}
                         className="mt-2 px-4 py-2 bg-gold text-charcoal font-body text-sm rounded-sm disabled:opacity-50"
                       >
                         {t("admin.capitalAccess.confirmPayment")}
                       </button>
+                    )}
+
+                    {app.onboardingPhase === "KYC_REVIEW" && (
+                      <div className="mb-3 p-3 bg-white border border-charcoal/10 rounded-sm space-y-2">
+                        <p className="text-xs uppercase tracking-wide text-charcoal/40">
+                          {t("admin.capitalAccess.kycChecklist")}
+                        </p>
+                        {(
+                          [
+                            ["ubo", "kycUbo", app.kycUboLookthrough],
+                            ["sanctions", "kycSanctions", app.kycSanctionsScreen],
+                            ["sof", "kycSof", app.kycSofAccepted],
+                            ["enhancedDd", "kycEdd", app.kycEnhancedDd],
+                          ] as const
+                        ).map(([key, label, checked]) => (
+                          <label key={key} className="flex items-center gap-2 font-body text-sm text-charcoal/80">
+                            <input
+                              type="checkbox"
+                              checked={Boolean(checked)}
+                              disabled={saving}
+                              onChange={(e) =>
+                                saveKycChecklist(app.id, {
+                                  ubo: key === "ubo" ? e.target.checked : Boolean(app.kycUboLookthrough),
+                                  sanctions:
+                                    key === "sanctions" ? e.target.checked : Boolean(app.kycSanctionsScreen),
+                                  sof: key === "sof" ? e.target.checked : Boolean(app.kycSofAccepted),
+                                  enhancedDd:
+                                    key === "enhancedDd" ? e.target.checked : Boolean(app.kycEnhancedDd),
+                                })
+                              }
+                              className="accent-gold"
+                            />
+                            {t(`admin.capitalAccess.${label}`)}
+                          </label>
+                        ))}
+                      </div>
                     )}
 
                     {(awaitingBank || bankReady) &&

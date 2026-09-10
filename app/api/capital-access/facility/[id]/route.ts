@@ -4,9 +4,10 @@ import { getPoolTeaser } from "@/lib/capital-access";
 import { FACILITY_TERMS_VERSION } from "@/lib/facility-terms";
 import {
   canBorrowerUploadDocuments,
+  DEPOSIT_SOF_SOURCES,
   getEscrowInstructions,
+  hasCompleteKycPack,
   hasDisburseBankDetails,
-  hasRequiredDocuments,
   ONBOARDING_PHASES,
   PAYMENT_SLIP_TYPE,
   REPAYMENT_SLIP_TYPE,
@@ -51,6 +52,7 @@ export async function GET(
       include: {
         pool: { select: { country: true, category: true } },
         documents: { orderBy: { uploadedAt: "desc" } },
+        ubos: { orderBy: { createdAt: "asc" } },
       },
     });
 
@@ -78,7 +80,11 @@ export async function GET(
         poolLabel: getPoolTeaser(facility.pool.country, facility.pool.category).label,
         escrow: getEscrowInstructions(facility.id, facility.companyName, facility),
         paymentSlip: facility.documents.find((d) => d.type === PAYMENT_SLIP_TYPE) || null,
-        docsComplete: hasRequiredDocuments(facility.documents.map((d) => d.type)),
+        docsComplete: hasCompleteKycPack(
+          facility.documents.map((d) => d.type),
+          facility.ubos.length
+        ),
+        ubos: facility.ubos,
         bankDetailsComplete: hasDisburseBankDetails(facility),
         canUploadDocuments: canBorrowerUploadDocuments(facility.status, facility.onboardingPhase),
         phases: ONBOARDING_PHASES,
@@ -101,7 +107,7 @@ export async function PATCH(
 
   const { id } = await params;
   const body = await request.json();
-  const { depositReference, action, bank, reference, facilityTermsAccepted } = body;
+  const { depositReference, action, bank, reference, facilityTermsAccepted, depositSofSource, depositSofDetail } = body;
 
   try {
     if (action === "submit_documents") {
@@ -114,6 +120,7 @@ export async function PATCH(
         },
         include: {
           documents: true,
+          ubos: true,
           user: { select: { email: true, name: true } },
         },
       });
@@ -125,9 +132,9 @@ export async function PATCH(
         );
       }
 
-      if (!hasRequiredDocuments(facility.documents.map((d) => d.type))) {
+      if (!hasCompleteKycPack(facility.documents.map((d) => d.type), facility.ubos.length)) {
         return NextResponse.json(
-          { error: "Upload all five required documents before submitting" },
+          { error: "Upload the required documents and at least one beneficial owner before submitting" },
           { status: 400 }
         );
       }
@@ -186,6 +193,7 @@ export async function PATCH(
         accountNumber: bank?.accountNumber,
         iban: bank?.iban,
         swift: bank?.swift,
+        routing: bank?.routing,
         beneficiary: bank?.beneficiary,
         beneficiaryAddress: bank?.beneficiaryAddress,
       });
@@ -347,6 +355,14 @@ export async function PATCH(
       );
     }
 
+    const sofSource = typeof depositSofSource === "string" ? depositSofSource.trim() : "";
+    if (!(DEPOSIT_SOF_SOURCES as readonly string[]).includes(sofSource)) {
+      return NextResponse.json(
+        { error: "Origin of funds is required before you submit the deposit." },
+        { status: 400 }
+      );
+    }
+
     const updated = await prisma.capitalAccessRequest.update({
       where: { id },
       data: {
@@ -354,6 +370,8 @@ export async function PATCH(
         depositSubmittedAt: new Date(),
         facilityTermsAcceptedAt: new Date(),
         facilityTermsVersion: FACILITY_TERMS_VERSION,
+        depositSofSource: sofSource,
+        depositSofDetail: typeof depositSofDetail === "string" ? depositSofDetail.trim() || null : null,
       },
     });
 

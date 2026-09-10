@@ -17,15 +17,19 @@ const phaseMessages: Record<string, { subject: string; title: string; body: stri
   AWAITING_DOCUMENTS: {
     subject: "Capital Access — Submit Required Documents",
     title: "Submit your documentation package",
-    body: `<p>Your capital access request has been received. Upload the <strong>five</strong> required documents in your <strong>Onboarding</strong> dashboard, then click <strong>Submit Documents</strong>:</p>
+    body: `<p>Your capital access request has been received. In <strong>Onboarding</strong>, upload the required documents (local-register equivalents and certified translations are accepted), list every ultimate beneficial owner, then click <strong>Submit Documents</strong>:</p>
     <ul>
-      <li>Audited Financial Statements</li>
+      <li>Audited financial statements (2–3 years)</li>
+      <li>Commercial register extract or certificate of incorporation</li>
+      <li>Articles / constitutional documents</li>
+      <li>Corporate structure chart</li>
+      <li>Board resolution / signatory authority</li>
       <li>Signed Facility Agreement</li>
-      <li>KYC / Beneficial Ownership Disclosure</li>
-      <li>Capital Deployment Plan</li>
-      <li>Government ID / Driver’s Licence / Passport</li>
+      <li>Capital deployment plan</li>
+      <li>Signatory passport or government ID</li>
+      <li>Beneficial-owner list (in the portal)</li>
     </ul>
-    <p>Accepted formats: <strong>PDF, DOC, or JPEG</strong>.</p>`,
+    <p>Accepted formats: <strong>PDF, DOC, or JPEG</strong>. Applicants worldwide may use home-country documents.</p>`,
   },
   DOCUMENTS_REVISION: {
     subject: "Capital Access — Additional Documents Required",
@@ -51,7 +55,7 @@ const phaseMessages: Record<string, { subject: string; title: string; body: stri
   AWAITING_BANK_DETAILS: {
     subject: "KYC Complete — Submit Disbursement Bank Details",
     title: "Submit your disbursement bank account",
-    body: `<p>KYC review is complete. Please open <strong>Onboarding</strong> and submit the bank account where we should disburse your approved facility amount (bank name, account name, IBAN, and SWIFT are required).</p>`,
+    body: `<p>KYC review is complete. Please open <strong>Onboarding</strong> and submit the bank account in the borrower’s name where we should disburse your approved facility amount. SWIFT/BIC is required. Provide an IBAN if your bank uses one; otherwise enter the local account number and routing code.</p>`,
   },
   READY_FOR_DISBURSEMENT: {
     subject: "Bank Details Received — Disbursement Pending",
@@ -210,7 +214,7 @@ export async function sendDocumentsSubmittedEmail(
     subject: `[Action] Documents Submitted — ${companyName}`,
     html: emailLayout(
       "Borrower submitted documentation package",
-      `<p><strong>${companyName}</strong> has submitted all five required documents for review.</p>
+      `<p><strong>${companyName}</strong> has submitted the documentation package and beneficial-owner list for review.</p>
        <p><a href="${siteUrl}/en/admin/capital-access" style="display:inline-block;padding:12px 24px;background:#D4AF37;color:#1a1a1a;text-decoration:none;font-weight:bold;">Review in Admin</a></p>
        <p style="font-size:12px;color:#888;">Application ID: ${applicationId}</p>`
     ),

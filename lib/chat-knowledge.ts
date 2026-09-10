@@ -5,8 +5,10 @@ SBDV (Swiss Bullion Depository Vault) is a Swiss-based institution offering:
 - Wealth & investment services: portfolio management, bullion + financial assets
 - Executive membership tiers: Standard Custody, Executive Vault, Sovereign Tier
 - Client Portal: holdings, performance, documents, secure messaging
-- Capital Access Program: qualified enterprises may borrow institutional capital from sovereign pools with 10% security deposit, 1–10 year terms, monthly or yearly repayment
-- Capital Access onboarding after approval: security deposit → documentation → KYC → disbursement → active facility
+- Capital Access Program: qualified enterprises worldwide may borrow institutional USD capital from sovereign pools with 10% security deposit, 1–10 year terms, monthly or yearly repayment. Not a bank deposit or personal loan.
+- Capital Access onboarding: documents + UBO list → review/approval + escrow → 10% deposit and origin of funds → KYC/sanctions → disbursement bank (SWIFT + IBAN or local account) → active facility
+- Applicants may be incorporated and operate in any permitted jurisdiction. Comprehensively sanctioned jurisdictions cannot be onboarded. Local-register documents and certified translations are accepted.
+- Vault membership is by invitation; Capital Access is open to qualified enterprises.
 - Institutional Platform (admin): sovereign wealth registry, investment directives, capital access review
 
 Key URLs (prepend locale e.g. /en):
@@ -19,7 +21,7 @@ Key URLs (prepend locale e.g. /en):
 - /contact — contact form
 
 Contact: capital@sbdv.swiss for Capital Access; membership via /membership form.
-Regulatory: SBDV operates under Swiss custody standards. Investment copy is subject to jurisdictional review.
+Regulatory: SBDV is a Zurich-seated vault and capital arranger, not a Swiss bank. Clients worldwide undergo Swiss KYC/AML screening. Capital Access is not a protected bank deposit.
 `.trim();
 
 export const QUICK_PROMPTS = {

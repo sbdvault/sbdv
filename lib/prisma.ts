@@ -38,14 +38,26 @@ function pinOpenSsl3QueryEngine() {
 
 pinOpenSsl3QueryEngine();
 
+/** Bump when Prisma schema relations/fields change so the dev singleton is not reused. */
+const PRISMA_SCHEMA_STAMP = "capital-access-ubo-v1";
+
 const globalForPrisma = globalThis as unknown as {
   prisma: PrismaClient | undefined;
+  prismaStamp?: string;
 };
 
-export const prisma =
-  globalForPrisma.prisma ??
-  new PrismaClient({
+function createPrismaClient() {
+  return new PrismaClient({
     log: process.env.NODE_ENV === "development" ? ["error", "warn"] : ["error"],
   });
+}
 
-if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;
+export const prisma =
+  globalForPrisma.prismaStamp === PRISMA_SCHEMA_STAMP && globalForPrisma.prisma
+    ? globalForPrisma.prisma
+    : createPrismaClient();
+
+if (process.env.NODE_ENV !== "production") {
+  globalForPrisma.prisma = prisma;
+  globalForPrisma.prismaStamp = PRISMA_SCHEMA_STAMP;
+}

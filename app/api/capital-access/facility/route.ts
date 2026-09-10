@@ -4,8 +4,8 @@ import { getPoolTeaser } from "@/lib/capital-access";
 import {
   canBorrowerUploadDocuments,
   getEscrowInstructions,
+  hasCompleteKycPack,
   hasDisburseBankDetails,
-  hasRequiredDocuments,
   ONBOARDING_PHASES,
   PAYMENT_SLIP_TYPE,
 } from "@/lib/capital-access-onboarding";
@@ -54,6 +54,7 @@ export async function GET() {
       include: {
         pool: { select: { country: true, category: true } },
         documents: { orderBy: { uploadedAt: "desc" } },
+        ubos: { orderBy: { createdAt: "asc" } },
       },
     });
 
@@ -84,16 +85,23 @@ export async function GET() {
         disburseAccountNumber: f.disburseAccountNumber,
         disburseIban: f.disburseIban,
         disburseSwift: f.disburseSwift,
+        disburseRouting: f.disburseRouting,
         disburseBeneficiary: f.disburseBeneficiary,
         disburseBeneficiaryAddress: f.disburseBeneficiaryAddress,
         bankDetailsSubmittedAt: f.bankDetailsSubmittedAt,
+        depositSofSource: f.depositSofSource,
+        depositSofDetail: f.depositSofDetail,
         installmentPayments: f.installmentPayments,
         bankDetailsComplete: hasDisburseBankDetails(f),
         poolLabel: getPoolTeaser(f.pool.country, f.pool.category).label,
         escrow: getEscrowInstructions(f.id, f.companyName, f),
         documents: f.documents,
+        ubos: f.ubos,
         paymentSlip: f.documents.find((d) => d.type === PAYMENT_SLIP_TYPE) || null,
-        docsComplete: hasRequiredDocuments(f.documents.map((d) => d.type)),
+        docsComplete: hasCompleteKycPack(
+          f.documents.map((d) => d.type),
+          f.ubos.length
+        ),
         canUploadDocuments: canBorrowerUploadDocuments(f.status, f.onboardingPhase),
         phases: ONBOARDING_PHASES,
       })),

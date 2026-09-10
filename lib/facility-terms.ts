@@ -23,7 +23,7 @@ export const facilityTermsArticles: FacilityTermsArticle[] = [
     id: "nature",
     title: "2. Nature of the facility",
     paragraphs: [
-      "The Facility is a structured capital facility for a qualified enterprise. It is not a bank deposit, a retail loan, a public offering, or an invitation to the general public. Capital is made available only after institutional review, documentation, security, and compliance conditions have been satisfied.",
+      "The Facility is a structured capital facility for a qualified enterprise. Qualified enterprises worldwide may apply. It is not a bank deposit, a retail consumer loan, or a public securities offering. Capital is made available only after institutional review, documentation, security, and compliance conditions have been satisfied.",
       "Nothing on the SBDV website, in the partner portal, or in correspondence is a commitment to lend until SBDV has approved the application in writing (including by status in the facility dashboard) and the conditions in Article 5 have been met.",
       "SBDV does not provide investment, tax, or legal advice. You must obtain independent advice appropriate to your jurisdiction before accepting these Terms.",
     ],
