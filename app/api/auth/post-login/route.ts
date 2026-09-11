@@ -1,10 +1,11 @@
 import { auth } from "@/auth";
+import { clearAuthCookies } from "@/lib/auth-cookies";
 import {
   jwtEmail,
   readAllAuthTokens,
   redirectToAppPath,
 } from "@/lib/request-origin";
-import { NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 export const dynamic = "force-dynamic";
 export const fetchCache = "force-no-store";
@@ -30,10 +31,15 @@ function pathForRole(locale: string, role: string | undefined): string {
   return `/${locale}/portal`;
 }
 
+function withClearedCookies(response: NextResponse): NextResponse {
+  clearAuthCookies(response);
+  return response;
+}
+
 /**
- * Full-page redirect after credentials sign-in.
- * Prefer the JWT/session whose email matches `email=` so a leftover cookie for
- * another role cannot send the user to the wrong portal.
+ * Redirect after credentials sign-in.
+ * `email=` is required to pick the correct role when multiple cookies exist.
+ * Never fall back to another user's role (that sent borrowers to /admin).
  */
 export async function GET(request: NextRequest) {
   const localeParam = request.nextUrl.searchParams.get("locale") || "en";
@@ -49,30 +55,42 @@ export async function GET(request: NextRequest) {
   let role: string | undefined;
 
   if (expectedEmail) {
+    // 1) Prefer a JWT whose email matches the account that just signed in.
     const matched = tokens.find((token) => jwtEmail(token) === expectedEmail);
     if (matched && typeof matched.role === "string") {
       role = matched.role;
-    } else if (sessionEmail === expectedEmail && sessionRole) {
+    }
+
+    // 2) Or Auth.js session for that same email.
+    if (!role && sessionEmail === expectedEmail && sessionRole) {
       role = sessionRole;
-    } else if (sessionRole && !sessionEmail) {
-      // Email claim missing on session — trust Auth.js session after sign-in.
-      role = sessionRole;
-    } else if (!sessionEmail || sessionEmail === expectedEmail) {
-      const withRole = tokens.find((token) => typeof token.role === "string");
-      if (withRole && typeof withRole.role === "string") role = withRole.role;
-      else if (sessionRole) role = sessionRole;
-    } else if (typeof tokens[0]?.role === "string") {
-      // Dual cookies: prefer the secure/primary cookie (first in list).
-      role = tokens[0].role;
+    }
+
+    // 3) Session/JWT has a role but no email claim — only accept if nothing
+    //    identifies a *different* user.
+    if (!role && sessionRole) {
+      const foreignEmail = tokens.some((token) => {
+        const email = jwtEmail(token);
+        return Boolean(email && email !== expectedEmail);
+      });
+      if (!sessionEmail && !foreignEmail) {
+        role = sessionRole;
+      }
+    }
+
+    // Wrong user still in cookies — wipe and force a clean login.
+    if (!role) {
+      return withClearedCookies(
+        redirectToAppPath(request, `/${locale}/login`, "?error=session")
+      );
     }
   } else {
     role =
       sessionRole ||
       (typeof tokens[0]?.role === "string" ? tokens[0].role : undefined);
-  }
-
-  if (!role) {
-    return redirectToAppPath(request, `/${locale}/login`, "?error=session");
+    if (!role) {
+      return redirectToAppPath(request, `/${locale}/login`, "?error=session");
+    }
   }
 
   return redirectToAppPath(request, pathForRole(locale, role));

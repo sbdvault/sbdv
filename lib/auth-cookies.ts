@@ -21,14 +21,16 @@ export const AUTH_COOKIE_NAMES = [
 
 /**
  * Expire every known auth cookie so a prior admin session cannot survive logout.
- * On HTTPS hosts we clear each name twice (secure true/false) because a cookie
- * written under one flag is not overwritten by the other.
+ * Clear each name under multiple Secure flag combinations — browsers only drop
+ * a cookie when the clear attributes match how it was originally set.
  */
 export function clearAuthCookies(response: NextResponse): void {
   for (const name of AUTH_COOKIE_NAMES) {
-    const securePreferred =
+    const mustSecure =
       name.startsWith("__Secure-") || name.startsWith("__Host-");
-    for (const secure of securePreferred ? [true] : [false, true]) {
+    const secureOptions = mustSecure ? [true] : [true, false];
+
+    for (const secure of secureOptions) {
       response.cookies.set(name, "", {
         path: "/",
         maxAge: 0,

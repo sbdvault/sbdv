@@ -17,6 +17,26 @@ function isMfaInvalid(result: { error?: string | null; code?: string } | undefin
   return result?.error === "MFA_INVALID" || result?.code === "MFA_INVALID";
 }
 
+async function readSessionUser(): Promise<{ email: string; role: string } | null> {
+  const res = await fetch("/api/auth/session", {
+    cache: "no-store",
+    headers: { "Cache-Control": "no-cache" },
+  }).catch(() => null);
+  if (!res) return null;
+  const json = await res.json().catch(() => null);
+  const email =
+    typeof json?.user?.email === "string" ? json.user.email.toLowerCase() : "";
+  const role = typeof json?.user?.role === "string" ? json.user.role : "";
+  if (!role) return null;
+  return { email, role };
+}
+
+async function clearSessions() {
+  await fetch("/api/auth/clear-session", { method: "POST", cache: "no-store" }).catch(
+    () => undefined
+  );
+}
+
 export default function LoginPage() {
   const { t, locale } = useTranslations();
   const params = useParams();
@@ -54,10 +74,30 @@ export default function LoginPage() {
     const err = new URLSearchParams(window.location.search).get("error");
     if (err === "session") {
       setError(
-        "Your session could not be established after sign-in. Please try again."
+        "Your previous session was cleared. Please sign in again."
       );
     }
   }, [t]);
+
+  const attemptSignIn = async (credentials: {
+    email: string;
+    password: string;
+    mfaCode?: string;
+    redirect: false;
+  }) => {
+    await getCsrfToken().catch(() => undefined);
+    let result = await signIn("credentials", credentials);
+    if (
+      result?.error &&
+      !isMfaRequired(result) &&
+      !isMfaInvalid(result) &&
+      result.error === "CredentialsSignin"
+    ) {
+      await getCsrfToken().catch(() => undefined);
+      result = await signIn("credentials", credentials);
+    }
+    return result;
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -73,21 +113,8 @@ export default function LoginPage() {
       redirect: false as const,
     };
 
-    // Do not clear cookies here — wiping them before signIn breaks session
-    // establishment on Layero HTTPS. Logout already clears via hardSignOut.
-    await getCsrfToken().catch(() => undefined);
-
-    let result = await signIn("credentials", credentials);
-
-    if (
-      result?.error &&
-      !isMfaRequired(result) &&
-      !isMfaInvalid(result) &&
-      result.error === "CredentialsSignin"
-    ) {
-      await getCsrfToken().catch(() => undefined);
-      result = await signIn("credentials", credentials);
-    }
+    // Sign in first (do not clear beforehand — that breaks Layero HTTPS cookies).
+    let result = await attemptSignIn(credentials);
 
     if (isMfaRequired(result)) {
       setLoading(false);
@@ -108,8 +135,54 @@ export default function LoginPage() {
       return;
     }
 
-    // Full navigation so the new session cookie is sent; email hint picks the
-    // correct role if an older cookie is still present.
+    // Confirm the session belongs to this email. If an old admin cookie won,
+    // clear everything and sign in once more with a clean slate.
+    let sessionUser = await readSessionUser();
+    for (let i = 0; i < 3 && !sessionUser; i += 1) {
+      await new Promise((r) => setTimeout(r, 120 * (i + 1)));
+      sessionUser = await readSessionUser();
+    }
+
+    if (sessionUser && sessionUser.email && sessionUser.email !== signedInEmail) {
+      await clearSessions();
+      result = await attemptSignIn(credentials);
+      if (result?.error) {
+        setLoading(false);
+        setError(t("login.invalidCredentials"));
+        return;
+      }
+      sessionUser = null;
+      for (let i = 0; i < 4; i += 1) {
+        await new Promise((r) => setTimeout(r, 120 * (i + 1)));
+        sessionUser = await readSessionUser();
+        if (sessionUser?.email === signedInEmail || (sessionUser && !sessionUser.email)) {
+          break;
+        }
+      }
+      if (sessionUser?.email && sessionUser.email !== signedInEmail) {
+        await clearSessions();
+        setLoading(false);
+        setError(
+          "Could not switch accounts cleanly. Please try signing in again."
+        );
+        return;
+      }
+    }
+
+    // Chain role from the verified session when possible.
+    if (sessionUser?.role && (!sessionUser.email || sessionUser.email === signedInEmail)) {
+      if (sessionUser.role === "ADMIN") {
+        window.location.assign(`/${currentLocale}/admin`);
+        return;
+      }
+      if (sessionUser.role === "BORROWER") {
+        window.location.assign(`/${currentLocale}/capital-access/portal`);
+        return;
+      }
+      window.location.assign(`/${currentLocale}/portal`);
+      return;
+    }
+
     window.location.assign(
       `/api/auth/post-login?locale=${encodeURIComponent(currentLocale)}&email=${encodeURIComponent(signedInEmail)}`
     );
