@@ -10,11 +10,41 @@ export function isUnusablePublicHost(host: string): boolean {
   }
 }
 
+function forwardedProto(request: NextRequest): string {
+  return (
+    request.headers.get("x-forwarded-proto")?.split(",")[0]?.trim() ||
+    request.nextUrl.protocol.replace(":", "") ||
+    "https"
+  );
+}
+
 /**
- * Public site origin for emails / absolute URLs.
- * Never use request.url on Layero — Next listens on 0.0.0.0:8080 inside the container.
+ * Origin the process actually bound to (often https://0.0.0.0:8080 on Layero).
+ * Valid for `new URL(path, base)` and for container health checks.
+ */
+export function listenOrigin(request: NextRequest): string {
+  try {
+    return new URL(request.url).origin;
+  } catch {
+    return request.nextUrl.origin;
+  }
+}
+
+/**
+ * Origin the browser should be sent to. Prefer forwarded / AUTH_URL hosts;
+ * fall back to the listen origin so Next.js never sees a relative URL.
  */
 export function publicOrigin(request: NextRequest): string {
+  const xfHost = request.headers.get("x-forwarded-host")?.split(",")[0]?.trim();
+  if (xfHost && !isUnusablePublicHost(xfHost)) {
+    return `${forwardedProto(request)}://${xfHost}`;
+  }
+
+  const host = request.headers.get("host");
+  if (host && !isUnusablePublicHost(host)) {
+    return `${forwardedProto(request)}://${host}`;
+  }
+
   for (const raw of [process.env.AUTH_URL, process.env.NEXT_PUBLIC_SITE_URL]) {
     if (!raw) continue;
     try {
@@ -25,32 +55,27 @@ export function publicOrigin(request: NextRequest): string {
     }
   }
 
-  const xfHost = request.headers.get("x-forwarded-host")?.split(",")[0]?.trim();
-  const xfProto =
-    request.headers.get("x-forwarded-proto")?.split(",")[0]?.trim() || "https";
-  if (xfHost && !isUnusablePublicHost(xfHost)) {
-    return `${xfProto}://${xfHost}`;
-  }
+  return listenOrigin(request);
+}
 
-  const host = request.headers.get("host");
-  if (host && !isUnusablePublicHost(host)) {
-    const proto = xfProto || request.nextUrl.protocol.replace(":", "") || "https";
-    return `${proto}://${host}`;
-  }
-
-  return request.nextUrl.origin;
+function asAbsoluteUrl(path: string, search: string, base: string): URL {
+  return new URL(`${path}${search}`, base.endsWith("/") ? base : `${base}/`);
 }
 
 /**
- * Same-origin 307. Relative Location keeps the browser on the public host even
- * when Next's request.url is https://0.0.0.0:8080.
+ * Next.js (and Node's URL) reject relative Location values like `/en/`.
+ * Always pass an absolute URL. Use the public origin for browser-facing
+ * auth hops; use the listen origin for `/` → `/en` so Layero's probe
+ * stays on 0.0.0.0 inside the container.
  */
-export function redirectToAppPath(path: string, search = ""): NextResponse {
-  const location = `${path}${search}`;
-  return new NextResponse(null, {
-    status: 307,
-    headers: { Location: location },
-  });
+export function redirectToAppPath(
+  request: NextRequest,
+  path: string,
+  search = "",
+  origin: "public" | "listen" = "public"
+): NextResponse {
+  const base = origin === "listen" ? listenOrigin(request) : publicOrigin(request);
+  return NextResponse.redirect(asAbsoluteUrl(path, search, base));
 }
 
 export function authUsesSecureCookies(request: NextRequest): boolean {

@@ -67,15 +67,15 @@ export async function proxy(request: NextRequest) {
     const locale = pathname.split("/")[1] || defaultLocale;
 
     if (!token) {
-      return redirectToAppPath(`/${locale}/login`);
+      return redirectToAppPath(request, `/${locale}/login`);
     }
 
     if (isAdmin && token.role !== "ADMIN") {
-      return redirectToAppPath(`/${locale}/portal`);
+      return redirectToAppPath(request, `/${locale}/portal`);
     }
 
     if (isCapitalPortal && token.role !== "BORROWER" && token.role !== "ADMIN") {
-      return redirectToAppPath(`/${locale}/portal`);
+      return redirectToAppPath(request, `/${locale}/portal`);
     }
   }
 
@@ -95,8 +95,10 @@ export async function proxy(request: NextRequest) {
 
   const locale = getLocale(request);
   const response = redirectToAppPath(
+    request,
     `/${locale}${pathname}`,
-    request.nextUrl.search
+    request.nextUrl.search,
+    "listen"
   );
   response.cookies.set("NEXT_LOCALE", locale, {
     path: "/",
