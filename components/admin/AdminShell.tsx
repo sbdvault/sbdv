@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { usePathname, useParams } from "next/navigation";
-import { signOut, useSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import Logo from "@/components/Logo";
+import { hardSignOut } from "@/lib/hard-sign-out";
 import {
   LayoutDashboard,
   Landmark,
@@ -99,7 +100,7 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
             {t("admin.nav.clientPortal")}
           </Link>
           <button
-            onClick={() => signOut({ callbackUrl: getLocalizedHref("/") })}
+            onClick={() => hardSignOut(getLocalizedHref("/"))}
             className="flex items-center gap-3 px-4 py-3 w-full rounded-sm font-body text-sm text-off-white/70 hover:bg-off-white/10 hover:text-off-white transition-colors"
           >
             <LogOut className="w-5 h-5" />

@@ -101,7 +101,12 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
+        // Full identity replace on every successful credentials sign-in
+        // (prevents a previous admin JWT from retaining role/email).
         token.id = user.id;
+        token.sub = user.id;
+        token.email = user.email;
+        token.name = user.name;
         token.role = user.role;
         token.mfaEnabled = user.mfaEnabled;
         token.mfaMethod = user.mfaMethod;
@@ -112,6 +117,10 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     async session({ session, token }) {
       if (session.user && token.id) {
         session.user.id = token.id as string;
+        if (typeof token.email === "string") session.user.email = token.email;
+        if (typeof token.name === "string" || token.name === null) {
+          session.user.name = token.name as string | null;
+        }
         session.user.role = (token.role as string) || "CLIENT";
         session.user.mfaEnabled = (token.mfaEnabled as boolean) || false;
         session.user.mfaMethod = (token.mfaMethod as string | null) || null;

@@ -1,4 +1,5 @@
 import { auth } from "@/auth";
+import { clearAuthCookies } from "@/lib/auth-cookies";
 import { readAuthToken, redirectToAppPath } from "@/lib/request-origin";
 import { NextRequest } from "next/server";
 
@@ -31,23 +32,40 @@ function pathForRole(locale: string, role: string | undefined): string {
  * Prefer this over a same-tick fetch("/api/auth/destination") — the session
  * cookie from signIn is always attached on a top-level navigation.
  *
- * Redirects use the public origin (AUTH_URL / x-forwarded-host), not
- * https://0.0.0.0:8080 from the container bind address.
+ * Pass `email=` (the address just signed in) so a leftover admin cookie cannot
+ * send a borrower to /admin.
  */
 export async function GET(request: NextRequest) {
   const localeParam = request.nextUrl.searchParams.get("locale") || "en";
   const locale = locales.has(localeParam) ? localeParam : "en";
+  const expectedEmail = request.nextUrl.searchParams.get("email")?.trim().toLowerCase() || null;
 
   const session = await auth();
-  let role = session?.user?.role;
+  const token = await readAuthToken(request, expectedEmail);
 
-  if (!role) {
-    const token = await readAuthToken(request);
-    role = typeof token?.role === "string" ? token.role : undefined;
+  const sessionEmail = session?.user?.email?.toLowerCase() || null;
+  const tokenEmail =
+    typeof token?.email === "string" ? token.email.toLowerCase() : null;
+
+  let role: string | undefined;
+
+  if (expectedEmail) {
+    if (sessionEmail === expectedEmail && session?.user?.role) {
+      role = session.user.role;
+    } else if (tokenEmail === expectedEmail && typeof token?.role === "string") {
+      role = token.role;
+    }
+  } else {
+    role = session?.user?.role || (typeof token?.role === "string" ? token.role : undefined);
   }
 
   if (!role) {
-    return redirectToAppPath(request, `/${locale}/login`, "?error=session");
+    const response = redirectToAppPath(request, `/${locale}/login`, "?error=session");
+    // Stale dual cookies — wipe and force a clean login.
+    if (expectedEmail && (sessionEmail || tokenEmail) && sessionEmail !== expectedEmail) {
+      clearAuthCookies(response);
+    }
+    return response;
   }
 
   return redirectToAppPath(request, pathForRole(locale, role));

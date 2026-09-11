@@ -88,13 +88,35 @@ export function authUsesSecureCookies(request: NextRequest): boolean {
   );
 }
 
-/** Read the Auth.js JWT even if cookie prefix (__Secure- vs plain) doesn't match request.url. */
-export async function readAuthToken(request: NextRequest): Promise<JWT | null> {
+/** Read the Auth.js JWT even if cookie prefix (__Secure- vs plain) doesn't match request.url.
+ * When `preferEmail` is set, pick the token for that user — avoids sending a borrower
+ * to /admin because a leftover admin cookie is still present.
+ */
+export async function readAuthToken(
+  request: NextRequest,
+  preferEmail?: string | null
+): Promise<JWT | null> {
   const secret = process.env.AUTH_SECRET;
   const preferred = authUsesSecureCookies(request);
+  const candidates: JWT[] = [];
+
   for (const secureCookie of [preferred, !preferred]) {
     const token = await getToken({ req: request, secret, secureCookie });
-    if (token?.sub || token?.id || token?.role) return token;
+    if (token && (token.sub || token.id || token.role || token.email)) {
+      candidates.push(token);
+    }
   }
-  return null;
+
+  if (!candidates.length) return null;
+
+  if (preferEmail) {
+    const want = preferEmail.trim().toLowerCase();
+    const match = candidates.find((token) => {
+      const email = typeof token.email === "string" ? token.email.toLowerCase() : "";
+      return email === want;
+    });
+    if (match) return match;
+  }
+
+  return candidates[0];
 }

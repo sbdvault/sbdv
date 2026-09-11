@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { usePathname, useParams } from "next/navigation";
-import { signOut } from "next-auth/react";
 import Logo from "@/components/Logo";
+import { hardSignOut } from "@/lib/hard-sign-out";
 import {
   LayoutDashboard,
   Landmark,
@@ -80,7 +80,7 @@ export default function CapitalAccessShell({ children }: { children: React.React
             {t("capitalAccess.nav.programInfo")}
           </Link>
           <button
-            onClick={() => signOut({ callbackUrl: getLocalizedHref("/") })}
+            onClick={() => hardSignOut(getLocalizedHref("/"))}
             className="flex items-center gap-3 px-4 py-3 w-full rounded-sm font-body text-sm text-off-white/70 hover:bg-off-white/10 hover:text-off-white transition-colors"
           >
             <LogOut className="w-5 h-5" />

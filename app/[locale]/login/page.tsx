@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getCsrfToken, signIn } from "next-auth/react";
+import { getCsrfToken, signIn, signOut } from "next-auth/react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -63,12 +63,19 @@ export default function LoginPage() {
     setError("");
 
     const currentLocale = (params?.locale as string) || locale || "en";
+    const signedInEmail = email.trim().toLowerCase();
     const credentials = {
-      email: email.trim().toLowerCase(),
+      email: signedInEmail,
       password,
       mfaCode: showMfa ? mfaCode : undefined,
       redirect: false as const,
     };
+
+    // Drop any leftover session (e.g. admin) before signing in as another user.
+    await signOut({ redirect: false }).catch(() => undefined);
+    await fetch("/api/auth/clear-session", { method: "POST", cache: "no-store" }).catch(
+      () => undefined
+    );
 
     // Always refresh CSRF before the first credentials POST.
     await getCsrfToken().catch(() => undefined);
@@ -107,7 +114,10 @@ export default function LoginPage() {
     }
 
     // Full navigation so the session cookie from signIn is definitely sent.
-    window.location.assign(`/api/auth/post-login?locale=${encodeURIComponent(currentLocale)}`);
+    // Pass email so post-login ignores a stale cookie for a different user.
+    window.location.assign(
+      `/api/auth/post-login?locale=${encodeURIComponent(currentLocale)}&email=${encodeURIComponent(signedInEmail)}`
+    );
   };
 
   return (
