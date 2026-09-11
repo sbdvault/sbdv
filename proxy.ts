@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { getToken } from "next-auth/jwt";
+import { readAuthToken, redirectToAppPath } from "@/lib/request-origin";
 
 export const locales = [
   "en",
@@ -60,34 +60,22 @@ export async function proxy(request: NextRequest) {
   const isCapitalPortal = capitalAuthPath.test(pathname);
 
   if (isPortal || isAdmin || isCapitalPortal) {
-    // Behind Amvera TLS, the app often sees http:// internally while Auth.js
-    // still sets `__Secure-authjs.session-token`. Without secureCookie:true,
-    // getToken misses the cookie → bounce back to /login after a successful sign-in.
-    const useSecureCookies =
-      (process.env.AUTH_URL ?? process.env.NEXT_PUBLIC_SITE_URL ?? "").startsWith(
-        "https://"
-      ) ||
-      request.headers.get("x-forwarded-proto") === "https" ||
-      request.nextUrl.protocol === "https:";
-
-    const token = await getToken({
-      req: request,
-      secret: process.env.AUTH_SECRET,
-      secureCookie: useSecureCookies,
-    });
+    // Behind Layero/Amvera TLS, Next often sees http://0.0.0.0 internally while
+    // Auth.js still sets `__Secure-authjs.session-token`. Try both cookie names.
+    const token = await readAuthToken(request);
 
     const locale = pathname.split("/")[1] || defaultLocale;
 
     if (!token) {
-      return NextResponse.redirect(new URL(`/${locale}/login`, request.url));
+      return redirectToAppPath(`/${locale}/login`);
     }
 
     if (isAdmin && token.role !== "ADMIN") {
-      return NextResponse.redirect(new URL(`/${locale}/portal`, request.url));
+      return redirectToAppPath(`/${locale}/portal`);
     }
 
     if (isCapitalPortal && token.role !== "BORROWER" && token.role !== "ADMIN") {
-      return NextResponse.redirect(new URL(`/${locale}/portal`, request.url));
+      return redirectToAppPath(`/${locale}/portal`);
     }
   }
 
@@ -106,10 +94,10 @@ export async function proxy(request: NextRequest) {
   }
 
   const locale = getLocale(request);
-  const newUrl = new URL(`/${locale}${pathname}`, request.url);
-  newUrl.search = request.nextUrl.search;
-
-  const response = NextResponse.redirect(newUrl);
+  const response = redirectToAppPath(
+    `/${locale}${pathname}`,
+    request.nextUrl.search
+  );
   response.cookies.set("NEXT_LOCALE", locale, {
     path: "/",
     maxAge: 60 * 60 * 24 * 365,

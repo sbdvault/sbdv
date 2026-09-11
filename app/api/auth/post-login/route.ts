@@ -1,5 +1,6 @@
 import { auth } from "@/auth";
-import { NextRequest, NextResponse } from "next/server";
+import { readAuthToken, redirectToAppPath } from "@/lib/request-origin";
+import { NextRequest } from "next/server";
 
 export const dynamic = "force-dynamic";
 export const fetchCache = "force-no-store";
@@ -19,28 +20,35 @@ const locales = new Set([
   "ar",
 ]);
 
+function pathForRole(locale: string, role: string | undefined): string {
+  if (role === "ADMIN") return `/${locale}/admin`;
+  if (role === "BORROWER") return `/${locale}/capital-access/portal`;
+  return `/${locale}/portal`;
+}
+
 /**
  * Full-page redirect after credentials sign-in.
  * Prefer this over a same-tick fetch("/api/auth/destination") — the session
  * cookie from signIn is always attached on a top-level navigation.
+ *
+ * Location is relative so Layero (HOSTNAME=0.0.0.0) cannot send the browser
+ * to https://0.0.0.0:8080/...
  */
 export async function GET(request: NextRequest) {
   const localeParam = request.nextUrl.searchParams.get("locale") || "en";
   const locale = locales.has(localeParam) ? localeParam : "en";
-  const loginUrl = new URL(`/${locale}/login`, request.url);
 
   const session = await auth();
-  if (!session?.user?.role) {
-    loginUrl.searchParams.set("error", "session");
-    return NextResponse.redirect(loginUrl);
+  let role = session?.user?.role;
+
+  if (!role) {
+    const token = await readAuthToken(request);
+    role = typeof token?.role === "string" ? token.role : undefined;
   }
 
-  let path = `/${locale}/portal`;
-  if (session.user.role === "ADMIN") {
-    path = `/${locale}/admin`;
-  } else if (session.user.role === "BORROWER") {
-    path = `/${locale}/capital-access/portal`;
+  if (!role) {
+    return redirectToAppPath(`/${locale}/login`, "?error=session");
   }
 
-  return NextResponse.redirect(new URL(path, request.url));
+  return redirectToAppPath(pathForRole(locale, role));
 }

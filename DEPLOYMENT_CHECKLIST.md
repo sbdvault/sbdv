@@ -97,9 +97,10 @@ Portals already use Prisma + NextAuth. After `DATABASE_URL` points at Supabase, 
 - [ ] Layero project linked to GitHub `sbdvault/sbdv` (or current remote)
 - [ ] Deploy from **`main`**; confirm build uses Docker / standalone Next output as configured
 - [ ] Set Layero **environment variables / secrets** (see section G)
-- [ ] Production URLs:
-  - [ ] `AUTH_URL=https://sbdv-main.layero.app` (or custom domain)
-  - [ ] `NEXT_PUBLIC_SITE_URL` matches the public origin (same host)
+- [ ] Production URLs (must be the **public origin in the browser address bar**, not `0.0.0.0` and not `app.layero.ru/projects/...`):
+  - [ ] `AUTH_URL=https://sbdv-main.layero.app` (or the live Layero app host / custom domain)
+  - [ ] `NEXT_PUBLIC_SITE_URL` matches that same origin
+  - [ ] Never set `AUTH_URL` to `http://0.0.0.0:8080` — that is the container bind address; after login the browser will show `ERR_ADDRESS_INVALID`
 - [ ] `DATA_DIR`: Layero cannot reliably use `/data` — leave unset or use a writable path; app falls back to temp under `sbdv-data` when `/data` is unavailable
 - [ ] Confirm build succeeds in Layero logs
 - [ ] Confirm app is running and public URL opens `/en`
