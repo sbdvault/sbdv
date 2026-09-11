@@ -41,12 +41,31 @@ declare module "@auth/core/jwt" {
   }
 }
 
+const useSecureCookies = (
+  process.env.AUTH_URL ?? process.env.NEXT_PUBLIC_SITE_URL ?? ""
+).startsWith("https://");
+
 export const { handlers, signIn, signOut, auth } = NextAuth({
   secret: process.env.AUTH_SECRET,
   trustHost: true,
   session: { strategy: "jwt", maxAge: 30 * 60 },
   pages: {
     signIn: "/en/login",
+  },
+  // Keep a single cookie naming scheme so admin→borrower switches overwrite
+  // the same session cookie on Layero HTTPS instead of leaving a second one.
+  cookies: {
+    sessionToken: {
+      name: useSecureCookies
+        ? "__Secure-authjs.session-token"
+        : "authjs.session-token",
+      options: {
+        httpOnly: true,
+        sameSite: "lax",
+        path: "/",
+        secure: useSecureCookies,
+      },
+    },
   },
   providers: [
     Credentials({

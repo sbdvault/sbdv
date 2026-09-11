@@ -1,5 +1,4 @@
 import { auth } from "@/auth";
-import { clearAuthCookies } from "@/lib/auth-cookies";
 import {
   jwtEmail,
   readAllAuthTokens,
@@ -33,10 +32,8 @@ function pathForRole(locale: string, role: string | undefined): string {
 
 /**
  * Full-page redirect after credentials sign-in.
- *
- * Pass `email=` (the address just signed in) so a leftover admin cookie cannot
- * send a borrower to /admin. On Layero, JWT email claims are sometimes missing
- * even after a successful sign-in — fall back to the sole valid role cookie.
+ * Prefer the JWT/session whose email matches `email=` so a leftover cookie for
+ * another role cannot send the user to the wrong portal.
  */
 export async function GET(request: NextRequest) {
   const localeParam = request.nextUrl.searchParams.get("locale") || "en";
@@ -52,36 +49,21 @@ export async function GET(request: NextRequest) {
   let role: string | undefined;
 
   if (expectedEmail) {
-    if (sessionEmail === expectedEmail && sessionRole) {
+    const matched = tokens.find((token) => jwtEmail(token) === expectedEmail);
+    if (matched && typeof matched.role === "string") {
+      role = matched.role;
+    } else if (sessionEmail === expectedEmail && sessionRole) {
       role = sessionRole;
-    }
-
-    if (!role) {
-      const matched = tokens.find((token) => jwtEmail(token) === expectedEmail);
-      if (matched && typeof matched.role === "string") {
-        role = matched.role;
-      }
-    }
-
-    // Production JWTs sometimes omit email after credentials sign-in.
-    // If nothing contradicts expectedEmail, accept the only available role.
-    if (!role) {
-      const wrongSession = sessionEmail && sessionEmail !== expectedEmail;
-      const wrongToken = tokens.some((token) => {
-        const email = jwtEmail(token);
-        return Boolean(email && email !== expectedEmail);
-      });
-
-      if (!wrongSession && !wrongToken) {
-        if (sessionRole) {
-          role = sessionRole;
-        } else {
-          const withRole = tokens.find((token) => typeof token.role === "string");
-          if (withRole && typeof withRole.role === "string") {
-            role = withRole.role;
-          }
-        }
-      }
+    } else if (sessionRole && !sessionEmail) {
+      // Email claim missing on session — trust Auth.js session after sign-in.
+      role = sessionRole;
+    } else if (!sessionEmail || sessionEmail === expectedEmail) {
+      const withRole = tokens.find((token) => typeof token.role === "string");
+      if (withRole && typeof withRole.role === "string") role = withRole.role;
+      else if (sessionRole) role = sessionRole;
+    } else if (typeof tokens[0]?.role === "string") {
+      // Dual cookies: prefer the secure/primary cookie (first in list).
+      role = tokens[0].role;
     }
   } else {
     role =
@@ -90,19 +72,7 @@ export async function GET(request: NextRequest) {
   }
 
   if (!role) {
-    const response = redirectToAppPath(request, `/${locale}/login`, "?error=session");
-    // Stale dual cookies for a different user — wipe and force a clean login.
-    if (
-      expectedEmail &&
-      ((sessionEmail && sessionEmail !== expectedEmail) ||
-        tokens.some((token) => {
-          const email = jwtEmail(token);
-          return Boolean(email && email !== expectedEmail);
-        }))
-    ) {
-      clearAuthCookies(response);
-    }
-    return response;
+    return redirectToAppPath(request, `/${locale}/login`, "?error=session");
   }
 
   return redirectToAppPath(request, pathForRole(locale, role));
