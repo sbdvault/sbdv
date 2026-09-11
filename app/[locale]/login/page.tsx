@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getCsrfToken, signIn, signOut } from "next-auth/react";
+import { getCsrfToken, signIn } from "next-auth/react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -53,7 +53,9 @@ export default function LoginPage() {
     if (typeof window === "undefined") return;
     const err = new URLSearchParams(window.location.search).get("error");
     if (err === "session") {
-      setError(t("login.invalidCredentials"));
+      setError(
+        "Your session could not be established after sign-in. Please try again."
+      );
     }
   }, [t]);
 
@@ -71,8 +73,8 @@ export default function LoginPage() {
       redirect: false as const,
     };
 
-    // Drop any leftover session (e.g. admin) before signing in as another user.
-    await signOut({ redirect: false }).catch(() => undefined);
+    // Wipe leftover sessions (admin → borrower) before credentials sign-in.
+    // clear-session alone is enough; avoid double signOut races on Layero HTTPS.
     await fetch("/api/auth/clear-session", { method: "POST", cache: "no-store" }).catch(
       () => undefined
     );
@@ -113,8 +115,40 @@ export default function LoginPage() {
       return;
     }
 
-    // Full navigation so the session cookie from signIn is definitely sent.
-    // Pass email so post-login ignores a stale cookie for a different user.
+    // Confirm the browser actually has the new session before redirecting.
+    // On Layero, a leftover admin cookie can otherwise win the race.
+    let confirmedRole: string | null = null;
+    for (let attempt = 0; attempt < 5; attempt += 1) {
+      const sessionRes = await fetch("/api/auth/session", {
+        cache: "no-store",
+        headers: { "Cache-Control": "no-cache" },
+      }).catch(() => null);
+      const session = sessionRes ? await sessionRes.json().catch(() => null) : null;
+      const sessionEmail =
+        typeof session?.user?.email === "string"
+          ? session.user.email.toLowerCase()
+          : "";
+      if (session?.user?.role && (!sessionEmail || sessionEmail === signedInEmail)) {
+        confirmedRole = session.user.role;
+        break;
+      }
+      await new Promise((resolve) => setTimeout(resolve, 150 * (attempt + 1)));
+    }
+
+    if (confirmedRole === "ADMIN") {
+      window.location.assign(`/${currentLocale}/admin`);
+      return;
+    }
+    if (confirmedRole === "BORROWER") {
+      window.location.assign(`/${currentLocale}/capital-access/portal`);
+      return;
+    }
+    if (confirmedRole) {
+      window.location.assign(`/${currentLocale}/portal`);
+      return;
+    }
+
+    // Fallback: server-side role resolution with email hint.
     window.location.assign(
       `/api/auth/post-login?locale=${encodeURIComponent(currentLocale)}&email=${encodeURIComponent(signedInEmail)}`
     );

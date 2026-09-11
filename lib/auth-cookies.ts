@@ -19,16 +19,24 @@ export const AUTH_COOKIE_NAMES = [
   "__Secure-next-auth.callback-url",
 ] as const;
 
-/** Expire every known auth cookie so a prior admin session cannot survive logout. */
+/**
+ * Expire every known auth cookie so a prior admin session cannot survive logout.
+ * On HTTPS hosts we clear each name twice (secure true/false) because a cookie
+ * written under one flag is not overwritten by the other.
+ */
 export function clearAuthCookies(response: NextResponse): void {
   for (const name of AUTH_COOKIE_NAMES) {
-    response.cookies.set(name, "", {
-      path: "/",
-      maxAge: 0,
-      expires: new Date(0),
-      httpOnly: true,
-      sameSite: "lax",
-      secure: name.startsWith("__Secure-") || name.startsWith("__Host-"),
-    });
+    const securePreferred =
+      name.startsWith("__Secure-") || name.startsWith("__Host-");
+    for (const secure of securePreferred ? [true] : [false, true]) {
+      response.cookies.set(name, "", {
+        path: "/",
+        maxAge: 0,
+        expires: new Date(0),
+        httpOnly: true,
+        sameSite: "lax",
+        secure,
+      });
+    }
   }
 }
