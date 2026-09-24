@@ -106,6 +106,10 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           }
         }
 
+        await prisma.auditEvent.create({
+          data: { userId: user.id, action: "LOGIN" },
+        });
+
         return {
           id: user.id,
           email: user.email,

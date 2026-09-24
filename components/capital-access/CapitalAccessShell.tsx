@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname, useParams } from "next/navigation";
 import Logo from "@/components/Logo";
+import SignedInIdentity from "@/components/dashboard/SignedInIdentity";
 import { hardSignOut } from "@/lib/hard-sign-out";
 import {
   LayoutDashboard,
@@ -12,6 +13,7 @@ import {
   LogOut,
   HelpCircle,
   Building2,
+  Settings,
 } from "lucide-react";
 import { useTranslations } from "@/hooks/useTranslations";
 
@@ -21,6 +23,7 @@ const navItems = [
   { key: "request", href: "/capital-access/portal/request", icon: FileText },
   { key: "applications", href: "/capital-access/portal/applications", icon: ClipboardList },
   { key: "facility", href: "/capital-access/portal/facility", icon: Building2 },
+  { key: "settings", href: "/capital-access/portal/settings", icon: Settings },
 ];
 
 export default function CapitalAccessShell({ children }: { children: React.ReactNode }) {
@@ -48,7 +51,9 @@ export default function CapitalAccessShell({ children }: { children: React.React
           </Link>
         </div>
 
-        <nav className="flex-1 p-4 space-y-1">
+        <SignedInIdentity caption={t("capitalAccess.signedInAs")} />
+
+        <nav className="flex-1 p-4 space-y-1 overflow-y-auto">
           {navItems.map((item) => {
             const href = getLocalizedHref(item.href);
             const isActive = item.exact
@@ -89,7 +94,14 @@ export default function CapitalAccessShell({ children }: { children: React.React
         </div>
       </aside>
 
-      <main className="flex-1 ml-72 min-h-screen p-8">{children}</main>
+      <main className="flex-1 ml-72 min-h-screen">
+        <header className="sticky top-0 z-10 bg-off-white/95 backdrop-blur border-b border-charcoal/10 px-8 py-4">
+          <p className="font-body text-xs uppercase tracking-widest text-gold">
+            {t("capitalAccess.portalBadge")}
+          </p>
+        </header>
+        <div className="p-8">{children}</div>
+      </main>
     </div>
   );
 }

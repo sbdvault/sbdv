@@ -235,22 +235,38 @@
       "privateVault": {
         "title": "Private Vault Leasing",
         "description": "Secure allocation for individuals, corporations, and family offices. Customized storage solutions tailored to your specific needs.",
-        "features": ["Dedicated vault space", "24/7 access control", "Personalized service"]
+        "features": [
+          "Dedicated vault space",
+          "24/7 access control",
+          "Personalized service"
+        ]
       },
       "bullionCustody": {
         "title": "Bullion Custody & Verification",
         "description": "LBMA-certified audits and storage for precious metals. Full chain of custody documentation and regular verification.",
-        "features": ["LBMA certification", "Regular audits", "Full documentation"]
+        "features": [
+          "LBMA certification",
+          "Regular audits",
+          "Full documentation"
+        ]
       },
       "insurance": {
         "title": "Insurance & Audit Reporting",
         "description": "Full coverage and transparency via global insurers. Comprehensive reporting and regular audit documentation.",
-        "features": ["Global insurance coverage", "Regular reporting", "Full transparency"]
+        "features": [
+          "Global insurance coverage",
+          "Regular reporting",
+          "Full transparency"
+        ]
       },
       "vipRooms": {
         "title": "VIP Private Viewing Rooms",
         "description": "By appointment only, with concierge service. Exclusive access to view your assets in a private, secure environment.",
-        "features": ["By appointment only", "Concierge service", "Private viewing"]
+        "features": [
+          "By appointment only",
+          "Concierge service",
+          "Private viewing"
+        ]
       }
     },
     "wealthGridTitle": "Wealth & Investment Services",
@@ -259,22 +275,38 @@
       "advisory": {
         "title": "Investment Advisory",
         "description": "Personalized investment strategy for high-net-worth individuals and family offices.",
-        "features": ["Goal-based planning", "Risk profiling", "Asset allocation"]
+        "features": [
+          "Goal-based planning",
+          "Risk profiling",
+          "Asset allocation"
+        ]
       },
       "portfolio": {
         "title": "Portfolio Management",
         "description": "Discretionary and advisory mandates with quarterly rebalancing and performance reporting.",
-        "features": ["Discretionary mandates", "Quarterly rebalancing", "Performance reports"]
+        "features": [
+          "Discretionary mandates",
+          "Quarterly rebalancing",
+          "Performance reports"
+        ]
       },
       "alternatives": {
         "title": "Alternative Investments",
         "description": "Access to private markets, structured products, and collectibles as part of a diversified strategy.",
-        "features": ["Private markets", "Structured products", "Collectibles"]
+        "features": [
+          "Private markets",
+          "Structured products",
+          "Collectibles"
+        ]
       },
       "reporting": {
         "title": "Consolidated Reporting",
         "description": "Unified view of vault holdings and financial portfolio in one secure client portal.",
-        "features": ["Unified dashboard", "Audit documentation", "Fee transparency"]
+        "features": [
+          "Unified dashboard",
+          "Audit documentation",
+          "Fee transparency"
+        ]
       }
     }
   },
@@ -323,21 +355,39 @@
         "subtitle": "Entry Level",
         "minimum": "Minimum: $250k",
         "description": "Secure custody services for individual investors and smaller portfolios. Full access to our standard security protocols and regular reporting.",
-        "features": ["Minimum $250k in assets", "Standard security protocols", "Regular reporting", "24/7 monitoring", "Insurance coverage"]
+        "features": [
+          "Minimum $250k in assets",
+          "Standard security protocols",
+          "Regular reporting",
+          "24/7 monitoring",
+          "Insurance coverage"
+        ]
       },
       "executive": {
         "title": "Executive Vault",
         "subtitle": "Invitation Only",
         "minimum": "Minimum: Custom",
         "description": "Invitation-only, personalized storage solutions for high-net-worth individuals, family offices, and corporations. Enhanced privacy and dedicated service.",
-        "features": ["Invitation-only access", "Personalized storage", "Dedicated account manager", "Enhanced privacy protocols", "Priority access"]
+        "features": [
+          "Invitation-only access",
+          "Personalized storage",
+          "Dedicated account manager",
+          "Enhanced privacy protocols",
+          "Priority access"
+        ]
       },
       "sovereign": {
         "title": "Sovereign Tier",
         "subtitle": "Institutional",
         "minimum": "Minimum: Institutional",
         "description": "Institutional and government-level security for sovereign wealth funds, central banks, and large institutions. The highest level of security and service.",
-        "features": ["Institutional-grade security", "Government-level protocols", "Custom solutions", "Dedicated facilities", "White-glove service"]
+        "features": [
+          "Institutional-grade security",
+          "Government-level protocols",
+          "Custom solutions",
+          "Dedicated facilities",
+          "White-glove service"
+        ]
       }
     },
     "complianceTitle": "Compliance & Security",
@@ -516,6 +566,7 @@
   },
   "portal": {
     "title": "Client Portal",
+    "signedInAs": "Signed in as",
     "nav": {
       "overview": "Overview",
       "holdings": "Holdings",
@@ -592,6 +643,52 @@
       "notifications": "Email Notifications"
     }
   },
+  "accountSecurity": {
+    "roles": {
+      "admin": "Administrator",
+      "client": "Client",
+      "borrower": "Enterprise Partner"
+    },
+    "summary": {
+      "title": "Security overview",
+      "email": "Email",
+      "role": "Account type",
+      "mfa": "Two-factor authentication",
+      "memberSince": "Member since",
+      "lastSignIn": "Last sign-in"
+    },
+    "password": {
+      "title": "Change password",
+      "hint": "Use at least 8 characters. You will remain signed in on this device after updating.",
+      "current": "Current password",
+      "new": "New password",
+      "confirm": "Confirm new password",
+      "submit": "Update password",
+      "saving": "Updating…",
+      "success": "Password updated successfully. A confirmation was sent to your email.",
+      "errorGeneric": "Unable to change password. Please try again."
+    },
+    "mfa": {
+      "title": "Two-factor authentication",
+      "disabled": "Add a second step after your password to protect your account.",
+      "enabledTotp": "Authenticator app codes are enabled for sign-in.",
+      "enabledEmail": "Email sign-in codes are enabled. A code is sent to your account email after your password is accepted.",
+      "statusOff": "Not enabled",
+      "statusTotp": "Authenticator app",
+      "statusEmail": "Email codes",
+      "enableTotp": "Enable authenticator app",
+      "enableEmail": "Enable email codes",
+      "disable": "Disable MFA",
+      "secretLabel": "Add this secret to your authenticator app:",
+      "verifyEnable": "Verify & enable",
+      "invalidCode": "Invalid authenticator code."
+    },
+    "session": {
+      "title": "Session",
+      "description": "End your session on this browser. You will need to sign in again to access the portal.",
+      "signOutDevice": "Sign out of this device"
+    }
+  },
   "admin": {
     "title": "Admin Panel",
     "platformTitle": "Institutional Platform",
@@ -612,8 +709,12 @@
       "capitalAccess": "Capital Access",
       "applications": "Applications",
       "clients": "Clients",
+      "settings": "Settings",
       "clientPortal": "Client Portal",
       "logout": "Sign Out"
+    },
+    "settings": {
+      "title": "Account Settings"
     },
     "stats": {
       "sovereignEntities": "Sovereign Entities",
@@ -755,6 +856,7 @@
   "capitalAccess": {
     "portalTitle": "Capital Access",
     "portalBadge": "Enterprise Partner Portal",
+    "signedInAs": "Signed in as",
     "hero": {
       "badge": "Institutional Capital Program",
       "title": "Capital Access Program",
@@ -822,8 +924,12 @@
       "request": "New Request",
       "applications": "My Applications",
       "facility": "Onboarding",
+      "settings": "Settings",
       "programInfo": "Program Information",
       "logout": "Sign Out"
+    },
+    "settings": {
+      "title": "Account Settings"
     },
     "overview": {
       "title": "Welcome to Capital Access",
@@ -1121,4 +1227,3 @@
     "disclaimer": "AI-assisted guidance. For binding advice, contact your relationship manager."
   }
 }
-

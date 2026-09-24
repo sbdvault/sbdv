@@ -92,6 +92,10 @@ export async function POST(request: NextRequest) {
       },
     });
 
+    await prisma.auditEvent.create({
+      data: { userId: session.user.id, action: "MFA_DISABLED" },
+    });
+
     return NextResponse.json({ success: true });
   }
 

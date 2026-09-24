@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { usePathname, useParams } from "next/navigation";
-import { useSession } from "next-auth/react";
 import Logo from "@/components/Logo";
+import SignedInIdentity from "@/components/dashboard/SignedInIdentity";
 import { hardSignOut } from "@/lib/hard-sign-out";
 import {
   LayoutDashboard,
@@ -13,8 +13,8 @@ import {
   Users,
   UserCheck,
   LogOut,
-  Globe,
   HandCoins,
+  Settings,
 } from "lucide-react";
 import { useTranslations } from "@/hooks/useTranslations";
 
@@ -26,11 +26,11 @@ const navItems = [
   { key: "capitalAccess", href: "/admin/capital-access", icon: HandCoins },
   { key: "applications", href: "/admin/applications", icon: UserCheck },
   { key: "clients", href: "/admin/clients", icon: Users },
+  { key: "settings", href: "/admin/settings", icon: Settings },
 ];
 
 export default function AdminShell({ children }: { children: React.ReactNode }) {
   const { t, locale } = useTranslations();
-  const { data: session } = useSession();
   const params = useParams();
   const pathname = usePathname();
 
@@ -54,19 +54,7 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
           </Link>
         </div>
 
-        <div className="px-4 py-4 border-b border-off-white/10">
-          <div className="flex items-center gap-3 px-3 py-2 rounded-sm bg-off-white/5">
-            <Globe className="w-4 h-4 text-gold shrink-0" />
-            <div className="min-w-0">
-              <p className="font-body text-xs text-off-white/50 truncate">
-                {t("admin.signedInAs")}
-              </p>
-              <p className="font-body text-sm text-off-white truncate">
-                {session?.user?.name || session?.user?.email}
-              </p>
-            </div>
-          </div>
-        </div>
+        <SignedInIdentity caption={t("admin.signedInAs")} />
 
         <nav className="flex-1 p-4 space-y-1 overflow-y-auto">
           {navItems.map((item) => {

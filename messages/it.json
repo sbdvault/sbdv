@@ -566,6 +566,7 @@
   },
   "portal": {
     "title": "Client Portal",
+    "signedInAs": "Signed in as",
     "nav": {
       "overview": "Overview",
       "holdings": "Holdings",
@@ -678,7 +679,8 @@
       "clients": "Clients",
       "clientPortal": "Client Portal",
       "logout": "Sign Out",
-      "capitalAccess": "Capital Access"
+      "capitalAccess": "Capital Access",
+      "settings": "Settings"
     },
     "stats": {
       "sovereignEntities": "Sovereign Entities",
@@ -800,11 +802,15 @@
       "operatingCountry": "Operating country",
       "yearsOperating": "Years operating",
       "enhancedDdHint": "Consider enhanced due diligence for this jurisdiction"
+    },
+    "settings": {
+      "title": "Account Settings"
     }
   },
   "capitalAccess": {
     "portalTitle": "Capital Access",
     "portalBadge": "Enterprise Partner Portal",
+    "signedInAs": "Signed in as",
     "hero": {
       "badge": "Institutional Capital Program",
       "title": "Capital Access Program",
@@ -854,7 +860,8 @@
       "applications": "My Applications",
       "programInfo": "Program Information",
       "logout": "Sign Out",
-      "facility": "My Facility"
+      "facility": "My Facility",
+      "settings": "Settings"
     },
     "overview": {
       "title": "Welcome to Capital Access",
@@ -1157,6 +1164,9 @@
       "kycTime": "5–10 business days",
       "funding": "Closing and funding",
       "fundingTime": "3–7 days"
+    },
+    "settings": {
+      "title": "Account Settings"
     }
   },
   "chat": {
@@ -1171,5 +1181,51 @@
     "close": "Close and clear chat",
     "error": "I'm sorry, I couldn't process that. Please try again or use the Contact page for direct assistance.",
     "disclaimer": "AI-assisted guidance. For binding advice, contact your relationship manager."
+  },
+  "accountSecurity": {
+    "roles": {
+      "admin": "Administrator",
+      "client": "Client",
+      "borrower": "Enterprise Partner"
+    },
+    "summary": {
+      "title": "Security overview",
+      "email": "Email",
+      "role": "Account type",
+      "mfa": "Two-factor authentication",
+      "memberSince": "Member since",
+      "lastSignIn": "Last sign-in"
+    },
+    "password": {
+      "title": "Change password",
+      "hint": "Use at least 8 characters. You will remain signed in on this device after updating.",
+      "current": "Current password",
+      "new": "New password",
+      "confirm": "Confirm new password",
+      "submit": "Update password",
+      "saving": "Updating…",
+      "success": "Password updated successfully. A confirmation was sent to your email.",
+      "errorGeneric": "Unable to change password. Please try again."
+    },
+    "mfa": {
+      "title": "Two-factor authentication",
+      "disabled": "Add a second step after your password to protect your account.",
+      "enabledTotp": "Authenticator app codes are enabled for sign-in.",
+      "enabledEmail": "Email sign-in codes are enabled. A code is sent to your account email after your password is accepted.",
+      "statusOff": "Not enabled",
+      "statusTotp": "Authenticator app",
+      "statusEmail": "Email codes",
+      "enableTotp": "Enable authenticator app",
+      "enableEmail": "Enable email codes",
+      "disable": "Disable MFA",
+      "secretLabel": "Add this secret to your authenticator app:",
+      "verifyEnable": "Verify & enable",
+      "invalidCode": "Invalid authenticator code."
+    },
+    "session": {
+      "title": "Session",
+      "description": "End your session on this browser. You will need to sign in again to access the portal.",
+      "signOutDevice": "Sign out of this device"
+    }
   }
 }

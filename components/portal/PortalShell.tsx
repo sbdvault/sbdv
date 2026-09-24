@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname, useParams } from "next/navigation";
 import { useSession } from "next-auth/react";
 import Logo from "@/components/Logo";
+import SignedInIdentity from "@/components/dashboard/SignedInIdentity";
 import { hardSignOut } from "@/lib/hard-sign-out";
 import {
   LayoutDashboard,
@@ -40,7 +41,7 @@ export default function PortalShell({ children }: { children: React.ReactNode })
 
   return (
     <div className="min-h-screen bg-off-white flex">
-      <aside className="w-64 bg-charcoal text-off-white flex flex-col fixed h-full">
+      <aside className="w-64 bg-charcoal text-off-white flex flex-col fixed h-full z-20">
         <div className="p-6 border-b border-off-white/10">
           <Link href={getLocalizedHref("/")} className="flex items-center gap-3">
             <Logo height={48} className="shrink-0" />
@@ -48,7 +49,9 @@ export default function PortalShell({ children }: { children: React.ReactNode })
           </Link>
         </div>
 
-        <nav className="flex-1 p-4 space-y-1">
+        <SignedInIdentity caption={t("portal.signedInAs")} />
+
+        <nav className="flex-1 p-4 space-y-1 overflow-y-auto">
           {navItems.map((item) => {
             const href = getLocalizedHref(item.href);
             const isActive =
@@ -91,7 +94,14 @@ export default function PortalShell({ children }: { children: React.ReactNode })
         </div>
       </aside>
 
-      <main className="flex-1 ml-64 p-8">{children}</main>
+      <main className="flex-1 ml-64 min-h-screen">
+        <header className="sticky top-0 z-10 bg-off-white/95 backdrop-blur border-b border-charcoal/10 px-8 py-4">
+          <p className="font-body text-xs uppercase tracking-widest text-gold">
+            {t("portal.title")}
+          </p>
+        </header>
+        <div className="p-8">{children}</div>
+      </main>
     </div>
   );
 }
