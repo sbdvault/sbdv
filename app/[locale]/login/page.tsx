@@ -5,9 +5,11 @@ import { getCsrfToken, signIn } from "next-auth/react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Lock, AlertCircle } from "lucide-react";
+import { Lock, AlertCircle, CheckCircle2 } from "lucide-react";
 import { useTranslations } from "@/hooks/useTranslations";
 import Logo from "@/components/Logo";
+import { hardSignOut } from "@/lib/hard-sign-out";
+import { pathForRole } from "@/lib/role-paths";
 
 function isMfaRequired(result: { error?: string | null; code?: string } | undefined) {
   return result?.error === "MFA_REQUIRED" || result?.code === "MFA_REQUIRED";
@@ -37,6 +39,12 @@ async function clearSessions() {
   );
 }
 
+function roleLabel(role: string, t: (key: string) => string): string {
+  const key = `accountSecurity.roles.${role.toLowerCase()}`;
+  const translated = t(key);
+  return translated === key ? role : translated;
+}
+
 export default function LoginPage() {
   const { t, locale } = useTranslations();
   const params = useParams();
@@ -47,11 +55,15 @@ export default function LoginPage() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [csrfReady, setCsrfReady] = useState(false);
+  const [sessionChecking, setSessionChecking] = useState(true);
+  const [activeSession, setActiveSession] = useState<{
+    email: string;
+    role: string;
+  } | null>(null);
 
-  const getLocalizedHref = (href: string) => {
-    const currentLocale = (params?.locale as string) || locale || "en";
-    return `/${currentLocale}${href}`;
-  };
+  const currentLocale = (params?.locale as string) || locale || "en";
+
+  const getLocalizedHref = (href: string) => `/${currentLocale}${href}`;
 
   useEffect(() => {
     let cancelled = false;
@@ -70,12 +82,24 @@ export default function LoginPage() {
   }, []);
 
   useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const user = await readSessionUser();
+      if (!cancelled) {
+        setActiveSession(user);
+        setSessionChecking(false);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  useEffect(() => {
     if (typeof window === "undefined") return;
     const err = new URLSearchParams(window.location.search).get("error");
     if (err === "session") {
-      setError(
-        "Your previous session was cleared. Please sign in again."
-      );
+      setError("Your previous session was cleared. Please sign in again.");
     }
   }, [t]);
 
@@ -104,7 +128,6 @@ export default function LoginPage() {
     setLoading(true);
     setError("");
 
-    const currentLocale = (params?.locale as string) || locale || "en";
     const signedInEmail = email.trim().toLowerCase();
     const credentials = {
       email: signedInEmail,
@@ -113,7 +136,6 @@ export default function LoginPage() {
       redirect: false as const,
     };
 
-    // Sign in first (do not clear beforehand — that breaks Layero HTTPS cookies).
     let result = await attemptSignIn(credentials);
 
     if (isMfaRequired(result)) {
@@ -135,8 +157,6 @@ export default function LoginPage() {
       return;
     }
 
-    // Confirm the session belongs to this email. If an old admin cookie won,
-    // clear everything and sign in once more with a clean slate.
     let sessionUser = await readSessionUser();
     for (let i = 0; i < 3 && !sessionUser; i += 1) {
       await new Promise((r) => setTimeout(r, 120 * (i + 1)));
@@ -155,7 +175,10 @@ export default function LoginPage() {
       for (let i = 0; i < 4; i += 1) {
         await new Promise((r) => setTimeout(r, 120 * (i + 1)));
         sessionUser = await readSessionUser();
-        if (sessionUser?.email === signedInEmail || (sessionUser && !sessionUser.email)) {
+        if (
+          sessionUser?.email === signedInEmail ||
+          (sessionUser && !sessionUser.email)
+        ) {
           break;
         }
       }
@@ -169,17 +192,11 @@ export default function LoginPage() {
       }
     }
 
-    // Chain role from the verified session when possible.
-    if (sessionUser?.role && (!sessionUser.email || sessionUser.email === signedInEmail)) {
-      if (sessionUser.role === "ADMIN") {
-        window.location.assign(`/${currentLocale}/admin`);
-        return;
-      }
-      if (sessionUser.role === "BORROWER") {
-        window.location.assign(`/${currentLocale}/capital-access/portal`);
-        return;
-      }
-      window.location.assign(`/${currentLocale}/portal`);
+    if (
+      sessionUser?.role &&
+      (!sessionUser.email || sessionUser.email === signedInEmail)
+    ) {
+      window.location.assign(pathForRole(currentLocale, sessionUser.role));
       return;
     }
 
@@ -201,101 +218,157 @@ export default function LoginPage() {
             <Logo height={120} className="mx-auto" />
           </Link>
           <div className="flex items-center justify-center gap-2 mb-2">
-            <Lock className="w-5 h-5 text-gold" />
+            {activeSession ? (
+              <CheckCircle2 className="w-5 h-5 text-gold" />
+            ) : (
+              <Lock className="w-5 h-5 text-gold" />
+            )}
             <h1 className="text-3xl font-heading font-semibold text-charcoal">
-              {t("login.title")}
+              {activeSession ? t("login.alreadySignedIn") : t("login.title")}
             </h1>
           </div>
-          <p className="text-charcoal/70 font-body">{t("login.subtitle")}</p>
+          <p className="text-charcoal/70 font-body">
+            {activeSession ? t("login.alreadySignedInSubtitle") : t("login.subtitle")}
+          </p>
         </div>
 
         <div className="bg-white border-2 border-gold/30 rounded-lg p-8 shadow-lg">
-          {error && (
-            <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center gap-3">
-              <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
-              <p className="text-red-800 font-body text-sm">{error}</p>
+          {sessionChecking ? (
+            <div className="space-y-3 animate-pulse">
+              <div className="h-4 w-32 bg-charcoal/10 rounded" />
+              <div className="h-10 w-full bg-charcoal/10 rounded" />
+              <div className="h-10 w-full bg-charcoal/10 rounded" />
             </div>
-          )}
-
-          <form onSubmit={handleSubmit} className="space-y-5">
-            <div>
-              <label htmlFor="email" className="block text-sm font-body font-medium text-charcoal mb-2">
-                {t("login.email")}
-              </label>
-              <input
-                id="email"
-                type="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                disabled={loading}
-                className="w-full px-4 py-3 border border-charcoal/20 rounded-sm focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold font-body"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="password" className="block text-sm font-body font-medium text-charcoal mb-2">
-                {t("login.password")}
-              </label>
-              <input
-                id="password"
-                type="password"
-                required
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                disabled={loading}
-                className="w-full px-4 py-3 border border-charcoal/20 rounded-sm focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold font-body"
-              />
-            </div>
-
-            {showMfa && (
-              <div>
-                <label htmlFor="mfaCode" className="block text-sm font-body font-medium text-charcoal mb-2">
-                  {t("login.mfaCode")}
-                </label>
-                <input
-                  id="mfaCode"
-                  type="text"
-                  inputMode="numeric"
-                  pattern="[0-9]{6}"
-                  maxLength={6}
-                  required
-                  value={mfaCode}
-                  onChange={(e) => setMfaCode(e.target.value)}
-                  disabled={loading}
-                  className="w-full px-4 py-3 border border-charcoal/20 rounded-sm focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold font-body tracking-widest text-center"
-                  placeholder="000000"
-                />
-                <p className="text-xs text-charcoal/50 mt-2">
-                  Enter the code from your authenticator app, or the code emailed to you if email MFA is enabled.
+          ) : activeSession ? (
+            <div className="space-y-5">
+              <div className="rounded-sm bg-off-white border border-charcoal/10 px-4 py-3">
+                <p className="font-body text-xs uppercase tracking-wider text-charcoal/50 mb-1">
+                  {t("login.signedInAs")}
+                </p>
+                <p className="font-body text-sm text-charcoal truncate">
+                  {activeSession.email || "—"}
+                </p>
+                <p className="font-body text-xs text-charcoal/55 mt-1">
+                  {roleLabel(activeSession.role, t)}
                 </p>
               </div>
-            )}
-
-            <div className="flex justify-end">
               <Link
-                href={getLocalizedHref("/forgot-password")}
-                className="text-sm font-body text-gold hover:underline"
+                href={pathForRole(currentLocale, activeSession.role)}
+                className="gold-shimmer block w-full text-center px-8 py-3 bg-gold text-charcoal font-body font-medium rounded-sm hover:bg-gold/90 transition-all"
               >
-                {t("login.forgotPassword")}
+                {t("login.continueToPortal")}
               </Link>
+              <button
+                type="button"
+                onClick={() => hardSignOut(getLocalizedHref("/"))}
+                className="w-full px-8 py-3 border border-charcoal/20 text-charcoal font-body text-sm rounded-sm hover:border-gold transition-colors"
+              >
+                {t("login.signOut")}
+              </button>
             </div>
+          ) : (
+            <>
+              {error && (
+                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center gap-3">
+                  <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
+                  <p className="text-red-800 font-body text-sm">{error}</p>
+                </div>
+              )}
 
-            <button
-              type="submit"
-              disabled={loading || !csrfReady}
-              className="gold-shimmer w-full px-8 py-3 bg-gold text-charcoal font-body font-medium rounded-sm hover:bg-gold/90 transition-all disabled:opacity-50"
-            >
-              {loading ? t("login.signingIn") : t("login.signIn")}
-            </button>
-          </form>
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-body font-medium text-charcoal mb-2"
+                  >
+                    {t("login.email")}
+                  </label>
+                  <input
+                    id="email"
+                    type="email"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    disabled={loading}
+                    className="w-full px-4 py-3 border border-charcoal/20 rounded-sm focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold font-body"
+                  />
+                </div>
 
-          <p className="text-center text-sm text-charcoal/60 font-body mt-6">
-            {t("login.noAccount")}{" "}
-            <Link href={getLocalizedHref("/membership")} className="text-gold hover:underline">
-              {t("login.applyMembership")}
-            </Link>
-          </p>
+                <div>
+                  <label
+                    htmlFor="password"
+                    className="block text-sm font-body font-medium text-charcoal mb-2"
+                  >
+                    {t("login.password")}
+                  </label>
+                  <input
+                    id="password"
+                    type="password"
+                    required
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    disabled={loading}
+                    className="w-full px-4 py-3 border border-charcoal/20 rounded-sm focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold font-body"
+                  />
+                </div>
+
+                {showMfa && (
+                  <div>
+                    <label
+                      htmlFor="mfaCode"
+                      className="block text-sm font-body font-medium text-charcoal mb-2"
+                    >
+                      {t("login.mfaCode")}
+                    </label>
+                    <input
+                      id="mfaCode"
+                      type="text"
+                      inputMode="numeric"
+                      pattern="[0-9]{6}"
+                      maxLength={6}
+                      required
+                      value={mfaCode}
+                      onChange={(e) => setMfaCode(e.target.value)}
+                      disabled={loading}
+                      className="w-full px-4 py-3 border border-charcoal/20 rounded-sm focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold font-body tracking-widest text-center"
+                      placeholder="000000"
+                    />
+                    <p className="text-xs text-charcoal/50 mt-2">
+                      Enter the code from your authenticator app, or the code emailed
+                      to you if email MFA is enabled.
+                    </p>
+                  </div>
+                )}
+
+                <div className="flex justify-end">
+                  <Link
+                    href={getLocalizedHref("/forgot-password")}
+                    className="text-sm font-body text-gold hover:underline"
+                  >
+                    {t("login.forgotPassword")}
+                  </Link>
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={loading || !csrfReady}
+                  className="gold-shimmer w-full px-8 py-3 bg-gold text-charcoal font-body font-medium rounded-sm hover:bg-gold/90 transition-all disabled:opacity-50"
+                >
+                  {loading ? t("login.signingIn") : t("login.signIn")}
+                </button>
+              </form>
+
+              <p className="text-center text-sm text-charcoal/60 font-body mt-6">
+                {t("login.noAccount")}{" "}
+                <Link
+                  href={getLocalizedHref("/membership")}
+                  className="text-gold hover:underline"
+                >
+                  {t("login.applyMembership")}
+                </Link>
+              </p>
+            </>
+          )}
         </div>
       </motion.div>
     </section>

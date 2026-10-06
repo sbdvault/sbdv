@@ -3,7 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname, useParams } from "next/navigation";
+import { useSession } from "next-auth/react";
 import { useTranslations } from "@/hooks/useTranslations";
+import { pathForRole } from "@/lib/role-paths";
 import LanguageSwitcher from "./LanguageSwitcher";
 import Logo from "./Logo";
 
@@ -23,6 +25,12 @@ export default function Navbar() {
   const { t, locale } = useTranslations();
   const params = useParams();
   const pathname = usePathname();
+  const { data: session } = useSession();
+  const currentLocale = (params?.locale as string) || locale || "en";
+  const sessionRole = session?.user?.role;
+  const authHref = sessionRole
+    ? pathForRole(currentLocale, sessionRole)
+    : null;
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -159,20 +167,20 @@ export default function Navbar() {
 
           <div className="hidden lg:flex items-center gap-6">
             <Link
-              href={getLocalizedHref("/login")}
+              href={authHref || getLocalizedHref("/login")}
               className="border-b border-gold pb-0.5 font-body text-sm tracking-wide text-charcoal transition-colors hover:text-gold"
             >
-              {t("nav.signIn")}
+              {authHref ? t("nav.myPortal") : t("nav.signIn")}
             </Link>
             <LanguageSwitcher />
           </div>
 
           <div className="lg:hidden flex items-center gap-3">
             <Link
-              href={getLocalizedHref("/login")}
+              href={authHref || getLocalizedHref("/login")}
               className="border-b border-gold pb-0.5 font-body text-xs tracking-wide text-charcoal"
             >
-              {t("nav.signIn")}
+              {authHref ? t("nav.myPortal") : t("nav.signIn")}
             </Link>
             <LanguageSwitcher />
             <button

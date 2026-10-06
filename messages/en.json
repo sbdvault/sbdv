@@ -11,6 +11,7 @@
     "contact": "Contact",
     "clientLogin": "Client Login",
     "signIn": "Sign in",
+    "myPortal": "My portal",
     "privateClients": {
       "label": "Private Clients",
       "vaultDesc": "Custody and physical protection",
@@ -535,6 +536,11 @@
   "login": {
     "title": "Client Login",
     "subtitle": "Secure access to your portfolio and account documents.",
+    "alreadySignedIn": "You're signed in",
+    "alreadySignedInSubtitle": "Continue to your portal, or sign out to use a different account.",
+    "signedInAs": "Signed in as",
+    "continueToPortal": "Continue to portal",
+    "signOut": "Sign out",
     "email": "Email Address",
     "password": "Password",
     "mfaCode": "Authentication Code",

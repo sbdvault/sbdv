@@ -1,5 +1,6 @@
 import { auth } from "@/auth";
 import { clearAuthCookies } from "@/lib/auth-cookies";
+import { pathForRole } from "@/lib/role-paths";
 import {
   jwtEmail,
   readAllAuthTokens,
@@ -24,12 +25,6 @@ const locales = new Set([
   "ko",
   "ar",
 ]);
-
-function pathForRole(locale: string, role: string | undefined): string {
-  if (role === "ADMIN") return `/${locale}/admin`;
-  if (role === "BORROWER") return `/${locale}/capital-access/portal`;
-  return `/${locale}/portal`;
-}
 
 function withClearedCookies(response: NextResponse): NextResponse {
   clearAuthCookies(response);

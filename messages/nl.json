@@ -17,7 +17,8 @@
       "wealthDesc": "Portefeuille en mandaat",
       "servicesDesc": "Kluisverhuur en bezichtiging",
       "membershipDesc": "Toegang als particuliere cliënt aanvragen"
-    }
+    },
+    "myPortal": "My portal"
   },
   "hero": {
     "headline": "Zwitserse Veiligheid. Wereldwijd Vermogen.",
@@ -562,7 +563,12 @@
     "resetLinkInvalid": "This reset link is missing or invalid.",
     "resetSuccess": "Your password has been updated. You can sign in with the new password.",
     "resetFailed": "Unable to reset password.",
-    "resetRequestFailed": "Unable to send reset email."
+    "resetRequestFailed": "Unable to send reset email.",
+    "alreadySignedIn": "You're signed in",
+    "alreadySignedInSubtitle": "Continue to your portal, or sign out to use a different account.",
+    "signedInAs": "Signed in as",
+    "continueToPortal": "Continue to portal",
+    "signOut": "Sign out"
   },
   "portal": {
     "title": "Client Portal",
