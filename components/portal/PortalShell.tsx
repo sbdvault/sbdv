@@ -1,0 +1,107 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname, useParams } from "next/navigation";
+import { useSession } from "next-auth/react";
+import Logo from "@/components/Logo";
+import SignedInIdentity from "@/components/dashboard/SignedInIdentity";
+import { hardSignOut } from "@/lib/hard-sign-out";
+import {
+  LayoutDashboard,
+  Wallet,
+  TrendingUp,
+  FileText,
+  MessageSquare,
+  Settings,
+  LogOut,
+  Shield,
+} from "lucide-react";
+import { useTranslations } from "@/hooks/useTranslations";
+
+const navItems = [
+  { key: "overview", href: "/portal", icon: LayoutDashboard },
+  { key: "holdings", href: "/portal/holdings", icon: Wallet },
+  { key: "performance", href: "/portal/performance", icon: TrendingUp },
+  { key: "documents", href: "/portal/documents", icon: FileText },
+  { key: "messages", href: "/portal/messages", icon: MessageSquare },
+  { key: "settings", href: "/portal/settings", icon: Settings },
+];
+
+export default function PortalShell({ children }: { children: React.ReactNode }) {
+  const { t, locale } = useTranslations();
+  const { data: session } = useSession();
+  const params = useParams();
+  const pathname = usePathname();
+  const isAdmin = session?.user?.role === "ADMIN";
+
+  const getLocalizedHref = (href: string) => {
+    const currentLocale = (params?.locale as string) || locale || "en";
+    return `/${currentLocale}${href}`;
+  };
+
+  return (
+    <div className="min-h-screen bg-off-white flex">
+      <aside className="w-64 bg-charcoal text-off-white flex flex-col fixed h-full z-20">
+        <div className="p-6 border-b border-off-white/10">
+          <Link href={getLocalizedHref("/")} className="flex items-center gap-3">
+            <Logo height={48} className="shrink-0" />
+            <span className="font-heading text-lg">{t("portal.title")}</span>
+          </Link>
+        </div>
+
+        <SignedInIdentity caption={t("portal.signedInAs")} />
+
+        <nav className="flex-1 p-4 space-y-1 overflow-y-auto">
+          {navItems.map((item) => {
+            const href = getLocalizedHref(item.href);
+            const isActive =
+              pathname === href ||
+              (item.href !== "/portal" && pathname?.startsWith(href));
+            return (
+              <Link
+                key={item.key}
+                href={href}
+                className={`flex items-center gap-3 px-4 py-3 rounded-sm font-body text-sm transition-colors ${
+                  isActive
+                    ? "bg-gold text-charcoal"
+                    : "text-off-white/70 hover:bg-off-white/10 hover:text-off-white"
+                }`}
+              >
+                <item.icon className="w-5 h-5" />
+                {t(`portal.nav.${item.key}`)}
+              </Link>
+            );
+          })}
+          {isAdmin && (
+            <Link
+              href={getLocalizedHref("/admin")}
+              className="flex items-center gap-3 px-4 py-3 rounded-sm font-body text-sm text-gold hover:bg-gold/10 transition-colors mt-2 border border-gold/30"
+            >
+              <Shield className="w-5 h-5" />
+              {t("portal.nav.admin")}
+            </Link>
+          )}
+        </nav>
+
+        <div className="p-4 border-t border-off-white/10">
+          <button
+            onClick={() => hardSignOut(getLocalizedHref("/"))}
+            className="flex items-center gap-3 px-4 py-3 w-full rounded-sm font-body text-sm text-off-white/70 hover:bg-off-white/10 hover:text-off-white transition-colors"
+          >
+            <LogOut className="w-5 h-5" />
+            {t("portal.nav.logout")}
+          </button>
+        </div>
+      </aside>
+
+      <main className="flex-1 ml-64 min-h-screen">
+        <header className="sticky top-0 z-10 bg-off-white/95 backdrop-blur border-b border-charcoal/10 px-8 py-4">
+          <p className="font-body text-xs uppercase tracking-widest text-gold">
+            {t("portal.title")}
+          </p>
+        </header>
+        <div className="p-8">{children}</div>
+      </main>
+    </div>
+  );
+}

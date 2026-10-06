@@ -1,0 +1,41 @@
+# dependencies
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# next.js
+.next
+out
+
+# env / secrets
+.env
+.env.*
+!.env.example
+
+# local data
+prisma/dev.db
+prisma/dev.db-journal
+uploads
+sbdv-data
+data
+
+# git / ide
+.git
+.vscode
+.idea
+*.tsbuildinfo
+
+# host leftovers / private notes (not needed in image)
+amvera.yml
+amvera.yaml
+.amvera
+.layero
+DEPLOY_DIRECT.md
+DEPLOYMENT_CHECKLIST.md
+I18N_GUIDE.md
+render.yaml
+
+# misc
+coverage
+.turbo

@@ -1,0 +1,955 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { useTranslations } from "@/hooks/useTranslations";
+import {
+  getNextAdminAction,
+  hasCompleteKycPack,
+  hasDisburseBankDetails,
+  hasPaymentSlip,
+  kycChecklistComplete,
+  ONBOARDING_PHASES,
+  PAYMENT_SLIP_TYPE,
+  REQUIRED_DOCUMENT_TYPES,
+} from "@/lib/capital-access-onboarding";
+import { Building2, ChevronDown, ChevronUp, FileText } from "lucide-react";
+import { buildRepaymentSchedule, installmentOrdinal, nextUnpaidInstallment } from "@/lib/repayment-schedule";
+
+interface Application {
+  id: string;
+  companyName: string;
+  country: string;
+  operatingCountry?: string | null;
+  yearsOperating?: number | null;
+  industry: string;
+  requestedAmountUsd: number;
+  interestRatePct: number;
+  termYears: number;
+  repaymentFrequency: string;
+  installmentUsd: number;
+  disbursedAt?: string | null;
+  installmentPayments?: unknown;
+  securityDepositUsd: number;
+  investmentAreas: string;
+  status: string;
+  onboardingPhase: string | null;
+  adminNotes: string | null;
+  depositReference: string | null;
+  depositSubmittedAt: string | null;
+  depositConfirmedAt: string | null;
+  facilityTermsAcceptedAt?: string | null;
+  facilityTermsVersion?: string | null;
+  relationshipManager: string | null;
+  poolLabel: string;
+  docsComplete?: boolean;
+  bankDetailsComplete?: boolean;
+  disburseBankName?: string | null;
+  disburseBankAddress?: string | null;
+  disburseAccountName?: string | null;
+  disburseAccountNumber?: string | null;
+  disburseIban?: string | null;
+  disburseSwift?: string | null;
+  disburseRouting?: string | null;
+  disburseBeneficiary?: string | null;
+  disburseBeneficiaryAddress?: string | null;
+  bankDetailsSubmittedAt?: string | null;
+  depositSofSource?: string | null;
+  depositSofDetail?: string | null;
+  kycUboLookthrough?: boolean;
+  kycSanctionsScreen?: boolean;
+  kycSofAccepted?: boolean;
+  kycEnhancedDd?: boolean;
+  ubos?: {
+    id: string;
+    fullName: string;
+    nationality: string;
+    domicileCountry: string;
+    ownershipPct: number | null;
+    controlMethod: string;
+    pep: boolean;
+  }[];
+  user: { name: string | null; email: string };
+  documents: { id: string; type: string; name: string; uploadedAt?: string }[];
+  escrow: {
+    bankName: string;
+    bankAddress: string | null;
+    accountName: string;
+    accountNumber: string | null;
+    iban: string;
+    swift: string;
+    routing?: string | null;
+    reference: string;
+    beneficiary: string;
+    beneficiaryAddress: string | null;
+    configured: boolean;
+  };
+  createdAt: string;
+}
+
+interface EscrowForm {
+  bankName: string;
+  bankAddress: string;
+  accountName: string;
+  accountNumber: string;
+  iban: string;
+  swift: string;
+  routing: string;
+  beneficiary: string;
+  beneficiaryAddress: string;
+  paymentReference: string;
+}
+
+function EscrowFieldsForm({
+  form,
+  onChange,
+  t,
+}: {
+  form: EscrowForm;
+  onChange: (next: EscrowForm) => void;
+  t: (key: string) => string;
+}) {
+  const fields = [
+    ["bankName", t("capitalAccess.onboarding.bank")],
+    ["bankAddress", t("capitalAccess.onboarding.bankAddress")],
+    ["accountName", t("capitalAccess.onboarding.account")],
+    ["accountNumber", t("capitalAccess.onboarding.accountNumber")],
+    ["iban", t("capitalAccess.onboarding.ibanOptional")],
+    ["swift", t("capitalAccess.onboarding.swiftRequired")],
+    ["routing", t("capitalAccess.onboarding.routing")],
+    ["beneficiary", t("admin.capitalAccess.beneficiary")],
+    ["beneficiaryAddress", t("capitalAccess.onboarding.beneficiaryAddress")],
+    ["paymentReference", t("capitalAccess.onboarding.wireReference")],
+  ] as const;
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {fields.map(([key, label]) => {
+        const isAddress = key === "bankAddress" || key === "beneficiaryAddress";
+        return (
+          <label key={key} className={`block ${isAddress ? "md:col-span-2" : ""}`}>
+            <span className="font-body text-xs text-charcoal/50 uppercase tracking-wide">{label}</span>
+            {isAddress ? (
+              <textarea
+                value={form[key]}
+                onChange={(e) => onChange({ ...form, [key]: e.target.value })}
+                rows={2}
+                className="mt-1 w-full px-3 py-2.5 border border-charcoal/20 rounded-sm font-body text-sm focus:outline-none focus:border-gold resize-y"
+              />
+            ) : (
+              <input
+                value={form[key]}
+                onChange={(e) => onChange({ ...form, [key]: e.target.value })}
+                className="mt-1 w-full px-3 py-2.5 border border-charcoal/20 rounded-sm font-body text-sm focus:outline-none focus:border-gold"
+                required={
+                  key !== "beneficiary" &&
+                  key !== "paymentReference" &&
+                  key !== "accountNumber" &&
+                  key !== "iban" &&
+                  key !== "routing"
+                }
+              />
+            )}
+          </label>
+        );
+      })}
+    </div>
+  );
+}
+
+export default function AdminCapitalAccessPage() {
+  const { t } = useTranslations();
+  const [applications, setApplications] = useState<Application[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [reviewingId, setReviewingId] = useState<string | null>(null);
+  const [extraNotes, setExtraNotes] = useState("");
+  const [escrowForm, setEscrowForm] = useState<EscrowForm>({
+    bankName: "",
+    bankAddress: "",
+    accountName: "",
+    accountNumber: "",
+    iban: "",
+    swift: "",
+    routing: "",
+    beneficiary: "",
+    beneficiaryAddress: "",
+    paymentReference: "",
+  });
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState("");
+
+  const loadData = () => {
+    setLoading(true);
+    fetch("/api/admin/capital-access")
+      .then((res) => res.json())
+      .then((json) => setApplications(json.applications || []))
+      .finally(() => setLoading(false));
+  };
+
+  useEffect(() => {
+    loadData();
+  }, []);
+
+  const openReview = (app: Application) => {
+    setError("");
+    if (reviewingId === app.id) {
+      setReviewingId(null);
+      return;
+    }
+    setReviewingId(app.id);
+    setExtraNotes(app.adminNotes || "");
+    setEscrowForm({
+      bankName: app.escrow.configured ? app.escrow.bankName : "",
+      bankAddress: app.escrow.bankAddress || "",
+      accountName: app.escrow.configured ? app.escrow.accountName : "",
+      accountNumber: app.escrow.accountNumber || "",
+      iban: app.escrow.configured ? app.escrow.iban : "",
+      swift: app.escrow.configured ? app.escrow.swift : "",
+      routing: app.escrow.routing || "",
+      beneficiary: app.escrow.beneficiary || app.companyName,
+      beneficiaryAddress: app.escrow.beneficiaryAddress || "",
+      paymentReference: app.escrow.reference || `CAP-${app.id.slice(-8).toUpperCase()}`,
+    });
+  };
+
+  const updateStatus = async (id: string, status: string) => {
+    setSaving(true);
+    setError("");
+    const res = await fetch("/api/admin/capital-access", {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id, status }),
+    });
+    setSaving(false);
+    if (!res.ok) {
+      const json = await res.json();
+      setError(json.error || t("admin.capitalAccess.error"));
+      return;
+    }
+    setReviewingId(null);
+    loadData();
+  };
+
+  const requestExtraDocuments = async (id: string) => {
+    setSaving(true);
+    setError("");
+    const res = await fetch("/api/admin/capital-access", {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        id,
+        action: "request_extra_documents",
+        adminNotes: extraNotes,
+      }),
+    });
+    const json = await res.json();
+    setSaving(false);
+    if (!res.ok) {
+      setError(json.error || t("admin.capitalAccess.error"));
+      return;
+    }
+    setReviewingId(null);
+    loadData();
+  };
+
+  const submitApproval = async (id: string) => {
+    setSaving(true);
+    setError("");
+    const res = await fetch("/api/admin/capital-access", {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        id,
+        status: "APPROVED",
+        escrow: escrowForm,
+      }),
+    });
+    const json = await res.json();
+    setSaving(false);
+    if (!res.ok) {
+      setError(json.error || t("admin.capitalAccess.error"));
+      return;
+    }
+    setReviewingId(null);
+    loadData();
+  };
+
+  const saveEscrowOnly = async (id: string) => {
+    setSaving(true);
+    setError("");
+    const res = await fetch("/api/admin/capital-access", {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        id,
+        action: "update_escrow",
+        escrow: escrowForm,
+      }),
+    });
+    const json = await res.json();
+    setSaving(false);
+    if (!res.ok) {
+      setError(json.error || t("admin.capitalAccess.error"));
+      return;
+    }
+    setReviewingId(null);
+    loadData();
+  };
+
+  const advanceOnboarding = async (id: string, confirmDeposit = false) => {
+    setSaving(true);
+    setError("");
+    const res = await fetch(`/api/admin/capital-access/${id}/onboarding`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ action: confirmDeposit ? "confirm_deposit" : "advance" }),
+    });
+    const json = await res.json();
+    setSaving(false);
+    if (!res.ok) {
+      setError(json.error || t("admin.capitalAccess.error"));
+      return;
+    }
+    loadData();
+  };
+
+  const saveKycChecklist = async (
+    id: string,
+    next: { ubo: boolean; sanctions: boolean; sof: boolean; enhancedDd: boolean }
+  ) => {
+    setSaving(true);
+    setError("");
+    const res = await fetch(`/api/admin/capital-access/${id}/onboarding`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ action: "kyc_checklist", kyc: next }),
+    });
+    const json = await res.json();
+    setSaving(false);
+    if (!res.ok) {
+      setError(json.error || t("admin.capitalAccess.error"));
+      return;
+    }
+    loadData();
+  };
+
+  const recordInstallment = async (id: string) => {
+    setSaving(true);
+    setError("");
+    const res = await fetch(`/api/admin/capital-access/${id}/onboarding`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ action: "record_installment" }),
+    });
+    const json = await res.json();
+    setSaving(false);
+    if (!res.ok) {
+      setError(json.error || t("admin.capitalAccess.error"));
+      return;
+    }
+    loadData();
+  };
+
+  const formatUsd = (n: number) =>
+    new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(n);
+
+  if (loading) return <p className="font-body text-charcoal/60">{t("common.loading")}</p>;
+
+  return (
+    <div>
+      <div className="mb-8">
+        <h1 className="text-3xl font-heading font-semibold text-charcoal mb-2">
+          {t("admin.capitalAccess.title")}
+        </h1>
+        <p className="font-body text-charcoal/60">{t("admin.capitalAccess.subtitle")}</p>
+      </div>
+
+      {error && (
+        <p className="mb-4 font-body text-sm text-red-700 bg-red-50 border border-red-100 p-3 rounded-sm">
+          {error}
+        </p>
+      )}
+
+      {applications.length === 0 ? (
+        <div className="p-12 bg-white border border-charcoal/10 rounded-lg text-center">
+          <p className="font-body text-charcoal/60">{t("admin.capitalAccess.empty")}</p>
+        </div>
+      ) : (
+        <div className="space-y-6">
+          {applications.map((app) => {
+            const isReviewing = reviewingId === app.id;
+            const canApprove = app.status === "PENDING" || app.status === "UNDER_REVIEW";
+            const needsEscrow = app.status === "APPROVED" && !app.escrow.configured;
+            const nextPhase = app.onboardingPhase ? getNextAdminAction(app.onboardingPhase) : null;
+            const docsComplete =
+              app.docsComplete ??
+              hasCompleteKycPack(app.documents.map((d) => d.type), app.ubos?.length ?? 0);
+            const paymentSlip = app.documents.find((d) => d.type === PAYMENT_SLIP_TYPE);
+            const slipReady = hasPaymentSlip(app.documents.map((d) => d.type));
+            const phaseIndex = app.onboardingPhase
+              ? ONBOARDING_PHASES.indexOf(app.onboardingPhase as (typeof ONBOARDING_PHASES)[number])
+              : -1;
+            const awaitingDeposit = app.onboardingPhase === "AWAITING_DEPOSIT";
+            const awaitingBank = app.onboardingPhase === "AWAITING_BANK_DETAILS";
+            const bankReady =
+              app.bankDetailsComplete || hasDisburseBankDetails(app);
+            const inDocReview =
+              canApprove &&
+              (app.onboardingPhase === "AWAITING_DOCUMENTS" ||
+                app.onboardingPhase === "DOCUMENTS_REVISION" ||
+                app.onboardingPhase === "DOCUMENTS_SUBMITTED" ||
+                !app.onboardingPhase);
+            const docsSubmitted = app.onboardingPhase === "DOCUMENTS_SUBMITTED";
+            const docsAwaitingSubmit =
+              app.onboardingPhase === "AWAITING_DOCUMENTS" ||
+              app.onboardingPhase === "DOCUMENTS_REVISION" ||
+              !app.onboardingPhase;
+            const docsPackageAccepted = docsSubmitted || (!docsAwaitingSubmit && docsComplete);
+            const disbursedOrActive =
+              app.onboardingPhase === "DISBURSED" || app.onboardingPhase === "ACTIVE";
+
+            const canAdvanceOnboarding =
+              Boolean(nextPhase) &&
+              !awaitingDeposit &&
+              app.onboardingPhase !== "AWAITING_DOCUMENTS" &&
+              app.onboardingPhase !== "DOCUMENTS_REVISION" &&
+              !(awaitingBank && !bankReady) &&
+              !(app.onboardingPhase === "KYC_REVIEW" && !kycChecklistComplete(app));
+
+            return (
+              <div
+                key={app.id}
+                className={`p-6 bg-white border rounded-lg transition-colors ${
+                  isReviewing ? "border-gold shadow-sm" : "border-charcoal/10"
+                }`}
+              >
+                <div className="flex flex-wrap justify-between gap-4 mb-4">
+                  <div>
+                    <p className="font-heading font-semibold text-charcoal text-lg">{app.companyName}</p>
+                    <p className="font-body text-sm text-charcoal/60">
+                      {app.user.name || app.user.email} · {app.country}
+                      {app.operatingCountry && app.operatingCountry !== app.country
+                        ? ` / ${app.operatingCountry}`
+                        : ""}{" "}
+                      · {app.industry}
+                    </p>
+                    <p className="font-body text-xs text-gold mt-1">{app.poolLabel}</p>
+                  </div>
+                  <div className="flex flex-col items-end gap-1">
+                    <span
+                      className={`text-xs px-3 py-1 rounded-full ${
+                        app.status === "APPROVED"
+                          ? "bg-green-100 text-green-800"
+                          : app.status === "REJECTED"
+                            ? "bg-red-100 text-red-800"
+                            : app.status === "UNDER_REVIEW"
+                              ? "bg-blue-100 text-blue-800"
+                              : "bg-yellow-100 text-yellow-800"
+                      }`}
+                    >
+                      {t(`capitalAccess.status.${app.status.toLowerCase()}`)}
+                    </span>
+                    {app.onboardingPhase && (
+                      <span
+                        className={`text-xs font-body ${
+                          disbursedOrActive
+                            ? "px-3 py-1 rounded-full bg-green-100 text-green-800"
+                            : "text-charcoal/50"
+                        }`}
+                      >
+                        {t(
+                          `capitalAccess.onboarding.phases.${
+                            disbursedOrActive ? "active" : app.onboardingPhase.toLowerCase()
+                          }`
+                        )}
+                      </span>
+                    )}
+                    <span
+                      className={`text-xs font-body ${
+                        docsPackageAccepted ? "text-green-700" : "text-amber-700"
+                      }`}
+                    >
+                      {docsPackageAccepted
+                        ? t("admin.capitalAccess.docsSubmitted")
+                        : docsComplete && docsAwaitingSubmit
+                          ? t("admin.capitalAccess.docsUploadedNotSubmitted")
+                          : t("admin.capitalAccess.docsIncomplete")}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4 text-sm">
+                  <div>
+                    <p className="text-charcoal/40">{t("capitalAccess.request.amount")}</p>
+                    <p className="font-medium">{formatUsd(app.requestedAmountUsd)}</p>
+                  </div>
+                  <div>
+                    <p className="text-charcoal/40">{t("capitalAccess.request.apr")}</p>
+                    <p className="font-medium">{app.interestRatePct}%</p>
+                  </div>
+                  <div>
+                    <p className="text-charcoal/40">{t("capitalAccess.securityDeposit")}</p>
+                    <p className="font-medium">{formatUsd(app.securityDepositUsd)}</p>
+                  </div>
+                  <div>
+                    <p className="text-charcoal/40">{t("capitalAccess.request.repayment")}</p>
+                    <p className="font-medium capitalize">{app.repaymentFrequency.toLowerCase()}</p>
+                  </div>
+                </div>
+
+                {/* Document package */}
+                <div className="mb-4 p-4 bg-off-white border border-charcoal/5 rounded-lg">
+                  <p className="font-body text-xs uppercase tracking-wide text-charcoal/40 mb-3 flex items-center gap-2">
+                    <FileText className="w-3.5 h-3.5" />
+                    {t("admin.capitalAccess.documentPackage")}
+                  </p>
+                  <ul className="space-y-2">
+                    {REQUIRED_DOCUMENT_TYPES.map((docType) => {
+                      const doc = app.documents.find((d) => d.type === docType);
+                      return (
+                        <li key={docType} className="flex justify-between gap-3 text-sm font-body">
+                          <span className="text-charcoal/70">
+                            {t(`capitalAccess.onboarding.docTypes.${docType.toLowerCase()}`)}
+                          </span>
+                          {doc ? (
+                            <a
+                              href={`/api/admin/capital-access/${app.id}/documents/${doc.id}`}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="text-gold hover:underline truncate max-w-[50%]"
+                            >
+                              {doc.name}
+                            </a>
+                          ) : (
+                            <span className="text-amber-700 text-xs">{t("admin.capitalAccess.missingDoc")}</span>
+                          )}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                  {(app.ubos?.length ?? 0) > 0 ? (
+                    <div className="mt-4 pt-3 border-t border-charcoal/10">
+                      <p className="font-body text-xs uppercase tracking-wide text-charcoal/40 mb-2">
+                        {t("admin.capitalAccess.uboTitle")}
+                      </p>
+                      <ul className="space-y-1">
+                        {app.ubos!.map((u) => (
+                          <li key={u.id} className="text-sm font-body text-charcoal/70">
+                            {u.fullName} · {u.nationality}
+                            {u.ownershipPct != null ? ` · ${u.ownershipPct}%` : ""}
+                            {u.pep ? " · PEP" : ""}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : (
+                    <p className="mt-3 font-body text-xs text-amber-700">
+                      {t("admin.capitalAccess.uboIncomplete")}
+                    </p>
+                  )}
+                  {docsSubmitted && (
+                    <p className="mt-3 font-body text-xs text-green-800 bg-green-50 p-2 rounded-sm">
+                      {t("admin.capitalAccess.packageReceived")}
+                    </p>
+                  )}
+                </div>
+
+                {(canApprove || needsEscrow) && (
+                  <div className="mb-4">
+                    <button
+                      onClick={() => openReview(app)}
+                      className="inline-flex items-center gap-2 px-4 py-2 border border-gold/50 text-charcoal font-body text-sm rounded-sm hover:bg-gold/5"
+                    >
+                      <Building2 className="w-4 h-4 text-gold" />
+                      {needsEscrow
+                        ? t("admin.capitalAccess.assignEscrow")
+                        : t("admin.capitalAccess.reviewApplication")}
+                      {isReviewing ? (
+                        <ChevronUp className="w-4 h-4" />
+                      ) : (
+                        <ChevronDown className="w-4 h-4" />
+                      )}
+                    </button>
+                  </div>
+                )}
+
+                {isReviewing && inDocReview && (
+                  <div className="mb-4 p-5 bg-off-white border border-gold/20 rounded-lg space-y-5">
+                    <div>
+                      <h3 className="font-heading font-semibold text-charcoal mb-1">
+                        {t("admin.capitalAccess.requestExtraTitle")}
+                      </h3>
+                      <p className="font-body text-sm text-charcoal/60 mb-3">
+                        {t("admin.capitalAccess.requestExtraDesc")}
+                      </p>
+                      <textarea
+                        value={extraNotes}
+                        onChange={(e) => setExtraNotes(e.target.value)}
+                        rows={3}
+                        placeholder={t("admin.capitalAccess.extraNotesPlaceholder")}
+                        className="w-full px-3 py-2.5 border border-charcoal/20 rounded-sm font-body text-sm focus:outline-none focus:border-gold resize-y"
+                      />
+                      <button
+                        onClick={() => requestExtraDocuments(app.id)}
+                        disabled={saving || !extraNotes.trim()}
+                        className="mt-3 px-4 py-2 border border-amber-400 text-amber-900 font-body text-sm rounded-sm disabled:opacity-50"
+                      >
+                        {saving ? t("common.loading") : t("admin.capitalAccess.requestExtra")}
+                      </button>
+                    </div>
+
+                    <div className="border-t border-charcoal/10 pt-5">
+                      <h3 className="font-heading font-semibold text-charcoal mb-1">
+                        {t("admin.capitalAccess.approveWithEscrowTitle")}
+                      </h3>
+                      <p className="font-body text-sm text-charcoal/60 mb-4">
+                        {t("admin.capitalAccess.approveModalDesc")}{" "}
+                        <strong>{formatUsd(app.securityDepositUsd)}</strong>
+                      </p>
+                      {!docsComplete && (
+                        <p className="mb-3 font-body text-sm text-amber-800 bg-amber-50 p-3 rounded-sm">
+                          {t("admin.capitalAccess.approveRequiresDocs")}
+                        </p>
+                      )}
+                      {docsComplete && !docsSubmitted && (
+                        <p className="mb-3 font-body text-sm text-amber-800 bg-amber-50 p-3 rounded-sm">
+                          {t("admin.capitalAccess.approveRequiresSubmit")}
+                        </p>
+                      )}
+                      <EscrowFieldsForm form={escrowForm} onChange={setEscrowForm} t={t} />
+                      <div className="flex flex-wrap gap-3 mt-5">
+                        <button
+                          onClick={() => submitApproval(app.id)}
+                          disabled={saving || !docsComplete || !docsSubmitted}
+                          className="px-5 py-2.5 bg-gold text-charcoal font-body text-sm rounded-sm disabled:opacity-50"
+                        >
+                          {saving ? t("common.loading") : t("admin.approve")}
+                        </button>
+                        <button
+                          onClick={() => updateStatus(app.id, "UNDER_REVIEW")}
+                          disabled={saving}
+                          className="px-4 py-2.5 border border-charcoal/20 font-body text-sm rounded-sm"
+                        >
+                          {t("admin.capitalAccess.review")}
+                        </button>
+                        <button
+                          onClick={() => updateStatus(app.id, "REJECTED")}
+                          disabled={saving}
+                          className="px-4 py-2.5 border border-red-300 text-red-700 font-body text-sm rounded-sm"
+                        >
+                          {t("admin.reject")}
+                        </button>
+                        <button
+                          onClick={() => setReviewingId(null)}
+                          className="px-4 py-2.5 border border-charcoal/20 font-body text-sm rounded-sm"
+                        >
+                          {t("common.cancel")}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {isReviewing && needsEscrow && (
+                  <div className="mb-4 p-5 bg-off-white border border-gold/20 rounded-lg">
+                    <h3 className="font-heading font-semibold text-charcoal mb-1">
+                      {t("admin.capitalAccess.escrowFormTitle")}
+                    </h3>
+                    <EscrowFieldsForm form={escrowForm} onChange={setEscrowForm} t={t} />
+                    <div className="flex flex-wrap gap-3 mt-5">
+                      <button
+                        onClick={() => saveEscrowOnly(app.id)}
+                        disabled={saving}
+                        className="px-5 py-2.5 bg-gold text-charcoal font-body text-sm rounded-sm disabled:opacity-50"
+                      >
+                        {saving ? t("common.loading") : t("admin.capitalAccess.saveEscrow")}
+                      </button>
+                      <button
+                        onClick={() => setReviewingId(null)}
+                        className="px-4 py-2.5 border border-charcoal/20 font-body text-sm rounded-sm"
+                      >
+                        {t("common.cancel")}
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+                {app.status === "APPROVED" && app.onboardingPhase && (
+                  <div className="mb-4 p-4 bg-off-white rounded-lg border border-charcoal/5">
+                    <p className="font-body text-xs uppercase tracking-wide text-charcoal/40 mb-3">
+                      {t("admin.capitalAccess.onboarding")}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      {ONBOARDING_PHASES.map((phase, i) => (
+                        <span
+                          key={phase}
+                          className={`text-xs px-2 py-1 rounded ${
+                            disbursedOrActive && (i <= phaseIndex || phase === "ACTIVE")
+                              ? "bg-green-100 text-green-800"
+                              : i < phaseIndex
+                                ? "bg-green-100 text-green-800"
+                                : i === phaseIndex
+                                  ? "bg-gold/20 text-charcoal font-medium"
+                                  : "bg-charcoal/5 text-charcoal/40"
+                          }`}
+                        >
+                          {t(`capitalAccess.onboarding.phases.${phase.toLowerCase()}`)}
+                        </span>
+                      ))}
+                    </div>
+
+                    {app.escrow.configured && (
+                      <div className="mb-3 p-3 bg-white border border-charcoal/10 rounded-sm text-sm font-body">
+                        <p className="text-xs uppercase tracking-wide text-charcoal/40 mb-2">
+                          {t("admin.capitalAccess.assignedEscrow")}
+                        </p>
+                        <p>
+                          {app.escrow.bankName} · {app.escrow.accountName}
+                        </p>
+                        {app.escrow.bankAddress && (
+                          <p className="text-charcoal/60 text-xs mt-1 whitespace-pre-line">
+                            {app.escrow.bankAddress}
+                          </p>
+                        )}
+                        <p className="font-mono text-xs mt-1">
+                          {app.escrow.accountNumber ? `${app.escrow.accountNumber} · ` : ""}
+                          {app.escrow.iban} · {app.escrow.swift}
+                        </p>
+                        <p className="mt-2">
+                          {t("admin.capitalAccess.beneficiary")}: {app.escrow.beneficiary}
+                        </p>
+                        {app.escrow.beneficiaryAddress && (
+                          <p className="text-charcoal/60 text-xs mt-1 whitespace-pre-line">
+                            {app.escrow.beneficiaryAddress}
+                          </p>
+                        )}
+                        <p className="text-gold font-mono text-xs mt-1">{app.escrow.reference}</p>
+                      </div>
+                    )}
+
+                    {awaitingDeposit && (
+                      <div className="mb-3 space-y-2">
+                        {app.facilityTermsAcceptedAt && (
+                          <p className="font-body text-sm text-charcoal/70">
+                            {t("capitalAccess.facilityTerms.acceptedNote")}
+                            {app.facilityTermsVersion ? ` · ${app.facilityTermsVersion}` : ""}
+                          </p>
+                        )}
+                        {app.depositReference ? (
+                          <p className="font-body text-sm text-charcoal/70">
+                            {t("capitalAccess.onboarding.wireReference")}:{" "}
+                            <code className="text-charcoal">{app.depositReference}</code>
+                            {app.depositConfirmedAt
+                              ? " ✓"
+                              : ` (${t("admin.capitalAccess.pendingVerification")})`}
+                          </p>
+                        ) : (
+                          <p className="font-body text-sm text-charcoal/50">
+                            {t("admin.capitalAccess.awaitingBorrowerDeposit")}
+                          </p>
+                        )}
+                        {paymentSlip ? (
+                          <p className="font-body text-sm text-charcoal/70">
+                            {t("admin.capitalAccess.paymentSlip")}:{" "}
+                            <a
+                              href={`/api/admin/capital-access/${app.id}/documents/${paymentSlip.id}`}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="text-gold hover:underline"
+                            >
+                              {paymentSlip.name}
+                            </a>
+                          </p>
+                        ) : (
+                          <p className="font-body text-sm text-amber-700">
+                            {t("admin.capitalAccess.noPaymentSlip")}
+                          </p>
+                        )}
+                        {app.depositSofSource ? (
+                          <p className="font-body text-sm text-charcoal/70">
+                            {t("admin.capitalAccess.sofLabel")}: {app.depositSofSource}
+                            {app.depositSofDetail ? ` — ${app.depositSofDetail}` : ""}
+                          </p>
+                        ) : app.depositSubmittedAt ? (
+                          <p className="font-body text-sm text-amber-700">
+                            {t("admin.capitalAccess.sofMissing")}
+                          </p>
+                        ) : null}
+                      </div>
+                    )}
+
+                    {awaitingDeposit && app.depositSubmittedAt && slipReady && (
+                      <button
+                        onClick={() => advanceOnboarding(app.id, true)}
+                        disabled={saving || !app.depositSofSource}
+                        className="mt-2 px-4 py-2 bg-gold text-charcoal font-body text-sm rounded-sm disabled:opacity-50"
+                      >
+                        {t("admin.capitalAccess.confirmPayment")}
+                      </button>
+                    )}
+
+                    {app.onboardingPhase === "KYC_REVIEW" && (
+                      <div className="mb-3 p-3 bg-white border border-charcoal/10 rounded-sm space-y-2">
+                        <p className="text-xs uppercase tracking-wide text-charcoal/40">
+                          {t("admin.capitalAccess.kycChecklist")}
+                        </p>
+                        {(
+                          [
+                            ["ubo", "kycUbo", app.kycUboLookthrough],
+                            ["sanctions", "kycSanctions", app.kycSanctionsScreen],
+                            ["sof", "kycSof", app.kycSofAccepted],
+                            ["enhancedDd", "kycEdd", app.kycEnhancedDd],
+                          ] as const
+                        ).map(([key, label, checked]) => (
+                          <label key={key} className="flex items-center gap-2 font-body text-sm text-charcoal/80">
+                            <input
+                              type="checkbox"
+                              checked={Boolean(checked)}
+                              disabled={saving}
+                              onChange={(e) =>
+                                saveKycChecklist(app.id, {
+                                  ubo: key === "ubo" ? e.target.checked : Boolean(app.kycUboLookthrough),
+                                  sanctions:
+                                    key === "sanctions" ? e.target.checked : Boolean(app.kycSanctionsScreen),
+                                  sof: key === "sof" ? e.target.checked : Boolean(app.kycSofAccepted),
+                                  enhancedDd:
+                                    key === "enhancedDd" ? e.target.checked : Boolean(app.kycEnhancedDd),
+                                })
+                              }
+                              className="accent-gold"
+                            />
+                            {t(`admin.capitalAccess.${label}`)}
+                          </label>
+                        ))}
+                      </div>
+                    )}
+
+                    {(awaitingBank || bankReady) &&
+                      (app.disburseBankName || app.disburseIban) && (
+                        <div className="mb-3 p-3 bg-white border border-charcoal/10 rounded-sm text-sm font-body">
+                          <p className="text-xs uppercase tracking-wide text-charcoal/40 mb-2">
+                            {t("admin.capitalAccess.disburseBank")}
+                          </p>
+                          {bankReady ? (
+                            <p className="text-xs text-green-700 mb-2">
+                              {t("admin.capitalAccess.bankDetailsReceived")}
+                            </p>
+                          ) : (
+                            <p className="text-xs text-amber-700 mb-2">
+                              {t("admin.capitalAccess.awaitingBankDetails")}
+                            </p>
+                          )}
+                          <p>
+                            {app.disburseBankName} · {app.disburseAccountName}
+                          </p>
+                          {app.disburseBankAddress && (
+                            <p className="text-charcoal/60 text-xs mt-1 whitespace-pre-line">
+                              {app.disburseBankAddress}
+                            </p>
+                          )}
+                          <p className="font-mono text-xs mt-1">
+                            {app.disburseAccountNumber ? `${app.disburseAccountNumber} · ` : ""}
+                            {app.disburseIban} · {app.disburseSwift}
+                          </p>
+                          <p className="mt-2">
+                            {t("admin.capitalAccess.beneficiary")}:{" "}
+                            {app.disburseBeneficiary || app.companyName}
+                          </p>
+                        </div>
+                      )}
+
+                    {disbursedOrActive && app.disbursedAt && (
+                      <div className="mb-3 p-3 bg-white border border-charcoal/10 rounded-sm text-sm font-body">
+                        {(() => {
+                          const schedule = buildRepaymentSchedule({
+                            disbursedAt: app.disbursedAt,
+                            termYears: app.termYears,
+                            repaymentFrequency: app.repaymentFrequency,
+                            principalUsd: app.requestedAmountUsd,
+                            installmentUsd: app.installmentUsd,
+                            payments: app.installmentPayments,
+                          });
+                          const next = nextUnpaidInstallment(schedule);
+                          return (
+                            <>
+                              <p className="text-xs uppercase tracking-wide text-charcoal/40 mb-2">
+                                {t("capitalAccess.statement.scheduleTitle")}
+                              </p>
+                              <p className="text-charcoal/70 mb-3">
+                                {schedule.filter((row) => row.status === "PAID").length} / {schedule.length}{" "}
+                                {t("capitalAccess.statement.paidCount").toLowerCase()}
+                              </p>
+                              {next ? (
+                                <button
+                                  onClick={() => recordInstallment(app.id)}
+                                  disabled={saving}
+                                  className="px-4 py-2 bg-gold text-charcoal font-body text-sm rounded-sm disabled:opacity-50"
+                                >
+                                  {next.status === "SUBMITTED"
+                                    ? t("admin.capitalAccess.confirmInstallment")
+                                    : t("admin.capitalAccess.recordInstallment")}{" "}
+                                  · {installmentOrdinal(next.installment)}
+                                </button>
+                              ) : (
+                                <p className="text-green-700">{t("admin.capitalAccess.allInstallmentsRecorded")}</p>
+                              )}
+                            </>
+                          );
+                        })()}
+                      </div>
+                    )}
+
+                    {awaitingBank && !bankReady && (
+                      <p className="font-body text-sm text-amber-700 mb-2">
+                        {t("admin.capitalAccess.awaitingBankDetails")}
+                      </p>
+                    )}
+
+                    {canAdvanceOnboarding && nextPhase && (
+                      <button
+                        onClick={() => advanceOnboarding(app.id)}
+                        disabled={saving}
+                        className="mt-2 px-4 py-2 bg-gold text-charcoal font-body text-sm rounded-sm disabled:opacity-50"
+                      >
+                        {t("admin.capitalAccess.advanceTo")}{" "}
+                        {t(`capitalAccess.onboarding.phases.${nextPhase.toLowerCase()}`)}
+                      </button>
+                    )}
+
+                    {/* Legacy approved apps still collecting docs after deposit */}
+                    {app.onboardingPhase === "AWAITING_DOCUMENTS" && (
+                      <button
+                        onClick={() => advanceOnboarding(app.id)}
+                        disabled={saving || !docsComplete}
+                        className="mt-2 px-4 py-2 bg-gold text-charcoal font-body text-sm rounded-sm disabled:opacity-50"
+                      >
+                        {t("admin.capitalAccess.advanceTo")}{" "}
+                        {t("capitalAccess.onboarding.phases.kyc_review")}
+                      </button>
+                    )}
+                  </div>
+                )}
+
+                {canApprove && !isReviewing && (
+                  <div className="flex gap-3 flex-wrap">
+                    <button
+                      onClick={() => openReview(app)}
+                      className="px-4 py-2 bg-gold text-charcoal font-body text-sm rounded-sm"
+                    >
+                      {t("admin.capitalAccess.reviewApplication")}
+                    </button>
+                    <button
+                      onClick={() => updateStatus(app.id, "REJECTED")}
+                      className="px-4 py-2 border border-red-300 text-red-700 font-body text-sm rounded-sm"
+                    >
+                      {t("admin.reject")}
+                    </button>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+}

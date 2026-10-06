@@ -1,0 +1,234 @@
+import { auth } from "@/auth";
+import { prisma } from "@/lib/prisma";
+import {
+  calculateCapitalTerms,
+  MIN_REQUEST_USD,
+  MAX_REQUEST_USD,
+  MIN_TERM_YEARS,
+  MAX_TERM_YEARS,
+  MIN_OPERATING_YEARS,
+  type RepaymentFrequency,
+} from "@/lib/capital-access";
+import { sendCapitalAccessSubmissionEmails } from "@/lib/capital-access-emails";
+import { sendOnboardingPhaseEmail } from "@/lib/capital-access-onboarding-emails";
+import { ACCOUNTING_STANDARDS, hasCompleteKycPack } from "@/lib/capital-access-onboarding";
+import { isSanctionedCountry } from "@/lib/countries";
+import { sendNotifications } from "@/lib/email";
+import { NextResponse } from "next/server";
+
+export async function GET() {
+  const session = await auth();
+  if (!session?.user?.id) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  try {
+    const applications = await prisma.capitalAccessRequest.findMany({
+      where: { userId: session.user.id },
+      orderBy: { createdAt: "desc" },
+      include: {
+        pool: { select: { country: true, region: true, category: true } },
+        documents: { select: { type: true } },
+        ubos: { select: { id: true } },
+      },
+    });
+
+    return NextResponse.json({
+      applications: applications.map((a) => ({
+        ...a,
+        docsComplete: hasCompleteKycPack(
+          a.documents.map((d) => d.type),
+          a.ubos.length
+        ),
+        needsDocuments:
+          a.onboardingPhase === "AWAITING_DOCUMENTS" ||
+          a.onboardingPhase === "DOCUMENTS_REVISION",
+        documentsAwaitingReview: a.onboardingPhase === "DOCUMENTS_SUBMITTED",
+      })),
+    });
+  } catch (err) {
+    console.error("GET capital access applications:", err);
+    return NextResponse.json({ error: "Failed to load applications" }, { status: 500 });
+  }
+}
+
+export async function POST(request: Request) {
+  const session = await auth();
+  if (!session?.user?.id) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  if (session.user.role !== "BORROWER" && session.user.role !== "ADMIN") {
+    return NextResponse.json({ error: "Capital Access account required" }, { status: 403 });
+  }
+
+  try {
+    const body = await request.json();
+    const {
+      poolId,
+      companyName,
+      companyRegistration,
+      country,
+      operatingCountry,
+      industry,
+      investmentAreas,
+      financialsSummary,
+      annualRevenueUsd,
+      yearsOperating,
+      accountingStandard,
+      hasMaterialDebt,
+      debtSummary,
+      signatoryName,
+      signatoryTitle,
+      capitalControlsAttested,
+      operatingCurrency,
+      fxRiskAcknowledged,
+      sanctionsAttested,
+      requestedAmountUsd,
+      termYears,
+      repaymentFrequency,
+      termsAccepted,
+    } = body;
+
+    if (
+      !poolId ||
+      !companyName?.trim() ||
+      !companyRegistration?.trim() ||
+      !country ||
+      !operatingCountry ||
+      !signatoryName?.trim() ||
+      !signatoryTitle?.trim() ||
+      !industry?.trim() ||
+      !investmentAreas?.trim() ||
+      !financialsSummary?.trim() ||
+      !requestedAmountUsd ||
+      !termYears ||
+      !repaymentFrequency ||
+      !termsAccepted
+    ) {
+      return NextResponse.json({ error: "All required fields must be completed" }, { status: 400 });
+    }
+
+    if (isSanctionedCountry(country) || isSanctionedCountry(operatingCountry)) {
+      return NextResponse.json(
+        { error: "SBDV cannot onboard applicants in comprehensively sanctioned jurisdictions." },
+        { status: 400 }
+      );
+    }
+
+    const years = parseInt(yearsOperating, 10);
+    if (!years || years < MIN_OPERATING_YEARS) {
+      return NextResponse.json(
+        { error: `A minimum of ${MIN_OPERATING_YEARS} years of operating history is required.` },
+        { status: 400 }
+      );
+    }
+
+    if (!capitalControlsAttested || !fxRiskAcknowledged || !sanctionsAttested) {
+      return NextResponse.json({ error: "Please complete all attestations before submitting." }, { status: 400 });
+    }
+
+    const standard = (ACCOUNTING_STANDARDS as readonly string[]).includes(accountingStandard)
+      ? accountingStandard
+      : "LOCAL_GAAP";
+
+    const amount = parseFloat(requestedAmountUsd);
+    const term = parseInt(termYears, 10);
+
+    if (amount < MIN_REQUEST_USD || amount > MAX_REQUEST_USD) {
+      return NextResponse.json(
+        { error: `Request must be between $${MIN_REQUEST_USD.toLocaleString()} and $${MAX_REQUEST_USD.toLocaleString()}` },
+        { status: 400 }
+      );
+    }
+
+    if (term < MIN_TERM_YEARS || term > MAX_TERM_YEARS) {
+      return NextResponse.json({ error: "Invalid loan term" }, { status: 400 });
+    }
+
+    const pool = await prisma.globalWealthEntity.findUnique({ where: { id: poolId } });
+    if (!pool) {
+      return NextResponse.json({ error: "Capital pool not found" }, { status: 404 });
+    }
+
+    const terms = calculateCapitalTerms(
+      amount,
+      term,
+      repaymentFrequency as RepaymentFrequency
+    );
+
+    const application = await prisma.capitalAccessRequest.create({
+      data: {
+        userId: session.user.id,
+        poolId,
+        companyName: companyName.trim(),
+        companyRegistration: companyRegistration.trim(),
+        country,
+        operatingCountry,
+        industry: industry.trim(),
+        investmentAreas: investmentAreas.trim(),
+        financialsSummary: financialsSummary.trim(),
+        annualRevenueUsd: parseFloat(annualRevenueUsd) || 0,
+        yearsOperating: years,
+        accountingStandard: standard,
+        hasMaterialDebt: Boolean(hasMaterialDebt),
+        debtSummary: typeof debtSummary === "string" ? debtSummary.trim() || null : null,
+        signatoryName: signatoryName.trim(),
+        signatoryTitle: signatoryTitle.trim(),
+        capitalControlsAttested: true,
+        operatingCurrency: operatingCurrency === "USD" ? "USD" : "OTHER",
+        fxRiskAcknowledged: true,
+        sanctionsAttested: true,
+        requestedAmountUsd: amount,
+        termYears: term,
+        repaymentFrequency,
+        interestRatePct: terms.interestRatePct,
+        securityDepositPct: terms.securityDepositPct,
+        securityDepositUsd: terms.securityDepositUsd,
+        totalInterestUsd: terms.totalInterestUsd,
+        installmentUsd: terms.installmentUsd,
+        termsAccepted: true,
+        status: "PENDING",
+        onboardingPhase: "AWAITING_DOCUMENTS",
+        relationshipManager: "Capital Access Desk",
+      },
+    });
+
+    const user = await prisma.user.findUnique({
+      where: { id: session.user.id },
+      select: { email: true, name: true },
+    });
+
+    if (user?.email) {
+      await sendNotifications([
+        sendCapitalAccessSubmissionEmails({
+          applicationId: application.id,
+          borrowerEmail: user.email,
+          borrowerName: user.name,
+          companyName: application.companyName,
+          poolCountry: pool.country,
+          poolCategory: pool.category,
+          requestedAmountUsd: application.requestedAmountUsd,
+          interestRatePct: application.interestRatePct,
+          termYears: application.termYears,
+          securityDepositUsd: application.securityDepositUsd,
+          repaymentFrequency: application.repaymentFrequency,
+        }),
+        sendOnboardingPhaseEmail(
+          user.email,
+          user.name,
+          application.companyName,
+          "AWAITING_DOCUMENTS"
+        ),
+      ]);
+    }
+
+    return NextResponse.json({ application }, { status: 201 });
+  } catch (err) {
+    console.error("POST capital access application:", err);
+    return NextResponse.json(
+      { error: "Failed to submit application. Please restart the server if this persists." },
+      { status: 500 }
+    );
+  }
+}
