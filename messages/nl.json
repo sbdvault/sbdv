@@ -12,20 +12,22 @@
     "firm": "Het Huis",
     "signIn": "Aanmelden",
     "privateClients": {
-      "label": "Particuliere cliënten",
-      "vaultDesc": "Bewaring en fysieke bescherming",
-      "wealthDesc": "Portefeuille en mandaat",
-      "servicesDesc": "Kluisverhuur en bezichtiging",
-      "membershipDesc": "Toegang als particuliere cliënt aanvragen"
+      "label": "Private Clients",
+      "vaultDesc": "Zwitserse custody en stille bescherming",
+      "wealthDesc": "Stewardship en rapportage",
+      "servicesDesc": "Leasing, viewing en operations",
+      "membershipDesc": "Pad naar het huis"
     },
     "myPortal": "My portal"
   },
   "hero": {
-    "headline": "Zwitserse Veiligheid. Wereldwijd Vermogen.",
-    "subtext": "Discrete kluisopslag en portfoliobeheer voor particuliere investeerders, family offices en soevereine cliënten.",
-    "requestAccess": "Toegang Aanvragen",
-    "investorRelations": "Investeerder Relaties",
-    "clientLogin": "Klant Login"
+    "headline": "Zwitserse Veiligheid. Gedisciplineerde Groei.",
+    "subtext": "Behoud privévermogen in Zwitserse custody — en help gekwalificeerde ondernemingen groeien met stressvrije, mandate-aligned capital.",
+    "exploreCapital": "Ontdek Capital Access",
+    "privateClients": "Private Client Toegang",
+    "requestAccess": "Request Access",
+    "clientLogin": "Klant Login",
+    "investorRelations": "Investor Relations"
   },
   "footer": {
     "copyright": "Swiss Bullion Depository Vault — Zwitserse Precisie. Wereldwijd Vertrouwen.",
@@ -70,203 +72,203 @@
     "facilityTerms": "Facility Terms"
   },
   "about": {
-    "title": "Over Ons",
-    "heroTitle": "Het Huis",
-    "heroSubtitle": "Een Zwitsers huis voor particulier vermogen en gekwalificeerd ondernemingskapitaal.",
-    "sectionTitle": "Over SBDV",
-    "sectionDescription": "Swiss Bullion Depository Vault (SBDV) staat voor absolute veiligheid en vertrouwelijkheid. Opgericht in Zwitserland — het wereldwijde centrum van vertrouwen en discretie — combineert SBDV geavanceerde bescherming met tijdloze Zwitserse precisie. Onze missie: behouden wat het belangrijkst is — uw vermogen, uw nalatenschap, uw gemoedsrust.",
-    "missionTitle": "Onze Missie",
-    "missionText": "Om vermogen en vertrouwen te bewaren met Zwitserse precisie, discretie en integriteit. We zijn toegewijd aan het beschermen van niet alleen activa, maar ook het vertrouwen en de gemoedsrust die komt met het weten dat uw vermogen wordt beschermd door de hoogste normen van Zwitserse excellentie.",
-    "visionTitle": "Onze Visie",
-    "visionText": "Om 's werelds meest vertrouwde particuliere kluis te zijn — een stille bewaker voor wereldwijde investeerders. We voorzien een toekomst waarin SBDV wordt erkend als de beste bestemming voor degenen die onvoorwaardelijke beveiliging, absolute discretie en tijdloze betrouwbaarheid eisen.",
-    "aboutTitle": "Over SBDV",
-    "aboutParagraph1": "Swiss Bullion Depository Vault (SBDV) staat als een bastion van absolute beveiliging en vertrouwelijkheid. Opgericht in Zwitserland — het wereldwijde epicentrum van vertrouwen en discretie — combineert SBDV geavanceerde bescherming met tijdloze Zwitserse precisie.",
-    "aboutParagraph2": "Onze missie is om te bewaren en te beveiligen wat het belangrijkst is: uw vermogen, uw nalatenschap, uw gemoedsrust. We begrijpen dat echte vermogensbescherming meer vereist dan alleen fysieke beveiliging—het vereist absolute discretie, Zwitserse technische excellentie en een onwrikbare toewijding aan integriteit.",
-    "aboutParagraph3": "Elk aspect van onze operatie weerspiegelt Zwitserse waarden: precisie in uitvoering, discretie in alle zaken, en integriteit in elke interactie. We zijn niet alleen een kluis; we zijn een stille bewaker, die beschermt wat het belangrijkst is voor 's werelds meest veeleisende cliënten.",
-    "valuesTitle": "Beginselen",
+    "title": "About",
+    "eyebrow": "Zurich · Swiss institution",
+    "heroTitle": "The Firm",
+    "heroSubtitle": "One house, two practices: private wealth custody for discerning clients, and structured capital for qualified enterprises.",
+    "identityName": "Swiss Bullion Depository Vault",
+    "identityNameLabel": "Name",
+    "identitySeatLabel": "Seat",
+    "whoTitle": "Who we are",
+    "whoText": "Seated in Zurich, SBDV preserves private wealth with discretion and arranges mandate-aligned capital facilities for qualified enterprises — under documented review, Swiss AML standards, and clear repayment terms.",
+    "sectionTitle": "About SBDV",
+    "sectionDescription": "A Swiss institution built for quiet custody and disciplined enterprise capital — not retail noise.",
+    "missionTitle": "Our Mission",
+    "missionText": "To preserve wealth and trust with Swiss precision — and to enable qualified enterprises to grow with structured, stress-free capital under the same standard of integrity.",
+    "visionTitle": "Our Vision",
+    "visionText": "To be the Swiss house clients choose when custody must stay silent and capital must stay disciplined — trusted by private wealth and by enterprises that prefer clarity over chaos.",
+    "aboutTitle": "About SBDV",
+    "aboutParagraph1": "Swiss Bullion Depository Vault is a Zurich-seated institution. We combine private vault custody with a Capital Access Program for qualified operating companies — two practices, one Swiss standard of discretion and review.",
+    "aboutParagraph2": "Private clients come for custody, membership, and stewardship. Enterprises come for transparent facility structure, KYC/UBO look-through, and a partner portal that keeps the process legible from application to repayment.",
+    "aboutParagraph3": "We do not compete on hype. We compete on documentation, mandate alignment, and the quiet confidence of Swiss operating discipline.",
+    "valuesTitle": "Principles",
     "values": {
       "discretion": {
-        "title": "Discretie",
-        "description": "Privacy is onze basis. Elke cliëntinteractie wordt behandeld met absolute vertrouwelijkheid."
+        "title": "Discretion",
+        "description": "Privacy is our foundation. Every client interaction is handled with absolute confidentiality."
       },
       "precision": {
-        "title": "Precisie",
-        "description": "Zwitserse nauwkeurigheid in elk detail. Van beveiligingsprotocollen tot cliëntenservice, precisie is niet-onderhandelbaar."
+        "title": "Precision",
+        "description": "Swiss accuracy in every detail. From security protocols to client service, precision is non-negotiable."
       },
       "security": {
-        "title": "Beveiliging",
-        "description": "Gelaagde bescherming zonder compromis. Meerdere verdedigingssystemen werken in harmonie."
+        "title": "Security",
+        "description": "Layered protection beyond compromise. Multiple defense systems working in harmony."
       },
       "integrity": {
-        "title": "Integriteit",
-        "description": "Gebouwd op vertrouwen, bewezen door tijd. Ons woord is onze band, en onze acties weerspiegelen onze waarden."
+        "title": "Integrity",
+        "description": "Built on trust, proven by time. Our word is our bond, and our actions reflect our values."
       }
     },
-    "locationTitle": "Wereldwijde Aanwezigheid, Zwitserse Basis",
-    "locationDescription": "Gevestigd in Zürich, wereldwijd cliënten bedienend. Onze Zwitserse basis biedt het fundament van vertrouwen en precisie, terwijl ons wereldwijde bereik toegankelijkheid voor onze internationale cliënten garandeert.",
-    "worldwideAccessibility": "Wereldwijde Toegankelijkheid",
-    "eyebrow": "Swiss Bullion Depository Vault",
-    "whoTitle": "Wie wij zijn",
-    "whoText": "Swiss Bullion Depository Vault is gezeteld in Zürich. Wij bewaren particulier vermogen met discretie en regelen institutionele kapitaalfaciliteiten voor gekwalificeerde ondernemingen, na gedocumenteerde beoordeling, een zekerheidsstelling van 10% en een aflossingsschema.",
     "practices": {
-      "privateLabel": "Particuliere cliënten",
-      "privateTitle": "Bewaring en vermogen",
-      "privateText": "Kluisbescherming, portefeuilletoezicht en lidmaatschap voor particuliere beleggers, family offices en soevereine cliënten.",
-      "capitalLabel": "Ondernemingen",
+      "privateLabel": "Private clients",
+      "privateTitle": "Custody and wealth",
+      "privateText": "Vault custody, portfolio stewardship, and invitation-grade membership for private investors, family offices, and sovereign relationships.",
+      "capitalLabel": "Enterprises",
       "capitalTitle": "Capital Access",
-      "capitalText": "Een gestructureerde faciliteit voor een gekwalificeerde onderneming. Goedkeuring volgt documentatie, een zekerheidsstelling van 10% als contante zekerheid en een bevestigd aflossingsplan."
+      "capitalText": "Structured facilities for qualified companies — documentation, 10% cash collateral, Swiss AML review, and a confirmed repayment plan. Approval is discretionary."
     },
-    "serveTitle": "Wie wij dienen",
+    "serveTitle": "Who we serve",
     "serve": {
-      "investors": "Particuliere beleggers die bewaring en discretie verlangen.",
-      "offices": "Family offices en soevereine cliënten met een lange horizon.",
-      "enterprises": "Gevestigde ondernemingen die een gedocumenteerde kapitaalfaciliteit zoeken."
+      "investors": "Private investors who require custody and discretion.",
+      "offices": "Family offices and sovereign clients with a long horizon.",
+      "enterprises": "Established companies seeking documented growth capital — not consumer credit."
     },
     "close": {
-      "membership": "Lidmaatschap als particuliere cliënt aanvragen",
-      "capital": "Capital Access bekijken"
+      "membership": "Begin private-client membership",
+      "capital": "Explore Capital Access"
     },
-    "identityNameLabel": "Naam",
-    "identitySeatLabel": "Zetel",
-    "identityName": "Swiss Bullion Depository Vault"
+    "locationTitle": "Swiss foundation. Global reach.",
+    "locationDescription": "Headquartered in Zurich with regional presence for international relationships. The standard is Swiss; access is worldwide for approved clients and qualified enterprises.",
+    "worldwideAccessibility": "Worldwide Accessibility"
   },
   "vault": {
-    "title": "Kluis & Beveiliging",
-    "heroTitle": "De Kluis",
-    "heroSubtitle": "Waar uw vermogen in absolute veiligheid rust.",
-    "vaultsTitle": "Onze kluizen",
-    "vaultsDescription": "Onze ondergrondse bullionfaciliteiten zijn gebouwd met gelaagde verdediging, 24/7-bewaking en compromisloze engineering.",
+    "title": "Vault & Security",
+    "heroTitle": "The Vault",
+    "heroSubtitle": "Custody engineered for quiet confidence — layered defense, continuous oversight, and Swiss operating discipline.",
+    "vaultsTitle": "Our Vaults",
+    "vaultsDescription": "Bullion facilities built for multi-tiered defense, continuous monitoring, and auditable chain of custody.",
     "vaultFeatures": {
       "multiTiered": {
-        "title": "Gelaagde verdediging",
-        "description": "Gelaagde beveiligingssystemen beschermen uw activa op elk niveau."
+        "title": "Layered defense",
+        "description": "Physical and procedural controls that protect holdings at every stage of custody."
       },
       "surveillance": {
-        "title": "24/7-bewaking",
-        "description": "Continue monitoring met state-of-the-art technologie."
+        "title": "Continuous oversight",
+        "description": "Monitoring designed for accountability — not theatre."
       },
       "engineering": {
-        "title": "Compromisloze engineering",
-        "description": "Gebouwd volgens de hoogste standaarden van Zwitserse precisie."
+        "title": "Swiss engineering",
+        "description": "Built and operated to standards private clients expect from a Zurich-seated house."
       }
     },
-    "vaultPageTitle": "De Kluis",
-    "vaultPageDescription": "Waar absolute beveiliging tijdloze Zwitserse precisie ontmoet. Een fort ontworpen om te bewaren wat het belangrijkst is.",
+    "vaultPageTitle": "The Vault",
+    "vaultPageDescription": "A private custody environment for bullion and valuables — designed so wealth can rest without noise.",
     "vaultPageFeatures": {
       "defense": {
-        "title": "Gelaagde Verdediging",
-        "description": "Geavanceerde beveiliging op elk niveau"
+        "title": "Layered defense",
+        "description": "Controls at every level of access"
       },
       "monitoring": {
-        "title": "24/7 Monitoring",
-        "description": "Continue bewakingssystemen"
+        "title": "Continuous oversight",
+        "description": "Accountable monitoring protocols"
       },
       "impenetrable": {
-        "title": "Onneembaar",
-        "description": "Zwitsers ontworpen bescherming"
+        "title": "Swiss-built custody",
+        "description": "Engineering over marketing claims"
       },
       "technology": {
-        "title": "State-of-the-Art",
-        "description": "Geavanceerde technologie"
+        "title": "Modern controls",
+        "description": "Systems that support audit and access"
       }
     },
-    "securityArchitectureTitle": "Beveiligingsarchitectuur",
-    "securityArchitectureDescription": "Ons gelaagde beveiligingssysteem combineert geavanceerde technologie met Zwitserse precisie engineering.",
+    "securityArchitectureTitle": "Security Architecture",
+    "securityArchitectureDescription": "A multi-layered security model combining controlled access, monitoring, and Swiss operational precision.",
     "securityFeatures": {
       "biometrics": {
-        "title": "Biometrie",
-        "description": "Geavanceerde biometrische authenticatiesystemen die ervoor zorgen dat alleen geautoriseerd personeel toegang heeft tot beveiligde gebieden."
+        "title": "Biometrics",
+        "description": "Advanced biometric authentication systems ensuring only authorized personnel can access secure areas."
       },
       "seismic": {
-        "title": "Seismische Sensoren",
-        "description": "State-of-the-art seismische monitoring om ongeautoriseerde toegangspogingen of structurele anomalieën te detecteren."
+        "title": "Seismic Sensors",
+        "description": "State-of-the-art seismic monitoring to detect any unauthorized access attempts or structural anomalies."
       },
       "accessControl": {
-        "title": "Toegangscontrole",
-        "description": "Multi-factor authenticatie met versleutelde toegangsprotocollen en real-time autorisatieverificatie."
+        "title": "Access Control",
+        "description": "Multi-factor authentication with encrypted access protocols and real-time authorization verification."
       },
       "insurance": {
-        "title": "Verzekering",
-        "description": "Uitgebreide dekking via toonaangevende wereldwijde verzekeraars, die volledige bescherming biedt voor alle opgeslagen activa."
+        "title": "Insurance",
+        "description": "Comprehensive coverage through leading global insurers, providing full protection for all stored assets."
       }
     },
-    "accessProtocolTitle": "Toegangsprotocol",
-    "accessProtocolDescription": "Elk toegangsverzoek ondergaat een meerstaps identiteitsverificatieproces. Ons protocol zorgt ervoor dat alleen geautoriseerde personen toegang hebben tot beveiligde gebieden, met behoud van de hoogste normen van beveiliging en discretie.",
+    "accessProtocolTitle": "Quiet access protocols",
+    "accessProtocolDescription": "Entry is deliberate: verify identity, confirm authorization, then grant access — so custody stays accountable without theatre.",
     "accessProtocolSteps": {
       "step1": {
-        "title": "Identiteitsverificatie",
-        "description": "Multi-factor authenticatieproces"
+        "title": "Identity verification",
+        "description": "Multi-factor confirmation before any entry"
       },
       "step2": {
-        "title": "Autorisatiebeoordeling",
-        "description": "Voorafgaande goedkeuring vereist"
+        "title": "Authorization review",
+        "description": "Prior approval required for each visit"
       },
       "step3": {
-        "title": "Veilige Toegang",
-        "description": "Exclusieve toegang verleend"
+        "title": "Controlled access",
+        "description": "Entry granted only when cleared"
       }
     }
   },
   "services": {
-    "title": "Diensten",
-    "heroTitle": "Onze Diensten",
-    "heroSubtitle": "Uitgebreide beveiligingsoplossingen op maat gemaakt voor uw behoeften.",
-    "sectionTitle": "Beveiligingsdiensten",
+    "title": "Services",
+    "heroTitle": "Private-client services",
+    "heroSubtitle": "The operating suite behind Swiss custody — leasing, bullion verification, insurance reporting, and private viewing.",
+    "sectionTitle": "Custody services",
     "services": {
       "privateVault": {
-        "title": "Private kluisverhuur",
-        "description": "Veilige toewijzing voor particulieren, bedrijven en family offices."
+        "title": "Private Vault Leasing",
+        "description": "Allocated space for individuals, family offices, and corporations that require dedicated custody."
       },
       "bullionStorage": {
-        "title": "Bullionopslag",
-        "description": "LBMA-gecertificeerde audits en opslag voor edelmetalen en bullion."
+        "title": "Bullion Storage",
+        "description": "LBMA-aligned audit and storage for precious metals with clear chain of custody."
       },
       "insurance": {
-        "title": "Verzekering & auditrapportage",
-        "description": "Volledige dekking en transparantie via mondiale verzekeraars met uitgebreide rapportage."
+        "title": "Insurance & Audit Reporting",
+        "description": "Coverage and reporting pathways that keep holdings legible to you and your advisors."
       },
       "vipRooms": {
-        "title": "VIP privé-bezichtigingsruimtes",
-        "description": "Alleen op afspraak, met conciergeservice voor exclusieve klanttoegang."
+        "title": "Private Viewing Rooms",
+        "description": "By appointment — inspect holdings in a controlled, discreet environment."
       }
     },
-    "gridTitle": "Service Aanbiedingen",
-    "gridSubtitle": "Elke service is ontworpen met Zwitserse precisie en onvoorwaardelijke beveiligingsnormen.",
+    "gridTitle": "What private clients use",
+    "gridSubtitle": "Practical custody services tied to membership — not a catalogue of slogans.",
     "gridServices": {
       "privateVault": {
-        "title": "Particuliere Kluisverhuur",
-        "description": "Veilige toewijzing voor individuen, bedrijven en familie kantoren. Aangepaste opslagoplossingen op maat gemaakt voor uw specifieke behoeften.",
+        "title": "Private Vault Leasing",
+        "description": "Allocated custody for individuals, corporations, and family offices — sized to your holdings and membership tier.",
         "features": [
-          "Toegewijde kluisruimte",
-          "24/7 toegangscontrole",
-          "Gepersonaliseerde service"
+          "Dedicated vault space",
+          "Controlled access",
+          "Relationship service"
         ]
       },
       "bullionCustody": {
-        "title": "Goudbewaring & Verificatie",
-        "description": "LBMA-gecertificeerde audits en opslag voor edelmetalen. Volledige documentatie van de bewaarketen en regelmatige verificatie.",
+        "title": "Bullion Custody & Verification",
+        "description": "LBMA-aligned audits and storage with documented chain of custody and regular verification.",
         "features": [
-          "LBMA-certificering",
-          "Regelmatige audits",
-          "Volledige documentatie"
+          "LBMA-aligned standards",
+          "Regular audits",
+          "Full documentation"
         ]
       },
       "insurance": {
-        "title": "Verzekering & Auditrapportage",
-        "description": "Volledige dekking en transparantie via wereldwijde verzekeraars. Uitgebreide rapportage en regelmatige auditdocumentatie.",
+        "title": "Insurance & Audit Reporting",
+        "description": "Coverage pathways and reporting that keep holdings clear to you and your advisors.",
         "features": [
-          "Wereldwijde verzekeringsdekking",
-          "Regelmatige rapportage",
-          "Volledige transparantie"
+          "Insurance pathways",
+          "Regular reporting",
+          "Audit documentation"
         ]
       },
       "vipRooms": {
-        "title": "VIP Privé Bekijkingsruimtes",
-        "description": "Alleen op afspraak, met conciërgeservice. Exclusieve toegang om uw activa te bekijken in een privé, veilige omgeving.",
+        "title": "Private Viewing Rooms",
+        "description": "By appointment — inspect holdings in a controlled environment with discreet concierge support.",
         "features": [
-          "Alleen op afspraak",
-          "Conciërgeservice",
-          "Privé bekijken"
+          "By appointment",
+          "Concierge support",
+          "Controlled viewing"
         ]
       }
     },
@@ -312,73 +314,73 @@
     }
   },
   "membership": {
-    "title": "Lidmaatschap",
-    "heroTitle": "Lidmaatschap",
-    "heroSubtitle": "Exclusieve toegang tot Zwitserse precisie en beveiliging.",
-    "tiersTitle": "Lidmaatschapsniveaus",
-    "tiersSubtitle": "Drie verschillende niveaus ontworpen om te voldoen aan de uiteenlopende behoeften van onze wereldwijde cliënten.",
+    "title": "Membership",
+    "heroTitle": "Membership",
+    "heroSubtitle": "The path into the house — tiered access to Swiss custody, services, and private-client relationships.",
+    "tiersTitle": "Access levels",
+    "tiersSubtitle": "Three tiers for different scales of custody and service intensity. Invitation standards apply where noted.",
     "tiers": {
       "standard": {
-        "title": "Standaard Bewaring",
-        "subtitle": "Instapniveau",
+        "title": "Standard Custody",
+        "subtitle": "Entry Level",
         "minimum": "Minimum: $250k",
-        "description": "Veilige bewaardiensten voor individuele investeerders en kleinere portefeuilles. Volledige toegang tot onze standaard beveiligingsprotocollen en regelmatige rapportage.",
+        "description": "Custody for individual investors and smaller portfolios — standard protocols, regular reporting, and monitored facilities.",
         "features": [
-          "Minimum $250k aan activa",
-          "Standaard beveiligingsprotocollen",
-          "Regelmatige rapportage",
+          "Minimum $250k in assets",
+          "Standard security protocols",
+          "Regular reporting",
           "24/7 monitoring",
-          "Verzekeringsdekking"
+          "Insurance coverage"
         ]
       },
       "executive": {
-        "title": "Executive Kluis",
-        "subtitle": "Alleen op Uitnodiging",
-        "minimum": "Minimum: Aangepast",
-        "description": "Alleen op uitnodiging, gepersonaliseerde opslagoplossingen voor vermogende individuen, familie kantoren en bedrijven. Verbeterde privacy en toegewijde service.",
+        "title": "Executive Vault",
+        "subtitle": "Invitation Only",
+        "minimum": "Minimum: Custom",
+        "description": "Invitation-only relationships for HNWI, family offices, and corporations — dedicated service and heightened privacy.",
         "features": [
-          "Alleen op uitnodiging toegang",
-          "Gepersonaliseerde opslag",
-          "Toegewijde accountmanager",
-          "Verbeterde privacyprotocollen",
-          "Prioriteitstoegang"
+          "Invitation-only access",
+          "Personalized storage",
+          "Dedicated account manager",
+          "Enhanced privacy protocols",
+          "Priority access"
         ]
       },
       "sovereign": {
-        "title": "Sovereign Niveau",
-        "subtitle": "Institutioneel",
-        "minimum": "Minimum: Institutioneel",
-        "description": "Institutionele en overheidsniveau beveiliging voor soevereine vermogensfondsen, centrale banken en grote instellingen. Het hoogste niveau van beveiliging en service.",
+        "title": "Sovereign Tier",
+        "subtitle": "Institutional",
+        "minimum": "Minimum: Institutional",
+        "description": "Institutional-scale custody relationships for sovereign and large institutional counterparts — the highest service intensity.",
         "features": [
-          "Institutionele beveiliging",
-          "Overheidsniveau protocollen",
-          "Aangepaste oplossingen",
-          "Toegewijde faciliteiten",
+          "Institutional-grade security",
+          "Government-level protocols",
+          "Custom solutions",
+          "Dedicated facilities",
           "White-glove service"
         ]
       }
     },
-    "complianceTitle": "Compliance & Beveiliging",
-    "complianceText": "Alle leden ondergaan compliance screening onder Zwitserse KYC en AML kaders. We handhaven de hoogste normen van due diligence om de integriteit en beveiliging van onze kluisoperaties te waarborgen.",
-    "formTitle": "Aanvragen voor Lidmaatschap",
-    "formSubtitle": "Begin uw reis met Swiss Bullion Depository Vault.",
-    "formSuccessTitle": "Aanvraag Ontvangen",
-    "formSuccessText": "Bedankt voor uw interesse. We zullen uw aanvraag beoordelen en u binnenkort contacteren.",
+    "complianceTitle": "Compliance & Security",
+    "complianceText": "Membership is invitation-led and open to qualifying clients worldwide. Every applicant is screened under Swiss KYC and AML frameworks before access is granted.",
+    "formTitle": "Request membership review",
+    "formSubtitle": "Tell us about your custody needs. We respond with discretion — no obligation.",
+    "formSuccessTitle": "Application received",
+    "formSuccessText": "Thank you. Our team will review your request and contact you shortly.",
     "formLabels": {
-      "name": "Volledige Naam",
-      "email": "E-mailadres",
-      "phone": "Telefoonnummer",
-      "country": "Land",
-      "assetRange": "Activa Bereik",
-      "message": "Bericht"
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "country": "Country",
+      "assetRange": "Asset Range",
+      "message": "Message"
     },
     "formPlaceholders": {
-      "name": "Voer uw volledige naam in",
-      "email": "uw.email@voorbeeld.com",
-      "phone": "+31 6 12345678",
-      "country": "Selecteer uw land",
-      "assetRange": "Selecteer activa bereik",
-      "message": "Vertel ons over uw opslagbehoeften..."
+      "name": "Enter your full name",
+      "email": "your.email@example.com",
+      "phone": "+1 (555) 123-4567",
+      "country": "Select your country",
+      "assetRange": "Select asset range",
+      "message": "Describe your custody and membership interest..."
     }
   },
   "contact": {
@@ -417,9 +419,11 @@
     }
   },
   "cta": {
-    "title": "Klaar om uw nalatenschap te beschermen?",
-    "subtitle": "Ervaar de ongeëvenaarde veiligheid en discretie die alleen Zwitserse precisie kan bieden.",
-    "button": "Privéconsultatie boeken"
+    "title": "Twee paden. Eén Zwitserse standaard.",
+    "subtitle": "Privé-custody voor vermogen dat stil moet blijven — of gestructureerd kapitaal voor ondernemingen die met helderheid willen groeien.",
+    "button": "Privéconsultatie boeken",
+    "capitalButton": "Ontdek Capital Access",
+    "privateButton": "Private Client Toegang"
   },
   "home": {
     "swissStandardTitle": "De Zwitserse standaard",
@@ -469,9 +473,20 @@
     },
     "globalNetworkTitle": "Global Network",
     "globalNetworkDescription": "Discreet cliënten bedienen in de financiële hoofdsteden van de wereld met partnerkluizen en wereldwijde logistiek.",
-    "wealthTeaserTitle": "Vermogen & Beleggen",
-    "wealthTeaserDescription": "Meer dan alleen opslag — strategisch portfoliobeheer, beleggingsadvies en geconsolideerde rapportage via uw private klantportaal.",
-    "wealthTeaserButton": "Ontdek Vermogensdiensten"
+    "wealthTeaserTitle": "Vermogensstewardship, geen lawaai",
+    "wealthTeaserDescription": "Voor private clients: portfoliomandaten, edelmetaalstrategie en geconsolideerde rapportage — geïntegreerd met Zwitserse custody via uw private portaal.",
+    "wealthTeaserButton": "Ontdek Vermogensdiensten",
+    "capitalTeaserTitle": "Kapitaal waarmee ondernemingen groeien",
+    "capitalTeaserDescription": "Het Capital Access Program verbindt gekwalificeerde bedrijven met mandate-aligned pools — transparante voorwaarden, Zwitsers toezicht en een begeleid pad van aanvraag tot facility.",
+    "capitalTeaserButton": "Ontdek Capital Access",
+    "capitalTeaserPoints": {
+      "structure": "Duidelijke structuur",
+      "structureDesc": "Bedrag, looptijd en aflossing vast vóór u committeert.",
+      "oversight": "Zwitsers toezicht",
+      "oversightDesc": "Gedocumenteerde KYC, UBO look-through en discretionaire review.",
+      "portal": "Partnerportaal",
+      "portalDesc": "Volg aanvragen, deposits en terugbetaling op één plek."
+    }
   },
   "common": {
     "loading": "Laden...",
@@ -488,35 +503,35 @@
   },
   "wealth": {
     "title": "Wealth & Investment",
-    "heroTitle": "Vermogen en beleggen",
-    "heroSubtitle": "Swiss custody meets strategic portfolio management for global investors.",
-    "pillarsTitle": "Our Wealth Philosophy",
-    "pillarsSubtitle": "Three integrated pillars: Secure custody, strategic investment, and transparent reporting.",
+    "heroTitle": "Wealth & Investment",
+    "heroSubtitle": "Stewardship for private clients: allocation, metals strategy, and reporting — integrated with Swiss custody.",
+    "pillarsTitle": "How we steward wealth",
+    "pillarsSubtitle": "Custody-adjacent mandates with clear reporting — built for long horizons, not market theatre.",
     "pillars": {
       "advisory": {
         "title": "Investment Advisory",
-        "description": "Goal-based planning, asset allocation, and risk profiling tailored to your objectives and time horizon."
+        "description": "Goal-based planning, allocation, and risk framing aligned to your horizon and constraints."
       },
       "portfolio": {
         "title": "Portfolio Management",
-        "description": "Discretionary and advisory mandates with core equities and bonds plus satellite alternatives, bullion, and private markets."
+        "description": "Discretionary and advisory mandates — core markets with satellite alternatives and bullion where appropriate."
       },
       "metals": {
         "title": "Precious Metals Strategy",
-        "description": "LBMA bullion as a strategic portfolio allocation — not just storage, but integrated wealth preservation."
+        "description": "Bullion as a strategic allocation inside the portfolio — not storage alone."
       },
       "reporting": {
         "title": "Reporting & Transparency",
-        "description": "Performance reports, fee schedules, and audit documentation delivered through your secure client portal."
+        "description": "Performance, fees, and audit documentation delivered through your private client portal."
       }
     },
     "approachTitle": "Core & Satellite Approach",
-    "approachDescription": "We build globally diversified portfolios with a stable core of equities and bonds, complemented by satellite allocations in alternatives, precious metals, and private markets — all aligned to your membership tier and risk profile.",
+    "approachDescription": "A stable core of equities and bonds, with satellite allocations in alternatives, precious metals, and private markets — sized to membership tier and risk profile.",
     "feesTitle": "Fee Transparency",
     "feesDescription": "Management fees are disclosed in writing before you commit. No hidden transaction costs, retrocessions, or kickbacks.",
     "disclaimer": "Investment services may be subject to regulatory licensing requirements. Information on this page is for illustrative purposes and does not constitute investment advice. Please consult with your relationship manager and legal counsel.",
-    "ctaTitle": "Begin Your Wealth Journey",
-    "ctaSubtitle": "Schedule a confidential consultation with our investment team.",
+    "ctaTitle": "Discuss a private mandate",
+    "ctaSubtitle": "A confidential conversation with our investment team — no pressure, clear next steps.",
     "ctaButton": "Schedule Consultation"
   },
   "legal": {
@@ -819,22 +834,22 @@
     "signedInAs": "Signed in as",
     "hero": {
       "badge": "Institutional Capital Program",
-      "title": "Capital Access Program",
-      "subtitle": "Connect your enterprise to sovereign-grade capital pools. Structured lending with transparent terms, mandate alignment, and Swiss oversight.",
+      "title": "Capital that lets your enterprise grow — without the stress",
+      "subtitle": "Structured facilities for qualified companies: transparent terms, Swiss oversight, and a guided path from application to repayment — not consumer credit, not fundraising chaos.",
       "applyAccess": "Apply for Access",
       "partnerLogin": "Partner Login"
     },
     "features": {
-      "title": "Why Capital Access",
-      "subtitle": "A disciplined gateway between qualified enterprises and institutional sovereign capital.",
-      "globalPoolsTitle": "Global Sovereign Pools",
-      "globalPoolsDesc": "Access partially disclosed capital from sovereign wealth jurisdictions worldwide.",
-      "flexibleTermsTitle": "Flexible Repayment",
-      "flexibleTermsDesc": "Structure your facility with monthly or annual interest payments over 1–10 years.",
-      "enterpriseFocusTitle": "Enterprise-Grade",
-      "enterpriseFocusDesc": "Designed for established companies with audited financials and clear investment thesis.",
-      "structuredSecurityTitle": "Structured Security",
-      "structuredSecurityDesc": "10% security deposit with full KYC/AML compliance and mandate alignment review."
+      "title": "Why enterprises choose Capital Access",
+      "subtitle": "A disciplined gateway between qualified companies and mandate-aligned capital — clarity first.",
+      "globalPoolsTitle": "Mandate-aligned pools",
+      "globalPoolsDesc": "Partially disclosed sovereign-grade pools matched to sector and region — not a black-box auction.",
+      "flexibleTermsTitle": "Terms you can plan around",
+      "flexibleTermsDesc": "Define amount, term, and monthly or annual interest over 1–10 years with live calculations.",
+      "enterpriseFocusTitle": "Built for operating companies",
+      "enterpriseFocusDesc": "For established enterprises with audited or reviewed financials and a clear investment thesis.",
+      "structuredSecurityTitle": "Process without surprise",
+      "structuredSecurityDesc": "10% cash collateral, full KYC/UBO look-through, and discretionary approval under Swiss AML standards."
     },
     "howItWorks": {
       "title": "How It Works",

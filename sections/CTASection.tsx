@@ -27,24 +27,26 @@ export default function CTASection() {
           <h2 className="text-4xl md:text-5xl font-heading font-semibold mb-6">
             {t("cta.title")}
           </h2>
-          <p className="text-lg md:text-xl text-off-white/80 font-body mb-8 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-off-white/80 font-body mb-10 max-w-2xl mx-auto">
             {t("cta.subtitle")}
           </p>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href={getLocalizedHref("/contact")}
-              className="gold-shimmer inline-flex items-center gap-2 px-8 py-4 bg-gold text-charcoal font-body font-medium rounded-sm hover:bg-gold/90 transition-all duration-300 hover:shadow-lg"
+              href={getLocalizedHref("/capital-access")}
+              className="gold-shimmer inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold text-charcoal font-body font-medium rounded-sm hover:bg-gold/90 transition-all duration-300"
             >
-              {t("cta.button")}
+              {t("cta.capitalButton")}
               <ArrowRight className="w-5 h-5" />
             </Link>
-          </motion.div>
+            <Link
+              href={getLocalizedHref("/membership")}
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-gold/50 text-off-white font-body font-medium rounded-sm hover:border-gold hover:text-gold transition-all duration-300"
+            >
+              {t("cta.privateButton")}
+            </Link>
+          </div>
         </motion.div>
       </div>
     </section>
   );
 }
-

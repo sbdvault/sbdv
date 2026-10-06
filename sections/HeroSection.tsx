@@ -97,17 +97,25 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 mt-4"
+            className="flex flex-col items-center gap-4 mt-4"
           >
-            <Link
-              href={getLocalizedHref("/contact")}
-              className="gold-shimmer px-8 py-3 bg-gold text-charcoal font-body font-medium rounded-sm hover:bg-gold/90 transition-all duration-300 hover:shadow-lg"
-            >
-              {t("hero.requestAccess")}
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href={getLocalizedHref("/capital-access")}
+                className="gold-shimmer px-8 py-3 bg-gold text-charcoal font-body font-medium rounded-sm hover:bg-gold/90 transition-all duration-300 hover:shadow-lg"
+              >
+                {t("hero.exploreCapital")}
+              </Link>
+              <Link
+                href={getLocalizedHref("/membership")}
+                className="px-8 py-3 border-2 border-gold text-gold font-body font-medium rounded-sm hover:bg-gold hover:text-charcoal transition-all duration-300"
+              >
+                {t("hero.privateClients")}
+              </Link>
+            </div>
             <Link
               href={getLocalizedHref("/login")}
-              className="px-8 py-3 border-2 border-gold text-gold font-body font-medium rounded-sm hover:bg-gold hover:text-charcoal transition-all duration-300"
+              className="font-body text-sm text-charcoal/55 hover:text-gold transition-colors"
             >
               {t("hero.clientLogin")}
             </Link>

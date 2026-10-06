@@ -12,17 +12,19 @@
     "firm": "A Casa",
     "signIn": "Entrar",
     "privateClients": {
-      "label": "Clientes privados",
-      "vaultDesc": "Custódia e proteção física",
-      "wealthDesc": "Carteira e mandato",
-      "servicesDesc": "Arrendamento de cofre e visita",
-      "membershipDesc": "Pedir acesso como cliente privado"
+      "label": "Clientes Privados",
+      "vaultDesc": "Custody suíça e proteção discreta",
+      "wealthDesc": "Stewardship e relatórios",
+      "servicesDesc": "Leasing, viewing e operações",
+      "membershipDesc": "Caminho para a casa"
     },
     "myPortal": "My portal"
   },
   "hero": {
-    "headline": "Segurança Suíça. Patrimônio Global.",
-    "subtext": "Custódia discreta e gestão de portfólio para investidores privados, family offices e clientes soberanos.",
+    "headline": "Segurança Suíça. Crescimento Disciplinado.",
+    "subtext": "Preserve património privado com custody suíça — e ajude empresas qualificadas a crescer com capital estruturado, sem stress.",
+    "exploreCapital": "Explorar Capital Access",
+    "privateClients": "Acesso Clientes Privados",
     "requestAccess": "Request Access",
     "clientLogin": "Login do Cliente",
     "investorRelations": "Investor Relations"
@@ -71,19 +73,25 @@
   },
   "about": {
     "title": "About",
-    "heroTitle": "A Casa",
-    "heroSubtitle": "Uma casa suíça para o património privado e o capital empresarial qualificado.",
-    "sectionTitle": "Sobre a SBDV",
-    "sectionDescription": "A Swiss Bullion Depository Vault (SBDV) é um baluarte de segurança e confidencialidade absolutas. Fundada na Suíça — o epicentro global de confiança e discrição — a SBDV combina proteção de ponta com precisão suíça atemporal. Nossa missão: preservar o que mais importa — seu patrimônio, seu legado, sua tranquilidade.",
+    "eyebrow": "Zurich · Swiss institution",
+    "heroTitle": "The Firm",
+    "heroSubtitle": "One house, two practices: private wealth custody for discerning clients, and structured capital for qualified enterprises.",
+    "identityName": "Swiss Bullion Depository Vault",
+    "identityNameLabel": "Name",
+    "identitySeatLabel": "Seat",
+    "whoTitle": "Who we are",
+    "whoText": "Seated in Zurich, SBDV preserves private wealth with discretion and arranges mandate-aligned capital facilities for qualified enterprises — under documented review, Swiss AML standards, and clear repayment terms.",
+    "sectionTitle": "About SBDV",
+    "sectionDescription": "A Swiss institution built for quiet custody and disciplined enterprise capital — not retail noise.",
     "missionTitle": "Our Mission",
-    "missionText": "To preserve wealth and trust with Swiss precision, discretion, and integrity. We are committed to safeguarding not just assets, but the trust and peace of mind that comes with knowing your wealth is protected by the highest standards of Swiss excellence.",
+    "missionText": "To preserve wealth and trust with Swiss precision — and to enable qualified enterprises to grow with structured, stress-free capital under the same standard of integrity.",
     "visionTitle": "Our Vision",
-    "visionText": "To be the world's most trusted private vault — a silent guardian for global investors. We envision a future where SBDV is recognized as the premier destination for those who demand uncompromising security, absolute discretion, and timeless reliability.",
+    "visionText": "To be the Swiss house clients choose when custody must stay silent and capital must stay disciplined — trusted by private wealth and by enterprises that prefer clarity over chaos.",
     "aboutTitle": "About SBDV",
-    "aboutParagraph1": "Swiss Bullion Depository Vault (SBDV) stands as a bastion of absolute security and confidentiality. Founded in Switzerland — the global epicenter of trust and discretion — SBDV combines cutting-edge protection with timeless Swiss precision.",
-    "aboutParagraph2": "Our mission is to preserve and secure what matters most: your wealth, your legacy, your peace of mind. We understand that true wealth protection requires more than just physical security—it demands absolute discretion, Swiss engineering excellence, and an unwavering commitment to integrity.",
-    "aboutParagraph3": "Every aspect of our operation reflects Swiss values: precision in execution, discretion in all matters, and integrity in every interaction. We are not just a vault; we are a silent guardian, protecting what matters most to the world's most discerning clients.",
-    "valuesTitle": "Princípios",
+    "aboutParagraph1": "Swiss Bullion Depository Vault is a Zurich-seated institution. We combine private vault custody with a Capital Access Program for qualified operating companies — two practices, one Swiss standard of discretion and review.",
+    "aboutParagraph2": "Private clients come for custody, membership, and stewardship. Enterprises come for transparent facility structure, KYC/UBO look-through, and a partner portal that keeps the process legible from application to repayment.",
+    "aboutParagraph3": "We do not compete on hype. We compete on documentation, mandate alignment, and the quiet confidence of Swiss operating discipline.",
+    "valuesTitle": "Principles",
     "values": {
       "discretion": {
         "title": "Discretion",
@@ -102,76 +110,70 @@
         "description": "Built on trust, proven by time. Our word is our bond, and our actions reflect our values."
       }
     },
-    "locationTitle": "Presença mundial, sede suíça",
-    "locationDescription": "Sede em Zurique, ao serviço de clientes em todo o mundo. A sede suíça é o fundamento da confiança e da precisão.",
-    "worldwideAccessibility": "Worldwide Accessibility",
-    "eyebrow": "Swiss Bullion Depository Vault",
-    "whoTitle": "Quem somos",
-    "whoText": "A Swiss Bullion Depository Vault tem sede em Zurique. Conservamos o património privado com discrição e organizamos facilidades de capital institucional para empresas qualificadas, após revisão documentada, um depósito de garantia de 10% e um plano de reembolso.",
     "practices": {
-      "privateLabel": "Clientes privados",
-      "privateTitle": "Custódia e património",
-      "privateText": "Proteção em cofre, supervisão de carteira e adesão para investidores privados, family offices e clientes soberanos.",
-      "capitalLabel": "Empresas",
+      "privateLabel": "Private clients",
+      "privateTitle": "Custody and wealth",
+      "privateText": "Vault custody, portfolio stewardship, and invitation-grade membership for private investors, family offices, and sovereign relationships.",
+      "capitalLabel": "Enterprises",
       "capitalTitle": "Capital Access",
-      "capitalText": "Uma facilidade estruturada para uma sociedade qualificada. A aprovação segue a documentação, um depósito de garantia de 10% em numerário e um plano de reembolso confirmado."
+      "capitalText": "Structured facilities for qualified companies — documentation, 10% cash collateral, Swiss AML review, and a confirmed repayment plan. Approval is discretionary."
     },
-    "serveTitle": "Quem servimos",
+    "serveTitle": "Who we serve",
     "serve": {
-      "investors": "Investidores privados que exigem custódia e discrição.",
-      "offices": "Family offices e clientes soberanos com horizonte longo.",
-      "enterprises": "Empresas estabelecidas que procuram uma facilidade de capital documentada."
+      "investors": "Private investors who require custody and discretion.",
+      "offices": "Family offices and sovereign clients with a long horizon.",
+      "enterprises": "Established companies seeking documented growth capital — not consumer credit."
     },
     "close": {
-      "membership": "Pedir a adesão de cliente privado",
-      "capital": "Rever Capital Access"
+      "membership": "Begin private-client membership",
+      "capital": "Explore Capital Access"
     },
-    "identityNameLabel": "Nome",
-    "identitySeatLabel": "Sede",
-    "identityName": "Swiss Bullion Depository Vault"
+    "locationTitle": "Swiss foundation. Global reach.",
+    "locationDescription": "Headquartered in Zurich with regional presence for international relationships. The standard is Swiss; access is worldwide for approved clients and qualified enterprises.",
+    "worldwideAccessibility": "Worldwide Accessibility"
   },
   "vault": {
     "title": "Vault & Security",
     "heroTitle": "The Vault",
-    "heroSubtitle": "Where your wealth rests in absolute security.",
-    "vaultsTitle": "Nossos cofres",
-    "vaultsDescription": "Nossas instalações subterrâneas de bullion são construídas com defesa multinível, vigilância 24/7 e engenharia sem compromissos.",
+    "heroSubtitle": "Custody engineered for quiet confidence — layered defense, continuous oversight, and Swiss operating discipline.",
+    "vaultsTitle": "Our Vaults",
+    "vaultsDescription": "Bullion facilities built for multi-tiered defense, continuous monitoring, and auditable chain of custody.",
     "vaultFeatures": {
       "multiTiered": {
-        "title": "Defesa multinível",
-        "description": "Sistemas de segurança em camadas protegendo seus ativos em cada nível."
+        "title": "Layered defense",
+        "description": "Physical and procedural controls that protect holdings at every stage of custody."
       },
       "surveillance": {
-        "title": "Vigilância 24/7",
-        "description": "Monitoramento contínuo com tecnologia de ponta."
+        "title": "Continuous oversight",
+        "description": "Monitoring designed for accountability — not theatre."
       },
       "engineering": {
-        "title": "Engenharia sem compromissos",
-        "description": "Construída segundo os mais altos padrões de precisão suíça."
+        "title": "Swiss engineering",
+        "description": "Built and operated to standards private clients expect from a Zurich-seated house."
       }
     },
     "vaultPageTitle": "The Vault",
-    "vaultPageDescription": "Where absolute security meets timeless Swiss precision. A fortress designed to preserve what matters most.",
+    "vaultPageDescription": "A private custody environment for bullion and valuables — designed so wealth can rest without noise.",
     "vaultPageFeatures": {
       "defense": {
-        "title": "Multi-Layer Defense",
-        "description": "Advanced security at every level"
+        "title": "Layered defense",
+        "description": "Controls at every level of access"
       },
       "monitoring": {
-        "title": "24/7 Monitoring",
-        "description": "Continuous surveillance systems"
+        "title": "Continuous oversight",
+        "description": "Accountable monitoring protocols"
       },
       "impenetrable": {
-        "title": "Impenetrable",
-        "description": "Swiss-engineered protection"
+        "title": "Swiss-built custody",
+        "description": "Engineering over marketing claims"
       },
       "technology": {
-        "title": "State-of-the-Art",
-        "description": "Cutting-edge technology"
+        "title": "Modern controls",
+        "description": "Systems that support audit and access"
       }
     },
     "securityArchitectureTitle": "Security Architecture",
-    "securityArchitectureDescription": "Our multi-layered security system combines cutting-edge technology with Swiss precision engineering.",
+    "securityArchitectureDescription": "A multi-layered security model combining controlled access, monitoring, and Swiss operational precision.",
     "securityFeatures": {
       "biometrics": {
         "title": "Biometrics",
@@ -190,83 +192,83 @@
         "description": "Comprehensive coverage through leading global insurers, providing full protection for all stored assets."
       }
     },
-    "accessProtocolTitle": "Access Protocol",
-    "accessProtocolDescription": "Every access request undergoes a multi-stage identity verification process. Our protocol ensures that only authorized individuals can access secure areas, maintaining the highest standards of security and discretion.",
+    "accessProtocolTitle": "Quiet access protocols",
+    "accessProtocolDescription": "Entry is deliberate: verify identity, confirm authorization, then grant access — so custody stays accountable without theatre.",
     "accessProtocolSteps": {
       "step1": {
-        "title": "Identity Verification",
-        "description": "Multi-factor authentication process"
+        "title": "Identity verification",
+        "description": "Multi-factor confirmation before any entry"
       },
       "step2": {
-        "title": "Authorization Review",
-        "description": "Prior approval required"
+        "title": "Authorization review",
+        "description": "Prior approval required for each visit"
       },
       "step3": {
-        "title": "Secure Access",
-        "description": "Exclusive entry granted"
+        "title": "Controlled access",
+        "description": "Entry granted only when cleared"
       }
     }
   },
   "services": {
     "title": "Services",
-    "heroTitle": "Our Services",
-    "heroSubtitle": "Comprehensive security solutions tailored to your needs.",
-    "sectionTitle": "Serviços de segurança",
+    "heroTitle": "Private-client services",
+    "heroSubtitle": "The operating suite behind Swiss custody — leasing, bullion verification, insurance reporting, and private viewing.",
+    "sectionTitle": "Custody services",
     "services": {
       "privateVault": {
-        "title": "Locação de cofre privado",
-        "description": "Alocação segura para indivíduos, empresas e family offices."
+        "title": "Private Vault Leasing",
+        "description": "Allocated space for individuals, family offices, and corporations that require dedicated custody."
       },
       "bullionStorage": {
-        "title": "Armazenamento de bullion",
-        "description": "Auditorias e armazenamento certificados LBMA para metais preciosos e bullion."
+        "title": "Bullion Storage",
+        "description": "LBMA-aligned audit and storage for precious metals with clear chain of custody."
       },
       "insurance": {
-        "title": "Seguro e relatórios de auditoria",
-        "description": "Cobertura completa e transparência via seguradoras globais com relatórios abrangentes."
+        "title": "Insurance & Audit Reporting",
+        "description": "Coverage and reporting pathways that keep holdings legible to you and your advisors."
       },
       "vipRooms": {
-        "title": "Salas VIP de visualização privada",
-        "description": "Somente com agendamento, com serviço de concierge para acesso exclusivo de clientes."
+        "title": "Private Viewing Rooms",
+        "description": "By appointment — inspect holdings in a controlled, discreet environment."
       }
     },
-    "gridTitle": "Service Offerings",
-    "gridSubtitle": "Each service is designed with Swiss precision and uncompromising security standards.",
+    "gridTitle": "What private clients use",
+    "gridSubtitle": "Practical custody services tied to membership — not a catalogue of slogans.",
     "gridServices": {
       "privateVault": {
         "title": "Private Vault Leasing",
-        "description": "Secure allocation for individuals, corporations, and family offices. Customized storage solutions tailored to your specific needs.",
+        "description": "Allocated custody for individuals, corporations, and family offices — sized to your holdings and membership tier.",
         "features": [
           "Dedicated vault space",
-          "24/7 access control",
-          "Personalized service"
+          "Controlled access",
+          "Relationship service"
         ]
       },
       "bullionCustody": {
         "title": "Bullion Custody & Verification",
-        "description": "LBMA-certified audits and storage for precious metals. Full chain of custody documentation and regular verification.",
+        "description": "LBMA-aligned audits and storage with documented chain of custody and regular verification.",
         "features": [
-          "LBMA certification",
+          "LBMA-aligned standards",
           "Regular audits",
           "Full documentation"
         ]
       },
       "insurance": {
         "title": "Insurance & Audit Reporting",
-        "description": "Full coverage and transparency via global insurers. Comprehensive reporting and regular audit documentation.",
+        "description": "Coverage pathways and reporting that keep holdings clear to you and your advisors.",
         "features": [
-          "Global insurance coverage",
+          "Insurance pathways",
           "Regular reporting",
-          "Full transparency"
+          "Audit documentation"
         ]
       },
       "vipRooms": {
-        "title": "VIP Private Viewing Rooms",
-        "description": "By appointment only, with concierge service. Exclusive access to view your assets in a private, secure environment.",
+        "title": "Private Viewing Rooms",
+        "description": "By appointment — inspect holdings in a controlled environment with discreet concierge support.",
         "features": [
-          "By appointment only",
-          "Concierge service",
-          "Private viewing"
+          "By appointment",
+          "Concierge support",
+          "Controlled viewing"
         ]
       }
     },
@@ -313,49 +315,49 @@
   },
   "wealth": {
     "title": "Wealth & Investment",
-    "heroTitle": "Património e investimento",
-    "heroSubtitle": "Swiss custody meets strategic portfolio management for global investors.",
-    "pillarsTitle": "Our Wealth Philosophy",
-    "pillarsSubtitle": "Three integrated pillars: Secure custody, strategic investment, and transparent reporting.",
+    "heroTitle": "Wealth & Investment",
+    "heroSubtitle": "Stewardship for private clients: allocation, metals strategy, and reporting — integrated with Swiss custody.",
+    "pillarsTitle": "How we steward wealth",
+    "pillarsSubtitle": "Custody-adjacent mandates with clear reporting — built for long horizons, not market theatre.",
     "pillars": {
       "advisory": {
         "title": "Investment Advisory",
-        "description": "Goal-based planning, asset allocation, and risk profiling tailored to your objectives and time horizon."
+        "description": "Goal-based planning, allocation, and risk framing aligned to your horizon and constraints."
       },
       "portfolio": {
         "title": "Portfolio Management",
-        "description": "Discretionary and advisory mandates with core equities and bonds plus satellite alternatives, bullion, and private markets."
+        "description": "Discretionary and advisory mandates — core markets with satellite alternatives and bullion where appropriate."
       },
       "metals": {
         "title": "Precious Metals Strategy",
-        "description": "LBMA bullion as a strategic portfolio allocation — not just storage, but integrated wealth preservation."
+        "description": "Bullion as a strategic allocation inside the portfolio — not storage alone."
       },
       "reporting": {
         "title": "Reporting & Transparency",
-        "description": "Performance reports, fee schedules, and audit documentation delivered through your secure client portal."
+        "description": "Performance, fees, and audit documentation delivered through your private client portal."
       }
     },
     "approachTitle": "Core & Satellite Approach",
-    "approachDescription": "We build globally diversified portfolios with a stable core of equities and bonds, complemented by satellite allocations in alternatives, precious metals, and private markets — all aligned to your membership tier and risk profile.",
+    "approachDescription": "A stable core of equities and bonds, with satellite allocations in alternatives, precious metals, and private markets — sized to membership tier and risk profile.",
     "feesTitle": "Fee Transparency",
     "feesDescription": "Management fees are disclosed in writing before you commit. No hidden transaction costs, retrocessions, or kickbacks.",
     "disclaimer": "Investment services may be subject to regulatory licensing requirements. Information on this page is for illustrative purposes and does not constitute investment advice. Please consult with your relationship manager and legal counsel.",
-    "ctaTitle": "Begin Your Wealth Journey",
-    "ctaSubtitle": "Schedule a confidential consultation with our investment team.",
+    "ctaTitle": "Discuss a private mandate",
+    "ctaSubtitle": "A confidential conversation with our investment team — no pressure, clear next steps.",
     "ctaButton": "Schedule Consultation"
   },
   "membership": {
     "title": "Membership",
-    "heroTitle": "Adesão",
-    "heroSubtitle": "Exclusive access to Swiss precision and security.",
-    "tiersTitle": "Membership Tiers",
-    "tiersSubtitle": "Three distinct tiers designed to meet the diverse needs of our global clientele.",
+    "heroTitle": "Membership",
+    "heroSubtitle": "The path into the house — tiered access to Swiss custody, services, and private-client relationships.",
+    "tiersTitle": "Access levels",
+    "tiersSubtitle": "Three tiers for different scales of custody and service intensity. Invitation standards apply where noted.",
     "tiers": {
       "standard": {
         "title": "Standard Custody",
         "subtitle": "Entry Level",
         "minimum": "Minimum: $250k",
-        "description": "Secure custody services for individual investors and smaller portfolios. Full access to our standard security protocols and regular reporting.",
+        "description": "Custody for individual investors and smaller portfolios — standard protocols, regular reporting, and monitored facilities.",
         "features": [
           "Minimum $250k in assets",
           "Standard security protocols",
@@ -368,7 +370,7 @@
         "title": "Executive Vault",
         "subtitle": "Invitation Only",
         "minimum": "Minimum: Custom",
-        "description": "Invitation-only, personalized storage solutions for high-net-worth individuals, family offices, and corporations. Enhanced privacy and dedicated service.",
+        "description": "Invitation-only relationships for HNWI, family offices, and corporations — dedicated service and heightened privacy.",
         "features": [
           "Invitation-only access",
           "Personalized storage",
@@ -381,7 +383,7 @@
         "title": "Sovereign Tier",
         "subtitle": "Institutional",
         "minimum": "Minimum: Institutional",
-        "description": "Institutional and government-level security for sovereign wealth funds, central banks, and large institutions. The highest level of security and service.",
+        "description": "Institutional-scale custody relationships for sovereign and large institutional counterparts — the highest service intensity.",
         "features": [
           "Institutional-grade security",
           "Government-level protocols",
@@ -392,11 +394,11 @@
       }
     },
     "complianceTitle": "Compliance & Security",
-    "complianceText": "All members undergo compliance screening under Swiss KYC and AML frameworks. We maintain the highest standards of due diligence to ensure the integrity and security of our vault operations.",
-    "formTitle": "Apply for Membership",
-    "formSubtitle": "Begin your journey with Swiss Bullion Depository Vault.",
-    "formSuccessTitle": "Application Received",
-    "formSuccessText": "Thank you for your interest. We will review your application and contact you shortly.",
+    "complianceText": "Membership is invitation-led and open to qualifying clients worldwide. Every applicant is screened under Swiss KYC and AML frameworks before access is granted.",
+    "formTitle": "Request membership review",
+    "formSubtitle": "Tell us about your custody needs. We respond with discretion — no obligation.",
+    "formSuccessTitle": "Application received",
+    "formSuccessText": "Thank you. Our team will review your request and contact you shortly.",
     "formLabels": {
       "name": "Full Name",
       "email": "Email Address",
@@ -411,7 +413,7 @@
       "phone": "+1 (555) 123-4567",
       "country": "Select your country",
       "assetRange": "Select asset range",
-      "message": "Tell us about your storage needs..."
+      "message": "Describe your custody and membership interest..."
     }
   },
   "contact": {
@@ -450,9 +452,11 @@
     }
   },
   "cta": {
-    "title": "Pronto para proteger seu legado?",
-    "subtitle": "Experimente a segurança e a discrição incomparáveis que só a precisão suíça pode oferecer.",
-    "button": "Agendar consulta privada"
+    "title": "Dois caminhos. Um padrão suíço.",
+    "subtitle": "Custody privada para património que deve permanecer discreto — ou capital estruturado para empresas prontas a crescer com clareza.",
+    "button": "Agendar consulta privada",
+    "capitalButton": "Explorar Capital Access",
+    "privateButton": "Acesso Clientes Privados"
   },
   "home": {
     "swissStandardTitle": "O padrão suíço",
@@ -475,8 +479,8 @@
     "globalAccessLabel": "Portal do cliente seguro",
     "globalNetworkTitle": "Global Network",
     "globalNetworkDescription": "Atendemos discretamente clientes nas capitais financeiras do mundo com cofres parceiros e logística global.",
-    "wealthTeaserTitle": "Patrimônio e Investimentos",
-    "wealthTeaserDescription": "Além da custódia — gestão estratégica de portfólio, consultoria de investimentos e relatórios consolidados pelo seu portal privado.",
+    "wealthTeaserTitle": "Stewardship patrimonial, sem ruído",
+    "wealthTeaserDescription": "Para clientes privados: mandatos de portfólio, estratégia de metais e relatórios consolidados — integrados com custody suíça pelo portal privado.",
     "wealthTeaserButton": "Explorar Serviços Patrimoniais",
     "testimonialsTitle": "Depoimentos de clientes",
     "testimonials": {
@@ -504,6 +508,17 @@
         "quote": "Tranquilidade absoluta. Saber que nossos ativos estão protegidos por padrões suíços nos dá total confiança.",
         "author": "Corporação internacional"
       }
+    },
+    "capitalTeaserTitle": "Capital que faz empresas crescerem",
+    "capitalTeaserDescription": "O Capital Access Program liga empresas qualificadas a pools alinhados ao mandato — termos transparentes, supervisão suíça e um caminho guiado do pedido à facility.",
+    "capitalTeaserButton": "Explorar Capital Access",
+    "capitalTeaserPoints": {
+      "structure": "Estrutura clara",
+      "structureDesc": "Montante, prazo e reembolso definidos antes do compromisso.",
+      "oversight": "Supervisão suíça",
+      "oversightDesc": "KYC documentado, look-through UBO e revisão discricionária.",
+      "portal": "Portal de parceiros",
+      "portalDesc": "Acompanhe pedidos, depósitos e reembolsos num só lugar."
     }
   },
   "common": {
@@ -819,22 +834,22 @@
     "signedInAs": "Signed in as",
     "hero": {
       "badge": "Institutional Capital Program",
-      "title": "Capital Access Program",
-      "subtitle": "Connect your enterprise to sovereign-grade capital pools. Structured lending with transparent terms, mandate alignment, and Swiss oversight.",
+      "title": "Capital that lets your enterprise grow — without the stress",
+      "subtitle": "Structured facilities for qualified companies: transparent terms, Swiss oversight, and a guided path from application to repayment — not consumer credit, not fundraising chaos.",
       "applyAccess": "Apply for Access",
       "partnerLogin": "Partner Login"
     },
     "features": {
-      "title": "Why Capital Access",
-      "subtitle": "A disciplined gateway between qualified enterprises and institutional sovereign capital.",
-      "globalPoolsTitle": "Global Sovereign Pools",
-      "globalPoolsDesc": "Access partially disclosed capital from sovereign wealth jurisdictions worldwide.",
-      "flexibleTermsTitle": "Flexible Repayment",
-      "flexibleTermsDesc": "Structure your facility with monthly or annual interest payments over 1–10 years.",
-      "enterpriseFocusTitle": "Enterprise-Grade",
-      "enterpriseFocusDesc": "Designed for established companies with audited financials and clear investment thesis.",
-      "structuredSecurityTitle": "Structured Security",
-      "structuredSecurityDesc": "10% security deposit with full KYC/AML compliance and mandate alignment review."
+      "title": "Why enterprises choose Capital Access",
+      "subtitle": "A disciplined gateway between qualified companies and mandate-aligned capital — clarity first.",
+      "globalPoolsTitle": "Mandate-aligned pools",
+      "globalPoolsDesc": "Partially disclosed sovereign-grade pools matched to sector and region — not a black-box auction.",
+      "flexibleTermsTitle": "Terms you can plan around",
+      "flexibleTermsDesc": "Define amount, term, and monthly or annual interest over 1–10 years with live calculations.",
+      "enterpriseFocusTitle": "Built for operating companies",
+      "enterpriseFocusDesc": "For established enterprises with audited or reviewed financials and a clear investment thesis.",
+      "structuredSecurityTitle": "Process without surprise",
+      "structuredSecurityDesc": "10% cash collateral, full KYC/UBO look-through, and discretionary approval under Swiss AML standards."
     },
     "howItWorks": {
       "title": "How It Works",

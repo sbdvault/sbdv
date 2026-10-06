@@ -4,6 +4,7 @@ import HeroSection from "@/sections/HeroSection";
 import AboutSection from "@/sections/AboutSection";
 import VaultsSection from "@/sections/VaultsSection";
 import ServicesSection from "@/sections/ServicesSection";
+import CapitalAccessTeaserSection from "@/sections/CapitalAccessTeaserSection";
 import WealthTeaserSection from "@/sections/WealthTeaserSection";
 import SwissStandardSection from "@/sections/SwissStandardSection";
 import GlobalAccessSection from "@/sections/GlobalAccessSection";
@@ -15,10 +16,11 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
-  const { locale } = await params;
+  await params;
   return {
     title: "Home | Swiss Bullion Depository Vault",
-    description: "Global Trust. Swiss Security. Discreet vaulting services for private investors, institutions, and sovereign clients.",
+    description:
+      "Swiss custody for private wealth and stress-free, mandate-aligned capital for qualified enterprises. Global Trust. Swiss Security.",
   };
 }
 
@@ -27,13 +29,14 @@ export default async function Home({
 }: {
   params: Promise<{ locale: Locale }>;
 }) {
-  await params; // Ensure params are resolved
+  await params;
   return (
     <>
       <HeroSection />
       <AboutSection />
       <VaultsSection />
       <ServicesSection />
+      <CapitalAccessTeaserSection />
       <WealthTeaserSection />
       <SwissStandardSection />
       <GlobalAccessSection />

@@ -2,17 +2,17 @@
 
 ## Mission
 
-**To preserve wealth and trust with Swiss precision, discretion, and integrity.**
+**To preserve wealth and trust with Swiss precision — and to enable qualified enterprises to grow with structured, stress-free capital under the same standard of integrity.**
 
-Our mission is the foundation of everything we do. We are committed to safeguarding not just assets, but the trust and peace of mind that comes with knowing your wealth is protected by the highest standards of Swiss excellence.
+We safeguard private assets and the peace of mind that comes with Swiss custody, while arranging mandate-aligned facilities for enterprises that prefer clarity over fundraising chaos.
 
 ---
 
 ## Vision
 
-**To be the world's most trusted private vault — a silent guardian for global investors.**
+**To be the Swiss house clients choose when custody must stay silent and capital must stay disciplined.**
 
-We envision a future where SBDV is recognized as the premier destination for those who demand uncompromising security, absolute discretion, and timeless reliability. We are not just a vault; we are a silent guardian, protecting what matters most to the world's most discerning clients.
+We aim to be trusted by private wealth for quiet custody and stewardship, and by qualified enterprises for transparent, documented growth capital — one institution, two clear practices.
 
 ---
 
@@ -171,35 +171,63 @@ This tagline positions SBDV as the premier choice for those who value privacy ab
 
 ## Brand Positioning
 
-**SBDV is the premier Swiss private vault for the world's most discerning clients.**
+**SBDV is a Zurich-seated Swiss institution: private wealth custody for discerning clients, and structured capital for qualified enterprises.**
 
-We position ourselves as:
+**Dual promise:** Preserve private wealth with Swiss custody. Grow the enterprise with stress-free, mandate-aligned capital.
 
-- **The most secure** — Not just secure, but the most secure
-- **The most discreet** — Privacy is our foundation
-- **The most reliable** — Swiss precision in every detail
-- **The most trusted** — Built on integrity and proven results
+We compete on trust, clarity, and disciplined process—not price, hype, or guaranteed funding.
 
-We are not competing on price—we are competing on trust, security, and service excellence.
+---
+
+## Dual Audience Map
+
+| Path | Audience | Primary outcome |
+|------|----------|-----------------|
+| Private Clients | HNWI, family offices, sovereign clients | Custody, discretion, portfolio stewardship, membership |
+| Capital Access | Qualified operating companies | Structured growth capital without fundraising chaos |
+
+Never blur the two into one vague “clients.” Name the audience in every major CTA.
+
+### Private Clients — approved one-liners
+
+- “Swiss custody for wealth that must remain quiet.”
+- “Vault, mandate, and reporting in one private relationship.”
+- “Membership is the path into the house.”
+
+### Capital Access — approved one-liners
+
+- “Structured capital for qualified enterprises — transparent terms, Swiss oversight.”
+- “Grow the business without the stress of traditional fundraising.”
+- “Mandate-aligned facilities with a clear deposit, KYC, and repayment path.”
+
+### Do / Don’t (both paths)
+
+**Do:** outcome-first headlines; Swiss seat; discretion; process clarity; discretionary approval; AML/KYC as trust rails.
+
+**Don’t:** retail loan language; “guaranteed funding”; startup growth-hack tone; claiming a FINMA banking licence; mixing private vault CTAs with enterprise loan CTAs on the same button.
 
 ---
 
 ## Target Audience
 
-### Primary Audience
+### Private Clients
 
 - High-net-worth individuals seeking secure asset storage
 - Family offices managing generational wealth
-- Corporations requiring secure custody services
-- Institutional investors and sovereign wealth funds
+- Sovereign and institutional custody relationships
+
+### Capital Access (enterprises)
+
+- Established operating companies seeking documented facilities
+- Minimum ticket and operating history as published on Capital Access
+- Decision-makers who value transparent terms and Swiss review over speed-at-all-costs
 
 ### Audience Characteristics
 
 - Value security and discretion above all else
 - Appreciate Swiss precision and reliability
 - Seek long-term relationships, not transactions
-- Understand that quality comes at a premium
-- Make decisions based on trust and reputation
+- Make decisions based on trust, documentation, and reputation
 
 ---
 
@@ -233,8 +261,8 @@ We are not competing on price—we are competing on trust, security, and service
 
 ## Last Updated
 
-**Date:** November 9, 2025  
-**Version:** 1.0  
+**Date:** October 5, 2026  
+**Version:** 1.1  
 **Status:** Active
 
 ---
