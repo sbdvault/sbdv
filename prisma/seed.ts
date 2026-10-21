@@ -1,8 +1,7 @@
-import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcryptjs";
+import { prisma } from "../lib/prisma";
 import { allWealthEntities } from "../lib/wealth-entities";
-
-const prisma = new PrismaClient();
+import { seedDemoWealthMandate } from "../lib/wealth-mandate";
 
 async function seedWealthEntities() {
   await prisma.globalWealthEntity.deleteMany();
@@ -30,6 +29,7 @@ async function main() {
   const clientPassword = await bcrypt.hash("Client123!", 12);
   const borrowerPassword = await bcrypt.hash("Borrow123!", 12);
 
+  // Account holder: only this user can create staff admins (see ACCOUNT_HOLDER_EMAIL).
   await prisma.user.upsert({
     where: { email: "admin@sbdv.swiss" },
     update: {},
@@ -150,6 +150,8 @@ async function main() {
       },
     });
   }
+
+  await seedDemoWealthMandate(profile.id);
 
   const docCount = await prisma.document.count({
     where: { clientProfileId: profile.id },

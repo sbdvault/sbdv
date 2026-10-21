@@ -34,6 +34,7 @@ model User {
   messagesReceived Message[] @relation("ReceivedMessages")
   wealthDirectives WealthInvestmentDirective[]
   capitalAccessRequests CapitalAccessRequest[]
+  wealthLedgerConfirmations WealthLedgerEntry[] @relation("WealthLedgerConfirmedBy")
 }
 
 model Account {
@@ -80,9 +81,10 @@ model ClientProfile {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  user       User        @relation(fields: [userId], references: [id], onDelete: Cascade)
-  portfolios Portfolio[]
-  documents  Document[]
+  user          User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  portfolios    Portfolio[]
+  documents     Document[]
+  wealthMandate WealthMandate?
 }
 
 model Portfolio {
@@ -129,6 +131,47 @@ model PerformanceRecord {
   portfolio Portfolio @relation(fields: [portfolioId], references: [id], onDelete: Cascade)
 }
 
+model WealthMandate {
+  id                String   @id @default(cuid())
+  clientProfileId   String   @unique
+  annualYieldPct    Float
+  status            String   @default("ACTIVE")
+  lastAccruedAt     DateTime @default(now())
+  reportingCurrency String   @default("USD")
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  clientProfile ClientProfile       @relation(fields: [clientProfileId], references: [id], onDelete: Cascade)
+  entries       WealthLedgerEntry[]
+}
+
+model WealthLedgerEntry {
+  id                 String    @id @default(cuid())
+  mandateId          String
+  type               String
+  status             String    @default("PENDING")
+  amountUsd          Float
+  btcAmount          Float?
+  btcTxid            String?
+  usdPerBtc          Float?
+  clientNote         String?
+  adminNote          String?
+  payoutMethod       String?
+  payoutBankName     String?
+  payoutIban         String?
+  payoutSwift        String?
+  payoutAccountName  String?
+  payoutBtcAddress   String?
+  paymentReference   String?
+  confirmedById      String?
+  confirmedAt        DateTime?
+  createdAt          DateTime  @default(now())
+  updatedAt          DateTime  @updatedAt
+
+  mandate     WealthMandate @relation(fields: [mandateId], references: [id], onDelete: Cascade)
+  confirmedBy User?         @relation("WealthLedgerConfirmedBy", fields: [confirmedById], references: [id])
+}
+
 model Document {
   id              String   @id @default(cuid())
   clientProfileId String
@@ -163,6 +206,7 @@ model MembershipApplication {
   country    String
   assetRange String
   message    String
+  track      String   @default("VAULT")
   status     String   @default("PENDING")
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt

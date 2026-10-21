@@ -40,7 +40,7 @@ function pinOpenSsl3QueryEngine() {
 pinOpenSsl3QueryEngine();
 
 /** Bump when Prisma schema relations/fields change so the dev singleton is not reused. */
-const PRISMA_SCHEMA_STAMP = "capital-access-ubo-v1";
+const PRISMA_SCHEMA_STAMP = "wealth-mandate-v3";
 
 const globalForPrisma = globalThis as unknown as {
   prisma: PrismaClient | undefined;
@@ -53,12 +53,33 @@ function createPrismaClient() {
   });
 }
 
-export const prisma =
-  globalForPrisma.prismaStamp === PRISMA_SCHEMA_STAMP && globalForPrisma.prisma
-    ? globalForPrisma.prisma
-    : createPrismaClient();
-
-if (process.env.NODE_ENV !== "production") {
-  globalForPrisma.prisma = prisma;
-  globalForPrisma.prismaStamp = PRISMA_SCHEMA_STAMP;
+function hasWealthMandate(client: PrismaClient | undefined): client is PrismaClient {
+  return (
+    typeof (client as { wealthMandate?: { findUnique?: unknown } } | undefined)
+      ?.wealthMandate?.findUnique === "function"
+  );
 }
+
+function getPrismaClient(): PrismaClient {
+  if (
+    globalForPrisma.prismaStamp === PRISMA_SCHEMA_STAMP &&
+    hasWealthMandate(globalForPrisma.prisma)
+  ) {
+    return globalForPrisma.prisma;
+  }
+
+  const client = createPrismaClient();
+  if (!hasWealthMandate(client)) {
+    throw new Error(
+      "Prisma Client is missing WealthMandate. Stop the Next.js dev server, run `npx prisma generate`, then start it again.",
+    );
+  }
+
+  if (process.env.NODE_ENV !== "production") {
+    globalForPrisma.prisma = client;
+    globalForPrisma.prismaStamp = PRISMA_SCHEMA_STAMP;
+  }
+  return client;
+}
+
+export const prisma = getPrismaClient();

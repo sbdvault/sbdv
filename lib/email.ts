@@ -1,11 +1,20 @@
 import nodemailer from "nodemailer";
 
+export interface SendEmailAttachment {
+  filename: string;
+  content?: Buffer;
+  path?: string;
+  contentType?: string;
+  cid?: string;
+}
+
 export interface SendEmailOptions {
   to: string;
   subject: string;
   html: string;
   text?: string;
   replyTo?: string;
+  attachments?: SendEmailAttachment[];
 }
 
 function isEmailConfigured() {
@@ -63,6 +72,11 @@ export async function sendEmail(options: SendEmailOptions): Promise<void> {
     console.log(`To: ${routed.to}${routed.to !== options.to ? ` (was ${options.to})` : ""}`);
     if (options.replyTo) console.log(`Reply-To: ${options.replyTo}`);
     console.log(`Subject: ${subject}`);
+    if (options.attachments?.length) {
+      console.log(
+        `Attachments: ${options.attachments.map((item) => item.filename).join(", ")}`
+      );
+    }
     console.log(text || html.replace(/<[^>]+>/g, " "));
     console.log("--- END EMAIL ---\n");
     return;
@@ -76,6 +90,7 @@ export async function sendEmail(options: SendEmailOptions): Promise<void> {
       html,
       text,
       replyTo: options.replyTo,
+      attachments: options.attachments,
     });
     console.log(
       `Email sent: "${options.subject}" → ${routed.to}${

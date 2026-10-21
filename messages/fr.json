@@ -89,7 +89,7 @@
     "visionText": "To be the Swiss house clients choose when custody must stay silent and capital must stay disciplined — trusted by private wealth and by enterprises that prefer clarity over chaos.",
     "aboutTitle": "About SBDV",
     "aboutParagraph1": "Swiss Bullion Depository Vault is a Zurich-seated institution. We combine private vault custody with a Capital Access Program for qualified operating companies — two practices, one Swiss standard of discretion and review.",
-    "aboutParagraph2": "Private clients come for custody, membership, and stewardship. Enterprises come for transparent facility structure, KYC/UBO look-through, and a partner portal that keeps the process legible from application to repayment.",
+    "aboutParagraph2": "Private clients come for vault custody or a wealth mandate. Enterprises come for transparent facility structure, KYC/UBO look-through, and a partner portal that keeps the process legible from application to repayment.",
     "aboutParagraph3": "We do not compete on hype. We compete on documentation, mandate alignment, and the quiet confidence of Swiss operating discipline.",
     "valuesTitle": "Principles",
     "values": {
@@ -113,7 +113,7 @@
     "practices": {
       "privateLabel": "Private clients",
       "privateTitle": "Custody and wealth",
-      "privateText": "Vault custody, portfolio stewardship, and invitation-grade membership for private investors, family offices, and sovereign relationships.",
+      "privateText": "Vault & Security membership for bullion custody, and a separate Wealth & Investment mandate for clients who fund principal and watch stated yield.",
       "capitalLabel": "Enterprises",
       "capitalTitle": "Capital Access",
       "capitalText": "Structured facilities for qualified companies — documentation, 10% cash collateral, Swiss AML review, and a confirmed repayment plan. Approval is discretionary."
@@ -125,7 +125,7 @@
       "enterprises": "Established companies seeking documented growth capital — not consumer credit."
     },
     "close": {
-      "membership": "Begin private-client membership",
+      "membership": "Request vault membership",
       "capital": "Explore Capital Access"
     },
     "locationTitle": "Swiss foundation. Global reach.",
@@ -273,52 +273,52 @@
       }
     },
     "wealthGridTitle": "Wealth & Investment Services",
-    "wealthGridSubtitle": "Strategic portfolio management integrated with Swiss custody excellence.",
+    "wealthGridSubtitle": "A private-client mandate: fund by wire or Bitcoin, we invest, you watch live yield — then withdraw interest or compound it.",
     "wealthGridServices": {
       "advisory": {
-        "title": "Investment Advisory",
-        "description": "Personalized investment strategy for high-net-worth individuals and family offices.",
+        "title": "Fund the mandate",
+        "description": "Transfer cash by bank wire, or send Bitcoin to SBDV’s receive address. Ops confirms receipt before principal is credited.",
         "features": [
-          "Goal-based planning",
-          "Risk profiling",
-          "Asset allocation"
+          "Bank wire in USD",
+          "Bitcoin as a funding rail",
+          "Ops-confirmed credit"
         ]
       },
       "portfolio": {
-        "title": "Portfolio Management",
-        "description": "Discretionary and advisory mandates with quarterly rebalancing and performance reporting.",
+        "title": "Stewardship",
+        "description": "SBDV invests funded principal under a stated mandate yield. Interest accrues on principal only — not a bank deposit.",
         "features": [
-          "Discretionary mandates",
-          "Quarterly rebalancing",
-          "Performance reports"
+          "Stated annual mandate yield",
+          "Principal remains invested",
+          "Yield may be revised"
         ]
       },
       "alternatives": {
-        "title": "Alternative Investments",
-        "description": "Access to private markets, structured products, and collectibles as part of a diversified strategy.",
+        "title": "Live monitoring",
+        "description": "Your private portal shows principal, accrued interest, and total value as the mandate yield ticks forward.",
         "features": [
-          "Private markets",
-          "Structured products",
-          "Collectibles"
+          "Live principal vs interest",
+          "Funding history",
+          "Secure client portal"
         ]
       },
       "reporting": {
-        "title": "Consolidated Reporting",
-        "description": "Unified view of vault holdings and financial portfolio in one secure client portal.",
+        "title": "Distribute or compound",
+        "description": "Withdraw accrued interest and leave principal invested, or reinvest interest so it becomes new principal.",
         "features": [
-          "Unified dashboard",
-          "Audit documentation",
-          "Fee transparency"
+          "Withdraw interest",
+          "Reinvest into principal",
+          "Wire or Bitcoin payout"
         ]
       }
     }
   },
   "membership": {
-    "title": "Membership",
-    "heroTitle": "Membership",
-    "heroSubtitle": "The path into the house — tiered access to Swiss custody, services, and private-client relationships.",
-    "tiersTitle": "Access levels",
-    "tiersSubtitle": "Three tiers for different scales of custody and service intensity. Invitation standards apply where noted.",
+    "title": "Vault membership",
+    "heroTitle": "Vault membership",
+    "heroSubtitle": "The path into Swiss vault custody — tiered access to allocated storage, viewing, and relationship coverage. This is Vault & Security, not the wealth mandate.",
+    "tiersTitle": "Custody access levels",
+    "tiersSubtitle": "Three tiers for different scales of bullion and valuables custody. Invitation standards apply where noted.",
     "tiers": {
       "standard": {
         "title": "Standard Custody",
@@ -361,11 +361,11 @@
       }
     },
     "complianceTitle": "Compliance & Security",
-    "complianceText": "Membership is invitation-led and open to qualifying clients worldwide. Every applicant is screened under Swiss KYC and AML frameworks before access is granted.",
-    "formTitle": "Request membership review",
-    "formSubtitle": "Tell us about your custody needs. We respond with discretion — no obligation.",
-    "formSuccessTitle": "Application received",
-    "formSuccessText": "Thank you. Our team will review your request and contact you shortly.",
+    "complianceText": "Vault membership is invitation-led and open to qualifying clients worldwide. Every applicant is screened under Swiss KYC and AML frameworks before custody access is granted. To invest cash or Bitcoin under a stated yield, use Wealth & Investment instead.",
+    "formTitle": "Request vault membership",
+    "formSubtitle": "Tell us about your custody needs — allocated bullion, viewing, and vault relationship. We respond with discretion — no obligation.",
+    "formSuccessTitle": "Vault application received",
+    "formSuccessText": "Thank you. Our custody desk will review your request and contact you shortly.",
     "formLabels": {
       "name": "Full Name",
       "email": "Email Address",
@@ -380,7 +380,7 @@
       "phone": "+1 (555) 123-4567",
       "country": "Select your country",
       "assetRange": "Select asset range",
-      "message": "Describe your custody and membership interest..."
+      "message": "Describe your vault custody interest — metals, volume, and any viewing needs."
     }
   },
   "contact": {
@@ -504,35 +504,93 @@
   "wealth": {
     "title": "Wealth & Investment",
     "heroTitle": "Wealth & Investment",
-    "heroSubtitle": "Stewardship for private clients: allocation, metals strategy, and reporting — integrated with Swiss custody.",
-    "pillarsTitle": "How we steward wealth",
-    "pillarsSubtitle": "Custody-adjacent mandates with clear reporting — built for long horizons, not market theatre.",
+    "heroSubtitle": "Private clients fund a mandate by wire or Bitcoin. SBDV invests the principal. You monitor live yield, then withdraw interest or compound it.",
+    "pillarsTitle": "How the mandate works",
+    "pillarsSubtitle": "Four steps: fund, steward, watch, and distribute — with Swiss ops confirmation, not a trading app.",
     "pillars": {
       "advisory": {
-        "title": "Investment Advisory",
-        "description": "Goal-based planning, allocation, and risk framing aligned to your horizon and constraints."
+        "title": "Fund",
+        "description": "Send USD by wire or Bitcoin to the house receive address. Credit posts after operations confirm the transfer."
       },
       "portfolio": {
-        "title": "Portfolio Management",
-        "description": "Discretionary and advisory mandates — core markets with satellite alternatives and bullion where appropriate."
+        "title": "Invest",
+        "description": "Funded principal is invested under a stated mandate yield. Interest accrues on principal only."
       },
       "metals": {
-        "title": "Precious Metals Strategy",
-        "description": "Bullion as a strategic allocation inside the portfolio — not storage alone."
+        "title": "Monitor",
+        "description": "The client portal ticks principal, accrued interest, and total value in real time — as of this moment."
       },
       "reporting": {
-        "title": "Reporting & Transparency",
-        "description": "Performance, fees, and audit documentation delivered through your private client portal."
+        "title": "Distribute or compound",
+        "description": "Take accrued interest and leave principal working, or reinvest interest so future yield runs on a larger base."
       }
     },
-    "approachTitle": "Core & Satellite Approach",
-    "approachDescription": "A stable core of equities and bonds, with satellite allocations in alternatives, precious metals, and private markets — sized to membership tier and risk profile.",
+    "approachTitle": "A quiet mandate, not a marketplace",
+    "approachDescription": "This is a private-client investment mandate, not a bank account and not a crypto exchange. Bitcoin is only a way to fund. Yield is a stated mandate rate SBDV may change. Principal is not withdrawn in this programme — you fund, watch growth, and elect how to treat interest.",
     "feesTitle": "Fee Transparency",
-    "feesDescription": "Management fees are disclosed in writing before you commit. No hidden transaction costs, retrocessions, or kickbacks.",
-    "disclaimer": "Investment services may be subject to regulatory licensing requirements. Information on this page is for illustrative purposes and does not constitute investment advice. Please consult with your relationship manager and legal counsel.",
+    "feesDescription": "Mandate terms, including the stated yield and any fees, are disclosed in writing before you fund. No hidden transaction costs, retrocessions, or kickbacks.",
+    "disclaimer": "This is not a bank deposit and is not covered by deposit-insurance schemes. Mandate yield is not guaranteed and may be paused or revised. Investments involve risk, including possible loss of principal. Bitcoin transfers are irreversible; SBDV does not custody your private keys or operate a crypto exchange. Information on this page is not investment, legal, or tax advice.",
     "ctaTitle": "Discuss a private mandate",
     "ctaSubtitle": "A confidential conversation with our investment team — no pressure, clear next steps.",
-    "ctaButton": "Schedule Consultation"
+    "ctaButton": "Schedule Consultation",
+    "growth": {
+      "title": "How your capital grows",
+      "subtitle": "You fund principal. SBDV invests it under a stated mandate yield. Interest accrues on principal only — then you withdraw it or compound it.",
+      "steps": {
+        "fund": {
+          "title": "Fund principal",
+          "description": "Transfer USD by wire or Bitcoin. Operations confirm receipt, then the amount is credited as principal — not as a traded coin wallet."
+        },
+        "accrue": {
+          "title": "Yield on principal",
+          "description": "A stated annual rate accrues on principal (actual/365). Unwithdrawn interest does not itself earn until you reinvest it."
+        },
+        "choose": {
+          "title": "Take or compound",
+          "description": "Withdraw accrued interest and leave principal invested, or reinvest interest so future yield runs on a larger base."
+        }
+      },
+      "exampleLabel": "Worked example",
+      "exampleTitle": "Illustrative year at a stated 8% mandate yield",
+      "exampleBody": "If $250,000 is confirmed as principal and the mandate yield is 8% actual/365, about $20,000 of interest would accrue over a full year — assuming the rate is unchanged and principal is not reduced. You could withdraw that interest or reinvest it into principal.",
+      "examplePrincipal": "Principal",
+      "exampleYield": "Stated yield",
+      "exampleInterest": "Year-1 interest (illustrative)",
+      "exampleNote": "Illustration only. Yield is not guaranteed, may be paused or revised, and is not a bank deposit. Past or modelled figures are not a promise of future results."
+    },
+    "benefits": {
+      "title": "Why private clients use the mandate",
+      "items": [
+        "Ops-confirmed funding by wire or Bitcoin",
+        "Live principal vs interest in the private portal",
+        "Withdraw interest without redeeming principal",
+        "Reinvest interest so the base can grow",
+        "Swiss KYC and operations confirmation when you fund",
+        "Custody remains a separate Vault membership if you also store bullion"
+      ]
+    },
+    "register": {
+      "formTitle": "Create your wealth account",
+      "formSubtitle": "Register with your own password. After you sign in, review the mandate and choose how much to fund by wire or Bitcoin. Operations confirms receipt before principal starts accruing.",
+      "formSuccessTitle": "Account created",
+      "formSuccessText": "Sign in to open your mandate and choose a funding amount.",
+      "continueTitle": "You're signed in",
+      "continueText": "Continue to your wealth mandate to review the programme and choose how much to invest.",
+      "continueCta": "Continue to your mandate",
+      "createAccount": "Create account",
+      "creatingAccount": "Creating account...",
+      "password": "Password",
+      "confirmPassword": "Confirm password",
+      "passwordMin": "At least 8 characters",
+      "alreadyExists": "An account with this email already exists. Sign in instead.",
+      "signIn": "Sign in",
+      "signInFailed": "Account created. Sign in to continue to your mandate.",
+      "error": "Unable to create the account. Please try again."
+    },
+    "closeTitle": "Ready to begin?",
+    "closeSubtitle": "Create a portal account on this page. After you sign in, choose how much to invest. Vault custody is a separate membership if you need allocated storage.",
+    "closeApply": "Create an account",
+    "closeVault": "Request vault membership"
   },
   "legal": {
     "privacyTitle": "Privacy Policy",
@@ -583,7 +641,12 @@
     "alreadySignedInSubtitle": "Continue to your portal, or sign out to use a different account.",
     "signedInAs": "Signed in as",
     "continueToPortal": "Continue to portal",
-    "signOut": "Sign out"
+    "signOut": "Sign out",
+    "registerWealth": "Create a wealth account",
+    "adminTitle": "Administration",
+    "adminSubtitle": "Sign in to the SBDV operations portal.",
+    "adminOnly": "This portal is for administrators only.",
+    "continueToAdmin": "Continue to operations"
   },
   "portal": {
     "title": "Portail client",
@@ -596,7 +659,9 @@
       "messages": "Messages",
       "settings": "Settings",
       "logout": "Déconnexion",
-      "admin": "Admin Panel"
+      "admin": "Admin Panel",
+      "mandate": "Mandate",
+      "funding": "Funding"
     },
     "overview": {
       "title": "Portfolio Overview",
@@ -605,7 +670,10 @@
       "allocation": "Asset Allocation",
       "recentActivity": "Recent Activity",
       "bullionValue": "Bullion & Custody",
-      "financialValue": "Financial Portfolio"
+      "financialValue": "Financial Portfolio",
+      "openMandate": "Open mandate",
+      "vaultHoldings": "Vault & financial holdings",
+      "empty": "No mandate or holdings yet. Fund the mandate or contact your relationship manager."
     },
     "holdings": {
       "title": "Holdings",
@@ -662,6 +730,79 @@
       "enableMfa": "Enable MFA",
       "sessions": "Active Sessions",
       "notifications": "Email Notifications"
+    },
+    "mandate": {
+      "title": "Wealth mandate",
+      "subtitle": "Principal stays invested. Interest accrues on principal at the stated mandate yield. Withdraw interest or reinvest it — principal is not redeemed in this programme.",
+      "principal": "Principal",
+      "accrued": "Accrued interest",
+      "total": "Mandate total",
+      "yield": "Mandate yield",
+      "live": "Accruing",
+      "paused": "Yield paused",
+      "growth": "Growth",
+      "reinvest": "Reinvest accrued interest",
+      "withdraw": "Withdraw interest",
+      "withdrawTitle": "Withdraw accrued interest",
+      "amount": "Amount",
+      "accountName": "Account name",
+      "bankName": "Bank name",
+      "btcAddress": "Bitcoin address",
+      "submitWithdraw": "Request payout",
+      "activity": "Activity",
+      "when": "When",
+      "type": "Type",
+      "status": "Status",
+      "emptyActivity": "No mandate activity yet. Fund the mandate to begin.",
+      "unavailable": "No wealth mandate is attached to this account yet.",
+      "actionError": "Unable to complete that request.",
+      "disclaimer": "Not a bank deposit. Yield is a stated mandate rate and may be changed. Bitcoin transfers are irreversible.",
+      "types": {
+        "DEPOSIT_WIRE": "Wire funding",
+        "DEPOSIT_BTC": "Bitcoin funding",
+        "INTEREST_ACCRUAL": "Yield credited",
+        "INTEREST_WITHDRAW": "Interest withdrawal",
+        "INTEREST_REINVEST": "Interest reinvested",
+        "ADJUSTMENT": "Adjustment",
+        "FOUNDING_BONUS": "Founding bonus"
+      },
+      "fundTitle": "Choose how much to invest",
+      "fundBody": "Review the mandate, then tell operations the USD amount and whether you will send a bank wire or Bitcoin. Principal is credited only after receipt is confirmed.",
+      "fundCta": "Choose amount and funding method"
+    },
+    "funding": {
+      "title": "Fund the mandate",
+      "subtitle": "Request a wire or Bitcoin transfer. Principal is credited only after SBDV operations confirm receipt.",
+      "wire": "Bank wire",
+      "btc": "Bitcoin",
+      "btcAmount": "Bitcoin amount (optional)",
+      "txid": "Transaction ID",
+      "note": "Note to operations",
+      "submit": "Submit funding notice",
+      "submitted": "Notice received. Quote this reference when you transfer:",
+      "instructions": "House instructions",
+      "beneficiary": "Beneficiary",
+      "accountNumber": "Account number",
+      "bankAddress": "Bank address",
+      "wireFallback": "Wire instructions will be confirmed by your relationship manager. Submit the notice so operations can match your transfer.",
+      "btcAddress": "SBDV receive address",
+      "btcNote": "Send only Bitcoin to this address. Include the txid on your notice. Credit is USD principal after ops confirmation — SBDV does not custody your keys.",
+      "btcFallback": "A Bitcoin receive address will be provided by your relationship manager.",
+      "history": "Funding history",
+      "rail": "Rail",
+      "reference": "Reference",
+      "empty": "No funding notices yet.",
+      "waitingApprove": "Waiting for operations to approve this notice. House instructions will appear here after approval — do not send funds yet.",
+      "waitingProof": "Transfer using the instructions below, then upload payment proof.",
+      "proofUploaded": "Payment information received. Operations will confirm receipt.",
+      "credited": "Receipt confirmed. This amount is principal.",
+      "rejected": "This notice was not accepted. Submit a new funding notice if you still intend to fund.",
+      "uploadProof": "Upload payment proof",
+      "uploadHint": "PDF or JPEG of the wire confirmation or Bitcoin transfer. Optional txid for Bitcoin.",
+      "uploadSubmit": "Send payment information",
+      "uploadedFile": "Uploaded",
+      "beneficiaryAddress": "Beneficiary address",
+      "routing": "Local routing"
     }
   },
   "admin": {
@@ -701,7 +842,9 @@
       "clientPortal": "Client Portal",
       "logout": "Sign Out",
       "capitalAccess": "Capital Access",
-      "settings": "Settings"
+      "settings": "Settings",
+      "wealthMandates": "Wealth Mandates",
+      "users": "Administrators"
     },
     "stats": {
       "sovereignEntities": "Sovereign Entities",
@@ -826,6 +969,54 @@
     },
     "settings": {
       "title": "Account Settings"
+    },
+    "wealthMandates": {
+      "title": "Wealth Mandates",
+      "subtitle": "Confirm funding, set mandate yield, and complete interest payouts. Not a trading blotter.",
+      "empty": "No private-client mandates yet. Approve a membership to open one.",
+      "pause": "Pause yield",
+      "resume": "Resume yield",
+      "setYield": "Annual yield %",
+      "saveYield": "Save yield",
+      "adjustment": "Principal adjustment (USD)",
+      "applyAdjustment": "Post adjustment",
+      "pending": "Pending operations",
+      "noPending": "Nothing waiting on operations.",
+      "confirm": "Confirm received",
+      "markPaid": "Mark paid",
+      "actionError": "Unable to update this mandate.",
+      "approve": "Approve",
+      "waitingProof": "Waiting for the client to upload payment proof.",
+      "openProof": "Open attachment",
+      "enterWire": "Enter the wire coordinates for this notice. They appear only on the client portal.",
+      "enterBtc": "Enter the Bitcoin receive address for this notice. It appears only on the client portal.",
+      "quoteReference": "Client should quote this reference",
+      "savedInstructions": "Coordinates issued to the client portal"
+    },
+    "applicationTrack": {
+      "vault": "Vault membership",
+      "wealth": "Wealth mandate"
+    },
+    "users": {
+      "title": "Administrators",
+      "subtitle": "Only the account holder can create staff who share this operations portal.",
+      "name": "Name",
+      "email": "Email",
+      "password": "Password",
+      "passwordHint": "At least 8 characters.",
+      "role": "Role",
+      "holder": "Account holder",
+      "staff": "Staff",
+      "created": "Created",
+      "lastSignIn": "Last sign-in",
+      "create": "Create administrator",
+      "submit": "Create account",
+      "creating": "Creating...",
+      "success": "Administrator created.",
+      "empty": "No administrators yet.",
+      "forbidden": "Only the account holder can manage administrators.",
+      "loadError": "Unable to load administrators.",
+      "createError": "Unable to create administrator."
     }
   },
   "capitalAccess": {

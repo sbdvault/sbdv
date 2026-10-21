@@ -10,6 +10,8 @@ import {
   LayoutDashboard,
   Wallet,
   TrendingUp,
+  Landmark,
+  ArrowDownToLine,
   FileText,
   MessageSquare,
   Settings,
@@ -20,6 +22,8 @@ import { useTranslations } from "@/hooks/useTranslations";
 
 const navItems = [
   { key: "overview", href: "/portal", icon: LayoutDashboard },
+  { key: "mandate", href: "/portal/mandate", icon: Landmark },
+  { key: "funding", href: "/portal/funding", icon: ArrowDownToLine },
   { key: "holdings", href: "/portal/holdings", icon: Wallet },
   { key: "performance", href: "/portal/performance", icon: TrendingUp },
   { key: "documents", href: "/portal/documents", icon: FileText },

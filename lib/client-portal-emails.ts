@@ -17,6 +17,47 @@ function emailLayout(title: string, body: string) {
 </html>`;
 }
 
+/** Sent when a private client self-registers from Wealth & Investment. */
+export async function sendWealthSelfRegisterEmails(params: {
+  email: string;
+  name: string | null;
+  country?: string;
+  phone?: string;
+}) {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
+  await sendEmail({
+    to: params.email,
+    subject: "Your SBDV wealth portal account is ready",
+    html: emailLayout(
+      "Welcome to your wealth mandate",
+      `
+      <p>Dear ${params.name || "Client"},</p>
+      <p>Your private-client wealth account is active. Sign in with the email and password you just created, then review the mandate and choose how much to fund by wire or Bitcoin.</p>
+      <p>Principal is credited only after SBDV operations confirm receipt. Stated mandate yield is not a bank deposit.</p>
+      <p><a href="${siteUrl}/en/login" style="display: inline-block; padding: 12px 24px; background: #D4AF37; color: #1a1a1a; text-decoration: none; font-weight: bold;">Sign in to your portal</a></p>
+      `
+    ),
+    text: `Your SBDV wealth portal account is ready. Sign in at ${siteUrl}/en/login and choose a funding amount in Mandate → Funding.`,
+  });
+
+  const adminEmail = await getAdminEmail();
+  await sendEmail({
+    to: adminEmail,
+    subject: `[SBDV] Wealth portal account — ${params.name || params.email}`,
+    html: emailLayout(
+      "New wealth portal registration",
+      `
+      <p>A private client created a wealth portal account from Wealth &amp; Investment.</p>
+      <p><strong>${params.name || "—"}</strong> &lt;${params.email}&gt;</p>
+      <p>Country: ${params.country || "—"} · Phone: ${params.phone || "—"}</p>
+      <p>This is informational — the client can sign in immediately. Principal is still credited only after ops confirms a funding notice.</p>
+      `
+    ),
+    text: `Wealth portal account created for ${params.name} <${params.email}> (${params.country || "—"}; ${params.phone || "—"})`,
+  });
+}
+
 /** Sent when admin approves membership and creates a CLIENT portal account. */
 export async function sendClientPortalWelcomeEmail(params: {
   email: string;

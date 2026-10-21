@@ -68,10 +68,10 @@ function replyServicesOverview(): string {
 LBMA-standard gold and silver storage in Zurich and our global vault network — audited, insured, and discreet.
 
 **2. Wealth & Investment**
-Portfolio oversight combining physical bullion with financial assets for private investors and family offices.
+A private-client mandate: fund by bank wire or Bitcoin transfer, SBDV invests the principal, and you monitor live yield in the portal — then withdraw interest or reinvest it. Bitcoin is a funding rail, not a crypto exchange.
 
-**3. Membership**
-Three tiers — **Standard Custody**, **Executive Vault**, and **Sovereign Tier** — with access to the client portal, documents, and relationship management.
+**3. Vault membership**
+Custody tiers — **Standard Custody**, **Executive Vault**, and **Sovereign Tier**. Apply at **/membership**. Investing is a separate door: **/wealth-investment**.
 
 **4. Capital Access Program**
 Institutional USD capital for qualified enterprises worldwide ($500K–$100M) from sovereign wealth pools, with Swiss KYC and structured onboarding.
@@ -82,10 +82,15 @@ New here? Ask *"how do I get started?"* and I'll point you to the right path.`;
 function replyGuestGetStarted(): string {
   return `Welcome — here's how to get started with SBDV:
 
-**For individuals & families (vault custody)**
-1. Review **Membership** tiers at /en/membership
-2. Submit a discreet application — our team responds within a few business days
+**For vault custody (bullion & valuables)**
+1. Review **Vault membership** at /en/membership
+2. Submit a discreet custody application — our team responds within a few business days
 3. Once approved, log in at /en/login to access your **Client Portal**
+
+**For a wealth mandate (invest cash or Bitcoin)**
+1. Read how yield works at /en/wealth-investment
+2. Create a portal account on that page
+3. Sign in, review the mandate, then choose amount and wire or Bitcoin in Funding. After ops approve, follow portal instructions, upload payment proof, and wait for confirmed receipt before principal accrues. First 1,000 funded clients receive a 10% founding bonus on the first confirmed deposit.
 
 **For enterprises (capital borrowing)**
 1. Visit **Capital Access** at /en/capital-access
@@ -93,7 +98,8 @@ function replyGuestGetStarted(): string {
 3. Browse sovereign pools and submit a facility request
 
 **Not sure which fits?**
-• Storing gold or managing personal wealth → **Membership**
+• Storing gold in the vault → **Membership**
+• Investing cash or Bitcoin under a stated yield → **Wealth & Investment**
 • Business needing institutional capital → **Capital Access**
 
 What would you like to explore first?`;
@@ -314,8 +320,12 @@ function replyOffTopic(message: string, ctx: ChatUserContext): string | null {
     return "That's a bit outside my lane — I'm focused on SBDV vault custody, wealth services, and capital access. Is there anything along those lines I can help with?";
   }
 
-  if (/\b(bitcoin|crypto|ethereum|nft)\b/.test(q)) {
-    return "SBDV specializes in **physical bullion custody** (gold, silver, LBMA standard) rather than digital assets. I can explain our vault services, membership tiers, or how we safeguard precious metals — would any of that help?";
+  if (/\b(ethereum|nft|altcoin|defi|crypto)\b/.test(q) && !/\b(bitcoin|btc)\b/.test(q)) {
+    return "SBDV does not trade or custody Ethereum, NFTs, or other digital tokens. We hold **physical bullion** and, for private clients, accept **Bitcoin only as a funding rail** into a wealth mandate — not as an exchange. I can explain **membership**, the **wealth mandate**, or **vault custody**.";
+  }
+
+  if (/\b(bitcoin|btc)\b/.test(q)) {
+    return "Private clients may **fund a wealth mandate with Bitcoin** (or a bank wire). You send BTC to SBDV’s receive address, operations confirm the transfer, and USD principal is credited. We do **not** operate a crypto exchange or hold your private keys. After funding, you can watch live mandate yield and withdraw or reinvest interest in the **client portal**. Would you like the membership path or how funding works?";
   }
 
   if (/\b(stock|equity|bond|etf|forex|trading)\b/.test(q) && !q.includes("portfolio")) {
@@ -516,8 +526,12 @@ function ruleBasedReply(message: string, messages: ChatMessage[], ctx: ChatUserC
     return "**Capital Access Program** — qualified enterprises **worldwide** can apply for institutional sovereign capital.\n\n• Request: $500K – $100M, USD\n• Terms: 1–10 years, monthly or yearly repayment\n• **10% security deposit** after document approval\n• Swiss KYC / UBO look-through (not a bank deposit)\n• Apply at **/capital-access/register**\n\nFlow: documents + UBOs → approval + escrow → deposit + origin of funds → KYC → disbursement.";
   }
 
+  if (q.includes("wealth") || q.includes("invest") || q.includes("mandate") || q.includes("yield")) {
+    return "Private clients who want to **invest** (wire or Bitcoin) use **Wealth & Investment** — not vault membership.\n\n• Read how principal and interest work at **/wealth-investment**\n• Create a portal account on that page with your own password\n• Sign in, submit a funding notice, then log in again after ops approve to follow portal wire or Bitcoin instructions\n• Upload payment proof; ops confirms receipt; yield accrues on principal\n• The first 1,000 funded clients receive a **10% founding bonus** on the first confirmed deposit\n\nYou may withdraw accrued interest or reinvest it. This is not a bank deposit.";
+  }
+
   if (q.includes("membership") || (q.includes("apply") && !q.includes("application")) || q.includes("join")) {
-    return "SBDV membership opens access to Swiss vault custody and the client portal.\n\n• **Standard Custody** — secure bullion storage\n• **Executive Vault** — enhanced services\n• **Sovereign Tier** — UHNW / institutional\n\nApply at **/membership**. Our team reviews applications discreetly.";
+    return "**Vault membership** is for Swiss bullion custody — allocated storage, viewing, and relationship coverage.\n\n• **Standard Custody** — secure bullion storage\n• **Executive Vault** — enhanced services\n• **Sovereign Tier** — UHNW / institutional\n\nApply at **/membership**. To **invest cash or Bitcoin** under a stated yield, go to **/wealth-investment** instead.";
   }
 
   if (q.includes("vault") || q.includes("bullion") || q.includes("gold") || q.includes("custody")) {
@@ -525,7 +539,7 @@ function ruleBasedReply(message: string, messages: ChatMessage[], ctx: ChatUserC
   }
 
   if (q.includes("login") || q.includes("sign in") || q.includes("account")) {
-    return "Use **Client Login** (/login) with your registered email.\n\n• **Clients** → Portfolio portal\n• **Capital Access partners** → Enterprise portal\n• **Admins** → Institutional platform\n\nNew? Apply via **Membership** or **Capital Access** first.";
+    return "Use **Client Login** (/login) with your registered email.\n\n• **Clients** → Portfolio portal\n• **Capital Access partners** → Enterprise portal\n• **Admins** → Institutional platform\n\nNew? Register on **Wealth & Investment**, request **Vault membership**, or create a **Capital Access** partner account.";
   }
 
   if (ctx.role === "ADMIN" && (q.includes("pending") || q.includes("queue") || q.includes("admin"))) {

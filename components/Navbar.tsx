@@ -22,6 +22,7 @@ export default function Navbar() {
   const [privateOpen, setPrivateOpen] = useState(false);
   const [mobilePrivateOpen, setMobilePrivateOpen] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const { t, locale } = useTranslations();
   const params = useParams();
   const pathname = usePathname();
@@ -55,8 +56,22 @@ export default function Navbar() {
     return () => {
       document.removeEventListener("keydown", onKey);
       document.removeEventListener("mousedown", onClick);
+      if (closeTimer.current) clearTimeout(closeTimer.current);
     };
   }, []);
+
+  const openPrivate = () => {
+    if (closeTimer.current) {
+      clearTimeout(closeTimer.current);
+      closeTimer.current = null;
+    }
+    setPrivateOpen(true);
+  };
+
+  const closePrivateSoon = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setPrivateOpen(false), 150);
+  };
 
   const getLocalizedHref = (href: string) => {
     const currentLocale = (params?.locale as string) || locale || "en";
@@ -101,10 +116,20 @@ export default function Navbar() {
               <span className={underline("/about")} />
             </Link>
 
-            <div className="relative" ref={panelRef}>
+            <div
+              className="relative"
+              ref={panelRef}
+              onMouseEnter={openPrivate}
+              onMouseLeave={closePrivateSoon}
+              onBlur={(event) => {
+                if (!panelRef.current?.contains(event.relatedTarget as Node)) {
+                  closePrivateSoon();
+                }
+              }}
+            >
               <button
                 type="button"
-                onClick={() => setPrivateOpen((open) => !open)}
+                onFocus={openPrivate}
                 className={`relative group font-body text-sm tracking-wide ${
                   privateOpen || privateClientLinks.some((link) => isCurrent(link.href))
                     ? "text-charcoal"
@@ -125,29 +150,31 @@ export default function Navbar() {
               {privateOpen && (
                 <div
                   id="private-clients-panel"
-                  className="absolute left-1/2 top-full mt-5 w-[22rem] -translate-x-1/2 border border-charcoal/10 bg-white shadow-sm"
+                  className="absolute left-1/2 top-full w-[22rem] -translate-x-1/2 pt-5"
                 >
-                  <p className="px-5 pt-4 pb-2 font-body text-[11px] uppercase tracking-[0.18em] text-charcoal/45">
-                    {t("nav.privateClients.label")}
-                  </p>
-                  <ul>
-                    {privateClientLinks.map((link) => (
-                      <li key={link.key} className="border-t border-charcoal/10">
-                        <Link
-                          href={getLocalizedHref(link.href)}
-                          onClick={() => setPrivateOpen(false)}
-                          className="block px-5 py-3.5 hover:bg-off-white"
-                        >
-                          <span className="block font-heading text-sm text-charcoal">
-                            {t(`nav.${link.key}`)}
-                          </span>
-                          <span className="mt-0.5 block font-body text-xs text-charcoal/55">
-                            {t(link.descKey)}
-                          </span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="border border-charcoal/10 bg-white shadow-sm">
+                    <p className="px-5 pt-4 pb-2 font-body text-[11px] uppercase tracking-[0.18em] text-charcoal/45">
+                      {t("nav.privateClients.label")}
+                    </p>
+                    <ul>
+                      {privateClientLinks.map((link) => (
+                        <li key={link.key} className="border-t border-charcoal/10">
+                          <Link
+                            href={getLocalizedHref(link.href)}
+                            onClick={() => setPrivateOpen(false)}
+                            className="block px-5 py-3.5 hover:bg-off-white"
+                          >
+                            <span className="block font-heading text-sm text-charcoal">
+                              {t(`nav.${link.key}`)}
+                            </span>
+                            <span className="mt-0.5 block font-body text-xs text-charcoal/55">
+                              {t(link.descKey)}
+                            </span>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               )}
             </div>

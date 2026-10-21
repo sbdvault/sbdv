@@ -9,6 +9,11 @@ import { Lock, AlertCircle, CheckCircle2 } from "lucide-react";
 import { useTranslations } from "@/hooks/useTranslations";
 import Logo from "@/components/Logo";
 import { hardSignOut } from "@/lib/hard-sign-out";
+import {
+  isAdminHostName,
+  resolveAdminOrigin,
+  resolvePublicOrigin,
+} from "@/lib/admin-host";
 import { pathForRole } from "@/lib/role-paths";
 
 function isMfaRequired(result: { error?: string | null; code?: string } | undefined) {
@@ -60,10 +65,14 @@ export default function LoginPage() {
     email: string;
     role: string;
   } | null>(null);
+  const [adminPortal, setAdminPortal] = useState(false);
 
   const currentLocale = (params?.locale as string) || locale || "en";
 
   const getLocalizedHref = (href: string) => `/${currentLocale}${href}`;
+  const publicHome = `${resolvePublicOrigin()}/${currentLocale}`;
+  const homeHref = adminPortal ? publicHome : getLocalizedHref("/");
+  const signOutHref = adminPortal ? "/login" : getLocalizedHref("/");
 
   useEffect(() => {
     let cancelled = false;
@@ -97,9 +106,16 @@ export default function LoginPage() {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    const err = new URLSearchParams(window.location.search).get("error");
+    const params = new URLSearchParams(window.location.search);
+    const onAdminHost = isAdminHostName(window.location.hostname);
+    setAdminPortal(onAdminHost || params.get("portal") === "admin");
+    const prefill = params.get("email");
+    if (prefill) setEmail(prefill);
+    const err = params.get("error");
     if (err === "session") {
       setError("Your previous session was cleared. Please sign in again.");
+    } else if (err === "forbidden") {
+      setError(t("login.adminOnly"));
     }
   }, [t]);
 
@@ -196,6 +212,24 @@ export default function LoginPage() {
       sessionUser?.role &&
       (!sessionUser.email || sessionUser.email === signedInEmail)
     ) {
+      if (adminPortal || isAdminHostName(window.location.hostname)) {
+        if (sessionUser.role !== "ADMIN") {
+          await clearSessions();
+          setActiveSession(null);
+          setLoading(false);
+          setError(t("login.adminOnly"));
+          return;
+        }
+        window.location.assign("/");
+        return;
+      }
+      if (sessionUser.role === "ADMIN") {
+        await clearSessions();
+        window.location.assign(
+          `${resolveAdminOrigin()}/login?email=${encodeURIComponent(signedInEmail)}`
+        );
+        return;
+      }
       window.location.assign(pathForRole(currentLocale, sessionUser.role));
       return;
     }
@@ -214,7 +248,7 @@ export default function LoginPage() {
         className="w-full max-w-md"
       >
         <div className="text-center mb-8">
-          <Link href={getLocalizedHref("/")} className="inline-block mb-6">
+          <Link href={homeHref} className="inline-block mb-6">
             <Logo height={120} className="mx-auto" />
           </Link>
           <div className="flex items-center justify-center gap-2 mb-2">
@@ -224,11 +258,19 @@ export default function LoginPage() {
               <Lock className="w-5 h-5 text-gold" />
             )}
             <h1 className="text-3xl font-heading font-semibold text-charcoal">
-              {activeSession ? t("login.alreadySignedIn") : t("login.title")}
+              {activeSession
+                ? t("login.alreadySignedIn")
+                : adminPortal
+                  ? t("login.adminTitle")
+                  : t("login.title")}
             </h1>
           </div>
           <p className="text-charcoal/70 font-body">
-            {activeSession ? t("login.alreadySignedInSubtitle") : t("login.subtitle")}
+            {activeSession
+              ? t("login.alreadySignedInSubtitle")
+              : adminPortal
+                ? t("login.adminSubtitle")
+                : t("login.subtitle")}
           </p>
         </div>
 
@@ -252,15 +294,25 @@ export default function LoginPage() {
                   {roleLabel(activeSession.role, t)}
                 </p>
               </div>
-              <Link
-                href={pathForRole(currentLocale, activeSession.role)}
-                className="gold-shimmer block w-full text-center px-8 py-3 bg-gold text-charcoal font-body font-medium rounded-sm hover:bg-gold/90 transition-all"
-              >
-                {t("login.continueToPortal")}
-              </Link>
+              {adminPortal && activeSession.role !== "ADMIN" ? (
+                <p className="font-body text-sm text-red-800">{t("login.adminOnly")}</p>
+              ) : (
+                <Link
+                  href={
+                    adminPortal || activeSession.role === "ADMIN"
+                      ? `${resolveAdminOrigin()}/`
+                      : pathForRole(currentLocale, activeSession.role)
+                  }
+                  className="gold-shimmer block w-full text-center px-8 py-3 bg-gold text-charcoal font-body font-medium rounded-sm hover:bg-gold/90 transition-all"
+                >
+                  {adminPortal || activeSession.role === "ADMIN"
+                    ? t("login.continueToAdmin")
+                    : t("login.continueToPortal")}
+                </Link>
+              )}
               <button
                 type="button"
-                onClick={() => hardSignOut(getLocalizedHref("/"))}
+                onClick={() => hardSignOut(signOutHref)}
                 className="w-full px-8 py-3 border border-charcoal/20 text-charcoal font-body text-sm rounded-sm hover:border-gold transition-colors"
               >
                 {t("login.signOut")}
@@ -358,15 +410,24 @@ export default function LoginPage() {
                 </button>
               </form>
 
-              <p className="text-center text-sm text-charcoal/60 font-body mt-6">
-                {t("login.noAccount")}{" "}
-                <Link
-                  href={getLocalizedHref("/membership")}
-                  className="text-gold hover:underline"
-                >
-                  {t("login.applyMembership")}
-                </Link>
-              </p>
+              {!adminPortal && (
+                <p className="text-center text-sm text-charcoal/60 font-body mt-6">
+                  {t("login.noAccount")}{" "}
+                  <Link
+                    href={getLocalizedHref("/wealth-investment#register")}
+                    className="text-gold hover:underline"
+                  >
+                    {t("login.registerWealth")}
+                  </Link>
+                  {" · "}
+                  <Link
+                    href={getLocalizedHref("/membership")}
+                    className="text-gold hover:underline"
+                  >
+                    {t("login.applyMembership")}
+                  </Link>
+                </p>
+              )}
             </>
           )}
         </div>

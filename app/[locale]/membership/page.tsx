@@ -12,8 +12,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   await params;
   return {
-    title: "Membership | Swiss Bullion Depository Vault",
-    description: "Exclusive membership tiers for discerning clients. Standard Custody, Executive Vault, and Sovereign Tier options available.",
+    title: "Vault Membership | Swiss Bullion Depository Vault",
+    description:
+      "Request Swiss vault custody membership — allocated bullion storage, viewing, and relationship coverage. Separate from the Wealth & Investment mandate.",
   };
 }
 

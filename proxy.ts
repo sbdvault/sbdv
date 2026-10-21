@@ -1,6 +1,15 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { readAuthToken, redirectToAppPath } from "@/lib/request-origin";
+import { readAuthToken, redirectToAppPath, publicOrigin } from "@/lib/request-origin";
+import {
+  ADMIN_DEFAULT_LOCALE,
+  adminHostRewritePath,
+  deriveAdminOrigin,
+  isAdminLoginPath,
+  isAdminRequest,
+  isPublicAdminPath,
+  publicAdminPathToHostPath,
+} from "@/lib/admin-host";
 
 export const locales = [
   "en",
@@ -52,26 +61,71 @@ function getLocale(request: NextRequest): Locale {
   return defaultLocale;
 }
 
+function rewritePath(request: NextRequest, pathname: string): NextResponse {
+  const url = request.nextUrl.clone();
+  url.pathname = pathname;
+  return NextResponse.rewrite(url);
+}
+
+async function handleAdminHost(request: NextRequest): Promise<NextResponse> {
+  const pathname = request.nextUrl.pathname;
+
+  if (
+    pathname.startsWith("/_next") ||
+    pathname.startsWith("/api") ||
+    pathname.startsWith("/static") ||
+    pathname.includes(".")
+  ) {
+    return NextResponse.next();
+  }
+
+  if (isAdminLoginPath(pathname)) {
+    const internal = adminHostRewritePath(pathname, ADMIN_DEFAULT_LOCALE);
+    if (internal !== pathname) return rewritePath(request, internal);
+    return NextResponse.next();
+  }
+
+  const token = await readAuthToken(request);
+
+  if (!token) {
+    return redirectToAppPath(request, "/login");
+  }
+
+  if (token.role !== "ADMIN") {
+    return redirectToAppPath(request, "/login", "?error=forbidden");
+  }
+
+  if (adminAuthPath.test(pathname)) {
+    return NextResponse.next();
+  }
+
+  return rewritePath(
+    request,
+    adminHostRewritePath(pathname, ADMIN_DEFAULT_LOCALE)
+  );
+}
+
 export async function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
+  if (isAdminRequest(request)) {
+    return handleAdminHost(request);
+  }
+
+  if (isPublicAdminPath(pathname)) {
+    const dest = `${deriveAdminOrigin(publicOrigin(request))}${publicAdminPathToHostPath(pathname)}${request.nextUrl.search}`;
+    return NextResponse.redirect(dest, 307);
+  }
+
   const isPortal = portalAuthPath.test(pathname);
-  const isAdmin = adminAuthPath.test(pathname);
   const isCapitalPortal = capitalAuthPath.test(pathname);
 
-  if (isPortal || isAdmin || isCapitalPortal) {
-    // Behind Layero/Amvera TLS, Next often sees http://0.0.0.0 internally while
-    // Auth.js still sets `__Secure-authjs.session-token`. Try both cookie names.
+  if (isPortal || isCapitalPortal) {
     const token = await readAuthToken(request);
-
     const locale = pathname.split("/")[1] || defaultLocale;
 
     if (!token) {
       return redirectToAppPath(request, `/${locale}/login`);
-    }
-
-    if (isAdmin && token.role !== "ADMIN") {
-      return redirectToAppPath(request, `/${locale}/portal`);
     }
 
     if (isCapitalPortal && token.role !== "BORROWER" && token.role !== "ADMIN") {

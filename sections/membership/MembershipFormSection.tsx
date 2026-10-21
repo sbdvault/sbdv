@@ -4,8 +4,14 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Send, CheckCircle2, AlertCircle } from "lucide-react";
 import { useTranslations } from "@/hooks/useTranslations";
+import CountrySelect from "@/components/CountrySelect";
+import { isSanctionedCountry } from "@/lib/countries";
 
-export default function MembershipFormSection() {
+export default function MembershipFormSection({
+  sectionId,
+}: {
+  sectionId?: string;
+}) {
   const { t } = useTranslations();
   const [formData, setFormData] = useState({
     name: "",
@@ -24,13 +30,19 @@ export default function MembershipFormSection() {
     setSubmitting(true);
     setError("");
 
+    if (isSanctionedCountry(formData.country)) {
+      setError(t("capitalAccess.request.sanctionedCountry"));
+      setSubmitting(false);
+      return;
+    }
+
     try {
       const response = await fetch("/api/sendMembership", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, track: "VAULT" }),
       });
 
       if (!response.ok) {
@@ -64,7 +76,7 @@ export default function MembershipFormSection() {
   };
 
   return (
-    <section className="py-20 md:py-32 bg-white">
+    <section id={sectionId} className="py-20 md:py-32 bg-white">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -176,20 +188,18 @@ export default function MembershipFormSection() {
 
             <div>
               <label
-                htmlFor="country"
+                htmlFor="vault-country"
                 className="block text-sm font-body font-medium text-charcoal mb-2"
               >
                 {t("membership.formLabels.country")}
               </label>
-              <input
-                type="text"
-                id="country"
+              <CountrySelect
+                id="vault-country"
                 name="country"
-                required
                 value={formData.country}
-                onChange={handleChange}
+                onChange={(country) => setFormData({ ...formData, country })}
                 disabled={submitting}
-                className="w-full px-4 py-3 border border-charcoal/20 rounded-sm focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold font-body text-charcoal bg-white disabled:opacity-50 disabled:cursor-not-allowed"
+                required
                 placeholder={t("membership.formPlaceholders.country")}
               />
             </div>
@@ -246,17 +256,17 @@ export default function MembershipFormSection() {
               className="gold-shimmer w-full px-8 py-4 bg-gold text-charcoal font-body font-medium rounded-sm hover:bg-gold/90 transition-all duration-300 hover:shadow-lg flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
               aria-label="Submit membership application form"
             >
-                  {submitting ? (
-                    <>
-                      <div className="w-5 h-5 border-2 border-charcoal border-t-transparent rounded-full animate-spin"></div>
-                      <span>{t("common.submitting")}</span>
-                    </>
-                  ) : (
-                    <>
-                      {t("common.submit")}
-                      <Send className="w-5 h-5" />
-                    </>
-                  )}
+              {submitting ? (
+                <>
+                  <div className="w-5 h-5 border-2 border-charcoal border-t-transparent rounded-full animate-spin"></div>
+                  <span>{t("common.submitting")}</span>
+                </>
+              ) : (
+                <>
+                  {t("common.submit")}
+                  <Send className="w-5 h-5" />
+                </>
+              )}
             </motion.button>
           </motion.form>
         )}
@@ -264,4 +274,3 @@ export default function MembershipFormSection() {
     </section>
   );
 }
-

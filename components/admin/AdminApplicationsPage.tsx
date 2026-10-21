@@ -11,6 +11,7 @@ interface Application {
   country: string;
   assetRange: string;
   message: string;
+  track?: string;
   status: string;
   createdAt: string;
 }
@@ -65,6 +66,11 @@ export default function AdminApplicationsPage() {
               <div className="flex justify-between items-start gap-4">
                 <div>
                   <p className="font-heading font-semibold text-charcoal">{app.name}</p>
+                  <p className="font-body text-xs uppercase tracking-wide text-gold mt-1">
+                    {app.track === "WEALTH"
+                      ? t("admin.applicationTrack.wealth")
+                      : t("admin.applicationTrack.vault")}
+                  </p>
                   <p className="font-body text-sm text-charcoal/70">
                     {app.email} · {app.country}
                   </p>

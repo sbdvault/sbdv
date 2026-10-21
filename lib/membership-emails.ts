@@ -32,7 +32,10 @@ export async function sendMembershipApplicationEmails(params: {
   country: string;
   assetRange: string;
   message: string;
+  track?: string;
 }) {
+  const track = params.track === "WEALTH" ? "WEALTH" : "VAULT";
+  const trackLabel = track === "WEALTH" ? "Wealth mandate" : "Vault membership";
   const adminEmail = await getAdminEmail();
   const safe = {
     name: escapeHtml(params.name),
@@ -46,12 +49,13 @@ export async function sendMembershipApplicationEmails(params: {
   await sendEmail({
     to: adminEmail,
     replyTo: params.email,
-    subject: `[SBDV Membership] ${params.name}`,
+    subject: `[SBDV ${trackLabel}] ${params.name}`,
     html: emailLayout(
-      "New membership application",
+      `New ${trackLabel.toLowerCase()} application`,
       `
-      <p>A membership application requires review.</p>
+      <p>A ${trackLabel.toLowerCase()} application requires review.</p>
       <table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px;">
+        <tr><td style="padding: 8px 0; color: #666; width: 140px;">Track</td><td style="padding: 8px 0;"><strong>${trackLabel}</strong></td></tr>
         <tr><td style="padding: 8px 0; color: #666; width: 140px;">Name</td><td style="padding: 8px 0;"><strong>${safe.name}</strong></td></tr>
         <tr><td style="padding: 8px 0; color: #666;">Email</td><td style="padding: 8px 0;"><a href="mailto:${safe.email}" style="color: #D4AF37;">${safe.email}</a></td></tr>
         <tr><td style="padding: 8px 0; color: #666;">Phone</td><td style="padding: 8px 0;">${safe.phone}</td></tr>
@@ -64,20 +68,30 @@ export async function sendMembershipApplicationEmails(params: {
       </div>
       `
     ),
-    text: `Membership application from ${params.name} (${params.email}).`,
+    text: `${trackLabel} application from ${params.name} (${params.email}).`,
   });
 
   await sendEmail({
     to: params.email,
-    subject: "SBDV Membership Application Received",
+    subject:
+      track === "WEALTH"
+        ? "SBDV Wealth Mandate Application Received"
+        : "SBDV Vault Membership Application Received",
     html: emailLayout(
       "We received your application",
       `
       <p>Dear ${safe.name},</p>
-      <p>Thank you for applying to Swiss Bullion Depository Vault. Our membership desk will review your application and contact you shortly.</p>
+      <p>${
+        track === "WEALTH"
+          ? "Thank you for applying to open a private-client wealth mandate. Our team will review your request under Swiss KYC standards and contact you shortly."
+          : "Thank you for applying for vault membership at Swiss Bullion Depository Vault. Our membership desk will review your custody request and contact you shortly."
+      }</p>
       `
     ),
-    text: "Thank you for applying to SBDV. Our membership desk will contact you shortly.",
+    text:
+      track === "WEALTH"
+        ? "Thank you for applying to open an SBDV wealth mandate. Our team will contact you shortly."
+        : "Thank you for applying for SBDV vault membership. Our membership desk will contact you shortly.",
   });
 }
 

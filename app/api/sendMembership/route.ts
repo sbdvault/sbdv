@@ -1,14 +1,23 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { sendMembershipApplicationEmails } from "@/lib/membership-emails";
+import { isSanctionedCountry } from "@/lib/countries";
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     const { name, email, phone, country, assetRange, message } = body;
+    const track = body.track === "WEALTH" ? "WEALTH" : "VAULT";
 
     if (!name || !email || !phone || !country || !assetRange || !message) {
       return NextResponse.json({ error: "All fields are required" }, { status: 400 });
+    }
+
+    if (isSanctionedCountry(country)) {
+      return NextResponse.json(
+        { error: "SBDV cannot onboard applicants in comprehensively sanctioned jurisdictions." },
+        { status: 400 }
+      );
     }
 
     try {
@@ -26,6 +35,7 @@ export async function POST(request: NextRequest) {
       country,
       assetRange,
       message,
+      track,
     }).then(() => true).catch((err) => {
       console.error("Membership email failed:", err);
       return false;
@@ -37,19 +47,20 @@ export async function POST(request: NextRequest) {
     ].filter((config) => config.token && config.chatId);
 
     if (telegramConfigs.length > 0) {
-      const telegramMessage = `New SBDV Membership Application
+      const telegramMessage = `New SBDV ${track === "WEALTH" ? "Wealth mandate" : "Vault membership"} application
 
 Name: ${name}
 Email: ${email}
 Phone: ${phone}
 Country: ${country}
 Asset Range: ${assetRange}
+Track: ${track}
 
 Message:
 ${message}
 
 ---
-Sent via SBDV Membership Form`;
+Sent via SBDV ${track === "WEALTH" ? "Wealth" : "Membership"} form`;
 
       await Promise.allSettled(
         telegramConfigs.map(async ({ token, chatId }) => {

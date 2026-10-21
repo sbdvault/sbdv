@@ -1,8 +1,13 @@
 import { auth } from "@/auth";
 import { clearAuthCookies } from "@/lib/auth-cookies";
+import {
+  deriveAdminOrigin,
+  isAdminRequest,
+} from "@/lib/admin-host";
 import { pathForRole } from "@/lib/role-paths";
 import {
   jwtEmail,
+  publicOrigin,
   readAllAuthTokens,
   redirectToAppPath,
 } from "@/lib/request-origin";
@@ -76,7 +81,11 @@ export async function GET(request: NextRequest) {
     // Wrong user still in cookies — wipe and force a clean login.
     if (!role) {
       return withClearedCookies(
-        redirectToAppPath(request, `/${locale}/login`, "?error=session")
+        redirectToAppPath(
+          request,
+          isAdminRequest(request) ? "/login" : `/${locale}/login`,
+          "?error=session"
+        )
       );
     }
   } else {
@@ -84,8 +93,23 @@ export async function GET(request: NextRequest) {
       sessionRole ||
       (typeof tokens[0]?.role === "string" ? tokens[0].role : undefined);
     if (!role) {
-      return redirectToAppPath(request, `/${locale}/login`, "?error=session");
+      return redirectToAppPath(
+        request,
+        isAdminRequest(request) ? "/login" : `/${locale}/login`,
+        "?error=session"
+      );
     }
+  }
+
+  if (role === "ADMIN") {
+    if (isAdminRequest(request)) {
+      return redirectToAppPath(request, "/");
+    }
+    const email = expectedEmail || sessionEmail || "";
+    const login = `${deriveAdminOrigin(publicOrigin(request))}/login${
+      email ? `?email=${encodeURIComponent(email)}` : ""
+    }`;
+    return withClearedCookies(NextResponse.redirect(login));
   }
 
   return redirectToAppPath(request, pathForRole(locale, role));

@@ -29,12 +29,22 @@ export const translations = {
 
 export type TranslationKey = keyof typeof en;
 
+function isTranslationValue(value: unknown): value is string | string[] {
+  return typeof value === "string" || Array.isArray(value);
+}
+
 // Helper function to get nested translation
 export function getNestedTranslation(
-  obj: any,
+  obj: unknown,
   path: string
-): string | undefined {
-  return path.split(".").reduce((current, key) => current?.[key], obj);
+): string | string[] | undefined {
+  const value = path.split(".").reduce<unknown>((current, key) => {
+    if (current && typeof current === "object" && key in current) {
+      return (current as Record<string, unknown>)[key];
+    }
+    return undefined;
+  }, obj);
+  return isTranslationValue(value) ? value : undefined;
 }
 
 // Main translation function
@@ -42,9 +52,9 @@ export function t(locale: Locale, key: string): string | string[] {
   const translation = translations[locale] ?? translations.en;
   const value = getNestedTranslation(translation, key);
 
-  if (value === undefined || value === null) {
+  if (value === undefined) {
     const fallback = getNestedTranslation(translations.en, key);
-    if (fallback === undefined || fallback === null) return key;
+    if (fallback === undefined) return key;
     return fallback;
   }
 

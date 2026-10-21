@@ -4,19 +4,24 @@ import { useParams } from "next/navigation";
 import { Locale } from "@/proxy";
 import { t } from "@/lib/i18n";
 
-export function useTranslations() {
+export function useTranslations(forcedLocale?: string) {
   const params = useParams();
-  const locale = (params?.locale as Locale) || "en";
+  const paramLocale = params?.locale;
+  const locale = (forcedLocale ||
+    (Array.isArray(paramLocale) ? paramLocale[0] : paramLocale) ||
+    "en") as Locale;
 
   return {
     locale,
     t: (key: string): string => {
       const result = t(locale, key);
-      return Array.isArray(result) ? result.join(", ") : result;
+      if (typeof result === "string") return result;
+      if (Array.isArray(result)) return result.join(", ");
+      return key;
     },
     tArray: (key: string): string[] => {
       const result = t(locale, key);
-      return Array.isArray(result) ? result : [result];
+      return Array.isArray(result) ? result : [String(result)];
     },
   };
 }

@@ -3,6 +3,7 @@ import { prisma } from "@/lib/prisma";
 import { sendClientPortalWelcomeEmail } from "@/lib/client-portal-emails";
 import { sendMembershipDecisionEmail } from "@/lib/membership-emails";
 import { sendNotifications } from "@/lib/email";
+import { ensureWealthMandate } from "@/lib/wealth-mandate";
 import bcrypt from "bcryptjs";
 import { NextRequest, NextResponse } from "next/server";
 
@@ -157,6 +158,11 @@ export async function POST(
 
     await seedPortfolioForUser(user.id);
 
+    const profile = await prisma.clientProfile.findUnique({
+      where: { userId: user.id },
+    });
+    if (profile) await ensureWealthMandate(profile.id);
+
     await prisma.membershipApplication.update({
       where: { id },
       data: { status: "APPROVED" },
@@ -201,6 +207,8 @@ export async function PUT(
 
   const { id } = await params;
   await seedPortfolioForUser(id);
+  const profile = await prisma.clientProfile.findUnique({ where: { userId: id } });
+  if (profile) await ensureWealthMandate(profile.id);
 
   return NextResponse.json({ success: true });
 }
