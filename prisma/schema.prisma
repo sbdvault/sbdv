@@ -3,7 +3,7 @@ generator client {
   // Layero mis-detects OpenSSL 1.1 and then cannot load libssl.so.1.1.
   // Always generate the OpenSSL 3 engine; lib/prisma.ts pins that binary at runtime.
   engineType    = "binary"
-  binaryTargets = ["native", "debian-openssl-3.0.x"]
+  binaryTargets = ["native", "debian-openssl-3.0.x", "rhel-openssl-3.0.x"]
 }
 
 datasource db {

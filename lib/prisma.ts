@@ -5,9 +5,12 @@ import { PrismaClient } from "@prisma/client";
 /**
  * Layero has neither libssl.so.1.1 nor libssl.so.3. Pin the OpenSSL 3 query
  * engine and load the bundled libraries in prisma/engines before it starts.
+ * Vercel (Amazon Linux) uses the rhel engine and system OpenSSL — do not pin Debian.
  */
 function pinOpenSsl3QueryEngine() {
   if (process.platform !== "linux") return;
+  if (process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME) return;
+  if (process.env.PRISMA_QUERY_ENGINE_BINARY) return;
 
   const libDir = path.join(process.cwd(), "prisma", "engines");
   if (
@@ -17,8 +20,6 @@ function pinOpenSsl3QueryEngine() {
     const current = process.env.LD_LIBRARY_PATH;
     process.env.LD_LIBRARY_PATH = current ? `${libDir}:${current}` : libDir;
   }
-
-  if (process.env.PRISMA_QUERY_ENGINE_BINARY) return;
 
   const engineName = "query-engine-debian-openssl-3.0.x";
   const candidates = [
