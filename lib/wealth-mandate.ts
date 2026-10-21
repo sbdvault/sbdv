@@ -381,7 +381,7 @@ export async function seedDemoWealthMandate(clientProfileId: string) {
   }
 
   const funded = mandate.entries.some(
-    (entry) =>
+    (entry: { type: string; status: string }) =>
       (entry.type === WEALTH_ENTRY.DEPOSIT_WIRE || entry.type === WEALTH_ENTRY.DEPOSIT_BTC) &&
       entry.status === WEALTH_STATUS.CONFIRMED
   );

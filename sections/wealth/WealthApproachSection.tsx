@@ -34,11 +34,8 @@ export default function WealthApproachSection() {
           <h3 className="text-2xl font-heading font-semibold text-charcoal mb-4">
             {t("wealth.feesTitle")}
           </h3>
-          <p className="text-charcoal/70 font-body mb-6">
+          <p className="text-charcoal/70 font-body">
             {t("wealth.feesDescription")}
-          </p>
-          <p className="text-sm text-charcoal/50 font-body italic border-t border-charcoal/10 pt-6">
-            {t("wealth.disclaimer")}
           </p>
         </motion.div>
       </div>

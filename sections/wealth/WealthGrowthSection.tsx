@@ -98,9 +98,6 @@ export default function WealthGrowthSection() {
               </li>
             ))}
           </ul>
-          <p className="font-body text-sm text-charcoal/50 italic text-center mt-8 max-w-3xl mx-auto">
-            {t("wealth.disclaimer")}
-          </p>
         </div>
       </div>
     </section>

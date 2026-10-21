@@ -39,11 +39,35 @@ function pinOpenSsl3QueryEngine() {
 
 pinOpenSsl3QueryEngine();
 
+/**
+ * WealthMandate exists in schema and at runtime. Generated Prisma types on this
+ * machine can lag; Omit+replace avoids intersecting with stale (or current)
+ * overloads that collapse arguments to `never`.
+ */
+type PrismaDelegate = {
+  count: (args?: any) => Promise<number>;
+  findUnique: (args?: any) => Promise<any>;
+  findFirst: (args?: any) => Promise<any>;
+  findMany: (args?: any) => Promise<any[]>;
+  create: (args?: any) => Promise<any>;
+  update: (args?: any) => Promise<any>;
+  delete: (args?: any) => Promise<any>;
+};
+
+export type AppPrisma = Omit<
+  PrismaClient,
+  "wealthMandate" | "wealthLedgerEntry" | "$transaction"
+> & {
+  wealthMandate: PrismaDelegate;
+  wealthLedgerEntry: PrismaDelegate;
+  $transaction: (...args: any[]) => Promise<any>;
+};
+
 /** Bump when Prisma schema relations/fields change so the dev singleton is not reused. */
 const PRISMA_SCHEMA_STAMP = "wealth-mandate-v3";
 
 const globalForPrisma = globalThis as unknown as {
-  prisma: PrismaClient | undefined;
+  prisma: AppPrisma | undefined;
   prismaStamp?: string;
 };
 
@@ -53,22 +77,23 @@ function createPrismaClient() {
   });
 }
 
-function hasWealthMandate(client: PrismaClient | undefined): client is PrismaClient {
+function hasWealthMandate(client: PrismaClient | AppPrisma | undefined): boolean {
   return (
     typeof (client as { wealthMandate?: { findUnique?: unknown } } | undefined)
       ?.wealthMandate?.findUnique === "function"
   );
 }
 
-function getPrismaClient(): PrismaClient {
+function getPrismaClient(): AppPrisma {
   if (
     globalForPrisma.prismaStamp === PRISMA_SCHEMA_STAMP &&
-    hasWealthMandate(globalForPrisma.prisma)
+    hasWealthMandate(globalForPrisma.prisma) &&
+    globalForPrisma.prisma
   ) {
     return globalForPrisma.prisma;
   }
 
-  const client = createPrismaClient();
+  const client = createPrismaClient() as AppPrisma;
   if (!hasWealthMandate(client)) {
     throw new Error(
       "Prisma Client is missing WealthMandate. Stop the Next.js dev server, run `npx prisma generate`, then start it again.",
