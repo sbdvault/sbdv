@@ -42,24 +42,66 @@ pinOpenSsl3QueryEngine();
 /**
  * WealthMandate exists in schema and at runtime. Generated Prisma types on this
  * machine can lag; Omit+replace avoids intersecting with stale (or current)
- * overloads that collapse arguments to `never`.
+ * overloads that collapse arguments to `never`. Return types must not be `any`
+ * or array callbacks become implicit-any under `strict`.
  */
-type PrismaDelegate = {
-  count: (args?: any) => Promise<number>;
-  findUnique: (args?: any) => Promise<any>;
-  findFirst: (args?: any) => Promise<any>;
-  findMany: (args?: any) => Promise<any[]>;
-  create: (args?: any) => Promise<any>;
-  update: (args?: any) => Promise<any>;
-  delete: (args?: any) => Promise<any>;
+export type WealthLedgerEntryRecord = {
+  id: string;
+  mandateId: string;
+  type: string;
+  status: string;
+  amountUsd: number;
+  btcAmount: number | null;
+  btcTxid: string | null;
+  usdPerBtc: number | null;
+  clientNote: string | null;
+  adminNote: string | null;
+  payoutMethod: string | null;
+  payoutBankName: string | null;
+  payoutIban: string | null;
+  payoutSwift: string | null;
+  payoutAccountName: string | null;
+  payoutBtcAddress: string | null;
+  paymentReference: string | null;
+  confirmedById: string | null;
+  confirmedAt: Date | null;
+  createdAt: Date;
+  updatedAt: Date;
+};
+
+export type WealthMandateRecord = {
+  id: string;
+  clientProfileId: string;
+  annualYieldPct: number;
+  status: string;
+  lastAccruedAt: Date;
+  reportingCurrency: string;
+  createdAt: Date;
+  updatedAt: Date;
+  entries: WealthLedgerEntryRecord[];
+  clientProfile: {
+    id: string;
+    userId: string;
+    user: { id: string; email: string; name: string | null };
+  };
+};
+
+type PrismaDelegate<T> = {
+  count: (args?: object) => Promise<number>;
+  findUnique: (args?: object) => Promise<T | null>;
+  findFirst: (args?: object) => Promise<T | null>;
+  findMany: (args?: object) => Promise<T[]>;
+  create: (args?: object) => Promise<T>;
+  update: (args?: object) => Promise<T>;
+  delete: (args?: object) => Promise<T>;
 };
 
 export type AppPrisma = Omit<
   PrismaClient,
   "wealthMandate" | "wealthLedgerEntry" | "$transaction"
 > & {
-  wealthMandate: PrismaDelegate;
-  wealthLedgerEntry: PrismaDelegate;
+  wealthMandate: PrismaDelegate<WealthMandateRecord>;
+  wealthLedgerEntry: PrismaDelegate<WealthLedgerEntryRecord>;
   $transaction: (...args: any[]) => Promise<any>;
 };
 
@@ -93,7 +135,7 @@ function getPrismaClient(): AppPrisma {
     return globalForPrisma.prisma;
   }
 
-  const client = createPrismaClient() as AppPrisma;
+  const client = createPrismaClient() as unknown as AppPrisma;
   if (!hasWealthMandate(client)) {
     throw new Error(
       "Prisma Client is missing WealthMandate. Stop the Next.js dev server, run `npx prisma generate`, then start it again.",
