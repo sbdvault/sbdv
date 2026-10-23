@@ -114,6 +114,7 @@ export default function MembershipFormSection({
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
             onSubmit={handleSubmit}
+            autoComplete="off"
             className="space-y-6"
           >
             {error && (
@@ -137,6 +138,7 @@ export default function MembershipFormSection({
                 type="text"
                 id="name"
                 name="name"
+                autoComplete="name"
                 required
                 value={formData.name}
                 onChange={handleChange}
@@ -157,6 +159,7 @@ export default function MembershipFormSection({
                 type="email"
                 id="email"
                 name="email"
+                autoComplete="email"
                 required
                 value={formData.email}
                 onChange={handleChange}
@@ -177,6 +180,7 @@ export default function MembershipFormSection({
                 type="tel"
                 id="phone"
                 name="phone"
+                autoComplete="tel"
                 required
                 value={formData.phone}
                 onChange={handleChange}

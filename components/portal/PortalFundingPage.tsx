@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useTranslations } from "@/hooks/useTranslations";
+import BtcReceiveDetails from "@/components/portal/BtcReceiveDetails";
 import { formatUsd, type MandateSnapshot } from "@/components/portal/wealth-ui";
 import { ALLOWED_UPLOAD_ACCEPT } from "@/lib/upload-validation";
 
@@ -188,7 +189,7 @@ export default function PortalFundingPage() {
               <p className="font-body text-sm text-charcoal/60">{t("portal.funding.wireFallback")}</p>
             )
           ) : matchingFunding?.btcReceiveAddress ? (
-            <BtcDetails address={matchingFunding.btcReceiveAddress} t={t} />
+            <BtcReceiveDetails address={matchingFunding.btcReceiveAddress} t={t} />
           ) : (
             <p className="font-body text-sm text-charcoal/60">{t("portal.funding.btcFallback")}</p>
           )}
@@ -243,7 +244,7 @@ export default function PortalFundingPage() {
                   <div className="border border-gold/30 rounded-sm p-3">
                     {isBtc ? (
                       entry.funding?.btcReceiveAddress ? (
-                        <BtcDetails address={entry.funding.btcReceiveAddress} t={t} />
+                        <BtcReceiveDetails address={entry.funding.btcReceiveAddress} t={t} />
                       ) : (
                         <p className="font-body text-sm text-charcoal/60">{t("portal.funding.btcFallback")}</p>
                       )
@@ -328,18 +329,6 @@ function WireDetails({
       {wire.routing ? <Row label={t("portal.funding.routing")} value={wire.routing} /> : null}
       {wire.bankAddress ? <Row label={t("portal.funding.bankAddress")} value={wire.bankAddress} /> : null}
     </dl>
-  );
-}
-
-function BtcDetails({ address, t }: { address: string; t: (key: string) => string }) {
-  return (
-    <div>
-      <p className="font-body text-xs uppercase tracking-wide text-charcoal/50 mb-2">
-        {t("portal.funding.btcAddress")}
-      </p>
-      <p className="font-mono text-sm break-all text-charcoal bg-off-white p-3 rounded-sm">{address}</p>
-      <p className="font-body text-xs text-charcoal/50 mt-3">{t("portal.funding.btcNote")}</p>
-    </div>
   );
 }
 

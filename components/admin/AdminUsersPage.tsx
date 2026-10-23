@@ -127,7 +127,9 @@ export default function AdminUsersPage() {
           </label>
           <input
             id="admin-email"
+            name="email"
             type="email"
+            autoComplete="off"
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -140,7 +142,9 @@ export default function AdminUsersPage() {
           </label>
           <input
             id="admin-password"
+            name="password"
             type="password"
+            autoComplete="new-password"
             required
             minLength={8}
             value={password}

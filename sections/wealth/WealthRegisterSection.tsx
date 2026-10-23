@@ -157,6 +157,7 @@ export default function WealthRegisterSection({
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
             onSubmit={handleSubmit}
+            autoComplete="on"
             className="space-y-6"
           >
             {error && (
@@ -188,6 +189,7 @@ export default function WealthRegisterSection({
                 type="text"
                 id="wealth-name"
                 name="name"
+                autoComplete="name"
                 required
                 value={formData.name}
                 onChange={handleChange}
@@ -208,6 +210,7 @@ export default function WealthRegisterSection({
                 type="email"
                 id="wealth-email"
                 name="email"
+                autoComplete="email"
                 required
                 value={formData.email}
                 onChange={handleChange}
@@ -228,6 +231,7 @@ export default function WealthRegisterSection({
                 type="tel"
                 id="wealth-phone"
                 name="phone"
+                autoComplete="tel"
                 required
                 value={formData.phone}
                 onChange={handleChange}
@@ -266,6 +270,7 @@ export default function WealthRegisterSection({
                 type="password"
                 id="wealth-password"
                 name="password"
+                autoComplete="new-password"
                 required
                 minLength={8}
                 value={formData.password}
@@ -287,6 +292,7 @@ export default function WealthRegisterSection({
                 type="password"
                 id="wealth-confirm-password"
                 name="confirmPassword"
+                autoComplete="new-password"
                 required
                 minLength={8}
                 value={formData.confirmPassword}

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useTranslations } from "@/hooks/useTranslations";
+import BtcReceiveDetails from "@/components/portal/BtcReceiveDetails";
 import { formatUsd, type EntryFunding, type MandateSnapshot } from "@/components/portal/wealth-ui";
 
 type WireDraft = {
@@ -506,7 +507,7 @@ function SavedFunding({
   t: (key: string) => string;
 }) {
   if (funding.btcReceiveAddress) {
-    return <p className="font-mono text-sm break-all text-charcoal">{funding.btcReceiveAddress}</p>;
+    return <BtcReceiveDetails address={funding.btcReceiveAddress} t={t} />;
   }
   const wire = funding.wire;
   return (

@@ -78,7 +78,9 @@ function ResetPasswordForm() {
               </label>
               <input
                 id="email"
+                name="email"
                 type="email"
+                autoComplete="username"
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -92,7 +94,9 @@ function ResetPasswordForm() {
               </label>
               <input
                 id="password"
+                name="password"
                 type="password"
+                autoComplete="new-password"
                 required
                 minLength={8}
                 value={password}
@@ -107,7 +111,9 @@ function ResetPasswordForm() {
               </label>
               <input
                 id="confirm"
+                name="confirm"
                 type="password"
+                autoComplete="new-password"
                 required
                 minLength={8}
                 value={confirm}
