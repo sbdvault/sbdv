@@ -27,9 +27,47 @@ export function hostnameOnly(host: string): string {
   return host.split(":")[0].trim().toLowerCase();
 }
 
+/**
+ * Platform default hostnames cannot serve `admin.{host}` (Vercel has no
+ * `admin.project.vercel.app`). Keep the admin app on the same origin there.
+ */
+const PLATFORM_PUBLIC_SUFFIXES = [
+  ".vercel.app",
+  ".now.sh",
+  ".onrender.com",
+  ".netlify.app",
+  ".railway.app",
+  ".fly.dev",
+  ".herokuapp.com",
+  ".pages.dev",
+] as const;
+
+export function isPlatformPublicHost(hostname: string): boolean {
+  const host = hostnameOnly(hostname);
+  return PLATFORM_PUBLIC_SUFFIXES.some(
+    (suffix) => host === suffix.slice(1) || host.endsWith(suffix)
+  );
+}
+
 export function isAdminHostName(hostname: string): boolean {
   const host = hostnameOnly(hostname);
   return host === "admin.localhost" || host.startsWith("admin.");
+}
+
+/** Separate admin host: localhost, custom domains, or NEXT_PUBLIC_ADMIN_URL. */
+export function dedicatedAdminHostEnabled(hostname: string): boolean {
+  const override = process.env.NEXT_PUBLIC_ADMIN_URL?.replace(/\/$/, "");
+  if (override) {
+    try {
+      if (isPlatformPublicHost(new URL(override).hostname)) return false;
+    } catch {
+      /* ignore invalid override */
+    }
+    return true;
+  }
+  const host = hostnameOnly(hostname);
+  if (isLoopbackHost(host) || isAdminHostName(host)) return true;
+  return !isPlatformPublicHost(host);
 }
 
 export function requestHostname(request: HeaderCarrier): string {
@@ -59,8 +97,29 @@ export function deriveAdminOrigin(fromOrigin: string): string {
     url.hostname = "admin.localhost";
     return url.origin;
   }
+  if (!dedicatedAdminHostEnabled(host)) {
+    return url.origin;
+  }
   url.hostname = `admin.${stripWww(host)}`;
   return url.origin;
+}
+
+/** Same-origin `/en/admin` on Vercel; `/` on a dedicated admin host. */
+export function adminHomeHref(
+  locale: string = ADMIN_DEFAULT_LOCALE,
+  fromOrigin?: string
+): string {
+  const origin =
+    fromOrigin ||
+    (typeof window !== "undefined" ? window.location.origin : envSiteOrigin());
+  const host = new URL(origin).hostname;
+  if (isAdminHostName(host)) return "/";
+  if (!dedicatedAdminHostEnabled(host)) return `/${locale}/admin`;
+  return `${deriveAdminOrigin(origin)}/`;
+}
+
+export function shouldBounceAdminLogin(hostname: string): boolean {
+  return dedicatedAdminHostEnabled(hostname) && !isAdminHostName(hostname);
 }
 
 function isLoopbackHost(hostname: string): boolean {

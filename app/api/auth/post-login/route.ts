@@ -1,8 +1,11 @@
 import { auth } from "@/auth";
 import { clearAuthCookies } from "@/lib/auth-cookies";
 import {
+  adminHomeHref,
   deriveAdminOrigin,
   isAdminRequest,
+  requestHostname,
+  shouldBounceAdminLogin,
 } from "@/lib/admin-host";
 import { pathForRole } from "@/lib/role-paths";
 import {
@@ -105,8 +108,12 @@ export async function GET(request: NextRequest) {
     if (isAdminRequest(request)) {
       return redirectToAppPath(request, "/");
     }
+    const origin = publicOrigin(request);
+    if (!shouldBounceAdminLogin(requestHostname(request))) {
+      return redirectToAppPath(request, adminHomeHref(locale, origin));
+    }
     const email = expectedEmail || sessionEmail || "";
-    const login = `${deriveAdminOrigin(publicOrigin(request))}/login${
+    const login = `${deriveAdminOrigin(origin)}/login${
       email ? `?email=${encodeURIComponent(email)}` : ""
     }`;
     return withClearedCookies(NextResponse.redirect(login));

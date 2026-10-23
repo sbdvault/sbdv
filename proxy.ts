@@ -4,11 +4,13 @@ import { readAuthToken, redirectToAppPath, publicOrigin } from "@/lib/request-or
 import {
   ADMIN_DEFAULT_LOCALE,
   adminHostRewritePath,
+  dedicatedAdminHostEnabled,
   deriveAdminOrigin,
   isAdminLoginPath,
   isAdminRequest,
   isPublicAdminPath,
   publicAdminPathToHostPath,
+  requestHostname,
 } from "@/lib/admin-host";
 
 export const locales = [
@@ -112,7 +114,7 @@ export async function proxy(request: NextRequest) {
     return handleAdminHost(request);
   }
 
-  if (isPublicAdminPath(pathname)) {
+  if (isPublicAdminPath(pathname) && dedicatedAdminHostEnabled(requestHostname(request))) {
     const dest = `${deriveAdminOrigin(publicOrigin(request))}${publicAdminPathToHostPath(pathname)}${request.nextUrl.search}`;
     return NextResponse.redirect(dest, 307);
   }

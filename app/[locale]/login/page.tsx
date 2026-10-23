@@ -10,9 +10,11 @@ import { useTranslations } from "@/hooks/useTranslations";
 import Logo from "@/components/Logo";
 import { hardSignOut } from "@/lib/hard-sign-out";
 import {
+  adminHomeHref,
   isAdminHostName,
   resolveAdminOrigin,
   resolvePublicOrigin,
+  shouldBounceAdminLogin,
 } from "@/lib/admin-host";
 import { pathForRole } from "@/lib/role-paths";
 
@@ -220,14 +222,18 @@ export default function LoginPage() {
           setError(t("login.adminOnly"));
           return;
         }
-        window.location.assign("/");
+        window.location.assign(adminHomeHref(currentLocale));
         return;
       }
       if (sessionUser.role === "ADMIN") {
-        await clearSessions();
-        window.location.assign(
-          `${resolveAdminOrigin()}/login?email=${encodeURIComponent(signedInEmail)}`
-        );
+        if (shouldBounceAdminLogin(window.location.hostname)) {
+          await clearSessions();
+          window.location.assign(
+            `${resolveAdminOrigin()}/login?email=${encodeURIComponent(signedInEmail)}`
+          );
+          return;
+        }
+        window.location.assign(adminHomeHref(currentLocale));
         return;
       }
       window.location.assign(pathForRole(currentLocale, sessionUser.role));
@@ -300,7 +306,7 @@ export default function LoginPage() {
                 <Link
                   href={
                     adminPortal || activeSession.role === "ADMIN"
-                      ? `${resolveAdminOrigin()}/`
+                      ? adminHomeHref(currentLocale)
                       : pathForRole(currentLocale, activeSession.role)
                   }
                   className="gold-shimmer block w-full text-center px-8 py-3 bg-gold text-charcoal font-body font-medium rounded-sm hover:bg-gold/90 transition-all"
