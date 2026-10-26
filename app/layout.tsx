@@ -76,8 +76,8 @@ export default function RootLayout({
     "@type": "Organization",
     name: "Swiss Bullion Depository Vault",
     alternateName: "SBDV",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://sbdv.swiss",
-    logo: `${process.env.NEXT_PUBLIC_SITE_URL || "https://sbdv.swiss"}/logo.png`,
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.sbdvault.com",
+    logo: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.sbdvault.com"}/logo.png`,
     description:
       "A private Swiss institution offering vault custody, investment advisory, and portfolio management to global clients.",
     address: {

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Send, CheckCircle2, AlertCircle, Lock } from "lucide-react";
 import { useTranslations } from "@/hooks/useTranslations";
+import CountrySelect from "@/components/CountrySelect";
 
 export default function ContactFormSection() {
   const { t } = useTranslations();
@@ -195,15 +196,13 @@ export default function ContactFormSection() {
                   >
                     {t("contact.formLabels.country")} *
                   </label>
-                  <input
-                    type="text"
+                  <CountrySelect
                     id="country"
                     name="country"
-                    required
                     value={formData.country}
-                    onChange={handleChange}
+                    onChange={(country) => setFormData({ ...formData, country })}
                     disabled={submitting}
-                    className="w-full px-4 py-3 border border-charcoal/20 rounded-sm focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold font-body text-charcoal bg-white disabled:opacity-50 disabled:cursor-not-allowed"
+                    required
                     placeholder={t("contact.formPlaceholders.country")}
                   />
                 </div>

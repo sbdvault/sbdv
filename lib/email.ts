@@ -126,5 +126,5 @@ export async function getAdminEmail(): Promise<string> {
 
 /** Inbox for Contact / Private Inquiry form submissions */
 export function getContactEmail(): string {
-  return process.env.CONTACT_EMAIL || "sbdvault@gmail.com";
+  return process.env.CONTACT_EMAIL || "info@sbdvault.com";
 }
