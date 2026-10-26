@@ -44,6 +44,7 @@ secrets/
 *.secret
 
 # private deploy notes / old host leftovers (if recreated locally)
+DEPLOYMENT_CHECKLIST.md
 DEPLOY_DIRECT.md
 amvera.yml
 amvera.yaml

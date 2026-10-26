@@ -8,10 +8,10 @@ Next.js institutional site + client portal, admin platform, and Capital Access b
 - **Auth:** Auth.js (credentials + MFA)
 - **Database:** Supabase Postgres (Prisma)
 - **Email:** Resend (SMTP)
-- **Host:** Render
-- **Domain:** Namecheap DNS → Render custom domain
+- **Host:** Vercel
+- **Domain:** Namecheap DNS → Vercel (`www.sbdvault.com`)
 
-See [DEPLOYMENT_CHECKLIST.md](./DEPLOYMENT_CHECKLIST.md) for go-live steps. Use [.env.example](./.env.example) as a template; never commit real secrets.
+Use [.env.example](./.env.example) as a template; never commit real secrets.
 
 ## Local development
 
