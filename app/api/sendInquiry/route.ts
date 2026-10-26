@@ -85,7 +85,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         {
           error:
-            "Could not deliver inquiry. Gmail SMTP rejected the login — use a Google App Password in SMTP_PASS, or configure Telegram.",
+            "Could not send the inquiry email. On Vercel, SMTP_PASS must be the Resend key that starts with re_, EMAIL_FROM must be SBDV <noreply@sbdvault.com>, then redeploy.",
         },
         { status: 502 }
       );
