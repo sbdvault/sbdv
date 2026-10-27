@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { facilityBalances } from "@/lib/capital-access";
 import { buildRepaymentSchedule, repaymentReference } from "@/lib/repayment-schedule";
 import { ALLOWED_UPLOAD_ACCEPT, validateUploadFile } from "@/lib/upload-validation";
 import { Building2, CheckCircle2 } from "lucide-react";
@@ -22,9 +23,11 @@ type EscrowAccount = {
 type FacilityAccount = {
   id: string;
   disbursedAt: string | null;
+  depositConfirmedAt?: string | null;
   termYears: number;
   repaymentFrequency: string;
   requestedAmountUsd: number;
+  securityDepositUsd: number;
   installmentUsd: number;
   interestRatePct: number;
   installmentPayments?: unknown;
@@ -80,6 +83,13 @@ export default function FacilityRepaymentStatement({
     principalUsd: facility.requestedAmountUsd,
     installmentUsd: facility.installmentUsd,
     payments: facility.installmentPayments,
+  });
+  const balances = facilityBalances({
+    requestedAmountUsd: facility.requestedAmountUsd,
+    securityDepositUsd: facility.securityDepositUsd,
+    interestRatePct: facility.interestRatePct,
+    depositConfirmedAt: facility.depositConfirmedAt ?? null,
+    disbursedAt: facility.disbursedAt,
   });
   const paid = schedule.filter((row) => row.status === "PAID");
   const next = schedule.find((row) => row.status !== "PAID") ?? null;
@@ -158,7 +168,19 @@ export default function FacilityRepaymentStatement({
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
           {[
-            [t("capitalAccess.statement.principal"), formatUsd(facility.requestedAmountUsd)],
+            [t("capitalAccess.creditedTotal"), balances.creditedTotalUsd != null ? formatUsd(balances.creditedTotalUsd) : "—"],
+            [
+              facility.depositConfirmedAt
+                ? t("capitalAccess.collateralReceived")
+                : t("capitalAccess.collateralDue"),
+              formatUsd(
+                facility.depositConfirmedAt
+                  ? balances.collateralReceivedUsd
+                  : balances.collateralDueUsd
+              ),
+            ],
+            [t("capitalAccess.interestBase"), formatUsd(balances.interestBaseUsd)],
+            [t("capitalAccess.yearlyInterest"), formatUsd(balances.yearlyInterestUsd)],
             [t("capitalAccess.statement.outstanding"), formatUsd(outstanding)],
             [t("capitalAccess.statement.nextDue"), next ? formatDate(next.dueAt) : t("capitalAccess.statement.complete")],
             [t("capitalAccess.statement.paidCount"), `${paid.length} / ${schedule.length}`],
@@ -229,6 +251,9 @@ export default function FacilityRepaymentStatement({
               <p className="font-body text-xs text-charcoal/50 mt-1">
                 {facility.termYears} {t("capitalAccess.request.years")} · {frequencyLabel} ·{" "}
                 {facility.interestRatePct}% {t("capitalAccess.request.apr")}
+              </p>
+              <p className="font-body text-xs text-charcoal/50 mt-1">
+                {t("capitalAccess.yearlyInterestNote")}
               </p>
             </div>
             <div className="text-right">

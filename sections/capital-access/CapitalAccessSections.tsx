@@ -62,6 +62,19 @@ export default function CapitalAccessHeroSection() {
             {t("capitalAccess.hero.partnerLogin")}
           </Link>
         </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="mt-10 max-w-2xl mx-auto text-left space-y-4"
+        >
+          <p className="font-body text-sm text-off-white/80 leading-relaxed">
+            {t("capitalAccess.hero.eligibility")}
+          </p>
+          <p className="font-body text-sm text-off-white leading-relaxed border border-gold/40 bg-gold/10 px-4 py-3">
+            {t("capitalAccess.hero.collateralRule")}
+          </p>
+        </motion.div>
       </div>
     </section>
   );

@@ -22,9 +22,9 @@
   },
   "hero": {
     "headline": "Swiss Security. Disciplined Growth.",
-    "subtext": "Preserve private wealth in Swiss custody — and help qualified enterprises grow with stress-free, mandate-aligned capital.",
-    "exploreCapital": "Explore Capital Access",
-    "privateClients": "Private Client Access",
+    "subtext": "Private clients use Swiss custody or a wealth mandate. Qualified enterprises may apply for a structured capital facility. SBDV is not a bank.",
+    "exploreCapital": "Enterprises",
+    "privateClients": "Private clients",
     "requestAccess": "Request Access",
     "clientLogin": "Client Login",
     "investorRelations": "Investor Relations"
@@ -84,7 +84,7 @@
     "sectionTitle": "About SBDV",
     "sectionDescription": "A Swiss institution built for quiet custody and disciplined enterprise capital — not retail noise.",
     "missionTitle": "Our Mission",
-    "missionText": "To preserve wealth and trust with Swiss precision — and to enable qualified enterprises to grow with structured, stress-free capital under the same standard of integrity.",
+    "missionText": "To preserve wealth and trust with Swiss precision — and to arrange structured capital for qualified enterprises under the same standard of review.",
     "visionTitle": "Our Vision",
     "visionText": "To be the Swiss house clients choose when custody must stay silent and capital must stay disciplined — trusted by private wealth and by enterprises that prefer clarity over chaos.",
     "aboutTitle": "About SBDV",
@@ -367,7 +367,7 @@
       "examplePrincipal": "Principal",
       "exampleYield": "Stated yield",
       "exampleInterest": "Year-1 interest (illustrative)",
-      "exampleNote": "Illustration only. Yield is not guaranteed, may be paused or revised, and is not a bank deposit. Past or modelled figures are not a promise of future results."
+      "exampleNote": "Not guaranteed. The stated yield may be paused or revised. Possible loss of principal. This is not a bank deposit and is not covered by deposit insurance."
     },
     "benefits": {
       "title": "Why private clients use the mandate",
@@ -408,7 +408,7 @@
     "heroTitle": "Vault membership",
     "heroSubtitle": "The path into Swiss vault custody — tiered access to allocated storage, viewing, and relationship coverage. This is Vault & Security, not the wealth mandate.",
     "tiersTitle": "Custody access levels",
-    "tiersSubtitle": "Three tiers for different scales of bullion and valuables custody. Invitation standards apply where noted.",
+    "tiersSubtitle": "Three tiers for different scales of bullion and valuables custody. Every request is reviewed before access.",
     "tiers": {
       "standard": {
         "title": "Standard Custody",
@@ -425,11 +425,11 @@
       },
       "executive": {
         "title": "Executive Vault",
-        "subtitle": "Invitation Only",
+        "subtitle": "Reviewed access",
         "minimum": "Minimum: Custom",
-        "description": "Invitation-only relationships for HNWI, family offices, and corporations — dedicated service and heightened privacy.",
+        "description": "Reviewed relationships for HNWI, family offices, and corporations — dedicated service and heightened privacy.",
         "features": [
-          "Invitation-only access",
+          "Reviewed access",
           "Personalized storage",
           "Dedicated account manager",
           "Enhanced privacy protocols",
@@ -451,7 +451,7 @@
       }
     },
     "complianceTitle": "Compliance & Security",
-    "complianceText": "Vault membership is invitation-led and open to qualifying clients worldwide. Every applicant is screened under Swiss KYC and AML frameworks before custody access is granted. To invest cash or Bitcoin under a stated yield, use Wealth & Investment instead.",
+    "complianceText": "Vault membership is a request, reviewed before access. Every applicant is screened under Swiss KYC and AML frameworks. To fund a wealth mandate, use Wealth & Investment. That programme is separate from vault custody.",
     "formTitle": "Request vault membership",
     "formSubtitle": "Tell us about your custody needs — allocated bullion, viewing, and vault relationship. We respond with discretion — no obligation.",
     "formSuccessTitle": "Vault application received",
@@ -543,7 +543,7 @@
       }
     },
     "globalAccessTitle": "Global Access",
-    "globalAccessDescription": "Membership is by invitation only. Approved clients enjoy worldwide accessibility through our secure client portal and regional offices.",
+    "globalAccessDescription": "Vault membership is a request, reviewed before access. Wealth mandates and Capital Access are open to clients who qualify. Approved clients use the secure portal.",
     "globalAccessLabel": "Secure Client Portal",
     "globalNetworkTitle": "Global Network",
     "globalNetworkDescription": "Discreetly serving clients across the world's financial capitals with partner vault facilities and secure logistics worldwide.",
@@ -593,11 +593,12 @@
   },
   "legal": {
     "privacyTitle": "Privacy Policy",
-    "privacyIntro": "Swiss Bullion Depository Vault (SBDV) complies with the Swiss Federal Act on Data Protection (FADP) when processing personal data of clients worldwide.",
-    "privacyBody": "SBDV is the controller of personal data collected through this website, the client portal, and the Capital Access program. We collect identity, contact, company, beneficial-ownership, and banking data solely to provide vault custody, membership, and capital facilities, to meet Swiss anti-money-laundering duties, and to communicate with you.\n\nData is stored securely, accessed by authorised staff and regulated banking or compliance partners who need it to perform the service, and is not sold. Cross-border processors (for example hosting or email) may be used under confidentiality and security safeguards.\n\nWe retain application and KYC records for as long as required by Swiss financial-crime and contractual rules, then delete or anonymise them. You may request access, correction, or deletion of your personal data, subject to those legal retention duties, by contacting our data protection officer via the Contact page.",
+    "privacyIntro": "Swiss Bullion Depository Vault (SBDV), seated in Zurich, is the controller of personal data collected through this website and complies with the Swiss Federal Act on Data Protection (FADP) when processing personal data of clients worldwide.",
+    "privacyBody": "SBDV, seated in Zurich, is the controller of personal data collected through this website, the client portal, and the Capital Access program. We collect identity, contact, company, beneficial-ownership, and banking data solely to provide vault custody, membership, and capital facilities, to meet Swiss anti-money-laundering duties, and to communicate with you. A request to access, correct, or delete personal data is made through the Contact page.\n\nData is stored securely, accessed by authorised staff and by banking or compliance partners who need it to perform the service, and is not sold. Hosting and email providers may process data outside Switzerland under confidentiality and security safeguards.\n\nWe retain application and KYC records for as long as required by Swiss financial-crime and contractual rules, then delete or anonymise them. A request for deletion is subject to those legal retention duties.",
     "termsTitle": "Terms of Service",
-    "termsIntro": "These terms govern your use of the SBDV website, portals, and public application channels.",
-    "termsBody": "By using SBDV services you agree to Swiss know-your-customer and anti-money-laundering screening. Vault custody, investment advisory, and portfolio management are provided under separate agreements. Capital Access facilities are governed by the Facility Terms and Conditions, not by these website terms.\n\nEnterprises worldwide may apply for Capital Access. Applying is not a commitment to lend and is not a retail consumer loan or a public securities offering. SBDV may modify website services with appropriate notice.",
+    "termsIntro": "These terms govern your use of the SBDV website, client portals, and public application channels. SBDV is seated in Zurich. Swiss law governs these website terms.",
+    "termsBody": "These website terms apply to use of the SBDV website, account sign-in, and public application channels. They do not create a vault custody agreement, a wealth mandate, or a capital facility. Vault custody and wealth mandates are provided only under the separate agreement issued for that relationship. Capital Access facilities are governed by the Facility Terms and Conditions, not by these website terms.\n\nSBDV is seated in Zurich, Switzerland. These website terms are governed by the substantive laws of Switzerland, excluding conflict-of-law rules that would apply another law. The courts of Zurich have jurisdiction over disputes arising from use of the website. That does not limit any jurisdiction stated in a facility or mandate agreement.\n\nBy creating an account or using a portal you agree to Swiss know-your-customer and anti-money-laundering screening. You must keep your password and any sign-in code confidential. If you believe your account has been used without your authority, tell SBDV promptly through the Contact page.\n\nEnterprises worldwide may apply for Capital Access. Submitting an application is not a commitment to lend, is not a retail consumer loan, and is not a public securities offering. SBDV may approve, decline, or defer an application in its discretion. SBDV may modify the public website by notice on this page. A facility already accepted remains governed by the Facility Terms you accepted, not by a later change to this page.",
+    "englishGoverns": "English is the governing language of this page. Until a translation is issued, the English text is the text that applies.",
     "regulatoryTitle": "Regulatory Disclosures",
     "regulatoryIntro": "SBDV is a Zurich-seated vault and capital-arranging institution serving clients worldwide. It is not a Swiss bank.",
     "regulatoryBody": "SBDV provides bullion vault custody and arranges structured capital facilities for qualified enterprises. Capital Access is not a protected bank deposit and is not covered by deposit-insurance schemes. Funds held as a security deposit are contractual cash collateral, not a deposit in your name at a bank.\n\nPrivate-client wealth mandates are investment programmes, not bank accounts. A stated mandate yield is not guaranteed interest, may be paused or revised, and is not covered by deposit insurance. Bitcoin may be used only as a funding or payout rail; SBDV does not operate a crypto exchange or hold client private keys. Transfers in Bitcoin are irreversible.\n\nAll clients undergo know-your-customer, beneficial-ownership, and anti-money-laundering screening consistent with the Swiss Anti-Money Laundering Act (AMLA). Ultimate beneficial owners are identified to natural persons. Screening applies regardless of the client’s country of incorporation.\n\nInvestment and portfolio management services may require appropriate licensing or be provided through regulated partners. SBDV does not claim a FINMA banking licence. Approval of any facility or mandate is discretionary.\n\nPersons and entities in comprehensively sanctioned jurisdictions cannot be onboarded. High-risk jurisdictions may be subject to enhanced due diligence rather than automatic refusal.\n\nRisk disclosures: investments involve risk including possible loss of principal. Past performance is not indicative of future results. This website is not legal, tax, or investment advice.",
@@ -819,7 +820,13 @@
       "role": "Account type",
       "mfa": "Two-factor authentication",
       "memberSince": "Member since",
-      "lastSignIn": "Last sign-in"
+      "lastSignIn": "Last sign-in",
+      "thisSignIn": "This sign-in",
+      "previousSignIn": "Previous sign-in",
+      "location": "Location",
+      "ipAddress": "IP address",
+      "unknownLocation": "Unknown",
+      "localNetwork": "Local"
     },
     "password": {
       "title": "Change password",
@@ -1073,10 +1080,12 @@
     "signedInAs": "Signed in as",
     "hero": {
       "badge": "Institutional Capital Program",
-      "title": "Capital that lets your enterprise grow — without the stress",
-      "subtitle": "Structured facilities for qualified companies: transparent terms, Swiss oversight, and a guided path from application to repayment — not consumer credit, not fundraising chaos.",
+      "title": "Structured capital for qualified enterprises",
+      "subtitle": "SBDV is not a bank. A facility is not a deposit and not a commitment until it is approved.",
       "applyAccess": "Apply for Access",
-      "partnerLogin": "Partner Login"
+      "partnerLogin": "Partner Login",
+      "eligibility": "Operating companies with at least two years of history, audited or reviewed accounts, and a request from USD 500,000. Approval is discretionary.",
+      "collateralRule": "The 10% is requested only after approval. It is cash collateral, not a fee. It is returned in full if SBDV declines other than for the applicant’s breach or a failed compliance check. Applying is not a commitment to lend."
     },
     "features": {
       "title": "Why enterprises choose Capital Access",
@@ -1113,7 +1122,7 @@
     },
     "whoCanApply": {
       "title": "Who can apply",
-      "worldwide": "Enterprises worldwide may apply. Vault membership is by invitation; Capital Access is open to qualified companies.",
+      "worldwide": "Enterprises worldwide may apply. Vault membership is a separate request, reviewed before access. Capital Access is open to qualified companies.",
       "enterprise": "This is not a personal or consumer loan. The applicant must be an operating company.",
       "ticket": "Minimum request USD 500,000; two years of operating history; audited or reviewed financials.",
       "kyc": "Full KYC, beneficial-ownership look-through, and sanctions screening under Swiss AML rules.",
@@ -1179,6 +1188,12 @@
     "minTicket": "Minimum Ticket",
     "interestFrom": "Interest from",
     "securityDeposit": "Security Deposit",
+    "collateralDue": "Collateral due",
+    "collateralReceived": "Collateral received",
+    "creditedTotal": "Credited total",
+    "yearlyInterest": "Yearly interest",
+    "interestBase": "Interest base",
+    "yearlyInterestNote": "Yearly interest is charged on the requested facility only, not on collateral or the credited total.",
     "viewAllPools": "View all pools",
     "requestFromPool": "Request from this pool",
     "startRequest": "Start Capital Request",

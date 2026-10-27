@@ -54,6 +54,44 @@ export function calculateCapitalTerms(
   };
 }
 
+export interface FacilityBalances {
+  /** 10% due until operations confirms the deposit. */
+  collateralDueUsd: number;
+  /** Confirmed collateral held. Zero until depositConfirmedAt. */
+  collateralReceivedUsd: number;
+  /** Requested facility plus collateral, only after disbursement. */
+  creditedTotalUsd: number | null;
+  /** Annual interest on the requested facility, not on collateral. */
+  yearlyInterestUsd: number;
+  interestBaseUsd: number;
+}
+
+/**
+ * Dashboard figures for a facility. Interest and repayment stay on the
+ * requested amount; collateral is added to the credited total only after
+ * the facility is disbursed.
+ */
+export function facilityBalances(input: {
+  requestedAmountUsd: number;
+  securityDepositUsd: number;
+  interestRatePct: number;
+  depositConfirmedAt: string | Date | null;
+  disbursedAt: string | Date | null;
+}): FacilityBalances {
+  const collateralReceivedUsd = input.depositConfirmedAt ? input.securityDepositUsd : 0;
+  const creditedTotalUsd = input.disbursedAt
+    ? input.requestedAmountUsd + input.securityDepositUsd
+    : null;
+
+  return {
+    collateralDueUsd: input.securityDepositUsd,
+    collateralReceivedUsd,
+    creditedTotalUsd,
+    yearlyInterestUsd: input.requestedAmountUsd * (input.interestRatePct / 100),
+    interestBaseUsd: input.requestedAmountUsd,
+  };
+}
+
 export function formatUsdCompact(amount: number): string {
   if (amount >= 1_000_000_000) return `$${(amount / 1_000_000_000).toFixed(1)}B`;
   if (amount >= 1_000_000) return `$${(amount / 1_000_000).toFixed(1)}M`;

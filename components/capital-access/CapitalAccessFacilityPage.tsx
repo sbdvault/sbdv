@@ -17,6 +17,7 @@ import {
   AlertCircle,
 } from "lucide-react";
 import { REQUIRED_DOCUMENT_TYPES, DEPOSIT_SOF_SOURCES } from "@/lib/capital-access-onboarding";
+import { facilityBalances } from "@/lib/capital-access";
 import FacilityRepaymentStatement from "@/components/capital-access/FacilityRepaymentStatement";
 import UboEditor, { type UboRecord } from "@/components/capital-access/UboEditor";
 import { ALLOWED_UPLOAD_ACCEPT, validateUploadFile } from "@/lib/upload-validation";
@@ -297,6 +298,44 @@ export default function CapitalAccessFacilityPage() {
       facility.onboardingPhase === "DOCUMENTS_SUBMITTED" ||
       (facility.onboardingPhase === "KYC_REVIEW" && facility.docsComplete));
 
+  const balances = facility
+    ? facilityBalances({
+        requestedAmountUsd: facility.requestedAmountUsd,
+        securityDepositUsd: facility.securityDepositUsd,
+        interestRatePct: facility.interestRatePct,
+        depositConfirmedAt: facility.depositConfirmedAt,
+        disbursedAt: facility.disbursedAt,
+      })
+    : null;
+  const facilityStats = facility && balances
+    ? [
+        { label: t("capitalAccess.request.amount"), value: formatUsd(facility.requestedAmountUsd) },
+        { label: t("capitalAccess.request.apr"), value: `${facility.interestRatePct}%` },
+        facility.depositConfirmedAt
+          ? {
+              label: t("capitalAccess.collateralReceived"),
+              value: formatUsd(balances.collateralReceivedUsd),
+            }
+          : {
+              label: t("capitalAccess.collateralDue"),
+              value: formatUsd(balances.collateralDueUsd),
+            },
+        {
+          label: t("capitalAccess.yearlyInterest"),
+          value: formatUsd(balances.yearlyInterestUsd),
+        },
+        ...(balances.creditedTotalUsd != null
+          ? [
+              {
+                label: t("capitalAccess.creditedTotal"),
+                value: formatUsd(balances.creditedTotalUsd),
+              },
+            ]
+          : []),
+        { label: t("capitalAccess.onboarding.rm"), value: facility.relationshipManager || "—" },
+      ]
+    : [];
+
   return (
     <div>
       <div className="mb-8">
@@ -328,18 +367,18 @@ export default function CapitalAccessFacilityPage() {
 
       {facility && (
         <>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-            {[
-              { label: t("capitalAccess.request.amount"), value: formatUsd(facility.requestedAmountUsd) },
-              { label: t("capitalAccess.request.apr"), value: `${facility.interestRatePct}%` },
-              { label: t("capitalAccess.securityDeposit"), value: formatUsd(facility.securityDepositUsd) },
-              { label: t("capitalAccess.onboarding.rm"), value: facility.relationshipManager || "—" },
-            ].map((stat) => (
-              <div key={stat.label} className="p-4 bg-white border border-charcoal/10 rounded-lg">
-                <p className="font-body text-xs text-charcoal/50">{stat.label}</p>
-                <p className="font-heading font-semibold text-charcoal">{stat.value}</p>
-              </div>
-            ))}
+          <div className="mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {facilityStats.map((stat) => (
+                <div key={stat.label} className="p-4 bg-white border border-charcoal/10 rounded-lg">
+                  <p className="font-body text-xs text-charcoal/50">{stat.label}</p>
+                  <p className="font-heading font-semibold text-charcoal">{stat.value}</p>
+                </div>
+              ))}
+            </div>
+            <p className="font-body text-xs text-charcoal/50 mt-3">
+              {t("capitalAccess.yearlyInterestNote")}
+            </p>
           </div>
 
           {!facilityLive && (

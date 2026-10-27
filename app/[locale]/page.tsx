@@ -8,7 +8,6 @@ import CapitalAccessTeaserSection from "@/sections/CapitalAccessTeaserSection";
 import WealthTeaserSection from "@/sections/WealthTeaserSection";
 import SwissStandardSection from "@/sections/SwissStandardSection";
 import GlobalAccessSection from "@/sections/GlobalAccessSection";
-import TestimonialsSection from "@/sections/TestimonialsSection";
 import CTASection from "@/sections/CTASection";
 
 export async function generateMetadata({
@@ -20,7 +19,7 @@ export async function generateMetadata({
   return {
     title: "Home | Swiss Bullion Depository Vault",
     description:
-      "Swiss custody for private wealth and stress-free, mandate-aligned capital for qualified enterprises. Global Trust. Swiss Security.",
+      "Swiss custody for private clients and structured capital facilities for qualified enterprises. SBDV is not a bank.",
   };
 }
 
@@ -40,7 +39,6 @@ export default async function Home({
       <WealthTeaserSection />
       <SwissStandardSection />
       <GlobalAccessSection />
-      <TestimonialsSection />
       <CTASection />
     </>
   );

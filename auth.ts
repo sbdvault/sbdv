@@ -3,6 +3,7 @@ import Credentials from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
 import { verifyTotp } from "@/lib/totp";
 import { issueEmailOtp, usesEmailMfa, verifyEmailOtp } from "@/lib/email-otp";
+import { recordLoginAudit } from "@/lib/login-audit";
 import { prisma } from "@/lib/prisma";
 
 class MFARequiredError extends CredentialsSignin {
@@ -77,7 +78,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         password: { label: "Password", type: "password" },
         mfaCode: { label: "MFA Code", type: "text" },
       },
-      async authorize(credentials) {
+      async authorize(credentials, request) {
         if (!credentials?.email || !credentials?.password) {
           return null;
         }
@@ -108,9 +109,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           }
         }
 
-        await prisma.auditEvent.create({
-          data: { userId: user.id, action: "LOGIN" },
-        });
+        await recordLoginAudit(user.id, request);
 
         return {
           id: user.id,

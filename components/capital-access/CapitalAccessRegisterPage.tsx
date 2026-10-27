@@ -92,6 +92,11 @@ export default function CapitalAccessRegisterPage() {
               ? t("capitalAccess.register.welcomeBody")
               : t("capitalAccess.register.subtitle")}
           </p>
+          {!createdEmail && (
+            <p className="font-body text-sm text-charcoal/70 mt-4 text-left leading-relaxed">
+              {t("capitalAccess.hero.collateralRule")}
+            </p>
+          )}
         </div>
 
         <div className="bg-white border-2 border-gold/30 rounded-lg p-8 shadow-lg">

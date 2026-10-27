@@ -5,6 +5,7 @@ import { usePathname, useParams } from "next/navigation";
 import { useSession } from "next-auth/react";
 import Logo from "@/components/Logo";
 import SignedInIdentity from "@/components/dashboard/SignedInIdentity";
+import SessionSecurityNotice from "@/components/dashboard/SessionSecurityNotice";
 import { hardSignOut } from "@/lib/hard-sign-out";
 import {
   LayoutDashboard,
@@ -99,10 +100,11 @@ export default function PortalShell({ children }: { children: React.ReactNode })
       </aside>
 
       <main className="flex-1 ml-64 min-h-screen">
-        <header className="sticky top-0 z-10 bg-off-white/95 backdrop-blur border-b border-charcoal/10 px-8 py-4">
-          <p className="font-body text-xs uppercase tracking-widest text-gold">
+        <header className="sticky top-0 z-10 bg-off-white/95 backdrop-blur border-b border-charcoal/10 px-8 h-14 flex items-center justify-between gap-8">
+          <p className="font-body text-xs uppercase tracking-widest text-gold shrink-0">
             {t("portal.title")}
           </p>
+          <SessionSecurityNotice />
         </header>
         <div className="p-8">{children}</div>
       </main>

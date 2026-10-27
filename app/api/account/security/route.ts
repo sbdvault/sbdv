@@ -1,4 +1,5 @@
 import { auth } from "@/auth";
+import { toSignInSnapshot } from "@/lib/login-audit";
 import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
 
@@ -24,11 +25,15 @@ export async function GET() {
     return NextResponse.json({ error: "Account not found" }, { status: 404 });
   }
 
-  const lastLogin = await prisma.auditEvent.findFirst({
+  const logins = await prisma.auditEvent.findMany({
     where: { userId: session.user.id, action: "LOGIN" },
     orderBy: { createdAt: "desc" },
-    select: { createdAt: true },
+    take: 2,
+    select: { createdAt: true, ipAddress: true, details: true },
   });
+
+  const currentSignIn = logins[0] ? toSignInSnapshot(logins[0]) : null;
+  const previousSignIn = logins[1] ? toSignInSnapshot(logins[1]) : null;
 
   return NextResponse.json({
     email: user.email,
@@ -37,6 +42,8 @@ export async function GET() {
     mfaEnabled: user.mfaEnabled,
     mfaMethod: user.mfaMethod,
     memberSince: user.createdAt.toISOString(),
-    lastSignInAt: lastLogin?.createdAt.toISOString() ?? null,
+    lastSignInAt: currentSignIn?.at ?? null,
+    currentSignIn,
+    previousSignIn,
   });
 }

@@ -14,7 +14,7 @@ export default function LegalPageSection({
   introKey,
   bodyKey,
 }: LegalPageSectionProps) {
-  const { t } = useTranslations();
+  const { t, locale } = useTranslations();
 
   return (
     <section className="py-20 md:py-32 bg-white min-h-[60vh] pt-32">
@@ -27,6 +27,11 @@ export default function LegalPageSection({
           <h1 className="text-4xl md:text-5xl font-heading font-semibold text-charcoal mb-6 border-b-2 border-gold pb-4">
             {t(titleKey)}
           </h1>
+          {locale !== "en" && (
+            <p className="font-body text-sm text-charcoal/70 mb-6 border border-gold/40 bg-gold/5 px-4 py-3">
+              {t("legal.englishGoverns")}
+            </p>
+          )}
           <p className="text-lg text-charcoal/80 font-body mb-8 leading-relaxed">
             {t(introKey)}
           </p>

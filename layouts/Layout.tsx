@@ -6,11 +6,17 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Preloader from "@/components/Preloader";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout({
+  children,
+  isAdminHost = false,
+}: {
+  children: React.ReactNode;
+  isAdminHost?: boolean;
+}) {
   const pathname = usePathname();
   const isPortal = pathname?.includes("/portal") && !pathname?.includes("/capital-access");
   const isCapitalPortal = pathname?.includes("/capital-access/portal");
-  const isAdmin = pathname?.includes("/admin");
+  const isAdmin = pathname?.includes("/admin") || isAdminHost;
   const isLogin = pathname?.includes("/login");
   const isCapRegister = pathname?.includes("/capital-access/register");
 

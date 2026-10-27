@@ -12,6 +12,7 @@ import {
   PAYMENT_SLIP_TYPE,
   REQUIRED_DOCUMENT_TYPES,
 } from "@/lib/capital-access-onboarding";
+import { facilityBalances } from "@/lib/capital-access";
 import { Building2, ChevronDown, ChevronUp, FileText } from "lucide-react";
 import { buildRepaymentSchedule, installmentOrdinal, nextUnpaidInstallment } from "@/lib/repayment-schedule";
 
@@ -415,6 +416,14 @@ export default function AdminCapitalAccessPage() {
               !(awaitingBank && !bankReady) &&
               !(app.onboardingPhase === "KYC_REVIEW" && !kycChecklistComplete(app));
 
+            const balances = facilityBalances({
+              requestedAmountUsd: app.requestedAmountUsd,
+              securityDepositUsd: app.securityDepositUsd,
+              interestRatePct: app.interestRatePct,
+              depositConfirmedAt: app.depositConfirmedAt,
+              disbursedAt: app.disbursedAt ?? null,
+            });
+
             return (
               <div
                 key={app.id}
@@ -477,23 +486,52 @@ export default function AdminCapitalAccessPage() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4 text-sm">
-                  <div>
-                    <p className="text-charcoal/40">{t("capitalAccess.request.amount")}</p>
-                    <p className="font-medium">{formatUsd(app.requestedAmountUsd)}</p>
+                <div className="mb-4">
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                    <div>
+                      <p className="text-charcoal/40">{t("capitalAccess.request.amount")}</p>
+                      <p className="font-medium">{formatUsd(app.requestedAmountUsd)}</p>
+                    </div>
+                    <div>
+                      <p className="text-charcoal/40">{t("capitalAccess.request.apr")}</p>
+                      <p className="font-medium">{app.interestRatePct}%</p>
+                    </div>
+                    <div>
+                      <p className="text-charcoal/40">
+                        {app.depositConfirmedAt
+                          ? t("capitalAccess.collateralReceived")
+                          : t("capitalAccess.collateralDue")}
+                      </p>
+                      <p className="font-medium">
+                        {formatUsd(
+                          app.depositConfirmedAt
+                            ? balances.collateralReceivedUsd
+                            : balances.collateralDueUsd
+                        )}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-charcoal/40">{t("capitalAccess.yearlyInterest")}</p>
+                      <p className="font-medium">{formatUsd(balances.yearlyInterestUsd)}</p>
+                    </div>
+                    {balances.creditedTotalUsd != null && (
+                      <div>
+                        <p className="text-charcoal/40">{t("capitalAccess.creditedTotal")}</p>
+                        <p className="font-medium">{formatUsd(balances.creditedTotalUsd)}</p>
+                      </div>
+                    )}
+                    <div>
+                      <p className="text-charcoal/40">{t("capitalAccess.interestBase")}</p>
+                      <p className="font-medium">{formatUsd(balances.interestBaseUsd)}</p>
+                    </div>
+                    <div>
+                      <p className="text-charcoal/40">{t("capitalAccess.request.repayment")}</p>
+                      <p className="font-medium capitalize">{app.repaymentFrequency.toLowerCase()}</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-charcoal/40">{t("capitalAccess.request.apr")}</p>
-                    <p className="font-medium">{app.interestRatePct}%</p>
-                  </div>
-                  <div>
-                    <p className="text-charcoal/40">{t("capitalAccess.securityDeposit")}</p>
-                    <p className="font-medium">{formatUsd(app.securityDepositUsd)}</p>
-                  </div>
-                  <div>
-                    <p className="text-charcoal/40">{t("capitalAccess.request.repayment")}</p>
-                    <p className="font-medium capitalize">{app.repaymentFrequency.toLowerCase()}</p>
-                  </div>
+                  <p className="font-body text-xs text-charcoal/45 mt-3">
+                    {t("capitalAccess.yearlyInterestNote")}
+                  </p>
                 </div>
 
                 {/* Document package */}

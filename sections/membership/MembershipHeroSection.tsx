@@ -1,11 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 import { Crown } from "lucide-react";
 import { useTranslations } from "@/hooks/useTranslations";
 
 export default function MembershipHeroSection() {
-  const { t } = useTranslations();
+  const { t, locale } = useTranslations();
+  const params = useParams();
+  const currentLocale = (params?.locale as string) || locale || "en";
 
   return (
     <section className="relative min-h-[60vh] flex items-center justify-center bg-gradient-to-b from-off-white to-white pt-20">
@@ -29,6 +33,12 @@ export default function MembershipHeroSection() {
           </h1>
           <p className="text-xl md:text-2xl text-charcoal/70 font-body max-w-2xl">
             {t("membership.heroSubtitle")}
+          </p>
+          <p className="font-body text-sm text-charcoal/60 max-w-xl">
+            {t("membership.complianceText")}{" "}
+            <Link href={`/${currentLocale}/wealth-investment`} className="text-gold hover:underline">
+              {t("nav.wealth")}
+            </Link>
           </p>
         </motion.div>
       </div>

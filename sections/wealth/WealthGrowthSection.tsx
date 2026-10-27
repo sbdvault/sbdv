@@ -81,7 +81,7 @@ export default function WealthGrowthSection() {
               <dd className="font-heading text-2xl mt-1 text-gold">~$20,000</dd>
             </div>
           </dl>
-          <p className="font-body text-xs text-off-white/50 mt-6">{t("wealth.growth.exampleNote")}</p>
+          <p className="font-body text-sm text-off-white/80 mt-6 leading-relaxed">{t("wealth.growth.exampleNote")}</p>
         </motion.div>
 
         <div>

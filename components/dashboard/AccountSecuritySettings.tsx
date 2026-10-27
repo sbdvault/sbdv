@@ -4,6 +4,13 @@ import { useEffect, useState } from "react";
 import { Shield, ShieldCheck, KeyRound, UserRound, LogOut } from "lucide-react";
 import { useTranslations } from "@/hooks/useTranslations";
 import { hardSignOut } from "@/lib/hard-sign-out";
+import { isLoopbackIp, normalizeClientIp } from "@/lib/sign-in-display";
+
+type SignInSnapshot = {
+  at: string;
+  ip: string | null;
+  location: string | null;
+};
 
 type SecurityProfile = {
   email: string;
@@ -13,6 +20,8 @@ type SecurityProfile = {
   mfaMethod: string | null;
   memberSince: string;
   lastSignInAt: string | null;
+  currentSignIn: SignInSnapshot | null;
+  previousSignIn: SignInSnapshot | null;
 };
 
 function formatDate(iso: string | null, locale: string): string {
@@ -25,6 +34,17 @@ function formatDate(iso: string | null, locale: string): string {
   } catch {
     return iso;
   }
+}
+
+function signInLocation(
+  snapshot: SignInSnapshot | null | undefined,
+  unknown: string,
+  localLabel: string
+): string {
+  if (!snapshot) return unknown;
+  if (snapshot.location) return snapshot.location;
+  if (isLoopbackIp(snapshot.ip)) return localLabel;
+  return unknown;
 }
 
 function roleLabel(role: string, t: (key: string) => string): string {
@@ -198,12 +218,56 @@ export default function AccountSecuritySettings({
               {formatDate(profile?.memberSince ?? null, locale)}
             </dd>
           </div>
-          <div className="flex justify-between gap-4">
-            <dt className="text-charcoal/50">{t("accountSecurity.summary.lastSignIn")}</dt>
+          <div className="flex justify-between gap-4 border-b border-charcoal/5 pb-3">
+            <dt className="text-charcoal/50">{t("accountSecurity.summary.thisSignIn")}</dt>
             <dd className="text-charcoal text-right">
-              {formatDate(profile?.lastSignInAt ?? null, locale)}
+              {formatDate(profile?.currentSignIn?.at ?? profile?.lastSignInAt ?? null, locale)}
             </dd>
           </div>
+          <div className="flex justify-between gap-4 border-b border-charcoal/5 pb-3">
+            <dt className="text-charcoal/50">{t("accountSecurity.summary.location")}</dt>
+            <dd className="text-charcoal text-right">
+              {signInLocation(
+                profile?.currentSignIn,
+                t("accountSecurity.summary.unknownLocation"),
+                t("accountSecurity.summary.localNetwork")
+              )}
+            </dd>
+          </div>
+          <div className="flex justify-between gap-4 border-b border-charcoal/5 pb-3">
+            <dt className="text-charcoal/50">{t("accountSecurity.summary.ipAddress")}</dt>
+            <dd className="text-charcoal text-right font-mono break-all">
+              {normalizeClientIp(profile?.currentSignIn?.ip) || "—"}
+            </dd>
+          </div>
+          <div className="flex justify-between gap-4 border-b border-charcoal/5 pb-3">
+            <dt className="text-charcoal/50">{t("accountSecurity.summary.previousSignIn")}</dt>
+            <dd className="text-charcoal text-right">
+              {profile?.previousSignIn
+                ? formatDate(profile.previousSignIn.at, locale)
+                : "—"}
+            </dd>
+          </div>
+          {profile?.previousSignIn && (
+            <>
+              <div className="flex justify-between gap-4 border-b border-charcoal/5 pb-3">
+                <dt className="text-charcoal/50">{t("accountSecurity.summary.location")}</dt>
+                <dd className="text-charcoal text-right">
+                  {signInLocation(
+                    profile.previousSignIn,
+                    t("accountSecurity.summary.unknownLocation"),
+                    t("accountSecurity.summary.localNetwork")
+                  )}
+                </dd>
+              </div>
+              <div className="flex justify-between gap-4">
+                <dt className="text-charcoal/50">{t("accountSecurity.summary.ipAddress")}</dt>
+                <dd className="text-charcoal text-right font-mono break-all">
+                  {normalizeClientIp(profile.previousSignIn.ip) || "—"}
+                </dd>
+              </div>
+            </>
+          )}
         </dl>
       </section>
 
