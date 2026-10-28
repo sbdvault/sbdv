@@ -1,18 +1,3 @@
-# Swiss Bullion Depository Vault (SBDV)
-
-Next.js institutional site + client portal, admin platform, and Capital Access borrower portal.
-
-## Stack
-
-- **App:** Next.js 16 (App Router)
-- **Auth:** Auth.js (credentials + MFA)
-- **Database:** Supabase Postgres (Prisma)
-- **Email:** Resend (SMTP)
-- **Host:** Vercel
-- **Domain:** Namecheap DNS → Vercel (`www.sbdvault.com`)
-
-Use [.env.example](./.env.example) as a template; never commit real secrets.
-
 ## Local development
 
 ```bash
