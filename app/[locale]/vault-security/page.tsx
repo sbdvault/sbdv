@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageTitle } from "@/lib/i18n";
 import { Locale } from "@/proxy";
 import VaultSection from "@/sections/vault-security/VaultSection";
 import SecurityArchitectureSection from "@/sections/vault-security/SecurityArchitectureSection";
@@ -9,9 +10,9 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
-  await params;
+  const { locale } = await params;
   return {
-    title: "Vault & Security | Swiss Bullion Depository Vault",
+    title: pageTitle(locale, "vault.title"),
     description: "Discover our state-of-the-art security architecture, multi-tiered defense systems, and exclusive access protocols.",
   };
 }

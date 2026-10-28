@@ -1,11 +1,11 @@
 {
   "nav": {
-    "home": "Home",
-    "about": "About",
+    "home": "الرئيسية",
+    "about": "نبذة",
     "vault": "الخزينة والأمن",
     "wealth": "الثروة والاستثمار",
     "capitalAccess": "Capital Access",
-    "services": "Services",
+    "services": "الخدمات",
     "membership": "العضوية",
     "contact": "اتصال",
     "clientLogin": "دخول العملاء",
@@ -18,19 +18,19 @@
       "servicesDesc": "التأجير والمعاينة والعمليات",
       "membershipDesc": "الطريق إلى الدار"
     },
-    "myPortal": "My portal"
+    "myPortal": "بوابتي"
   },
   "hero": {
     "headline": "أمان سويسري. نمو منضبط.",
-    "subtext": "Private clients use Swiss custody or a wealth mandate. Qualified enterprises may apply for a structured capital facility. SBDV is not a bank.",
-    "exploreCapital": "استكشف Capital Access",
+    "subtext": "يستخدم العملاء الخاصون الحفظ السويسري أو تفويض ثروة. ويجوز للمؤسسات المؤهلة التقدم لتسهيل رأس مال منظم. SBDV ليست مصرفًا.",
+    "exploreCapital": "المؤسسات",
     "privateClients": "وصول العملاء الخاصين",
-    "requestAccess": "Request Access",
+    "requestAccess": "اطلبوا الوصول",
     "clientLogin": "دخول العملاء",
-    "investorRelations": "Investor Relations"
+    "investorRelations": "علاقات المستثمرين"
   },
   "footer": {
-    "copyright": "Swiss Bullion Depository Vault — Swiss Precision. Global Trust.",
+    "copyright": "Swiss Bullion Depository Vault — دقة سويسرية. ثقة عالمية.",
     "headquarters": "المقر الرئيسي",
     "globalOffices": "المكاتب العالمية",
     "legal": "قانوني",
@@ -40,472 +40,472 @@
     "investorRelations": "علاقات المستثمرين",
     "offices": {
       "zurich": {
-        "city": "Zurich",
-        "country": "Switzerland",
-        "label": "Global Headquarters",
+        "city": "زيورخ",
+        "country": "سويسرا",
+        "label": "المقر العالمي",
         "address": "Bahnhofstrasse 45, 8001 Zurich, Switzerland",
         "timezone": "CET (UTC+1)"
       },
       "dubai": {
-        "city": "Dubai",
-        "country": "United Arab Emirates",
-        "label": "Middle East & Africa",
+        "city": "دبي",
+        "country": "الإمارات العربية المتحدة",
+        "label": "الشرق الأوسط وأفريقيا",
         "address": "DIFC Gate Village 10, Dubai, UAE",
         "timezone": "GST (UTC+4)"
       },
       "singapore": {
-        "city": "Singapore",
-        "country": "Singapore",
-        "label": "Asia Pacific",
+        "city": "سنغافورة",
+        "country": "سنغافورة",
+        "label": "آسيا والمحيط الهادئ",
         "address": "10 Collyer Quay, Ocean Financial Centre, Singapore",
         "timezone": "SGT (UTC+8)"
       },
       "newYork": {
-        "city": "New York",
-        "country": "United States",
-        "label": "Americas",
+        "city": "نيويورك",
+        "country": "الولايات المتحدة",
+        "label": "الأمريكتان",
         "address": "280 Park Avenue, New York, NY 10017, USA",
         "timezone": "EST (UTC-5)"
       }
     },
     "jurisdictionNote": "أساس قانوني سويسري. إمكانية الوصول عبر ولايات قضائية متعددة للعملاء العالميين.",
-    "facilityTerms": "Facility Terms"
+    "facilityTerms": "شروط التسهيل"
   },
   "about": {
-    "title": "About",
-    "eyebrow": "Zurich · Swiss institution",
-    "heroTitle": "The Firm",
-    "heroSubtitle": "One house, two practices: private wealth custody for discerning clients, and structured capital for qualified enterprises.",
+    "title": "نبذة",
+    "eyebrow": "زيورخ · مؤسسة سويسرية",
+    "heroTitle": "الدار",
+    "heroSubtitle": "دار واحدة، ممارستان: حفظ الثروة الخاصة للعملاء المميّزين، ورأس مال منظم للمؤسسات المؤهلة.",
     "identityName": "Swiss Bullion Depository Vault",
-    "identityNameLabel": "Name",
-    "identitySeatLabel": "Seat",
-    "whoTitle": "Who we are",
-    "whoText": "Seated in Zurich, SBDV preserves private wealth with discretion and arranges mandate-aligned capital facilities for qualified enterprises — under documented review, Swiss AML standards, and clear repayment terms.",
-    "sectionTitle": "About SBDV",
-    "sectionDescription": "A Swiss institution built for quiet custody and disciplined enterprise capital — not retail noise.",
-    "missionTitle": "Our Mission",
-    "missionText": "To preserve wealth and trust with Swiss precision — and to arrange structured capital for qualified enterprises under the same standard of review.",
-    "visionTitle": "Our Vision",
-    "visionText": "To be the Swiss house clients choose when custody must stay silent and capital must stay disciplined — trusted by private wealth and by enterprises that prefer clarity over chaos.",
-    "aboutTitle": "About SBDV",
-    "aboutParagraph1": "Swiss Bullion Depository Vault is a Zurich-seated institution. We combine private vault custody with a Capital Access Program for qualified operating companies — two practices, one Swiss standard of discretion and review.",
-    "aboutParagraph2": "Private clients come for vault custody or a wealth mandate. Enterprises come for transparent facility structure, KYC/UBO look-through, and a partner portal that keeps the process legible from application to repayment.",
-    "aboutParagraph3": "We do not compete on hype. We compete on documentation, mandate alignment, and the quiet confidence of Swiss operating discipline.",
-    "valuesTitle": "Principles",
+    "identityNameLabel": "الاسم",
+    "identitySeatLabel": "المقر",
+    "whoTitle": "من نحن",
+    "whoText": "تتخذ SBDV مقرها في زيورخ، وتصون الثروة الخاصة بتحفظ، وترتب تسهيلات رأس مال متوافقة مع التفويض للمؤسسات المؤهلة — في إطار مراجعة موثّقة، ومعايير AML السويسرية، وشروط سداد واضحة.",
+    "sectionTitle": "عن SBDV",
+    "sectionDescription": "مؤسسة سويسرية مبنية لحفظ هادئ ورأس مال مؤسسي منضبط — لا لضجيج التجزئة.",
+    "missionTitle": "رسالتنا",
+    "missionText": "صون الثروة والثقة بدقة سويسرية — وترتيب رأس مال منظم للمؤسسات المؤهلة وفق معيار المراجعة نفسه.",
+    "visionTitle": "رؤيتنا",
+    "visionText": "أن نكون الدار السويسرية التي يختارها العملاء حين يجب أن يبقى الحفظ صامتًا وأن يبقى رأس المال منضبطًا — محل ثقة الثروة الخاصة والمؤسسات التي تفضّل الوضوح على الاضطراب.",
+    "aboutTitle": "عن SBDV",
+    "aboutParagraph1": "Swiss Bullion Depository Vault مؤسسة مقرها زيورخ. نجمع بين الحفظ الخاص في الخزينة وبرنامج Capital Access للشركات العاملة المؤهلة — ممارستان، ومعيار سويسري واحد للتحفظ والمراجعة.",
+    "aboutParagraph2": "يأتي العملاء الخاصون لحفظ الخزينة أو لتفويض ثروة. وتأتي المؤسسات لهيكل تسهيل شفاف، ولفحص KYC/UBO، ولبوابة شركاء تُبقي المسار مقروءًا من الطلب إلى السداد.",
+    "aboutParagraph3": "لا ننافس بالضجيج. ننافس بالتوثيق ومواءمة التفويض والثقة الهادئة لانضباط التشغيل السويسري.",
+    "valuesTitle": "المبادئ",
     "values": {
       "discretion": {
-        "title": "Discretion",
-        "description": "Privacy is our foundation. Every client interaction is handled with absolute confidentiality."
+        "title": "التحفظ",
+        "description": "الخصوصية أساسنا. يُعامل كل تعامل مع العملاء بسرية مطلقة."
       },
       "precision": {
-        "title": "Precision",
-        "description": "Swiss accuracy in every detail. From security protocols to client service, precision is non-negotiable."
+        "title": "الدقة",
+        "description": "دقة سويسرية في كل تفصيل. من بروتوكولات الأمن إلى خدمة العملاء، الدقة غير قابلة للتنازل."
       },
       "security": {
-        "title": "Security",
-        "description": "Layered protection beyond compromise. Multiple defense systems working in harmony."
+        "title": "الأمن",
+        "description": "حماية متعددة الطبقات بلا تنازل. تعمل نظم دفاع عدة بانسجام."
       },
       "integrity": {
-        "title": "Integrity",
-        "description": "Built on trust, proven by time. Our word is our bond, and our actions reflect our values."
+        "title": "النزاهة",
+        "description": "مبنية على الثقة ومثبتة بالزمن. كلمتنا عهدنا، وأفعالنا تعكس قيمنا."
       }
     },
     "practices": {
-      "privateLabel": "Private clients",
-      "privateTitle": "Custody and wealth",
-      "privateText": "Vault & Security membership for bullion custody, and a separate Wealth & Investment mandate for clients who fund principal and watch stated yield.",
-      "capitalLabel": "Enterprises",
+      "privateLabel": "العملاء الخاصون",
+      "privateTitle": "الحفظ والثروة",
+      "privateText": "عضوية الخزينة والأمن لحفظ السبائك، وتفويض منفصل للثروة والاستثمار للعملاء الذين يموّلون الأصل ويتابعون العائد المبيّن.",
+      "capitalLabel": "المؤسسات",
       "capitalTitle": "Capital Access",
-      "capitalText": "Structured facilities for qualified companies — documentation, 10% cash collateral, Swiss AML review, and a confirmed repayment plan. Approval is discretionary."
+      "capitalText": "تسهيلات منظمة للشركات المؤهلة — توثيق، وضمان نقدي بنسبة 10%، ومراجعة AML سويسرية، وخطة سداد مؤكدة. الموافقة تقديرية."
     },
-    "serveTitle": "Who we serve",
+    "serveTitle": "من نخدم",
     "serve": {
-      "investors": "Private investors who require custody and discretion.",
-      "offices": "Family offices and sovereign clients with a long horizon.",
-      "enterprises": "Established companies seeking documented growth capital — not consumer credit."
+      "investors": "مستثمرون خاصون يتطلبون الحفظ والتحفظ.",
+      "offices": "مكاتب عائلية وعملاء سياديون بأفق طويل.",
+      "enterprises": "شركات راسخة تطلب رأس مال نمو موثّقًا — وليس ائتمانًا استهلاكيًا."
     },
     "close": {
-      "membership": "Request vault membership",
-      "capital": "Explore Capital Access"
+      "membership": "اطلبوا عضوية الخزينة",
+      "capital": "استكشفوا Capital Access"
     },
-    "locationTitle": "Swiss foundation. Global reach.",
-    "locationDescription": "Headquartered in Zurich with regional presence for international relationships. The standard is Swiss; access is worldwide for approved clients and qualified enterprises.",
-    "worldwideAccessibility": "Worldwide Accessibility"
+    "locationTitle": "أساس سويسري. امتداد عالمي.",
+    "locationDescription": "مقرها في زيورخ، مع حضور إقليمي للعلاقات الدولية. المعيار سويسري، والوصول عالمي للعملاء المعتمدين والمؤسسات المؤهلة.",
+    "worldwideAccessibility": "إتاحة عالمية"
   },
   "vault": {
-    "title": "Vault & Security",
-    "heroTitle": "The Vault",
-    "heroSubtitle": "Custody engineered for quiet confidence — layered defense, continuous oversight, and Swiss operating discipline.",
-    "vaultsTitle": "Our Vaults",
-    "vaultsDescription": "Bullion facilities built for multi-tiered defense, continuous monitoring, and auditable chain of custody.",
+    "title": "الخزينة والأمن",
+    "heroTitle": "الخزينة",
+    "heroSubtitle": "حفظ مُصمَّم لثقة هادئة — دفاع متعدد الطبقات، ورقابة مستمرة، وانضباط تشغيل سويسري.",
+    "vaultsTitle": "خزائن الدار",
+    "vaultsDescription": "مرافق سبائك مبنية لدفاع متعدد المستويات، ومراقبة مستمرة، وسلسلة حفظ قابلة للتدقيق.",
     "vaultFeatures": {
       "multiTiered": {
-        "title": "Layered defense",
-        "description": "Physical and procedural controls that protect holdings at every stage of custody."
+        "title": "دفاع متعدد الطبقات",
+        "description": "ضوابط مادية وإجرائية تحمي الحيازات في كل مرحلة من الحفظ."
       },
       "surveillance": {
-        "title": "Continuous oversight",
-        "description": "Monitoring designed for accountability — not theatre."
+        "title": "رقابة مستمرة",
+        "description": "مراقبة مصممة للمساءلة — لا للاستعراض."
       },
       "engineering": {
-        "title": "Swiss engineering",
-        "description": "Built and operated to standards private clients expect from a Zurich-seated house."
+        "title": "هندسة سويسرية",
+        "description": "مبنية وتُدار وفق المعايير التي يتوقعها العملاء الخاصون من دار مقرها زيورخ."
       }
     },
-    "vaultPageTitle": "The Vault",
-    "vaultPageDescription": "A private custody environment for bullion and valuables — designed so wealth can rest without noise.",
+    "vaultPageTitle": "الخزينة",
+    "vaultPageDescription": "بيئة حفظ خاصة للسبائك والنفائس — مصممة لتستقر الثروة بلا ضجيج.",
     "vaultPageFeatures": {
       "defense": {
-        "title": "Layered defense",
-        "description": "Controls at every level of access"
+        "title": "دفاع متعدد الطبقات",
+        "description": "ضوابط في كل مستوى من الوصول"
       },
       "monitoring": {
-        "title": "Continuous oversight",
-        "description": "Accountable monitoring protocols"
+        "title": "رقابة مستمرة",
+        "description": "بروتوكولات مراقبة خاضعة للمساءلة"
       },
       "impenetrable": {
-        "title": "Swiss-built custody",
-        "description": "Engineering over marketing claims"
+        "title": "حفظ مبني بمعيار سويسري",
+        "description": "هندسة لا ادعاءات تسويقية"
       },
       "technology": {
-        "title": "Modern controls",
-        "description": "Systems that support audit and access"
+        "title": "ضوابط حديثة",
+        "description": "نظم تدعم التدقيق والوصول"
       }
     },
-    "securityArchitectureTitle": "Security Architecture",
-    "securityArchitectureDescription": "A multi-layered security model combining controlled access, monitoring, and Swiss operational precision.",
+    "securityArchitectureTitle": "بنية الأمن",
+    "securityArchitectureDescription": "نموذج أمن متعدد الطبقات يجمع الوصول المضبوط والمراقبة والدقة التشغيلية السويسرية.",
     "securityFeatures": {
       "biometrics": {
-        "title": "Biometrics",
-        "description": "Advanced biometric authentication systems ensuring only authorized personnel can access secure areas."
+        "title": "القياسات الحيوية",
+        "description": "نظم متقدمة للمصادقة البيومترية تضمن أن الموظفين المصرّح لهم وحدهم يصلون إلى المناطق الآمنة."
       },
       "seismic": {
-        "title": "Seismic Sensors",
-        "description": "State-of-the-art seismic monitoring to detect any unauthorized access attempts or structural anomalies."
+        "title": "أجهزة الاستشعار الزلزالية",
+        "description": "مراقبة زلزالية متقدمة لرصد أي محاولات وصول غير مصرّح بها أو شذوذ إنشائي."
       },
       "accessControl": {
-        "title": "Access Control",
-        "description": "Multi-factor authentication with encrypted access protocols and real-time authorization verification."
+        "title": "التحكم في الوصول",
+        "description": "مصادقة متعددة العوامل ببروتوكولات وصول مشفّرة وتحقق فوري من التفويض."
       },
       "insurance": {
-        "title": "Insurance",
-        "description": "Comprehensive coverage through leading global insurers, providing full protection for all stored assets."
+        "title": "التأمين",
+        "description": "تغطية شاملة عبر شركات تأمين عالمية رائدة، توفّر حماية كاملة لجميع الأصول المخزّنة."
       }
     },
-    "accessProtocolTitle": "Quiet access protocols",
-    "accessProtocolDescription": "Entry is deliberate: verify identity, confirm authorization, then grant access — so custody stays accountable without theatre.",
+    "accessProtocolTitle": "بروتوكولات وصول هادئة",
+    "accessProtocolDescription": "الدخول مقصود: التحقق من الهوية، ثم تأكيد التفويض، ثم منح الوصول — ليبقى الحفظ مسؤولًا دون استعراض.",
     "accessProtocolSteps": {
       "step1": {
-        "title": "Identity verification",
-        "description": "Multi-factor confirmation before any entry"
+        "title": "التحقق من الهوية",
+        "description": "تأكيد متعدد العوامل قبل أي دخول"
       },
       "step2": {
-        "title": "Authorization review",
-        "description": "Prior approval required for each visit"
+        "title": "مراجعة التفويض",
+        "description": "موافقة مسبقة مطلوبة لكل زيارة"
       },
       "step3": {
-        "title": "Controlled access",
-        "description": "Entry granted only when cleared"
+        "title": "وصول مضبوط",
+        "description": "لا يُمنح الدخول إلا بعد التصريح"
       }
     }
   },
   "services": {
-    "title": "Services",
-    "heroTitle": "Private-client services",
-    "heroSubtitle": "The operating suite behind Swiss custody — leasing, bullion verification, insurance reporting, and private viewing.",
-    "sectionTitle": "Custody services",
+    "title": "الخدمات",
+    "heroTitle": "خدمات العملاء الخاصين",
+    "heroSubtitle": "مجموعة التشغيل وراء الحفظ السويسري — التأجير، والتحقق من السبائك، وتقارير التأمين، والمعاينة الخاصة.",
+    "sectionTitle": "خدمات الحفظ",
     "services": {
       "privateVault": {
-        "title": "Private Vault Leasing",
-        "description": "Allocated space for individuals, family offices, and corporations that require dedicated custody."
+        "title": "تأجير خزينة خاصة",
+        "description": "مساحة مخصصة للأفراد والمكاتب العائلية والشركات التي تتطلب حفظًا مخصصًا."
       },
       "bullionStorage": {
-        "title": "Bullion Storage",
-        "description": "LBMA-aligned audit and storage for precious metals with clear chain of custody."
+        "title": "تخزين السبائك",
+        "description": "تدقيق وتخزين متوافقان مع LBMA للمعادن الثمينة، مع سلسلة حفظ واضحة."
       },
       "insurance": {
-        "title": "Insurance & Audit Reporting",
-        "description": "Coverage and reporting pathways that keep holdings legible to you and your advisors."
+        "title": "تقارير التأمين والتدقيق",
+        "description": "مسارات تغطية وتقارير تُبقي الحيازات مقروءة لكم ولمستشاريكم."
       },
       "vipRooms": {
-        "title": "Private Viewing Rooms",
-        "description": "By appointment — inspect holdings in a controlled, discreet environment."
+        "title": "غرف المعاينة الخاصة",
+        "description": "بموعد — عاينوا الحيازات في بيئة مضبوطة ومتحفظة."
       }
     },
-    "gridTitle": "What private clients use",
-    "gridSubtitle": "Practical custody services tied to membership — not a catalogue of slogans.",
+    "gridTitle": "ما يستخدمه العملاء الخاصون",
+    "gridSubtitle": "خدمات حفظ عملية مرتبطة بالعضوية — وليس فهرس شعارات.",
     "gridServices": {
       "privateVault": {
-        "title": "Private Vault Leasing",
-        "description": "Allocated custody for individuals, corporations, and family offices — sized to your holdings and membership tier.",
+        "title": "تأجير خزينة خاصة",
+        "description": "حفظ مخصص للأفراد والشركات والمكاتب العائلية — بحجم يناسب حيازاتكم ودرجة العضوية.",
         "features": [
-          "Dedicated vault space",
-          "Controlled access",
-          "Relationship service"
+          "مساحة خزينة مخصصة",
+          "وصول مضبوط",
+          "خدمة العلاقة"
         ]
       },
       "bullionCustody": {
-        "title": "Bullion Custody & Verification",
-        "description": "LBMA-aligned audits and storage with documented chain of custody and regular verification.",
+        "title": "حفظ السبائك والتحقق",
+        "description": "تدقيق وتخزين متوافقان مع LBMA، مع سلسلة حفظ موثّقة وتحقق منتظم.",
         "features": [
-          "LBMA-aligned standards",
-          "Regular audits",
-          "Full documentation"
+          "معايير متوافقة مع LBMA",
+          "تدقيق منتظم",
+          "توثيق كامل"
         ]
       },
       "insurance": {
-        "title": "Insurance & Audit Reporting",
-        "description": "Coverage pathways and reporting that keep holdings clear to you and your advisors.",
+        "title": "تقارير التأمين والتدقيق",
+        "description": "مسارات تغطية وتقارير تُبقي الحيازات واضحة لكم ولمستشاريكم.",
         "features": [
-          "Insurance pathways",
-          "Regular reporting",
-          "Audit documentation"
+          "مسارات التأمين",
+          "تقارير منتظمة",
+          "وثائق التدقيق"
         ]
       },
       "vipRooms": {
-        "title": "Private Viewing Rooms",
-        "description": "By appointment — inspect holdings in a controlled environment with discreet concierge support.",
+        "title": "غرف المعاينة الخاصة",
+        "description": "بموعد — عاينوا الحيازات في بيئة مضبوطة مع دعم كونسيرج متحفظ.",
         "features": [
-          "By appointment",
-          "Concierge support",
-          "Controlled viewing"
+          "بموعد",
+          "دعم الكونسيرج",
+          "معاينة مضبوطة"
         ]
       }
     },
-    "wealthGridTitle": "Wealth & Investment Services",
-    "wealthGridSubtitle": "A private-client mandate: fund by wire or Bitcoin, we invest, you watch live yield — then withdraw interest or compound it.",
+    "wealthGridTitle": "خدمات الثروة والاستثمار",
+    "wealthGridSubtitle": "تفويض للعملاء الخاصين: تموّلون بتحويل أو بـ Bitcoin، ونستثمر، وتتابعون العائد اللحظي — ثم تسحبون الفائدة أو تعيدون استثمارها.",
     "wealthGridServices": {
       "advisory": {
-        "title": "Fund the mandate",
-        "description": "Transfer cash by bank wire, or send Bitcoin to SBDV’s receive address. Ops confirms receipt before principal is credited.",
+        "title": "تمويل التفويض",
+        "description": "حوّلوا النقد بتحويل مصرفي، أو أرسلوا Bitcoin إلى عنوان استلام SBDV. تؤكد العمليات الاستلام قبل قيد الأصل.",
         "features": [
-          "Bank wire in USD",
-          "Bitcoin as a funding rail",
-          "Ops-confirmed credit"
+          "تحويل مصرفي بـ USD",
+          "Bitcoin كمسار تمويل",
+          "قيد بعد تأكيد العمليات"
         ]
       },
       "portfolio": {
-        "title": "Stewardship",
-        "description": "SBDV invests funded principal under a stated mandate yield. Interest accrues on principal only — not a bank deposit.",
+        "title": "الإشراف",
+        "description": "تستثمر SBDV الأصل المموَّل وفق عائد تفويض مبيّن. تستحق الفائدة على الأصل فقط — وهذه ليست وديعة مصرفية.",
         "features": [
-          "Stated annual mandate yield",
-          "Principal remains invested",
-          "Yield may be revised"
+          "عائد التفويض السنوي المبيّن",
+          "يبقى أصل المبلغ مستثمرًا",
+          "قد يُعدَّل العائد"
         ]
       },
       "alternatives": {
-        "title": "Live monitoring",
-        "description": "Your private portal shows principal, accrued interest, and total value as the mandate yield ticks forward.",
+        "title": "متابعة لحظية",
+        "description": "تعرض بوابتكم الخاصة أصل المبلغ والفائدة المستحقة والقيمة الإجمالية مع تقدّم عائد التفويض.",
         "features": [
-          "Live principal vs interest",
-          "Funding history",
-          "Secure client portal"
+          "الأصل مقابل الفائدة لحظيًا",
+          "سجل التمويل",
+          "بوابة العملاء الآمنة"
         ]
       },
       "reporting": {
-        "title": "Distribute or compound",
-        "description": "Withdraw accrued interest and leave principal invested, or reinvest interest so it becomes new principal.",
+        "title": "التوزيع أو إعادة الاستثمار",
+        "description": "اسحبوا الفائدة المستحقة واتركوا الأصل مستثمرًا، أو أعيدوا استثمار الفائدة لتصبح أصلًا جديدًا.",
         "features": [
-          "Withdraw interest",
-          "Reinvest into principal",
-          "Wire or Bitcoin payout"
+          "سحب الفائدة",
+          "إعادة الاستثمار في الأصل",
+          "صرف بتحويل أو بـ Bitcoin"
         ]
       }
     }
   },
   "wealth": {
-    "title": "Wealth & Investment",
-    "heroTitle": "Wealth & Investment",
-    "heroSubtitle": "Private clients fund a mandate by wire or Bitcoin. SBDV invests the principal. You monitor live yield, then withdraw interest or compound it.",
-    "pillarsTitle": "How the mandate works",
-    "pillarsSubtitle": "Four steps: fund, steward, watch, and distribute — with Swiss ops confirmation, not a trading app.",
+    "title": "الثروة والاستثمار",
+    "heroTitle": "الثروة والاستثمار",
+    "heroSubtitle": "يموّل العملاء الخاصون التفويض بتحويل أو بـ Bitcoin. تستثمر SBDV الأصل. تتابعون العائد اللحظي، ثم تسحبون الفائدة أو تعيدون استثمارها.",
+    "pillarsTitle": "كيف يعمل التفويض",
+    "pillarsSubtitle": "أربع خطوات: التمويل، والإشراف، والمتابعة، والتوزيع — مع تأكيد العمليات السويسرية، وليس تطبيق تداول.",
     "pillars": {
       "advisory": {
-        "title": "Fund",
-        "description": "Send USD by wire or Bitcoin to the house receive address. Credit posts after operations confirm the transfer."
+        "title": "تمويل",
+        "description": "أرسلوا USD بتحويل أو بـ Bitcoin إلى عنوان استلام الدار. يُقيَّد المبلغ بعد أن تؤكد العمليات التحويل."
       },
       "portfolio": {
-        "title": "Invest",
-        "description": "Funded principal is invested under a stated mandate yield. Interest accrues on principal only."
+        "title": "استثمار",
+        "description": "يُستثمر الأصل المموَّل وفق عائد تفويض مبيّن. تستحق الفائدة على الأصل فقط."
       },
       "metals": {
-        "title": "Monitor",
-        "description": "The client portal ticks principal, accrued interest, and total value in real time — as of this moment."
+        "title": "المتابعة",
+        "description": "تُحدّث بوابة العملاء أصل المبلغ والفائدة المستحقة والقيمة الإجمالية في الوقت الفعلي — حتى هذه اللحظة."
       },
       "reporting": {
-        "title": "Distribute or compound",
-        "description": "Take accrued interest and leave principal working, or reinvest interest so future yield runs on a larger base."
+        "title": "التوزيع أو إعادة الاستثمار",
+        "description": "خذوا الفائدة المستحقة واتركوا الأصل يعمل، أو أعيدوا استثمار الفائدة ليجري العائد المستقبلي على أساس أكبر."
       }
     },
-    "approachTitle": "A quiet mandate, not a marketplace",
-    "approachDescription": "This is a private-client investment mandate, not a bank account and not a crypto exchange. Bitcoin is only a way to fund. Yield is a stated mandate rate SBDV may change. Principal is not withdrawn in this programme — you fund, watch growth, and elect how to treat interest.",
-    "feesTitle": "Fee Transparency",
-    "feesDescription": "Mandate terms, including the stated yield and any fees, are disclosed in writing before you fund. No hidden transaction costs, retrocessions, or kickbacks.",
-    "ctaTitle": "Discuss a private mandate",
-    "ctaSubtitle": "A confidential conversation with our investment team — no pressure, clear next steps.",
-    "ctaButton": "Schedule Consultation",
+    "approachTitle": "تفويض هادئ، وليس سوقًا.",
+    "approachDescription": "هذا تفويض استثماري للعملاء الخاصين، وليس حسابًا مصرفيًا ولا منصة لتداول الأصول المشفرة. Bitcoin وسيلة للتمويل فحسب. العائد معدل تفويض مبيّن يجوز لـ SBDV تغييره. لا يُسحب أصل المبلغ في هذا البرنامج — تموّلون، وتتابعون النمو، وتختارون كيفية التعامل مع الفائدة.",
+    "feesTitle": "شفافية الرسوم",
+    "feesDescription": "تُفصح شروط التفويض، بما فيها العائد المبيّن وأي رسوم، كتابةً قبل التمويل. لا تكاليف معاملات خفية، ولا عمولات مرتجعة، ولا رشاوى.",
+    "ctaTitle": "مناقشة تفويض خاص",
+    "ctaSubtitle": "حوار سري مع فريق الاستثمار — بلا ضغط، وبخطوات تالية واضحة.",
+    "ctaButton": "حدّدوا موعد الاستشارة",
     "growth": {
-      "title": "How your capital grows",
-      "subtitle": "You fund principal. SBDV invests it under a stated mandate yield. Interest accrues on principal only — then you withdraw it or compound it.",
+      "title": "كيف ينمو رأس مالكم",
+      "subtitle": "تموّلون الأصل. تستثمره SBDV وفق عائد تفويض مبيّن. تستحق الفائدة على الأصل فقط — ثم تسحبونها أو تعيدون استثمارها.",
       "steps": {
         "fund": {
-          "title": "Fund principal",
-          "description": "Transfer USD by wire or Bitcoin. Operations confirm receipt, then the amount is credited as principal — not as a traded coin wallet."
+          "title": "تمويل الأصل",
+          "description": "حوّلوا USD بتحويل أو بـ Bitcoin. تؤكد العمليات الاستلام، ثم يُقيَّد المبلغ كأصل — وليس كمحفظة عملات متداولة."
         },
         "accrue": {
-          "title": "Yield on principal",
-          "description": "A stated annual rate accrues on principal (actual/365). Unwithdrawn interest does not itself earn until you reinvest it."
+          "title": "عائد على الأصل",
+          "description": "يستحق معدل سنوي مبيّن على الأصل (actual/365). الفائدة غير المسحوبة لا تُنتج عائدًا بذاتها إلى أن تعيدوا استثمارها."
         },
         "choose": {
-          "title": "Take or compound",
-          "description": "Withdraw accrued interest and leave principal invested, or reinvest interest so future yield runs on a larger base."
+          "title": "القبض أو إعادة الاستثمار",
+          "description": "اسحبوا الفائدة المستحقة واتركوا الأصل مستثمرًا، أو أعيدوا استثمار الفائدة ليجري العائد المستقبلي على أساس أكبر."
         }
       },
-      "exampleLabel": "Worked example",
-      "exampleTitle": "Illustrative year at a stated 8% mandate yield",
-      "exampleBody": "If $250,000 is confirmed as principal and the mandate yield is 8% actual/365, about $20,000 of interest would accrue over a full year — assuming the rate is unchanged and principal is not reduced. You could withdraw that interest or reinvest it into principal.",
-      "examplePrincipal": "Principal",
-      "exampleYield": "Stated yield",
-      "exampleInterest": "Year-1 interest (illustrative)",
-      "exampleNote": "Not guaranteed. The stated yield may be paused or revised. Possible loss of principal. This is not a bank deposit and is not covered by deposit insurance."
+      "exampleLabel": "مثال محسوب",
+      "exampleTitle": "سنة إيضاحية بعائد تفويض مبيّن قدره 8%",
+      "exampleBody": "إذا تأكد مبلغ $250,000 كأصل للمبلغ وكان عائد التفويض 8% actual/365، فإن نحو $20,000 من الفائدة تستحق على مدار سنة كاملة — بافتراض بقاء المعدل دون تغيير وعدم تخفيض الأصل. يمكنكم سحب تلك الفائدة أو إعادة استثمارها في الأصل.",
+      "examplePrincipal": "أصل المبلغ",
+      "exampleYield": "العائد المبيّن",
+      "exampleInterest": "فائدة السنة الأولى (إيضاحية)",
+      "exampleNote": "غير مضمون. قد يُوقف العائد المبيّن أو يُعدَّل. ثمة احتمال لخسارة أصل المبلغ. هذه ليست وديعة مصرفية ولا يشملها تأمين الودائع."
     },
     "benefits": {
-      "title": "Why private clients use the mandate",
+      "title": "لماذا يستخدم العملاء الخاصون التفويض",
       "items": [
-        "Ops-confirmed funding by wire or Bitcoin",
-        "Live principal vs interest in the private portal",
-        "Withdraw interest without redeeming principal",
-        "Reinvest interest so the base can grow",
-        "Swiss KYC and operations confirmation when you fund",
-        "Custody remains a separate Vault membership if you also store bullion"
+        "تمويل بتحويل أو Bitcoin بعد تأكيد العمليات",
+        "الأصل مقابل الفائدة لحظيًا في البوابة الخاصة",
+        "سحب الفائدة دون استرداد الأصل",
+        "إعادة استثمار الفائدة لينمو الأساس",
+        "KYC السويسري وتأكيد العمليات عند التمويل",
+        "يبقى الحفظ عضوية خزينة منفصلة إذا كنتم تخزّنون السبائك أيضًا."
       ]
     },
     "register": {
-      "formTitle": "Create your wealth account",
-      "formSubtitle": "Register with your own password. After you sign in, review the mandate and choose how much to fund by wire or Bitcoin. Operations confirms receipt before principal starts accruing.",
-      "formSuccessTitle": "Account created",
-      "formSuccessText": "Sign in to open your mandate and choose a funding amount.",
-      "continueTitle": "You're signed in",
-      "continueText": "Continue to your wealth mandate to review the programme and choose how much to invest.",
-      "continueCta": "Continue to your mandate",
-      "createAccount": "Create account",
-      "creatingAccount": "Creating account...",
-      "password": "Password",
-      "confirmPassword": "Confirm password",
-      "passwordMin": "At least 8 characters",
-      "alreadyExists": "An account with this email already exists. Sign in instead.",
-      "signIn": "Sign in",
-      "signInFailed": "Account created. Sign in to continue to your mandate.",
-      "error": "Unable to create the account. Please try again."
+      "formTitle": "أنشئوا حساب الثروة",
+      "formSubtitle": "سجّلوا بكلمة مرور خاصة بكم. بعد تسجيل الدخول، راجعوا التفويض واختاروا المبلغ الذي تموّلونه بتحويل أو بـ Bitcoin. تؤكد العمليات الاستلام قبل أن يبدأ استحقاق الأصل.",
+      "formSuccessTitle": "تم إنشاء الحساب",
+      "formSuccessText": "سجّلوا الدخول لفتح التفويض واختيار مبلغ التمويل.",
+      "continueTitle": "أنتم مسجّلون",
+      "continueText": "تابعوا إلى تفويض الثروة لمراجعة البرنامج واختيار المبلغ الذي تستثمرونه.",
+      "continueCta": "تابعوا إلى تفويضكم",
+      "createAccount": "إنشاء حساب",
+      "creatingAccount": "جارٍ إنشاء الحساب...",
+      "password": "كلمة المرور",
+      "confirmPassword": "تأكيد كلمة المرور",
+      "passwordMin": "8 أحرف على الأقل",
+      "alreadyExists": "يوجد حساب بهذا البريد بالفعل. سجّلوا الدخول بدل ذلك.",
+      "signIn": "تسجيل الدخول",
+      "signInFailed": "تم إنشاء الحساب. سجّلوا الدخول للمتابعة إلى تفويضكم.",
+      "error": "تعذّر إنشاء الحساب. يُرجى المحاولة مرة أخرى."
     },
-    "closeTitle": "Ready to begin?",
-    "closeSubtitle": "Create a portal account on this page. After you sign in, choose how much to invest. Vault custody is a separate membership if you need allocated storage.",
-    "closeApply": "Create an account",
-    "closeVault": "Request vault membership"
+    "closeTitle": "هل أنتم مستعدون للبدء؟",
+    "closeSubtitle": "أنشئوا حساب بوابة في هذه الصفحة. بعد تسجيل الدخول، اختاروا المبلغ الذي تستثمرونه. حفظ الخزينة عضوية منفصلة إذا احتجتم إلى تخزين مخصص.",
+    "closeApply": "إنشاء حساب",
+    "closeVault": "اطلبوا عضوية الخزينة"
   },
   "membership": {
-    "title": "Vault membership",
-    "heroTitle": "Vault membership",
-    "heroSubtitle": "The path into Swiss vault custody — tiered access to allocated storage, viewing, and relationship coverage. This is Vault & Security, not the wealth mandate.",
-    "tiersTitle": "Custody access levels",
-    "tiersSubtitle": "Three tiers for different scales of bullion and valuables custody. Every request is reviewed before access.",
+    "title": "عضوية الخزينة",
+    "heroTitle": "عضوية الخزينة",
+    "heroSubtitle": "الطريق إلى الحفظ السويسري في الخزينة — وصول متدرج إلى التخزين المخصص والمعاينة وتغطية العلاقة. هذه الخزينة والأمن، وليس تفويض الثروة.",
+    "tiersTitle": "مستويات الوصول إلى الحفظ",
+    "tiersSubtitle": "ثلاث درجات لمقاييس مختلفة من حفظ السبائك والنفائس. يُراجع كل طلب قبل الوصول.",
     "tiers": {
       "standard": {
-        "title": "Standard Custody",
-        "subtitle": "Entry Level",
-        "minimum": "Minimum: $250k",
-        "description": "Custody for individual investors and smaller portfolios — standard protocols, regular reporting, and monitored facilities.",
+        "title": "الحفظ القياسي",
+        "subtitle": "المستوى الأوّلي",
+        "minimum": "الحد الأدنى: $250k",
+        "description": "حفظ للمستثمرين الأفراد والمحافظ الأصغر — بروتوكولات قياسية، وتقارير منتظمة، ومرافق خاضعة للرقابة.",
         "features": [
-          "Minimum $250k in assets",
-          "Standard security protocols",
-          "Regular reporting",
-          "24/7 monitoring",
-          "Insurance coverage"
+          "حد أدنى للأصول $250k",
+          "بروتوكولات أمن قياسية",
+          "تقارير منتظمة",
+          "مراقبة 24/7",
+          "تغطية تأمينية"
         ]
       },
       "executive": {
-        "title": "Executive Vault",
-        "subtitle": "Reviewed access",
-        "minimum": "Minimum: Custom",
-        "description": "Reviewed relationships for HNWI, family offices, and corporations — dedicated service and heightened privacy.",
+        "title": "خزينة كبار العملاء",
+        "subtitle": "وصول بعد المراجعة",
+        "minimum": "الحد الأدنى: حسب الطلب",
+        "description": "علاقات مُراجعة لـ HNWI والمكاتب العائلية والشركات — خدمة مخصصة وخصوصية مشددة.",
         "features": [
-          "Reviewed access",
-          "Personalized storage",
-          "Dedicated account manager",
-          "Enhanced privacy protocols",
-          "Priority access"
+          "وصول بعد المراجعة",
+          "تخزين مخصص",
+          "مدير حساب مخصص",
+          "بروتوكولات خصوصية معززة",
+          "وصول أولوي"
         ]
       },
       "sovereign": {
-        "title": "Sovereign Tier",
-        "subtitle": "Institutional",
-        "minimum": "Minimum: Institutional",
-        "description": "Institutional-scale custody relationships for sovereign and large institutional counterparts — the highest service intensity.",
+        "title": "الفئة السيادية",
+        "subtitle": "مؤسسي",
+        "minimum": "الحد الأدنى: مؤسسي",
+        "description": "علاقات حفظ على نطاق مؤسسي للأطراف السيادية والمؤسسات الكبيرة — أعلى كثافة خدمة.",
         "features": [
-          "Institutional-grade security",
-          "Government-level protocols",
-          "Custom solutions",
-          "Dedicated facilities",
-          "White-glove service"
+          "أمن بمستوى مؤسسي",
+          "بروتوكولات بمستوى حكومي",
+          "حلول مخصصة",
+          "مرافق مخصصة",
+          "خدمة مخصصة رفيعة"
         ]
       }
     },
-    "complianceTitle": "Compliance & Security",
-    "complianceText": "Vault membership is a request, reviewed before access. Every applicant is screened under Swiss KYC and AML frameworks. To fund a wealth mandate, use Wealth & Investment. That programme is separate from vault custody.",
-    "formTitle": "Request vault membership",
-    "formSubtitle": "Tell us about your custody needs — allocated bullion, viewing, and vault relationship. We respond with discretion — no obligation.",
-    "formSuccessTitle": "Vault application received",
-    "formSuccessText": "Thank you. Our custody desk will review your request and contact you shortly.",
+    "complianceTitle": "الامتثال والأمن",
+    "complianceText": "عضوية الخزينة طلب، وتُراجع قبل الوصول. يُفحص كل مقدم طلب وفق أطر KYC وAML السويسرية. لتمويل تفويض ثروة، استخدموا الثروة والاستثمار. ذلك البرنامج منفصل عن حفظ الخزينة.",
+    "formTitle": "اطلبوا عضوية الخزينة",
+    "formSubtitle": "أخبرونا بحاجات الحفظ — سبائك مخصصة، ومعاينة، وعلاقة بالخزينة. نجيب بتحفظ — دون التزام.",
+    "formSuccessTitle": "تم استلام طلب الخزينة",
+    "formSuccessText": "شكرًا لكم. سيراجع مكتب الحفظ طلبكم ويتصل بكم قريبًا.",
     "formLabels": {
-      "name": "Full Name",
-      "email": "Email Address",
-      "phone": "Phone Number",
-      "country": "Country",
-      "assetRange": "Asset Range",
-      "message": "Message"
+      "name": "الاسم الكامل",
+      "email": "عنوان البريد الإلكتروني",
+      "phone": "رقم الهاتف",
+      "country": "البلد",
+      "assetRange": "نطاق الأصول",
+      "message": "الرسالة"
     },
     "formPlaceholders": {
-      "name": "Enter your full name",
+      "name": "أدخلوا اسمكم الكامل",
       "email": "your.email@example.com",
       "phone": "+1 (555) 123-4567",
-      "country": "Select your country",
-      "assetRange": "Select asset range",
-      "message": "Describe your vault custody interest — metals, volume, and any viewing needs."
+      "country": "اختاروا بلدكم",
+      "assetRange": "اختاروا نطاق الأصول",
+      "message": "صفوا اهتمامكم بحفظ الخزينة — المعادن، والحجم، وأي حاجات للمعاينة."
     }
   },
   "contact": {
-    "title": "Contact",
+    "title": "اتصال",
     "heroTitle": "الاتصال والاستفسار الخاص",
-    "heroSubtitle": "Get in touch with our team for confidential consultations.",
-    "formSuccessTitle": "Your inquiry has been securely submitted.",
-    "formSuccessText": "We have received your inquiry and will contact you shortly. All communications are handled with the utmost discretion and security.",
-    "formSecureLabel": "Secure & Confidential",
+    "heroSubtitle": "تواصلوا مع فريقنا لاستشارات سرية.",
+    "formSuccessTitle": "تم إرسال استفساركم بصورة آمنة.",
+    "formSuccessText": "تلقينا استفساركم وسنتصل بكم قريبًا. تُعامل جميع المراسلات بأقصى درجات التحفظ والأمن.",
+    "formSecureLabel": "آمن وسري",
     "formLabels": {
-      "name": "Full Name",
-      "email": "Email Address",
-      "phone": "Phone Number",
-      "country": "Country",
-      "interest": "Investment Interest",
-      "message": "Message"
+      "name": "الاسم الكامل",
+      "email": "عنوان البريد الإلكتروني",
+      "phone": "رقم الهاتف",
+      "country": "البلد",
+      "interest": "الاهتمام الاستثماري",
+      "message": "الرسالة"
     },
     "formPlaceholders": {
-      "name": "Enter your full name",
+      "name": "أدخلوا اسمكم الكامل",
       "email": "your.email@example.com",
       "phone": "+1 (555) 123-4567",
-      "country": "Select your country",
-      "interest": "Select investment interest",
-      "message": "Tell us about your inquiry..."
+      "country": "اختاروا بلدكم",
+      "interest": "اختاروا الاهتمام الاستثماري",
+      "message": "أخبرونا عن استفساركم..."
     },
     "interestOptions": {
-      "privateVault": "Private Vault Leasing",
-      "bullionCustody": "Bullion Custody & Verification",
-      "insurance": "Insurance & Audit Reporting",
-      "vipViewing": "VIP Private Viewing Rooms",
-      "investmentAdvisory": "Investment Advisory",
-      "portfolioManagement": "Portfolio Management",
-      "alternativeInvestments": "Alternative Investments",
-      "membership": "Membership Inquiry",
-      "general": "General Inquiry"
+      "privateVault": "تأجير خزينة خاصة",
+      "bullionCustody": "حفظ السبائك والتحقق",
+      "insurance": "تقارير التأمين والتدقيق",
+      "vipViewing": "غرف المعاينة الخاصة لكبار العملاء",
+      "investmentAdvisory": "الاستشارة الاستثمارية",
+      "portfolioManagement": "إدارة المحفظة",
+      "alternativeInvestments": "استثمارات بديلة",
+      "membership": "استفسار العضوية",
+      "general": "استفسار عام"
     }
   },
   "cta": {
@@ -532,9 +532,9 @@
       }
     },
     "globalAccessTitle": "وصول عالمي",
-    "globalAccessDescription": "Vault membership is a request, reviewed before access. Wealth mandates and Capital Access are open to clients who qualify. Approved clients use the secure portal.",
+    "globalAccessDescription": "عضوية الخزينة طلب، وتُراجع قبل الوصول. تفويضات الثروة وCapital Access متاحة للعملاء الذين تتوافر فيهم الشروط. يستخدم العملاء المعتمدون البوابة الآمنة.",
     "globalAccessLabel": "بوابة العملاء الآمنة",
-    "globalNetworkTitle": "Global Network",
+    "globalNetworkTitle": "الشبكة العالمية",
     "globalNetworkDescription": "نخدم العملاء بسرية في العواصم المالية العالمية عبر خزائن شريكة ولوجستيات عالمية.",
     "wealthTeaserTitle": "إشراف على الثروة بلا ضجيج",
     "wealthTeaserDescription": "للعملاء الخاصين: تفويضات المحفظة واستراتيجية المعادن وتقارير موحّدة — مدمجة مع الحفظ السويسري عبر بوابتكم الخاصة.",
@@ -581,231 +581,231 @@
   "common": {
     "loading": "جار التحميل…",
     "submit": "إرسال",
-    "submitting": "Submitting...",
+    "submitting": "جارٍ الإرسال...",
     "cancel": "إلغاء",
-    "success": "Success",
-    "error": "Error",
-    "tryAgain": "Try Again",
-    "required": "Required",
-    "optional": "Optional",
-    "learnMore": "Learn More",
-    "backToHome": "Back to Home"
+    "success": "تم",
+    "error": "خطأ",
+    "tryAgain": "إعادة المحاولة",
+    "required": "مطلوب",
+    "optional": "اختياري",
+    "learnMore": "اطّلعوا على المزيد",
+    "backToHome": "العودة إلى الرئيسية"
   },
   "legal": {
-    "privacyTitle": "Privacy Policy",
-    "privacyIntro": "Swiss Bullion Depository Vault (SBDV), seated in Zurich, is the controller of personal data collected through this website and complies with the Swiss Federal Act on Data Protection (FADP) when processing personal data of clients worldwide.",
-    "privacyBody": "SBDV, seated in Zurich, is the controller of personal data collected through this website, the client portal, and the Capital Access program. We collect identity, contact, company, beneficial-ownership, and banking data solely to provide vault custody, membership, and capital facilities, to meet Swiss anti-money-laundering duties, and to communicate with you. A request to access, correct, or delete personal data is made through the Contact page.\n\nData is stored securely, accessed by authorised staff and by banking or compliance partners who need it to perform the service, and is not sold. Hosting and email providers may process data outside Switzerland under confidentiality and security safeguards.\n\nWe retain application and KYC records for as long as required by Swiss financial-crime and contractual rules, then delete or anonymise them. A request for deletion is subject to those legal retention duties.",
-    "termsTitle": "Terms of Service",
-    "termsIntro": "These terms govern your use of the SBDV website, client portals, and public application channels. SBDV is seated in Zurich. Swiss law governs these website terms.",
-    "termsBody": "These website terms apply to use of the SBDV website, account sign-in, and public application channels. They do not create a vault custody agreement, a wealth mandate, or a capital facility. Vault custody and wealth mandates are provided only under the separate agreement issued for that relationship. Capital Access facilities are governed by the Facility Terms and Conditions, not by these website terms.\n\nSBDV is seated in Zurich, Switzerland. These website terms are governed by the substantive laws of Switzerland, excluding conflict-of-law rules that would apply another law. The courts of Zurich have jurisdiction over disputes arising from use of the website. That does not limit any jurisdiction stated in a facility or mandate agreement.\n\nBy creating an account or using a portal you agree to Swiss know-your-customer and anti-money-laundering screening. You must keep your password and any sign-in code confidential. If you believe your account has been used without your authority, tell SBDV promptly through the Contact page.\n\nEnterprises worldwide may apply for Capital Access. Submitting an application is not a commitment to lend, is not a retail consumer loan, and is not a public securities offering. SBDV may approve, decline, or defer an application in its discretion. SBDV may modify the public website by notice on this page. A facility already accepted remains governed by the Facility Terms you accepted, not by a later change to this page.",
-    "regulatoryTitle": "Regulatory Disclosures",
-    "regulatoryIntro": "SBDV is a Zurich-seated vault and capital-arranging institution serving clients worldwide. It is not a Swiss bank.",
-    "regulatoryBody": "SBDV provides bullion vault custody and arranges structured capital facilities for qualified enterprises. Capital Access is not a protected bank deposit and is not covered by deposit-insurance schemes. Funds held as a security deposit are contractual cash collateral, not a deposit in your name at a bank.\n\nPrivate-client wealth mandates are investment programmes, not bank accounts. A stated mandate yield is not guaranteed interest, may be paused or revised, and is not covered by deposit insurance. Bitcoin may be used only as a funding or payout rail; SBDV does not operate a crypto exchange or hold client private keys. Transfers in Bitcoin are irreversible.\n\nAll clients undergo know-your-customer, beneficial-ownership, and anti-money-laundering screening consistent with the Swiss Anti-Money Laundering Act (AMLA). Ultimate beneficial owners are identified to natural persons. Screening applies regardless of the client’s country of incorporation.\n\nInvestment and portfolio management services may require appropriate licensing or be provided through regulated partners. SBDV does not claim a FINMA banking licence. Approval of any facility or mandate is discretionary.\n\nPersons and entities in comprehensively sanctioned jurisdictions cannot be onboarded. High-risk jurisdictions may be subject to enhanced due diligence rather than automatic refusal.\n\nRisk disclosures: investments involve risk including possible loss of principal. Past performance is not indicative of future results. This website is not legal, tax, or investment advice.",
-    "investorRelationsTitle": "Investor Relations",
-    "investorRelationsIntro": "Governance, transparency, and institutional communications.",
-    "investorRelationsBody": "SBDV is committed to transparency with our clients and stakeholders. Annual reports, governance policies, and institutional disclosures will be published here as they become available. For institutional inquiries, please contact our investor relations team through the contact page.",
-    "englishGoverns": "English is the governing language of this page. Until a translation is issued, the English text is the text that applies."
+    "privacyTitle": "سياسة الخصوصية",
+    "privacyIntro": "Swiss Bullion Depository Vault (SBDV)، ومقرها زيورخ، هي المتحكمة في البيانات الشخصية التي تُجمع عبر هذا الموقع، وتلتزم بالقانون الاتحادي السويسري لحماية البيانات (FADP) عند معالجة البيانات الشخصية للعملاء في أنحاء العالم.",
+    "privacyBody": "SBDV، ومقرها زيورخ، هي المتحكمة في البيانات الشخصية التي تُجمع عبر هذا الموقع وبوابة العملاء وبرنامج Capital Access. نجمع بيانات الهوية والاتصال والشركة والملكية الانتفاعية والمصرفية فقط لتقديم حفظ الخزينة والعضوية وتسهيلات رأس المال، وللوفاء بواجبات مكافحة غسل الأموال السويسرية، وللتواصل معكم. يُقدَّم طلب الاطلاع على البيانات الشخصية أو تصحيحها أو حذفها عبر صفحة الاتصال.\n\nتُخزَّن البيانات بصورة آمنة، ويطلع عليها الموظفون المصرّح لهم وشركاء المصارف أو الامتثال الذين يحتاجونها لأداء الخدمة، ولا تُباع. قد يعالج مزودو الاستضافة والبريد الإلكتروني البيانات خارج سويسرا في إطار ضمانات السرية والأمن.\n\nنحتفظ بسجلات الطلبات وKYC للمدة التي تقتضيها قواعد الجرائم المالية السويسرية وقواعد العقود، ثم نحذفها أو نجعلها مجهولة. يخضع طلب الحذف لواجبات الاحتفاظ القانونية تلك.",
+    "termsTitle": "شروط الخدمة",
+    "termsIntro": "تحكم هذه الشروط استخدامكم لموقع SBDV وبوابات العملاء وقنوات التقديم العامة. تتخذ SBDV مقرها في زيورخ. تخضع شروط الموقع هذه للقانون السويسري.",
+    "termsBody": "تسري شروط الموقع هذه على استخدام موقع SBDV، وتسجيل الدخول إلى الحساب، وقنوات التقديم العامة. وهي لا تنشئ اتفاقية حفظ في الخزينة، ولا تفويض ثروة، ولا تسهيل رأس مال. يُقدَّم حفظ الخزينة وتفويضات الثروة فقط بموجب الاتفاقية المنفصلة الصادرة لتلك العلاقة. تخضع تسهيلات Capital Access لشروط وأحكام التسهيل، لا لشروط الموقع هذه.\n\nتتخذ SBDV مقرها في زيورخ، سويسرا. تخضع شروط الموقع هذه للقوانين الموضوعية في سويسرا، مع استبعاد قواعد تنازع القوانين التي من شأنها تطبيق قانون آخر. لمحاكم زيورخ الولاية القضائية على المنازعات الناشئة عن استخدام الموقع. ولا يحد ذلك من أي ولاية قضائية منصوص عليها في اتفاقية تسهيل أو تفويض.\n\nبإنشاء حساب أو باستخدام بوابة، توافقون على الفحص السويسري لمعرفة العميل ومكافحة غسل الأموال. يجب الحفاظ على سرية كلمة المرور وأي رمز لتسجيل الدخول. إذا اعتقدتم أن حسابكم استُخدم دون تفويضكم، فأبلغوا SBDV دون إبطاء عبر صفحة الاتصال.\n\nيجوز للمؤسسات في أنحاء العالم التقدم إلى Capital Access. تقديم الطلب ليس التزامًا بالإقراض، وليس قرضًا استهلاكيًا للأفراد، وليس طرحًا عامًا لأوراق مالية. يجوز لـ SBDV أن توافق على الطلب أو ترفضه أو ترجئه وفق تقديرها. يجوز لـ SBDV تعديل الموقع العام بإشعار على هذه الصفحة. يبقى التسهيل الذي تم قبوله خاضعًا لشروط التسهيل التي قبلتموها، لا لتغيير لاحق في هذه الصفحة.",
+    "regulatoryTitle": "الإفصاحات التنظيمية",
+    "regulatoryIntro": "SBDV مؤسسة خزينة وترتيب رأس مال مقرها زيورخ، وتخدم العملاء في أنحاء العالم. وهي ليست مصرفًا سويسريًا.",
+    "regulatoryBody": "تقدّم SBDV حفظ السبائك في الخزينة، وترتب تسهيلات رأس مال منظمة للمؤسسات المؤهلة. Capital Access ليست وديعة مصرفية محمية، ولا تشملها أنظمة تأمين الودائع. الأموال المحتفظ بها كوديعة ضمان هي ضمان نقدي تعاقدي، وليست وديعة باسمكم لدى مصرف.\n\nتفويضات الثروة للعملاء الخاصين برامج استثمارية، وليست حسابات مصرفية. عائد التفويض المبيّن ليس فائدة مضمونة، وقد يُوقف أو يُعدَّل، ولا يشمله تأمين الودائع. لا يجوز استخدام Bitcoin إلا كمسار للتمويل أو للصرف. لا تشغّل SBDV منصة لتداول الأصول المشفرة، ولا تحتفظ بالمفاتيح الخاصة للعملاء. التحويلات بـ Bitcoin لا رجعة فيها.\n\nيخضع جميع العملاء لفحص معرفة العميل والملكية الانتفاعية ومكافحة غسل الأموال، بما يتوافق مع القانون السويسري لمكافحة غسل الأموال (AMLA). يُحدَّد المالكون المنتفعون النهائيون حتى الأشخاص الطبيعيين. يسري الفحص بغض النظر عن بلد تأسيس العميل.\n\nقد تتطلب خدمات الاستثمار وإدارة المحافظ ترخيصًا مناسبًا، أو تُقدَّم عبر شركاء خاضعين للتنظيم. لا تدّعي SBDV ترخيصًا مصرفيًا من FINMA. الموافقة على أي تسهيل أو تفويض تقديرية.\n\nلا يمكن قبول الأشخاص والكيانات في الولايات القضائية الخاضعة لعقوبات شاملة. قد تخضع الولايات القضائية عالية المخاطر لعناية واجبة معززة بدل الرفض التلقائي.\n\nإفصاحات المخاطر: تنطوي الاستثمارات على مخاطر تشمل احتمال خسارة أصل المبلغ. الأداء السابق ليس مؤشرًا على النتائج المستقبلية. هذا الموقع ليس مشورة قانونية أو ضريبية أو استثمارية.",
+    "investorRelationsTitle": "علاقات المستثمرين",
+    "investorRelationsIntro": "حوكمة وشفافية ومراسلات مؤسسية.",
+    "investorRelationsBody": "تلتزم SBDV بالشفافية تجاه عملائها وأصحاب المصلحة. ستُنشر هنا التقارير السنوية وسياسات الحوكمة والإفصاحات المؤسسية متى أصبحت متاحة. للاستفسارات المؤسسية، يُرجى الاتصال بفريق علاقات المستثمرين عبر صفحة الاتصال.",
+    "englishGoverns": "اللغة الحاكمة لهذه الصفحة هي الإنجليزية. الترجمة للقراءة. النص الإنجليزي هو النص الذي يسري."
   },
   "login": {
     "title": "دخول العميل",
-    "subtitle": "Secure access to your portfolio and account documents.",
+    "subtitle": "وصول آمن إلى محفظتكم ومستندات الحساب.",
     "email": "البريد الإلكتروني",
     "password": "كلمة المرور",
-    "mfaCode": "Authentication Code",
-    "mfaHint": "Enter the 6-digit code from your authenticator app.",
+    "mfaCode": "رمز المصادقة",
+    "mfaHint": "أدخلوا الرمز المكوّن من 6 أرقام من تطبيق المصادقة.",
     "signIn": "دخول",
-    "signingIn": "Signing In...",
-    "forgotPassword": "Forgot password?",
-    "noAccount": "Not a client yet?",
+    "signingIn": "جارٍ تسجيل الدخول...",
+    "forgotPassword": "هل نسيتم كلمة المرور؟",
+    "noAccount": "لستم عميلًا بعد؟",
     "applyMembership": "Apply for Membership",
     "invalidCredentials": "البريد أو كلمة المرور غير صحيحة.",
-    "mfaRequired": "Enter your authentication code to continue.",
-    "mfaInvalid": "Invalid authentication code.",
-    "error": "An error occurred. Please try again.",
-    "forgotTitle": "Forgot Password",
-    "forgotSubtitle": "Enter your account email and we will send a reset link.",
-    "sendResetLink": "Send Reset Link",
-    "resetEmailSent": "If an account exists for that email, a reset link has been sent. Check your inbox and spam folder.",
-    "backToSignIn": "Back to Sign In",
-    "resetTitle": "Reset Password",
-    "resetSubtitle": "Choose a new password for your account.",
-    "newPassword": "New Password",
-    "confirmPassword": "Confirm Password",
-    "updatePassword": "Update Password",
-    "passwordMismatch": "Passwords do not match.",
-    "resetLinkInvalid": "This reset link is missing or invalid.",
-    "resetSuccess": "Your password has been updated. You can sign in with the new password.",
-    "resetFailed": "Unable to reset password.",
-    "resetRequestFailed": "Unable to send reset email.",
-    "alreadySignedIn": "You're signed in",
-    "alreadySignedInSubtitle": "Continue to your portal, or sign out to use a different account.",
-    "signedInAs": "Signed in as",
-    "continueToPortal": "Continue to portal",
-    "signOut": "Sign out",
-    "registerWealth": "Create a wealth account",
-    "adminTitle": "Administration",
-    "adminSubtitle": "Sign in to the SBDV operations portal.",
-    "adminOnly": "This portal is for administrators only.",
-    "continueToAdmin": "Continue to operations"
+    "mfaRequired": "أدخلوا رمز المصادقة للمتابعة.",
+    "mfaInvalid": "رمز المصادقة غير صالح.",
+    "error": "حدث خطأ. يُرجى المحاولة مرة أخرى.",
+    "forgotTitle": "إعادة تعيين كلمة المرور",
+    "forgotSubtitle": "أدخلوا بريد الحساب وسنرسل رابط إعادة التعيين.",
+    "sendResetLink": "إرسال رابط إعادة التعيين",
+    "resetEmailSent": "إذا وُجد حساب لذلك البريد، فقد أُرسل رابط إعادة التعيين. تحققوا من صندوق الوارد ومجلد الرسائل غير المرغوب فيها.",
+    "backToSignIn": "العودة إلى تسجيل الدخول",
+    "resetTitle": "إعادة تعيين كلمة المرور",
+    "resetSubtitle": "اختاروا كلمة مرور جديدة لحسابكم.",
+    "newPassword": "كلمة مرور جديدة",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "updatePassword": "تحديث كلمة المرور",
+    "passwordMismatch": "كلمتا المرور غير متطابقتين.",
+    "resetLinkInvalid": "رابط إعادة التعيين هذا مفقود أو غير صالح.",
+    "resetSuccess": "تم تحديث كلمة المرور. يمكنكم تسجيل الدخول بكلمة المرور الجديدة.",
+    "resetFailed": "تعذّر إعادة تعيين كلمة المرور.",
+    "resetRequestFailed": "تعذّر إرسال بريد إعادة التعيين.",
+    "alreadySignedIn": "أنتم مسجّلون",
+    "alreadySignedInSubtitle": "تابعوا إلى بوابتكم، أو سجّلوا الخروج لاستخدام حساب آخر.",
+    "signedInAs": "مسجّل الدخول باسم",
+    "continueToPortal": "تابعوا إلى البوابة",
+    "signOut": "تسجيل الخروج",
+    "registerWealth": "إنشاء حساب ثروة",
+    "adminTitle": "الإدارة",
+    "adminSubtitle": "سجّلوا الدخول إلى بوابة عمليات SBDV.",
+    "adminOnly": "هذه البوابة للمسؤولين فقط.",
+    "continueToAdmin": "تابعوا إلى العمليات"
   },
   "portal": {
-    "title": "Client Portal",
-    "signedInAs": "Signed in as",
+    "title": "بوابة العميل",
+    "signedInAs": "مسجّل الدخول باسم",
     "nav": {
-      "overview": "Overview",
-      "holdings": "Holdings",
-      "performance": "Performance",
-      "documents": "Documents",
-      "messages": "Messages",
-      "settings": "Settings",
-      "admin": "Admin Panel",
-      "logout": "Sign Out",
-      "mandate": "Mandate",
-      "funding": "Funding"
+      "overview": "نظرة عامة",
+      "holdings": "الحيازات",
+      "performance": "الأداء",
+      "documents": "المستندات",
+      "messages": "الرسائل",
+      "settings": "الإعدادات",
+      "admin": "لوحة الإدارة",
+      "logout": "تسجيل الخروج",
+      "mandate": "التفويض",
+      "funding": "التمويل"
     },
     "overview": {
-      "title": "Portfolio Overview",
-      "netWorth": "Total Net Worth",
-      "asOf": "As of",
-      "allocation": "Asset Allocation",
-      "recentActivity": "Recent Activity",
-      "bullionValue": "Bullion & Custody",
-      "financialValue": "Financial Portfolio",
-      "openMandate": "Open mandate",
-      "vaultHoldings": "Vault & financial holdings",
-      "empty": "No mandate or holdings yet. Fund the mandate or contact your relationship manager."
+      "title": "نظرة عامة على المحفظة",
+      "netWorth": "إجمالي صافي الثروة",
+      "asOf": "اعتبارًا من",
+      "allocation": "توزيع الأصول",
+      "recentActivity": "النشاط الأخير",
+      "bullionValue": "السبائك والحفظ",
+      "financialValue": "المحفظة المالية",
+      "openMandate": "فتح التفويض",
+      "vaultHoldings": "حيازات الخزينة والأصول المالية",
+      "empty": "لا يوجد تفويض أو حيازات بعد. موّلوا التفويض أو اتصلوا بمدير العلاقة."
     },
     "holdings": {
-      "title": "Holdings",
-      "bullionTab": "Bullion & Custody",
-      "financialTab": "Financial Portfolio",
-      "weight": "Weight",
-      "purity": "Purity",
-      "location": "Vault Location",
-      "auditStatus": "Audit Status",
-      "quantity": "Quantity",
-      "costBasis": "Cost Basis",
-      "marketValue": "Market Value",
-      "verified": "Verified",
-      "pending": "Pending Audit"
+      "title": "الحيازات",
+      "bullionTab": "السبائك والحفظ",
+      "financialTab": "المحفظة المالية",
+      "weight": "الوزن",
+      "purity": "النقاء",
+      "location": "موقع الخزينة",
+      "auditStatus": "حالة التدقيق",
+      "quantity": "الكمية",
+      "costBasis": "أساس التكلفة",
+      "marketValue": "القيمة السوقية",
+      "verified": "تم التدقيق",
+      "pending": "بانتظار التدقيق"
     },
     "performance": {
-      "title": "Performance",
-      "period": "Period",
-      "return": "Return",
-      "benchmark": "Benchmark",
-      "ytd": "Year to Date",
-      "oneYear": "1 Year",
-      "threeYear": "3 Years",
-      "allTime": "All Time",
-      "disclaimer": "Performance data is for illustration. Past performance is not indicative of future results."
+      "title": "الأداء",
+      "period": "الفترة",
+      "return": "العائد",
+      "benchmark": "المؤشر المرجعي",
+      "ytd": "منذ بداية السنة",
+      "oneYear": "سنة واحدة",
+      "threeYear": "3 سنوات",
+      "allTime": "كامل المدة",
+      "disclaimer": "بيانات الأداء للإيضاح. الأداء السابق ليس مؤشرًا على النتائج المستقبلية."
     },
     "documents": {
-      "title": "Document Vault",
-      "upload": "Upload Document",
-      "download": "Download",
-      "noDocuments": "No documents available.",
+      "title": "خزينة المستندات",
+      "upload": "رفع مستند",
+      "download": "تنزيل",
+      "noDocuments": "لا توجد مستندات متاحة.",
       "types": {
-        "statement": "Statement",
-        "contract": "Contract",
-        "kyc": "KYC Document",
-        "report": "Report",
-        "other": "Other"
+        "statement": "كشف حساب",
+        "contract": "عقد",
+        "kyc": "مستند KYC",
+        "report": "تقرير",
+        "other": "أخرى"
       }
     },
     "messages": {
-      "title": "Advisor Messages",
-      "compose": "New Message",
-      "subject": "Subject",
-      "body": "Message",
-      "send": "Send",
-      "noMessages": "No messages yet.",
-      "encrypted": "End-to-end encrypted communication"
+      "title": "رسائل المستشار",
+      "compose": "رسالة جديدة",
+      "subject": "الموضوع",
+      "body": "الرسالة",
+      "send": "إرسال",
+      "noMessages": "لا توجد رسائل بعد.",
+      "encrypted": "اتصال مشفّر من طرف إلى طرف."
     },
     "settings": {
-      "title": "Account Settings",
-      "mfaTitle": "Two-Factor Authentication",
-      "mfaEnabled": "Enabled",
-      "mfaDisabled": "Not enabled",
-      "enableMfa": "Enable MFA",
-      "sessions": "Active Sessions",
-      "notifications": "Email Notifications"
+      "title": "إعدادات الحساب",
+      "mfaTitle": "المصادقة الثنائية",
+      "mfaEnabled": "مُفعّل",
+      "mfaDisabled": "غير مُفعّل",
+      "enableMfa": "تفعيل MFA",
+      "sessions": "الجلسات النشطة",
+      "notifications": "إشعارات البريد الإلكتروني"
     },
     "mandate": {
-      "title": "Wealth mandate",
-      "subtitle": "Principal stays invested. Interest accrues on principal at the stated mandate yield. Withdraw interest or reinvest it — principal is not redeemed in this programme.",
-      "principal": "Principal",
-      "accrued": "Accrued interest",
-      "total": "Mandate total",
-      "yield": "Mandate yield",
-      "live": "Accruing",
-      "paused": "Yield paused",
-      "growth": "Growth",
-      "reinvest": "Reinvest accrued interest",
-      "withdraw": "Withdraw interest",
-      "withdrawTitle": "Withdraw accrued interest",
-      "amount": "Amount",
-      "accountName": "Account name",
-      "bankName": "Bank name",
-      "btcAddress": "Bitcoin address",
-      "submitWithdraw": "Request payout",
-      "activity": "Activity",
-      "when": "When",
-      "type": "Type",
-      "status": "Status",
-      "emptyActivity": "No mandate activity yet. Fund the mandate to begin.",
-      "unavailable": "No wealth mandate is attached to this account yet.",
-      "actionError": "Unable to complete that request.",
-      "disclaimer": "Not a bank deposit. Yield is a stated mandate rate and may be changed. Bitcoin transfers are irreversible.",
+      "title": "تفويض الثروة",
+      "subtitle": "يبقى أصل المبلغ مستثمرًا. تستحق الفائدة على الأصل وفق عائد التفويض المبيّن. اسحبوا الفائدة أو أعيدوا استثمارها — لا يُسترد أصل المبلغ في هذا البرنامج.",
+      "principal": "أصل المبلغ",
+      "accrued": "الفائدة المستحقة",
+      "total": "إجمالي التفويض",
+      "yield": "عائد التفويض",
+      "live": "قيد الاستحقاق",
+      "paused": "العائد متوقف",
+      "growth": "النمو",
+      "reinvest": "إعادة استثمار الفائدة المستحقة",
+      "withdraw": "سحب الفائدة",
+      "withdrawTitle": "سحب الفائدة المستحقة",
+      "amount": "المبلغ",
+      "accountName": "اسم الحساب",
+      "bankName": "اسم المصرف",
+      "btcAddress": "عنوان Bitcoin",
+      "submitWithdraw": "طلب الصرف",
+      "activity": "النشاط",
+      "when": "الوقت",
+      "type": "النوع",
+      "status": "الحالة",
+      "emptyActivity": "لا نشاط للتفويض بعد. موّلوا التفويض للبدء.",
+      "unavailable": "لا يرتبط بهذا الحساب تفويض ثروة بعد.",
+      "actionError": "تعذّر إتمام هذا الطلب.",
+      "disclaimer": "هذه ليست وديعة مصرفية. العائد معدل تفويض مبيّن، وقد يُغيَّر. التحويلات بـ Bitcoin لا رجعة فيها.",
       "types": {
-        "DEPOSIT_WIRE": "Wire funding",
-        "DEPOSIT_BTC": "Bitcoin funding",
-        "INTEREST_ACCRUAL": "Yield credited",
-        "INTEREST_WITHDRAW": "Interest withdrawal",
-        "INTEREST_REINVEST": "Interest reinvested",
-        "ADJUSTMENT": "Adjustment",
-        "FOUNDING_BONUS": "Founding bonus"
+        "DEPOSIT_WIRE": "تمويل بتحويل مصرفي",
+        "DEPOSIT_BTC": "تمويل بـ Bitcoin",
+        "INTEREST_ACCRUAL": "قيد العائد",
+        "INTEREST_WITHDRAW": "سحب الفائدة",
+        "INTEREST_REINVEST": "إعادة استثمار الفائدة",
+        "ADJUSTMENT": "تعديل",
+        "FOUNDING_BONUS": "مكافأة التأسيس"
       },
-      "fundTitle": "Choose how much to invest",
+      "fundTitle": "اختاروا المبلغ الذي تستثمرونه",
       "fundBody": "Review the mandate, then tell operations the USD amount and whether you will send a bank wire or Bitcoin. Principal is credited only after receipt is confirmed.",
-      "fundCta": "Choose amount and funding method"
+      "fundCta": "اختاروا المبلغ وطريقة التمويل"
     },
     "funding": {
-      "title": "Fund the mandate",
+      "title": "تمويل التفويض",
       "subtitle": "Request a wire or Bitcoin transfer. Principal is credited only after SBDV operations confirm receipt.",
-      "wire": "Bank wire",
+      "wire": "تحويل مصرفي",
       "btc": "Bitcoin",
-      "btcAmount": "Bitcoin amount (optional)",
-      "txid": "Transaction ID",
-      "note": "Note to operations",
-      "submit": "Submit funding notice",
-      "submitted": "Notice received. Quote this reference when you transfer:",
-      "instructions": "House instructions",
-      "beneficiary": "Beneficiary",
-      "accountNumber": "Account number",
-      "bankAddress": "Bank address",
+      "btcAmount": "مبلغ Bitcoin (اختياري)",
+      "txid": "معرّف المعاملة",
+      "note": "ملاحظة إلى العمليات",
+      "submit": "تقديم إشعار التمويل",
+      "submitted": "تم استلام الإشعار. اذكروا هذا المرجع عند التحويل:",
+      "instructions": "تعليمات الدار",
+      "beneficiary": "المستفيد",
+      "accountNumber": "رقم الحساب",
+      "bankAddress": "عنوان المصرف",
       "wireFallback": "Wire instructions will be confirmed by your relationship manager. Submit the notice so operations can match your transfer.",
-      "btcAddress": "SBDV receive address",
+      "btcAddress": "عنوان استلام SBDV",
       "btcQrAlt": "رمز QR لعنوان استلام البيتكوين الخاص بـ SBDV",
       "copyAddress": "نسخ العنوان",
       "copiedAddress": "تم النسخ",
       "btcNote": "Send only Bitcoin to this address. Include the txid on your notice. Credit is USD principal after ops confirmation — SBDV does not custody your keys.",
       "btcFallback": "A Bitcoin receive address will be provided by your relationship manager.",
-      "history": "Funding history",
-      "rail": "Rail",
-      "reference": "Reference",
-      "empty": "No funding notices yet.",
-      "waitingApprove": "Waiting for operations to approve this notice. House instructions will appear here after approval — do not send funds yet.",
-      "waitingProof": "Transfer using the instructions below, then upload payment proof.",
-      "proofUploaded": "Payment information received. Operations will confirm receipt.",
-      "credited": "Receipt confirmed. This amount is principal.",
-      "rejected": "This notice was not accepted. Submit a new funding notice if you still intend to fund.",
-      "uploadProof": "Upload payment proof",
-      "uploadHint": "PDF or JPEG of the wire confirmation or Bitcoin transfer. Optional txid for Bitcoin.",
-      "uploadSubmit": "Send payment information",
-      "uploadedFile": "Uploaded",
-      "beneficiaryAddress": "Beneficiary address",
-      "routing": "Local routing"
+      "history": "سجل التمويل",
+      "rail": "المسار",
+      "reference": "المرجع",
+      "empty": "لا توجد إشعارات تمويل بعد.",
+      "waitingApprove": "بانتظار موافقة العمليات على هذا الإشعار. ستظهر تعليمات الدار هنا بعد الموافقة — لا ترسلوا الأموال بعد.",
+      "waitingProof": "حوّلوا وفق التعليمات أدناه، ثم ارفعوا إثبات الدفع.",
+      "proofUploaded": "تم استلام معلومات الدفع. ستؤكد العمليات الاستلام.",
+      "credited": "تم تأكيد الاستلام. هذا المبلغ هو أصل المبلغ.",
+      "rejected": "لم يُقبل هذا الإشعار. إذا كنتم لا تزالون تنوون التمويل، فقدّموا إشعار تمويل جديدًا.",
+      "uploadProof": "رفع إثبات الدفع",
+      "uploadHint": "ملف PDF أو JPEG لتأكيد التحويل المصرفي أو لتحويل Bitcoin. txid اختياري لـ Bitcoin.",
+      "uploadSubmit": "إرسال معلومات الدفع",
+      "uploadedFile": "تم الرفع",
+      "beneficiaryAddress": "عنوان المستفيد",
+      "routing": "التوجيه المحلي"
     }
   },
   "admin": {
@@ -1027,48 +1027,48 @@
     "portalBadge": "Enterprise Partner Portal",
     "signedInAs": "Signed in as",
     "hero": {
-      "badge": "Institutional Capital Program",
-      "title": "Structured capital for qualified enterprises",
-      "subtitle": "SBDV is not a bank. A facility is not a deposit and not a commitment until it is approved.",
-      "applyAccess": "Apply for Access",
-      "partnerLogin": "Partner Login",
-      "eligibility": "Operating companies with at least two years of history, audited or reviewed accounts, and a request from USD 500,000. Approval is discretionary.",
-      "collateralRule": "The 10% is requested only after approval. It is cash collateral, not a fee. It is returned in full if SBDV declines other than for the applicant’s breach or a failed compliance check. Applying is not a commitment to lend."
+      "badge": "برنامج رأس المال المؤسسي",
+      "title": "رأس مال منظم للمؤسسات المؤهلة",
+      "subtitle": "SBDV ليست مصرفًا. التسهيل ليس وديعة، وليس التزامًا إلى أن يُوافق عليه.",
+      "applyAccess": "قدّموا لطلب الوصول",
+      "partnerLogin": "دخول الشركاء",
+      "eligibility": "شركات عاملة لها سنتان على الأقل من التاريخ، وحسابات مدققة أو مراجعة، وطلب من USD 500,000. الموافقة تقديرية.",
+      "collateralRule": "لا تُطلب نسبة 10% إلا بعد الموافقة. وهي ضمان نقدي وليست رسمًا. تُعاد بالكامل إذا رفضت SBDV لغير إخلال مقدم الطلب أو فشل فحص الامتثال. التقديم ليس التزامًا بالإقراض."
     },
     "features": {
-      "title": "Why enterprises choose Capital Access",
-      "subtitle": "A disciplined gateway between qualified companies and mandate-aligned capital — clarity first.",
-      "globalPoolsTitle": "Mandate-aligned pools",
-      "globalPoolsDesc": "Partially disclosed sovereign-grade pools matched to sector and region — not a black-box auction.",
-      "flexibleTermsTitle": "Terms you can plan around",
-      "flexibleTermsDesc": "Define amount, term, and monthly or annual interest over 1–10 years with live calculations.",
-      "enterpriseFocusTitle": "Built for operating companies",
-      "enterpriseFocusDesc": "For established enterprises with audited or reviewed financials and a clear investment thesis.",
-      "structuredSecurityTitle": "Process without surprise",
-      "structuredSecurityDesc": "10% cash collateral, full KYC/UBO look-through, and discretionary approval under Swiss AML standards."
+      "title": "لماذا تختار المؤسسات Capital Access",
+      "subtitle": "بوابة منضبطة بين الشركات المؤهلة ورأس المال المتوافق مع التفويض — الوضوح أولًا.",
+      "globalPoolsTitle": "مجموعات متوافقة مع التفويض",
+      "globalPoolsDesc": "مجموعات بمستوى سيادي مفصح عنها جزئيًا، ومطابقة للقطاع والمنطقة — وليس مزادًا مغلقًا.",
+      "flexibleTermsTitle": "شروط يمكن التخطيط على أساسها",
+      "flexibleTermsDesc": "حدّدوا المبلغ والأجل والفائدة الشهرية أو السنوية على مدى 1–10 سنوات، مع حسابات آنية.",
+      "enterpriseFocusTitle": "مُعدّ للشركات العاملة",
+      "enterpriseFocusDesc": "للمؤسسات الراسخة ذات البيانات المالية المدققة أو المراجعة وأطروحة استثمار واضحة.",
+      "structuredSecurityTitle": "إجراء بلا مفاجآت",
+      "structuredSecurityDesc": "ضمان نقدي بنسبة 10%، وفحص كامل لـ KYC/UBO، وموافقة تقديرية وفق معايير AML السويسرية."
     },
     "howItWorks": {
       "title": "How It Works",
       "registerTitle": "Register as a Capital Partner",
       "registerDesc": "Create your enterprise account and verify your company credentials.",
       "exploreTitle": "Explore Available Pools",
-      "exploreDesc": "Browse partially disclosed sovereign capital pools aligned with your sector and region.",
+      "exploreDesc": "تصفحوا مجموعات رأس المال السيادي المفصح عنها جزئيًا، والمتوافقة مع قطاعكم ومنطقتكم.",
       "structureTitle": "Structure Your Request",
-      "structureDesc": "Define loan amount, term, repayment frequency, and review live interest calculations.",
+      "structureDesc": "حدّدوا مبلغ القرض والأجل ودورية السداد، وراجعوا حسابات الفائدة الآنية.",
       "submitTitle": "Submit Company Profile",
       "submitDesc": "Provide financials, investment areas, and accept the 10% security deposit condition.",
       "decisionTitle": "Await Institutional Review",
       "decisionDesc": "Your application enters our review queue. You will receive approval or rejection notification.",
-      "prepareTitle": "Prepare your file",
-      "prepareDesc": "Confirm eligibility (enterprise, USD 500,000+, two years of operations). Gather local-register extracts, audited accounts, and beneficial-owner details. Local equivalents and certified translations are accepted.",
-      "reviewTitle": "Institutional review",
-      "reviewDesc": "SBDV reviews documents, beneficial owners, and mandate alignment. Approval is discretionary and is not a commitment until issued.",
-      "depositTitle": "Security deposit and origin of funds",
-      "depositDesc": "After approval, accept the Facility Terms, wire the 10% cash collateral, and declare the source of those funds.",
-      "kycTitle": "KYC and sanctions screening",
-      "kycDesc": "Swiss AML screening of the company, signatories, and ultimate beneficial owners. High-risk jurisdictions receive enhanced due diligence.",
-      "fundingTitle": "Disbursement and repayment",
-      "fundingDesc": "Submit a bank account in the borrower’s name (SWIFT plus IBAN or local account number). Funds are released in USD; repay on the schedule in your dashboard."
+      "prepareTitle": "إعداد الملف",
+      "prepareDesc": "أكدوا الأهلية (مؤسسة، USD 500,000+، سنتان من التشغيل). جهّزوا مستخرجات السجل المحلي والحسابات المدققة وبيانات المالك المستفيد. تُقبل المعادلات المحلية والترجمات المصدّقة.",
+      "reviewTitle": "مراجعة مؤسسية",
+      "reviewDesc": "تراجع SBDV المستندات والمالكين المنتفعين ومواءمة التفويض. الموافقة تقديرية وليست التزامًا إلى أن تُصدر.",
+      "depositTitle": "وديعة الضمان ومصدر الأموال",
+      "depositDesc": "بعد الموافقة، اقبلوا شروط التسهيل، وحوّلوا الضمان النقدي بنسبة 10%، وصرّحوا بمصدر تلك الأموال.",
+      "kycTitle": "فحص KYC والعقوبات",
+      "kycDesc": "فحص AML سويسري للشركة والمفوضين بالتوقيع والمالكين المنتفعين النهائيين. تتلقى الولايات القضائية عالية المخاطر عناية واجبة معززة.",
+      "fundingTitle": "الصرف والسداد",
+      "fundingDesc": "قدّموا حسابًا مصرفيًا باسم المقترض (SWIFT مع IBAN أو رقم الحساب المحلي). تُصرف الأموال بـ USD. سدّدوا وفق الجدول في لوحتكم."
     },
     "nav": {
       "overview": "Overview",
@@ -1118,17 +1118,17 @@
     "requestFromPool": "Request from this pool",
     "startRequest": "Start Capital Request",
     "register": {
-      "title": "Register for Capital Access",
+      "title": "التسجيل في Capital Access",
       "subtitle": "Create your enterprise partner account to explore sovereign capital pools.",
-      "fullName": "Full Name",
-      "phone": "Phone (optional)",
-      "submit": "Create Partner Account",
-      "hasAccount": "Already registered?",
-      "error": "Registration failed. Please try again.",
-      "welcomeTitle": "Account created successfully",
-      "welcomeBody": "Your Capital Access account is ready. Sign in with the email and password you just created.",
-      "welcomeEmail": "Email",
-      "goToLogin": "Go to login"
+      "fullName": "الاسم الكامل",
+      "phone": "الهاتف (اختياري)",
+      "submit": "إنشاء حساب شريك",
+      "hasAccount": "هل أنتم مسجّلون؟",
+      "error": "فشل التسجيل. يُرجى المحاولة مرة أخرى.",
+      "welcomeTitle": "تم إنشاء الحساب بنجاح",
+      "welcomeBody": "حساب Capital Access جاهز. سجّلوا الدخول بالبريد وكلمة المرور اللذين أنشأتموهما للتو.",
+      "welcomeEmail": "البريد الإلكتروني",
+      "goToLogin": "إلى تسجيل الدخول"
     },
     "request": {
       "title": "طلب رأس المال",
@@ -1346,103 +1346,109 @@
       "repayFailed": "Could not submit this repayment. Please try again."
     },
     "facilityTerms": {
-      "eyebrow": "Capital Access Program",
+      "eyebrow": "برنامج Capital Access",
       "pageTitle": "شروط التسهيل",
-      "intro": "These terms govern your capital facility, including the 10% security deposit, interest, repayment, default, and Swiss governing law. Read them in full before you accept.",
-      "versionLabel": "Document",
-      "effectiveLabel": "Effective",
-      "languageLabel": "Governing language",
-      "governingNote": "English is the governing language of this instrument. A translation, if provided, is for convenience only.",
-      "contents": "Contents",
+      "intro": "تحكم هذه الشروط تسهيل رأس المال الخاص بكم، بما في ذلك وديعة الضمان بنسبة 10% والفائدة والسداد والإخلال والقانون السويسري الواجب التطبيق. اقرأوها كاملة قبل القبول.",
+      "versionLabel": "المستند",
+      "effectiveLabel": "النفاذ",
+      "languageLabel": "اللغة الحاكمة",
+      "governingNote": "اللغة الحاكمة لهذا الصك هي الإنجليزية. أي ترجمة، إن قُدّمت، هي للتيسير فحسب.",
+      "contents": "المحتويات",
       "acceptBefore": "لقد قرأت وأقبل",
       "linkLabel": "شروط التسهيل",
-      "acceptAfter": ", including the 10% security deposit, interest, repayment, default, and governing-law provisions, and I confirm that I am authorised to bind the borrower.",
-      "acceptedNote": "Facility Terms and Conditions accepted",
-      "print": "Print or save",
-      "backFacility": "Return to facility dashboard"
+      "acceptAfter": "، بما في ذلك أحكام وديعة الضمان بنسبة 10% والفائدة والسداد والإخلال والقانون الواجب التطبيق، وأؤكد أنني مخوّل بإلزام المقترض.",
+      "acceptedNote": "تم قبول شروط وأحكام التسهيل",
+      "print": "طباعة أو حفظ",
+      "backFacility": "العودة إلى لوحة التسهيل"
     },
     "whoCanApply": {
-      "title": "Who can apply",
-      "worldwide": "Enterprises worldwide may apply. Vault membership is a separate request, reviewed before access. Capital Access is open to qualified companies.",
-      "enterprise": "This is not a personal or consumer loan. The applicant must be an operating company.",
-      "ticket": "Minimum request USD 500,000; two years of operating history; audited or reviewed financials.",
-      "kyc": "Full KYC, beneficial-ownership look-through, and sanctions screening under Swiss AML rules.",
-      "sanctions": "Comprehensively sanctioned persons and jurisdictions cannot be onboarded. Approval is always discretionary.",
-      "currency": "Facilities are denominated in USD. If your operating cash flow is in another currency, you accept foreign-exchange risk."
+      "title": "من يمكنه التقديم",
+      "worldwide": "يجوز للمؤسسات في أنحاء العالم أن تتقدم. عضوية الخزينة طلب منفصل، ويُراجع قبل الوصول. Capital Access متاح للشركات المؤهلة.",
+      "enterprise": "هذا ليس قرضًا شخصيًا أو استهلاكيًا. يجب أن يكون مقدم الطلب شركة عاملة.",
+      "ticket": "الحد الأدنى للطلب USD 500,000، وسنتان من تاريخ التشغيل، وبيانات مالية مدققة أو مراجعة.",
+      "kyc": "KYC كامل، وفحص الملكية الانتفاعية، وفحص العقوبات وفق قواعد AML السويسرية.",
+      "sanctions": "لا يمكن قبول الأشخاص والولايات القضائية الخاضعة لعقوبات شاملة. الموافقة تقديرية دائمًا.",
+      "currency": "التسهيلات مقوّمة بـ USD. إذا كان تدفقكم النقدي التشغيلي بعملة أخرى، فإنكم تقبلون مخاطر الصرف الأجنبي."
     },
     "timeline": {
-      "title": "Indicative timeline",
-      "note": "Times are typical, not a commitment. Incomplete files or enhanced due diligence take longer.",
-      "apply": "Application",
-      "applyTime": "1–2 weeks",
-      "dd": "Document and UBO review",
-      "ddTime": "2–4 weeks",
-      "kyc": "KYC after deposit",
-      "kycTime": "5–10 business days",
-      "funding": "Closing and funding",
-      "fundingTime": "3–7 days"
+      "title": "جدول زمني إرشادي",
+      "note": "المدد نموذجية وليست التزامًا. الملفات الناقصة أو العناية الواجبة المعززة تستغرق وقتًا أطول.",
+      "apply": "الطلب",
+      "applyTime": "1–2 أسابيع",
+      "dd": "مراجعة المستندات وUBO",
+      "ddTime": "2–4 أسابيع",
+      "kyc": "KYC بعد الإيداع",
+      "kycTime": "5–10 أيام عمل",
+      "funding": "الإغلاق والتمويل",
+      "fundingTime": "3–7 أيام"
     },
     "settings": {
       "title": "Account Settings"
     }
   },
   "chat": {
-    "open": "Ask SBDV",
-    "title": "SBDV Concierge",
-    "subtitle": "Private guidance · 24/7",
-    "greeting": "Welcome to SBDV. I'm your digital concierge — ask about vault custody, membership, wealth services, or our Capital Access Program.",
-    "greetingNamed": "Hello, {name}. I'm your SBDV concierge — I can help with your account, guide you through services, or answer questions about membership and capital access.",
-    "placeholder": "Ask a question…",
-    "send": "Send message",
-    "minimize": "Minimize chat",
-    "close": "Close and clear chat",
-    "error": "I'm sorry, I couldn't process that. Please try again or use the Contact page for direct assistance.",
-    "disclaimer": "AI-assisted guidance. For binding advice, contact your relationship manager."
+    "open": "اسألوا SBDV",
+    "title": "كونسيرج SBDV",
+    "subtitle": "إرشاد خاص · 24/7",
+    "greeting": "مرحبًا بكم في SBDV. أنا الكونسيرج الرقمي — اسألوا عن حفظ الخزينة، أو العضوية، أو خدمات الثروة، أو برنامج Capital Access.",
+    "greetingNamed": "مرحبًا {name}. أنا كونسيرج SBDV — أساعدكم في حسابكم، وأرشدكم عبر الخدمات، أو أجيب عن الأسئلة المتعلقة بالعضوية وCapital Access.",
+    "placeholder": "اطرحوا سؤالًا…",
+    "send": "إرسال الرسالة",
+    "minimize": "تصغير المحادثة",
+    "close": "إغلاق المحادثة ومسحها",
+    "error": "نأسف، تعذّر معالجة ذلك. يُرجى المحاولة مرة أخرى أو استخدام صفحة الاتصال للمساعدة المباشرة.",
+    "disclaimer": "إرشاد بمساعدة الذكاء الاصطناعي. للمشورة الملزمة، اتصلوا بمدير العلاقة."
   },
   "accountSecurity": {
     "roles": {
-      "admin": "Administrator",
-      "client": "Client",
-      "borrower": "Enterprise Partner"
+      "admin": "المسؤول",
+      "client": "العميل",
+      "borrower": "الشريك المؤسسي"
     },
     "summary": {
-      "title": "Security overview",
-      "email": "Email",
-      "role": "Account type",
-      "mfa": "Two-factor authentication",
-      "memberSince": "Member since",
-      "lastSignIn": "Last sign-in"
+      "title": "نظرة عامة على الأمن",
+      "email": "البريد الإلكتروني",
+      "role": "نوع الحساب",
+      "mfa": "المصادقة الثنائية",
+      "memberSince": "تاريخ العضوية",
+      "lastSignIn": "آخر تسجيل دخول",
+      "thisSignIn": "تسجيل الدخول هذا",
+      "previousSignIn": "تسجيل الدخول السابق",
+      "location": "الموقع",
+      "ipAddress": "عنوان IP",
+      "unknownLocation": "غير معروف",
+      "localNetwork": "محلي"
     },
     "password": {
-      "title": "Change password",
-      "hint": "Use at least 8 characters. You will remain signed in on this device after updating.",
-      "current": "Current password",
-      "new": "New password",
-      "confirm": "Confirm new password",
-      "submit": "Update password",
-      "saving": "Updating…",
-      "success": "Password updated successfully. A confirmation was sent to your email.",
-      "errorGeneric": "Unable to change password. Please try again."
+      "title": "تغيير كلمة المرور",
+      "hint": "استخدموا 8 أحرفًا على الأقل. ستبقون مسجّلين الدخول على هذا الجهاز بعد التحديث.",
+      "current": "كلمة المرور الحالية",
+      "new": "كلمة مرور جديدة",
+      "confirm": "تأكيد كلمة المرور الجديدة",
+      "submit": "تحديث كلمة المرور",
+      "saving": "جارٍ التحديث…",
+      "success": "تم تحديث كلمة المرور. أُرسل تأكيد إلى بريدكم الإلكتروني.",
+      "errorGeneric": "تعذّر تغيير كلمة المرور. يُرجى المحاولة مرة أخرى."
     },
     "mfa": {
-      "title": "Two-factor authentication",
-      "disabled": "Add a second step after your password to protect your account.",
-      "enabledTotp": "Authenticator app codes are enabled for sign-in.",
-      "enabledEmail": "Email sign-in codes are enabled. A code is sent to your account email after your password is accepted.",
-      "statusOff": "Not enabled",
-      "statusTotp": "Authenticator app",
-      "statusEmail": "Email codes",
-      "enableTotp": "Enable authenticator app",
-      "enableEmail": "Enable email codes",
-      "disable": "Disable MFA",
-      "secretLabel": "Add this secret to your authenticator app:",
-      "verifyEnable": "Verify & enable",
-      "invalidCode": "Invalid authenticator code."
+      "title": "المصادقة الثنائية",
+      "disabled": "أضيفوا خطوة ثانية بعد كلمة المرور لحماية حسابكم.",
+      "enabledTotp": "رموز تطبيق المصادقة مُفعّلة لتسجيل الدخول.",
+      "enabledEmail": "رموز تسجيل الدخول بالبريد الإلكتروني مُفعّلة. يُرسَل رمز إلى بريد الحساب بعد قبول كلمة المرور.",
+      "statusOff": "غير مُفعّل",
+      "statusTotp": "تطبيق المصادقة",
+      "statusEmail": "رموز البريد الإلكتروني",
+      "enableTotp": "تفعيل تطبيق المصادقة",
+      "enableEmail": "تفعيل رموز البريد الإلكتروني",
+      "disable": "إيقاف MFA",
+      "secretLabel": "أضيفوا هذا السر إلى تطبيق المصادقة:",
+      "verifyEnable": "التحقق والتفعيل",
+      "invalidCode": "رمز المصادقة غير صالح."
     },
     "session": {
-      "title": "Session",
-      "description": "End your session on this browser. You will need to sign in again to access the portal.",
-      "signOutDevice": "Sign out of this device"
+      "title": "الجلسة",
+      "description": "تُنهون جلستكم على هذا المتصفح. يلزم تسجيل الدخول مرة أخرى للوصول إلى بوابة العميل.",
+      "signOutDevice": "تسجيل الخروج من هذا الجهاز"
     }
   }
 }

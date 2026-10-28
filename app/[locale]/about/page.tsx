@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageTitle } from "@/lib/i18n";
 import { Locale } from "@/proxy";
 import AboutHeroSection from "@/sections/about/AboutHeroSection";
 import AboutContentSection from "@/sections/about/AboutContentSection";
@@ -9,9 +10,9 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
-  await params;
+  const { locale } = await params;
   return {
-    title: "About | Swiss Bullion Depository Vault",
+    title: pageTitle(locale, "about.title"),
     description: "Learn about SBDV - a private Swiss institution safeguarding global wealth with uncompromising security and Swiss precision.",
   };
 }

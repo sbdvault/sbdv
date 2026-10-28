@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageTitle } from "@/lib/i18n";
 import { Locale } from "@/proxy";
 import CapitalAccessHeroSection, {
   CapitalAccessFeaturesSection,
@@ -11,9 +12,9 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
-  await params;
+  const { locale } = await params;
   return {
-    title: "Capital Access Program | Swiss Bullion Depository Vault",
+    title: pageTitle(locale, "capitalAccess.facilityTerms.eyebrow"),
     description:
       "Qualified enterprises worldwide may apply for institutional capital. Structured USD facilities with Swiss KYC, a 10% security deposit, and mandate-aligned investment.",
   };

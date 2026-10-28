@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
+import { pageTitle } from "@/lib/i18n";
 import { Locale } from "@/proxy";
 import LegalPageSection from "@/sections/legal/LegalPageSection";
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
   return {
-    title: "Terms of Service | Swiss Bullion Depository Vault",
+    title: pageTitle(locale, "legal.termsTitle"),
     description: "Terms governing SBDV vault custody, investment services, and client portal use.",
   };
 }

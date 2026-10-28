@@ -1,11 +1,11 @@
 {
   "nav": {
-    "home": "Home",
-    "about": "About",
+    "home": "ホーム",
+    "about": "概要",
     "vault": "金庫とセキュリティ",
     "wealth": "資産運用・投資",
     "capitalAccess": "Capital Access",
-    "services": "Services",
+    "services": "サービス",
     "membership": "メンバーシップ",
     "contact": "連絡",
     "clientLogin": "クライアントログイン",
@@ -18,19 +18,19 @@
       "servicesDesc": "リース、閲覧、オペレーション",
       "membershipDesc": "ハウスへの道"
     },
-    "myPortal": "My portal"
+    "myPortal": "マイポータル"
   },
   "hero": {
     "headline": "スイスの安全性。規律ある成長。",
-    "subtext": "Private clients use Swiss custody or a wealth mandate. Qualified enterprises may apply for a structured capital facility. SBDV is not a bank.",
-    "exploreCapital": "Capital Access を見る",
+    "subtext": "プライベートクライアントは、スイスのカストディまたはウェルス・マンデートを利用します。適格企業は、構造化キャピタル・ファシリティを申請できます。SBDVは銀行ではありません。",
+    "exploreCapital": "企業",
     "privateClients": "プライベートクライアント",
-    "requestAccess": "Request Access",
+    "requestAccess": "アクセスを請求",
     "clientLogin": "クライアントログイン",
-    "investorRelations": "Investor Relations"
+    "investorRelations": "投資家向け情報"
   },
   "footer": {
-    "copyright": "Swiss Bullion Depository Vault — Swiss Precision. Global Trust.",
+    "copyright": "Swiss Bullion Depository Vault — スイスの精密。世界の信頼。",
     "headquarters": "本社",
     "globalOffices": "グローバルオフィス",
     "legal": "法務",
@@ -40,472 +40,472 @@
     "investorRelations": "投資家向け情報",
     "offices": {
       "zurich": {
-        "city": "Zurich",
-        "country": "Switzerland",
-        "label": "Global Headquarters",
+        "city": "チューリッヒ",
+        "country": "スイス",
+        "label": "グローバル本社",
         "address": "Bahnhofstrasse 45, 8001 Zurich, Switzerland",
         "timezone": "CET (UTC+1)"
       },
       "dubai": {
-        "city": "Dubai",
-        "country": "United Arab Emirates",
-        "label": "Middle East & Africa",
+        "city": "ドバイ",
+        "country": "アラブ首長国連邦",
+        "label": "中東・アフリカ",
         "address": "DIFC Gate Village 10, Dubai, UAE",
         "timezone": "GST (UTC+4)"
       },
       "singapore": {
-        "city": "Singapore",
-        "country": "Singapore",
-        "label": "Asia Pacific",
+        "city": "シンガポール",
+        "country": "シンガポール",
+        "label": "アジア太平洋",
         "address": "10 Collyer Quay, Ocean Financial Centre, Singapore",
         "timezone": "SGT (UTC+8)"
       },
       "newYork": {
-        "city": "New York",
-        "country": "United States",
-        "label": "Americas",
+        "city": "ニューヨーク",
+        "country": "米国",
+        "label": "米州",
         "address": "280 Park Avenue, New York, NY 10017, USA",
         "timezone": "EST (UTC-5)"
       }
     },
     "jurisdictionNote": "スイス法基盤。グローバル顧客のための多法域アクセス。",
-    "facilityTerms": "Facility Terms"
+    "facilityTerms": "ファシリティ条件"
   },
   "about": {
-    "title": "About",
-    "eyebrow": "Zurich · Swiss institution",
-    "heroTitle": "The Firm",
-    "heroSubtitle": "One house, two practices: private wealth custody for discerning clients, and structured capital for qualified enterprises.",
+    "title": "概要",
+    "eyebrow": "チューリッヒ · スイスの機関",
+    "heroTitle": "当ハウス",
+    "heroSubtitle": "一つのハウス、二つの実務です。見識あるお客様のためのプライベートな資産カストディと、適格企業のための構造化キャピタルです。",
     "identityName": "Swiss Bullion Depository Vault",
-    "identityNameLabel": "Name",
-    "identitySeatLabel": "Seat",
-    "whoTitle": "Who we are",
-    "whoText": "Seated in Zurich, SBDV preserves private wealth with discretion and arranges mandate-aligned capital facilities for qualified enterprises — under documented review, Swiss AML standards, and clear repayment terms.",
-    "sectionTitle": "About SBDV",
-    "sectionDescription": "A Swiss institution built for quiet custody and disciplined enterprise capital — not retail noise.",
-    "missionTitle": "Our Mission",
-    "missionText": "To preserve wealth and trust with Swiss precision — and to arrange structured capital for qualified enterprises under the same standard of review.",
-    "visionTitle": "Our Vision",
-    "visionText": "To be the Swiss house clients choose when custody must stay silent and capital must stay disciplined — trusted by private wealth and by enterprises that prefer clarity over chaos.",
-    "aboutTitle": "About SBDV",
-    "aboutParagraph1": "Swiss Bullion Depository Vault is a Zurich-seated institution. We combine private vault custody with a Capital Access Program for qualified operating companies — two practices, one Swiss standard of discretion and review.",
-    "aboutParagraph2": "Private clients come for vault custody or a wealth mandate. Enterprises come for transparent facility structure, KYC/UBO look-through, and a partner portal that keeps the process legible from application to repayment.",
-    "aboutParagraph3": "We do not compete on hype. We compete on documentation, mandate alignment, and the quiet confidence of Swiss operating discipline.",
-    "valuesTitle": "Principles",
+    "identityNameLabel": "名称",
+    "identitySeatLabel": "本拠",
+    "whoTitle": "当ハウスとは",
+    "whoText": "チューリッヒに本拠を置くSBDVは、慎重さをもってプライベートな資産を保全し、適格企業のためにマンデートに整合したキャピタル・ファシリティを手配します。文書化された審査、スイスのAML基準、および明確な返済条件の下で行います。",
+    "sectionTitle": "SBDVについて",
+    "sectionDescription": "静かなカストディと、規律ある企業向けキャピタルのために築かれたスイスの機関です。リテールの喧噪のためではありません。",
+    "missionTitle": "使命",
+    "missionText": "スイスの精密さをもって資産と信頼を保全すること。そして同じ審査基準の下で、適格企業のために構造化キャピタルを手配することです。",
+    "visionTitle": "ビジョン",
+    "visionText": "カストディは静かに、キャピタルは規律をもって、とお客様が選ぶスイスのハウスであること。プライベートな資産から、混乱より明確さを選ぶ企業から、信頼されることです。",
+    "aboutTitle": "SBDVについて",
+    "aboutParagraph1": "Swiss Bullion Depository Vaultは、チューリッヒに本拠を置く機関です。プライベート金庫のカストディと、適格な事業会社向けのCapital Accessプログラムとを組み合わせています。二つの実務、一つのスイス基準の慎重さと審査です。",
+    "aboutParagraph2": "プライベートクライアントは、金庫カストディまたはウェルス・マンデートのために来られます。企業は、透明なファシリティ構造、KYC/UBOのルックスルー、および申請から返済まで過程を読み取れるパートナーポータルのために来られます。",
+    "aboutParagraph3": "誇張で競うことはありません。文書、マンデートとの整合、およびスイスの運営規律が持つ静かな確かさで臨みます。",
+    "valuesTitle": "原則",
     "values": {
       "discretion": {
-        "title": "Discretion",
-        "description": "Privacy is our foundation. Every client interaction is handled with absolute confidentiality."
+        "title": "慎重",
+        "description": "プライバシーは基盤です。お客様とのすべてのやり取りは、完全な機密として取り扱います。"
       },
       "precision": {
-        "title": "Precision",
-        "description": "Swiss accuracy in every detail. From security protocols to client service, precision is non-negotiable."
+        "title": "精密",
+        "description": "細部にわたるスイスの正確さです。セキュリティの手順からお客様対応まで、精密さは譲れません。"
       },
       "security": {
-        "title": "Security",
-        "description": "Layered protection beyond compromise. Multiple defense systems working in harmony."
+        "title": "セキュリティ",
+        "description": "妥協のない多層の保護です。複数の防御が協調して機能します。"
       },
       "integrity": {
-        "title": "Integrity",
-        "description": "Built on trust, proven by time. Our word is our bond, and our actions reflect our values."
+        "title": "誠実",
+        "description": "信頼の上に築き、時が証明してきました。言葉は約束であり、行動は価値観を示します。"
       }
     },
     "practices": {
-      "privateLabel": "Private clients",
-      "privateTitle": "Custody and wealth",
-      "privateText": "Vault & Security membership for bullion custody, and a separate Wealth & Investment mandate for clients who fund principal and watch stated yield.",
-      "capitalLabel": "Enterprises",
+      "privateLabel": "プライベートクライアント",
+      "privateTitle": "カストディと資産",
+      "privateText": "地金カストディのための金庫とセキュリティのメンバーシップ、ならびに元本を拠出し表示利回りを確認するお客様のための、別途の資産運用・投資マンデートです。",
+      "capitalLabel": "企業",
       "capitalTitle": "Capital Access",
-      "capitalText": "Structured facilities for qualified companies — documentation, 10% cash collateral, Swiss AML review, and a confirmed repayment plan. Approval is discretionary."
+      "capitalText": "適格企業向けの構造化ファシリティです。文書、10%の現金担保、スイスのAML審査、および確認された返済計画を備えます。承認は裁量によります。"
     },
-    "serveTitle": "Who we serve",
+    "serveTitle": "お迎えするお客様",
     "serve": {
-      "investors": "Private investors who require custody and discretion.",
-      "offices": "Family offices and sovereign clients with a long horizon.",
-      "enterprises": "Established companies seeking documented growth capital — not consumer credit."
+      "investors": "カストディと慎重さを必要とするプライベート投資家です。",
+      "offices": "長い期間を見据えるファミリーオフィスおよびソブリンのお客様です。",
+      "enterprises": "文書化された成長キャピタルを求める、確立した企業です。消費者信用ではありません。"
     },
     "close": {
-      "membership": "Request vault membership",
-      "capital": "Explore Capital Access"
+      "membership": "金庫メンバーシップを請求",
+      "capital": "Capital Accessを見る"
     },
-    "locationTitle": "Swiss foundation. Global reach.",
-    "locationDescription": "Headquartered in Zurich with regional presence for international relationships. The standard is Swiss; access is worldwide for approved clients and qualified enterprises.",
-    "worldwideAccessibility": "Worldwide Accessibility"
+    "locationTitle": "スイスを基盤に。グローバルな到達。",
+    "locationDescription": "国際的な関係のための地域拠点を備え、チューリッヒに本社を置きます。基準はスイスです。承認されたお客様および適格企業のアクセスは、世界各地に開かれています。",
+    "worldwideAccessibility": "世界各地からのアクセス"
   },
   "vault": {
-    "title": "Vault & Security",
-    "heroTitle": "The Vault",
-    "heroSubtitle": "Custody engineered for quiet confidence — layered defense, continuous oversight, and Swiss operating discipline.",
-    "vaultsTitle": "Our Vaults",
-    "vaultsDescription": "Bullion facilities built for multi-tiered defense, continuous monitoring, and auditable chain of custody.",
+    "title": "金庫とセキュリティ",
+    "heroTitle": "金庫",
+    "heroSubtitle": "静かな確信のために設計されたカストディです。多層の防御、継続的な監督、およびスイスの運営規律を備えます。",
+    "vaultsTitle": "当ハウスの金庫",
+    "vaultsDescription": "多層の防御、継続的な監視、および監査可能なカストディの連鎖のために構築された地金施設です。",
     "vaultFeatures": {
       "multiTiered": {
-        "title": "Layered defense",
-        "description": "Physical and procedural controls that protect holdings at every stage of custody."
+        "title": "多層防御",
+        "description": "カストディのあらゆる段階で保有を守る、物理的および手続上の管理です。"
       },
       "surveillance": {
-        "title": "Continuous oversight",
-        "description": "Monitoring designed for accountability — not theatre."
+        "title": "継続的な監督",
+        "description": "責任を果たすための監視です。演出のためではありません。"
       },
       "engineering": {
-        "title": "Swiss engineering",
-        "description": "Built and operated to standards private clients expect from a Zurich-seated house."
+        "title": "スイスの技術",
+        "description": "チューリッヒに本拠を置くハウスに、プライベートクライアントが期待する基準で建設し、運営しています。"
       }
     },
-    "vaultPageTitle": "The Vault",
-    "vaultPageDescription": "A private custody environment for bullion and valuables — designed so wealth can rest without noise.",
+    "vaultPageTitle": "金庫",
+    "vaultPageDescription": "地金および貴重品のためのプライベートなカストディ環境です。資産が喧噪なく休めるように設計されています。",
     "vaultPageFeatures": {
       "defense": {
-        "title": "Layered defense",
-        "description": "Controls at every level of access"
+        "title": "多層防御",
+        "description": "アクセスのあらゆる層における管理"
       },
       "monitoring": {
-        "title": "Continuous oversight",
-        "description": "Accountable monitoring protocols"
+        "title": "継続的な監督",
+        "description": "責任を伴う監視手順"
       },
       "impenetrable": {
-        "title": "Swiss-built custody",
-        "description": "Engineering over marketing claims"
+        "title": "スイス仕様のカストディ",
+        "description": "宣伝上の主張ではなく、技術"
       },
       "technology": {
-        "title": "Modern controls",
-        "description": "Systems that support audit and access"
+        "title": "現代的な管理",
+        "description": "監査とアクセスを支えるシステム"
       }
     },
-    "securityArchitectureTitle": "Security Architecture",
-    "securityArchitectureDescription": "A multi-layered security model combining controlled access, monitoring, and Swiss operational precision.",
+    "securityArchitectureTitle": "セキュリティ架構",
+    "securityArchitectureDescription": "管理されたアクセス、監視、およびスイスの運営上の精密さを組み合わせた、多層のセキュリティモデルです。",
     "securityFeatures": {
       "biometrics": {
-        "title": "Biometrics",
-        "description": "Advanced biometric authentication systems ensuring only authorized personnel can access secure areas."
+        "title": "生体認証",
+        "description": "権限を有する要員のみがセキュアな区域にアクセスできるよう確保する、高度な生体認証システムです。"
       },
       "seismic": {
-        "title": "Seismic Sensors",
-        "description": "State-of-the-art seismic monitoring to detect any unauthorized access attempts or structural anomalies."
+        "title": "地震センサー",
+        "description": "不正なアクセスの試みまたは構造上の異常を検知するための、最新の地震監視です。"
       },
       "accessControl": {
-        "title": "Access Control",
-        "description": "Multi-factor authentication with encrypted access protocols and real-time authorization verification."
+        "title": "アクセス制御",
+        "description": "暗号化されたアクセス手順と、リアルタイムの権限確認を備えた多要素認証です。"
       },
       "insurance": {
-        "title": "Insurance",
-        "description": "Comprehensive coverage through leading global insurers, providing full protection for all stored assets."
+        "title": "保険",
+        "description": "主要なグローバル保険会社を通じた包括的な付保であり、保管するすべての資産に完全な保護を提供します。"
       }
     },
-    "accessProtocolTitle": "Quiet access protocols",
-    "accessProtocolDescription": "Entry is deliberate: verify identity, confirm authorization, then grant access — so custody stays accountable without theatre.",
+    "accessProtocolTitle": "静かなアクセス手順",
+    "accessProtocolDescription": "入場は意図的です。本人を確認し、権限を確認し、その後アクセスを認めます。カストディは、演出なく責任を保てます。",
     "accessProtocolSteps": {
       "step1": {
-        "title": "Identity verification",
-        "description": "Multi-factor confirmation before any entry"
+        "title": "本人確認",
+        "description": "入場前の多要素確認"
       },
       "step2": {
-        "title": "Authorization review",
-        "description": "Prior approval required for each visit"
+        "title": "権限の審査",
+        "description": "訪問のたびに事前の承認が必要です"
       },
       "step3": {
-        "title": "Controlled access",
-        "description": "Entry granted only when cleared"
+        "title": "管理されたアクセス",
+        "description": "確認が済んだ場合にのみ入場を認めます"
       }
     }
   },
   "services": {
-    "title": "Services",
-    "heroTitle": "Private-client services",
-    "heroSubtitle": "The operating suite behind Swiss custody — leasing, bullion verification, insurance reporting, and private viewing.",
-    "sectionTitle": "Custody services",
+    "title": "サービス",
+    "heroTitle": "プライベートクライアント向けサービス",
+    "heroSubtitle": "スイスのカストディを支える運営一式です。リース、地金の検証、保険報告、およびプライベート閲覧です。",
+    "sectionTitle": "カストディサービス",
     "services": {
       "privateVault": {
-        "title": "Private Vault Leasing",
-        "description": "Allocated space for individuals, family offices, and corporations that require dedicated custody."
+        "title": "プライベート金庫のリース",
+        "description": "専用のカストディを必要とする個人、ファミリーオフィスおよび法人のための、アロケートされたスペースです。"
       },
       "bullionStorage": {
-        "title": "Bullion Storage",
-        "description": "LBMA-aligned audit and storage for precious metals with clear chain of custody."
+        "title": "地金保管",
+        "description": "明確なカストディの連鎖を備えた、貴金属のためのLBMAに沿った監査と保管です。"
       },
       "insurance": {
-        "title": "Insurance & Audit Reporting",
-        "description": "Coverage and reporting pathways that keep holdings legible to you and your advisors."
+        "title": "保険および監査報告",
+        "description": "保有を、お客様とアドバイザーにとって読み取れるようにする、付保と報告の経路です。"
       },
       "vipRooms": {
-        "title": "Private Viewing Rooms",
-        "description": "By appointment — inspect holdings in a controlled, discreet environment."
+        "title": "プライベート閲覧室",
+        "description": "予約制です。管理され、控えめな環境で保有を確認します。"
       }
     },
-    "gridTitle": "What private clients use",
-    "gridSubtitle": "Practical custody services tied to membership — not a catalogue of slogans.",
+    "gridTitle": "プライベートクライアントが利用するもの",
+    "gridSubtitle": "メンバーシップに結び付いた、実務のカストディサービスです。スローガンの目録ではありません。",
     "gridServices": {
       "privateVault": {
-        "title": "Private Vault Leasing",
-        "description": "Allocated custody for individuals, corporations, and family offices — sized to your holdings and membership tier.",
+        "title": "プライベート金庫のリース",
+        "description": "個人、法人およびファミリーオフィスのためのアロケート・カストディです。保有とメンバーシップのティアに合わせて規模を定めます。",
         "features": [
-          "Dedicated vault space",
-          "Controlled access",
-          "Relationship service"
+          "専用の金庫スペース",
+          "管理されたアクセス",
+          "リレーションシップ・サービス"
         ]
       },
       "bullionCustody": {
-        "title": "Bullion Custody & Verification",
-        "description": "LBMA-aligned audits and storage with documented chain of custody and regular verification.",
+        "title": "地金カストディと検証",
+        "description": "文書化されたカストディの連鎖と定期的な検証を備えた、LBMAに沿った監査と保管です。",
         "features": [
-          "LBMA-aligned standards",
-          "Regular audits",
-          "Full documentation"
+          "LBMAに沿った基準",
+          "定期監査",
+          "完全な文書"
         ]
       },
       "insurance": {
-        "title": "Insurance & Audit Reporting",
-        "description": "Coverage pathways and reporting that keep holdings clear to you and your advisors.",
+        "title": "保険および監査報告",
+        "description": "保有を、お客様とアドバイザーにとって明確に保つ、付保の経路と報告です。",
         "features": [
-          "Insurance pathways",
-          "Regular reporting",
-          "Audit documentation"
+          "保険の経路",
+          "定期報告",
+          "監査文書"
         ]
       },
       "vipRooms": {
-        "title": "Private Viewing Rooms",
-        "description": "By appointment — inspect holdings in a controlled environment with discreet concierge support.",
+        "title": "プライベート閲覧室",
+        "description": "予約制です。管理された環境で、控えめなコンシェルジュの支援のもと、保有を確認します。",
         "features": [
-          "By appointment",
-          "Concierge support",
-          "Controlled viewing"
+          "予約制",
+          "コンシェルジュ対応",
+          "管理された閲覧"
         ]
       }
     },
-    "wealthGridTitle": "Wealth & Investment Services",
-    "wealthGridSubtitle": "A private-client mandate: fund by wire or Bitcoin, we invest, you watch live yield — then withdraw interest or compound it.",
+    "wealthGridTitle": "資産運用・投資サービス",
+    "wealthGridSubtitle": "プライベートクライアントのマンデートです。電信送金またはBitcoinで拠出し、当ハウスが運用し、お客様がリアルタイムの利回りを確認します。その後、利息を引き出すか再投資します。",
     "wealthGridServices": {
       "advisory": {
-        "title": "Fund the mandate",
-        "description": "Transfer cash by bank wire, or send Bitcoin to SBDV’s receive address. Ops confirms receipt before principal is credited.",
+        "title": "マンデートへの拠出",
+        "description": "銀行の電信送金で現金を移転するか、SBDVの受取アドレスへBitcoinを送付してください。オペレーションが入金を確認した後、元本が計上されます。",
         "features": [
-          "Bank wire in USD",
-          "Bitcoin as a funding rail",
-          "Ops-confirmed credit"
+          "USDの電信送金",
+          "資金経路としてのBitcoin",
+          "オペレーション確認後の計上"
         ]
       },
       "portfolio": {
-        "title": "Stewardship",
-        "description": "SBDV invests funded principal under a stated mandate yield. Interest accrues on principal only — not a bank deposit.",
+        "title": "スチュワードシップ",
+        "description": "SBDVは、拠出された元本を表示マンデート利回りの下で運用します。利息は元本に対してのみ発生します。銀行預金ではありません。",
         "features": [
-          "Stated annual mandate yield",
-          "Principal remains invested",
-          "Yield may be revised"
+          "表示された年次マンデート利回り",
+          "元本は運用されたままです",
+          "利回りは改定される場合があります"
         ]
       },
       "alternatives": {
-        "title": "Live monitoring",
-        "description": "Your private portal shows principal, accrued interest, and total value as the mandate yield ticks forward.",
+        "title": "リアルタイムの確認",
+        "description": "プライベートポータルには、マンデート利回りの経過に応じて、元本、発生利息および合計価値が表示されます。",
         "features": [
-          "Live principal vs interest",
-          "Funding history",
-          "Secure client portal"
+          "元本と利息のリアルタイム表示",
+          "拠出の履歴",
+          "セキュアなクライアントポータル"
         ]
       },
       "reporting": {
-        "title": "Distribute or compound",
-        "description": "Withdraw accrued interest and leave principal invested, or reinvest interest so it becomes new principal.",
+        "title": "分配または再投資",
+        "description": "発生した利息を引き出し、元本は運用したままにするか、利息を再投資して新たな元本とします。",
         "features": [
-          "Withdraw interest",
-          "Reinvest into principal",
-          "Wire or Bitcoin payout"
+          "利息を引き出す",
+          "元本へ再投資",
+          "電信送金またはBitcoinによる払出し"
         ]
       }
     }
   },
   "wealth": {
-    "title": "Wealth & Investment",
-    "heroTitle": "Wealth & Investment",
-    "heroSubtitle": "Private clients fund a mandate by wire or Bitcoin. SBDV invests the principal. You monitor live yield, then withdraw interest or compound it.",
-    "pillarsTitle": "How the mandate works",
-    "pillarsSubtitle": "Four steps: fund, steward, watch, and distribute — with Swiss ops confirmation, not a trading app.",
+    "title": "資産運用・投資",
+    "heroTitle": "資産運用・投資",
+    "heroSubtitle": "プライベートクライアントは、電信送金またはBitcoinでマンデートに資金を拠出します。SBDVが元本を運用します。お客様はリアルタイムの利回りを確認し、利息を引き出すか再投資します。",
+    "pillarsTitle": "マンデートの仕組み",
+    "pillarsSubtitle": "四つの段階です。拠出、管理、確認、分配。スイスのオペレーションによる確認があり、取引アプリではありません。",
     "pillars": {
       "advisory": {
-        "title": "Fund",
-        "description": "Send USD by wire or Bitcoin to the house receive address. Credit posts after operations confirm the transfer."
+        "title": "拠出",
+        "description": "電信送金またはBitcoinにより、USDをハウスの受取アドレスへ送付してください。オペレーションが移転を確認した後、入金が反映されます。"
       },
       "portfolio": {
-        "title": "Invest",
-        "description": "Funded principal is invested under a stated mandate yield. Interest accrues on principal only."
+        "title": "運用",
+        "description": "拠出された元本は、表示マンデート利回りの下で運用されます。利息は元本に対してのみ発生します。"
       },
       "metals": {
-        "title": "Monitor",
-        "description": "The client portal ticks principal, accrued interest, and total value in real time — as of this moment."
+        "title": "監視",
+        "description": "クライアントポータルは、現時点において、元本、発生利息および合計価値をリアルタイムで更新します。"
       },
       "reporting": {
-        "title": "Distribute or compound",
-        "description": "Take accrued interest and leave principal working, or reinvest interest so future yield runs on a larger base."
+        "title": "分配または再投資",
+        "description": "発生した利息を受け取り、元本は働かせたままにするか、以後の利回りがより大きな基礎に対して発生するよう利息を再投資します。"
       }
     },
-    "approachTitle": "A quiet mandate, not a marketplace",
-    "approachDescription": "This is a private-client investment mandate, not a bank account and not a crypto exchange. Bitcoin is only a way to fund. Yield is a stated mandate rate SBDV may change. Principal is not withdrawn in this programme — you fund, watch growth, and elect how to treat interest.",
-    "feesTitle": "Fee Transparency",
-    "feesDescription": "Mandate terms, including the stated yield and any fees, are disclosed in writing before you fund. No hidden transaction costs, retrocessions, or kickbacks.",
-    "ctaTitle": "Discuss a private mandate",
-    "ctaSubtitle": "A confidential conversation with our investment team — no pressure, clear next steps.",
-    "ctaButton": "Schedule Consultation",
+    "approachTitle": "静かなマンデート。市場ではありません。",
+    "approachDescription": "これはプライベートクライアント向けの投資マンデートであり、銀行口座でも暗号資産取引所でもありません。Bitcoinは資金を拠出する手段にすぎません。利回りは、SBDVが変更し得る表示マンデート料率です。本プログラムでは元本を引き出すことはできません。お客様は資金を拠出し、増加を確認し、利息の扱いを選択します。",
+    "feesTitle": "手数料の透明性",
+    "feesDescription": "表示利回りおよび手数料を含むマンデート条件は、拠出の前に書面で開示されます。隠れた取引費用、レトロセッション、キックバックはありません。",
+    "ctaTitle": "プライベート・マンデートについてご相談",
+    "ctaSubtitle": "投資担当との機密の対話です。圧力はなく、次の手順は明確です。",
+    "ctaButton": "相談を予約",
     "growth": {
-      "title": "How your capital grows",
-      "subtitle": "You fund principal. SBDV invests it under a stated mandate yield. Interest accrues on principal only — then you withdraw it or compound it.",
+      "title": "資本が増える仕組み",
+      "subtitle": "お客様が元本を拠出します。SBDVは、表示されたマンデート利回りの下でこれを運用します。利息は元本に対してのみ発生します。その後、引き出しか再投資かを選択します。",
       "steps": {
         "fund": {
-          "title": "Fund principal",
-          "description": "Transfer USD by wire or Bitcoin. Operations confirm receipt, then the amount is credited as principal — not as a traded coin wallet."
+          "title": "元本を拠出",
+          "description": "電信送金またはBitcoinによりUSDを移転してください。オペレーションが入金を確認した後、その金額は元本として計上されます。取引されるコインのウォレットとして計上されるのではありません。"
         },
         "accrue": {
-          "title": "Yield on principal",
-          "description": "A stated annual rate accrues on principal (actual/365). Unwithdrawn interest does not itself earn until you reinvest it."
+          "title": "元本に対する利回り",
+          "description": "表示された年率は、元本に対して発生します（actual/365）。引き出されていない利息は、再投資するまでそれ自体は利回りを生みません。"
         },
         "choose": {
-          "title": "Take or compound",
-          "description": "Withdraw accrued interest and leave principal invested, or reinvest interest so future yield runs on a larger base."
+          "title": "受取または再投資",
+          "description": "発生した利息を引き出し、元本は運用したままにするか、以後の利回りがより大きな基礎に対して発生するよう利息を再投資します。"
         }
       },
-      "exampleLabel": "Worked example",
-      "exampleTitle": "Illustrative year at a stated 8% mandate yield",
-      "exampleBody": "If $250,000 is confirmed as principal and the mandate yield is 8% actual/365, about $20,000 of interest would accrue over a full year — assuming the rate is unchanged and principal is not reduced. You could withdraw that interest or reinvest it into principal.",
-      "examplePrincipal": "Principal",
-      "exampleYield": "Stated yield",
-      "exampleInterest": "Year-1 interest (illustrative)",
-      "exampleNote": "Not guaranteed. The stated yield may be paused or revised. Possible loss of principal. This is not a bank deposit and is not covered by deposit insurance."
+      "exampleLabel": "計算例",
+      "exampleTitle": "表示マンデート利回り8%による、例示の1年",
+      "exampleBody": "$250,000が元本として確認され、マンデート利回りが8% actual/365である場合、料率が変わらず元本が減額されないことを前提として、満1年で約$20,000の利息が発生します。その利息を引き出すか、元本に再投資することができます。",
+      "examplePrincipal": "元本",
+      "exampleYield": "表示利回り",
+      "exampleInterest": "1年目の利息（例示）",
+      "exampleNote": "保証されません。表示された利回りは、停止または改定される場合があります。元本を失う可能性があります。これは銀行預金ではなく、預金保険の対象ではありません。"
     },
     "benefits": {
-      "title": "Why private clients use the mandate",
+      "title": "プライベートクライアントがマンデートを利用する理由",
       "items": [
-        "Ops-confirmed funding by wire or Bitcoin",
-        "Live principal vs interest in the private portal",
-        "Withdraw interest without redeeming principal",
-        "Reinvest interest so the base can grow",
-        "Swiss KYC and operations confirmation when you fund",
-        "Custody remains a separate Vault membership if you also store bullion"
+        "電信送金またはBitcoinによる、オペレーション確認後の拠出",
+        "プライベートポータル上の、元本と利息のリアルタイム表示",
+        "元本を償還せずに利息を引き出す",
+        "基礎が増えるよう、利息を再投資する",
+        "拠出時のスイスのKYCおよびオペレーション確認",
+        "地金も保管する場合、カストディは別の金庫メンバーシップのままです。"
       ]
     },
     "register": {
-      "formTitle": "Create your wealth account",
-      "formSubtitle": "Register with your own password. After you sign in, review the mandate and choose how much to fund by wire or Bitcoin. Operations confirms receipt before principal starts accruing.",
-      "formSuccessTitle": "Account created",
-      "formSuccessText": "Sign in to open your mandate and choose a funding amount.",
-      "continueTitle": "You're signed in",
-      "continueText": "Continue to your wealth mandate to review the programme and choose how much to invest.",
-      "continueCta": "Continue to your mandate",
-      "createAccount": "Create account",
-      "creatingAccount": "Creating account...",
-      "password": "Password",
-      "confirmPassword": "Confirm password",
-      "passwordMin": "At least 8 characters",
-      "alreadyExists": "An account with this email already exists. Sign in instead.",
-      "signIn": "Sign in",
-      "signInFailed": "Account created. Sign in to continue to your mandate.",
-      "error": "Unable to create the account. Please try again."
+      "formTitle": "ウェルス口座を作成",
+      "formSubtitle": "ご自身のパスワードで登録してください。サインインの後、マンデートを確認し、電信送金またはBitcoinで拠出する金額を選択してください。オペレーションが入金を確認した後、元本の発生が始まります。",
+      "formSuccessTitle": "口座を作成しました",
+      "formSuccessText": "サインインしてマンデートを開き、拠出額を選択してください。",
+      "continueTitle": "サインイン済みです",
+      "continueText": "ウェルス・マンデートに進み、プログラムを確認し、投資する金額を選択してください。",
+      "continueCta": "マンデートへ進む",
+      "createAccount": "口座を作成",
+      "creatingAccount": "口座を作成中...",
+      "password": "パスワード",
+      "confirmPassword": "パスワードの確認",
+      "passwordMin": "8文字以上",
+      "alreadyExists": "このメールアドレスの口座はすでに存在します。サインインしてください。",
+      "signIn": "サインイン",
+      "signInFailed": "口座を作成しました。マンデートに進むにはサインインしてください。",
+      "error": "口座を作成できません。再度お試しください。"
     },
-    "closeTitle": "Ready to begin?",
-    "closeSubtitle": "Create a portal account on this page. After you sign in, choose how much to invest. Vault custody is a separate membership if you need allocated storage.",
-    "closeApply": "Create an account",
-    "closeVault": "Request vault membership"
+    "closeTitle": "始める準備はできていますか？",
+    "closeSubtitle": "このページでポータル口座を作成してください。サインインの後、投資する金額を選択してください。アロケート保管が必要な場合、金庫カストディは別のメンバーシップです。",
+    "closeApply": "口座を作成する",
+    "closeVault": "金庫メンバーシップを請求"
   },
   "membership": {
-    "title": "Vault membership",
-    "heroTitle": "Vault membership",
-    "heroSubtitle": "The path into Swiss vault custody — tiered access to allocated storage, viewing, and relationship coverage. This is Vault & Security, not the wealth mandate.",
-    "tiersTitle": "Custody access levels",
-    "tiersSubtitle": "Three tiers for different scales of bullion and valuables custody. Every request is reviewed before access.",
+    "title": "金庫メンバーシップ",
+    "heroTitle": "金庫メンバーシップ",
+    "heroSubtitle": "スイスの金庫カストディへの道です。アロケート保管、閲覧、およびリレーションシップ対応への段階的なアクセスです。これは金庫とセキュリティであり、ウェルス・マンデートではありません。",
+    "tiersTitle": "カストディのアクセス水準",
+    "tiersSubtitle": "地金および貴重品のカストディの規模に応じた三つのティアです。すべての請求は、アクセスの前に審査されます。",
     "tiers": {
       "standard": {
-        "title": "Standard Custody",
-        "subtitle": "Entry Level",
-        "minimum": "Minimum: $250k",
-        "description": "Custody for individual investors and smaller portfolios — standard protocols, regular reporting, and monitored facilities.",
+        "title": "スタンダード・カストディ",
+        "subtitle": "入門",
+        "minimum": "最低：$250k",
+        "description": "個人投資家および比較的小規模なポートフォリオのためのカストディです。標準の手順、定期報告、および監視された施設です。",
         "features": [
-          "Minimum $250k in assets",
-          "Standard security protocols",
-          "Regular reporting",
-          "24/7 monitoring",
-          "Insurance coverage"
+          "最低資産$250k",
+          "標準のセキュリティ手順",
+          "定期報告",
+          "24/7の監視",
+          "保険による付保"
         ]
       },
       "executive": {
-        "title": "Executive Vault",
-        "subtitle": "Reviewed access",
-        "minimum": "Minimum: Custom",
-        "description": "Reviewed relationships for HNWI, family offices, and corporations — dedicated service and heightened privacy.",
+        "title": "エグゼクティブ金庫",
+        "subtitle": "審査済みアクセス",
+        "minimum": "最低：個別",
+        "description": "HNWI、ファミリーオフィスおよび法人のための、審査された関係です。専任のサービスと高められたプライバシーを備えます。",
         "features": [
-          "Reviewed access",
-          "Personalized storage",
-          "Dedicated account manager",
-          "Enhanced privacy protocols",
-          "Priority access"
+          "審査済みアクセス",
+          "個別の保管",
+          "専任アカウントマネージャー",
+          "強化されたプライバシー手順",
+          "優先アクセス"
         ]
       },
       "sovereign": {
-        "title": "Sovereign Tier",
-        "subtitle": "Institutional",
-        "minimum": "Minimum: Institutional",
-        "description": "Institutional-scale custody relationships for sovereign and large institutional counterparts — the highest service intensity.",
+        "title": "ソブリン・ティア",
+        "subtitle": "機関",
+        "minimum": "最低：機関",
+        "description": "ソブリンおよび大規模な機関の相手方のための、機関規模のカストディ関係です。最も密度の高いサービスです。",
         "features": [
-          "Institutional-grade security",
-          "Government-level protocols",
-          "Custom solutions",
-          "Dedicated facilities",
-          "White-glove service"
+          "機関水準のセキュリティ",
+          "政府水準の手順",
+          "個別の対応",
+          "専用施設",
+          "専属対応"
         ]
       }
     },
-    "complianceTitle": "Compliance & Security",
-    "complianceText": "Vault membership is a request, reviewed before access. Every applicant is screened under Swiss KYC and AML frameworks. To fund a wealth mandate, use Wealth & Investment. That programme is separate from vault custody.",
-    "formTitle": "Request vault membership",
-    "formSubtitle": "Tell us about your custody needs — allocated bullion, viewing, and vault relationship. We respond with discretion — no obligation.",
-    "formSuccessTitle": "Vault application received",
-    "formSuccessText": "Thank you. Our custody desk will review your request and contact you shortly.",
+    "complianceTitle": "コンプライアンスとセキュリティ",
+    "complianceText": "金庫メンバーシップは請求であり、アクセスの前に審査されます。すべての申請者は、スイスのKYCおよびAMLの枠組みに基づき審査されます。ウェルス・マンデートに資金を拠出するには、資産運用・投資をご利用ください。そのプログラムは、金庫カストディとは別です。",
+    "formTitle": "金庫メンバーシップを請求",
+    "formSubtitle": "カストディのご要望（アロケートされた地金、閲覧、金庫との関係）をお知らせください。慎重さをもってご返答します。義務は生じません。",
+    "formSuccessTitle": "金庫の申請を受領しました",
+    "formSuccessText": "ありがとうございます。カストディ担当がご請求を審査し、追ってご連絡します。",
     "formLabels": {
-      "name": "Full Name",
-      "email": "Email Address",
-      "phone": "Phone Number",
-      "country": "Country",
-      "assetRange": "Asset Range",
-      "message": "Message"
+      "name": "氏名",
+      "email": "メールアドレス",
+      "phone": "電話番号",
+      "country": "国",
+      "assetRange": "資産範囲",
+      "message": "メッセージ"
     },
     "formPlaceholders": {
-      "name": "Enter your full name",
+      "name": "氏名を入力してください",
       "email": "your.email@example.com",
       "phone": "+1 (555) 123-4567",
-      "country": "Select your country",
-      "assetRange": "Select asset range",
-      "message": "Describe your vault custody interest — metals, volume, and any viewing needs."
+      "country": "国を選択してください",
+      "assetRange": "資産範囲を選択してください",
+      "message": "金庫カストディのご関心（地金、数量、閲覧の要否）をご記入ください。"
     }
   },
   "contact": {
-    "title": "Contact",
-    "heroTitle": "Contact & Private Inquiry",
-    "heroSubtitle": "Get in touch with our team for confidential consultations.",
-    "formSuccessTitle": "Your inquiry has been securely submitted.",
-    "formSuccessText": "We have received your inquiry and will contact you shortly. All communications are handled with the utmost discretion and security.",
-    "formSecureLabel": "Secure & Confidential",
+    "title": "連絡",
+    "heroTitle": "連絡および非公開のお問い合わせ",
+    "heroSubtitle": "機密の相談のため、担当までご連絡ください。",
+    "formSuccessTitle": "お問い合わせを安全に送信しました。",
+    "formSuccessText": "お問い合わせを受領しました。追ってご連絡します。すべての連絡は、最大限の慎重さと安全性をもって取り扱います。",
+    "formSecureLabel": "安全かつ機密",
     "formLabels": {
-      "name": "Full Name",
-      "email": "Email Address",
-      "phone": "Phone Number",
-      "country": "Country",
-      "interest": "Investment Interest",
-      "message": "Message"
+      "name": "氏名",
+      "email": "メールアドレス",
+      "phone": "電話番号",
+      "country": "国",
+      "interest": "ご関心の投資",
+      "message": "メッセージ"
     },
     "formPlaceholders": {
-      "name": "Enter your full name",
+      "name": "氏名を入力してください",
       "email": "your.email@example.com",
       "phone": "+1 (555) 123-4567",
-      "country": "Select your country",
-      "interest": "Select investment interest",
-      "message": "Tell us about your inquiry..."
+      "country": "国を選択してください",
+      "interest": "ご関心の投資を選択",
+      "message": "お問い合わせ内容をご記入ください..."
     },
     "interestOptions": {
-      "privateVault": "Private Vault Leasing",
-      "bullionCustody": "Bullion Custody & Verification",
-      "insurance": "Insurance & Audit Reporting",
-      "vipViewing": "VIP Private Viewing Rooms",
-      "investmentAdvisory": "Investment Advisory",
-      "portfolioManagement": "Portfolio Management",
-      "alternativeInvestments": "Alternative Investments",
-      "membership": "Membership Inquiry",
-      "general": "General Inquiry"
+      "privateVault": "プライベート金庫のリース",
+      "bullionCustody": "地金カストディと検証",
+      "insurance": "保険および監査報告",
+      "vipViewing": "VIPプライベート閲覧室",
+      "investmentAdvisory": "投資アドバイザリー",
+      "portfolioManagement": "ポートフォリオ運用",
+      "alternativeInvestments": "オルタナティブ投資",
+      "membership": "メンバーシップのお問い合わせ",
+      "general": "一般のお問い合わせ"
     }
   },
   "cta": {
@@ -532,9 +532,9 @@
       }
     },
     "globalAccessTitle": "グローバルアクセス",
-    "globalAccessDescription": "Vault membership is a request, reviewed before access. Wealth mandates and Capital Access are open to clients who qualify. Approved clients use the secure portal.",
+    "globalAccessDescription": "金庫メンバーシップは請求であり、アクセスの前に審査されます。ウェルス・マンデートおよびCapital Accessは、資格を満たすお客様に開かれています。承認されたお客様は、セキュアなポータルを利用します。",
     "globalAccessLabel": "セキュア・クライアントポータル",
-    "globalNetworkTitle": "Global Network",
+    "globalNetworkTitle": "グローバルネットワーク",
     "globalNetworkDescription": "提携保管庫とグローバル物流により、世界の金融都市のお客様に機密性の高いサービスを提供します。",
     "wealthTeaserTitle": "資産スチュワードシップ、ノイズではなく",
     "wealthTeaserDescription": "プライベートクライアント向け：ポートフォリオ委任、貴金属戦略、統合レポーティング — プライベートポータル経由でスイスカストディと一体。",
@@ -581,231 +581,231 @@
   "common": {
     "loading": "読み込み中…",
     "submit": "送信",
-    "submitting": "Submitting...",
+    "submitting": "送信中...",
     "cancel": "取消",
-    "success": "Success",
-    "error": "Error",
-    "tryAgain": "Try Again",
-    "required": "Required",
-    "optional": "Optional",
-    "learnMore": "Learn More",
-    "backToHome": "Back to Home"
+    "success": "完了",
+    "error": "エラー",
+    "tryAgain": "再試行",
+    "required": "必須",
+    "optional": "任意",
+    "learnMore": "詳細を見る",
+    "backToHome": "ホームへ戻る"
   },
   "legal": {
-    "privacyTitle": "Privacy Policy",
-    "privacyIntro": "Swiss Bullion Depository Vault (SBDV), seated in Zurich, is the controller of personal data collected through this website and complies with the Swiss Federal Act on Data Protection (FADP) when processing personal data of clients worldwide.",
-    "privacyBody": "SBDV, seated in Zurich, is the controller of personal data collected through this website, the client portal, and the Capital Access program. We collect identity, contact, company, beneficial-ownership, and banking data solely to provide vault custody, membership, and capital facilities, to meet Swiss anti-money-laundering duties, and to communicate with you. A request to access, correct, or delete personal data is made through the Contact page.\n\nData is stored securely, accessed by authorised staff and by banking or compliance partners who need it to perform the service, and is not sold. Hosting and email providers may process data outside Switzerland under confidentiality and security safeguards.\n\nWe retain application and KYC records for as long as required by Swiss financial-crime and contractual rules, then delete or anonymise them. A request for deletion is subject to those legal retention duties.",
-    "termsTitle": "Terms of Service",
-    "termsIntro": "These terms govern your use of the SBDV website, client portals, and public application channels. SBDV is seated in Zurich. Swiss law governs these website terms.",
-    "termsBody": "These website terms apply to use of the SBDV website, account sign-in, and public application channels. They do not create a vault custody agreement, a wealth mandate, or a capital facility. Vault custody and wealth mandates are provided only under the separate agreement issued for that relationship. Capital Access facilities are governed by the Facility Terms and Conditions, not by these website terms.\n\nSBDV is seated in Zurich, Switzerland. These website terms are governed by the substantive laws of Switzerland, excluding conflict-of-law rules that would apply another law. The courts of Zurich have jurisdiction over disputes arising from use of the website. That does not limit any jurisdiction stated in a facility or mandate agreement.\n\nBy creating an account or using a portal you agree to Swiss know-your-customer and anti-money-laundering screening. You must keep your password and any sign-in code confidential. If you believe your account has been used without your authority, tell SBDV promptly through the Contact page.\n\nEnterprises worldwide may apply for Capital Access. Submitting an application is not a commitment to lend, is not a retail consumer loan, and is not a public securities offering. SBDV may approve, decline, or defer an application in its discretion. SBDV may modify the public website by notice on this page. A facility already accepted remains governed by the Facility Terms you accepted, not by a later change to this page.",
-    "regulatoryTitle": "Regulatory Disclosures",
-    "regulatoryIntro": "SBDV is a Zurich-seated vault and capital-arranging institution serving clients worldwide. It is not a Swiss bank.",
-    "regulatoryBody": "SBDV provides bullion vault custody and arranges structured capital facilities for qualified enterprises. Capital Access is not a protected bank deposit and is not covered by deposit-insurance schemes. Funds held as a security deposit are contractual cash collateral, not a deposit in your name at a bank.\n\nPrivate-client wealth mandates are investment programmes, not bank accounts. A stated mandate yield is not guaranteed interest, may be paused or revised, and is not covered by deposit insurance. Bitcoin may be used only as a funding or payout rail; SBDV does not operate a crypto exchange or hold client private keys. Transfers in Bitcoin are irreversible.\n\nAll clients undergo know-your-customer, beneficial-ownership, and anti-money-laundering screening consistent with the Swiss Anti-Money Laundering Act (AMLA). Ultimate beneficial owners are identified to natural persons. Screening applies regardless of the client’s country of incorporation.\n\nInvestment and portfolio management services may require appropriate licensing or be provided through regulated partners. SBDV does not claim a FINMA banking licence. Approval of any facility or mandate is discretionary.\n\nPersons and entities in comprehensively sanctioned jurisdictions cannot be onboarded. High-risk jurisdictions may be subject to enhanced due diligence rather than automatic refusal.\n\nRisk disclosures: investments involve risk including possible loss of principal. Past performance is not indicative of future results. This website is not legal, tax, or investment advice.",
-    "investorRelationsTitle": "Investor Relations",
-    "investorRelationsIntro": "Governance, transparency, and institutional communications.",
-    "investorRelationsBody": "SBDV is committed to transparency with our clients and stakeholders. Annual reports, governance policies, and institutional disclosures will be published here as they become available. For institutional inquiries, please contact our investor relations team through the contact page.",
-    "englishGoverns": "English is the governing language of this page. Until a translation is issued, the English text is the text that applies."
+    "privacyTitle": "プライバシーポリシー",
+    "privacyIntro": "チューリッヒに本拠を置くSwiss Bullion Depository Vault（SBDV）は、本ウェブサイトを通じて収集する個人データの管理者であり、世界各地のお客様の個人データを処理するにあたり、スイス連邦データ保護法（FADP）を遵守します。",
+    "privacyBody": "チューリッヒに本拠を置くSBDVは、本ウェブサイト、クライアントポータルおよびCapital Accessプログラムを通じて収集する個人データの管理者です。本人確認、連絡先、会社、実質的支配者および銀行取引のデータは、金庫カストディ、メンバーシップおよびキャピタル・ファシリティの提供、スイスのマネーロンダリング防止義務の履行、ならびにお客様との連絡のためにのみ収集します。個人データへのアクセス、訂正または削除の請求は、連絡ページを通じて行います。\n\nデータは安全に保管され、権限を有する職員、および役務の履行にこれを必要とする銀行またはコンプライアンスのパートナーがアクセスします。データは販売されません。ホスティングおよび電子メールの提供者は、機密保持および安全上の保護措置の下で、スイス国外においてデータを処理する場合があります。\n\n申請およびKYCの記録は、スイスの金融犯罪および契約上の規則が要求する期間保有し、その後削除または匿名化します。削除の請求は、これらの法定の保存義務に服します。",
+    "termsTitle": "利用規約",
+    "termsIntro": "本条件は、SBDVウェブサイト、クライアントポータルおよび公開の申請経路の利用を規律します。SBDVはチューリッヒに本拠を置きます。本ウェブサイト条件はスイス法に準拠します。",
+    "termsBody": "本ウェブサイト条件は、SBDVウェブサイトの利用、口座へのサインイン、および公開の申請経路に適用されます。これらは、金庫カストディ契約、ウェルス・マンデート、またはキャピタル・ファシリティを成立させるものではありません。金庫カストディおよびウェルス・マンデートは、当該関係のために別途発行される契約に基づいてのみ提供されます。Capital Accessのファシリティは、本ウェブサイト条件ではなく、ファシリティ条件に準拠します。\n\nSBDVは、スイスのチューリッヒに本拠を置きます。本ウェブサイト条件は、他の法を適用することとなる抵触法の規則を除き、スイスの実体法に準拠します。ウェブサイトの利用から生じる紛争については、チューリッヒの裁判所が管轄を有します。これは、ファシリティまたはマンデートの契約に定められた管轄を制限するものではありません。\n\n口座を作成し、またはポータルを利用することにより、お客様はスイスの本人確認およびマネーロンダリング防止の審査に同意するものとします。パスワードおよびサインイン用コードは、機密として保持しなければなりません。お客様の権限なく口座が利用されたと認められる場合は、連絡ページを通じて速やかにSBDVにお知らせください。\n\n世界各地の企業は、Capital Accessに申請することができます。申請の提出は融資の確約ではなく、個人向け消費者ローンではなく、有価証券の公募でもありません。SBDVは、その裁量により、申請を承認し、拒否し、または延期することができます。SBDVは、本ページへの掲示により、公開ウェブサイトを変更することができます。すでに受諾されたファシリティは、お客様が受諾したファシリティ条件に準拠し、本ページのその後の変更には準拠しません。",
+    "regulatoryTitle": "規制上の開示",
+    "regulatoryIntro": "SBDVは、チューリッヒに本拠を置き、世界各地のお客様に仕える金庫およびキャピタル手配の機関です。スイスの銀行ではありません。",
+    "regulatoryBody": "SBDVは地金金庫のカストディを提供し、適格企業のために構造化キャピタル・ファシリティを手配します。Capital Accessは保護された銀行預金ではなく、預金保険制度の対象ではありません。保証金として保有される資金は契約上の現金担保であり、銀行におけるお客様名義の預金ではありません。\n\nプライベートクライアントのウェルス・マンデートは投資プログラムであり、銀行口座ではありません。表示されたマンデート利回りは保証された利息ではなく、停止または改定されることがあり、預金保険の対象ではありません。Bitcoinは資金拠出または払出しの経路としてのみ用いることができます。SBDVは暗号資産取引所を運営せず、お客様の秘密鍵を保有しません。Bitcoinによる移転は取消不能です。\n\nすべてのお客様は、スイス資金洗浄防止法（AMLA）に沿った本人確認、実質的支配者の確認およびマネーロンダリング防止の審査を受けます。最終的実質的支配者は自然人まで特定されます。審査は、お客様の設立国を問わず適用されます。\n\n投資およびポートフォリオ運用のサービスは、適切な免許を要する場合があり、または規制対象のパートナーを通じて提供される場合があります。SBDVはFINMAの銀行免許を有するとは主張しません。いかなるファシリティまたはマンデートの承認も裁量によります。\n\n包括的制裁の対象となる法域の個人および法人は、受け入れることができません。高リスク法域については、自動的な拒否ではなく、強化デューデリジェンスの対象となる場合があります。\n\nリスク開示：投資には、元本の損失の可能性を含むリスクが伴います。過去の実績は、将来の結果を示すものではありません。本ウェブサイトは、法務、税務、または投資の助言ではありません。",
+    "investorRelationsTitle": "投資家向け情報",
+    "investorRelationsIntro": "ガバナンス、透明性、および機関としての連絡です。",
+    "investorRelationsBody": "SBDVは、お客様およびステークホルダーに対する透明性に努めます。年次報告書、ガバナンス方針および機関としての開示は、利用可能となり次第、ここに公表します。機関としてのお問い合わせは、連絡ページを通じて投資家向け情報の担当までご連絡ください。",
+    "englishGoverns": "本ページの準拠言語は英語です。翻訳は閲覧のためのものです。適用される本文は、英語の本文です。"
   },
   "login": {
     "title": "顧客ログイン",
-    "subtitle": "Secure access to your portfolio and account documents.",
+    "subtitle": "ポートフォリオおよび口座書類への安全なアクセスです。",
     "email": "メールアドレス",
     "password": "パスワード",
-    "mfaCode": "Authentication Code",
-    "mfaHint": "Enter the 6-digit code from your authenticator app.",
+    "mfaCode": "認証コード",
+    "mfaHint": "認証アプリの6桁のコードを入力してください。",
     "signIn": "サインイン",
-    "signingIn": "Signing In...",
-    "forgotPassword": "Forgot password?",
-    "noAccount": "Not a client yet?",
+    "signingIn": "サインイン中...",
+    "forgotPassword": "パスワードをお忘れですか？",
+    "noAccount": "まだお客様ではありませんか？",
     "applyMembership": "Apply for Membership",
     "invalidCredentials": "メールまたはパスワードが正しくありません。",
-    "mfaRequired": "Enter your authentication code to continue.",
-    "mfaInvalid": "Invalid authentication code.",
-    "error": "An error occurred. Please try again.",
-    "forgotTitle": "Forgot Password",
-    "forgotSubtitle": "Enter your account email and we will send a reset link.",
-    "sendResetLink": "Send Reset Link",
-    "resetEmailSent": "If an account exists for that email, a reset link has been sent. Check your inbox and spam folder.",
-    "backToSignIn": "Back to Sign In",
-    "resetTitle": "Reset Password",
-    "resetSubtitle": "Choose a new password for your account.",
-    "newPassword": "New Password",
-    "confirmPassword": "Confirm Password",
-    "updatePassword": "Update Password",
-    "passwordMismatch": "Passwords do not match.",
-    "resetLinkInvalid": "This reset link is missing or invalid.",
-    "resetSuccess": "Your password has been updated. You can sign in with the new password.",
-    "resetFailed": "Unable to reset password.",
-    "resetRequestFailed": "Unable to send reset email.",
-    "alreadySignedIn": "You're signed in",
-    "alreadySignedInSubtitle": "Continue to your portal, or sign out to use a different account.",
-    "signedInAs": "Signed in as",
-    "continueToPortal": "Continue to portal",
-    "signOut": "Sign out",
-    "registerWealth": "Create a wealth account",
-    "adminTitle": "Administration",
-    "adminSubtitle": "Sign in to the SBDV operations portal.",
-    "adminOnly": "This portal is for administrators only.",
-    "continueToAdmin": "Continue to operations"
+    "mfaRequired": "続行するには、認証コードを入力してください。",
+    "mfaInvalid": "認証コードが無効です。",
+    "error": "エラーが発生しました。再度お試しください。",
+    "forgotTitle": "パスワードの再設定",
+    "forgotSubtitle": "口座のメールアドレスを入力してください。再設定リンクを送信します。",
+    "sendResetLink": "再設定リンクを送信",
+    "resetEmailSent": "当該メールアドレスの口座が存在する場合、再設定リンクを送信しました。受信トレイと迷惑メールフォルダをご確認ください。",
+    "backToSignIn": "サインインに戻る",
+    "resetTitle": "パスワードの再設定",
+    "resetSubtitle": "口座の新しいパスワードを選択してください。",
+    "newPassword": "新しいパスワード",
+    "confirmPassword": "パスワードの確認",
+    "updatePassword": "パスワードを更新",
+    "passwordMismatch": "パスワードが一致しません。",
+    "resetLinkInvalid": "この再設定リンクは存在しないか、無効です。",
+    "resetSuccess": "パスワードを更新しました。新しいパスワードでサインインできます。",
+    "resetFailed": "パスワードを再設定できません。",
+    "resetRequestFailed": "再設定メールを送信できません。",
+    "alreadySignedIn": "サインイン済みです",
+    "alreadySignedInSubtitle": "ポータルに進むか、別の口座を使うにはサインアウトしてください。",
+    "signedInAs": "サインイン中",
+    "continueToPortal": "ポータルへ進む",
+    "signOut": "サインアウト",
+    "registerWealth": "ウェルス口座を作成する",
+    "adminTitle": "管理",
+    "adminSubtitle": "SBDVオペレーションポータルにサインインします。",
+    "adminOnly": "このポータルは管理者専用です。",
+    "continueToAdmin": "オペレーションへ進む"
   },
   "portal": {
-    "title": "Client Portal",
-    "signedInAs": "Signed in as",
+    "title": "クライアントポータル",
+    "signedInAs": "サインイン中",
     "nav": {
-      "overview": "Overview",
-      "holdings": "Holdings",
-      "performance": "Performance",
-      "documents": "Documents",
-      "messages": "Messages",
-      "settings": "Settings",
-      "admin": "Admin Panel",
-      "logout": "Sign Out",
-      "mandate": "Mandate",
-      "funding": "Funding"
+      "overview": "概要",
+      "holdings": "保有資産",
+      "performance": "運用実績",
+      "documents": "文書",
+      "messages": "メッセージ",
+      "settings": "設定",
+      "admin": "管理パネル",
+      "logout": "サインアウト",
+      "mandate": "マンデート",
+      "funding": "拠出"
     },
     "overview": {
-      "title": "Portfolio Overview",
-      "netWorth": "Total Net Worth",
-      "asOf": "As of",
-      "allocation": "Asset Allocation",
-      "recentActivity": "Recent Activity",
-      "bullionValue": "Bullion & Custody",
-      "financialValue": "Financial Portfolio",
-      "openMandate": "Open mandate",
-      "vaultHoldings": "Vault & financial holdings",
-      "empty": "No mandate or holdings yet. Fund the mandate or contact your relationship manager."
+      "title": "ポートフォリオ概要",
+      "netWorth": "純資産総額",
+      "asOf": "基準時点",
+      "allocation": "資産配分",
+      "recentActivity": "最近の活動",
+      "bullionValue": "地金とカストディ",
+      "financialValue": "金融ポートフォリオ",
+      "openMandate": "マンデートを開く",
+      "vaultHoldings": "金庫および金融保有",
+      "empty": "マンデートまたは保有資産はまだありません。マンデートに拠出するか、リレーションシップ・マネージャーにご連絡ください。"
     },
     "holdings": {
-      "title": "Holdings",
-      "bullionTab": "Bullion & Custody",
-      "financialTab": "Financial Portfolio",
-      "weight": "Weight",
-      "purity": "Purity",
-      "location": "Vault Location",
-      "auditStatus": "Audit Status",
-      "quantity": "Quantity",
-      "costBasis": "Cost Basis",
-      "marketValue": "Market Value",
-      "verified": "Verified",
-      "pending": "Pending Audit"
+      "title": "保有資産",
+      "bullionTab": "地金とカストディ",
+      "financialTab": "金融ポートフォリオ",
+      "weight": "重量",
+      "purity": "純度",
+      "location": "金庫所在地",
+      "auditStatus": "監査状況",
+      "quantity": "数量",
+      "costBasis": "取得原価",
+      "marketValue": "時価",
+      "verified": "監査済み",
+      "pending": "監査待ち"
     },
     "performance": {
-      "title": "Performance",
-      "period": "Period",
-      "return": "Return",
-      "benchmark": "Benchmark",
-      "ytd": "Year to Date",
-      "oneYear": "1 Year",
-      "threeYear": "3 Years",
-      "allTime": "All Time",
-      "disclaimer": "Performance data is for illustration. Past performance is not indicative of future results."
+      "title": "運用実績",
+      "period": "期間",
+      "return": "リターン",
+      "benchmark": "ベンチマーク",
+      "ytd": "年初来",
+      "oneYear": "1年",
+      "threeYear": "3年",
+      "allTime": "全期間",
+      "disclaimer": "運用実績のデータは例示です。過去の実績は、将来の結果を示すものではありません。"
     },
     "documents": {
-      "title": "Document Vault",
-      "upload": "Upload Document",
-      "download": "Download",
-      "noDocuments": "No documents available.",
+      "title": "文書金庫",
+      "upload": "文書をアップロード",
+      "download": "ダウンロード",
+      "noDocuments": "利用できる文書はありません。",
       "types": {
-        "statement": "Statement",
-        "contract": "Contract",
-        "kyc": "KYC Document",
-        "report": "Report",
-        "other": "Other"
+        "statement": "計算書",
+        "contract": "契約書",
+        "kyc": "KYC文書",
+        "report": "報告書",
+        "other": "その他"
       }
     },
     "messages": {
-      "title": "Advisor Messages",
-      "compose": "New Message",
-      "subject": "Subject",
-      "body": "Message",
-      "send": "Send",
-      "noMessages": "No messages yet.",
-      "encrypted": "End-to-end encrypted communication"
+      "title": "アドバイザー・メッセージ",
+      "compose": "新しいメッセージ",
+      "subject": "件名",
+      "body": "メッセージ",
+      "send": "送信",
+      "noMessages": "メッセージはまだありません。",
+      "encrypted": "エンドツーエンドで暗号化された通信です。"
     },
     "settings": {
-      "title": "Account Settings",
-      "mfaTitle": "Two-Factor Authentication",
-      "mfaEnabled": "Enabled",
-      "mfaDisabled": "Not enabled",
-      "enableMfa": "Enable MFA",
-      "sessions": "Active Sessions",
-      "notifications": "Email Notifications"
+      "title": "アカウント設定",
+      "mfaTitle": "二要素認証",
+      "mfaEnabled": "有効です",
+      "mfaDisabled": "有効ではありません",
+      "enableMfa": "MFAを有効にする",
+      "sessions": "有効なセッション",
+      "notifications": "メール通知"
     },
     "mandate": {
-      "title": "Wealth mandate",
-      "subtitle": "Principal stays invested. Interest accrues on principal at the stated mandate yield. Withdraw interest or reinvest it — principal is not redeemed in this programme.",
-      "principal": "Principal",
-      "accrued": "Accrued interest",
-      "total": "Mandate total",
-      "yield": "Mandate yield",
-      "live": "Accruing",
-      "paused": "Yield paused",
-      "growth": "Growth",
-      "reinvest": "Reinvest accrued interest",
-      "withdraw": "Withdraw interest",
-      "withdrawTitle": "Withdraw accrued interest",
-      "amount": "Amount",
-      "accountName": "Account name",
-      "bankName": "Bank name",
-      "btcAddress": "Bitcoin address",
-      "submitWithdraw": "Request payout",
-      "activity": "Activity",
-      "when": "When",
-      "type": "Type",
-      "status": "Status",
-      "emptyActivity": "No mandate activity yet. Fund the mandate to begin.",
-      "unavailable": "No wealth mandate is attached to this account yet.",
-      "actionError": "Unable to complete that request.",
-      "disclaimer": "Not a bank deposit. Yield is a stated mandate rate and may be changed. Bitcoin transfers are irreversible.",
+      "title": "ウェルス・マンデート",
+      "subtitle": "元本は運用されたままです。利息は、表示されたマンデート利回りにより、元本に対して発生します。利息を引き出すか、再投資してください。本プログラムでは、元本は償還されません。",
+      "principal": "元本",
+      "accrued": "発生利息",
+      "total": "マンデート合計",
+      "yield": "マンデート利回り",
+      "live": "発生中",
+      "paused": "利回り停止中",
+      "growth": "増加",
+      "reinvest": "発生利息を再投資",
+      "withdraw": "利息を引き出す",
+      "withdrawTitle": "発生利息の引き出し",
+      "amount": "金額",
+      "accountName": "口座名義",
+      "bankName": "銀行名",
+      "btcAddress": "Bitcoinアドレス",
+      "submitWithdraw": "払出しを請求",
+      "activity": "活動",
+      "when": "日時",
+      "type": "種別",
+      "status": "状況",
+      "emptyActivity": "マンデートの活動はまだありません。開始するには、マンデートに拠出してください。",
+      "unavailable": "この口座には、まだウェルス・マンデートが紐付けられていません。",
+      "actionError": "その依頼を完了できませんでした。",
+      "disclaimer": "銀行預金ではありません。利回りは表示されたマンデート料率であり、変更される場合があります。Bitcoinによる移転は取消不能です。",
       "types": {
-        "DEPOSIT_WIRE": "Wire funding",
-        "DEPOSIT_BTC": "Bitcoin funding",
-        "INTEREST_ACCRUAL": "Yield credited",
-        "INTEREST_WITHDRAW": "Interest withdrawal",
-        "INTEREST_REINVEST": "Interest reinvested",
-        "ADJUSTMENT": "Adjustment",
-        "FOUNDING_BONUS": "Founding bonus"
+        "DEPOSIT_WIRE": "電信送金による拠出",
+        "DEPOSIT_BTC": "Bitcoinによる拠出",
+        "INTEREST_ACCRUAL": "利回りの計上",
+        "INTEREST_WITHDRAW": "利息の引き出し",
+        "INTEREST_REINVEST": "利息の再投資",
+        "ADJUSTMENT": "調整",
+        "FOUNDING_BONUS": "創設ボーナス"
       },
-      "fundTitle": "Choose how much to invest",
+      "fundTitle": "投資する金額を選択してください",
       "fundBody": "Review the mandate, then tell operations the USD amount and whether you will send a bank wire or Bitcoin. Principal is credited only after receipt is confirmed.",
-      "fundCta": "Choose amount and funding method"
+      "fundCta": "金額と拠出方法を選択してください"
     },
     "funding": {
-      "title": "Fund the mandate",
+      "title": "マンデートへの拠出",
       "subtitle": "Request a wire or Bitcoin transfer. Principal is credited only after SBDV operations confirm receipt.",
-      "wire": "Bank wire",
+      "wire": "銀行電信送金",
       "btc": "Bitcoin",
-      "btcAmount": "Bitcoin amount (optional)",
-      "txid": "Transaction ID",
-      "note": "Note to operations",
-      "submit": "Submit funding notice",
-      "submitted": "Notice received. Quote this reference when you transfer:",
-      "instructions": "House instructions",
-      "beneficiary": "Beneficiary",
-      "accountNumber": "Account number",
-      "bankAddress": "Bank address",
+      "btcAmount": "Bitcoin金額（任意）",
+      "txid": "トランザクションID",
+      "note": "オペレーションへのメモ",
+      "submit": "拠出通知を提出",
+      "submitted": "通知を受領しました。移転の際は、この参照番号を記載してください:",
+      "instructions": "ハウスの指示",
+      "beneficiary": "受取人",
+      "accountNumber": "口座番号",
+      "bankAddress": "銀行住所",
       "wireFallback": "Wire instructions will be confirmed by your relationship manager. Submit the notice so operations can match your transfer.",
-      "btcAddress": "SBDV receive address",
+      "btcAddress": "SBDV受取アドレス",
       "btcQrAlt": "SBDVビットコイン受取アドレスのQRコード",
       "copyAddress": "アドレスをコピー",
       "copiedAddress": "コピーしました",
       "btcNote": "Send only Bitcoin to this address. Include the txid on your notice. Credit is USD principal after ops confirmation — SBDV does not custody your keys.",
       "btcFallback": "A Bitcoin receive address will be provided by your relationship manager.",
-      "history": "Funding history",
-      "rail": "Rail",
-      "reference": "Reference",
-      "empty": "No funding notices yet.",
-      "waitingApprove": "Waiting for operations to approve this notice. House instructions will appear here after approval — do not send funds yet.",
-      "waitingProof": "Transfer using the instructions below, then upload payment proof.",
-      "proofUploaded": "Payment information received. Operations will confirm receipt.",
-      "credited": "Receipt confirmed. This amount is principal.",
-      "rejected": "This notice was not accepted. Submit a new funding notice if you still intend to fund.",
-      "uploadProof": "Upload payment proof",
-      "uploadHint": "PDF or JPEG of the wire confirmation or Bitcoin transfer. Optional txid for Bitcoin.",
-      "uploadSubmit": "Send payment information",
-      "uploadedFile": "Uploaded",
-      "beneficiaryAddress": "Beneficiary address",
-      "routing": "Local routing"
+      "history": "拠出履歴",
+      "rail": "経路",
+      "reference": "参照番号",
+      "empty": "拠出通知はまだありません。",
+      "waitingApprove": "オペレーションによるこの通知の承認を待っています。承認後、ハウスの指示がここに表示されます。まだ資金を送付しないでください。",
+      "waitingProof": "下記の指示に従って移転し、支払証明をアップロードしてください。",
+      "proofUploaded": "支払情報を受領しました。オペレーションが入金を確認します。",
+      "credited": "入金を確認しました。この金額は元本です。",
+      "rejected": "この通知は受理されませんでした。拠出する意思がある場合は、新たな拠出通知を提出してください。",
+      "uploadProof": "支払証明をアップロード",
+      "uploadHint": "電信送金の確認書またはBitcoin移転のPDFまたはJPEGです。Bitcoinのtxidは任意です。",
+      "uploadSubmit": "支払情報を送信",
+      "uploadedFile": "アップロード済み",
+      "beneficiaryAddress": "受取人住所",
+      "routing": "国内ルーティング"
     }
   },
   "admin": {
@@ -1027,48 +1027,48 @@
     "portalBadge": "Enterprise Partner Portal",
     "signedInAs": "Signed in as",
     "hero": {
-      "badge": "Institutional Capital Program",
-      "title": "Structured capital for qualified enterprises",
-      "subtitle": "SBDV is not a bank. A facility is not a deposit and not a commitment until it is approved.",
-      "applyAccess": "Apply for Access",
-      "partnerLogin": "Partner Login",
-      "eligibility": "Operating companies with at least two years of history, audited or reviewed accounts, and a request from USD 500,000. Approval is discretionary.",
-      "collateralRule": "The 10% is requested only after approval. It is cash collateral, not a fee. It is returned in full if SBDV declines other than for the applicant’s breach or a failed compliance check. Applying is not a commitment to lend."
+      "badge": "機関キャピタル・プログラム",
+      "title": "適格企業のための構造化キャピタル",
+      "subtitle": "SBDVは銀行ではありません。ファシリティは預金ではなく、承認されるまで確約ではありません。",
+      "applyAccess": "アクセスを申請",
+      "partnerLogin": "パートナーログイン",
+      "eligibility": "事業歴が2年以上あり、監査済みまたはレビュー済みの計算書類を備え、USD 500,000からの請求を行う事業会社です。承認は裁量によります。",
+      "collateralRule": "10%は、承認の後にのみ請求されます。これは現金担保であり、手数料ではありません。申請者の違反またはコンプライアンス審査の不合格以外の理由でSBDVが拒否する場合、全額返還されます。申請は、融資の確約ではありません。"
     },
     "features": {
-      "title": "Why enterprises choose Capital Access",
-      "subtitle": "A disciplined gateway between qualified companies and mandate-aligned capital — clarity first.",
-      "globalPoolsTitle": "Mandate-aligned pools",
-      "globalPoolsDesc": "Partially disclosed sovereign-grade pools matched to sector and region — not a black-box auction.",
-      "flexibleTermsTitle": "Terms you can plan around",
-      "flexibleTermsDesc": "Define amount, term, and monthly or annual interest over 1–10 years with live calculations.",
-      "enterpriseFocusTitle": "Built for operating companies",
-      "enterpriseFocusDesc": "For established enterprises with audited or reviewed financials and a clear investment thesis.",
-      "structuredSecurityTitle": "Process without surprise",
-      "structuredSecurityDesc": "10% cash collateral, full KYC/UBO look-through, and discretionary approval under Swiss AML standards."
+      "title": "企業がCapital Accessを選ぶ理由",
+      "subtitle": "適格企業と、マンデートに整合したキャピタルとの間の、規律ある入口です。明確さを先に置きます。",
+      "globalPoolsTitle": "マンデートに整合したプール",
+      "globalPoolsDesc": "セクターと地域に合わせて組み合わされた、部分開示のソブリン級プールです。中身の見えない競売ではありません。",
+      "flexibleTermsTitle": "計画の前提となる条件",
+      "flexibleTermsDesc": "1–10年にわたり、金額、期間、ならびに月次または年次の利息を定め、計算をリアルタイムで確認します。",
+      "enterpriseFocusTitle": "事業会社のために",
+      "enterpriseFocusDesc": "監査済みまたはレビュー済みの財務と、明確な投資方針を備えた、確立した企業のためです。",
+      "structuredSecurityTitle": "想定外のない手続き",
+      "structuredSecurityDesc": "10%の現金担保、完全なKYC/UBOのルックスルー、およびスイスのAML基準の下での裁量による承認です。"
     },
     "howItWorks": {
       "title": "How It Works",
       "registerTitle": "Register as a Capital Partner",
       "registerDesc": "Create your enterprise account and verify your company credentials.",
       "exploreTitle": "Explore Available Pools",
-      "exploreDesc": "Browse partially disclosed sovereign capital pools aligned with your sector and region.",
+      "exploreDesc": "お客様のセクターおよび地域に整合した、部分開示のソブリン・キャピタルプールを閲覧します。",
       "structureTitle": "Structure Your Request",
-      "structureDesc": "Define loan amount, term, repayment frequency, and review live interest calculations.",
+      "structureDesc": "融資金額、期間、返済頻度を定め、リアルタイムの利息計算を確認します。",
       "submitTitle": "Submit Company Profile",
       "submitDesc": "Provide financials, investment areas, and accept the 10% security deposit condition.",
       "decisionTitle": "Await Institutional Review",
       "decisionDesc": "Your application enters our review queue. You will receive approval or rejection notification.",
-      "prepareTitle": "Prepare your file",
-      "prepareDesc": "Confirm eligibility (enterprise, USD 500,000+, two years of operations). Gather local-register extracts, audited accounts, and beneficial-owner details. Local equivalents and certified translations are accepted.",
-      "reviewTitle": "Institutional review",
-      "reviewDesc": "SBDV reviews documents, beneficial owners, and mandate alignment. Approval is discretionary and is not a commitment until issued.",
-      "depositTitle": "Security deposit and origin of funds",
-      "depositDesc": "After approval, accept the Facility Terms, wire the 10% cash collateral, and declare the source of those funds.",
-      "kycTitle": "KYC and sanctions screening",
-      "kycDesc": "Swiss AML screening of the company, signatories, and ultimate beneficial owners. High-risk jurisdictions receive enhanced due diligence.",
-      "fundingTitle": "Disbursement and repayment",
-      "fundingDesc": "Submit a bank account in the borrower’s name (SWIFT plus IBAN or local account number). Funds are released in USD; repay on the schedule in your dashboard."
+      "prepareTitle": "書類を準備",
+      "prepareDesc": "適格性を確認してください（企業、USD 500,000+、事業歴2年）。現地登録簿の抄本、監査済み計算書類、および実質的支配者の明細を揃えてください。現地の同等書類および認証翻訳を受け付けます。",
+      "reviewTitle": "機関としての審査",
+      "reviewDesc": "SBDVは、文書、実質的支配者およびマンデートとの整合を審査します。承認は裁量により、発行されるまで確約ではありません。",
+      "depositTitle": "保証金および資金の出所",
+      "depositDesc": "承認の後、ファシリティ条件を受諾し、10%の現金担保を電信送金し、その資金の出所を申告してください。",
+      "kycTitle": "KYCおよび制裁審査",
+      "kycDesc": "会社、署名権者および最終的実質的支配者について、スイスのAML審査を行います。高リスク法域には、強化デューデリジェンスを適用します。",
+      "fundingTitle": "資金の解放および返済",
+      "fundingDesc": "借主名義の銀行口座（SWIFTに加え、IBANまたは現地口座番号）を提出してください。資金はUSDで解放されます。ダッシュボードのスケジュールに従って返済してください。"
     },
     "nav": {
       "overview": "Overview",
@@ -1118,17 +1118,17 @@
     "requestFromPool": "Request from this pool",
     "startRequest": "Start Capital Request",
     "register": {
-      "title": "Register for Capital Access",
+      "title": "Capital Accessに登録",
       "subtitle": "Create your enterprise partner account to explore sovereign capital pools.",
-      "fullName": "Full Name",
-      "phone": "Phone (optional)",
-      "submit": "Create Partner Account",
-      "hasAccount": "Already registered?",
-      "error": "Registration failed. Please try again.",
-      "welcomeTitle": "Account created successfully",
-      "welcomeBody": "Your Capital Access account is ready. Sign in with the email and password you just created.",
-      "welcomeEmail": "Email",
-      "goToLogin": "Go to login"
+      "fullName": "氏名",
+      "phone": "電話（任意）",
+      "submit": "パートナー口座を作成",
+      "hasAccount": "すでにご登録済みですか？",
+      "error": "登録に失敗しました。再度お試しください。",
+      "welcomeTitle": "口座を作成しました",
+      "welcomeBody": "Capital Accessの口座の準備ができました。作成したメールアドレスとパスワードでサインインしてください。",
+      "welcomeEmail": "メール",
+      "goToLogin": "ログインへ"
     },
     "request": {
       "title": "資本申請",
@@ -1346,103 +1346,109 @@
       "repayFailed": "Could not submit this repayment. Please try again."
     },
     "facilityTerms": {
-      "eyebrow": "Capital Access Program",
+      "eyebrow": "Capital Accessプログラム",
       "pageTitle": "ファシリティ条件",
-      "intro": "These terms govern your capital facility, including the 10% security deposit, interest, repayment, default, and Swiss governing law. Read them in full before you accept.",
-      "versionLabel": "Document",
-      "effectiveLabel": "Effective",
-      "languageLabel": "Governing language",
-      "governingNote": "English is the governing language of this instrument. A translation, if provided, is for convenience only.",
-      "contents": "Contents",
+      "intro": "本条件は、10%の保証金、利息、返済、債務不履行およびスイス法の準拠を含め、お客様のキャピタル・ファシリティを規律します。受諾の前に全文をお読みください。",
+      "versionLabel": "文書",
+      "effectiveLabel": "発効",
+      "languageLabel": "準拠言語",
+      "governingNote": "本証書の準拠言語は英語です。翻訳が提供される場合、それは便宜のためのものにすぎません。",
+      "contents": "目次",
       "acceptBefore": "私は読み、同意します",
       "linkLabel": "ファシリティ条件",
-      "acceptAfter": ", including the 10% security deposit, interest, repayment, default, and governing-law provisions, and I confirm that I am authorised to bind the borrower.",
-      "acceptedNote": "Facility Terms and Conditions accepted",
-      "print": "Print or save",
-      "backFacility": "Return to facility dashboard"
+      "acceptAfter": "、これには10%の保証金、利息、返済、債務不履行および準拠法の条項が含まれ、借主を拘束する権限を有することを確認します。",
+      "acceptedNote": "ファシリティ条件を受諾しました",
+      "print": "印刷または保存",
+      "backFacility": "ファシリティのダッシュボードに戻る"
     },
     "whoCanApply": {
-      "title": "Who can apply",
-      "worldwide": "Enterprises worldwide may apply. Vault membership is a separate request, reviewed before access. Capital Access is open to qualified companies.",
-      "enterprise": "This is not a personal or consumer loan. The applicant must be an operating company.",
-      "ticket": "Minimum request USD 500,000; two years of operating history; audited or reviewed financials.",
-      "kyc": "Full KYC, beneficial-ownership look-through, and sanctions screening under Swiss AML rules.",
-      "sanctions": "Comprehensively sanctioned persons and jurisdictions cannot be onboarded. Approval is always discretionary.",
-      "currency": "Facilities are denominated in USD. If your operating cash flow is in another currency, you accept foreign-exchange risk."
+      "title": "申請資格",
+      "worldwide": "世界各地の企業が申請できます。金庫メンバーシップは別の請求であり、アクセスの前に審査されます。Capital Accessは、適格企業に開かれています。",
+      "enterprise": "これは個人向けまたは消費者向けのローンではありません。申請者は事業会社でなければなりません。",
+      "ticket": "最低請求額はUSD 500,000です。営業歴は2年です。監査済みまたはレビュー済みの財務が必要です。",
+      "kyc": "スイスのAML規則の下での、完全なKYC、実質的支配者のルックスルー、および制裁審査です。",
+      "sanctions": "包括的制裁の対象となる個人および法域は、受け入れることができません。承認は常に裁量によります。",
+      "currency": "ファシリティはUSD建てです。事業のキャッシュフローが他の通貨である場合、外国為替リスクを引き受けます。"
     },
     "timeline": {
-      "title": "Indicative timeline",
-      "note": "Times are typical, not a commitment. Incomplete files or enhanced due diligence take longer.",
-      "apply": "Application",
-      "applyTime": "1–2 weeks",
-      "dd": "Document and UBO review",
-      "ddTime": "2–4 weeks",
-      "kyc": "KYC after deposit",
-      "kycTime": "5–10 business days",
-      "funding": "Closing and funding",
-      "fundingTime": "3–7 days"
+      "title": "目安の期間",
+      "note": "所要期間は通常の目安であり、確約ではありません。書類が不完全な場合、または強化デューデリジェンスの場合は、より長くかかります。",
+      "apply": "申請",
+      "applyTime": "1–2週間",
+      "dd": "文書およびUBOの審査",
+      "ddTime": "2–4週間",
+      "kyc": "保証金後のKYC",
+      "kycTime": "5–10営業日",
+      "funding": "クロージングおよび資金拠出",
+      "fundingTime": "3–7日"
     },
     "settings": {
       "title": "Account Settings"
     }
   },
   "chat": {
-    "open": "Ask SBDV",
-    "title": "SBDV Concierge",
-    "subtitle": "Private guidance · 24/7",
-    "greeting": "Welcome to SBDV. I'm your digital concierge — ask about vault custody, membership, wealth services, or our Capital Access Program.",
-    "greetingNamed": "Hello, {name}. I'm your SBDV concierge — I can help with your account, guide you through services, or answer questions about membership and capital access.",
-    "placeholder": "Ask a question…",
-    "send": "Send message",
-    "minimize": "Minimize chat",
-    "close": "Close and clear chat",
-    "error": "I'm sorry, I couldn't process that. Please try again or use the Contact page for direct assistance.",
-    "disclaimer": "AI-assisted guidance. For binding advice, contact your relationship manager."
+    "open": "SBDVに尋ねる",
+    "title": "SBDVコンシェルジュ",
+    "subtitle": "個別のご案内 · 24/7",
+    "greeting": "SBDVへようこそ。デジタルコンシェルジュです。金庫カストディ、メンバーシップ、ウェルスサービス、またはCapital Accessプログラムについてお尋ねください。",
+    "greetingNamed": "{name}様、こんにちは。SBDVのコンシェルジュです。口座のご用件、サービスのご案内、メンバーシップおよびCapital Accessに関するご質問にお答えします。",
+    "placeholder": "ご質問を入力…",
+    "send": "メッセージを送信",
+    "minimize": "チャットを最小化",
+    "close": "チャットを閉じて内容を消去",
+    "error": "申し訳ありません。処理できませんでした。再度お試しいただくか、直接の支援には連絡ページをご利用ください。",
+    "disclaimer": "AIによる補助的な案内です。拘束力のある助言については、リレーションシップ・マネージャーにご連絡ください。"
   },
   "accountSecurity": {
     "roles": {
-      "admin": "Administrator",
-      "client": "Client",
-      "borrower": "Enterprise Partner"
+      "admin": "管理者",
+      "client": "クライアント",
+      "borrower": "エンタープライズ・パートナー"
     },
     "summary": {
-      "title": "Security overview",
-      "email": "Email",
-      "role": "Account type",
-      "mfa": "Two-factor authentication",
-      "memberSince": "Member since",
-      "lastSignIn": "Last sign-in"
+      "title": "セキュリティ概要",
+      "email": "メールアドレス",
+      "role": "アカウント種別",
+      "mfa": "二要素認証",
+      "memberSince": "登録日",
+      "lastSignIn": "最終サインイン",
+      "thisSignIn": "今回のサインイン",
+      "previousSignIn": "前回のサインイン",
+      "location": "場所",
+      "ipAddress": "IPアドレス",
+      "unknownLocation": "不明",
+      "localNetwork": "ローカル"
     },
     "password": {
-      "title": "Change password",
-      "hint": "Use at least 8 characters. You will remain signed in on this device after updating.",
-      "current": "Current password",
-      "new": "New password",
-      "confirm": "Confirm new password",
-      "submit": "Update password",
-      "saving": "Updating…",
-      "success": "Password updated successfully. A confirmation was sent to your email.",
-      "errorGeneric": "Unable to change password. Please try again."
+      "title": "パスワードの変更",
+      "hint": "8文字以上を使用してください。更新後も、この端末ではサインインしたままです。",
+      "current": "現在のパスワード",
+      "new": "新しいパスワード",
+      "confirm": "新しいパスワードの確認",
+      "submit": "パスワードを更新",
+      "saving": "更新中…",
+      "success": "パスワードを更新しました。確認をメールで送信しました。",
+      "errorGeneric": "パスワードを変更できませんでした。再度お試しください。"
     },
     "mfa": {
-      "title": "Two-factor authentication",
-      "disabled": "Add a second step after your password to protect your account.",
-      "enabledTotp": "Authenticator app codes are enabled for sign-in.",
-      "enabledEmail": "Email sign-in codes are enabled. A code is sent to your account email after your password is accepted.",
-      "statusOff": "Not enabled",
-      "statusTotp": "Authenticator app",
-      "statusEmail": "Email codes",
-      "enableTotp": "Enable authenticator app",
-      "enableEmail": "Enable email codes",
-      "disable": "Disable MFA",
-      "secretLabel": "Add this secret to your authenticator app:",
-      "verifyEnable": "Verify & enable",
-      "invalidCode": "Invalid authenticator code."
+      "title": "二要素認証",
+      "disabled": "アカウントを保護するため、パスワードの後に第二の手順を追加してください。",
+      "enabledTotp": "サインインには、認証アプリのコードが有効です。",
+      "enabledEmail": "メールによるサインインコードが有効です。パスワードが受け付けられた後、口座のメールアドレスにコードが送信されます。",
+      "statusOff": "有効ではありません",
+      "statusTotp": "認証アプリ",
+      "statusEmail": "メールコード",
+      "enableTotp": "認証アプリを有効にする",
+      "enableEmail": "メールコードを有効にする",
+      "disable": "MFAを無効にする",
+      "secretLabel": "このシークレットを認証アプリに追加してください:",
+      "verifyEnable": "確認して有効にする",
+      "invalidCode": "認証コードが無効です。"
     },
     "session": {
-      "title": "Session",
-      "description": "End your session on this browser. You will need to sign in again to access the portal.",
-      "signOutDevice": "Sign out of this device"
+      "title": "セッション",
+      "description": "このブラウザのセッションを終了します。クライアントポータルにアクセスするには、再度サインインする必要があります。",
+      "signOutDevice": "この端末からサインアウト"
     }
   }
 }

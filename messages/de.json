@@ -1,33 +1,33 @@
 {
   "nav": {
-    "home": "Home",
-    "about": "About",
+    "home": "Startseite",
+    "about": "Über uns",
     "vault": "Tresor & Sicherheit",
     "wealth": "Vermögen & Anlagen",
     "capitalAccess": "Capital Access",
-    "services": "Services",
+    "services": "Dienstleistungen",
     "membership": "Mitgliedschaft",
     "contact": "Kontakt",
     "clientLogin": "Kunden-Login",
     "firm": "Das Haus",
     "signIn": "Anmelden",
     "privateClients": {
-      "label": "Private Clients",
+      "label": "Privatkunden",
       "vaultDesc": "Schweizer Custody und ruhiger Schutz",
       "wealthDesc": "Stewardship und Reporting",
       "servicesDesc": "Leasing, Viewing und Operations",
       "membershipDesc": "Weg ins Haus"
     },
-    "myPortal": "My portal"
+    "myPortal": "Mein Portal"
   },
   "hero": {
     "headline": "Schweizer Sicherheit. Diszipliniertes Wachstum.",
-    "subtext": "Private clients use Swiss custody or a wealth mandate. Qualified enterprises may apply for a structured capital facility. SBDV is not a bank.",
-    "exploreCapital": "Capital Access entdecken",
+    "subtext": "Privatkunden nutzen die schweizerische Verwahrung oder ein Vermögensmandat. Qualifizierte Unternehmen können eine strukturierte Kapitalfazilität beantragen. SBDV ist keine Bank.",
+    "exploreCapital": "Unternehmen",
     "privateClients": "Private-Client-Zugang",
-    "requestAccess": "Request Access",
+    "requestAccess": "Zugang anfragen",
     "clientLogin": "Kunden-Login",
-    "investorRelations": "Investor Relations"
+    "investorRelations": "Anlegerbeziehungen"
   },
   "footer": {
     "copyright": "Swiss Bullion Depository Vault — Schweizer Präzision. Globales Vertrauen.",
@@ -37,448 +37,448 @@
     "privacy": "Datenschutz",
     "terms": "Nutzungsbedingungen",
     "regulatory": "Regulatorische Informationen",
-    "investorRelations": "Investor Relations",
+    "investorRelations": "Anlegerbeziehungen",
     "offices": {
       "zurich": {
-        "city": "Zurich",
-        "country": "Switzerland",
-        "label": "Global Headquarters",
+        "city": "Zürich",
+        "country": "Schweiz",
+        "label": "Globaler Hauptsitz",
         "address": "Bahnhofstrasse 45, 8001 Zurich, Switzerland",
         "timezone": "CET (UTC+1)"
       },
       "dubai": {
         "city": "Dubai",
-        "country": "United Arab Emirates",
-        "label": "Middle East & Africa",
+        "country": "Vereinigte Arabische Emirate",
+        "label": "Naher Osten & Afrika",
         "address": "DIFC Gate Village 10, Dubai, UAE",
         "timezone": "GST (UTC+4)"
       },
       "singapore": {
-        "city": "Singapore",
-        "country": "Singapore",
-        "label": "Asia Pacific",
+        "city": "Singapur",
+        "country": "Singapur",
+        "label": "Asien-Pazifik",
         "address": "10 Collyer Quay, Ocean Financial Centre, Singapore",
         "timezone": "SGT (UTC+8)"
       },
       "newYork": {
         "city": "New York",
-        "country": "United States",
-        "label": "Americas",
+        "country": "Vereinigte Staaten",
+        "label": "Amerika",
         "address": "280 Park Avenue, New York, NY 10017, USA",
         "timezone": "EST (UTC-5)"
       }
     },
     "jurisdictionNote": "Schweizer Rechtsgrundlage. Multi-jurisdiktioneller Zugang für globale Kunden.",
-    "facilityTerms": "Facility Terms"
+    "facilityTerms": "Fazilitätsbedingungen"
   },
   "about": {
-    "title": "About",
-    "eyebrow": "Zurich · Swiss institution",
-    "heroTitle": "The Firm",
-    "heroSubtitle": "One house, two practices: private wealth custody for discerning clients, and structured capital for qualified enterprises.",
+    "title": "Über uns",
+    "eyebrow": "Zürich · Schweizerisches Haus",
+    "heroTitle": "Das Haus",
+    "heroSubtitle": "Ein Haus, zwei Tätigkeiten: private Vermögensverwahrung für anspruchsvolle Kunden und strukturiertes Kapital für qualifizierte Unternehmen.",
     "identityName": "Swiss Bullion Depository Vault",
     "identityNameLabel": "Name",
-    "identitySeatLabel": "Seat",
-    "whoTitle": "Who we are",
-    "whoText": "Seated in Zurich, SBDV preserves private wealth with discretion and arranges mandate-aligned capital facilities for qualified enterprises — under documented review, Swiss AML standards, and clear repayment terms.",
-    "sectionTitle": "About SBDV",
-    "sectionDescription": "A Swiss institution built for quiet custody and disciplined enterprise capital — not retail noise.",
-    "missionTitle": "Our Mission",
-    "missionText": "To preserve wealth and trust with Swiss precision — and to arrange structured capital for qualified enterprises under the same standard of review.",
-    "visionTitle": "Our Vision",
-    "visionText": "To be the Swiss house clients choose when custody must stay silent and capital must stay disciplined — trusted by private wealth and by enterprises that prefer clarity over chaos.",
-    "aboutTitle": "About SBDV",
-    "aboutParagraph1": "Swiss Bullion Depository Vault is a Zurich-seated institution. We combine private vault custody with a Capital Access Program for qualified operating companies — two practices, one Swiss standard of discretion and review.",
-    "aboutParagraph2": "Private clients come for vault custody or a wealth mandate. Enterprises come for transparent facility structure, KYC/UBO look-through, and a partner portal that keeps the process legible from application to repayment.",
-    "aboutParagraph3": "We do not compete on hype. We compete on documentation, mandate alignment, and the quiet confidence of Swiss operating discipline.",
-    "valuesTitle": "Principles",
+    "identitySeatLabel": "Sitz",
+    "whoTitle": "Wer wir sind",
+    "whoText": "Mit Sitz in Zürich bewahrt SBDV privates Vermögen mit Diskretion und vermittelt mandatsgerechte Kapitalfazilitäten für qualifizierte Unternehmen — unter dokumentierter Prüfung, nach schweizerischen Standards AML und mit klaren Rückzahlungsbedingungen.",
+    "sectionTitle": "Über SBDV",
+    "sectionDescription": "Ein schweizerisches Haus für stille Verwahrung und diszipliniertes Unternehmenskapital — nicht für den Lärm des Privatkundengeschäfts im Retail.",
+    "missionTitle": "Unser Auftrag",
+    "missionText": "Vermögen und Vertrauen mit schweizerischer Präzision bewahren — und strukturiertes Kapital für qualifizierte Unternehmen nach demselben Prüfungsmassstab vermitteln.",
+    "visionTitle": "Unsere Vision",
+    "visionText": "Das schweizerische Haus zu sein, für das sich Kunden entscheiden, wenn die Verwahrung still und das Kapital diszipliniert bleiben muss — getragen vom Vertrauen des privaten Vermögens und der Unternehmen, die Klarheit dem Durcheinander vorziehen.",
+    "aboutTitle": "Über SBDV",
+    "aboutParagraph1": "Swiss Bullion Depository Vault ist ein in Zürich ansässiges Haus. Wir verbinden die private Tresorverwahrung mit einem Programm Capital Access für qualifizierte operative Gesellschaften — zwei Tätigkeiten, ein schweizerischer Massstab an Diskretion und Prüfung.",
+    "aboutParagraph2": "Privatkunden kommen wegen der Tresorverwahrung oder eines Vermögensmandats. Unternehmen kommen wegen einer nachvollziehbaren Fazilitätsstruktur, der Durchsicht KYC/UBO und eines Partnerportals, das den Vorgang vom Antrag bis zur Rückzahlung lesbar hält.",
+    "aboutParagraph3": "Wir messen uns nicht an Lautstärke. Wir messen uns an Dokumentation, an der Ausrichtung auf das Mandat und an der stillen Sicherheit schweizerischer Arbeitsdisziplin.",
+    "valuesTitle": "Grundsätze",
     "values": {
       "discretion": {
-        "title": "Discretion",
-        "description": "Privacy is our foundation. Every client interaction is handled with absolute confidentiality."
+        "title": "Diskretion",
+        "description": "Vertraulichkeit ist unser Fundament. Jede Interaktion mit Kunden wird mit absoluter Diskretion behandelt."
       },
       "precision": {
-        "title": "Precision",
-        "description": "Swiss accuracy in every detail. From security protocols to client service, precision is non-negotiable."
+        "title": "Präzision",
+        "description": "Schweizerische Genauigkeit in jedem Detail. Von den Sicherheitsprotokollen bis zur Betreuung der Kunden ist Präzision nicht verhandelbar."
       },
       "security": {
-        "title": "Security",
-        "description": "Layered protection beyond compromise. Multiple defense systems working in harmony."
+        "title": "Sicherheit",
+        "description": "Gestufter Schutz, der keinen Kompromiss zulässt. Mehrere Abwehrsysteme im Zusammenwirken."
       },
       "integrity": {
-        "title": "Integrity",
-        "description": "Built on trust, proven by time. Our word is our bond, and our actions reflect our values."
+        "title": "Integrität",
+        "description": "Auf Vertrauen gebaut, durch die Zeit erwiesen. Unser Wort gilt, und unser Handeln entspricht unseren Grundsätzen."
       }
     },
     "practices": {
-      "privateLabel": "Private clients",
-      "privateTitle": "Custody and wealth",
-      "privateText": "Vault & Security membership for bullion custody, and a separate Wealth & Investment mandate for clients who fund principal and watch stated yield.",
-      "capitalLabel": "Enterprises",
+      "privateLabel": "Privatkunden",
+      "privateTitle": "Verwahrung und Vermögen",
+      "privateText": "Mitgliedschaft Tresor & Sicherheit für die Verwahrung von Bullion, und ein gesondertes Mandat Vermögen & Anlage für Kunden, die Kapital einzahlen und die angegebene Rendite verfolgen.",
+      "capitalLabel": "Unternehmen",
       "capitalTitle": "Capital Access",
-      "capitalText": "Structured facilities for qualified companies — documentation, 10% cash collateral, Swiss AML review, and a confirmed repayment plan. Approval is discretionary."
+      "capitalText": "Strukturierte Fazilitäten für qualifizierte Gesellschaften — Dokumentation, Barsicherheit von 10%, schweizerische Prüfung AML und ein bestätigter Rückzahlungsplan. Die Genehmigung steht im Ermessen."
     },
-    "serveTitle": "Who we serve",
+    "serveTitle": "Wen wir betreuen",
     "serve": {
-      "investors": "Private investors who require custody and discretion.",
-      "offices": "Family offices and sovereign clients with a long horizon.",
-      "enterprises": "Established companies seeking documented growth capital — not consumer credit."
+      "investors": "Private Anleger, die Verwahrung und Diskretion benötigen.",
+      "offices": "Family Offices und souveräne Kunden mit langem Horizont.",
+      "enterprises": "Etablierte Gesellschaften, die dokumentiertes Wachstumskapital suchen — kein Konsumentenkredit."
     },
     "close": {
-      "membership": "Request vault membership",
-      "capital": "Explore Capital Access"
+      "membership": "Tresormitgliedschaft beantragen",
+      "capital": "Capital Access kennenlernen"
     },
-    "locationTitle": "Swiss foundation. Global reach.",
-    "locationDescription": "Headquartered in Zurich with regional presence for international relationships. The standard is Swiss; access is worldwide for approved clients and qualified enterprises.",
-    "worldwideAccessibility": "Worldwide Accessibility"
+    "locationTitle": "Schweizerisches Fundament. Globale Reichweite.",
+    "locationDescription": "Hauptsitz in Zürich, mit regionaler Präsenz für internationale Beziehungen. Der Massstab ist schweizerisch; der Zugang ist weltweit, für genehmigte Kunden und qualifizierte Unternehmen.",
+    "worldwideAccessibility": "Weltweiter Zugang"
   },
   "vault": {
-    "title": "Vault & Security",
-    "heroTitle": "The Vault",
-    "heroSubtitle": "Custody engineered for quiet confidence — layered defense, continuous oversight, and Swiss operating discipline.",
-    "vaultsTitle": "Our Vaults",
-    "vaultsDescription": "Bullion facilities built for multi-tiered defense, continuous monitoring, and auditable chain of custody.",
+    "title": "Tresor & Sicherheit",
+    "heroTitle": "Der Tresor",
+    "heroSubtitle": "Verwahrung, ausgelegt auf stille Sicherheit — gestufte Abwehr, fortlaufende Aufsicht und schweizerische Arbeitsdisziplin.",
+    "vaultsTitle": "Unsere Tresore",
+    "vaultsDescription": "Anlagen für Bullion, gebaut für mehrstufige Abwehr, fortlaufende Überwachung und eine prüfbare Verwahrungskette.",
     "vaultFeatures": {
       "multiTiered": {
-        "title": "Layered defense",
-        "description": "Physical and procedural controls that protect holdings at every stage of custody."
+        "title": "Gestufte Abwehr",
+        "description": "Physische und verfahrensmässige Kontrollen, welche die Bestände in jeder Stufe der Verwahrung schützen."
       },
       "surveillance": {
-        "title": "Continuous oversight",
-        "description": "Monitoring designed for accountability — not theatre."
+        "title": "Fortlaufende Aufsicht",
+        "description": "Überwachung, ausgelegt auf Rechenschaft — nicht auf Inszenierung."
       },
       "engineering": {
-        "title": "Swiss engineering",
-        "description": "Built and operated to standards private clients expect from a Zurich-seated house."
+        "title": "Schweizerische Ingenieurarbeit",
+        "description": "Gebaut und betrieben nach den Massstäben, die Privatkunden von einem in Zürich ansässigen Haus erwarten."
       }
     },
-    "vaultPageTitle": "The Vault",
-    "vaultPageDescription": "A private custody environment for bullion and valuables — designed so wealth can rest without noise.",
+    "vaultPageTitle": "Der Tresor",
+    "vaultPageDescription": "Eine private Umgebung für die Verwahrung von Bullion und Wertsachen — so gestaltet, dass Vermögen ohne Geräusch ruhen kann.",
     "vaultPageFeatures": {
       "defense": {
-        "title": "Layered defense",
-        "description": "Controls at every level of access"
+        "title": "Gestufte Abwehr",
+        "description": "Kontrollen auf jeder Stufe des Zugangs"
       },
       "monitoring": {
-        "title": "Continuous oversight",
-        "description": "Accountable monitoring protocols"
+        "title": "Fortlaufende Aufsicht",
+        "description": "Rechenschaftsfähige Protokolle der Überwachung"
       },
       "impenetrable": {
-        "title": "Swiss-built custody",
-        "description": "Engineering over marketing claims"
+        "title": "In der Schweiz gebaute Verwahrung",
+        "description": "Ingenieurarbeit vor Werbeaussagen"
       },
       "technology": {
-        "title": "Modern controls",
-        "description": "Systems that support audit and access"
+        "title": "Moderne Kontrollen",
+        "description": "Systeme, welche die Prüfung und den Zugang unterstützen"
       }
     },
-    "securityArchitectureTitle": "Security Architecture",
-    "securityArchitectureDescription": "A multi-layered security model combining controlled access, monitoring, and Swiss operational precision.",
+    "securityArchitectureTitle": "Sicherheitsarchitektur",
+    "securityArchitectureDescription": "Ein mehrschichtiges Sicherheitsmodell, das kontrollierten Zugang, Überwachung und schweizerische operative Präzision verbindet.",
     "securityFeatures": {
       "biometrics": {
-        "title": "Biometrics",
-        "description": "Advanced biometric authentication systems ensuring only authorized personnel can access secure areas."
+        "title": "Biometrie",
+        "description": "Fortgeschrittene Systeme der biometrischen Authentifizierung stellen sicher, dass nur befugtes Personal gesicherte Bereiche betreten kann."
       },
       "seismic": {
-        "title": "Seismic Sensors",
-        "description": "State-of-the-art seismic monitoring to detect any unauthorized access attempts or structural anomalies."
+        "title": "Seismische Sensoren",
+        "description": "Seismische Überwachung auf dem neuesten Stand, um unbefugte Zugriffsversuche oder bauliche Abweichungen zu erkennen."
       },
       "accessControl": {
-        "title": "Access Control",
-        "description": "Multi-factor authentication with encrypted access protocols and real-time authorization verification."
+        "title": "Zugangskontrolle",
+        "description": "Authentifizierung mit mehreren Faktoren, verschlüsselten Zugangsprotokollen und Prüfung der Befugnis in Echtzeit."
       },
       "insurance": {
-        "title": "Insurance",
-        "description": "Comprehensive coverage through leading global insurers, providing full protection for all stored assets."
+        "title": "Versicherung",
+        "description": "Umfassende Deckung über führende globale Versicherer, mit vollem Schutz für sämtliche eingelagerten Vermögenswerte."
       }
     },
-    "accessProtocolTitle": "Quiet access protocols",
-    "accessProtocolDescription": "Entry is deliberate: verify identity, confirm authorization, then grant access — so custody stays accountable without theatre.",
+    "accessProtocolTitle": "Stille Protokolle des Zugangs",
+    "accessProtocolDescription": "Der Zutritt erfolgt bewusst: Identität prüfen, Befugnis bestätigen, dann Zugang gewähren — damit die Verwahrung rechenschaftsfähig bleibt, ohne Inszenierung.",
     "accessProtocolSteps": {
       "step1": {
-        "title": "Identity verification",
-        "description": "Multi-factor confirmation before any entry"
+        "title": "Prüfung der Identität",
+        "description": "Bestätigung mit mehreren Faktoren vor jedem Zutritt"
       },
       "step2": {
-        "title": "Authorization review",
-        "description": "Prior approval required for each visit"
+        "title": "Prüfung der Befugnis",
+        "description": "Für jeden Besuch ist eine vorgängige Genehmigung erforderlich"
       },
       "step3": {
-        "title": "Controlled access",
-        "description": "Entry granted only when cleared"
+        "title": "Kontrollierter Zugang",
+        "description": "Zutritt nur nach Freigabe"
       }
     }
   },
   "services": {
-    "title": "Services",
-    "heroTitle": "Private-client services",
-    "heroSubtitle": "The operating suite behind Swiss custody — leasing, bullion verification, insurance reporting, and private viewing.",
-    "sectionTitle": "Custody services",
+    "title": "Dienstleistungen",
+    "heroTitle": "Dienstleistungen für Privatkunden",
+    "heroSubtitle": "Die operative Einrichtung hinter der schweizerischen Verwahrung — Vermietung, Prüfung von Bullion, Versicherungsberichterstattung und private Besichtigung.",
+    "sectionTitle": "Dienstleistungen der Verwahrung",
     "services": {
       "privateVault": {
-        "title": "Private Vault Leasing",
-        "description": "Allocated space for individuals, family offices, and corporations that require dedicated custody."
+        "title": "Private Tresorvermietung",
+        "description": "Allozierter Raum für Privatpersonen, Family Offices und Gesellschaften, die eine eigene Verwahrung benötigen."
       },
       "bullionStorage": {
-        "title": "Bullion Storage",
-        "description": "LBMA-aligned audit and storage for precious metals with clear chain of custody."
+        "title": "Lagerung von Bullion",
+        "description": "An LBMA ausgerichtete Prüfung und Lagerung von Edelmetallen, mit klarer Verwahrungskette."
       },
       "insurance": {
-        "title": "Insurance & Audit Reporting",
-        "description": "Coverage and reporting pathways that keep holdings legible to you and your advisors."
+        "title": "Versicherung & Prüfungsberichte",
+        "description": "Wege der Deckung und der Berichterstattung, die Ihre Bestände für Sie und Ihre Berater lesbar halten."
       },
       "vipRooms": {
-        "title": "Private Viewing Rooms",
-        "description": "By appointment — inspect holdings in a controlled, discreet environment."
+        "title": "Private Besichtigungsräume",
+        "description": "Nach Vereinbarung — Besichtigung der Bestände in einer kontrollierten, diskreten Umgebung."
       }
     },
-    "gridTitle": "What private clients use",
-    "gridSubtitle": "Practical custody services tied to membership — not a catalogue of slogans.",
+    "gridTitle": "Was Privatkunden nutzen",
+    "gridSubtitle": "Praktische Dienstleistungen der Verwahrung, gebunden an die Mitgliedschaft — kein Katalog von Parolen.",
     "gridServices": {
       "privateVault": {
-        "title": "Private Vault Leasing",
-        "description": "Allocated custody for individuals, corporations, and family offices — sized to your holdings and membership tier.",
+        "title": "Private Tresorvermietung",
+        "description": "Allozierte Verwahrung für Privatpersonen, Gesellschaften und Family Offices — bemessen nach Ihren Beständen und Ihrer Mitgliedschaftsstufe.",
         "features": [
-          "Dedicated vault space",
-          "Controlled access",
-          "Relationship service"
+          "Eigener Tresorraum",
+          "Kontrollierter Zugang",
+          "Betreuung der Beziehung"
         ]
       },
       "bullionCustody": {
-        "title": "Bullion Custody & Verification",
-        "description": "LBMA-aligned audits and storage with documented chain of custody and regular verification.",
+        "title": "Verwahrung & Prüfung von Bullion",
+        "description": "An LBMA ausgerichtete Prüfungen und Lagerung, mit dokumentierter Verwahrungskette und regelmässiger Verifikation.",
         "features": [
-          "LBMA-aligned standards",
-          "Regular audits",
-          "Full documentation"
+          "An LBMA ausgerichtete Standards",
+          "Regelmässige Prüfungen",
+          "Vollständige Dokumentation"
         ]
       },
       "insurance": {
-        "title": "Insurance & Audit Reporting",
-        "description": "Coverage pathways and reporting that keep holdings clear to you and your advisors.",
+        "title": "Versicherung & Prüfungsberichte",
+        "description": "Wege der Deckung und Berichterstattung, die Ihre Bestände für Sie und Ihre Berater klar halten.",
         "features": [
-          "Insurance pathways",
-          "Regular reporting",
-          "Audit documentation"
+          "Wege der Versicherung",
+          "Regelmässige Berichterstattung",
+          "Dokumentation der Prüfung"
         ]
       },
       "vipRooms": {
-        "title": "Private Viewing Rooms",
-        "description": "By appointment — inspect holdings in a controlled environment with discreet concierge support.",
+        "title": "Private Besichtigungsräume",
+        "description": "Nach Vereinbarung — Besichtigung der Bestände in einer kontrollierten Umgebung, mit diskreter Concierge-Betreuung.",
         "features": [
-          "By appointment",
-          "Concierge support",
-          "Controlled viewing"
+          "Nach Vereinbarung",
+          "Concierge-Betreuung",
+          "Kontrollierte Besichtigung"
         ]
       }
     },
-    "wealthGridTitle": "Wealth & Investment Services",
-    "wealthGridSubtitle": "A private-client mandate: fund by wire or Bitcoin, we invest, you watch live yield — then withdraw interest or compound it.",
+    "wealthGridTitle": "Dienstleistungen Vermögen & Anlage",
+    "wealthGridSubtitle": "Ein Mandat für Privatkunden: Einzahlung per Überweisung oder in Bitcoin, wir legen an, Sie verfolgen die laufende Rendite — danach beziehen Sie die Zinsen oder thesaurieren sie.",
     "wealthGridServices": {
       "advisory": {
-        "title": "Fund the mandate",
-        "description": "Transfer cash by bank wire, or send Bitcoin to SBDV’s receive address. Ops confirms receipt before principal is credited.",
+        "title": "Das Mandat einzahlen",
+        "description": "Überweisen Sie Barmittel per Bank oder senden Sie Bitcoin an die Empfangsadresse von SBDV. Operations bestätigt den Eingang, bevor das Kapital gutgeschrieben wird.",
         "features": [
-          "Bank wire in USD",
-          "Bitcoin as a funding rail",
-          "Ops-confirmed credit"
+          "Banküberweisung in USD",
+          "Bitcoin als Weg der Einzahlung",
+          "Von Operations bestätigte Gutschrift"
         ]
       },
       "portfolio": {
-        "title": "Stewardship",
-        "description": "SBDV invests funded principal under a stated mandate yield. Interest accrues on principal only — not a bank deposit.",
+        "title": "Verwaltung",
+        "description": "SBDV legt eingezahltes Kapital zu einer angegebenen Mandatsrendite an. Zinsen laufen nur auf das Kapital — es handelt sich nicht um eine Bankeinlage.",
         "features": [
-          "Stated annual mandate yield",
-          "Principal remains invested",
-          "Yield may be revised"
+          "Angegebene jährliche Mandatsrendite",
+          "Das Kapital bleibt angelegt",
+          "Die Rendite kann angepasst werden"
         ]
       },
       "alternatives": {
-        "title": "Live monitoring",
-        "description": "Your private portal shows principal, accrued interest, and total value as the mandate yield ticks forward.",
+        "title": "Laufende Beobachtung",
+        "description": "Ihr privates Portal zeigt Kapital, aufgelaufene Zinsen und Gesamtwert, während die Mandatsrendite fortschreitet.",
         "features": [
-          "Live principal vs interest",
-          "Funding history",
-          "Secure client portal"
+          "Laufendes Kapital gegenüber den Zinsen",
+          "Historie der Einzahlungen",
+          "Sicheres Kundenportal"
         ]
       },
       "reporting": {
-        "title": "Distribute or compound",
-        "description": "Withdraw accrued interest and leave principal invested, or reinvest interest so it becomes new principal.",
+        "title": "Ausschütten oder thesaurieren",
+        "description": "Beziehen Sie aufgelaufene Zinsen und lassen Sie das Kapital angelegt, oder legen Sie die Zinsen wieder an, sodass sie neues Kapital werden.",
         "features": [
-          "Withdraw interest",
-          "Reinvest into principal",
-          "Wire or Bitcoin payout"
+          "Zinsen beziehen",
+          "Dem Kapital wieder zuführen",
+          "Auszahlung per Überweisung oder in Bitcoin"
         ]
       }
     }
   },
   "wealth": {
-    "title": "Wealth & Investment",
-    "heroTitle": "Wealth & Investment",
-    "heroSubtitle": "Private clients fund a mandate by wire or Bitcoin. SBDV invests the principal. You monitor live yield, then withdraw interest or compound it.",
-    "pillarsTitle": "How the mandate works",
-    "pillarsSubtitle": "Four steps: fund, steward, watch, and distribute — with Swiss ops confirmation, not a trading app.",
+    "title": "Vermögen & Anlage",
+    "heroTitle": "Vermögen & Anlage",
+    "heroSubtitle": "Privatkunden zahlen ein Mandat per Überweisung oder in Bitcoin ein. SBDV legt das Kapital an. Sie verfolgen die laufende Rendite, dann beziehen Sie die Zinsen oder thesaurieren sie.",
+    "pillarsTitle": "Wie das Mandat funktioniert",
+    "pillarsSubtitle": "Vier Schritte: einzahlen, betreuen, beobachten und ausschütten — mit Bestätigung durch die schweizerische Operations-Stelle, nicht über eine Handelsanwendung.",
     "pillars": {
       "advisory": {
-        "title": "Fund",
-        "description": "Send USD by wire or Bitcoin to the house receive address. Credit posts after operations confirm the transfer."
+        "title": "Einzahlen",
+        "description": "Senden Sie USD per Überweisung oder Bitcoin an die Empfangsadresse des Hauses. Die Gutschrift erfolgt, nachdem Operations die Übertragung bestätigt hat."
       },
       "portfolio": {
-        "title": "Invest",
-        "description": "Funded principal is invested under a stated mandate yield. Interest accrues on principal only."
+        "title": "Anlegen",
+        "description": "Eingezahltes Kapital wird zu einer angegebenen Mandatsrendite angelegt. Zinsen laufen nur auf das Kapital."
       },
       "metals": {
-        "title": "Monitor",
-        "description": "The client portal ticks principal, accrued interest, and total value in real time — as of this moment."
+        "title": "Beobachten",
+        "description": "Das Kundenportal führt Kapital, aufgelaufene Zinsen und Gesamtwert in Echtzeit fort — zum gegenwärtigen Zeitpunkt."
       },
       "reporting": {
-        "title": "Distribute or compound",
-        "description": "Take accrued interest and leave principal working, or reinvest interest so future yield runs on a larger base."
+        "title": "Ausschütten oder thesaurieren",
+        "description": "Beziehen Sie aufgelaufene Zinsen und lassen Sie das Kapital arbeiten, oder legen Sie die Zinsen wieder an, damit die künftige Rendite auf einer grösseren Basis läuft."
       }
     },
-    "approachTitle": "A quiet mandate, not a marketplace",
-    "approachDescription": "This is a private-client investment mandate, not a bank account and not a crypto exchange. Bitcoin is only a way to fund. Yield is a stated mandate rate SBDV may change. Principal is not withdrawn in this programme — you fund, watch growth, and elect how to treat interest.",
-    "feesTitle": "Fee Transparency",
-    "feesDescription": "Mandate terms, including the stated yield and any fees, are disclosed in writing before you fund. No hidden transaction costs, retrocessions, or kickbacks.",
-    "ctaTitle": "Discuss a private mandate",
-    "ctaSubtitle": "A confidential conversation with our investment team — no pressure, clear next steps.",
-    "ctaButton": "Schedule Consultation",
+    "approachTitle": "Ein stilles Mandat, kein Marktplatz",
+    "approachDescription": "Dies ist ein Anlagemandat für Privatkunden, kein Bankkonto und keine Krypto-Börse. Bitcoin ist nur ein Weg der Einzahlung. Die Rendite ist ein angegebener Mandatssatz, den SBDV ändern kann. Das Kapital wird in diesem Programm nicht zurückgenommen — Sie zahlen ein, verfolgen das Wachstum und bestimmen, wie die Zinsen behandelt werden.",
+    "feesTitle": "Transparenz der Gebühren",
+    "feesDescription": "Die Mandatsbedingungen, einschliesslich der angegebenen Rendite und allfälliger Gebühren, werden schriftlich offengelegt, bevor Sie einzahlen. Keine verdeckten Transaktionskosten, keine Retrozessionen und keine Schmiergelder.",
+    "ctaTitle": "Ein privates Mandat besprechen",
+    "ctaSubtitle": "Ein vertrauliches Gespräch mit unserem Anlageteam — ohne Druck, mit klaren nächsten Schritten.",
+    "ctaButton": "Gespräch vereinbaren",
     "growth": {
-      "title": "How your capital grows",
-      "subtitle": "You fund principal. SBDV invests it under a stated mandate yield. Interest accrues on principal only — then you withdraw it or compound it.",
+      "title": "Wie Ihr Kapital wächst",
+      "subtitle": "Sie zahlen Kapital ein. SBDV legt es zu einer angegebenen Mandatsrendite an. Zinsen laufen nur auf das Kapital — danach beziehen Sie sie oder thesaurieren sie.",
       "steps": {
         "fund": {
-          "title": "Fund principal",
-          "description": "Transfer USD by wire or Bitcoin. Operations confirm receipt, then the amount is credited as principal — not as a traded coin wallet."
+          "title": "Kapital einzahlen",
+          "description": "Übertragen Sie USD per Überweisung oder in Bitcoin. Operations bestätigt den Eingang, danach wird der Betrag als Kapital gutgeschrieben — nicht als gehandeltes Coin-Wallet."
         },
         "accrue": {
-          "title": "Yield on principal",
-          "description": "A stated annual rate accrues on principal (actual/365). Unwithdrawn interest does not itself earn until you reinvest it."
+          "title": "Rendite auf das Kapital",
+          "description": "Ein angegebener Jahressatz läuft auf das Kapital (actual/365). Nicht bezogene Zinsen tragen selbst nichts, bis Sie sie wiederanlegen."
         },
         "choose": {
-          "title": "Take or compound",
-          "description": "Withdraw accrued interest and leave principal invested, or reinvest interest so future yield runs on a larger base."
+          "title": "Beziehen oder thesaurieren",
+          "description": "Beziehen Sie aufgelaufene Zinsen und lassen Sie das Kapital angelegt, oder legen Sie die Zinsen wieder an, damit die künftige Rendite auf einer grösseren Basis läuft."
         }
       },
-      "exampleLabel": "Worked example",
-      "exampleTitle": "Illustrative year at a stated 8% mandate yield",
-      "exampleBody": "If $250,000 is confirmed as principal and the mandate yield is 8% actual/365, about $20,000 of interest would accrue over a full year — assuming the rate is unchanged and principal is not reduced. You could withdraw that interest or reinvest it into principal.",
-      "examplePrincipal": "Principal",
-      "exampleYield": "Stated yield",
-      "exampleInterest": "Year-1 interest (illustrative)",
-      "exampleNote": "Not guaranteed. The stated yield may be paused or revised. Possible loss of principal. This is not a bank deposit and is not covered by deposit insurance."
+      "exampleLabel": "Rechenbeispiel",
+      "exampleTitle": "Beispieljahr bei einer angegebenen Mandatsrendite von 8%",
+      "exampleBody": "Wenn $250,000 als Kapital bestätigt sind und die Mandatsrendite 8% actual/365 beträgt, würden über ein volles Jahr rund $20,000 Zinsen anfallen — vorausgesetzt, der Satz bleibt unverändert und das Kapital wird nicht vermindert. Sie könnten diese Zinsen beziehen oder sie dem Kapital wieder zuführen.",
+      "examplePrincipal": "Kapital",
+      "exampleYield": "Angegebene Rendite",
+      "exampleInterest": "Zinsen des ersten Jahres (illustrativ)",
+      "exampleNote": "Nicht garantiert. Die angegebene Rendite kann ausgesetzt oder angepasst werden. Ein Verlust des Kapitals ist möglich. Dies ist keine Bankeinlage und nicht von der Einlagensicherung erfasst."
     },
     "benefits": {
-      "title": "Why private clients use the mandate",
+      "title": "Warum Privatkunden das Mandat nutzen",
       "items": [
-        "Ops-confirmed funding by wire or Bitcoin",
-        "Live principal vs interest in the private portal",
-        "Withdraw interest without redeeming principal",
-        "Reinvest interest so the base can grow",
-        "Swiss KYC and operations confirmation when you fund",
-        "Custody remains a separate Vault membership if you also store bullion"
+        "Von Operations bestätigte Einzahlung per Überweisung oder in Bitcoin",
+        "Laufendes Kapital gegenüber den Zinsen im privaten Portal",
+        "Zinsen beziehen, ohne das Kapital zurückzunehmen",
+        "Zinsen wiederanlegen, damit die Basis wachsen kann",
+        "Schweizerisches KYC und Bestätigung durch Operations bei der Einzahlung",
+        "Die Verwahrung bleibt eine gesonderte Mitgliedschaft beim Tresor, wenn Sie auch Bullion lagern"
       ]
     },
     "register": {
-      "formTitle": "Create your wealth account",
-      "formSubtitle": "Register with your own password. After you sign in, review the mandate and choose how much to fund by wire or Bitcoin. Operations confirms receipt before principal starts accruing.",
-      "formSuccessTitle": "Account created",
-      "formSuccessText": "Sign in to open your mandate and choose a funding amount.",
-      "continueTitle": "You're signed in",
-      "continueText": "Continue to your wealth mandate to review the programme and choose how much to invest.",
-      "continueCta": "Continue to your mandate",
-      "createAccount": "Create account",
-      "creatingAccount": "Creating account...",
-      "password": "Password",
-      "confirmPassword": "Confirm password",
-      "passwordMin": "At least 8 characters",
-      "alreadyExists": "An account with this email already exists. Sign in instead.",
-      "signIn": "Sign in",
-      "signInFailed": "Account created. Sign in to continue to your mandate.",
-      "error": "Unable to create the account. Please try again."
+      "formTitle": "Eröffnen Sie Ihr Vermögenskonto",
+      "formSubtitle": "Registrieren Sie sich mit Ihrem eigenen Passwort. Nach der Anmeldung prüfen Sie das Mandat und wählen, welchen Betrag Sie per Überweisung oder in Bitcoin einzahlen. Operations bestätigt den Eingang, bevor das Kapital zu laufen beginnt.",
+      "formSuccessTitle": "Konto erstellt",
+      "formSuccessText": "Melden Sie sich an, um Ihr Mandat zu öffnen und einen Betrag für die Einzahlung zu wählen.",
+      "continueTitle": "Sie sind angemeldet",
+      "continueText": "Fahren Sie mit Ihrem Vermögensmandat fort, um das Programm zu prüfen und den Betrag der Anlage zu wählen.",
+      "continueCta": "Weiter zu Ihrem Mandat",
+      "createAccount": "Konto erstellen",
+      "creatingAccount": "Konto wird erstellt...",
+      "password": "Passwort",
+      "confirmPassword": "Passwort bestätigen",
+      "passwordMin": "Mindestens 8 Zeichen",
+      "alreadyExists": "Ein Konto mit dieser E-Mail besteht bereits. Melden Sie sich stattdessen an.",
+      "signIn": "Anmelden",
+      "signInFailed": "Konto erstellt. Melden Sie sich an, um mit Ihrem Mandat fortzufahren.",
+      "error": "Das Konto konnte nicht erstellt werden. Bitte versuchen Sie es erneut."
     },
-    "closeTitle": "Ready to begin?",
-    "closeSubtitle": "Create a portal account on this page. After you sign in, choose how much to invest. Vault custody is a separate membership if you need allocated storage.",
-    "closeApply": "Create an account",
-    "closeVault": "Request vault membership"
+    "closeTitle": "Bereit zu beginnen?",
+    "closeSubtitle": "Eröffnen Sie auf dieser Seite ein Portalkonto. Nach der Anmeldung wählen Sie den Betrag, den Sie anlegen. Die Tresorverwahrung ist eine gesonderte Mitgliedschaft, wenn Sie allozierte Lagerung benötigen.",
+    "closeApply": "Ein Konto eröffnen",
+    "closeVault": "Tresormitgliedschaft beantragen"
   },
   "membership": {
-    "title": "Vault membership",
-    "heroTitle": "Vault membership",
-    "heroSubtitle": "The path into Swiss vault custody — tiered access to allocated storage, viewing, and relationship coverage. This is Vault & Security, not the wealth mandate.",
-    "tiersTitle": "Custody access levels",
-    "tiersSubtitle": "Three tiers for different scales of bullion and valuables custody. Every request is reviewed before access.",
+    "title": "Tresormitgliedschaft",
+    "heroTitle": "Tresormitgliedschaft",
+    "heroSubtitle": "Der Weg in die schweizerische Tresorverwahrung — gestufter Zugang zu allozierter Lagerung, Besichtigung und Betreuung. Dies ist Tresor & Sicherheit, nicht das Vermögensmandat.",
+    "tiersTitle": "Zugangsstellen der Verwahrung",
+    "tiersSubtitle": "Drei Stufen für unterschiedliche Umfänge der Verwahrung von Bullion und Wertsachen. Jedes Gesuch wird vor dem Zugang geprüft.",
     "tiers": {
       "standard": {
-        "title": "Standard Custody",
-        "subtitle": "Entry Level",
+        "title": "Standardverwahrung",
+        "subtitle": "Einstiegsstufe",
         "minimum": "Minimum: $250k",
-        "description": "Custody for individual investors and smaller portfolios — standard protocols, regular reporting, and monitored facilities.",
+        "description": "Verwahrung für einzelne Anleger und kleinere Portfolios — Standardprotokolle, regelmässige Berichterstattung und überwachte Anlagen.",
         "features": [
-          "Minimum $250k in assets",
-          "Standard security protocols",
-          "Regular reporting",
-          "24/7 monitoring",
-          "Insurance coverage"
+          "Mindestens $250k an Vermögenswerten",
+          "Standard-Sicherheitsprotokolle",
+          "Regelmässige Berichterstattung",
+          "Überwachung 24/7",
+          "Versicherungsdeckung"
         ]
       },
       "executive": {
-        "title": "Executive Vault",
-        "subtitle": "Reviewed access",
-        "minimum": "Minimum: Custom",
-        "description": "Reviewed relationships for HNWI, family offices, and corporations — dedicated service and heightened privacy.",
+        "title": "Executive-Tresor",
+        "subtitle": "Geprüfter Zugang",
+        "minimum": "Minimum: nach Vereinbarung",
+        "description": "Geprüfte Beziehungen für HNWI, Family Offices und Gesellschaften — eigene Betreuung und erhöhte Vertraulichkeit.",
         "features": [
-          "Reviewed access",
-          "Personalized storage",
-          "Dedicated account manager",
-          "Enhanced privacy protocols",
-          "Priority access"
+          "Geprüfter Zugang",
+          "Persönliche Lagerung",
+          "Eigener Kundenbetreuer",
+          "Verstärkte Protokolle der Vertraulichkeit",
+          "Vorrangiger Zugang"
         ]
       },
       "sovereign": {
-        "title": "Sovereign Tier",
-        "subtitle": "Institutional",
-        "minimum": "Minimum: Institutional",
-        "description": "Institutional-scale custody relationships for sovereign and large institutional counterparts — the highest service intensity.",
+        "title": "Stufe Sovereign",
+        "subtitle": "Institutionell",
+        "minimum": "Minimum: Institutionell",
+        "description": "Verwahrungsbeziehungen institutionellen Umfangs für souveräne und grosse institutionelle Gegenparteien — die höchste Intensität der Betreuung.",
         "features": [
-          "Institutional-grade security",
-          "Government-level protocols",
-          "Custom solutions",
-          "Dedicated facilities",
-          "White-glove service"
+          "Sicherheit auf institutionellem Niveau",
+          "Protokolle auf staatlichem Niveau",
+          "Individuelle Lösungen",
+          "Eigene Anlagen",
+          "Betreuung höchster Stufe"
         ]
       }
     },
-    "complianceTitle": "Compliance & Security",
-    "complianceText": "Vault membership is a request, reviewed before access. Every applicant is screened under Swiss KYC and AML frameworks. To fund a wealth mandate, use Wealth & Investment. That programme is separate from vault custody.",
-    "formTitle": "Request vault membership",
-    "formSubtitle": "Tell us about your custody needs — allocated bullion, viewing, and vault relationship. We respond with discretion — no obligation.",
-    "formSuccessTitle": "Vault application received",
-    "formSuccessText": "Thank you. Our custody desk will review your request and contact you shortly.",
+    "complianceTitle": "Compliance & Sicherheit",
+    "complianceText": "Die Tresormitgliedschaft ist ein Gesuch und wird vor dem Zugang geprüft. Jeder Antragsteller wird nach den schweizerischen Rahmen von KYC und AML geprüft. Um ein Vermögensmandat zu finanzieren, nutzen Sie Vermögen & Anlage. Dieses Programm ist von der Tresorverwahrung getrennt.",
+    "formTitle": "Tresormitgliedschaft beantragen",
+    "formSubtitle": "Schildern Sie Ihren Verwahrungsbedarf — alloziertes Bullion, Besichtigung und die Beziehung zum Tresor. Wir antworten mit Diskretion — ohne Verpflichtung.",
+    "formSuccessTitle": "Tresorantrag eingegangen",
+    "formSuccessText": "Vielen Dank. Unser Verwahrungsschalter prüft Ihr Gesuch und kontaktiert Sie in Kürze.",
     "formLabels": {
-      "name": "Full Name",
-      "email": "Email Address",
-      "phone": "Phone Number",
-      "country": "Country",
-      "assetRange": "Asset Range",
-      "message": "Message"
+      "name": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "phone": "Telefonnummer",
+      "country": "Land",
+      "assetRange": "Vermögensspanne",
+      "message": "Nachricht"
     },
     "formPlaceholders": {
-      "name": "Enter your full name",
+      "name": "Geben Sie Ihren vollständigen Namen ein",
       "email": "your.email@example.com",
       "phone": "+1 (555) 123-4567",
-      "country": "Select your country",
-      "assetRange": "Select asset range",
-      "message": "Describe your vault custody interest — metals, volume, and any viewing needs."
+      "country": "Wählen Sie Ihr Land",
+      "assetRange": "Vermögensspanne auswählen",
+      "message": "Beschreiben Sie Ihr Interesse an der Tresorverwahrung — Metalle, Volumen und allfällige Bedürfnisse der Besichtigung."
     }
   },
   "contact": {
-    "title": "Contact",
+    "title": "Kontakt",
     "heroTitle": "Kontakt und vertrauliche Anfrage",
     "heroSubtitle": "Sprechen Sie unser Team für eine vertrauliche Beratung an.",
     "formSuccessTitle": "Ihre Anfrage wurde sicher übermittelt.",
-    "formSuccessText": "We have received your inquiry and will contact you shortly. All communications are handled with the utmost discretion and security.",
+    "formSuccessText": "Wir haben Ihre Anfrage erhalten und werden Sie in Kürze kontaktieren. Jede Kommunikation wird mit grösster Diskretion und Sicherheit behandelt.",
     "formSecureLabel": "Sicher und vertraulich",
     "formLabels": {
       "name": "Vollständiger Name",
@@ -489,23 +489,23 @@
       "message": "Nachricht"
     },
     "formPlaceholders": {
-      "name": "Enter your full name",
+      "name": "Geben Sie Ihren vollständigen Namen ein",
       "email": "your.email@example.com",
       "phone": "+1 (555) 123-4567",
-      "country": "Select your country",
-      "interest": "Select investment interest",
-      "message": "Tell us about your inquiry..."
+      "country": "Wählen Sie Ihr Land",
+      "interest": "Anlageinteresse auswählen",
+      "message": "Schildern Sie uns Ihre Anfrage..."
     },
     "interestOptions": {
-      "privateVault": "Private Vault Leasing",
-      "bullionCustody": "Bullion Custody & Verification",
-      "insurance": "Insurance & Audit Reporting",
-      "vipViewing": "VIP Private Viewing Rooms",
-      "investmentAdvisory": "Investment Advisory",
-      "portfolioManagement": "Portfolio Management",
-      "alternativeInvestments": "Alternative Investments",
-      "membership": "Membership Inquiry",
-      "general": "General Inquiry"
+      "privateVault": "Private Tresorvermietung",
+      "bullionCustody": "Verwahrung & Prüfung von Bullion",
+      "insurance": "Versicherung & Prüfungsberichte",
+      "vipViewing": "Private VIP-Räume für die Besichtigung",
+      "investmentAdvisory": "Anlageberatung",
+      "portfolioManagement": "Portfolioverwaltung",
+      "alternativeInvestments": "Alternative Anlagen",
+      "membership": "Anfrage zur Mitgliedschaft",
+      "general": "Allgemeine Anfrage"
     }
   },
   "cta": {
@@ -532,9 +532,9 @@
       }
     },
     "globalAccessTitle": "Globaler Zugang",
-    "globalAccessDescription": "Vault membership is a request, reviewed before access. Wealth mandates and Capital Access are open to clients who qualify. Approved clients use the secure portal.",
+    "globalAccessDescription": "Die Tresormitgliedschaft ist ein Gesuch und wird vor dem Zugang geprüft. Vermögensmandate und Capital Access stehen Kunden offen, welche die Voraussetzungen erfüllen. Genehmigte Kunden nutzen das sichere Portal.",
     "globalAccessLabel": "Sicheres Kundenportal",
-    "globalNetworkTitle": "Global Network",
+    "globalNetworkTitle": "Globales Netz",
     "globalNetworkDescription": "Diskrete Betreuung von Kunden in den Finanzmetropolen der Welt mit Partner-Tresoren und globaler Logistik.",
     "wealthTeaserTitle": "Vermögens-Stewardship, kein Lärm",
     "wealthTeaserDescription": "Für Private Clients: Portfoliomandate, Edelmetallstrategie und konsolidiertes Reporting — integriert mit Schweizer Custody über Ihr privates Portal.",
@@ -583,28 +583,28 @@
     "submit": "Senden",
     "submitting": "Wird gesendet…",
     "cancel": "Abbrechen",
-    "success": "Success",
+    "success": "Erfolg",
     "error": "Fehler",
     "tryAgain": "Erneut versuchen",
-    "required": "Required",
-    "optional": "Optional",
-    "learnMore": "Learn More",
-    "backToHome": "Back to Home"
+    "required": "Erforderlich",
+    "optional": "Fakultativ",
+    "learnMore": "Mehr erfahren",
+    "backToHome": "Zurück zur Startseite"
   },
   "legal": {
-    "privacyTitle": "Privacy Policy",
-    "privacyIntro": "Swiss Bullion Depository Vault (SBDV), seated in Zurich, is the controller of personal data collected through this website and complies with the Swiss Federal Act on Data Protection (FADP) when processing personal data of clients worldwide.",
-    "privacyBody": "SBDV, seated in Zurich, is the controller of personal data collected through this website, the client portal, and the Capital Access program. We collect identity, contact, company, beneficial-ownership, and banking data solely to provide vault custody, membership, and capital facilities, to meet Swiss anti-money-laundering duties, and to communicate with you. A request to access, correct, or delete personal data is made through the Contact page.\n\nData is stored securely, accessed by authorised staff and by banking or compliance partners who need it to perform the service, and is not sold. Hosting and email providers may process data outside Switzerland under confidentiality and security safeguards.\n\nWe retain application and KYC records for as long as required by Swiss financial-crime and contractual rules, then delete or anonymise them. A request for deletion is subject to those legal retention duties.",
-    "termsTitle": "Terms of Service",
-    "termsIntro": "These terms govern your use of the SBDV website, client portals, and public application channels. SBDV is seated in Zurich. Swiss law governs these website terms.",
-    "termsBody": "These website terms apply to use of the SBDV website, account sign-in, and public application channels. They do not create a vault custody agreement, a wealth mandate, or a capital facility. Vault custody and wealth mandates are provided only under the separate agreement issued for that relationship. Capital Access facilities are governed by the Facility Terms and Conditions, not by these website terms.\n\nSBDV is seated in Zurich, Switzerland. These website terms are governed by the substantive laws of Switzerland, excluding conflict-of-law rules that would apply another law. The courts of Zurich have jurisdiction over disputes arising from use of the website. That does not limit any jurisdiction stated in a facility or mandate agreement.\n\nBy creating an account or using a portal you agree to Swiss know-your-customer and anti-money-laundering screening. You must keep your password and any sign-in code confidential. If you believe your account has been used without your authority, tell SBDV promptly through the Contact page.\n\nEnterprises worldwide may apply for Capital Access. Submitting an application is not a commitment to lend, is not a retail consumer loan, and is not a public securities offering. SBDV may approve, decline, or defer an application in its discretion. SBDV may modify the public website by notice on this page. A facility already accepted remains governed by the Facility Terms you accepted, not by a later change to this page.",
-    "regulatoryTitle": "Regulatory Disclosures",
-    "regulatoryIntro": "SBDV is a Zurich-seated vault and capital-arranging institution serving clients worldwide. It is not a Swiss bank.",
-    "regulatoryBody": "SBDV provides bullion vault custody and arranges structured capital facilities for qualified enterprises. Capital Access is not a protected bank deposit and is not covered by deposit-insurance schemes. Funds held as a security deposit are contractual cash collateral, not a deposit in your name at a bank.\n\nPrivate-client wealth mandates are investment programmes, not bank accounts. A stated mandate yield is not guaranteed interest, may be paused or revised, and is not covered by deposit insurance. Bitcoin may be used only as a funding or payout rail; SBDV does not operate a crypto exchange or hold client private keys. Transfers in Bitcoin are irreversible.\n\nAll clients undergo know-your-customer, beneficial-ownership, and anti-money-laundering screening consistent with the Swiss Anti-Money Laundering Act (AMLA). Ultimate beneficial owners are identified to natural persons. Screening applies regardless of the client’s country of incorporation.\n\nInvestment and portfolio management services may require appropriate licensing or be provided through regulated partners. SBDV does not claim a FINMA banking licence. Approval of any facility or mandate is discretionary.\n\nPersons and entities in comprehensively sanctioned jurisdictions cannot be onboarded. High-risk jurisdictions may be subject to enhanced due diligence rather than automatic refusal.\n\nRisk disclosures: investments involve risk including possible loss of principal. Past performance is not indicative of future results. This website is not legal, tax, or investment advice.",
-    "investorRelationsTitle": "Investor Relations",
-    "investorRelationsIntro": "Governance, transparency, and institutional communications.",
-    "investorRelationsBody": "SBDV is committed to transparency with our clients and stakeholders. Annual reports, governance policies, and institutional disclosures will be published here as they become available. For institutional inquiries, please contact our investor relations team through the contact page.",
-    "englishGoverns": "English is the governing language of this page. Until a translation is issued, the English text is the text that applies."
+    "privacyTitle": "Datenschutzerklärung",
+    "privacyIntro": "Swiss Bullion Depository Vault (SBDV), mit Sitz in Zürich, ist Verantwortlicher für die Personendaten, die über diese Website erhoben werden, und hält bei der Bearbeitung von Personendaten von Kunden weltweit das schweizerische Bundesgesetz über den Datenschutz (FADP) ein.",
+    "privacyBody": "SBDV, mit Sitz in Zürich, ist Verantwortlicher für die Personendaten, die über diese Website, das Kundenportal und das Programm Capital Access erhoben werden. Wir erheben Identitäts-, Kontakt-, Gesellschafts- und Bankdaten sowie Daten zu wirtschaftlich berechtigten Personen ausschliesslich, um Tresorverwahrung, Mitgliedschaft und Kapitalfazilitäten zu erbringen, um schweizerische Pflichten zur Geldwäschereiprävention zu erfüllen und um mit Ihnen zu kommunizieren. Ein Gesuch um Auskunft, Berichtigung oder Löschung von Personendaten ist über die Kontaktseite zu stellen.\n\nDie Daten werden sicher gespeichert, von befugten Mitarbeitenden sowie von Bank- oder Compliance-Partnern eingesehen, die sie zur Erbringung der Dienstleistung benötigen, und nicht verkauft. Anbieter von Hosting und E-Mail können Daten ausserhalb der Schweiz bearbeiten, unter Wahrung von Vertraulichkeit und Sicherheit.\n\nWir bewahren Antrags- und KYC-Unterlagen so lange auf, wie es die schweizerischen Regeln zur Bekämpfung von Finanzkriminalität und die vertraglichen Regeln verlangen, und löschen oder anonymisieren sie anschliessend. Ein Löschungsgesuch steht unter dem Vorbehalt dieser gesetzlichen Aufbewahrungspflichten.",
+    "termsTitle": "Nutzungsbedingungen",
+    "termsIntro": "Diese Bedingungen regeln Ihre Nutzung der Website von SBDV, der Kundenportale und der öffentlichen Antragswege. SBDV hat seinen Sitz in Zürich. Diese Website-Bedingungen unterstehen schweizerischem Recht.",
+    "termsBody": "Diese Website-Bedingungen gelten für die Nutzung der Website von SBDV, die Anmeldung zum Konto und die öffentlichen Antragswege. Sie begründen keinen Vertrag über die Tresorverwahrung, kein Vermögensmandat und keine Kapitalfazilität. Tresorverwahrung und Vermögensmandate werden ausschliesslich unter dem gesonderten Vertrag erbracht, der für diese Beziehung ausgestellt wird. Fazilitäten unter Capital Access unterstehen den Fazilitätsbedingungen, nicht diesen Website-Bedingungen.\n\nSBDV hat seinen Sitz in Zürich, Schweiz. Diese Website-Bedingungen unterstehen dem materiellen Recht der Schweiz, unter Ausschluss der Kollisionsnormen, die ein anderes Recht zur Anwendung brächten. Für Streitigkeiten aus der Nutzung der Website sind die Gerichte in Zürich zuständig. Das schränkt eine Zuständigkeit nicht ein, die in einem Fazilitäts- oder Mandatsvertrag festgelegt ist.\n\nMit der Eröffnung eines Kontos oder der Nutzung eines Portals erklären Sie sich mit der schweizerischen Prüfung der Kundenidentität und der Geldwäschereiprävention einverstanden. Sie haben Ihr Passwort und jeden Anmeldecode vertraulich zu halten. Wenn Sie annehmen, dass Ihr Konto ohne Ihre Befugnis verwendet wurde, teilen Sie dies SBDV umgehend über die Kontaktseite mit.\n\nUnternehmen weltweit können Capital Access beantragen. Die Einreichung eines Antrags ist keine Zusage, Kredit zu gewähren, kein Konsumentenkredit und kein öffentliches Angebot von Effekten. SBDV kann einen Antrag nach eigenem Ermessen genehmigen, ablehnen oder zurückstellen. SBDV kann die öffentliche Website durch Hinweis auf dieser Seite ändern. Eine bereits angenommene Fazilität bleibt den Fazilitätsbedingungen unterstellt, die Sie angenommen haben, nicht einer späteren Änderung dieser Seite.",
+    "regulatoryTitle": "Regulatorische Hinweise",
+    "regulatoryIntro": "SBDV ist ein in Zürich ansässiges Haus für Tresorverwahrung und Kapitalvermittlung und dient Kunden weltweit. Es ist keine schweizerische Bank.",
+    "regulatoryBody": "SBDV bietet die Verwahrung von Bullion im Tresor und vermittelt strukturierte Kapitalfazilitäten für qualifizierte Unternehmen. Capital Access ist keine geschützte Bankeinlage und unterliegt keiner Einlagensicherung. Mittel, die als Sicherheitsleistung gehalten werden, sind vertragliche Barsicherheit und keine Einlage auf Ihren Namen bei einer Bank.\n\nVermögensmandate für Privatkunden sind Anlageprogramme, keine Bankkonten. Eine angegebene Mandatsrendite ist kein garantierter Zins, kann ausgesetzt oder angepasst werden und ist nicht von der Einlagensicherung erfasst. Bitcoin darf nur als Weg für die Einzahlung oder die Auszahlung dienen; SBDV betreibt keine Krypto-Börse und verwahrt keine privaten Schlüssel der Kunden. Übertragungen in Bitcoin sind unwiderruflich.\n\nSämtliche Kunden durchlaufen eine Prüfung der Identität, der wirtschaftlich berechtigten Personen und der Geldwäschereiprävention im Einklang mit dem schweizerischen Geldwäschereigesetz (AMLA). Wirtschaftlich berechtigte Personen werden bis auf natürliche Personen festgestellt. Die Prüfung gilt unabhängig vom Staat, in dem der Kunde errichtet ist.\n\nDienstleistungen der Anlage und der Portfolioverwaltung können eine geeignete Bewilligung erfordern oder über regulierte Partner erbracht werden. SBDV beansprucht keine Bankbewilligung der FINMA. Die Genehmigung einer Fazilität oder eines Mandats steht im Ermessen.\n\nPersonen und Einheiten in umfassend sanktionierten Staaten können nicht aufgenommen werden. Staaten mit erhöhtem Risiko können einer verstärkten Sorgfaltsprüfung unterliegen, statt automatisch abgelehnt zu werden.\n\nRisikohinweise: Anlagen sind mit Risiken verbunden, einschliesslich eines möglichen Verlusts des Kapitals. Die frühere Wertentwicklung lässt keine Schlüsse auf künftige Ergebnisse zu. Diese Website ist keine Rechts-, Steuer- oder Anlageberatung.",
+    "investorRelationsTitle": "Anlegerbeziehungen",
+    "investorRelationsIntro": "Governance, Transparenz und institutionelle Kommunikation.",
+    "investorRelationsBody": "SBDV verpflichtet sich zur Transparenz gegenüber seinen Kunden und Anspruchsgruppen. Jahresberichte, Governance-Richtlinien und institutionelle Offenlegungen werden hier veröffentlicht, sobald sie vorliegen. Für institutionelle Anfragen wenden Sie sich bitte über die Kontaktseite an unser Team für Anlegerbeziehungen.",
+    "englishGoverns": "Englisch ist die massgebende Sprache dieser Seite. Die Übersetzung dient der Lektüre. Es gilt der englische Text."
   },
   "login": {
     "title": "Kundenlogin",
@@ -621,191 +621,191 @@
     "invalidCredentials": "E-Mail oder Passwort ungültig.",
     "mfaRequired": "Geben Sie Ihren Authentifizierungscode ein, um fortzufahren.",
     "mfaInvalid": "Ungültiger Authentifizierungscode.",
-    "error": "An error occurred. Please try again.",
+    "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
     "forgotTitle": "Passwort vergessen",
     "forgotSubtitle": "Geben Sie Ihre E-Mail ein. Wir senden einen Link zum Zurücksetzen.",
     "sendResetLink": "Link senden",
-    "resetEmailSent": "If an account exists for that email, a reset link has been sent. Check your inbox and spam folder.",
+    "resetEmailSent": "Wenn für diese E-Mail ein Konto besteht, wurde ein Link zum Zurücksetzen gesendet. Prüfen Sie den Posteingang und den Spam-Ordner.",
     "backToSignIn": "Zur Anmeldung",
     "resetTitle": "Passwort zurücksetzen",
-    "resetSubtitle": "Choose a new password for your account.",
+    "resetSubtitle": "Wählen Sie ein neues Passwort für Ihr Konto.",
     "newPassword": "Neues Passwort",
     "confirmPassword": "Passwort bestätigen",
     "updatePassword": "Passwort aktualisieren",
     "passwordMismatch": "Die Passwörter stimmen nicht überein.",
-    "resetLinkInvalid": "This reset link is missing or invalid.",
+    "resetLinkInvalid": "Dieser Link zum Zurücksetzen fehlt oder ist ungültig.",
     "resetSuccess": "Ihr Passwort wurde aktualisiert. Sie können sich anmelden.",
-    "resetFailed": "Unable to reset password.",
-    "resetRequestFailed": "Unable to send reset email.",
-    "alreadySignedIn": "You're signed in",
-    "alreadySignedInSubtitle": "Continue to your portal, or sign out to use a different account.",
-    "signedInAs": "Signed in as",
-    "continueToPortal": "Continue to portal",
-    "signOut": "Sign out",
-    "registerWealth": "Create a wealth account",
+    "resetFailed": "Das Passwort konnte nicht zurückgesetzt werden.",
+    "resetRequestFailed": "Die E-Mail zum Zurücksetzen konnte nicht gesendet werden.",
+    "alreadySignedIn": "Sie sind angemeldet",
+    "alreadySignedInSubtitle": "Fahren Sie mit Ihrem Portal fort oder melden Sie sich ab, um ein anderes Konto zu verwenden.",
+    "signedInAs": "Angemeldet als",
+    "continueToPortal": "Weiter zum Portal",
+    "signOut": "Abmelden",
+    "registerWealth": "Ein Vermögenskonto eröffnen",
     "adminTitle": "Administration",
-    "adminSubtitle": "Sign in to the SBDV operations portal.",
-    "adminOnly": "This portal is for administrators only.",
-    "continueToAdmin": "Continue to operations"
+    "adminSubtitle": "Melden Sie sich im Operations-Portal von SBDV an.",
+    "adminOnly": "Dieses Portal ist ausschliesslich für Administratoren.",
+    "continueToAdmin": "Weiter zu den Operationen"
   },
   "portal": {
     "title": "Kundenportal",
-    "signedInAs": "Signed in as",
+    "signedInAs": "Angemeldet als",
     "nav": {
-      "overview": "Overview",
-      "holdings": "Holdings",
-      "performance": "Performance",
-      "documents": "Documents",
-      "messages": "Messages",
-      "settings": "Settings",
-      "admin": "Admin Panel",
+      "overview": "Übersicht",
+      "holdings": "Bestände",
+      "performance": "Wertentwicklung",
+      "documents": "Dokumente",
+      "messages": "Mitteilungen",
+      "settings": "Einstellungen",
+      "admin": "Administrationsbereich",
       "logout": "Abmelden",
-      "mandate": "Mandate",
-      "funding": "Funding"
+      "mandate": "Mandat",
+      "funding": "Einzahlung"
     },
     "overview": {
-      "title": "Portfolio Overview",
-      "netWorth": "Total Net Worth",
-      "asOf": "As of",
-      "allocation": "Asset Allocation",
-      "recentActivity": "Recent Activity",
-      "bullionValue": "Bullion & Custody",
-      "financialValue": "Financial Portfolio",
-      "openMandate": "Open mandate",
-      "vaultHoldings": "Vault & financial holdings",
-      "empty": "No mandate or holdings yet. Fund the mandate or contact your relationship manager."
+      "title": "Portfolioübersicht",
+      "netWorth": "Gesamtes Nettovermögen",
+      "asOf": "Per",
+      "allocation": "Vermögensallokation",
+      "recentActivity": "Letzte Aktivität",
+      "bullionValue": "Bullion & Verwahrung",
+      "financialValue": "Finanzportfolio",
+      "openMandate": "Mandat öffnen",
+      "vaultHoldings": "Tresor- und Finanzbestände",
+      "empty": "Noch kein Mandat und keine Bestände. Zahlen Sie das Mandat ein oder wenden Sie sich an Ihren Kundenbetreuer."
     },
     "holdings": {
-      "title": "Holdings",
-      "bullionTab": "Bullion & Custody",
-      "financialTab": "Financial Portfolio",
-      "weight": "Weight",
-      "purity": "Purity",
-      "location": "Vault Location",
-      "auditStatus": "Audit Status",
-      "quantity": "Quantity",
-      "costBasis": "Cost Basis",
-      "marketValue": "Market Value",
-      "verified": "Verified",
-      "pending": "Pending Audit"
+      "title": "Bestände",
+      "bullionTab": "Bullion & Verwahrung",
+      "financialTab": "Finanzportfolio",
+      "weight": "Gewicht",
+      "purity": "Feingehalt",
+      "location": "Tresorstandort",
+      "auditStatus": "Prüfungsstatus",
+      "quantity": "Menge",
+      "costBasis": "Einstandswert",
+      "marketValue": "Marktwert",
+      "verified": "Verifiziert",
+      "pending": "Prüfung ausstehend"
     },
     "performance": {
-      "title": "Performance",
-      "period": "Period",
-      "return": "Return",
+      "title": "Wertentwicklung",
+      "period": "Zeitraum",
+      "return": "Rendite",
       "benchmark": "Benchmark",
-      "ytd": "Year to Date",
-      "oneYear": "1 Year",
-      "threeYear": "3 Years",
-      "allTime": "All Time",
-      "disclaimer": "Performance data is for illustration. Past performance is not indicative of future results."
+      "ytd": "Seit Jahresbeginn",
+      "oneYear": "1 Jahr",
+      "threeYear": "3 Jahre",
+      "allTime": "Gesamtzeitraum",
+      "disclaimer": "Die Angaben zur Wertentwicklung dienen der Veranschaulichung. Die frühere Wertentwicklung ist kein Indikator für künftige Ergebnisse."
     },
     "documents": {
-      "title": "Document Vault",
-      "upload": "Upload Document",
-      "download": "Download",
-      "noDocuments": "No documents available.",
+      "title": "Dokumententresor",
+      "upload": "Dokument hochladen",
+      "download": "Herunterladen",
+      "noDocuments": "Keine Dokumente vorhanden.",
       "types": {
-        "statement": "Statement",
-        "contract": "Contract",
-        "kyc": "KYC Document",
-        "report": "Report",
-        "other": "Other"
+        "statement": "Auszug",
+        "contract": "Vertrag",
+        "kyc": "KYC-Dokument",
+        "report": "Bericht",
+        "other": "Sonstiges"
       }
     },
     "messages": {
-      "title": "Advisor Messages",
-      "compose": "New Message",
-      "subject": "Subject",
-      "body": "Message",
-      "send": "Send",
-      "noMessages": "No messages yet.",
-      "encrypted": "End-to-end encrypted communication"
+      "title": "Mitteilungen des Kundenbetreuers",
+      "compose": "Neue Mitteilung",
+      "subject": "Betreff",
+      "body": "Mitteilung",
+      "send": "Senden",
+      "noMessages": "Noch keine Mitteilungen.",
+      "encrypted": "Ende-zu-Ende verschlüsselte Kommunikation"
     },
     "settings": {
-      "title": "Account Settings",
-      "mfaTitle": "Two-Factor Authentication",
-      "mfaEnabled": "Enabled",
-      "mfaDisabled": "Not enabled",
-      "enableMfa": "Enable MFA",
-      "sessions": "Active Sessions",
-      "notifications": "Email Notifications"
+      "title": "Kontoeinstellungen",
+      "mfaTitle": "Zwei-Faktor-Authentifizierung",
+      "mfaEnabled": "Aktiviert",
+      "mfaDisabled": "Nicht aktiviert",
+      "enableMfa": "MFA aktivieren",
+      "sessions": "Aktive Sitzungen",
+      "notifications": "E-Mail-Benachrichtigungen"
     },
     "mandate": {
-      "title": "Wealth mandate",
-      "subtitle": "Principal stays invested. Interest accrues on principal at the stated mandate yield. Withdraw interest or reinvest it — principal is not redeemed in this programme.",
-      "principal": "Principal",
-      "accrued": "Accrued interest",
-      "total": "Mandate total",
-      "yield": "Mandate yield",
-      "live": "Accruing",
-      "paused": "Yield paused",
-      "growth": "Growth",
-      "reinvest": "Reinvest accrued interest",
-      "withdraw": "Withdraw interest",
-      "withdrawTitle": "Withdraw accrued interest",
-      "amount": "Amount",
-      "accountName": "Account name",
-      "bankName": "Bank name",
-      "btcAddress": "Bitcoin address",
-      "submitWithdraw": "Request payout",
-      "activity": "Activity",
-      "when": "When",
-      "type": "Type",
+      "title": "Vermögensmandat",
+      "subtitle": "Das Kapital bleibt angelegt. Zinsen laufen auf das Kapital zur angegebenen Mandatsrendite. Beziehen Sie die Zinsen oder legen Sie sie wieder an — das Kapital wird in diesem Programm nicht zurückgenommen.",
+      "principal": "Kapital",
+      "accrued": "Aufgelaufene Zinsen",
+      "total": "Mandatstotal",
+      "yield": "Mandatsrendite",
+      "live": "Auflaufend",
+      "paused": "Rendite ausgesetzt",
+      "growth": "Wachstum",
+      "reinvest": "Aufgelaufene Zinsen wieder anlegen",
+      "withdraw": "Zinsen beziehen",
+      "withdrawTitle": "Aufgelaufene Zinsen beziehen",
+      "amount": "Betrag",
+      "accountName": "Kontoname",
+      "bankName": "Bankname",
+      "btcAddress": "Bitcoin-Adresse",
+      "submitWithdraw": "Auszahlung beantragen",
+      "activity": "Aktivität",
+      "when": "Zeitpunkt",
+      "type": "Art",
       "status": "Status",
-      "emptyActivity": "No mandate activity yet. Fund the mandate to begin.",
-      "unavailable": "No wealth mandate is attached to this account yet.",
-      "actionError": "Unable to complete that request.",
-      "disclaimer": "Not a bank deposit. Yield is a stated mandate rate and may be changed. Bitcoin transfers are irreversible.",
+      "emptyActivity": "Noch keine Aktivität im Mandat. Zahlen Sie das Mandat ein, um zu beginnen.",
+      "unavailable": "Diesem Konto ist noch kein Vermögensmandat zugeordnet.",
+      "actionError": "Diese Anfrage konnte nicht ausgeführt werden.",
+      "disclaimer": "Es handelt sich nicht um eine Bankeinlage. Die Rendite ist ein angegebener Mandatssatz und kann geändert werden. Übertragungen in Bitcoin sind unwiderruflich.",
       "types": {
-        "DEPOSIT_WIRE": "Wire funding",
-        "DEPOSIT_BTC": "Bitcoin funding",
-        "INTEREST_ACCRUAL": "Yield credited",
-        "INTEREST_WITHDRAW": "Interest withdrawal",
-        "INTEREST_REINVEST": "Interest reinvested",
-        "ADJUSTMENT": "Adjustment",
-        "FOUNDING_BONUS": "Founding bonus"
+        "DEPOSIT_WIRE": "Einzahlung per Überweisung",
+        "DEPOSIT_BTC": "Einzahlung in Bitcoin",
+        "INTEREST_ACCRUAL": "Rendite gutgeschrieben",
+        "INTEREST_WITHDRAW": "Zinsbezug",
+        "INTEREST_REINVEST": "Zinsen wieder angelegt",
+        "ADJUSTMENT": "Anpassung",
+        "FOUNDING_BONUS": "Gründungsbonus"
       },
-      "fundTitle": "Choose how much to invest",
+      "fundTitle": "Wählen Sie den Anlagebetrag",
       "fundBody": "Review the mandate, then tell operations the USD amount and whether you will send a bank wire or Bitcoin. Principal is credited only after receipt is confirmed.",
-      "fundCta": "Choose amount and funding method"
+      "fundCta": "Betrag und Einzahlungsweg wählen"
     },
     "funding": {
-      "title": "Fund the mandate",
+      "title": "Das Mandat einzahlen",
       "subtitle": "Request a wire or Bitcoin transfer. Principal is credited only after SBDV operations confirm receipt.",
-      "wire": "Bank wire",
+      "wire": "Banküberweisung",
       "btc": "Bitcoin",
-      "btcAmount": "Bitcoin amount (optional)",
-      "txid": "Transaction ID",
-      "note": "Note to operations",
-      "submit": "Submit funding notice",
-      "submitted": "Notice received. Quote this reference when you transfer:",
-      "instructions": "House instructions",
-      "beneficiary": "Beneficiary",
-      "accountNumber": "Account number",
-      "bankAddress": "Bank address",
+      "btcAmount": "Bitcoin-Betrag (fakultativ)",
+      "txid": "Transaktions-ID",
+      "note": "Hinweis an Operations",
+      "submit": "Einzahlungsanzeige einreichen",
+      "submitted": "Anzeige eingegangen. Geben Sie bei der Übertragung diese Referenz an:",
+      "instructions": "Instruktionen des Hauses",
+      "beneficiary": "Begünstigter",
+      "accountNumber": "Kontonummer",
+      "bankAddress": "Bankadresse",
       "wireFallback": "Wire instructions will be confirmed by your relationship manager. Submit the notice so operations can match your transfer.",
-      "btcAddress": "SBDV receive address",
+      "btcAddress": "Empfangsadresse von SBDV",
       "btcQrAlt": "QR-Code für die SBDV-Bitcoin-Empfangsadresse",
       "copyAddress": "Adresse kopieren",
       "copiedAddress": "Kopiert",
       "btcNote": "Send only Bitcoin to this address. Include the txid on your notice. Credit is USD principal after ops confirmation — SBDV does not custody your keys.",
       "btcFallback": "A Bitcoin receive address will be provided by your relationship manager.",
-      "history": "Funding history",
-      "rail": "Rail",
-      "reference": "Reference",
-      "empty": "No funding notices yet.",
-      "waitingApprove": "Waiting for operations to approve this notice. House instructions will appear here after approval — do not send funds yet.",
-      "waitingProof": "Transfer using the instructions below, then upload payment proof.",
-      "proofUploaded": "Payment information received. Operations will confirm receipt.",
-      "credited": "Receipt confirmed. This amount is principal.",
-      "rejected": "This notice was not accepted. Submit a new funding notice if you still intend to fund.",
-      "uploadProof": "Upload payment proof",
-      "uploadHint": "PDF or JPEG of the wire confirmation or Bitcoin transfer. Optional txid for Bitcoin.",
-      "uploadSubmit": "Send payment information",
-      "uploadedFile": "Uploaded",
-      "beneficiaryAddress": "Beneficiary address",
-      "routing": "Local routing"
+      "history": "Historie der Einzahlungen",
+      "rail": "Weg",
+      "reference": "Referenz",
+      "empty": "Noch keine Einzahlungsanzeigen.",
+      "waitingApprove": "Diese Anzeige wartet auf die Genehmigung durch Operations. Die Instruktionen des Hauses erscheinen hier nach der Genehmigung — senden Sie noch keine Mittel.",
+      "waitingProof": "Übertragen Sie gemäss den folgenden Instruktionen und laden Sie anschliessend den Zahlungsnachweis hoch.",
+      "proofUploaded": "Zahlungsangaben eingegangen. Operations wird den Eingang bestätigen.",
+      "credited": "Eingang bestätigt. Dieser Betrag ist Kapital.",
+      "rejected": "Diese Anzeige wurde nicht angenommen. Reichen Sie eine neue Einzahlungsanzeige ein, wenn Sie weiterhin einzahlen wollen.",
+      "uploadProof": "Zahlungsnachweis hochladen",
+      "uploadHint": "PDF oder JPEG der Überweisungsbestätigung oder der Bitcoin-Übertragung. txid für Bitcoin fakultativ.",
+      "uploadSubmit": "Zahlungsangaben senden",
+      "uploadedFile": "Hochgeladen",
+      "beneficiaryAddress": "Adresse des Begünstigten",
+      "routing": "Lokale Leitwegangabe"
     }
   },
   "admin": {
@@ -1027,48 +1027,48 @@
     "portalBadge": "Portal für Unternehmenspartner",
     "signedInAs": "Signed in as",
     "hero": {
-      "badge": "Institutional Capital Program",
-      "title": "Structured capital for qualified enterprises",
-      "subtitle": "SBDV is not a bank. A facility is not a deposit and not a commitment until it is approved.",
-      "applyAccess": "Apply for Access",
-      "partnerLogin": "Partner Login",
-      "eligibility": "Operating companies with at least two years of history, audited or reviewed accounts, and a request from USD 500,000. Approval is discretionary.",
-      "collateralRule": "The 10% is requested only after approval. It is cash collateral, not a fee. It is returned in full if SBDV declines other than for the applicant’s breach or a failed compliance check. Applying is not a commitment to lend."
+      "badge": "Institutionelles Kapitalprogramm",
+      "title": "Strukturiertes Kapital für qualifizierte Unternehmen",
+      "subtitle": "SBDV ist keine Bank. Eine Fazilität ist keine Einlage und bis zur Genehmigung keine Zusage.",
+      "applyAccess": "Zugang beantragen",
+      "partnerLogin": "Partneranmeldung",
+      "eligibility": "Operative Gesellschaften mit mindestens zwei Jahren Geschichte, geprüften oder einer prüferischen Durchsicht unterzogenen Abschlüssen und einem Antrag ab USD 500,000. Die Genehmigung steht im Ermessen.",
+      "collateralRule": "Die 10% werden erst nach der Genehmigung verlangt. Es handelt sich um Barsicherheit, nicht um eine Gebühr. Der Betrag wird in voller Höhe zurückerstattet, wenn SBDV ablehnt, ausser bei einer Verletzung durch den Antragsteller oder einer nicht bestandenen Compliance-Prüfung. Die Antragstellung ist keine Zusage, Kredit zu gewähren."
     },
     "features": {
-      "title": "Why enterprises choose Capital Access",
-      "subtitle": "A disciplined gateway between qualified companies and mandate-aligned capital — clarity first.",
-      "globalPoolsTitle": "Mandate-aligned pools",
-      "globalPoolsDesc": "Partially disclosed sovereign-grade pools matched to sector and region — not a black-box auction.",
-      "flexibleTermsTitle": "Terms you can plan around",
-      "flexibleTermsDesc": "Define amount, term, and monthly or annual interest over 1–10 years with live calculations.",
-      "enterpriseFocusTitle": "Built for operating companies",
-      "enterpriseFocusDesc": "For established enterprises with audited or reviewed financials and a clear investment thesis.",
-      "structuredSecurityTitle": "Process without surprise",
-      "structuredSecurityDesc": "10% cash collateral, full KYC/UBO look-through, and discretionary approval under Swiss AML standards."
+      "title": "Warum Unternehmen Capital Access wählen",
+      "subtitle": "Ein disziplinierter Zugang zwischen qualifizierten Gesellschaften und mandatsgerechtem Kapital — Klarheit zuerst.",
+      "globalPoolsTitle": "Mandatsgerechte Pools",
+      "globalPoolsDesc": "Teilweise offengelegte Pools souveräner Qualität, abgestimmt auf Branche und Region — keine Auktion in einer Black Box.",
+      "flexibleTermsTitle": "Konditionen, auf die Sie sich einrichten können",
+      "flexibleTermsDesc": "Legen Sie Betrag, Laufzeit und monatliche oder jährliche Zinsen über 1–10 Jahre fest, mit laufenden Berechnungen.",
+      "enterpriseFocusTitle": "Für operative Gesellschaften gebaut",
+      "enterpriseFocusDesc": "Für etablierte Unternehmen mit geprüften oder einer prüferischen Durchsicht unterzogenen Abschlüssen und einer klaren Investitionsthese.",
+      "structuredSecurityTitle": "Ein Vorgang ohne Überraschung",
+      "structuredSecurityDesc": "Barsicherheit von 10%, vollständige Durchsicht KYC/UBO und Genehmigung nach Ermessen gemäss schweizerischen Standards AML."
     },
     "howItWorks": {
       "title": "How It Works",
       "registerTitle": "Register as a Capital Partner",
       "registerDesc": "Create your enterprise account and verify your company credentials.",
       "exploreTitle": "Explore Available Pools",
-      "exploreDesc": "Browse partially disclosed sovereign capital pools aligned with your sector and region.",
+      "exploreDesc": "Sehen Sie teilweise offengelegte souveräne Kapitalpools ein, die auf Ihre Branche und Ihre Region ausgerichtet sind.",
       "structureTitle": "Structure Your Request",
-      "structureDesc": "Define loan amount, term, repayment frequency, and review live interest calculations.",
+      "structureDesc": "Legen Sie Kreditbetrag, Laufzeit und Rückzahlungshäufigkeit fest und prüfen Sie die laufenden Zinsberechnungen.",
       "submitTitle": "Submit Company Profile",
       "submitDesc": "Provide financials, investment areas, and accept the 10% security deposit condition.",
       "decisionTitle": "Await Institutional Review",
       "decisionDesc": "Your application enters our review queue. You will receive approval or rejection notification.",
-      "prepareTitle": "Prepare your file",
-      "prepareDesc": "Confirm eligibility (enterprise, USD 500,000+, two years of operations). Gather local-register extracts, audited accounts, and beneficial-owner details. Local equivalents and certified translations are accepted.",
-      "reviewTitle": "Institutional review",
-      "reviewDesc": "SBDV reviews documents, beneficial owners, and mandate alignment. Approval is discretionary and is not a commitment until issued.",
-      "depositTitle": "Security deposit and origin of funds",
-      "depositDesc": "After approval, accept the Facility Terms, wire the 10% cash collateral, and declare the source of those funds.",
-      "kycTitle": "KYC and sanctions screening",
-      "kycDesc": "Swiss AML screening of the company, signatories, and ultimate beneficial owners. High-risk jurisdictions receive enhanced due diligence.",
-      "fundingTitle": "Disbursement and repayment",
-      "fundingDesc": "Submit a bank account in the borrower’s name (SWIFT plus IBAN or local account number). Funds are released in USD; repay on the schedule in your dashboard."
+      "prepareTitle": "Stellen Sie Ihr Dossier zusammen",
+      "prepareDesc": "Prüfen Sie die Eignung (Unternehmen, USD 500,000+, zwei Jahre Geschäftstätigkeit). Stellen Sie Auszüge aus dem lokalen Register, geprüfte Abschlüsse und Angaben zu den wirtschaftlich berechtigten Personen zusammen. Lokale Entsprechungen und beglaubigte Übersetzungen werden akzeptiert.",
+      "reviewTitle": "Institutionelle Prüfung",
+      "reviewDesc": "SBDV prüft die Unterlagen, die wirtschaftlich berechtigten Personen und die Ausrichtung auf das Mandat. Die Genehmigung steht im Ermessen und ist bis zu ihrer Erteilung keine Zusage.",
+      "depositTitle": "Sicherheitsleistung und Herkunft der Mittel",
+      "depositDesc": "Nach der Genehmigung nehmen Sie die Fazilitätsbedingungen an, überweisen die Barsicherheit von 10% und legen die Herkunft dieser Mittel offen.",
+      "kycTitle": "Prüfung KYC und Sanktionen",
+      "kycDesc": "Schweizerische Prüfung AML der Gesellschaft, der Zeichnungsberechtigten und der wirtschaftlich berechtigten Personen. Staaten mit erhöhtem Risiko unterliegen einer verstärkten Sorgfaltsprüfung.",
+      "fundingTitle": "Auszahlung und Rückzahlung",
+      "fundingDesc": "Reichen Sie ein Bankkonto auf den Namen des Kreditnehmers ein (SWIFT sowie IBAN oder lokale Kontonummer). Die Mittel werden in USD freigegeben; die Rückzahlung erfolgt nach dem Plan in Ihrem Dashboard."
     },
     "nav": {
       "overview": "Overview",
@@ -1118,17 +1118,17 @@
     "requestFromPool": "Request from this pool",
     "startRequest": "Start Capital Request",
     "register": {
-      "title": "Register for Capital Access",
+      "title": "Für Capital Access registrieren",
       "subtitle": "Create your enterprise partner account to explore sovereign capital pools.",
-      "fullName": "Full Name",
-      "phone": "Phone (optional)",
-      "submit": "Create Partner Account",
-      "hasAccount": "Already registered?",
-      "error": "Registration failed. Please try again.",
-      "welcomeTitle": "Account created successfully",
-      "welcomeBody": "Your Capital Access account is ready. Sign in with the email and password you just created.",
-      "welcomeEmail": "Email",
-      "goToLogin": "Go to login"
+      "fullName": "Vollständiger Name",
+      "phone": "Telefon (fakultativ)",
+      "submit": "Partnerkonto erstellen",
+      "hasAccount": "Bereits registriert?",
+      "error": "Die Registrierung ist fehlgeschlagen. Bitte versuchen Sie es erneut.",
+      "welcomeTitle": "Konto erfolgreich erstellt",
+      "welcomeBody": "Ihr Konto für Capital Access ist bereit. Melden Sie sich mit der E-Mail und dem Passwort an, die Sie soeben erstellt haben.",
+      "welcomeEmail": "E-Mail",
+      "goToLogin": "Zur Anmeldung"
     },
     "request": {
       "title": "Kapitalantrag",
@@ -1346,41 +1346,41 @@
       "repayFailed": "Could not submit this repayment. Please try again."
     },
     "facilityTerms": {
-      "eyebrow": "Capital Access Program",
+      "eyebrow": "Programm Capital Access",
       "pageTitle": "Bedingungen der Fazilität",
-      "intro": "These terms govern your capital facility, including the 10% security deposit, interest, repayment, default, and Swiss governing law. Read them in full before you accept.",
-      "versionLabel": "Document",
-      "effectiveLabel": "Effective",
+      "intro": "Diese Bedingungen regeln Ihre Kapitalfazilität, einschliesslich der Sicherheitsleistung von 10%, der Zinsen, der Rückzahlung, des Verzugs und des schweizerischen anwendbaren Rechts. Lesen Sie sie vollständig, bevor Sie annehmen.",
+      "versionLabel": "Dokument",
+      "effectiveLabel": "In Kraft",
       "languageLabel": "Massgebliche Sprache",
       "governingNote": "Englisch ist die massgebliche Sprache dieses Dokuments. Eine Übersetzung dient nur der Orientierung.",
       "contents": "Inhalt",
       "acceptBefore": "Ich habe gelesen und akzeptiere die",
       "linkLabel": "Bedingungen der Fazilität",
       "acceptAfter": ", einschliesslich der Sicherheitsleistung von 10 %, der Zinsen, der Rückzahlung, des Verzugs und des anwendbaren Rechts, und bestätige, dass ich den Kreditnehmer binden darf.",
-      "acceptedNote": "Facility Terms and Conditions accepted",
+      "acceptedNote": "Fazilitätsbedingungen angenommen",
       "print": "Drucken oder speichern",
       "backFacility": "Zur Fazilitätsübersicht"
     },
     "whoCanApply": {
-      "title": "Who can apply",
-      "worldwide": "Enterprises worldwide may apply. Vault membership is a separate request, reviewed before access. Capital Access is open to qualified companies.",
-      "enterprise": "This is not a personal or consumer loan. The applicant must be an operating company.",
-      "ticket": "Minimum request USD 500,000; two years of operating history; audited or reviewed financials.",
-      "kyc": "Full KYC, beneficial-ownership look-through, and sanctions screening under Swiss AML rules.",
-      "sanctions": "Comprehensively sanctioned persons and jurisdictions cannot be onboarded. Approval is always discretionary.",
-      "currency": "Facilities are denominated in USD. If your operating cash flow is in another currency, you accept foreign-exchange risk."
+      "title": "Wer einen Antrag stellen kann",
+      "worldwide": "Unternehmen weltweit können einen Antrag stellen. Die Tresormitgliedschaft ist ein gesondertes Gesuch und wird vor dem Zugang geprüft. Capital Access steht qualifizierten Gesellschaften offen.",
+      "enterprise": "Dies ist kein Privatkredit und kein Konsumentenkredit. Antragsteller muss eine operative Gesellschaft sein.",
+      "ticket": "Mindestantrag USD 500,000; zwei Jahre Geschäftstätigkeit; geprüfte oder einer prüferischen Durchsicht unterzogene Abschlüsse.",
+      "kyc": "Vollständiges KYC, Durchsicht der wirtschaftlich berechtigten Personen und Sanktionsprüfung nach schweizerischen Regeln AML.",
+      "sanctions": "Umfassend sanktionierte Personen und Staaten können nicht aufgenommen werden. Die Genehmigung steht stets im Ermessen.",
+      "currency": "Die Fazilitäten lauten auf USD. Wenn Ihr operativer Geldfluss in einer anderen Währung anfällt, tragen Sie das Fremdwährungsrisiko."
     },
     "timeline": {
-      "title": "Indicative timeline",
-      "note": "Times are typical, not a commitment. Incomplete files or enhanced due diligence take longer.",
-      "apply": "Application",
-      "applyTime": "1–2 weeks",
-      "dd": "Document and UBO review",
-      "ddTime": "2–4 weeks",
-      "kyc": "KYC after deposit",
-      "kycTime": "5–10 business days",
-      "funding": "Closing and funding",
-      "fundingTime": "3–7 days"
+      "title": "Indikativer Zeitplan",
+      "note": "Die Fristen sind typisch und keine Zusage. Unvollständige Dossiers oder eine verstärkte Sorgfaltsprüfung dauern länger.",
+      "apply": "Antrag",
+      "applyTime": "1–2 Wochen",
+      "dd": "Prüfung der Unterlagen und der UBO",
+      "ddTime": "2–4 Wochen",
+      "kyc": "KYC nach der Sicherheitsleistung",
+      "kycTime": "5–10 Arbeitstage",
+      "funding": "Abschluss und Auszahlung",
+      "fundingTime": "3–7 Tage"
     },
     "settings": {
       "title": "Account Settings"
@@ -1389,60 +1389,66 @@
   "chat": {
     "open": "Concierge öffnen",
     "title": "Concierge",
-    "subtitle": "Private guidance · 24/7",
-    "greeting": "Welcome to SBDV. I'm your digital concierge — ask about vault custody, membership, wealth services, or our Capital Access Program.",
-    "greetingNamed": "Hello, {name}. I'm your SBDV concierge — I can help with your account, guide you through services, or answer questions about membership and capital access.",
+    "subtitle": "Private Orientierung · 24/7",
+    "greeting": "Willkommen bei SBDV. Ich bin Ihr digitaler Concierge — fragen Sie zur Tresorverwahrung, zur Mitgliedschaft, zu den Vermögensdienstleistungen oder zu unserem Programm Capital Access.",
+    "greetingNamed": "Guten Tag, {name}. Ich bin Ihr Concierge von SBDV — ich kann Sie bei Ihrem Konto unterstützen, Sie durch die Dienstleistungen führen oder Fragen zur Mitgliedschaft und zu Capital Access beantworten.",
     "placeholder": "Nachricht schreiben",
     "send": "Senden",
-    "minimize": "Minimize chat",
+    "minimize": "Chat minimieren",
     "close": "Schliessen",
-    "error": "I'm sorry, I couldn't process that. Please try again or use the Contact page for direct assistance.",
-    "disclaimer": "AI-assisted guidance. For binding advice, contact your relationship manager."
+    "error": "Es tut mir leid, das konnte ich nicht verarbeiten. Bitte versuchen Sie es erneut oder nutzen Sie die Kontaktseite für direkte Unterstützung.",
+    "disclaimer": "Orientierung mit Unterstützung durch KI. Für verbindliche Beratung wenden Sie sich an Ihren Kundenbetreuer."
   },
   "accountSecurity": {
     "roles": {
       "admin": "Administrator",
-      "client": "Client",
-      "borrower": "Enterprise Partner"
+      "client": "Kunde",
+      "borrower": "Unternehmenspartner"
     },
     "summary": {
-      "title": "Security overview",
-      "email": "Email",
-      "role": "Account type",
-      "mfa": "Two-factor authentication",
-      "memberSince": "Member since",
-      "lastSignIn": "Last sign-in"
+      "title": "Sicherheitsübersicht",
+      "email": "E-Mail",
+      "role": "Kontotyp",
+      "mfa": "Zwei-Faktor-Authentifizierung",
+      "memberSince": "Mitglied seit",
+      "lastSignIn": "Letzte Anmeldung",
+      "thisSignIn": "Diese Anmeldung",
+      "previousSignIn": "Vorherige Anmeldung",
+      "location": "Ort",
+      "ipAddress": "IP-Adresse",
+      "unknownLocation": "Unbekannt",
+      "localNetwork": "Lokal"
     },
     "password": {
-      "title": "Change password",
-      "hint": "Use at least 8 characters. You will remain signed in on this device after updating.",
-      "current": "Current password",
-      "new": "New password",
-      "confirm": "Confirm new password",
-      "submit": "Update password",
-      "saving": "Updating…",
-      "success": "Password updated successfully. A confirmation was sent to your email.",
-      "errorGeneric": "Unable to change password. Please try again."
+      "title": "Passwort ändern",
+      "hint": "Verwenden Sie mindestens 8 Zeichen. Nach der Aktualisierung bleiben Sie auf diesem Gerät angemeldet.",
+      "current": "Aktuelles Passwort",
+      "new": "Neues Passwort",
+      "confirm": "Neues Passwort bestätigen",
+      "submit": "Passwort aktualisieren",
+      "saving": "Wird aktualisiert…",
+      "success": "Das Passwort wurde erfolgreich aktualisiert. Eine Bestätigung wurde an Ihre E-Mail gesendet.",
+      "errorGeneric": "Das Passwort konnte nicht geändert werden. Bitte versuchen Sie es erneut."
     },
     "mfa": {
-      "title": "Two-factor authentication",
-      "disabled": "Add a second step after your password to protect your account.",
-      "enabledTotp": "Authenticator app codes are enabled for sign-in.",
-      "enabledEmail": "Email sign-in codes are enabled. A code is sent to your account email after your password is accepted.",
-      "statusOff": "Not enabled",
-      "statusTotp": "Authenticator app",
-      "statusEmail": "Email codes",
-      "enableTotp": "Enable authenticator app",
-      "enableEmail": "Enable email codes",
-      "disable": "Disable MFA",
-      "secretLabel": "Add this secret to your authenticator app:",
-      "verifyEnable": "Verify & enable",
-      "invalidCode": "Invalid authenticator code."
+      "title": "Zwei-Faktor-Authentifizierung",
+      "disabled": "Ergänzen Sie nach Ihrem Passwort einen zweiten Schritt, um Ihr Konto zu schützen.",
+      "enabledTotp": "Codes der Authenticator-App sind für die Anmeldung aktiviert.",
+      "enabledEmail": "E-Mail-Codes für die Anmeldung sind aktiviert. Nach Annahme Ihres Passworts wird ein Code an die E-Mail Ihres Kontos gesendet.",
+      "statusOff": "Nicht aktiviert",
+      "statusTotp": "Authenticator-App",
+      "statusEmail": "E-Mail-Codes",
+      "enableTotp": "Authenticator-App aktivieren",
+      "enableEmail": "E-Mail-Codes aktivieren",
+      "disable": "MFA deaktivieren",
+      "secretLabel": "Fügen Sie dieses Geheimnis Ihrer Authenticator-App hinzu:",
+      "verifyEnable": "Prüfen und aktivieren",
+      "invalidCode": "Ungültiger Authentifizierungscode."
     },
     "session": {
-      "title": "Session",
-      "description": "End your session on this browser. You will need to sign in again to access the portal.",
-      "signOutDevice": "Sign out of this device"
+      "title": "Sitzung",
+      "description": "Beenden Sie Ihre Sitzung in diesem Browser. Für den Zugang zum Kundenportal müssen Sie sich erneut anmelden.",
+      "signOutDevice": "Von diesem Gerät abmelden"
     }
   }
 }

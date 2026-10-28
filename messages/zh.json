@@ -1,11 +1,11 @@
 {
   "nav": {
-    "home": "Home",
-    "about": "About",
+    "home": "首页",
+    "about": "关于",
     "vault": "金库与安全",
     "wealth": "财富与投资",
     "capitalAccess": "Capital Access",
-    "services": "Services",
+    "services": "服务",
     "membership": "会籍",
     "contact": "联系",
     "clientLogin": "客户登录",
@@ -18,19 +18,19 @@
       "servicesDesc": "租赁、查验与运营",
       "membershipDesc": "进入本行之径"
     },
-    "myPortal": "My portal"
+    "myPortal": "我的门户"
   },
   "hero": {
     "headline": "瑞士安全。稳健增长。",
-    "subtext": "Private clients use Swiss custody or a wealth mandate. Qualified enterprises may apply for a structured capital facility. SBDV is not a bank.",
-    "exploreCapital": "了解 Capital Access",
+    "subtext": "私人客户使用瑞士托管或财富委托。符合条件的企业可申请结构化资本便利。SBDV并非银行。",
+    "exploreCapital": "企业",
     "privateClients": "私人客户通道",
-    "requestAccess": "Request Access",
+    "requestAccess": "申请准入",
     "clientLogin": "客户登录",
-    "investorRelations": "Investor Relations"
+    "investorRelations": "投资者关系"
   },
   "footer": {
-    "copyright": "Swiss Bullion Depository Vault — Swiss Precision. Global Trust.",
+    "copyright": "Swiss Bullion Depository Vault — 瑞士精准。全球信赖。",
     "headquarters": "总部",
     "globalOffices": "全球办事处",
     "legal": "法律",
@@ -40,472 +40,472 @@
     "investorRelations": "投资者关系",
     "offices": {
       "zurich": {
-        "city": "Zurich",
-        "country": "Switzerland",
-        "label": "Global Headquarters",
+        "city": "苏黎世",
+        "country": "瑞士",
+        "label": "全球总部",
         "address": "Bahnhofstrasse 45, 8001 Zurich, Switzerland",
         "timezone": "CET (UTC+1)"
       },
       "dubai": {
-        "city": "Dubai",
-        "country": "United Arab Emirates",
-        "label": "Middle East & Africa",
+        "city": "迪拜",
+        "country": "阿拉伯联合酋长国",
+        "label": "中东与非洲",
         "address": "DIFC Gate Village 10, Dubai, UAE",
         "timezone": "GST (UTC+4)"
       },
       "singapore": {
-        "city": "Singapore",
-        "country": "Singapore",
-        "label": "Asia Pacific",
+        "city": "新加坡",
+        "country": "新加坡",
+        "label": "亚太",
         "address": "10 Collyer Quay, Ocean Financial Centre, Singapore",
         "timezone": "SGT (UTC+8)"
       },
       "newYork": {
-        "city": "New York",
-        "country": "United States",
-        "label": "Americas",
+        "city": "纽约",
+        "country": "美国",
+        "label": "美洲",
         "address": "280 Park Avenue, New York, NY 10017, USA",
         "timezone": "EST (UTC-5)"
       }
     },
     "jurisdictionNote": "瑞士法律基础。为全球客户提供多司法管辖区访问。",
-    "facilityTerms": "Facility Terms"
+    "facilityTerms": "便利条款"
   },
   "about": {
-    "title": "About",
-    "eyebrow": "Zurich · Swiss institution",
-    "heroTitle": "The Firm",
-    "heroSubtitle": "One house, two practices: private wealth custody for discerning clients, and structured capital for qualified enterprises.",
+    "title": "关于",
+    "eyebrow": "苏黎世 · 瑞士机构",
+    "heroTitle": "本机构",
+    "heroSubtitle": "一个机构，两项业务：为要求严谨的客户提供私人财富托管，并为符合条件的企业提供结构化资本。",
     "identityName": "Swiss Bullion Depository Vault",
-    "identityNameLabel": "Name",
-    "identitySeatLabel": "Seat",
-    "whoTitle": "Who we are",
-    "whoText": "Seated in Zurich, SBDV preserves private wealth with discretion and arranges mandate-aligned capital facilities for qualified enterprises — under documented review, Swiss AML standards, and clear repayment terms.",
-    "sectionTitle": "About SBDV",
-    "sectionDescription": "A Swiss institution built for quiet custody and disciplined enterprise capital — not retail noise.",
-    "missionTitle": "Our Mission",
-    "missionText": "To preserve wealth and trust with Swiss precision — and to arrange structured capital for qualified enterprises under the same standard of review.",
-    "visionTitle": "Our Vision",
-    "visionText": "To be the Swiss house clients choose when custody must stay silent and capital must stay disciplined — trusted by private wealth and by enterprises that prefer clarity over chaos.",
-    "aboutTitle": "About SBDV",
-    "aboutParagraph1": "Swiss Bullion Depository Vault is a Zurich-seated institution. We combine private vault custody with a Capital Access Program for qualified operating companies — two practices, one Swiss standard of discretion and review.",
-    "aboutParagraph2": "Private clients come for vault custody or a wealth mandate. Enterprises come for transparent facility structure, KYC/UBO look-through, and a partner portal that keeps the process legible from application to repayment.",
-    "aboutParagraph3": "We do not compete on hype. We compete on documentation, mandate alignment, and the quiet confidence of Swiss operating discipline.",
-    "valuesTitle": "Principles",
+    "identityNameLabel": "名称",
+    "identitySeatLabel": "所在地",
+    "whoTitle": "我们是谁",
+    "whoText": "SBDV设于苏黎世，以审慎保管私人财富，并为符合条件的企业安排与委托相一致的资本便利 — 在有文件的审核、瑞士AML标准及明确偿还条款之下。",
+    "sectionTitle": "关于SBDV",
+    "sectionDescription": "一家为静默托管与克制的企业资本而设的瑞士机构 — 而非零售喧嚣。",
+    "missionTitle": "我们的使命",
+    "missionText": "以瑞士精准保全财富与信任 — 并以同一审核标准为符合条件的企业安排结构化资本。",
+    "visionTitle": "我们的愿景",
+    "visionText": "成为客户在托管必须保持静默、资本必须保持克制时所选择的瑞士机构 — 为私人财富以及宁取清晰而不取混乱的企业所信赖。",
+    "aboutTitle": "关于SBDV",
+    "aboutParagraph1": "Swiss Bullion Depository Vault是设于苏黎世的机构。我们将私人金库托管与面向符合条件的经营中公司的Capital Access计划结合 — 两项业务，同一瑞士保密与审核标准。",
+    "aboutParagraph2": "私人客户为金库托管或财富委托而来。企业为透明的便利结构、KYC/UBO穿透识别，以及使流程自申请至偿还始终可辨的合作方门户而来。",
+    "aboutParagraph3": "我们不以喧哗相竞。我们以文件、与委托的一致，以及瑞士运营纪律的沉静信心相竞。",
+    "valuesTitle": "原则",
     "values": {
       "discretion": {
-        "title": "Discretion",
-        "description": "Privacy is our foundation. Every client interaction is handled with absolute confidentiality."
+        "title": "审慎保密",
+        "description": "保密是我们的基础。每一次客户往来均以绝对机密处理。"
       },
       "precision": {
-        "title": "Precision",
-        "description": "Swiss accuracy in every detail. From security protocols to client service, precision is non-negotiable."
+        "title": "精准",
+        "description": "每一细节均体现瑞士精准。从安全规程到客户服务，精准不容让步。"
       },
       "security": {
-        "title": "Security",
-        "description": "Layered protection beyond compromise. Multiple defense systems working in harmony."
+        "title": "安全",
+        "description": "不妥协的分层保护。多套防御系统协同运作。"
       },
       "integrity": {
-        "title": "Integrity",
-        "description": "Built on trust, proven by time. Our word is our bond, and our actions reflect our values."
+        "title": "诚信",
+        "description": "建立于信任，并经时间验证。我们言而有信，行为反映我们的价值观。"
       }
     },
     "practices": {
-      "privateLabel": "Private clients",
-      "privateTitle": "Custody and wealth",
-      "privateText": "Vault & Security membership for bullion custody, and a separate Wealth & Investment mandate for clients who fund principal and watch stated yield.",
-      "capitalLabel": "Enterprises",
+      "privateLabel": "私人客户",
+      "privateTitle": "托管与财富",
+      "privateText": "用于金条托管的「金库与安全」会籍，以及供客户注入本金并观察所载收益率的单独「财富与投资」委托。",
+      "capitalLabel": "企业",
       "capitalTitle": "Capital Access",
-      "capitalText": "Structured facilities for qualified companies — documentation, 10% cash collateral, Swiss AML review, and a confirmed repayment plan. Approval is discretionary."
+      "capitalText": "面向符合条件公司的结构化便利 — 文件、10%现金抵押、瑞士AML审查以及经确认的偿还计划。批准为酌情决定。"
     },
-    "serveTitle": "Who we serve",
+    "serveTitle": "我们服务的对象",
     "serve": {
-      "investors": "Private investors who require custody and discretion.",
-      "offices": "Family offices and sovereign clients with a long horizon.",
-      "enterprises": "Established companies seeking documented growth capital — not consumer credit."
+      "investors": "需要托管与审慎保密的私人投资者。",
+      "offices": "具有长期视野的家族办公室及主权客户。",
+      "enterprises": "寻求有文件支持的增长资本的成熟公司 — 而非消费信贷。"
     },
     "close": {
-      "membership": "Request vault membership",
-      "capital": "Explore Capital Access"
+      "membership": "申请金库会籍",
+      "capital": "了解Capital Access"
     },
-    "locationTitle": "Swiss foundation. Global reach.",
-    "locationDescription": "Headquartered in Zurich with regional presence for international relationships. The standard is Swiss; access is worldwide for approved clients and qualified enterprises.",
-    "worldwideAccessibility": "Worldwide Accessibility"
+    "locationTitle": "瑞士根基。全球覆盖。",
+    "locationDescription": "总部位于苏黎世，并为国际关系设有区域存在。标准是瑞士的；经批准的客户及符合条件的企业可在全球获得准入。",
+    "worldwideAccessibility": "全球可及"
   },
   "vault": {
-    "title": "Vault & Security",
-    "heroTitle": "The Vault",
-    "heroSubtitle": "Custody engineered for quiet confidence — layered defense, continuous oversight, and Swiss operating discipline.",
-    "vaultsTitle": "Our Vaults",
-    "vaultsDescription": "Bullion facilities built for multi-tiered defense, continuous monitoring, and auditable chain of custody.",
+    "title": "金库与安全",
+    "heroTitle": "金库",
+    "heroSubtitle": "为沉静信心而构建的托管 — 分层防御、持续监督以及瑞士运营纪律。",
+    "vaultsTitle": "我们的金库",
+    "vaultsDescription": "为多层防御、持续监测及可审计的保管链而建的金条设施。",
     "vaultFeatures": {
       "multiTiered": {
-        "title": "Layered defense",
-        "description": "Physical and procedural controls that protect holdings at every stage of custody."
+        "title": "分层防御",
+        "description": "在托管的每一阶段保护持有物的实体及程序控制。"
       },
       "surveillance": {
-        "title": "Continuous oversight",
-        "description": "Monitoring designed for accountability — not theatre."
+        "title": "持续监督",
+        "description": "为可问责而设计的监测 — 而非表演。"
       },
       "engineering": {
-        "title": "Swiss engineering",
-        "description": "Built and operated to standards private clients expect from a Zurich-seated house."
+        "title": "瑞士工程",
+        "description": "按照私人客户对设于苏黎世的机构所期望的标准建造并运营。"
       }
     },
-    "vaultPageTitle": "The Vault",
-    "vaultPageDescription": "A private custody environment for bullion and valuables — designed so wealth can rest without noise.",
+    "vaultPageTitle": "金库",
+    "vaultPageDescription": "用于金条及贵重物品的私人托管环境 — 使财富可以不受喧哗地安放。",
     "vaultPageFeatures": {
       "defense": {
-        "title": "Layered defense",
-        "description": "Controls at every level of access"
+        "title": "分层防御",
+        "description": "每一进入层级均有控制"
       },
       "monitoring": {
-        "title": "Continuous oversight",
-        "description": "Accountable monitoring protocols"
+        "title": "持续监督",
+        "description": "可问责的监测规程"
       },
       "impenetrable": {
-        "title": "Swiss-built custody",
-        "description": "Engineering over marketing claims"
+        "title": "瑞士构建的托管",
+        "description": "以工程实现为准，而非营销表述"
       },
       "technology": {
-        "title": "Modern controls",
-        "description": "Systems that support audit and access"
+        "title": "现代控制",
+        "description": "支持审计与进入的系统"
       }
     },
-    "securityArchitectureTitle": "Security Architecture",
-    "securityArchitectureDescription": "A multi-layered security model combining controlled access, monitoring, and Swiss operational precision.",
+    "securityArchitectureTitle": "安全架构",
+    "securityArchitectureDescription": "结合受控进入、监测与瑞士运营精准的多层安全模式。",
     "securityFeatures": {
       "biometrics": {
-        "title": "Biometrics",
-        "description": "Advanced biometric authentication systems ensuring only authorized personnel can access secure areas."
+        "title": "生物识别",
+        "description": "先进的生物识别认证系统，确保仅经授权的人员可以进入安保区域。"
       },
       "seismic": {
-        "title": "Seismic Sensors",
-        "description": "State-of-the-art seismic monitoring to detect any unauthorized access attempts or structural anomalies."
+        "title": "地震传感器",
+        "description": "当前先进水平的地震监测，用以发现任何未经授权的进入企图或结构异常。"
       },
       "accessControl": {
-        "title": "Access Control",
-        "description": "Multi-factor authentication with encrypted access protocols and real-time authorization verification."
+        "title": "进入控制",
+        "description": "多重身份认证，配合加密进入规程及实时授权核验。"
       },
       "insurance": {
-        "title": "Insurance",
-        "description": "Comprehensive coverage through leading global insurers, providing full protection for all stored assets."
+        "title": "保险",
+        "description": "通过领先的国际保险公司提供全面保障，为全部存储资产提供充分保护。"
       }
     },
-    "accessProtocolTitle": "Quiet access protocols",
-    "accessProtocolDescription": "Entry is deliberate: verify identity, confirm authorization, then grant access — so custody stays accountable without theatre.",
+    "accessProtocolTitle": "静默进入规程",
+    "accessProtocolDescription": "进入是审慎的：核验身份，确认授权，然后准予进入 — 使托管保持可问责，而不流于表演。",
     "accessProtocolSteps": {
       "step1": {
-        "title": "Identity verification",
-        "description": "Multi-factor confirmation before any entry"
+        "title": "身份核验",
+        "description": "任何进入之前均须多重确认"
       },
       "step2": {
-        "title": "Authorization review",
-        "description": "Prior approval required for each visit"
+        "title": "授权审核",
+        "description": "每次来访均须事先批准"
       },
       "step3": {
-        "title": "Controlled access",
-        "description": "Entry granted only when cleared"
+        "title": "受控进入",
+        "description": "仅在核准后准予进入"
       }
     }
   },
   "services": {
-    "title": "Services",
-    "heroTitle": "Private-client services",
-    "heroSubtitle": "The operating suite behind Swiss custody — leasing, bullion verification, insurance reporting, and private viewing.",
-    "sectionTitle": "Custody services",
+    "title": "服务",
+    "heroTitle": "私人客户服务",
+    "heroSubtitle": "瑞士托管背后的运营体系 — 租赁、金条核验、保险报告及私人查验。",
+    "sectionTitle": "托管服务",
     "services": {
       "privateVault": {
-        "title": "Private Vault Leasing",
-        "description": "Allocated space for individuals, family offices, and corporations that require dedicated custody."
+        "title": "私人金库租赁",
+        "description": "为需要专属托管的个人、家族办公室及公司提供的指定空间。"
       },
       "bullionStorage": {
-        "title": "Bullion Storage",
-        "description": "LBMA-aligned audit and storage for precious metals with clear chain of custody."
+        "title": "金条存储",
+        "description": "符合LBMA的贵金属审计与存储，保管链清晰。"
       },
       "insurance": {
-        "title": "Insurance & Audit Reporting",
-        "description": "Coverage and reporting pathways that keep holdings legible to you and your advisors."
+        "title": "保险与审计报告",
+        "description": "使持有物对您及您的顾问保持清晰可辨的保障与报告路径。"
       },
       "vipRooms": {
-        "title": "Private Viewing Rooms",
-        "description": "By appointment — inspect holdings in a controlled, discreet environment."
+        "title": "私人查验室",
+        "description": "预约 — 在受控、审慎的环境中查验持有物。"
       }
     },
-    "gridTitle": "What private clients use",
-    "gridSubtitle": "Practical custody services tied to membership — not a catalogue of slogans.",
+    "gridTitle": "私人客户所使用的服务",
+    "gridSubtitle": "与会籍相连的实际托管服务 — 而非口号目录。",
     "gridServices": {
       "privateVault": {
-        "title": "Private Vault Leasing",
-        "description": "Allocated custody for individuals, corporations, and family offices — sized to your holdings and membership tier.",
+        "title": "私人金库租赁",
+        "description": "面向个人、公司及家族办公室的指定托管 — 规模与您的持有量及会籍等级相称。",
         "features": [
-          "Dedicated vault space",
-          "Controlled access",
-          "Relationship service"
+          "专属金库空间",
+          "受控进入",
+          "客户关系服务"
         ]
       },
       "bullionCustody": {
-        "title": "Bullion Custody & Verification",
-        "description": "LBMA-aligned audits and storage with documented chain of custody and regular verification.",
+        "title": "金条托管与核验",
+        "description": "符合LBMA的审计与存储，具备有文件记载的保管链及定期核验。",
         "features": [
-          "LBMA-aligned standards",
-          "Regular audits",
-          "Full documentation"
+          "符合LBMA的标准",
+          "定期审计",
+          "完整文件"
         ]
       },
       "insurance": {
-        "title": "Insurance & Audit Reporting",
-        "description": "Coverage pathways and reporting that keep holdings clear to you and your advisors.",
+        "title": "保险与审计报告",
+        "description": "使持有物对您及您的顾问保持清楚的保障路径与报告。",
         "features": [
-          "Insurance pathways",
-          "Regular reporting",
-          "Audit documentation"
+          "保险路径",
+          "定期报告",
+          "审计文件"
         ]
       },
       "vipRooms": {
-        "title": "Private Viewing Rooms",
-        "description": "By appointment — inspect holdings in a controlled environment with discreet concierge support.",
+        "title": "私人查验室",
+        "description": "预约 — 在受控环境中查验持有物，并有审慎的礼宾支持。",
         "features": [
-          "By appointment",
-          "Concierge support",
-          "Controlled viewing"
+          "预约",
+          "礼宾支持",
+          "受控查验"
         ]
       }
     },
-    "wealthGridTitle": "Wealth & Investment Services",
-    "wealthGridSubtitle": "A private-client mandate: fund by wire or Bitcoin, we invest, you watch live yield — then withdraw interest or compound it.",
+    "wealthGridTitle": "财富与投资服务",
+    "wealthGridSubtitle": "私人客户委托：以电汇或Bitcoin注资，由我们投资，您观察实时收益率 — 然后提取利息或将其滚入本金。",
     "wealthGridServices": {
       "advisory": {
-        "title": "Fund the mandate",
-        "description": "Transfer cash by bank wire, or send Bitcoin to SBDV’s receive address. Ops confirms receipt before principal is credited.",
+        "title": "为委托注资",
+        "description": "以银行电汇划转现金，或将Bitcoin发送至SBDV的收款地址。运营部门确认收讫后，本金方予入账。",
         "features": [
-          "Bank wire in USD",
-          "Bitcoin as a funding rail",
-          "Ops-confirmed credit"
+          "以USD银行电汇",
+          "Bitcoin作为注资通道",
+          "经运营确认后入账"
         ]
       },
       "portfolio": {
-        "title": "Stewardship",
-        "description": "SBDV invests funded principal under a stated mandate yield. Interest accrues on principal only — not a bank deposit.",
+        "title": "受托管理",
+        "description": "SBDV按所载委托收益率投资已注入的本金。利息仅按本金计息 — 这不是银行存款。",
         "features": [
-          "Stated annual mandate yield",
-          "Principal remains invested",
-          "Yield may be revised"
+          "所载年度委托收益率",
+          "本金保持投资",
+          "收益率可能修订"
         ]
       },
       "alternatives": {
-        "title": "Live monitoring",
-        "description": "Your private portal shows principal, accrued interest, and total value as the mandate yield ticks forward.",
+        "title": "实时监测",
+        "description": "您的私人门户列示本金、已计利息及总价值，并随委托收益率向前计息。",
         "features": [
-          "Live principal vs interest",
-          "Funding history",
-          "Secure client portal"
+          "实时本金与利息",
+          "注资记录",
+          "安全的客户门户"
         ]
       },
       "reporting": {
-        "title": "Distribute or compound",
-        "description": "Withdraw accrued interest and leave principal invested, or reinvest interest so it becomes new principal.",
+        "title": "支取或滚入本金",
+        "description": "提取已计利息并保留本金继续投资，或将利息再投资，使其成为新的本金。",
         "features": [
-          "Withdraw interest",
-          "Reinvest into principal",
-          "Wire or Bitcoin payout"
+          "提取利息",
+          "再投资于本金",
+          "电汇或Bitcoin支付"
         ]
       }
     }
   },
   "wealth": {
-    "title": "Wealth & Investment",
-    "heroTitle": "Wealth & Investment",
-    "heroSubtitle": "Private clients fund a mandate by wire or Bitcoin. SBDV invests the principal. You monitor live yield, then withdraw interest or compound it.",
-    "pillarsTitle": "How the mandate works",
-    "pillarsSubtitle": "Four steps: fund, steward, watch, and distribute — with Swiss ops confirmation, not a trading app.",
+    "title": "财富与投资",
+    "heroTitle": "财富与投资",
+    "heroSubtitle": "私人客户以电汇或Bitcoin为委托注资。SBDV投资本金。您观察实时收益率，然后提取利息或将其滚入本金。",
+    "pillarsTitle": "委托如何运作",
+    "pillarsSubtitle": "四个步骤：注资、受托管理、观察与分配 — 经瑞士运营确认，而非交易应用。",
     "pillars": {
       "advisory": {
-        "title": "Fund",
-        "description": "Send USD by wire or Bitcoin to the house receive address. Credit posts after operations confirm the transfer."
+        "title": "注资",
+        "description": "以电汇或Bitcoin将USD发送至本机构的收款地址。运营部门确认划转后入账。"
       },
       "portfolio": {
-        "title": "Invest",
-        "description": "Funded principal is invested under a stated mandate yield. Interest accrues on principal only."
+        "title": "投资",
+        "description": "已注入的本金按所载委托收益率投资。利息仅按本金计息。"
       },
       "metals": {
-        "title": "Monitor",
-        "description": "The client portal ticks principal, accrued interest, and total value in real time — as of this moment."
+        "title": "监测",
+        "description": "客户门户实时更新本金、已计利息及总价值 — 截至此刻。"
       },
       "reporting": {
-        "title": "Distribute or compound",
-        "description": "Take accrued interest and leave principal working, or reinvest interest so future yield runs on a larger base."
+        "title": "支取或滚入本金",
+        "description": "收取已计利息并使本金继续运作，或将利息再投资，使此后的收益率按更大的基数计算。"
       }
     },
-    "approachTitle": "A quiet mandate, not a marketplace",
-    "approachDescription": "This is a private-client investment mandate, not a bank account and not a crypto exchange. Bitcoin is only a way to fund. Yield is a stated mandate rate SBDV may change. Principal is not withdrawn in this programme — you fund, watch growth, and elect how to treat interest.",
-    "feesTitle": "Fee Transparency",
-    "feesDescription": "Mandate terms, including the stated yield and any fees, are disclosed in writing before you fund. No hidden transaction costs, retrocessions, or kickbacks.",
-    "ctaTitle": "Discuss a private mandate",
-    "ctaSubtitle": "A confidential conversation with our investment team — no pressure, clear next steps.",
-    "ctaButton": "Schedule Consultation",
+    "approachTitle": "安静的委托，而非交易场所",
+    "approachDescription": "这是私人客户的投资委托，并非银行账户，亦非加密资产交易所。Bitcoin仅是注资方式。收益率是SBDV可以变更的所载委托利率。本金在本计划中不予提取 — 您注资、观察增长，并选择如何处理利息。",
+    "feesTitle": "费用透明",
+    "feesDescription": "委托条款，包括所载收益率及任何费用，在您注资前以书面披露。无隐藏交易成本、回佣或回扣。",
+    "ctaTitle": "商讨私人委托",
+    "ctaSubtitle": "与我们的投资团队进行保密交谈 — 并无压力，下一步清晰。",
+    "ctaButton": "预约咨询",
     "growth": {
-      "title": "How your capital grows",
-      "subtitle": "You fund principal. SBDV invests it under a stated mandate yield. Interest accrues on principal only — then you withdraw it or compound it.",
+      "title": "您的资本如何增长",
+      "subtitle": "您注入本金。SBDV按所载委托收益率进行投资。利息仅按本金计息 — 然后由您提取或滚入本金。",
       "steps": {
         "fund": {
-          "title": "Fund principal",
-          "description": "Transfer USD by wire or Bitcoin. Operations confirm receipt, then the amount is credited as principal — not as a traded coin wallet."
+          "title": "注入本金",
+          "description": "以电汇或Bitcoin划转USD。运营部门确认收讫后，该金额作为本金入账 — 而非可交易币种的钱包。"
         },
         "accrue": {
-          "title": "Yield on principal",
-          "description": "A stated annual rate accrues on principal (actual/365). Unwithdrawn interest does not itself earn until you reinvest it."
+          "title": "本金收益率",
+          "description": "所载年利率按本金计息（actual/365）。未提取的利息在您再投资之前本身不产生收益。"
         },
         "choose": {
-          "title": "Take or compound",
-          "description": "Withdraw accrued interest and leave principal invested, or reinvest interest so future yield runs on a larger base."
+          "title": "提取或滚入",
+          "description": "提取已计利息并保留本金继续投资，或将利息再投资，使此后的收益率按更大的基数计算。"
         }
       },
-      "exampleLabel": "Worked example",
-      "exampleTitle": "Illustrative year at a stated 8% mandate yield",
-      "exampleBody": "If $250,000 is confirmed as principal and the mandate yield is 8% actual/365, about $20,000 of interest would accrue over a full year — assuming the rate is unchanged and principal is not reduced. You could withdraw that interest or reinvest it into principal.",
-      "examplePrincipal": "Principal",
-      "exampleYield": "Stated yield",
-      "exampleInterest": "Year-1 interest (illustrative)",
-      "exampleNote": "Not guaranteed. The stated yield may be paused or revised. Possible loss of principal. This is not a bank deposit and is not covered by deposit insurance."
+      "exampleLabel": "演算示例",
+      "exampleTitle": "按所载8%委托收益率的示意年度",
+      "exampleBody": "若 $250,000 被确认为本金，且委托收益率为 8% actual/365，则一个完整年度将产生约 $20,000 的利息 — 前提是利率不变且本金未减少。您可以提取该利息，或将其再投资于本金。",
+      "examplePrincipal": "本金",
+      "exampleYield": "所载收益率",
+      "exampleInterest": "第1年利息（示意）",
+      "exampleNote": "不作保证。所载收益率可能暂停或修订。可能损失本金。这不是银行存款，亦不受存款保险覆盖。"
     },
     "benefits": {
-      "title": "Why private clients use the mandate",
+      "title": "私人客户为何使用该委托",
       "items": [
-        "Ops-confirmed funding by wire or Bitcoin",
-        "Live principal vs interest in the private portal",
-        "Withdraw interest without redeeming principal",
-        "Reinvest interest so the base can grow",
-        "Swiss KYC and operations confirmation when you fund",
-        "Custody remains a separate Vault membership if you also store bullion"
+        "经运营确认的电汇或Bitcoin注资",
+        "私人门户中实时的本金与利息",
+        "提取利息而不赎回本金",
+        "将利息再投资，使基数可以增长",
+        "注资时的瑞士KYC及运营确认",
+        "若您同时存放金条，托管仍为单独的金库会籍"
       ]
     },
     "register": {
-      "formTitle": "Create your wealth account",
-      "formSubtitle": "Register with your own password. After you sign in, review the mandate and choose how much to fund by wire or Bitcoin. Operations confirms receipt before principal starts accruing.",
-      "formSuccessTitle": "Account created",
-      "formSuccessText": "Sign in to open your mandate and choose a funding amount.",
-      "continueTitle": "You're signed in",
-      "continueText": "Continue to your wealth mandate to review the programme and choose how much to invest.",
-      "continueCta": "Continue to your mandate",
-      "createAccount": "Create account",
-      "creatingAccount": "Creating account...",
-      "password": "Password",
-      "confirmPassword": "Confirm password",
-      "passwordMin": "At least 8 characters",
-      "alreadyExists": "An account with this email already exists. Sign in instead.",
-      "signIn": "Sign in",
-      "signInFailed": "Account created. Sign in to continue to your mandate.",
-      "error": "Unable to create the account. Please try again."
+      "formTitle": "创建您的财富账户",
+      "formSubtitle": "请以您自己的密码注册。登录后审阅委托，并选择以电汇或Bitcoin注资的金额。运营部门确认收讫后，本金方开始计息。",
+      "formSuccessTitle": "账户已创建",
+      "formSuccessText": "请登录以打开您的委托并选择注资金额。",
+      "continueTitle": "您已登录",
+      "continueText": "请前往您的财富委托，以审阅该安排并选择投资金额。",
+      "continueCta": "前往您的委托",
+      "createAccount": "创建账户",
+      "creatingAccount": "正在创建账户...",
+      "password": "密码",
+      "confirmPassword": "确认密码",
+      "passwordMin": "至少8个字符",
+      "alreadyExists": "使用该电子邮箱的账户已存在。请改为登录。",
+      "signIn": "登录",
+      "signInFailed": "账户已创建。请登录以继续前往您的委托。",
+      "error": "无法创建账户。请重试。"
     },
-    "closeTitle": "Ready to begin?",
-    "closeSubtitle": "Create a portal account on this page. After you sign in, choose how much to invest. Vault custody is a separate membership if you need allocated storage.",
-    "closeApply": "Create an account",
-    "closeVault": "Request vault membership"
+    "closeTitle": "准备开始？",
+    "closeSubtitle": "请在本页创建门户账户。登录后选择投资金额。若您需要指定存储，金库托管为单独的会籍。",
+    "closeApply": "创建账户",
+    "closeVault": "申请金库会籍"
   },
   "membership": {
-    "title": "Vault membership",
-    "heroTitle": "Vault membership",
-    "heroSubtitle": "The path into Swiss vault custody — tiered access to allocated storage, viewing, and relationship coverage. This is Vault & Security, not the wealth mandate.",
-    "tiersTitle": "Custody access levels",
-    "tiersSubtitle": "Three tiers for different scales of bullion and valuables custody. Every request is reviewed before access.",
+    "title": "金库会籍",
+    "heroTitle": "金库会籍",
+    "heroSubtitle": "进入瑞士金库托管之路 — 按等级取得指定存储、查验及客户关系覆盖。此为「金库与安全」，而非财富委托。",
+    "tiersTitle": "托管准入等级",
+    "tiersSubtitle": "三个等级，对应不同规模的金条及贵重物品托管。每项申请均在准许进入前予以审核。",
     "tiers": {
       "standard": {
-        "title": "Standard Custody",
-        "subtitle": "Entry Level",
-        "minimum": "Minimum: $250k",
-        "description": "Custody for individual investors and smaller portfolios — standard protocols, regular reporting, and monitored facilities.",
+        "title": "标准托管",
+        "subtitle": "入门级别",
+        "minimum": "最低：$250k",
+        "description": "面向个人投资者及较小投资组合的托管 — 标准规程、定期报告以及受监测的设施。",
         "features": [
-          "Minimum $250k in assets",
-          "Standard security protocols",
-          "Regular reporting",
-          "24/7 monitoring",
-          "Insurance coverage"
+          "资产最低 $250k",
+          "标准安全规程",
+          "定期报告",
+          "24/7监测",
+          "保险保障"
         ]
       },
       "executive": {
-        "title": "Executive Vault",
-        "subtitle": "Reviewed access",
-        "minimum": "Minimum: Custom",
-        "description": "Reviewed relationships for HNWI, family offices, and corporations — dedicated service and heightened privacy.",
+        "title": "行政级金库",
+        "subtitle": "经审核的准入",
+        "minimum": "最低：定制",
+        "description": "面向HNWI、家族办公室及公司的经审核关系 — 专属服务与更高的保密。",
         "features": [
-          "Reviewed access",
-          "Personalized storage",
-          "Dedicated account manager",
-          "Enhanced privacy protocols",
-          "Priority access"
+          "经审核的准入",
+          "个性化存储",
+          "专属客户经理",
+          "强化保密规程",
+          "优先准入"
         ]
       },
       "sovereign": {
-        "title": "Sovereign Tier",
-        "subtitle": "Institutional",
-        "minimum": "Minimum: Institutional",
-        "description": "Institutional-scale custody relationships for sovereign and large institutional counterparts — the highest service intensity.",
+        "title": "主权级",
+        "subtitle": "机构",
+        "minimum": "最低：机构级",
+        "description": "面向主权及大型机构对手方的机构规模托管关系 — 最高的服务强度。",
         "features": [
-          "Institutional-grade security",
-          "Government-level protocols",
-          "Custom solutions",
-          "Dedicated facilities",
-          "White-glove service"
+          "机构级安全保障",
+          "政府级规程",
+          "定制方案",
+          "专用设施",
+          "专属礼遇服务"
         ]
       }
     },
-    "complianceTitle": "Compliance & Security",
-    "complianceText": "Vault membership is a request, reviewed before access. Every applicant is screened under Swiss KYC and AML frameworks. To fund a wealth mandate, use Wealth & Investment. That programme is separate from vault custody.",
-    "formTitle": "Request vault membership",
-    "formSubtitle": "Tell us about your custody needs — allocated bullion, viewing, and vault relationship. We respond with discretion — no obligation.",
-    "formSuccessTitle": "Vault application received",
-    "formSuccessText": "Thank you. Our custody desk will review your request and contact you shortly.",
+    "complianceTitle": "合规与安全",
+    "complianceText": "金库会籍为一项申请，在准许进入前予以审核。每位申请人均按瑞士KYC及AML框架接受审查。如需为财富委托注资，请使用「财富与投资」。该安排与金库托管相互独立。",
+    "formTitle": "申请金库会籍",
+    "formSubtitle": "请告知您的托管需求 — 指定金条、查验及金库关系。我们将审慎回复 — 并无义务。",
+    "formSuccessTitle": "金库申请已收到",
+    "formSuccessText": "感谢。我们的托管部门将审核您的申请，并尽快与您联系。",
     "formLabels": {
-      "name": "Full Name",
-      "email": "Email Address",
-      "phone": "Phone Number",
-      "country": "Country",
-      "assetRange": "Asset Range",
-      "message": "Message"
+      "name": "姓名",
+      "email": "电子邮箱",
+      "phone": "电话号码",
+      "country": "国家",
+      "assetRange": "资产区间",
+      "message": "信息"
     },
     "formPlaceholders": {
-      "name": "Enter your full name",
+      "name": "请输入您的全名",
       "email": "your.email@example.com",
       "phone": "+1 (555) 123-4567",
-      "country": "Select your country",
-      "assetRange": "Select asset range",
-      "message": "Describe your vault custody interest — metals, volume, and any viewing needs."
+      "country": "请选择您的国家",
+      "assetRange": "请选择资产区间",
+      "message": "请说明您的金库托管意向 — 金属、数量以及查验需要。"
     }
   },
   "contact": {
-    "title": "Contact",
+    "title": "联系",
     "heroTitle": "联系与私下咨询",
-    "heroSubtitle": "Get in touch with our team for confidential consultations.",
-    "formSuccessTitle": "Your inquiry has been securely submitted.",
-    "formSuccessText": "We have received your inquiry and will contact you shortly. All communications are handled with the utmost discretion and security.",
-    "formSecureLabel": "Secure & Confidential",
+    "heroSubtitle": "联系我们的团队，进行保密咨询。",
+    "formSuccessTitle": "您的咨询已安全提交。",
+    "formSuccessText": "我们已收到您的咨询，并将尽快与您联系。所有通信均以最高程度的审慎与安全处理。",
+    "formSecureLabel": "安全且保密",
     "formLabels": {
-      "name": "Full Name",
-      "email": "Email Address",
-      "phone": "Phone Number",
-      "country": "Country",
-      "interest": "Investment Interest",
-      "message": "Message"
+      "name": "姓名",
+      "email": "电子邮箱",
+      "phone": "电话号码",
+      "country": "国家",
+      "interest": "咨询意向",
+      "message": "信息"
     },
     "formPlaceholders": {
-      "name": "Enter your full name",
+      "name": "请输入您的全名",
       "email": "your.email@example.com",
       "phone": "+1 (555) 123-4567",
-      "country": "Select your country",
-      "interest": "Select investment interest",
-      "message": "Tell us about your inquiry..."
+      "country": "请选择您的国家",
+      "interest": "请选择咨询意向",
+      "message": "请说明您的咨询..."
     },
     "interestOptions": {
-      "privateVault": "Private Vault Leasing",
-      "bullionCustody": "Bullion Custody & Verification",
-      "insurance": "Insurance & Audit Reporting",
-      "vipViewing": "VIP Private Viewing Rooms",
-      "investmentAdvisory": "Investment Advisory",
-      "portfolioManagement": "Portfolio Management",
-      "alternativeInvestments": "Alternative Investments",
-      "membership": "Membership Inquiry",
-      "general": "General Inquiry"
+      "privateVault": "私人金库租赁",
+      "bullionCustody": "金条托管与核验",
+      "insurance": "保险与审计报告",
+      "vipViewing": "VIP私人查验室",
+      "investmentAdvisory": "投资咨询",
+      "portfolioManagement": "投资组合管理",
+      "alternativeInvestments": "另类投资",
+      "membership": "会籍咨询",
+      "general": "一般咨询"
     }
   },
   "cta": {
@@ -532,9 +532,9 @@
       }
     },
     "globalAccessTitle": "全球通行",
-    "globalAccessDescription": "Vault membership is a request, reviewed before access. Wealth mandates and Capital Access are open to clients who qualify. Approved clients use the secure portal.",
+    "globalAccessDescription": "金库会籍为一项申请，在准许进入前予以审核。财富委托与Capital Access向符合条件的客户开放。经批准的客户使用安全门户。",
     "globalAccessLabel": "安全客户门户",
-    "globalNetworkTitle": "Global Network",
+    "globalNetworkTitle": "全球网络",
     "globalNetworkDescription": "通过合作金库与全球物流，为世界金融中心的客户提供私密服务。",
     "wealthTeaserTitle": "财富stewardship，而非喧嚣",
     "wealthTeaserDescription": "面向私人客户：组合授权、贵金属策略与综合报告——通过私人门户与瑞士托管一体化。",
@@ -581,231 +581,231 @@
   "common": {
     "loading": "加载中…",
     "submit": "提交",
-    "submitting": "Submitting...",
+    "submitting": "正在提交...",
     "cancel": "取消",
-    "success": "Success",
-    "error": "Error",
-    "tryAgain": "Try Again",
-    "required": "Required",
-    "optional": "Optional",
-    "learnMore": "Learn More",
-    "backToHome": "Back to Home"
+    "success": "成功",
+    "error": "错误",
+    "tryAgain": "重试",
+    "required": "必填",
+    "optional": "选填",
+    "learnMore": "了解更多",
+    "backToHome": "返回首页"
   },
   "legal": {
-    "privacyTitle": "Privacy Policy",
-    "privacyIntro": "Swiss Bullion Depository Vault (SBDV), seated in Zurich, is the controller of personal data collected through this website and complies with the Swiss Federal Act on Data Protection (FADP) when processing personal data of clients worldwide.",
-    "privacyBody": "SBDV, seated in Zurich, is the controller of personal data collected through this website, the client portal, and the Capital Access program. We collect identity, contact, company, beneficial-ownership, and banking data solely to provide vault custody, membership, and capital facilities, to meet Swiss anti-money-laundering duties, and to communicate with you. A request to access, correct, or delete personal data is made through the Contact page.\n\nData is stored securely, accessed by authorised staff and by banking or compliance partners who need it to perform the service, and is not sold. Hosting and email providers may process data outside Switzerland under confidentiality and security safeguards.\n\nWe retain application and KYC records for as long as required by Swiss financial-crime and contractual rules, then delete or anonymise them. A request for deletion is subject to those legal retention duties.",
-    "termsTitle": "Terms of Service",
-    "termsIntro": "These terms govern your use of the SBDV website, client portals, and public application channels. SBDV is seated in Zurich. Swiss law governs these website terms.",
-    "termsBody": "These website terms apply to use of the SBDV website, account sign-in, and public application channels. They do not create a vault custody agreement, a wealth mandate, or a capital facility. Vault custody and wealth mandates are provided only under the separate agreement issued for that relationship. Capital Access facilities are governed by the Facility Terms and Conditions, not by these website terms.\n\nSBDV is seated in Zurich, Switzerland. These website terms are governed by the substantive laws of Switzerland, excluding conflict-of-law rules that would apply another law. The courts of Zurich have jurisdiction over disputes arising from use of the website. That does not limit any jurisdiction stated in a facility or mandate agreement.\n\nBy creating an account or using a portal you agree to Swiss know-your-customer and anti-money-laundering screening. You must keep your password and any sign-in code confidential. If you believe your account has been used without your authority, tell SBDV promptly through the Contact page.\n\nEnterprises worldwide may apply for Capital Access. Submitting an application is not a commitment to lend, is not a retail consumer loan, and is not a public securities offering. SBDV may approve, decline, or defer an application in its discretion. SBDV may modify the public website by notice on this page. A facility already accepted remains governed by the Facility Terms you accepted, not by a later change to this page.",
-    "regulatoryTitle": "Regulatory Disclosures",
-    "regulatoryIntro": "SBDV is a Zurich-seated vault and capital-arranging institution serving clients worldwide. It is not a Swiss bank.",
-    "regulatoryBody": "SBDV provides bullion vault custody and arranges structured capital facilities for qualified enterprises. Capital Access is not a protected bank deposit and is not covered by deposit-insurance schemes. Funds held as a security deposit are contractual cash collateral, not a deposit in your name at a bank.\n\nPrivate-client wealth mandates are investment programmes, not bank accounts. A stated mandate yield is not guaranteed interest, may be paused or revised, and is not covered by deposit insurance. Bitcoin may be used only as a funding or payout rail; SBDV does not operate a crypto exchange or hold client private keys. Transfers in Bitcoin are irreversible.\n\nAll clients undergo know-your-customer, beneficial-ownership, and anti-money-laundering screening consistent with the Swiss Anti-Money Laundering Act (AMLA). Ultimate beneficial owners are identified to natural persons. Screening applies regardless of the client’s country of incorporation.\n\nInvestment and portfolio management services may require appropriate licensing or be provided through regulated partners. SBDV does not claim a FINMA banking licence. Approval of any facility or mandate is discretionary.\n\nPersons and entities in comprehensively sanctioned jurisdictions cannot be onboarded. High-risk jurisdictions may be subject to enhanced due diligence rather than automatic refusal.\n\nRisk disclosures: investments involve risk including possible loss of principal. Past performance is not indicative of future results. This website is not legal, tax, or investment advice.",
-    "investorRelationsTitle": "Investor Relations",
-    "investorRelationsIntro": "Governance, transparency, and institutional communications.",
-    "investorRelationsBody": "SBDV is committed to transparency with our clients and stakeholders. Annual reports, governance policies, and institutional disclosures will be published here as they become available. For institutional inquiries, please contact our investor relations team through the contact page.",
-    "englishGoverns": "English is the governing language of this page. Until a translation is issued, the English text is the text that applies."
+    "privacyTitle": "隐私政策",
+    "privacyIntro": "设于苏黎世的Swiss Bullion Depository Vault（SBDV）是通过本网站收集的个人数据的控制者，并在处理世界各地客户的个人数据时遵守《瑞士联邦数据保护法》（FADP）。",
+    "privacyBody": "设于苏黎世的SBDV是通过本网站、客户门户及Capital Access计划所收集个人数据的控制者。我们收集身份、联系、公司、受益所有权及银行数据，仅用于提供金库托管、会籍及资本便利，履行瑞士反洗钱义务，以及与您通信。查阅、更正或删除个人数据的请求通过「联系」页面提出。\n\n数据予以安全存储，由经授权的人员以及为履行服务所必需的银行或合规合作方访问，且不予出售。托管及电子邮件服务提供方可在保密与安全保障之下于瑞士境外处理数据。\n\n我们在瑞士金融犯罪规则及合同规则所要求的期限内保留申请及KYC记录，其后删除或匿名化。删除请求受该等法定保留义务约束。",
+    "termsTitle": "使用条款",
+    "termsIntro": "本条款规范您对SBDV网站、客户门户及公开申请渠道的使用。SBDV设于苏黎世。本网站条款受瑞士法律管辖。",
+    "termsBody": "本网站条款适用于对SBDV网站、账户登录及公开申请渠道的使用。该等条款不设立金库托管协议、财富委托或资本便利。金库托管及财富委托仅根据为该关系另行出具的协议提供。Capital Access便利受便利条款与条件约束，不受本网站条款约束。\n\nSBDV设于瑞士苏黎世。本网站条款受瑞士实体法管辖，不包括将导致适用其他法律的法律冲突规则。苏黎世法院对因使用本网站而产生的争议拥有管辖权。这并不限制便利协议或委托协议中载明的任何管辖权。\n\n创建账户或使用门户，即表示您同意接受瑞士了解客户及反洗钱审查。您必须对密码及任何登录代码保密。若您认为账户在未经您授权的情况下被使用，请立即通过「联系」页面告知SBDV。\n\n世界各地的企业均可申请Capital Access。提交申请并不构成放款承诺，并非零售消费贷款，亦非证券公开发行。SBDV可酌情批准、拒绝或推迟申请。SBDV可通过在本页通知的方式修改公开网站。已经接受的便利仍受您所接受的便利条款约束，不受本页此后变更的约束。",
+    "regulatoryTitle": "监管披露",
+    "regulatoryIntro": "SBDV是设于苏黎世的金库及资本安排机构，服务于世界各地的客户。其并非瑞士银行。",
+    "regulatoryBody": "SBDV提供金库金条托管，并为符合条件的企业安排结构化资本便利。Capital Access并非受保护的银行存款，不受存款保险计划覆盖。作为保证金持有的资金是合同项下的现金抵押，并非以您名义存放于银行的存款。\n\n私人客户的财富委托是投资安排，并非银行账户。所载委托收益率并非保证利息，可能暂停或修订，且不受存款保险覆盖。Bitcoin仅可用作注资或支付通道；SBDV不运营加密资产交易所，亦不持有客户私钥。以Bitcoin进行的划转不可撤销。\n\n所有客户均须接受与《瑞士反洗钱法》（AMLA）相符的了解客户、受益所有权及反洗钱审查。最终受益所有人须识别至自然人。无论客户的设立地国家为何，审查均适用。\n\n投资及投资组合管理服务可能需要适当牌照，或通过受监管的合作方提供。SBDV不声称持有FINMA银行牌照。任何便利或委托的批准均为酌情决定。\n\n处于全面制裁司法辖区的个人及实体不得被接纳。高风险司法辖区可适用强化尽职调查，而非自动拒绝。\n\n风险披露：投资涉及风险，包括可能损失本金。过往表现并非未来结果的指标。本网站不构成法律、税务或投资建议。",
+    "investorRelationsTitle": "投资者关系",
+    "investorRelationsIntro": "治理、透明与机构通信。",
+    "investorRelationsBody": "SBDV致力于对我们的客户及利益相关方保持透明。年度报告、治理政策及机构披露将于可供发布时刊载于此。机构事宜请通过联系页面与投资者关系团队联系。",
+    "englishGoverns": "本页的管辖语言为英文。译文供阅读。适用的文本为英文文本。"
   },
   "login": {
     "title": "客户登录",
-    "subtitle": "Secure access to your portfolio and account documents.",
+    "subtitle": "安全访问您的投资组合及账户文件。",
     "email": "电子邮箱",
     "password": "密码",
-    "mfaCode": "Authentication Code",
-    "mfaHint": "Enter the 6-digit code from your authenticator app.",
+    "mfaCode": "验证码",
+    "mfaHint": "请输入身份验证应用中的6位数字代码。",
     "signIn": "登录",
-    "signingIn": "Signing In...",
+    "signingIn": "正在登录...",
     "forgotPassword": "忘记密码？",
     "noAccount": "还不是客户？",
     "applyMembership": "申请会籍",
     "invalidCredentials": "邮箱或密码不正确。",
-    "mfaRequired": "Enter your authentication code to continue.",
-    "mfaInvalid": "Invalid authentication code.",
-    "error": "An error occurred. Please try again.",
-    "forgotTitle": "Forgot Password",
-    "forgotSubtitle": "Enter your account email and we will send a reset link.",
-    "sendResetLink": "Send Reset Link",
-    "resetEmailSent": "If an account exists for that email, a reset link has been sent. Check your inbox and spam folder.",
-    "backToSignIn": "Back to Sign In",
-    "resetTitle": "Reset Password",
-    "resetSubtitle": "Choose a new password for your account.",
-    "newPassword": "New Password",
-    "confirmPassword": "Confirm Password",
-    "updatePassword": "Update Password",
-    "passwordMismatch": "Passwords do not match.",
-    "resetLinkInvalid": "This reset link is missing or invalid.",
-    "resetSuccess": "Your password has been updated. You can sign in with the new password.",
-    "resetFailed": "Unable to reset password.",
-    "resetRequestFailed": "Unable to send reset email.",
-    "alreadySignedIn": "You're signed in",
-    "alreadySignedInSubtitle": "Continue to your portal, or sign out to use a different account.",
-    "signedInAs": "Signed in as",
-    "continueToPortal": "Continue to portal",
-    "signOut": "Sign out",
-    "registerWealth": "Create a wealth account",
-    "adminTitle": "Administration",
-    "adminSubtitle": "Sign in to the SBDV operations portal.",
-    "adminOnly": "This portal is for administrators only.",
-    "continueToAdmin": "Continue to operations"
+    "mfaRequired": "请输入验证码以继续。",
+    "mfaInvalid": "验证码无效。",
+    "error": "发生错误。请重试。",
+    "forgotTitle": "忘记密码",
+    "forgotSubtitle": "请输入您的账户电子邮箱，我们将发送重置链接。",
+    "sendResetLink": "发送重置链接",
+    "resetEmailSent": "若该电子邮箱存在账户，重置链接已发送。请检查收件箱及垃圾邮件文件夹。",
+    "backToSignIn": "返回登录",
+    "resetTitle": "重置密码",
+    "resetSubtitle": "请为您的账户选择新密码。",
+    "newPassword": "新密码",
+    "confirmPassword": "确认密码",
+    "updatePassword": "更新密码",
+    "passwordMismatch": "密码不一致。",
+    "resetLinkInvalid": "该重置链接缺失或无效。",
+    "resetSuccess": "您的密码已更新。您可以使用新密码登录。",
+    "resetFailed": "无法重置密码。",
+    "resetRequestFailed": "无法发送重置邮件。",
+    "alreadySignedIn": "您已登录",
+    "alreadySignedInSubtitle": "请前往门户，或退出以使用其他账户。",
+    "signedInAs": "登录身份",
+    "continueToPortal": "前往门户",
+    "signOut": "退出",
+    "registerWealth": "创建财富账户",
+    "adminTitle": "管理",
+    "adminSubtitle": "登录SBDV运营门户。",
+    "adminOnly": "本门户仅供管理员使用。",
+    "continueToAdmin": "前往运营"
   },
   "portal": {
-    "title": "Client Portal",
-    "signedInAs": "Signed in as",
+    "title": "客户门户",
+    "signedInAs": "登录身份",
     "nav": {
-      "overview": "Overview",
-      "holdings": "Holdings",
-      "performance": "Performance",
-      "documents": "Documents",
-      "messages": "Messages",
-      "settings": "Settings",
-      "admin": "Admin Panel",
-      "logout": "Sign Out",
-      "mandate": "Mandate",
-      "funding": "Funding"
+      "overview": "概览",
+      "holdings": "持仓",
+      "performance": "业绩",
+      "documents": "文件",
+      "messages": "消息",
+      "settings": "设置",
+      "admin": "管理面板",
+      "logout": "退出登录",
+      "mandate": "委托",
+      "funding": "注资"
     },
     "overview": {
-      "title": "Portfolio Overview",
-      "netWorth": "Total Net Worth",
-      "asOf": "As of",
-      "allocation": "Asset Allocation",
-      "recentActivity": "Recent Activity",
-      "bullionValue": "Bullion & Custody",
-      "financialValue": "Financial Portfolio",
-      "openMandate": "Open mandate",
-      "vaultHoldings": "Vault & financial holdings",
-      "empty": "No mandate or holdings yet. Fund the mandate or contact your relationship manager."
+      "title": "投资组合概览",
+      "netWorth": "净资产总额",
+      "asOf": "截至",
+      "allocation": "资产配置",
+      "recentActivity": "近期活动",
+      "bullionValue": "金条与托管",
+      "financialValue": "金融投资组合",
+      "openMandate": "打开委托",
+      "vaultHoldings": "金库及金融持仓",
+      "empty": "尚无委托或持仓。请为委托注资，或联系您的客户关系经理。"
     },
     "holdings": {
-      "title": "Holdings",
-      "bullionTab": "Bullion & Custody",
-      "financialTab": "Financial Portfolio",
-      "weight": "Weight",
-      "purity": "Purity",
-      "location": "Vault Location",
-      "auditStatus": "Audit Status",
-      "quantity": "Quantity",
-      "costBasis": "Cost Basis",
-      "marketValue": "Market Value",
-      "verified": "Verified",
-      "pending": "Pending Audit"
+      "title": "持仓",
+      "bullionTab": "金条与托管",
+      "financialTab": "金融投资组合",
+      "weight": "重量",
+      "purity": "成色",
+      "location": "金库位置",
+      "auditStatus": "审计状态",
+      "quantity": "数量",
+      "costBasis": "成本基础",
+      "marketValue": "市场价值",
+      "verified": "已核验",
+      "pending": "待审计"
     },
     "performance": {
-      "title": "Performance",
-      "period": "Period",
-      "return": "Return",
-      "benchmark": "Benchmark",
-      "ytd": "Year to Date",
-      "oneYear": "1 Year",
-      "threeYear": "3 Years",
-      "allTime": "All Time",
-      "disclaimer": "Performance data is for illustration. Past performance is not indicative of future results."
+      "title": "业绩",
+      "period": "期间",
+      "return": "回报",
+      "benchmark": "基准",
+      "ytd": "年初至今",
+      "oneYear": "1年",
+      "threeYear": "3年",
+      "allTime": "自始至今",
+      "disclaimer": "业绩数据仅供说明。过往业绩并不预示未来结果。"
     },
     "documents": {
-      "title": "Document Vault",
-      "upload": "Upload Document",
-      "download": "Download",
-      "noDocuments": "No documents available.",
+      "title": "文件金库",
+      "upload": "上传文件",
+      "download": "下载",
+      "noDocuments": "暂无可用文件。",
       "types": {
-        "statement": "Statement",
-        "contract": "Contract",
-        "kyc": "KYC Document",
-        "report": "Report",
-        "other": "Other"
+        "statement": "对账单",
+        "contract": "合同",
+        "kyc": "KYC文件",
+        "report": "报告",
+        "other": "其他"
       }
     },
     "messages": {
-      "title": "Advisor Messages",
-      "compose": "New Message",
-      "subject": "Subject",
-      "body": "Message",
-      "send": "Send",
-      "noMessages": "No messages yet.",
-      "encrypted": "End-to-end encrypted communication"
+      "title": "顾问消息",
+      "compose": "新消息",
+      "subject": "主题",
+      "body": "消息",
+      "send": "发送",
+      "noMessages": "尚无消息。",
+      "encrypted": "端到端加密通信"
     },
     "settings": {
-      "title": "Account Settings",
-      "mfaTitle": "Two-Factor Authentication",
-      "mfaEnabled": "Enabled",
-      "mfaDisabled": "Not enabled",
-      "enableMfa": "Enable MFA",
-      "sessions": "Active Sessions",
-      "notifications": "Email Notifications"
+      "title": "账户设置",
+      "mfaTitle": "双因素认证",
+      "mfaEnabled": "已启用",
+      "mfaDisabled": "未启用",
+      "enableMfa": "启用MFA",
+      "sessions": "活动会话",
+      "notifications": "电子邮件通知"
     },
     "mandate": {
-      "title": "Wealth mandate",
-      "subtitle": "Principal stays invested. Interest accrues on principal at the stated mandate yield. Withdraw interest or reinvest it — principal is not redeemed in this programme.",
-      "principal": "Principal",
-      "accrued": "Accrued interest",
-      "total": "Mandate total",
-      "yield": "Mandate yield",
-      "live": "Accruing",
-      "paused": "Yield paused",
-      "growth": "Growth",
-      "reinvest": "Reinvest accrued interest",
-      "withdraw": "Withdraw interest",
-      "withdrawTitle": "Withdraw accrued interest",
-      "amount": "Amount",
-      "accountName": "Account name",
-      "bankName": "Bank name",
-      "btcAddress": "Bitcoin address",
-      "submitWithdraw": "Request payout",
-      "activity": "Activity",
-      "when": "When",
-      "type": "Type",
-      "status": "Status",
-      "emptyActivity": "No mandate activity yet. Fund the mandate to begin.",
-      "unavailable": "No wealth mandate is attached to this account yet.",
-      "actionError": "Unable to complete that request.",
-      "disclaimer": "Not a bank deposit. Yield is a stated mandate rate and may be changed. Bitcoin transfers are irreversible.",
+      "title": "财富委托",
+      "subtitle": "本金保持投资。利息按所载委托收益率在本金上计息。请提取利息或将其再投资 — 本金在本计划中不予赎回。",
+      "principal": "本金",
+      "accrued": "已计利息",
+      "total": "委托合计",
+      "yield": "委托收益率",
+      "live": "计息中",
+      "paused": "收益率已暂停",
+      "growth": "增长",
+      "reinvest": "再投资已计利息",
+      "withdraw": "提取利息",
+      "withdrawTitle": "提取已计利息",
+      "amount": "金额",
+      "accountName": "账户名称",
+      "bankName": "银行名称",
+      "btcAddress": "Bitcoin地址",
+      "submitWithdraw": "申请兑付",
+      "activity": "活动记录",
+      "when": "时间",
+      "type": "类型",
+      "status": "状态",
+      "emptyActivity": "尚无委托活动。请为委托注资以开始。",
+      "unavailable": "此账户尚未关联财富委托。",
+      "actionError": "无法完成该请求。",
+      "disclaimer": "这不是银行存款。收益率为所载委托利率，并可能变更。Bitcoin划转不可撤销。",
       "types": {
-        "DEPOSIT_WIRE": "Wire funding",
-        "DEPOSIT_BTC": "Bitcoin funding",
-        "INTEREST_ACCRUAL": "Yield credited",
-        "INTEREST_WITHDRAW": "Interest withdrawal",
-        "INTEREST_REINVEST": "Interest reinvested",
-        "ADJUSTMENT": "Adjustment",
-        "FOUNDING_BONUS": "Founding bonus"
+        "DEPOSIT_WIRE": "电汇注资",
+        "DEPOSIT_BTC": "Bitcoin注资",
+        "INTEREST_ACCRUAL": "收益率已入账",
+        "INTEREST_WITHDRAW": "利息提取",
+        "INTEREST_REINVEST": "利息已再投资",
+        "ADJUSTMENT": "调整",
+        "FOUNDING_BONUS": "创始客户奖金"
       },
-      "fundTitle": "Choose how much to invest",
+      "fundTitle": "选择投资金额",
       "fundBody": "Review the mandate, then tell operations the USD amount and whether you will send a bank wire or Bitcoin. Principal is credited only after receipt is confirmed.",
-      "fundCta": "Choose amount and funding method"
+      "fundCta": "选择金额及注资方式"
     },
     "funding": {
-      "title": "Fund the mandate",
+      "title": "为委托注资",
       "subtitle": "Request a wire or Bitcoin transfer. Principal is credited only after SBDV operations confirm receipt.",
-      "wire": "Bank wire",
+      "wire": "银行电汇",
       "btc": "Bitcoin",
-      "btcAmount": "Bitcoin amount (optional)",
-      "txid": "Transaction ID",
-      "note": "Note to operations",
-      "submit": "Submit funding notice",
-      "submitted": "Notice received. Quote this reference when you transfer:",
-      "instructions": "House instructions",
-      "beneficiary": "Beneficiary",
-      "accountNumber": "Account number",
-      "bankAddress": "Bank address",
+      "btcAmount": "Bitcoin金额（可选）",
+      "txid": "交易标识",
+      "note": "致运营部门的说明",
+      "submit": "提交注资通知",
+      "submitted": "通知已收到。划转时请引用此参考编号：",
+      "instructions": "本机构指示",
+      "beneficiary": "收款人",
+      "accountNumber": "账号",
+      "bankAddress": "银行地址",
       "wireFallback": "Wire instructions will be confirmed by your relationship manager. Submit the notice so operations can match your transfer.",
-      "btcAddress": "SBDV receive address",
+      "btcAddress": "SBDV收款地址",
       "btcQrAlt": "SBDV 比特币收款地址二维码",
       "copyAddress": "复制地址",
       "copiedAddress": "已复制",
       "btcNote": "Send only Bitcoin to this address. Include the txid on your notice. Credit is USD principal after ops confirmation — SBDV does not custody your keys.",
       "btcFallback": "A Bitcoin receive address will be provided by your relationship manager.",
-      "history": "Funding history",
-      "rail": "Rail",
-      "reference": "Reference",
-      "empty": "No funding notices yet.",
-      "waitingApprove": "Waiting for operations to approve this notice. House instructions will appear here after approval — do not send funds yet.",
-      "waitingProof": "Transfer using the instructions below, then upload payment proof.",
-      "proofUploaded": "Payment information received. Operations will confirm receipt.",
-      "credited": "Receipt confirmed. This amount is principal.",
-      "rejected": "This notice was not accepted. Submit a new funding notice if you still intend to fund.",
-      "uploadProof": "Upload payment proof",
-      "uploadHint": "PDF or JPEG of the wire confirmation or Bitcoin transfer. Optional txid for Bitcoin.",
-      "uploadSubmit": "Send payment information",
-      "uploadedFile": "Uploaded",
-      "beneficiaryAddress": "Beneficiary address",
-      "routing": "Local routing"
+      "history": "注资记录",
+      "rail": "通道",
+      "reference": "参考编号",
+      "empty": "尚无注资通知。",
+      "waitingApprove": "此通知尚待运营部门批准。本机构指示将于批准后显示于此 — 请勿划转资金。",
+      "waitingProof": "请按下列指示划转，然后上传付款证明。",
+      "proofUploaded": "付款信息已收到。运营部门将确认收讫。",
+      "credited": "收讫已确认。此金额为本金。",
+      "rejected": "此通知未被接受。如您仍拟注资，请提交新的注资通知。",
+      "uploadProof": "上传付款证明",
+      "uploadHint": "电汇确认或Bitcoin划转的PDF或JPEG。Bitcoin的txid为可选。",
+      "uploadSubmit": "发送付款信息",
+      "uploadedFile": "已上传",
+      "beneficiaryAddress": "收款人地址",
+      "routing": "本地路由代码"
     }
   },
   "admin": {
@@ -1027,48 +1027,48 @@
     "portalBadge": "Enterprise Partner Portal",
     "signedInAs": "Signed in as",
     "hero": {
-      "badge": "Institutional Capital Program",
-      "title": "Structured capital for qualified enterprises",
-      "subtitle": "SBDV is not a bank. A facility is not a deposit and not a commitment until it is approved.",
-      "applyAccess": "Apply for Access",
-      "partnerLogin": "Partner Login",
-      "eligibility": "Operating companies with at least two years of history, audited or reviewed accounts, and a request from USD 500,000. Approval is discretionary.",
-      "collateralRule": "The 10% is requested only after approval. It is cash collateral, not a fee. It is returned in full if SBDV declines other than for the applicant’s breach or a failed compliance check. Applying is not a commitment to lend."
+      "badge": "机构资本计划",
+      "title": "面向符合条件企业的结构化资本",
+      "subtitle": "SBDV并非银行。资本便利并非存款，在获得批准之前亦不构成承诺。",
+      "applyAccess": "申请准入",
+      "partnerLogin": "合作方登录",
+      "eligibility": "具有至少两年历史、经审计或审阅的账目，且申请额自 USD 500,000 起的经营中公司。批准为酌情决定。",
+      "collateralRule": "该10%仅在批准后方予要求。其为现金抵押，而非费用。若SBDV拒绝，且拒绝原因并非申请人违约或合规审查未通过，则该款项全额退还。提出申请并不构成放款承诺。"
     },
     "features": {
-      "title": "Why enterprises choose Capital Access",
-      "subtitle": "A disciplined gateway between qualified companies and mandate-aligned capital — clarity first.",
-      "globalPoolsTitle": "Mandate-aligned pools",
-      "globalPoolsDesc": "Partially disclosed sovereign-grade pools matched to sector and region — not a black-box auction.",
-      "flexibleTermsTitle": "Terms you can plan around",
-      "flexibleTermsDesc": "Define amount, term, and monthly or annual interest over 1–10 years with live calculations.",
-      "enterpriseFocusTitle": "Built for operating companies",
-      "enterpriseFocusDesc": "For established enterprises with audited or reviewed financials and a clear investment thesis.",
-      "structuredSecurityTitle": "Process without surprise",
-      "structuredSecurityDesc": "10% cash collateral, full KYC/UBO look-through, and discretionary approval under Swiss AML standards."
+      "title": "企业为何选择Capital Access",
+      "subtitle": "符合条件的公司与同委托相一致的资本之间的克制通道 — 以清晰为先。",
+      "globalPoolsTitle": "与委托相一致的资金池",
+      "globalPoolsDesc": "按行业与地区匹配、部分披露的主权级资金池 — 而非黑箱式竞价。",
+      "flexibleTermsTitle": "可据以规划的条款",
+      "flexibleTermsDesc": "在1–10年的期限内确定金额、期限以及按月或按年计息，并提供实时计算。",
+      "enterpriseFocusTitle": "为经营中的公司而设",
+      "enterpriseFocusDesc": "面向具备经审计或审阅的财务报表以及明确投资论点的成熟企业。",
+      "structuredSecurityTitle": "无意外的程序",
+      "structuredSecurityDesc": "10%现金抵押、完整的KYC/UBO穿透识别，以及依据瑞士AML标准的酌情批准。"
     },
     "howItWorks": {
       "title": "How It Works",
       "registerTitle": "Register as a Capital Partner",
       "registerDesc": "Create your enterprise account and verify your company credentials.",
       "exploreTitle": "Explore Available Pools",
-      "exploreDesc": "Browse partially disclosed sovereign capital pools aligned with your sector and region.",
+      "exploreDesc": "浏览与您的行业及地区相符、部分披露的主权资本池。",
       "structureTitle": "Structure Your Request",
-      "structureDesc": "Define loan amount, term, repayment frequency, and review live interest calculations.",
+      "structureDesc": "确定贷款金额、期限、偿还频率，并查看实时利息计算。",
       "submitTitle": "Submit Company Profile",
       "submitDesc": "Provide financials, investment areas, and accept the 10% security deposit condition.",
       "decisionTitle": "Await Institutional Review",
       "decisionDesc": "Your application enters our review queue. You will receive approval or rejection notification.",
-      "prepareTitle": "Prepare your file",
-      "prepareDesc": "Confirm eligibility (enterprise, USD 500,000+, two years of operations). Gather local-register extracts, audited accounts, and beneficial-owner details. Local equivalents and certified translations are accepted.",
-      "reviewTitle": "Institutional review",
-      "reviewDesc": "SBDV reviews documents, beneficial owners, and mandate alignment. Approval is discretionary and is not a commitment until issued.",
-      "depositTitle": "Security deposit and origin of funds",
-      "depositDesc": "After approval, accept the Facility Terms, wire the 10% cash collateral, and declare the source of those funds.",
-      "kycTitle": "KYC and sanctions screening",
-      "kycDesc": "Swiss AML screening of the company, signatories, and ultimate beneficial owners. High-risk jurisdictions receive enhanced due diligence.",
-      "fundingTitle": "Disbursement and repayment",
-      "fundingDesc": "Submit a bank account in the borrower’s name (SWIFT plus IBAN or local account number). Funds are released in USD; repay on the schedule in your dashboard."
+      "prepareTitle": "准备文件",
+      "prepareDesc": "确认资格（企业、USD 500,000+、两年经营）。备妥当地登记摘录、经审计的账目以及受益所有人资料。接受当地等效文件及经认证的译文。",
+      "reviewTitle": "机构审核",
+      "reviewDesc": "SBDV审核文件、受益所有人以及与委托的一致性。批准为酌情决定，在正式作出之前不构成承诺。",
+      "depositTitle": "保证金与资金来源",
+      "depositDesc": "批准后，请接受便利条款，电汇10%现金抵押，并申报该等资金的来源。",
+      "kycTitle": "KYC与制裁筛查",
+      "kycDesc": "对公司、签署人及最终受益所有人进行瑞士AML审查。高风险司法辖区适用强化尽职调查。",
+      "fundingTitle": "发放与偿还",
+      "fundingDesc": "提交借款人名义的银行账户（SWIFT以及IBAN或当地账号）。资金以USD发放；请按您面板中的时间表偿还。"
     },
     "nav": {
       "overview": "Overview",
@@ -1118,17 +1118,17 @@
     "requestFromPool": "Request from this pool",
     "startRequest": "Start Capital Request",
     "register": {
-      "title": "Register for Capital Access",
+      "title": "注册Capital Access",
       "subtitle": "Create your enterprise partner account to explore sovereign capital pools.",
-      "fullName": "Full Name",
-      "phone": "Phone (optional)",
-      "submit": "Create Partner Account",
-      "hasAccount": "Already registered?",
-      "error": "Registration failed. Please try again.",
-      "welcomeTitle": "Account created successfully",
-      "welcomeBody": "Your Capital Access account is ready. Sign in with the email and password you just created.",
-      "welcomeEmail": "Email",
-      "goToLogin": "Go to login"
+      "fullName": "姓名",
+      "phone": "电话（选填）",
+      "submit": "创建合作方账户",
+      "hasAccount": "已经注册？",
+      "error": "注册未成功。请重试。",
+      "welcomeTitle": "账户创建成功",
+      "welcomeBody": "您的Capital Access账户已就绪。请使用刚刚创建的电子邮箱和密码登录。",
+      "welcomeEmail": "电子邮箱",
+      "goToLogin": "前往登录"
     },
     "request": {
       "title": "资本申请",
@@ -1346,103 +1346,109 @@
       "repayFailed": "Could not submit this repayment. Please try again."
     },
     "facilityTerms": {
-      "eyebrow": "Capital Access Program",
+      "eyebrow": "Capital Access计划",
       "pageTitle": "授信条款",
-      "intro": "These terms govern your capital facility, including the 10% security deposit, interest, repayment, default, and Swiss governing law. Read them in full before you accept.",
-      "versionLabel": "Document",
-      "effectiveLabel": "Effective",
-      "languageLabel": "Governing language",
-      "governingNote": "English is the governing language of this instrument. A translation, if provided, is for convenience only.",
-      "contents": "Contents",
+      "intro": "本条款规范您的资本便利，包括10%保证金、利息、偿还、违约及瑞士管辖法律。接受前请全文阅读。",
+      "versionLabel": "文件",
+      "effectiveLabel": "生效",
+      "languageLabel": "管辖语言",
+      "governingNote": "本文件的管辖语言为英文。如提供译文，仅供便利。",
+      "contents": "目录",
       "acceptBefore": "我已阅读并接受",
       "linkLabel": "授信条款",
       "acceptAfter": "，包括10%保证金、利息、还款、违约及适用法律，并确认我有权约束借款人。",
-      "acceptedNote": "Facility Terms and Conditions accepted",
-      "print": "Print or save",
-      "backFacility": "Return to facility dashboard"
+      "acceptedNote": "已接受便利条款与条件",
+      "print": "打印或保存",
+      "backFacility": "返回便利概览"
     },
     "whoCanApply": {
-      "title": "Who can apply",
-      "worldwide": "Enterprises worldwide may apply. Vault membership is a separate request, reviewed before access. Capital Access is open to qualified companies.",
-      "enterprise": "This is not a personal or consumer loan. The applicant must be an operating company.",
-      "ticket": "Minimum request USD 500,000; two years of operating history; audited or reviewed financials.",
-      "kyc": "Full KYC, beneficial-ownership look-through, and sanctions screening under Swiss AML rules.",
-      "sanctions": "Comprehensively sanctioned persons and jurisdictions cannot be onboarded. Approval is always discretionary.",
-      "currency": "Facilities are denominated in USD. If your operating cash flow is in another currency, you accept foreign-exchange risk."
+      "title": "谁可以申请",
+      "worldwide": "世界各地的企业均可申请。金库会籍为单独申请，在准许进入前予以审核。Capital Access向符合条件的公司开放。",
+      "enterprise": "这不是个人贷款，亦非消费贷款。申请人必须为经营中的公司。",
+      "ticket": "最低申请额 USD 500,000；两年经营历史；经审计或审阅的财务报表。",
+      "kyc": "根据瑞士AML规则进行完整KYC、受益所有权穿透识别及制裁筛查。",
+      "sanctions": "受全面制裁的个人及司法辖区不得被接纳。批准始终为酌情决定。",
+      "currency": "资本便利以USD计价。若您的经营现金流为其他货币，您须承担外汇风险。"
     },
     "timeline": {
-      "title": "Indicative timeline",
-      "note": "Times are typical, not a commitment. Incomplete files or enhanced due diligence take longer.",
-      "apply": "Application",
-      "applyTime": "1–2 weeks",
-      "dd": "Document and UBO review",
-      "ddTime": "2–4 weeks",
-      "kyc": "KYC after deposit",
-      "kycTime": "5–10 business days",
-      "funding": "Closing and funding",
-      "fundingTime": "3–7 days"
+      "title": "参考时间",
+      "note": "所列时间为通常情况，并非承诺。文件不完整或需强化尽职调查时，所需时间更长。",
+      "apply": "申请",
+      "applyTime": "1–2周",
+      "dd": "文件与UBO审查",
+      "ddTime": "2–4周",
+      "kyc": "缴付保证金后的KYC",
+      "kycTime": "5–10个工作日",
+      "funding": "成交与放款",
+      "fundingTime": "3–7天"
     },
     "settings": {
       "title": "Account Settings"
     }
   },
   "chat": {
-    "open": "Ask SBDV",
-    "title": "SBDV Concierge",
-    "subtitle": "Private guidance · 24/7",
-    "greeting": "Welcome to SBDV. I'm your digital concierge — ask about vault custody, membership, wealth services, or our Capital Access Program.",
-    "greetingNamed": "Hello, {name}. I'm your SBDV concierge — I can help with your account, guide you through services, or answer questions about membership and capital access.",
-    "placeholder": "Ask a question…",
-    "send": "Send message",
-    "minimize": "Minimize chat",
-    "close": "Close and clear chat",
-    "error": "I'm sorry, I couldn't process that. Please try again or use the Contact page for direct assistance.",
-    "disclaimer": "AI-assisted guidance. For binding advice, contact your relationship manager."
+    "open": "询问SBDV",
+    "title": "SBDV礼宾",
+    "subtitle": "私人指引 · 24/7",
+    "greeting": "欢迎来到SBDV。我是您的数字礼宾 — 您可以询问金库托管、会籍、财富服务，或我们的Capital Access计划。",
+    "greetingNamed": "您好，{name}。我是您的SBDV礼宾 — 可以协助您的账户、引导各项服务，或解答关于会籍及Capital Access的问题。",
+    "placeholder": "请提问…",
+    "send": "发送消息",
+    "minimize": "最小化对话",
+    "close": "关闭并清除对话",
+    "error": "抱歉，未能处理该请求。请重试，或通过「联系」页面获取直接协助。",
+    "disclaimer": "人工智能辅助指引。如需具有约束力的意见，请联系您的客户经理。"
   },
   "accountSecurity": {
     "roles": {
-      "admin": "Administrator",
-      "client": "Client",
-      "borrower": "Enterprise Partner"
+      "admin": "管理员",
+      "client": "客户",
+      "borrower": "企业合作伙伴"
     },
     "summary": {
-      "title": "Security overview",
-      "email": "Email",
-      "role": "Account type",
-      "mfa": "Two-factor authentication",
-      "memberSince": "Member since",
-      "lastSignIn": "Last sign-in"
+      "title": "安全概览",
+      "email": "电子邮件",
+      "role": "账户类型",
+      "mfa": "双因素认证",
+      "memberSince": "成员自",
+      "lastSignIn": "上次登录",
+      "thisSignIn": "本次登录",
+      "previousSignIn": "上次登录",
+      "location": "位置",
+      "ipAddress": "IP 地址",
+      "unknownLocation": "未知",
+      "localNetwork": "本机"
     },
     "password": {
-      "title": "Change password",
-      "hint": "Use at least 8 characters. You will remain signed in on this device after updating.",
-      "current": "Current password",
-      "new": "New password",
-      "confirm": "Confirm new password",
-      "submit": "Update password",
-      "saving": "Updating…",
-      "success": "Password updated successfully. A confirmation was sent to your email.",
-      "errorGeneric": "Unable to change password. Please try again."
+      "title": "更改密码",
+      "hint": "请至少使用8个字符。更新后，您在此设备上仍保持登录。",
+      "current": "当前密码",
+      "new": "新密码",
+      "confirm": "确认新密码",
+      "submit": "更新密码",
+      "saving": "正在更新…",
+      "success": "密码已成功更新。确认函已发送至您的电子邮件。",
+      "errorGeneric": "无法更改密码。请重试。"
     },
     "mfa": {
-      "title": "Two-factor authentication",
-      "disabled": "Add a second step after your password to protect your account.",
-      "enabledTotp": "Authenticator app codes are enabled for sign-in.",
-      "enabledEmail": "Email sign-in codes are enabled. A code is sent to your account email after your password is accepted.",
-      "statusOff": "Not enabled",
-      "statusTotp": "Authenticator app",
-      "statusEmail": "Email codes",
-      "enableTotp": "Enable authenticator app",
-      "enableEmail": "Enable email codes",
-      "disable": "Disable MFA",
-      "secretLabel": "Add this secret to your authenticator app:",
-      "verifyEnable": "Verify & enable",
-      "invalidCode": "Invalid authenticator code."
+      "title": "双因素认证",
+      "disabled": "请在密码之后增加第二步，以保护您的账户。",
+      "enabledTotp": "登录已启用验证器应用代码。",
+      "enabledEmail": "已启用电子邮件登录代码。密码获接受后，代码将发送至您的账户电子邮件。",
+      "statusOff": "未启用",
+      "statusTotp": "验证器应用",
+      "statusEmail": "电子邮件代码",
+      "enableTotp": "启用验证器应用",
+      "enableEmail": "启用电子邮件代码",
+      "disable": "停用MFA",
+      "secretLabel": "请将此密钥添加至您的验证器应用：",
+      "verifyEnable": "验证并启用",
+      "invalidCode": "验证器代码无效。"
     },
     "session": {
-      "title": "Session",
-      "description": "End your session on this browser. You will need to sign in again to access the portal.",
-      "signOutDevice": "Sign out of this device"
+      "title": "会话",
+      "description": "请结束您在此浏览器上的会话。您须重新登录方可进入门户。",
+      "signOutDevice": "在此设备上退出"
     }
   }
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageTitle } from "@/lib/i18n";
 import { Locale } from "@/proxy";
 import MembershipHeroSection from "@/sections/membership/MembershipHeroSection";
 import MembershipTiersSection from "@/sections/membership/MembershipTiersSection";
@@ -10,9 +11,9 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
-  await params;
+  const { locale } = await params;
   return {
-    title: "Vault Membership | Swiss Bullion Depository Vault",
+    title: pageTitle(locale, "membership.title"),
     description:
       "Request Swiss vault custody membership — allocated bullion storage, viewing, and relationship coverage. Separate from the Wealth & Investment mandate.",
   };

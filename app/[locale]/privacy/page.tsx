@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
+import { pageTitle } from "@/lib/i18n";
 import { Locale } from "@/proxy";
 import LegalPageSection from "@/sections/legal/LegalPageSection";
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
   return {
-    title: "Privacy Policy | Swiss Bullion Depository Vault",
+    title: pageTitle(locale, "legal.privacyTitle"),
     description: "SBDV privacy policy — Swiss FADP compliance and international privacy standards.",
   };
 }

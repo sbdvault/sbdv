@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { auth } from "@/auth";
+import { pageTitle } from "@/lib/i18n";
 import { Locale } from "@/proxy";
 import WealthHeroSection from "@/sections/wealth/WealthHeroSection";
 import WealthPillarsSection from "@/sections/wealth/WealthPillarsSection";
@@ -13,9 +14,9 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
-  await params;
+  const { locale } = await params;
   return {
-    title: "Wealth & Investment | Swiss Bullion Depository Vault",
+    title: pageTitle(locale, "wealth.title"),
     description:
       "Private clients fund a wealth mandate by wire or Bitcoin. SBDV invests the principal. Monitor live yield, then withdraw or reinvest interest.",
   };

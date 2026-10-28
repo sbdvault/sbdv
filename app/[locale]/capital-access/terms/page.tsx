@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
+import { pageTitle } from "@/lib/i18n";
 import { Locale } from "@/proxy";
 import FacilityTermsDocument from "@/components/capital-access/FacilityTermsDocument";
 import { FACILITY_TERMS_VERSION } from "@/lib/facility-terms";
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
   return {
-    title: "Capital Access Facility Terms and Conditions | Swiss Bullion Depository Vault",
+    title: pageTitle(locale, "capitalAccess.facilityTerms.pageTitle"),
     description:
       "Facility terms governing the SBDV Capital Access program, including the 10% security deposit, interest, repayment, default, and Swiss governing law.",
   };

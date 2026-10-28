@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageTitle } from "@/lib/i18n";
 import { Locale } from "@/proxy";
 import ContactHeroSection from "@/sections/contact/ContactHeroSection";
 import ContactFormSection from "@/sections/contact/ContactFormSection";
@@ -8,9 +9,9 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
-  await params;
+  const { locale } = await params;
   return {
-    title: "Contact | Swiss Bullion Depository Vault",
+    title: pageTitle(locale, "contact.title"),
     description: "Get in touch with SBDV for private inquiries, membership applications, and secure consultation services.",
   };
 }

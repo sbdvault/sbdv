@@ -60,3 +60,12 @@ export function t(locale: Locale, key: string): string | string[] {
 
   return value;
 }
+
+export function tText(locale: Locale, key: string): string {
+  const value = t(locale, key);
+  return Array.isArray(value) ? value.join(" ") : value;
+}
+
+export function pageTitle(locale: Locale, key: string): string {
+  return `${tText(locale, key)} | Swiss Bullion Depository Vault`;
+}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageTitle } from "@/lib/i18n";
 import { Locale } from "@/proxy";
 import ServicesHeroSection from "@/sections/services/ServicesHeroSection";
 import ServicesGridSection from "@/sections/services/ServicesGridSection";
@@ -9,9 +10,9 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
-  await params;
+  const { locale } = await params;
   return {
-    title: "Services | Swiss Bullion Depository Vault",
+    title: pageTitle(locale, "services.title"),
     description: "Comprehensive vaulting services including private vault leasing, bullion custody, insurance, and VIP viewing rooms.",
   };
 }

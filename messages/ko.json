@@ -1,11 +1,11 @@
 {
   "nav": {
-    "home": "Home",
-    "about": "About",
+    "home": "홈",
+    "about": "소개",
     "vault": "금고와 보안",
     "wealth": "자산 및 투자",
     "capitalAccess": "Capital Access",
-    "services": "Services",
+    "services": "서비스",
     "membership": "멤버십",
     "contact": "연락",
     "clientLogin": "고객 로그인",
@@ -18,19 +18,19 @@
       "servicesDesc": "임대, 열람, 운영",
       "membershipDesc": "하우스로의 길"
     },
-    "myPortal": "My portal"
+    "myPortal": "마이 포털"
   },
   "hero": {
     "headline": "스위스 안보. 규율 있는 성장.",
-    "subtext": "Private clients use Swiss custody or a wealth mandate. Qualified enterprises may apply for a structured capital facility. SBDV is not a bank.",
-    "exploreCapital": "Capital Access 살펴보기",
+    "subtext": "프라이빗 클라이언트는 스위스 커스터디 또는 웰스 만데이트를 이용합니다. 적격 기업은 구조화 자본 시설을 신청할 수 있습니다. SBDV는 은행이 아닙니다.",
+    "exploreCapital": "기업",
     "privateClients": "프라이빗 클라이언트 접근",
-    "requestAccess": "Request Access",
+    "requestAccess": "접근 요청",
     "clientLogin": "고객 로그인",
-    "investorRelations": "Investor Relations"
+    "investorRelations": "투자자 관계"
   },
   "footer": {
-    "copyright": "Swiss Bullion Depository Vault — Swiss Precision. Global Trust.",
+    "copyright": "Swiss Bullion Depository Vault — 스위스의 정밀. 세계의 신뢰.",
     "headquarters": "본사",
     "globalOffices": "글로벌 오피스",
     "legal": "법률",
@@ -40,472 +40,472 @@
     "investorRelations": "투자자 관계",
     "offices": {
       "zurich": {
-        "city": "Zurich",
-        "country": "Switzerland",
-        "label": "Global Headquarters",
+        "city": "취리히",
+        "country": "스위스",
+        "label": "글로벌 본사",
         "address": "Bahnhofstrasse 45, 8001 Zurich, Switzerland",
         "timezone": "CET (UTC+1)"
       },
       "dubai": {
-        "city": "Dubai",
-        "country": "United Arab Emirates",
-        "label": "Middle East & Africa",
+        "city": "두바이",
+        "country": "아랍에미리트",
+        "label": "중동 및 아프리카",
         "address": "DIFC Gate Village 10, Dubai, UAE",
         "timezone": "GST (UTC+4)"
       },
       "singapore": {
-        "city": "Singapore",
-        "country": "Singapore",
-        "label": "Asia Pacific",
+        "city": "싱가포르",
+        "country": "싱가포르",
+        "label": "아시아 태평양",
         "address": "10 Collyer Quay, Ocean Financial Centre, Singapore",
         "timezone": "SGT (UTC+8)"
       },
       "newYork": {
-        "city": "New York",
-        "country": "United States",
-        "label": "Americas",
+        "city": "뉴욕",
+        "country": "미국",
+        "label": "미주",
         "address": "280 Park Avenue, New York, NY 10017, USA",
         "timezone": "EST (UTC-5)"
       }
     },
     "jurisdictionNote": "스위스 법적 기반. 글로벌 고객을 위한 다관할권 접근성.",
-    "facilityTerms": "Facility Terms"
+    "facilityTerms": "약정 조건"
   },
   "about": {
-    "title": "About",
-    "eyebrow": "Zurich · Swiss institution",
-    "heroTitle": "The Firm",
-    "heroSubtitle": "One house, two practices: private wealth custody for discerning clients, and structured capital for qualified enterprises.",
+    "title": "소개",
+    "eyebrow": "취리히 · 스위스 기관",
+    "heroTitle": "하우스",
+    "heroSubtitle": "하나의 하우스, 두 실무입니다. 식견 있는 고객을 위한 프라이빗 자산 커스터디와, 적격 기업을 위한 구조화 자본입니다.",
     "identityName": "Swiss Bullion Depository Vault",
-    "identityNameLabel": "Name",
-    "identitySeatLabel": "Seat",
-    "whoTitle": "Who we are",
-    "whoText": "Seated in Zurich, SBDV preserves private wealth with discretion and arranges mandate-aligned capital facilities for qualified enterprises — under documented review, Swiss AML standards, and clear repayment terms.",
-    "sectionTitle": "About SBDV",
-    "sectionDescription": "A Swiss institution built for quiet custody and disciplined enterprise capital — not retail noise.",
-    "missionTitle": "Our Mission",
-    "missionText": "To preserve wealth and trust with Swiss precision — and to arrange structured capital for qualified enterprises under the same standard of review.",
-    "visionTitle": "Our Vision",
-    "visionText": "To be the Swiss house clients choose when custody must stay silent and capital must stay disciplined — trusted by private wealth and by enterprises that prefer clarity over chaos.",
-    "aboutTitle": "About SBDV",
-    "aboutParagraph1": "Swiss Bullion Depository Vault is a Zurich-seated institution. We combine private vault custody with a Capital Access Program for qualified operating companies — two practices, one Swiss standard of discretion and review.",
-    "aboutParagraph2": "Private clients come for vault custody or a wealth mandate. Enterprises come for transparent facility structure, KYC/UBO look-through, and a partner portal that keeps the process legible from application to repayment.",
-    "aboutParagraph3": "We do not compete on hype. We compete on documentation, mandate alignment, and the quiet confidence of Swiss operating discipline.",
-    "valuesTitle": "Principles",
+    "identityNameLabel": "명칭",
+    "identitySeatLabel": "본거지",
+    "whoTitle": "하우스에 대하여",
+    "whoText": "취리히에 소재한 SBDV는 신중함으로 프라이빗 자산을 보전하고, 적격 기업을 위하여 만데이트에 부합하는 자본 시설을 주선합니다. 문서화된 심사, 스위스 AML 기준 및 명확한 상환 조건 아래에서 이루어집니다.",
+    "sectionTitle": "SBDV 소개",
+    "sectionDescription": "조용한 커스터디와 규율 있는 기업 자본을 위하여 세워진 스위스 기관입니다. 리테일 소음을 위한 것이 아닙니다.",
+    "missionTitle": "사명",
+    "missionText": "스위스의 정밀함으로 자산과 신뢰를 보전하는 것입니다. 그리고 같은 심사 기준 아래 적격 기업을 위하여 구조화 자본을 주선하는 것입니다.",
+    "visionTitle": "비전",
+    "visionText": "커스터디는 조용히, 자본은 규율 있게 지키려는 고객이 선택하는 스위스 하우스가 되는 것입니다. 프라이빗 자산과, 혼란보다 명확함을 택하는 기업의 신뢰를 받는 것입니다.",
+    "aboutTitle": "SBDV 소개",
+    "aboutParagraph1": "Swiss Bullion Depository Vault는 취리히에 소재한 기관입니다. 프라이빗 금고 커스터디와 적격 사업회사를 위한 Capital Access 프로그램을 함께 제공합니다. 두 실무, 하나의 스위스 기준에 따른 신중함과 심사입니다.",
+    "aboutParagraph2": "프라이빗 클라이언트는 금고 커스터디 또는 웰스 만데이트를 위하여 옵니다. 기업은 투명한 시설 구조, KYC/UBO 룩스루, 그리고 신청부터 상환까지 절차를 읽을 수 있는 파트너 포털을 위하여 옵니다.",
+    "aboutParagraph3": "과장으로 경쟁하지 않습니다. 문서, 만데이트와의 정합, 그리고 스위스 운영 규율이 주는 조용한 확신으로 임합니다.",
+    "valuesTitle": "원칙",
     "values": {
       "discretion": {
-        "title": "Discretion",
-        "description": "Privacy is our foundation. Every client interaction is handled with absolute confidentiality."
+        "title": "신중",
+        "description": "프라이버시가 기반입니다. 고객과의 모든 접촉은 절대적인 기밀로 처리합니다."
       },
       "precision": {
-        "title": "Precision",
-        "description": "Swiss accuracy in every detail. From security protocols to client service, precision is non-negotiable."
+        "title": "정밀",
+        "description": "모든 세부에서 스위스의 정확성입니다. 보안 절차부터 고객 서비스까지, 정밀함은 양보할 수 없습니다."
       },
       "security": {
-        "title": "Security",
-        "description": "Layered protection beyond compromise. Multiple defense systems working in harmony."
+        "title": "보안",
+        "description": "타협 없는 다층 보호입니다. 여러 방어가 조화를 이루어 작동합니다."
       },
       "integrity": {
-        "title": "Integrity",
-        "description": "Built on trust, proven by time. Our word is our bond, and our actions reflect our values."
+        "title": "진실성",
+        "description": "신뢰 위에 세우고, 시간이 증명해 왔습니다. 말씀이 약속이며, 행동은 가치를 반영합니다."
       }
     },
     "practices": {
-      "privateLabel": "Private clients",
-      "privateTitle": "Custody and wealth",
-      "privateText": "Vault & Security membership for bullion custody, and a separate Wealth & Investment mandate for clients who fund principal and watch stated yield.",
-      "capitalLabel": "Enterprises",
+      "privateLabel": "프라이빗 클라이언트",
+      "privateTitle": "커스터디와 자산",
+      "privateText": "지금 커스터디를 위한 금고와 보안 멤버십, 그리고 원금을 납입하고 표시 수익률을 확인하는 고객을 위한 별도의 자산 및 투자 만데이트입니다.",
+      "capitalLabel": "기업",
       "capitalTitle": "Capital Access",
-      "capitalText": "Structured facilities for qualified companies — documentation, 10% cash collateral, Swiss AML review, and a confirmed repayment plan. Approval is discretionary."
+      "capitalText": "적격 기업을 위한 구조화 시설입니다. 문서, 10% 현금 담보, 스위스 AML 심사 및 확인된 상환 계획을 갖춥니다. 승인은 재량에 따릅니다."
     },
-    "serveTitle": "Who we serve",
+    "serveTitle": "모시는 고객",
     "serve": {
-      "investors": "Private investors who require custody and discretion.",
-      "offices": "Family offices and sovereign clients with a long horizon.",
-      "enterprises": "Established companies seeking documented growth capital — not consumer credit."
+      "investors": "커스터디와 신중함이 필요한 프라이빗 투자자입니다.",
+      "offices": "긴 시계를 두는 패밀리 오피스 및 소버린 고객입니다.",
+      "enterprises": "문서화된 성장 자본을 구하는 확립된 기업입니다. 소비자 신용이 아닙니다."
     },
     "close": {
-      "membership": "Request vault membership",
-      "capital": "Explore Capital Access"
+      "membership": "금고 멤버십 요청",
+      "capital": "Capital Access 살펴보기"
     },
-    "locationTitle": "Swiss foundation. Global reach.",
-    "locationDescription": "Headquartered in Zurich with regional presence for international relationships. The standard is Swiss; access is worldwide for approved clients and qualified enterprises.",
-    "worldwideAccessibility": "Worldwide Accessibility"
+    "locationTitle": "스위스 기반. 글로벌 도달.",
+    "locationDescription": "국제 관계를 위한 지역 거점을 두고 취리히에 본사를 둡니다. 기준은 스위스입니다. 승인된 고객과 적격 기업의 접근은 전 세계에 열려 있습니다.",
+    "worldwideAccessibility": "전 세계 접근성"
   },
   "vault": {
-    "title": "Vault & Security",
-    "heroTitle": "The Vault",
-    "heroSubtitle": "Custody engineered for quiet confidence — layered defense, continuous oversight, and Swiss operating discipline.",
-    "vaultsTitle": "Our Vaults",
-    "vaultsDescription": "Bullion facilities built for multi-tiered defense, continuous monitoring, and auditable chain of custody.",
+    "title": "금고와 보안",
+    "heroTitle": "금고",
+    "heroSubtitle": "조용한 확신을 위하여 설계된 커스터디입니다. 다층 방어, 지속적 감독 및 스위스 운영 규율을 갖춥니다.",
+    "vaultsTitle": "하우스의 금고",
+    "vaultsDescription": "다층 방어, 지속적 모니터링 및 감사 가능한 보관 연쇄를 위하여 구축된 지금 시설입니다.",
     "vaultFeatures": {
       "multiTiered": {
-        "title": "Layered defense",
-        "description": "Physical and procedural controls that protect holdings at every stage of custody."
+        "title": "다층 방어",
+        "description": "커스터디의 모든 단계에서 보유 자산을 보호하는 물리적 및 절차적 통제입니다."
       },
       "surveillance": {
-        "title": "Continuous oversight",
-        "description": "Monitoring designed for accountability — not theatre."
+        "title": "지속적 감독",
+        "description": "책임을 위한 모니터링입니다. 연출을 위한 것이 아닙니다."
       },
       "engineering": {
-        "title": "Swiss engineering",
-        "description": "Built and operated to standards private clients expect from a Zurich-seated house."
+        "title": "스위스 엔지니어링",
+        "description": "취리히에 소재한 하우스에 프라이빗 클라이언트가 기대하는 기준으로 건설하고 운영합니다."
       }
     },
-    "vaultPageTitle": "The Vault",
-    "vaultPageDescription": "A private custody environment for bullion and valuables — designed so wealth can rest without noise.",
+    "vaultPageTitle": "금고",
+    "vaultPageDescription": "지금 및 귀중품을 위한 프라이빗 커스터디 환경입니다. 자산이 소음 없이 머물 수 있도록 설계되었습니다.",
     "vaultPageFeatures": {
       "defense": {
-        "title": "Layered defense",
-        "description": "Controls at every level of access"
+        "title": "다층 방어",
+        "description": "접근의 모든 층에서의 통제"
       },
       "monitoring": {
-        "title": "Continuous oversight",
-        "description": "Accountable monitoring protocols"
+        "title": "지속적 감독",
+        "description": "책임을 수반하는 모니터링 절차"
       },
       "impenetrable": {
-        "title": "Swiss-built custody",
-        "description": "Engineering over marketing claims"
+        "title": "스위스 기준의 커스터디",
+        "description": "마케팅 주장이 아닌 엔지니어링"
       },
       "technology": {
-        "title": "Modern controls",
-        "description": "Systems that support audit and access"
+        "title": "현대적 통제",
+        "description": "감사와 접근을 뒷받침하는 시스템"
       }
     },
-    "securityArchitectureTitle": "Security Architecture",
-    "securityArchitectureDescription": "A multi-layered security model combining controlled access, monitoring, and Swiss operational precision.",
+    "securityArchitectureTitle": "보안 구조",
+    "securityArchitectureDescription": "통제된 접근, 모니터링 및 스위스 운영의 정밀함을 결합한 다층 보안 모델입니다.",
     "securityFeatures": {
       "biometrics": {
-        "title": "Biometrics",
-        "description": "Advanced biometric authentication systems ensuring only authorized personnel can access secure areas."
+        "title": "생체인증",
+        "description": "권한 있는 인원만이 보안 구역에 접근할 수 있도록 하는 고급 생체인증 시스템입니다."
       },
       "seismic": {
-        "title": "Seismic Sensors",
-        "description": "State-of-the-art seismic monitoring to detect any unauthorized access attempts or structural anomalies."
+        "title": "지진 센서",
+        "description": "무단 접근 시도 또는 구조적 이상을 감지하기 위한 최신의 지진 모니터링입니다."
       },
       "accessControl": {
-        "title": "Access Control",
-        "description": "Multi-factor authentication with encrypted access protocols and real-time authorization verification."
+        "title": "접근 통제",
+        "description": "암호화된 접근 절차와 실시간 권한 확인을 갖춘 다요소 인증입니다."
       },
       "insurance": {
-        "title": "Insurance",
-        "description": "Comprehensive coverage through leading global insurers, providing full protection for all stored assets."
+        "title": "보험",
+        "description": "주요 글로벌 보험사를 통한 포괄적 담보이며, 보관하는 모든 자산에 완전한 보호를 제공합니다."
       }
     },
-    "accessProtocolTitle": "Quiet access protocols",
-    "accessProtocolDescription": "Entry is deliberate: verify identity, confirm authorization, then grant access — so custody stays accountable without theatre.",
+    "accessProtocolTitle": "조용한 접근 절차",
+    "accessProtocolDescription": "입장은 의도적입니다. 신원을 확인하고, 권한을 확인한 뒤 접근을 허가합니다. 커스터디는 연출 없이 책임을 유지합니다.",
     "accessProtocolSteps": {
       "step1": {
-        "title": "Identity verification",
-        "description": "Multi-factor confirmation before any entry"
+        "title": "신원 확인",
+        "description": "입장 전의 다요소 확인"
       },
       "step2": {
-        "title": "Authorization review",
-        "description": "Prior approval required for each visit"
+        "title": "권한 심사",
+        "description": "방문마다 사전 승인이 필요합니다"
       },
       "step3": {
-        "title": "Controlled access",
-        "description": "Entry granted only when cleared"
+        "title": "통제된 접근",
+        "description": "확인이 끝난 경우에만 입장을 허가합니다"
       }
     }
   },
   "services": {
-    "title": "Services",
-    "heroTitle": "Private-client services",
-    "heroSubtitle": "The operating suite behind Swiss custody — leasing, bullion verification, insurance reporting, and private viewing.",
-    "sectionTitle": "Custody services",
+    "title": "서비스",
+    "heroTitle": "프라이빗 클라이언트 서비스",
+    "heroSubtitle": "스위스 커스터디를 뒷받침하는 운영 일체입니다. 임대, 지금 검증, 보험 보고 및 프라이빗 열람입니다.",
+    "sectionTitle": "커스터디 서비스",
     "services": {
       "privateVault": {
-        "title": "Private Vault Leasing",
-        "description": "Allocated space for individuals, family offices, and corporations that require dedicated custody."
+        "title": "프라이빗 금고 임대",
+        "description": "전용 커스터디가 필요한 개인, 패밀리 오فيس 및 법인을 위한 할당된 공간입니다."
       },
       "bullionStorage": {
-        "title": "Bullion Storage",
-        "description": "LBMA-aligned audit and storage for precious metals with clear chain of custody."
+        "title": "지금 보관",
+        "description": "명확한 보관 연쇄를 갖춘, 귀금속을 위한 LBMA에 부합하는 감사와 보관입니다."
       },
       "insurance": {
-        "title": "Insurance & Audit Reporting",
-        "description": "Coverage and reporting pathways that keep holdings legible to you and your advisors."
+        "title": "보험 및 감사 보고",
+        "description": "보유 자산을 고객과 자문역이 읽을 수 있게 하는 담보와 보고의 경로입니다."
       },
       "vipRooms": {
-        "title": "Private Viewing Rooms",
-        "description": "By appointment — inspect holdings in a controlled, discreet environment."
+        "title": "프라이빗 열람실",
+        "description": "예약제입니다. 통제되고 절제된 환경에서 보유 자산을 확인합니다."
       }
     },
-    "gridTitle": "What private clients use",
-    "gridSubtitle": "Practical custody services tied to membership — not a catalogue of slogans.",
+    "gridTitle": "프라이빗 클라이언트가 이용하는 것",
+    "gridSubtitle": "멤버십에 연결된 실무 커스터디 서비스입니다. 구호의 목록이 아닙니다.",
     "gridServices": {
       "privateVault": {
-        "title": "Private Vault Leasing",
-        "description": "Allocated custody for individuals, corporations, and family offices — sized to your holdings and membership tier.",
+        "title": "프라이빗 금고 임대",
+        "description": "개인, 법인 및 패밀리 오피스를 위한 할당 커스터디입니다. 보유 자산과 멤버십 티어에 맞추어 규모를 정합니다.",
         "features": [
-          "Dedicated vault space",
-          "Controlled access",
-          "Relationship service"
+          "전용 금고 공간",
+          "통제된 접근",
+          "관계 서비스"
         ]
       },
       "bullionCustody": {
-        "title": "Bullion Custody & Verification",
-        "description": "LBMA-aligned audits and storage with documented chain of custody and regular verification.",
+        "title": "지금 커스터دي 및 검증",
+        "description": "문서화된 보관 연쇄와 정기 검증을 갖춘, LBMA에 부합하는 감사와 보관입니다.",
         "features": [
-          "LBMA-aligned standards",
-          "Regular audits",
-          "Full documentation"
+          "LBMA에 부합하는 기준",
+          "정기 감사",
+          "완전한 문서"
         ]
       },
       "insurance": {
-        "title": "Insurance & Audit Reporting",
-        "description": "Coverage pathways and reporting that keep holdings clear to you and your advisors.",
+        "title": "보험 및 감사 보고",
+        "description": "보유 자산을 고객과 자문역에게 명확하게 유지하는 담보 경로와 보고입니다.",
         "features": [
-          "Insurance pathways",
-          "Regular reporting",
-          "Audit documentation"
+          "보험 경로",
+          "정기 보고",
+          "감사 문서"
         ]
       },
       "vipRooms": {
-        "title": "Private Viewing Rooms",
-        "description": "By appointment — inspect holdings in a controlled environment with discreet concierge support.",
+        "title": "프라이빗 열람실",
+        "description": "예약제입니다. 통제된 환경에서 절제된 컨시어지 지원 아래 보유 자산을 확인합니다.",
         "features": [
-          "By appointment",
-          "Concierge support",
-          "Controlled viewing"
+          "예약제",
+          "컨시어지 지원",
+          "통제된 열람"
         ]
       }
     },
-    "wealthGridTitle": "Wealth & Investment Services",
-    "wealthGridSubtitle": "A private-client mandate: fund by wire or Bitcoin, we invest, you watch live yield — then withdraw interest or compound it.",
+    "wealthGridTitle": "자산 및 투자 서비스",
+    "wealthGridSubtitle": "프라이빗 클라이언트의 만데이트입니다. 전신 송금 또는 Bitcoin으로 납입하고, 하우스가 운용하며, 고객이 실시간 수익률을 확인합니다. 그 뒤 이자를 인출하거나 재투자합니다.",
     "wealthGridServices": {
       "advisory": {
-        "title": "Fund the mandate",
-        "description": "Transfer cash by bank wire, or send Bitcoin to SBDV’s receive address. Ops confirms receipt before principal is credited.",
+        "title": "만데이트 납입",
+        "description": "은행 전신 송금으로 현금을 이전하거나, SBDV 수신 주소로 Bitcoin을 보내십시오. 운영이 수령을 확인한 뒤에 원금이 기장됩니다.",
         "features": [
-          "Bank wire in USD",
-          "Bitcoin as a funding rail",
-          "Ops-confirmed credit"
+          "USD 전신 송금",
+          "자금 경로로서의 Bitcoin",
+          "운영 확인 후 기장"
         ]
       },
       "portfolio": {
-        "title": "Stewardship",
-        "description": "SBDV invests funded principal under a stated mandate yield. Interest accrues on principal only — not a bank deposit.",
+        "title": "스튜어드십",
+        "description": "SBDV는 납입된 원금을 표시 만데이트 수익률 아래 운용합니다. 이자는 원금에 대해서만 발생합니다. 은행 예금이 아닙니다.",
         "features": [
-          "Stated annual mandate yield",
-          "Principal remains invested",
-          "Yield may be revised"
+          "표시된 연간 만데이트 수익률",
+          "원금은 운용된 상태로 유지됩니다",
+          "수익률은 개정될 수 있습니다"
         ]
       },
       "alternatives": {
-        "title": "Live monitoring",
-        "description": "Your private portal shows principal, accrued interest, and total value as the mandate yield ticks forward.",
+        "title": "실시간 모니터링",
+        "description": "프라이빗 포털에는 만데이트 수익률이 진행됨에 따라 원금, 발생 이자 및 합계 가치가 표시됩니다.",
         "features": [
-          "Live principal vs interest",
-          "Funding history",
-          "Secure client portal"
+          "원금 대 이자의 실시간 표시",
+          "납입 내역",
+          "보안 고객 포털"
         ]
       },
       "reporting": {
-        "title": "Distribute or compound",
-        "description": "Withdraw accrued interest and leave principal invested, or reinvest interest so it becomes new principal.",
+        "title": "분배 또는 재투자",
+        "description": "발생한 이자를 인출하고 원금은 운용된 채로 두거나, 이자를 재투자하여 새로운 원금으로 합니다.",
         "features": [
-          "Withdraw interest",
-          "Reinvest into principal",
-          "Wire or Bitcoin payout"
+          "이자 인출",
+          "원금으로 재투자",
+          "전신 송금 또는 Bitcoin 지급"
         ]
       }
     }
   },
   "wealth": {
-    "title": "Wealth & Investment",
-    "heroTitle": "Wealth & Investment",
-    "heroSubtitle": "Private clients fund a mandate by wire or Bitcoin. SBDV invests the principal. You monitor live yield, then withdraw interest or compound it.",
-    "pillarsTitle": "How the mandate works",
-    "pillarsSubtitle": "Four steps: fund, steward, watch, and distribute — with Swiss ops confirmation, not a trading app.",
+    "title": "자산 및 투자",
+    "heroTitle": "자산 및 투자",
+    "heroSubtitle": "프라이빗 클라이언트는 전신 송금 또는 Bitcoin으로 만데이트에 자금을 납입합니다. SBDV가 원금을 운용합니다. 고객은 실시간 수익률을 확인하고, 이자를 인출하거나 재투자합니다.",
+    "pillarsTitle": "만데이트의 구조",
+    "pillarsSubtitle": "네 단계입니다. 납입, 관리, 확인, 분배. 스위스 운영의 확인이 있으며, 거래 앱이 아닙니다.",
     "pillars": {
       "advisory": {
-        "title": "Fund",
-        "description": "Send USD by wire or Bitcoin to the house receive address. Credit posts after operations confirm the transfer."
+        "title": "납입",
+        "description": "전신 송금 또는 Bitcoin으로 USD를 하우스 수신 주소로 보내십시오. 운영이 이전을 확인한 뒤에 입금이 반영됩니다."
       },
       "portfolio": {
-        "title": "Invest",
-        "description": "Funded principal is invested under a stated mandate yield. Interest accrues on principal only."
+        "title": "운용",
+        "description": "납입된 원금은 표시 만데이트 수익률 아래 운용됩니다. 이자는 원금에 대해서만 발생합니다."
       },
       "metals": {
-        "title": "Monitor",
-        "description": "The client portal ticks principal, accrued interest, and total value in real time — as of this moment."
+        "title": "모니터링",
+        "description": "고객 포털은 현재 시점에서 원금, 발생 이자 및 합계 가치를 실시간으로 갱신합니다."
       },
       "reporting": {
-        "title": "Distribute or compound",
-        "description": "Take accrued interest and leave principal working, or reinvest interest so future yield runs on a larger base."
+        "title": "분배 또는 재투자",
+        "description": "발생한 이자를 받고 원금은 운용된 채로 두거나, 이후 수익률이 더 큰 기초에 적용되도록 이자를 재투자합니다."
       }
     },
-    "approachTitle": "A quiet mandate, not a marketplace",
-    "approachDescription": "This is a private-client investment mandate, not a bank account and not a crypto exchange. Bitcoin is only a way to fund. Yield is a stated mandate rate SBDV may change. Principal is not withdrawn in this programme — you fund, watch growth, and elect how to treat interest.",
-    "feesTitle": "Fee Transparency",
-    "feesDescription": "Mandate terms, including the stated yield and any fees, are disclosed in writing before you fund. No hidden transaction costs, retrocessions, or kickbacks.",
-    "ctaTitle": "Discuss a private mandate",
-    "ctaSubtitle": "A confidential conversation with our investment team — no pressure, clear next steps.",
-    "ctaButton": "Schedule Consultation",
+    "approachTitle": "조용한 만데이트이며, 시장이 아닙니다.",
+    "approachDescription": "이는 프라이빗 클라이언트 투자 만데이트이며, 은행 계좌도 암호자산 거래소도 아닙니다. Bitcoin은 자금을 납입하는 수단일 뿐입니다. 수익률은 SBDV가 변경할 수 있는 표시 만데이트 이율입니다. 이 프로그램에서는 원금을 인출하지 않습니다. 고객은 자금을 납입하고, 증가를 확인하고, 이자의 처리를 선택합니다.",
+    "feesTitle": "수수료 투명성",
+    "feesDescription": "표시 수익률과 수수료를 포함한 만데이트 조건은 납입 전에 서면으로 개시됩니다. 숨겨진 거래 비용, 리트로세션, 리베이트는 없습니다.",
+    "ctaTitle": "프라이빗 만데이트 상담",
+    "ctaSubtitle": "투자 담당과의 기밀 대화입니다. 압박은 없으며, 다음 절차는 명확합니다.",
+    "ctaButton": "상담 예약",
     "growth": {
-      "title": "How your capital grows",
-      "subtitle": "You fund principal. SBDV invests it under a stated mandate yield. Interest accrues on principal only — then you withdraw it or compound it.",
+      "title": "자본이 늘어나는 방식",
+      "subtitle": "고객이 원금을 납입합니다. SBDV는 표시된 만데이트 수익률 아래 이를 운용합니다. 이자는 원금에 대해서만 발생합니다. 그 뒤 인출하거나 재투자합니다.",
       "steps": {
         "fund": {
-          "title": "Fund principal",
-          "description": "Transfer USD by wire or Bitcoin. Operations confirm receipt, then the amount is credited as principal — not as a traded coin wallet."
+          "title": "원금 납입",
+          "description": "전신 송금 또는 Bitcoin으로 USD를 이전하십시오. 운영이 수령을 확인한 뒤 그 금액은 원금으로 기장됩니다. 거래되는 코ين 지갑으로 기장되는 것이 아닙니다."
         },
         "accrue": {
-          "title": "Yield on principal",
-          "description": "A stated annual rate accrues on principal (actual/365). Unwithdrawn interest does not itself earn until you reinvest it."
+          "title": "원금에 대한 수익률",
+          "description": "표시된 연이율은 원금에 대하여 발생합니다(actual/365). 인출되지 않은 이자는 재투자할 때까지 그 자체로는 수익률을 낳지 않습니다."
         },
         "choose": {
-          "title": "Take or compound",
-          "description": "Withdraw accrued interest and leave principal invested, or reinvest interest so future yield runs on a larger base."
+          "title": "수취 또는 재투자",
+          "description": "발생한 이자를 인출하고 원금은 운용된 채로 두거나, 이후 수익률이 더 큰 기초에 적용되도록 이자를 재투자합니다."
         }
       },
-      "exampleLabel": "Worked example",
-      "exampleTitle": "Illustrative year at a stated 8% mandate yield",
-      "exampleBody": "If $250,000 is confirmed as principal and the mandate yield is 8% actual/365, about $20,000 of interest would accrue over a full year — assuming the rate is unchanged and principal is not reduced. You could withdraw that interest or reinvest it into principal.",
-      "examplePrincipal": "Principal",
-      "exampleYield": "Stated yield",
-      "exampleInterest": "Year-1 interest (illustrative)",
-      "exampleNote": "Not guaranteed. The stated yield may be paused or revised. Possible loss of principal. This is not a bank deposit and is not covered by deposit insurance."
+      "exampleLabel": "계산 예시",
+      "exampleTitle": "표시 만데이트 수익률 8%의 예시 연도",
+      "exampleBody": "원금으로 $250,000이 확인되고 만데이트 수익률이 8% actual/365인 경우, 이율이 변하지 않고 원금이 줄지 않는다는 전제에서 만 1년에 약 $20,000의 이자가 발생합니다. 그 이자를 인출하거나 원금에 재투자할 수 있습니다.",
+      "examplePrincipal": "원금",
+      "exampleYield": "표시 수익률",
+      "exampleInterest": "1년차 이자(예시)",
+      "exampleNote": "보장되지 않습니다. 표시된 수익률은 중단되거나 개정될 수 있습니다. 원금 손실이 발생할 수 있습니다. 이는 은행 예금이 아니며, 예금보험의 적용을 받지 않습니다."
     },
     "benefits": {
-      "title": "Why private clients use the mandate",
+      "title": "프라이빗 클라이언트가 만데이트를 이용하는 이유",
       "items": [
-        "Ops-confirmed funding by wire or Bitcoin",
-        "Live principal vs interest in the private portal",
-        "Withdraw interest without redeeming principal",
-        "Reinvest interest so the base can grow",
-        "Swiss KYC and operations confirmation when you fund",
-        "Custody remains a separate Vault membership if you also store bullion"
+        "전신 송금 또는 Bitcoin에 의한, 운영 확인 후의 납입",
+        "프라이빗 포털의 원금 대 이자 실시간 표시",
+        "원금을 상환하지 않고 이자를 인출",
+        "기초가 커지도록 이자를 재투자",
+        "납입 시의 스위스 KYC 및 운영 확인",
+        "지금을 함께 보관하는 경우, 커스터디는 별도의 금고 멤버십으로 유지됩니다."
       ]
     },
     "register": {
-      "formTitle": "Create your wealth account",
-      "formSubtitle": "Register with your own password. After you sign in, review the mandate and choose how much to fund by wire or Bitcoin. Operations confirms receipt before principal starts accruing.",
-      "formSuccessTitle": "Account created",
-      "formSuccessText": "Sign in to open your mandate and choose a funding amount.",
-      "continueTitle": "You're signed in",
-      "continueText": "Continue to your wealth mandate to review the programme and choose how much to invest.",
-      "continueCta": "Continue to your mandate",
-      "createAccount": "Create account",
-      "creatingAccount": "Creating account...",
-      "password": "Password",
-      "confirmPassword": "Confirm password",
-      "passwordMin": "At least 8 characters",
-      "alreadyExists": "An account with this email already exists. Sign in instead.",
-      "signIn": "Sign in",
-      "signInFailed": "Account created. Sign in to continue to your mandate.",
-      "error": "Unable to create the account. Please try again."
+      "formTitle": "웰스 계정 만들기",
+      "formSubtitle": "본인의 비밀번호로 등록하십시오. 로그인한 뒤 만데이트를 검토하고, 전신 송금 또는 Bitcoin으로 납입할 금액을 선택하십시오. 운영이 수령을 확인한 뒤에 원금의 발생이 시작됩니다.",
+      "formSuccessTitle": "계정을 만들었습니다",
+      "formSuccessText": "로그인하여 만데이트를 열고 납입액을 선택하십시오.",
+      "continueTitle": "로그인되어 있습니다",
+      "continueText": "웰스 만데이트로 이동하여 프로그램을 검토하고, 투자할 금액을 선택하십시오.",
+      "continueCta": "만데이트로 계속",
+      "createAccount": "계정 만들기",
+      "creatingAccount": "계정 생성 중...",
+      "password": "비밀번호",
+      "confirmPassword": "비밀번호 확인",
+      "passwordMin": "8자 이상",
+      "alreadyExists": "이 이메일의 계정이 이미 있습니다. 로그인해 주십시오.",
+      "signIn": "로그인",
+      "signInFailed": "계정을 만들었습니다. 만데이트로 계속하려면 로그인하십시오.",
+      "error": "계정을 만들 수 없습니다. 다시 시도해 주십시오."
     },
-    "closeTitle": "Ready to begin?",
-    "closeSubtitle": "Create a portal account on this page. After you sign in, choose how much to invest. Vault custody is a separate membership if you need allocated storage.",
-    "closeApply": "Create an account",
-    "closeVault": "Request vault membership"
+    "closeTitle": "시작할 준비가 되셨습니까?",
+    "closeSubtitle": "이 페이지에서 포털 계정을 만드십시오. 로그인한 뒤 투자할 금액을 선택하십시오. 할당 보관이 필요하면 금고 커스터디는 별도의 멤버십입니다.",
+    "closeApply": "계정 만들기",
+    "closeVault": "금고 멤버십 요청"
   },
   "membership": {
-    "title": "Vault membership",
-    "heroTitle": "Vault membership",
-    "heroSubtitle": "The path into Swiss vault custody — tiered access to allocated storage, viewing, and relationship coverage. This is Vault & Security, not the wealth mandate.",
-    "tiersTitle": "Custody access levels",
-    "tiersSubtitle": "Three tiers for different scales of bullion and valuables custody. Every request is reviewed before access.",
+    "title": "금고 멤버십",
+    "heroTitle": "금고 멤버십",
+    "heroSubtitle": "스위스 금고 커스터디로 들어가는 길입니다. 할당 보관, 열람 및 관계 대응에 대한 단계적 접근입니다. 이는 금고와 보안이며, 웰스 만데이트가 아닙니다.",
+    "tiersTitle": "커스터디 접근 수준",
+    "tiersSubtitle": "지금 및 귀중품 커스터디의 규모에 따른 세 티어입니다. 모든 요청은 접근 전에 심사됩니다.",
     "tiers": {
       "standard": {
-        "title": "Standard Custody",
-        "subtitle": "Entry Level",
-        "minimum": "Minimum: $250k",
-        "description": "Custody for individual investors and smaller portfolios — standard protocols, regular reporting, and monitored facilities.",
+        "title": "스탠다드 커스터디",
+        "subtitle": "입문",
+        "minimum": "최소: $250k",
+        "description": "개인 투자자와 비교적 작은 포트폴리오를 위한 커스터디입니다. 표준 절차, 정기 보고 및 모니터링되는 시설입니다.",
         "features": [
-          "Minimum $250k in assets",
-          "Standard security protocols",
-          "Regular reporting",
-          "24/7 monitoring",
-          "Insurance coverage"
+          "최소 자산 $250k",
+          "표준 보안 절차",
+          "정기 보고",
+          "24/7 모니터링",
+          "보험 담보"
         ]
       },
       "executive": {
-        "title": "Executive Vault",
-        "subtitle": "Reviewed access",
-        "minimum": "Minimum: Custom",
-        "description": "Reviewed relationships for HNWI, family offices, and corporations — dedicated service and heightened privacy.",
+        "title": "이그제큐티브 금고",
+        "subtitle": "심사된 접근",
+        "minimum": "최소: 개별",
+        "description": "HNWI, 패밀리 오피스 및 법인을 위한 심사된 관계입니다. 전담 서비스와 강화된 프라이버시를 갖춥니다.",
         "features": [
-          "Reviewed access",
-          "Personalized storage",
-          "Dedicated account manager",
-          "Enhanced privacy protocols",
-          "Priority access"
+          "심사된 접근",
+          "개별 보관",
+          "전담 계정 매니저",
+          "강화된 프라이버시 절차",
+          "우선 접근"
         ]
       },
       "sovereign": {
-        "title": "Sovereign Tier",
-        "subtitle": "Institutional",
-        "minimum": "Minimum: Institutional",
-        "description": "Institutional-scale custody relationships for sovereign and large institutional counterparts — the highest service intensity.",
+        "title": "소버린 티어",
+        "subtitle": "기관",
+        "minimum": "최소: 기관",
+        "description": "소버린 및 대형 기관 상대방을 위한 기관 규모의 커스터디 관계입니다. 가장 집중된 서비스입니다.",
         "features": [
-          "Institutional-grade security",
-          "Government-level protocols",
-          "Custom solutions",
-          "Dedicated facilities",
-          "White-glove service"
+          "기관급 보안",
+          "정부 수준 절차",
+          "맞춤 대응",
+          "전용 시설",
+          "전담 서비스"
         ]
       }
     },
-    "complianceTitle": "Compliance & Security",
-    "complianceText": "Vault membership is a request, reviewed before access. Every applicant is screened under Swiss KYC and AML frameworks. To fund a wealth mandate, use Wealth & Investment. That programme is separate from vault custody.",
-    "formTitle": "Request vault membership",
-    "formSubtitle": "Tell us about your custody needs — allocated bullion, viewing, and vault relationship. We respond with discretion — no obligation.",
-    "formSuccessTitle": "Vault application received",
-    "formSuccessText": "Thank you. Our custody desk will review your request and contact you shortly.",
+    "complianceTitle": "컴플라이언스 및 보안",
+    "complianceText": "금고 멤버십은 요청이며, 접근 전에 심사됩니다. 모든 신청인은 스위스 KYC 및 AML 체계에 따라 심사됩니다. 웰스 만데이트에 자금을 납입하려면 자산 및 투자를 이용하십시오. 그 프로그램은 금고 커스터디와 별개입니다.",
+    "formTitle": "금고 멤버십 요청",
+    "formSubtitle": "커스터디에 관한 요청(할당된 지금, 열람, 금고와의 관계)을 알려 주십시오. 신중함으로 답변합니다. 의무는 생기지 않습니다.",
+    "formSuccessTitle": "금고 신청을 접수하였습니다",
+    "formSuccessText": "감사합니다. 커스터디 담당이 요청을 심사하고 곧 연락드리겠습니다.",
     "formLabels": {
-      "name": "Full Name",
-      "email": "Email Address",
-      "phone": "Phone Number",
-      "country": "Country",
-      "assetRange": "Asset Range",
-      "message": "Message"
+      "name": "성명",
+      "email": "이메일 주소",
+      "phone": "전화번호",
+      "country": "국가",
+      "assetRange": "자산 범위",
+      "message": "메시지"
     },
     "formPlaceholders": {
-      "name": "Enter your full name",
+      "name": "성명을 입력하십시오",
       "email": "your.email@example.com",
       "phone": "+1 (555) 123-4567",
-      "country": "Select your country",
-      "assetRange": "Select asset range",
-      "message": "Describe your vault custody interest — metals, volume, and any viewing needs."
+      "country": "국가를 선택하십시오",
+      "assetRange": "자산 범위를 선택하십시오",
+      "message": "금고 커스터디에 관한 관심(지금, 수량, 열람 필요 여부)을 입력하십시오."
     }
   },
   "contact": {
-    "title": "Contact",
-    "heroTitle": "Contact & Private Inquiry",
-    "heroSubtitle": "Get in touch with our team for confidential consultations.",
-    "formSuccessTitle": "Your inquiry has been securely submitted.",
-    "formSuccessText": "We have received your inquiry and will contact you shortly. All communications are handled with the utmost discretion and security.",
-    "formSecureLabel": "Secure & Confidential",
+    "title": "연락",
+    "heroTitle": "연락 및 비공개 문의",
+    "heroSubtitle": "기밀 상담을 위하여 담당에게 연락하십시오.",
+    "formSuccessTitle": "문의를 안전하게 제출하였습니다.",
+    "formSuccessText": "문의를 접수하였습니다. 곧 연락드리겠습니다. 모든 연락은 최대한의 신중함과 보안으로 처리합니다.",
+    "formSecureLabel": "안전하고 기밀",
     "formLabels": {
-      "name": "Full Name",
-      "email": "Email Address",
-      "phone": "Phone Number",
-      "country": "Country",
-      "interest": "Investment Interest",
-      "message": "Message"
+      "name": "성명",
+      "email": "이메일 주소",
+      "phone": "전화번호",
+      "country": "국가",
+      "interest": "관심 투자",
+      "message": "메시지"
     },
     "formPlaceholders": {
-      "name": "Enter your full name",
+      "name": "성명을 입력하십시오",
       "email": "your.email@example.com",
       "phone": "+1 (555) 123-4567",
-      "country": "Select your country",
-      "interest": "Select investment interest",
-      "message": "Tell us about your inquiry..."
+      "country": "국가를 선택하십시오",
+      "interest": "관심 투자를 선택",
+      "message": "문의 내용을 입력하십시오..."
     },
     "interestOptions": {
-      "privateVault": "Private Vault Leasing",
-      "bullionCustody": "Bullion Custody & Verification",
-      "insurance": "Insurance & Audit Reporting",
-      "vipViewing": "VIP Private Viewing Rooms",
-      "investmentAdvisory": "Investment Advisory",
-      "portfolioManagement": "Portfolio Management",
-      "alternativeInvestments": "Alternative Investments",
-      "membership": "Membership Inquiry",
-      "general": "General Inquiry"
+      "privateVault": "프라이빗 금고 임대",
+      "bullionCustody": "지금 커스터دي 및 검증",
+      "insurance": "보험 및 감사 보고",
+      "vipViewing": "VIP 프라이빗 열람실",
+      "investmentAdvisory": "투자 자문",
+      "portfolioManagement": "포트폴리오 운용",
+      "alternativeInvestments": "대체 투자",
+      "membership": "멤버십 문의",
+      "general": "일반 문의"
     }
   },
   "cta": {
@@ -532,9 +532,9 @@
       }
     },
     "globalAccessTitle": "글로벌 액세스",
-    "globalAccessDescription": "Vault membership is a request, reviewed before access. Wealth mandates and Capital Access are open to clients who qualify. Approved clients use the secure portal.",
+    "globalAccessDescription": "금고 멤버십은 요청이며, 접근 전에 심사됩니다. 웰스 만데이트와 Capital Access는 자격을 갖춘 고객에게 열려 있습니다. 승인된 고객은 보안 포털을 이용합니다.",
     "globalAccessLabel": "보안 고객 포털",
-    "globalNetworkTitle": "Global Network",
+    "globalNetworkTitle": "글로벌 네트워크",
     "globalNetworkDescription": "파트너 금고와 글로벌 물류로 세계 금융 수도의 고객에게 비공개 서비스를 제공합니다.",
     "wealthTeaserTitle": "자산 스튜어드십, 소음이 아닌",
     "wealthTeaserDescription": "프라이빗 클라이언트용: 포트폴리오 만데이트, 귀금속 전략, 통합 리포팅 — 프라이빗 포털을 통해 스위스 커스터디와 통합.",
@@ -581,231 +581,231 @@
   "common": {
     "loading": "불러오는 중…",
     "submit": "제출",
-    "submitting": "Submitting...",
+    "submitting": "제출 중...",
     "cancel": "취소",
-    "success": "Success",
-    "error": "Error",
-    "tryAgain": "Try Again",
-    "required": "Required",
-    "optional": "Optional",
-    "learnMore": "Learn More",
-    "backToHome": "Back to Home"
+    "success": "완료",
+    "error": "오류",
+    "tryAgain": "다시 시도",
+    "required": "필수",
+    "optional": "선택",
+    "learnMore": "자세히 보기",
+    "backToHome": "홈으로 돌아가기"
   },
   "legal": {
-    "privacyTitle": "Privacy Policy",
-    "privacyIntro": "Swiss Bullion Depository Vault (SBDV), seated in Zurich, is the controller of personal data collected through this website and complies with the Swiss Federal Act on Data Protection (FADP) when processing personal data of clients worldwide.",
-    "privacyBody": "SBDV, seated in Zurich, is the controller of personal data collected through this website, the client portal, and the Capital Access program. We collect identity, contact, company, beneficial-ownership, and banking data solely to provide vault custody, membership, and capital facilities, to meet Swiss anti-money-laundering duties, and to communicate with you. A request to access, correct, or delete personal data is made through the Contact page.\n\nData is stored securely, accessed by authorised staff and by banking or compliance partners who need it to perform the service, and is not sold. Hosting and email providers may process data outside Switzerland under confidentiality and security safeguards.\n\nWe retain application and KYC records for as long as required by Swiss financial-crime and contractual rules, then delete or anonymise them. A request for deletion is subject to those legal retention duties.",
-    "termsTitle": "Terms of Service",
-    "termsIntro": "These terms govern your use of the SBDV website, client portals, and public application channels. SBDV is seated in Zurich. Swiss law governs these website terms.",
-    "termsBody": "These website terms apply to use of the SBDV website, account sign-in, and public application channels. They do not create a vault custody agreement, a wealth mandate, or a capital facility. Vault custody and wealth mandates are provided only under the separate agreement issued for that relationship. Capital Access facilities are governed by the Facility Terms and Conditions, not by these website terms.\n\nSBDV is seated in Zurich, Switzerland. These website terms are governed by the substantive laws of Switzerland, excluding conflict-of-law rules that would apply another law. The courts of Zurich have jurisdiction over disputes arising from use of the website. That does not limit any jurisdiction stated in a facility or mandate agreement.\n\nBy creating an account or using a portal you agree to Swiss know-your-customer and anti-money-laundering screening. You must keep your password and any sign-in code confidential. If you believe your account has been used without your authority, tell SBDV promptly through the Contact page.\n\nEnterprises worldwide may apply for Capital Access. Submitting an application is not a commitment to lend, is not a retail consumer loan, and is not a public securities offering. SBDV may approve, decline, or defer an application in its discretion. SBDV may modify the public website by notice on this page. A facility already accepted remains governed by the Facility Terms you accepted, not by a later change to this page.",
-    "regulatoryTitle": "Regulatory Disclosures",
-    "regulatoryIntro": "SBDV is a Zurich-seated vault and capital-arranging institution serving clients worldwide. It is not a Swiss bank.",
-    "regulatoryBody": "SBDV provides bullion vault custody and arranges structured capital facilities for qualified enterprises. Capital Access is not a protected bank deposit and is not covered by deposit-insurance schemes. Funds held as a security deposit are contractual cash collateral, not a deposit in your name at a bank.\n\nPrivate-client wealth mandates are investment programmes, not bank accounts. A stated mandate yield is not guaranteed interest, may be paused or revised, and is not covered by deposit insurance. Bitcoin may be used only as a funding or payout rail; SBDV does not operate a crypto exchange or hold client private keys. Transfers in Bitcoin are irreversible.\n\nAll clients undergo know-your-customer, beneficial-ownership, and anti-money-laundering screening consistent with the Swiss Anti-Money Laundering Act (AMLA). Ultimate beneficial owners are identified to natural persons. Screening applies regardless of the client’s country of incorporation.\n\nInvestment and portfolio management services may require appropriate licensing or be provided through regulated partners. SBDV does not claim a FINMA banking licence. Approval of any facility or mandate is discretionary.\n\nPersons and entities in comprehensively sanctioned jurisdictions cannot be onboarded. High-risk jurisdictions may be subject to enhanced due diligence rather than automatic refusal.\n\nRisk disclosures: investments involve risk including possible loss of principal. Past performance is not indicative of future results. This website is not legal, tax, or investment advice.",
-    "investorRelationsTitle": "Investor Relations",
-    "investorRelationsIntro": "Governance, transparency, and institutional communications.",
-    "investorRelationsBody": "SBDV is committed to transparency with our clients and stakeholders. Annual reports, governance policies, and institutional disclosures will be published here as they become available. For institutional inquiries, please contact our investor relations team through the contact page.",
-    "englishGoverns": "English is the governing language of this page. Until a translation is issued, the English text is the text that applies."
+    "privacyTitle": "개인정보 처리방침",
+    "privacyIntro": "취리히에 소재한 Swiss Bullion Depository Vault(SBDV)는 이 웹사이트를 통하여 수집하는 개인정보의 관리자이며, 전 세계 고객의 개인정보를 처리할 때 스위스 연방 데이터 보호법(FADP)을 준수합니다.",
+    "privacyBody": "취리히에 소재한 SBDV는 이 웹사이트, 고객 포털 및 Capital Access 프로그램을 통하여 수집하는 개인정보의 관리자입니다. 신원, 연락처, 회사, 실질 소유자 및 은행 정보는 금고 커스터디, 멤버십 및 자본 시설의 제공, 스위스 자금세탁방지 의무의 이행, 그리고 고객과의 연락을 위해서만 수집합니다. 개인정보의 열람, 정정 또는 삭제 요청은 연락 페이지를 통하여 합니다.\n\n정보는 안전하게 보관되며, 권한 있는 직원과 서비스 수행에 필요한 은행 또는 컴플라이언스 파트너가 접근합니다. 정보는 판매되지 않습니다. 호스팅 및 이메일 제공자는 비밀 유지와 보안 보호조치 아래 스위스 밖에서 정보를 처리할 수 있습니다.\n\n신청 및 KYC 기록은 스위스 금융범죄 및 계약 규칙이 요구하는 기간 동안 보관한 뒤 삭제하거나 익명화합니다. 삭제 요청은 이러한 법정 보관 의무의 적용을 받습니다.",
+    "termsTitle": "서비스 약관",
+    "termsIntro": "본 조건은 SBDV 웹사이트, 고객 포털 및 공개 신청 경로의 이용을 규율합니다. SBDV는 취리히에 소재합니다. 본 웹사이트 약관은 스위스법에 따릅니다.",
+    "termsBody": "본 웹사이트 약관은 SBDV 웹사이트의 이용, 계정 로그인 및 공개 신청 경로에 적용됩니다. 본 약관은 금고 커스터디 계약, 웰스 만데이트 또는 자본 시설을 성립시키지 않습니다. 금고 커스터디와 웰스 만데이트는 해당 관계를 위하여 별도로 발행된 계약에 따라서만 제공됩니다. Capital Access 시설은 본 웹사이트 약관이 아니라 약정 조건에 따릅니다.\n\nSBDV는 스위스 취리히에 소재합니다. 본 웹사이트 약관은 다른 법을 적용하게 되는 저촉법 규칙을 제외하고 스위스 실체법에 따릅니다. 웹사이트 이용으로 발생하는 분쟁에 대하여는 취리히 법원이 관할을 가집니다. 이는 시설 또는 만데이트 계약에 명시된 관할을 제한하지 않습니다.\n\n계정을 만들거나 포털을 이용함으로써 고객은 스위스 고객 확인 및 자금세탁방지 심사에 동의합니다. 비밀번호와 로그인 코드는 비밀로 유지해야 합니다. 권한 없이 계정이 사용된 것으로 판단되면, 연락 페이지를 통하여 SBDV에 지체 없이 알려 주십시오.\n\n전 세계의 기업이 Capital Access를 신청할 수 있습니다. 신청서의 제출은 대출 약정이 아니며, 개인 소비자 대출이 아니고, 증권의 공개 모집도 아닙니다. SBDV는 재량에 따라 신청을 승인하거나, 거절하거나, 보류할 수 있습니다. SBDV는 이 페이지에 고지함으로써 공개 웹사이트를 변경할 수 있습니다. 이미 수락된 시설은 고객이 수락한 약정 조건에 따르며, 이 페이지의 이후 변경에 따르지 않습니다.",
+    "regulatoryTitle": "규제 공시",
+    "regulatoryIntro": "SBDV는 취리히에 소재하며 전 세계 고객을 위하여 금고 업무와 자본 주선을 수행하는 기관입니다. 스위스 은행이 아닙니다.",
+    "regulatoryBody": "SBDV는 지금 금고 커스터디를 제공하고, 적격 기업을 위하여 구조화 자본 시설을 주선합니다. Capital Access는 보호되는 은행 예금이 아니며, 예금보험 제도의 적용을 받지 않습니다. 보증금으로 보유되는 자금은 계약상 현금 담보이며, 은행에서 고객 명의로 예치된 예금이 아닙니다.\n\n프라이빗 클라이언트의 웰스 만데이트는 투자 프로그램이며, 은행 계좌가 아닙니다. 표시된 만데이트 수익률은 보장된 이자가 아니며, 중단되거나 개정될 수 있고, 예금보험의 적용을 받지 않습니다. Bitcoin은 자금 납입 또는 지급의 경로로만 사용할 수 있습니다. SBDV는 암호자산 거래소를 운영하지 않으며, 고객의 개인 키를 보관하지 않습니다. Bitcoin 이전은 취소할 수 없습니다.\n\n모든 고객은 스위스 자금세탁방지법(AMLA)에 부합하는 고객 확인, 실질 소유자 확인 및 자금세탁방지 심사를 받습니다. 최종 실질 소유자는 자연인까지 특정됩니다. 심사는 고객의 설립 국가와 관계없이 적용됩니다.\n\n투자 및 포트폴리오 관리 서비스는 적절한 인가를 필요로 하거나, 규제 대상 파트너를 통하여 제공될 수 있습니다. SBDV는 FINMA 은행 인가를 주장하지 않습니다. 어떠한 시설 또는 만데이트의 승인도 재량에 따릅니다.\n\n포괄적 제재 대상 관할의 개인 및 법인은 수용할 수 없습니다. 고위험 관할은 자동 거절이 아니라 강화된 실사의 대상이 될 수 있습니다.\n\n위험 고지: 투자에는 원금 손실 가능성을 포함한 위험이 따릅니다. 과거 성과는 미래 결과를 나타내지 않습니다. 이 웹사이트는 법률, 세무 또는 투자 자문이 아닙니다.",
+    "investorRelationsTitle": "투자자 관계",
+    "investorRelationsIntro": "거버넌스, 투명성 및 기관 커뮤니케이션입니다.",
+    "investorRelationsBody": "SBDV는 고객 및 이해관계자에 대한 투명성을 지킵니다. 연차 보고서, 거버넌스 방침 및 기관 공시는 이용 가능해지는 대로 여기에 게시합니다. 기관 문의는 연락 페이지를 통하여 투자자 관계 담당에게 연락해 주십시오.",
+    "englishGoverns": "이 페이지의 준거 언어는 영어입니다. 번역은 열람을 위한 것입니다. 적용되는 본문은 영어 텍스트입니다."
   },
   "login": {
     "title": "고객 로그인",
-    "subtitle": "Secure access to your portfolio and account documents.",
+    "subtitle": "포트폴리오 및 계정 문서에 대한 안전한 접근입니다.",
     "email": "이메일",
     "password": "비밀번호",
-    "mfaCode": "Authentication Code",
-    "mfaHint": "Enter the 6-digit code from your authenticator app.",
+    "mfaCode": "인증 코드",
+    "mfaHint": "인증 앱의 6자리 코드를 입력하십시오.",
     "signIn": "로그인",
-    "signingIn": "Signing In...",
-    "forgotPassword": "Forgot password?",
-    "noAccount": "Not a client yet?",
+    "signingIn": "로그인 중...",
+    "forgotPassword": "비밀번호를 잊으셨습니까?",
+    "noAccount": "아직 고객이 아니십니까?",
     "applyMembership": "Apply for Membership",
     "invalidCredentials": "이메일 또는 비밀번호가 올바르지 않습니다.",
-    "mfaRequired": "Enter your authentication code to continue.",
-    "mfaInvalid": "Invalid authentication code.",
-    "error": "An error occurred. Please try again.",
-    "forgotTitle": "Forgot Password",
-    "forgotSubtitle": "Enter your account email and we will send a reset link.",
-    "sendResetLink": "Send Reset Link",
-    "resetEmailSent": "If an account exists for that email, a reset link has been sent. Check your inbox and spam folder.",
-    "backToSignIn": "Back to Sign In",
-    "resetTitle": "Reset Password",
-    "resetSubtitle": "Choose a new password for your account.",
-    "newPassword": "New Password",
-    "confirmPassword": "Confirm Password",
-    "updatePassword": "Update Password",
-    "passwordMismatch": "Passwords do not match.",
-    "resetLinkInvalid": "This reset link is missing or invalid.",
-    "resetSuccess": "Your password has been updated. You can sign in with the new password.",
-    "resetFailed": "Unable to reset password.",
-    "resetRequestFailed": "Unable to send reset email.",
-    "alreadySignedIn": "You're signed in",
-    "alreadySignedInSubtitle": "Continue to your portal, or sign out to use a different account.",
-    "signedInAs": "Signed in as",
-    "continueToPortal": "Continue to portal",
-    "signOut": "Sign out",
-    "registerWealth": "Create a wealth account",
-    "adminTitle": "Administration",
-    "adminSubtitle": "Sign in to the SBDV operations portal.",
-    "adminOnly": "This portal is for administrators only.",
-    "continueToAdmin": "Continue to operations"
+    "mfaRequired": "계속하려면 인증 코드를 입력하십시오.",
+    "mfaInvalid": "인증 코드가 유효하지 않습니다.",
+    "error": "오류가 발생하였습니다. 다시 시도해 주십시오.",
+    "forgotTitle": "비밀번호 재설정",
+    "forgotSubtitle": "계정 이메일을 입력하십시오. 재설정 링크를 보내겠습니다.",
+    "sendResetLink": "재설정 링크 보내기",
+    "resetEmailSent": "해당 이메일의 계정이 존재하는 경우 재설정 링크를 보냈습니다. 받은편지함과 스팸 폴더를 확인해 주십시오.",
+    "backToSignIn": "로그인으로 돌아가기",
+    "resetTitle": "비밀번호 재설정",
+    "resetSubtitle": "계정의 새 비밀번호를 선택하십시오.",
+    "newPassword": "새 비밀번호",
+    "confirmPassword": "비밀번호 확인",
+    "updatePassword": "비밀번호 업데이트",
+    "passwordMismatch": "비밀번호가 일치하지 않습니다.",
+    "resetLinkInvalid": "이 재설정 링크는 없거나 유효하지 않습니다.",
+    "resetSuccess": "비밀번호를 업데이트하였습니다. 새 비밀번호로 로그인할 수 있습니다.",
+    "resetFailed": "비밀번호를 재설정할 수 없습니다.",
+    "resetRequestFailed": "재설정 이메일을 보낼 수 없습니다.",
+    "alreadySignedIn": "로그인되어 있습니다",
+    "alreadySignedInSubtitle": "포털로 계속하거나, 다른 계정을 사용하려면 로그아웃하십시오.",
+    "signedInAs": "로그인 계정",
+    "continueToPortal": "포털로 계속",
+    "signOut": "로그아웃",
+    "registerWealth": "웰스 계정 만들기",
+    "adminTitle": "관리",
+    "adminSubtitle": "SBDV 운영 포털에 로그인합니다.",
+    "adminOnly": "이 포털은 관리자 전용입니다.",
+    "continueToAdmin": "운영으로 계속"
   },
   "portal": {
-    "title": "Client Portal",
-    "signedInAs": "Signed in as",
+    "title": "클라이언트 포털",
+    "signedInAs": "로그인 계정",
     "nav": {
-      "overview": "Overview",
-      "holdings": "Holdings",
-      "performance": "Performance",
-      "documents": "Documents",
-      "messages": "Messages",
-      "settings": "Settings",
-      "admin": "Admin Panel",
-      "logout": "Sign Out",
-      "mandate": "Mandate",
-      "funding": "Funding"
+      "overview": "개요",
+      "holdings": "보유 자산",
+      "performance": "운용 성과",
+      "documents": "문서",
+      "messages": "메시지",
+      "settings": "설정",
+      "admin": "관리 패널",
+      "logout": "로그아웃",
+      "mandate": "만데이트",
+      "funding": "납입"
     },
     "overview": {
-      "title": "Portfolio Overview",
-      "netWorth": "Total Net Worth",
-      "asOf": "As of",
-      "allocation": "Asset Allocation",
-      "recentActivity": "Recent Activity",
-      "bullionValue": "Bullion & Custody",
-      "financialValue": "Financial Portfolio",
-      "openMandate": "Open mandate",
-      "vaultHoldings": "Vault & financial holdings",
-      "empty": "No mandate or holdings yet. Fund the mandate or contact your relationship manager."
+      "title": "포트폴리오 개요",
+      "netWorth": "순자산 총액",
+      "asOf": "기준 시점",
+      "allocation": "자산 배분",
+      "recentActivity": "최근 활동",
+      "bullionValue": "지금 및 커스터디",
+      "financialValue": "금융 포트폴리오",
+      "openMandate": "만데이트 열기",
+      "vaultHoldings": "금고 및 금융 보유",
+      "empty": "만데이트 또는 보유 자산이 아직 없습니다. 만데이트에 납입하거나 관계 담당자에게 연락하십시오."
     },
     "holdings": {
-      "title": "Holdings",
-      "bullionTab": "Bullion & Custody",
-      "financialTab": "Financial Portfolio",
-      "weight": "Weight",
-      "purity": "Purity",
-      "location": "Vault Location",
-      "auditStatus": "Audit Status",
-      "quantity": "Quantity",
-      "costBasis": "Cost Basis",
-      "marketValue": "Market Value",
-      "verified": "Verified",
-      "pending": "Pending Audit"
+      "title": "보유 자산",
+      "bullionTab": "지금 및 커스터디",
+      "financialTab": "금융 포트폴리오",
+      "weight": "중량",
+      "purity": "순도",
+      "location": "금고 소재지",
+      "auditStatus": "감사 상태",
+      "quantity": "수량",
+      "costBasis": "취득 원가",
+      "marketValue": "시장 가치",
+      "verified": "감사 완료",
+      "pending": "감사 대기"
     },
     "performance": {
-      "title": "Performance",
-      "period": "Period",
-      "return": "Return",
-      "benchmark": "Benchmark",
-      "ytd": "Year to Date",
-      "oneYear": "1 Year",
-      "threeYear": "3 Years",
-      "allTime": "All Time",
-      "disclaimer": "Performance data is for illustration. Past performance is not indicative of future results."
+      "title": "운용 성과",
+      "period": "기간",
+      "return": "수익률",
+      "benchmark": "벤치마크",
+      "ytd": "연초 이후",
+      "oneYear": "1년",
+      "threeYear": "3년",
+      "allTime": "전체 기간",
+      "disclaimer": "운용 성과 자료는 예시입니다. 과거 성과는 미래 결과를 나타내지 않습니다."
     },
     "documents": {
-      "title": "Document Vault",
-      "upload": "Upload Document",
-      "download": "Download",
-      "noDocuments": "No documents available.",
+      "title": "문서 금고",
+      "upload": "문서 업로드",
+      "download": "다운로드",
+      "noDocuments": "이용 가능한 문서가 없습니다.",
       "types": {
-        "statement": "Statement",
-        "contract": "Contract",
-        "kyc": "KYC Document",
-        "report": "Report",
-        "other": "Other"
+        "statement": "명세서",
+        "contract": "계약서",
+        "kyc": "KYC 문서",
+        "report": "보고서",
+        "other": "기타"
       }
     },
     "messages": {
-      "title": "Advisor Messages",
-      "compose": "New Message",
-      "subject": "Subject",
-      "body": "Message",
-      "send": "Send",
-      "noMessages": "No messages yet.",
-      "encrypted": "End-to-end encrypted communication"
+      "title": "자문 메시지",
+      "compose": "새 메시지",
+      "subject": "제목",
+      "body": "메시지",
+      "send": "전송",
+      "noMessages": "메시지가 아직 없습니다.",
+      "encrypted": "종단간 암호화된 통신입니다."
     },
     "settings": {
-      "title": "Account Settings",
-      "mfaTitle": "Two-Factor Authentication",
-      "mfaEnabled": "Enabled",
-      "mfaDisabled": "Not enabled",
-      "enableMfa": "Enable MFA",
-      "sessions": "Active Sessions",
-      "notifications": "Email Notifications"
+      "title": "계정 설정",
+      "mfaTitle": "2단계 인증",
+      "mfaEnabled": "사용 중입니다",
+      "mfaDisabled": "사용하지 않습니다",
+      "enableMfa": "MFA 활성화",
+      "sessions": "활성 세션",
+      "notifications": "이메일 알림"
     },
     "mandate": {
-      "title": "Wealth mandate",
-      "subtitle": "Principal stays invested. Interest accrues on principal at the stated mandate yield. Withdraw interest or reinvest it — principal is not redeemed in this programme.",
-      "principal": "Principal",
-      "accrued": "Accrued interest",
-      "total": "Mandate total",
-      "yield": "Mandate yield",
-      "live": "Accruing",
-      "paused": "Yield paused",
-      "growth": "Growth",
-      "reinvest": "Reinvest accrued interest",
-      "withdraw": "Withdraw interest",
-      "withdrawTitle": "Withdraw accrued interest",
-      "amount": "Amount",
-      "accountName": "Account name",
-      "bankName": "Bank name",
-      "btcAddress": "Bitcoin address",
-      "submitWithdraw": "Request payout",
-      "activity": "Activity",
-      "when": "When",
-      "type": "Type",
-      "status": "Status",
-      "emptyActivity": "No mandate activity yet. Fund the mandate to begin.",
-      "unavailable": "No wealth mandate is attached to this account yet.",
-      "actionError": "Unable to complete that request.",
-      "disclaimer": "Not a bank deposit. Yield is a stated mandate rate and may be changed. Bitcoin transfers are irreversible.",
+      "title": "웰스 만데이트",
+      "subtitle": "원금은 운용된 상태로 유지됩니다. 이자는 표시된 만데이트 수익률로 원금에 대하여 발생합니다. 이자를 인출하거나 재투자하십시오. 이 프로그램에서는 원금이 상환되지 않습니다.",
+      "principal": "원금",
+      "accrued": "발생 이자",
+      "total": "만데이트 합계",
+      "yield": "만데이트 수익률",
+      "live": "발생 중",
+      "paused": "수익률 중지",
+      "growth": "증가",
+      "reinvest": "발생 이자 재투자",
+      "withdraw": "이자 인출",
+      "withdrawTitle": "발생 이자 인출",
+      "amount": "금액",
+      "accountName": "계좌 명의",
+      "bankName": "은행명",
+      "btcAddress": "Bitcoin 주소",
+      "submitWithdraw": "지급 요청",
+      "activity": "활동",
+      "when": "일시",
+      "type": "유형",
+      "status": "상태",
+      "emptyActivity": "만데이트 활동이 아직 없습니다. 시작하려면 만데이트에 납입하십시오.",
+      "unavailable": "이 계정에는 아직 웰스 만데이트가 연결되어 있지 않습니다.",
+      "actionError": "해당 요청을 완료할 수 없습니다.",
+      "disclaimer": "은행 예금이 아닙니다. 수익률은 표시된 만데이트 이율이며, 변경될 수 있습니다. Bitcoin 이전은 취소할 수 없습니다.",
       "types": {
-        "DEPOSIT_WIRE": "Wire funding",
-        "DEPOSIT_BTC": "Bitcoin funding",
-        "INTEREST_ACCRUAL": "Yield credited",
-        "INTEREST_WITHDRAW": "Interest withdrawal",
-        "INTEREST_REINVEST": "Interest reinvested",
-        "ADJUSTMENT": "Adjustment",
-        "FOUNDING_BONUS": "Founding bonus"
+        "DEPOSIT_WIRE": "전신 송금 납입",
+        "DEPOSIT_BTC": "Bitcoin 납입",
+        "INTEREST_ACCRUAL": "수익률 기장",
+        "INTEREST_WITHDRAW": "이자 인출",
+        "INTEREST_REINVEST": "이자 재투자",
+        "ADJUSTMENT": "조정",
+        "FOUNDING_BONUS": "창립 보너스"
       },
-      "fundTitle": "Choose how much to invest",
+      "fundTitle": "투자할 금액을 선택하십시오",
       "fundBody": "Review the mandate, then tell operations the USD amount and whether you will send a bank wire or Bitcoin. Principal is credited only after receipt is confirmed.",
-      "fundCta": "Choose amount and funding method"
+      "fundCta": "금액과 납입 방법을 선택하십시오"
     },
     "funding": {
-      "title": "Fund the mandate",
+      "title": "만데이트 납입",
       "subtitle": "Request a wire or Bitcoin transfer. Principal is credited only after SBDV operations confirm receipt.",
-      "wire": "Bank wire",
+      "wire": "은행 전신 송금",
       "btc": "Bitcoin",
-      "btcAmount": "Bitcoin amount (optional)",
-      "txid": "Transaction ID",
-      "note": "Note to operations",
-      "submit": "Submit funding notice",
-      "submitted": "Notice received. Quote this reference when you transfer:",
-      "instructions": "House instructions",
-      "beneficiary": "Beneficiary",
-      "accountNumber": "Account number",
-      "bankAddress": "Bank address",
+      "btcAmount": "Bitcoin 금액(선택)",
+      "txid": "거래 ID",
+      "note": "운영 메모",
+      "submit": "납입 통지 제출",
+      "submitted": "통지를 접수했습니다. 이체 시 이 참조 번호를 기재하십시오:",
+      "instructions": "하우스 지시",
+      "beneficiary": "수취인",
+      "accountNumber": "계좌 번호",
+      "bankAddress": "은행 주소",
       "wireFallback": "Wire instructions will be confirmed by your relationship manager. Submit the notice so operations can match your transfer.",
-      "btcAddress": "SBDV receive address",
+      "btcAddress": "SBDV 수신 주소",
       "btcQrAlt": "SBDV 비트코인 수신 주소 QR 코드",
       "copyAddress": "주소 복사",
       "copiedAddress": "복사됨",
       "btcNote": "Send only Bitcoin to this address. Include the txid on your notice. Credit is USD principal after ops confirmation — SBDV does not custody your keys.",
       "btcFallback": "A Bitcoin receive address will be provided by your relationship manager.",
-      "history": "Funding history",
-      "rail": "Rail",
-      "reference": "Reference",
-      "empty": "No funding notices yet.",
-      "waitingApprove": "Waiting for operations to approve this notice. House instructions will appear here after approval — do not send funds yet.",
-      "waitingProof": "Transfer using the instructions below, then upload payment proof.",
-      "proofUploaded": "Payment information received. Operations will confirm receipt.",
-      "credited": "Receipt confirmed. This amount is principal.",
-      "rejected": "This notice was not accepted. Submit a new funding notice if you still intend to fund.",
-      "uploadProof": "Upload payment proof",
-      "uploadHint": "PDF or JPEG of the wire confirmation or Bitcoin transfer. Optional txid for Bitcoin.",
-      "uploadSubmit": "Send payment information",
-      "uploadedFile": "Uploaded",
-      "beneficiaryAddress": "Beneficiary address",
-      "routing": "Local routing"
+      "history": "납입 내역",
+      "rail": "경로",
+      "reference": "참조 번호",
+      "empty": "납입 통지가 아직 없습니다.",
+      "waitingApprove": "운영이 이 통지를 승인하기를 기다리고 있습니다. 하우스 지시는 승인 후에 여기에 표시됩니다. 아직 자금을 보내지 마십시오.",
+      "waitingProof": "아래 지시에 따라 이체한 뒤, 지급 증빙을 업로드하십시오.",
+      "proofUploaded": "지급 정보를 접수했습니다. 운영이 수령을 확인합니다.",
+      "credited": "수령을 확인했습니다. 이 금액은 원금입니다.",
+      "rejected": "이 통지는 수리되지 않았습니다. 납입할 의사가 있으면 새 납입 통지를 제출하십시오.",
+      "uploadProof": "지급 증빙 업로드",
+      "uploadHint": "전신 송금 확인서 또는 Bitcoin 이전의 PDF 또는 JPEG입니다. Bitcoin의 txid는 선택 사항입니다.",
+      "uploadSubmit": "지급 정보 전송",
+      "uploadedFile": "업로드됨",
+      "beneficiaryAddress": "수취인 주소",
+      "routing": "국내 라우팅"
     }
   },
   "admin": {
@@ -1027,48 +1027,48 @@
     "portalBadge": "Enterprise Partner Portal",
     "signedInAs": "Signed in as",
     "hero": {
-      "badge": "Institutional Capital Program",
-      "title": "Structured capital for qualified enterprises",
-      "subtitle": "SBDV is not a bank. A facility is not a deposit and not a commitment until it is approved.",
-      "applyAccess": "Apply for Access",
-      "partnerLogin": "Partner Login",
-      "eligibility": "Operating companies with at least two years of history, audited or reviewed accounts, and a request from USD 500,000. Approval is discretionary.",
-      "collateralRule": "The 10% is requested only after approval. It is cash collateral, not a fee. It is returned in full if SBDV declines other than for the applicant’s breach or a failed compliance check. Applying is not a commitment to lend."
+      "badge": "기관 자본 프로그램",
+      "title": "적격 기업을 위한 구조화 자본",
+      "subtitle": "SBDV는 은행이 아닙니다. 시설은 예금이 아니며, 승인되기 전까지 약정이 아닙니다.",
+      "applyAccess": "접근 신청",
+      "partnerLogin": "파트너 로그인",
+      "eligibility": "영업 이력이 2년 이상이고, 감사 또는 검토된 재무제표를 갖추며, USD 500,000부터 요청하는 사업회사입니다. 승인은 재량에 따릅니다.",
+      "collateralRule": "10%는 승인 후에만 요청됩니다. 이는 수수료가 아닌 현금 담보입니다. 신청인의 위반 또는 컴플라이언스 심사 실패 이외의 사유로 SBDV가 거절하는 경우 전액 반환됩니다. 신청은 대출 약정이 아닙니다."
     },
     "features": {
-      "title": "Why enterprises choose Capital Access",
-      "subtitle": "A disciplined gateway between qualified companies and mandate-aligned capital — clarity first.",
-      "globalPoolsTitle": "Mandate-aligned pools",
-      "globalPoolsDesc": "Partially disclosed sovereign-grade pools matched to sector and region — not a black-box auction.",
-      "flexibleTermsTitle": "Terms you can plan around",
-      "flexibleTermsDesc": "Define amount, term, and monthly or annual interest over 1–10 years with live calculations.",
-      "enterpriseFocusTitle": "Built for operating companies",
-      "enterpriseFocusDesc": "For established enterprises with audited or reviewed financials and a clear investment thesis.",
-      "structuredSecurityTitle": "Process without surprise",
-      "structuredSecurityDesc": "10% cash collateral, full KYC/UBO look-through, and discretionary approval under Swiss AML standards."
+      "title": "기업이 Capital Access를 선택하는 이유",
+      "subtitle": "적격 기업과 만데이트에 부합하는 자본 사이의 규율 있는 입구입니다. 명확함을 먼저 둡니다.",
+      "globalPoolsTitle": "만데이트에 부합하는 풀",
+      "globalPoolsDesc": "섹터와 지역에 맞춘 부분 공개의 소버린급 풀입니다. 블랙박스 경매가 아닙니다.",
+      "flexibleTermsTitle": "계획의 기준이 되는 조건",
+      "flexibleTermsDesc": "1–10년에 걸쳐 금액, 기간, 그리고 월간 또는 연간 이자를 정하고, 실시간 계산을 확인합니다.",
+      "enterpriseFocusTitle": "사업회사를 위하여",
+      "enterpriseFocusDesc": "감사 또는 검토된 재무와 명확한 투자 방침을 갖춘, 확립된 기업을 위한 것입니다.",
+      "structuredSecurityTitle": "예상 밖의 일 없는 절차",
+      "structuredSecurityDesc": "10% 현금 담보, 완전한 KYC/UBO 룩스루, 그리고 스위스 AML 기준 아래의 재량 승인입니다."
     },
     "howItWorks": {
       "title": "How It Works",
       "registerTitle": "Register as a Capital Partner",
       "registerDesc": "Create your enterprise account and verify your company credentials.",
       "exploreTitle": "Explore Available Pools",
-      "exploreDesc": "Browse partially disclosed sovereign capital pools aligned with your sector and region.",
+      "exploreDesc": "고객의 섹터 및 지역에 부합하는, 부분 공개의 소버린 자본 풀을 살펴봅니다.",
       "structureTitle": "Structure Your Request",
-      "structureDesc": "Define loan amount, term, repayment frequency, and review live interest calculations.",
+      "structureDesc": "대출 금액, 기간, 상환 주기를 정하고, 실시간 이자 계산을 확인합니다.",
       "submitTitle": "Submit Company Profile",
       "submitDesc": "Provide financials, investment areas, and accept the 10% security deposit condition.",
       "decisionTitle": "Await Institutional Review",
       "decisionDesc": "Your application enters our review queue. You will receive approval or rejection notification.",
-      "prepareTitle": "Prepare your file",
-      "prepareDesc": "Confirm eligibility (enterprise, USD 500,000+, two years of operations). Gather local-register extracts, audited accounts, and beneficial-owner details. Local equivalents and certified translations are accepted.",
-      "reviewTitle": "Institutional review",
-      "reviewDesc": "SBDV reviews documents, beneficial owners, and mandate alignment. Approval is discretionary and is not a commitment until issued.",
-      "depositTitle": "Security deposit and origin of funds",
-      "depositDesc": "After approval, accept the Facility Terms, wire the 10% cash collateral, and declare the source of those funds.",
-      "kycTitle": "KYC and sanctions screening",
-      "kycDesc": "Swiss AML screening of the company, signatories, and ultimate beneficial owners. High-risk jurisdictions receive enhanced due diligence.",
-      "fundingTitle": "Disbursement and repayment",
-      "fundingDesc": "Submit a bank account in the borrower’s name (SWIFT plus IBAN or local account number). Funds are released in USD; repay on the schedule in your dashboard."
+      "prepareTitle": "서류 준비",
+      "prepareDesc": "적격성을 확인하십시오(기업, USD 500,000+, 영업 이력 2년). 현지 등기부 초본, 감사 재무제표 및 실질 소유자 명세를 준비하십시오. 현지의 동등 서류와 공인 번역을 접수합니다.",
+      "reviewTitle": "기관 심사",
+      "reviewDesc": "SBDV는 문서, 실질 소유자 및 만데이트와의 정합을 심사합니다. 승인은 재량에 따르며, 발행되기 전까지 약정이 아닙니다.",
+      "depositTitle": "보증금 및 자금의 출처",
+      "depositDesc": "승인 후 약정 조건을 수락하고, 10% 현금 담보를 전신 송금하며, 그 자금의 출처를 신고하십시오.",
+      "kycTitle": "KYC 및 제재 심사",
+      "kycDesc": "회사, 서명권자 및 최종 실질 소유자에 대하여 스위스 AML 심사를 합니다. 고위험 관할에는 강화된 실사를 적용합니다.",
+      "fundingTitle": "자금 집행 및 상환",
+      "fundingDesc": "차주 명의의 은행 계좌(SWIFT와 IBAN 또는 현지 계좌번호)를 제출하십시오. 자금은 USD로 집행됩니다. 대시보드의 일정에 따라 상환하십시오."
     },
     "nav": {
       "overview": "Overview",
@@ -1118,17 +1118,17 @@
     "requestFromPool": "Request from this pool",
     "startRequest": "Start Capital Request",
     "register": {
-      "title": "Register for Capital Access",
+      "title": "Capital Access 등록",
       "subtitle": "Create your enterprise partner account to explore sovereign capital pools.",
-      "fullName": "Full Name",
-      "phone": "Phone (optional)",
-      "submit": "Create Partner Account",
-      "hasAccount": "Already registered?",
-      "error": "Registration failed. Please try again.",
-      "welcomeTitle": "Account created successfully",
-      "welcomeBody": "Your Capital Access account is ready. Sign in with the email and password you just created.",
-      "welcomeEmail": "Email",
-      "goToLogin": "Go to login"
+      "fullName": "성명",
+      "phone": "전화(선택)",
+      "submit": "파트너 계정 만들기",
+      "hasAccount": "이미 등록하셨습니까?",
+      "error": "등록에 실패하였습니다. 다시 시도해 주십시오.",
+      "welcomeTitle": "계정을 만들었습니다",
+      "welcomeBody": "Capital Access 계정이 준비되었습니다. 방금 만든 이메일과 비밀번호로 로그인하십시오.",
+      "welcomeEmail": "이메일",
+      "goToLogin": "로그인으로"
     },
     "request": {
       "title": "자본 신청",
@@ -1346,103 +1346,109 @@
       "repayFailed": "Could not submit this repayment. Please try again."
     },
     "facilityTerms": {
-      "eyebrow": "Capital Access Program",
+      "eyebrow": "Capital Access 프로그램",
       "pageTitle": "약정 조건",
-      "intro": "These terms govern your capital facility, including the 10% security deposit, interest, repayment, default, and Swiss governing law. Read them in full before you accept.",
-      "versionLabel": "Document",
-      "effectiveLabel": "Effective",
-      "languageLabel": "Governing language",
-      "governingNote": "English is the governing language of this instrument. A translation, if provided, is for convenience only.",
-      "contents": "Contents",
+      "intro": "본 조건은 10% 보증금, 이자, 상환, 채무불이행 및 스위스 준거법을 포함하여 고객의 자본 시설을 규율합니다. 수락하기 전에 전문을 읽으십시오.",
+      "versionLabel": "문서",
+      "effectiveLabel": "효력",
+      "languageLabel": "준거 언어",
+      "governingNote": "이 문서의 준거 언어는 영어입니다. 번역이 제공되는 경우, 이는 편의를 위한 것일 뿐입니다.",
+      "contents": "목차",
       "acceptBefore": "나는 읽고 동의합니다",
       "linkLabel": "약정 조건",
-      "acceptAfter": ", including the 10% security deposit, interest, repayment, default, and governing-law provisions, and I confirm that I am authorised to bind the borrower.",
-      "acceptedNote": "Facility Terms and Conditions accepted",
-      "print": "Print or save",
-      "backFacility": "Return to facility dashboard"
+      "acceptAfter": ", 10% 보증금, 이자, 상환, 채무불이행 및 준거법 조항을 포함하며, 본인은 차주를 구속할 권한이 있음을 확인합니다.",
+      "acceptedNote": "약정 조건을 수락하였습니다",
+      "print": "인쇄 또는 저장",
+      "backFacility": "시설 대시보드로 돌아가기"
     },
     "whoCanApply": {
-      "title": "Who can apply",
-      "worldwide": "Enterprises worldwide may apply. Vault membership is a separate request, reviewed before access. Capital Access is open to qualified companies.",
-      "enterprise": "This is not a personal or consumer loan. The applicant must be an operating company.",
-      "ticket": "Minimum request USD 500,000; two years of operating history; audited or reviewed financials.",
-      "kyc": "Full KYC, beneficial-ownership look-through, and sanctions screening under Swiss AML rules.",
-      "sanctions": "Comprehensively sanctioned persons and jurisdictions cannot be onboarded. Approval is always discretionary.",
-      "currency": "Facilities are denominated in USD. If your operating cash flow is in another currency, you accept foreign-exchange risk."
+      "title": "신청 자격",
+      "worldwide": "전 세계의 기업이 신청할 수 있습니다. 금고 멤버십은 별도의 요청이며, 접근 전에 심사됩니다. Capital Access는 적격 기업에 열려 있습니다.",
+      "enterprise": "이는 개인 또는 소비자 대출이 아닙니다. 신청인은 사업회사여야 합니다.",
+      "ticket": "최소 요청액은 USD 500,000입니다. 영업 이력은 2년입니다. 감사 또는 검토된 재무가 필요합니다.",
+      "kyc": "스위스 AML 규칙 아래의 완전한 KYC, 실질 소유자 룩스루 및 제재 심사입니다.",
+      "sanctions": "포괄적 제재 대상인 개인 및 관할은 수용할 수 없습니다. 승인은 언제나 재량에 따릅니다.",
+      "currency": "시설은 USD로 표시됩니다. 영업 현금흐름이 다른 통화인 경우 외환 위험을 인수합니다."
     },
     "timeline": {
-      "title": "Indicative timeline",
-      "note": "Times are typical, not a commitment. Incomplete files or enhanced due diligence take longer.",
-      "apply": "Application",
-      "applyTime": "1–2 weeks",
-      "dd": "Document and UBO review",
-      "ddTime": "2–4 weeks",
-      "kyc": "KYC after deposit",
-      "kycTime": "5–10 business days",
-      "funding": "Closing and funding",
-      "fundingTime": "3–7 days"
+      "title": "참고 일정",
+      "note": "소요 기간은 통상적인 참고이며, 약정이 아닙니다. 서류가 불완전하거나 강화된 실사인 경우 더 걸립니다.",
+      "apply": "신청",
+      "applyTime": "1–2주",
+      "dd": "문서 및 UBO 심사",
+      "ddTime": "2–4주",
+      "kyc": "예치 후 KYC",
+      "kycTime": "영업일 5–10일",
+      "funding": "클로징 및 자금 집행",
+      "fundingTime": "3–7일"
     },
     "settings": {
       "title": "Account Settings"
     }
   },
   "chat": {
-    "open": "Ask SBDV",
-    "title": "SBDV Concierge",
-    "subtitle": "Private guidance · 24/7",
-    "greeting": "Welcome to SBDV. I'm your digital concierge — ask about vault custody, membership, wealth services, or our Capital Access Program.",
-    "greetingNamed": "Hello, {name}. I'm your SBDV concierge — I can help with your account, guide you through services, or answer questions about membership and capital access.",
-    "placeholder": "Ask a question…",
-    "send": "Send message",
-    "minimize": "Minimize chat",
-    "close": "Close and clear chat",
-    "error": "I'm sorry, I couldn't process that. Please try again or use the Contact page for direct assistance.",
-    "disclaimer": "AI-assisted guidance. For binding advice, contact your relationship manager."
+    "open": "SBDV에 문의",
+    "title": "SBDV 컨시어지",
+    "subtitle": "개별 안내 · 24/7",
+    "greeting": "SBDV에 오신 것을 환영합니다. 디지털 컨시어지입니다. 금고 커스터디, 멤버십, 웰스 서비스 또는 Capital Access 프로그램에 관하여 문의하십시오.",
+    "greetingNamed": "{name}님, 안녕하십니까. SBDV 컨시어지입니다. 계정, 서비스 안내, 멤버십 및 Capital Access에 관한 질문에 답변합니다.",
+    "placeholder": "질문을 입력…",
+    "send": "메시지 보내기",
+    "minimize": "채팅 최소화",
+    "close": "채팅을 닫고 내용을 지우기",
+    "error": "죄송합니다. 처리하지 못했습니다. 다시 시도하시거나, 직접 도움을 받으려면 연락 페이지를 이용해 주십시오.",
+    "disclaimer": "AI가 보조하는 안내입니다. 구속력 있는 자문은 관계 관리자에게 연락하십시오."
   },
   "accountSecurity": {
     "roles": {
-      "admin": "Administrator",
-      "client": "Client",
-      "borrower": "Enterprise Partner"
+      "admin": "관리자",
+      "client": "클라이언트",
+      "borrower": "엔터프라이즈 파트너"
     },
     "summary": {
-      "title": "Security overview",
-      "email": "Email",
-      "role": "Account type",
-      "mfa": "Two-factor authentication",
-      "memberSince": "Member since",
-      "lastSignIn": "Last sign-in"
+      "title": "보안 개요",
+      "email": "이메일",
+      "role": "계정 유형",
+      "mfa": "2단계 인증",
+      "memberSince": "가입일",
+      "lastSignIn": "마지막 로그인",
+      "thisSignIn": "이번 로그인",
+      "previousSignIn": "이전 로그인",
+      "location": "위치",
+      "ipAddress": "IP 주소",
+      "unknownLocation": "알 수 없음",
+      "localNetwork": "로컬"
     },
     "password": {
-      "title": "Change password",
-      "hint": "Use at least 8 characters. You will remain signed in on this device after updating.",
-      "current": "Current password",
-      "new": "New password",
-      "confirm": "Confirm new password",
-      "submit": "Update password",
-      "saving": "Updating…",
-      "success": "Password updated successfully. A confirmation was sent to your email.",
-      "errorGeneric": "Unable to change password. Please try again."
+      "title": "비밀번호 변경",
+      "hint": "8자 이상을 사용하십시오. 업데이트 후에도 이 기기에서는 로그인 상태가 유지됩니다.",
+      "current": "현재 비밀번호",
+      "new": "새 비밀번호",
+      "confirm": "새 비밀번호 확인",
+      "submit": "비밀번호 업데이트",
+      "saving": "업데이트 중…",
+      "success": "비밀번호를 업데이트했습니다. 확인을 이메일로 보냈습니다.",
+      "errorGeneric": "비밀번호를 변경할 수 없습니다. 다시 시도하십시오."
     },
     "mfa": {
-      "title": "Two-factor authentication",
-      "disabled": "Add a second step after your password to protect your account.",
-      "enabledTotp": "Authenticator app codes are enabled for sign-in.",
-      "enabledEmail": "Email sign-in codes are enabled. A code is sent to your account email after your password is accepted.",
-      "statusOff": "Not enabled",
-      "statusTotp": "Authenticator app",
-      "statusEmail": "Email codes",
-      "enableTotp": "Enable authenticator app",
-      "enableEmail": "Enable email codes",
-      "disable": "Disable MFA",
-      "secretLabel": "Add this secret to your authenticator app:",
-      "verifyEnable": "Verify & enable",
-      "invalidCode": "Invalid authenticator code."
+      "title": "2단계 인증",
+      "disabled": "계정을 보호하려면 비밀번호 다음에 두 번째 단계를 추가하십시오.",
+      "enabledTotp": "로그인에 인증 앱 코드가 활성화되어 있습니다.",
+      "enabledEmail": "이메일 로그인 코드가 활성화되어 있습니다. 비밀번호가 수락된 뒤 계정 이메일로 코드가 전송됩니다.",
+      "statusOff": "사용하지 않습니다",
+      "statusTotp": "인증 앱",
+      "statusEmail": "이메일 코드",
+      "enableTotp": "인증 앱 활성화",
+      "enableEmail": "이메일 코드 활성화",
+      "disable": "MFA 비활성화",
+      "secretLabel": "이 시크릿을 인증 앱에 추가하십시오:",
+      "verifyEnable": "확인 후 활성화",
+      "invalidCode": "인증 코드가 유효하지 않습니다."
     },
     "session": {
-      "title": "Session",
-      "description": "End your session on this browser. You will need to sign in again to access the portal.",
-      "signOutDevice": "Sign out of this device"
+      "title": "세션",
+      "description": "이 브라우저의 세션을 종료합니다. 클라이언트 포털에 다시 접근하려면 다시 로그인해야 합니다.",
+      "signOutDevice": "이 기기에서 로그아웃"
     }
   }
 }
