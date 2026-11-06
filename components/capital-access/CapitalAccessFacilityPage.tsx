@@ -324,11 +324,11 @@ export default function CapitalAccessFacilityPage() {
           label: t("capitalAccess.yearlyInterest"),
           value: formatUsd(balances.yearlyInterestUsd),
         },
-        ...(balances.creditedTotalUsd != null
+        ...(balances.disbursedAmountUsd != null
           ? [
               {
-                label: t("capitalAccess.creditedTotal"),
-                value: formatUsd(balances.creditedTotalUsd),
+                label: t("capitalAccess.amountDisbursed"),
+                value: formatUsd(balances.disbursedAmountUsd),
               },
             ]
           : []),
@@ -387,7 +387,11 @@ export default function CapitalAccessFacilityPage() {
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-0">
               {facility.phases.map((phase, i) => {
                 const Icon = phaseIcons[phase] || Circle;
-                const done = facilityLive ? i <= currentPhaseIndex || phase === "ACTIVE" : i < currentPhaseIndex;
+                const done =
+                  facilityLive
+                    ? i <= currentPhaseIndex || phase === "ACTIVE"
+                    : i < currentPhaseIndex ||
+                      (phase === "AWAITING_DEPOSIT" && Boolean(facility.depositConfirmedAt));
                 const current = !facilityLive && i === currentPhaseIndex;
                 return (
                   <div key={phase} className="flex items-center flex-1 min-w-0">
@@ -426,6 +430,18 @@ export default function CapitalAccessFacilityPage() {
                 {t("capitalAccess.onboarding.revisionRequested")}
               </p>
               <p className="font-body text-sm text-amber-900/80 whitespace-pre-line">{facility.adminNotes}</p>
+            </div>
+          )}
+
+          {facility.onboardingPhase === "KYC_REVIEW" && (
+            <div className="mb-8 p-6 bg-white border border-gold/30 rounded-lg">
+              <h2 className="font-heading font-semibold text-charcoal mb-2 flex items-center gap-2">
+                <Shield className="w-5 h-5 text-gold" />
+                {t("capitalAccess.onboarding.phases.kyc_review")}
+              </h2>
+              <p className="font-body text-sm text-charcoal/70 leading-relaxed">
+                {t("capitalAccess.onboarding.kycReviewNote")}
+              </p>
             </div>
           )}
 
@@ -501,14 +517,25 @@ export default function CapitalAccessFacilityPage() {
                   );
                 })}
               </div>
-              {facility.docsComplete && facility.canUploadDocuments && (
+              {facility.canUploadDocuments &&
+                REQUIRED_DOCUMENT_TYPES.every((docType) =>
+                  facility.documents.some((d) => d.type === docType)
+                ) && (
                 <div className="mt-6 p-4 bg-off-white border border-gold/30 rounded-sm">
                   <p className="font-body text-sm text-charcoal/70 mb-3">
-                    {t("capitalAccess.onboarding.docsReadyToSubmit")}
+                    {(facility.ubos || []).length > 0
+                      ? t("capitalAccess.onboarding.docsReadyToSubmit")
+                      : t("capitalAccess.onboarding.uboRequiredBeforeSubmit")}
                   </p>
                   <button
                     type="button"
-                    onClick={submitDocuments}
+                    onClick={() => {
+                      if ((facility.ubos || []).length === 0) {
+                        setError(t("capitalAccess.onboarding.uboRequiredBeforeSubmit"));
+                        return;
+                      }
+                      submitDocuments();
+                    }}
                     disabled={submitting}
                     className="px-6 py-3 bg-gold text-charcoal font-body rounded-sm disabled:opacity-50"
                   >
@@ -523,7 +550,8 @@ export default function CapitalAccessFacilityPage() {
               )}
               {facility.docsComplete &&
                 facility.canUploadDocuments === false &&
-                facility.onboardingPhase !== "DOCUMENTS_SUBMITTED" && (
+                facility.onboardingPhase !== "DOCUMENTS_SUBMITTED" &&
+                facility.onboardingPhase !== "KYC_REVIEW" && (
                   <p className="mt-4 font-body text-sm text-charcoal/60">
                     {t("capitalAccess.onboarding.docsCompleteNote")}
                   </p>

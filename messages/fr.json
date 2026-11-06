@@ -1031,9 +1031,9 @@
       "title": "Capital structuré pour les entreprises qualifiées",
       "subtitle": "SBDV n'est pas une banque. Une facilité n'est pas un dépôt et n'est pas un engagement tant qu'elle n'est pas approuvée.",
       "applyAccess": "Demander l'accès",
-      "partnerLogin": "Connexion partenaire",
+      "partnerLogin": "Connexion au compte",
       "eligibility": "Sociétés d'exploitation ayant au moins deux ans d'historique, des comptes audités ou examinés, et une demande à partir de USD 500,000. L'approbation est discrétionnaire.",
-      "collateralRule": "Les 10% ne sont demandés qu'après approbation. Il s'agit d'un collatéral en espèces, et non d'une commission. Il est restitué intégralement si SBDV refuse, sauf en cas de manquement du demandeur ou d'un contrôle de conformité non satisfait. Déposer une demande n'est pas un engagement de prêter."
+      "collateralRule": "SBDV paie un compte que vous désignez ; le collatéral en espèces vient donc en premier. Les immeubles et autres actifs locaux ne sont pas acceptés. Les 10% ne sont demandés qu'après approbation. Le compte séquestre est montré avant que vous payiez. Il s'agit de votre trésorerie, non d'une commission, et elle ne porte pas intérêt. Une fois confirmée, le montant approuvé est envoyé en totalité. Si vous remboursez intégralement, le solde non utilisé est restitué. En cas de défaut, il peut être imputé sur les sommes échues. Déposer une demande n'est pas un engagement de prêter."
     },
     "features": {
       "title": "Pourquoi les entreprises choisissent Capital Access",
@@ -1045,7 +1045,7 @@
       "enterpriseFocusTitle": "Conçu pour les sociétés d'exploitation",
       "enterpriseFocusDesc": "Pour les entreprises établies qui disposent de comptes audités ou examinés et d'une thèse d'investissement claire.",
       "structuredSecurityTitle": "Un processus sans surprise",
-      "structuredSecurityDesc": "Collatéral en espèces de 10%, examen complet KYC/UBO jusqu'au bénéficiaire effectif, et approbation discrétionnaire selon les normes AML suisses."
+      "structuredSecurityDesc": "Collatéral en espèces de 10% avant tout envoi de fonds. Les immeubles et autres actifs locaux ne sont pas acceptés. Examen KYC/UBO complet et approbation discrétionnaire selon les normes suisses de LBA."
     },
     "howItWorks": {
       "title": "How It Works",
@@ -1064,11 +1064,11 @@
       "reviewTitle": "Examen institutionnel",
       "reviewDesc": "SBDV examine les documents, les bénéficiaires effectifs et l'alignement sur le mandat. L'approbation est discrétionnaire et ne constitue un engagement qu'une fois délivrée.",
       "depositTitle": "Dépôt de garantie et origine des fonds",
-      "depositDesc": "Après approbation, acceptez les conditions de la facilité, virez le collatéral en espèces de 10% et déclarez l'origine de ces fonds.",
+      "depositDesc": "Après l'examen KYC, le compte séquestre est montré. Virez 10% du montant approuvé. Il s'agit de votre trésorerie, détenue en garantie, et non d'une commission. SBDV envoie ensuite le montant approuvé en totalité sur le compte que vous désignez.",
       "kycTitle": "KYC et contrôle des sanctions",
       "kycDesc": "Examen AML suisse de la société, des signataires et des bénéficiaires effectifs ultimes. Les juridictions à risque élevé font l'objet d'une vigilance renforcée.",
       "fundingTitle": "Mise à disposition et remboursement",
-      "fundingDesc": "Indiquez un compte bancaire au nom de l'emprunteur (SWIFT ainsi qu'IBAN ou numéro de compte local). Les fonds sont mis à disposition en USD ; le remboursement suit l'échéancier de votre tableau de bord."
+      "fundingDesc": "Indiquez un compte bancaire au nom de l'emprunteur (SWIFT plus IBAN ou numéro de compte local). Le montant approuvé n'est libéré en USD qu'après confirmation du collatéral en espèces de 10%. Remboursez selon l'échéancier de votre tableau de bord."
     },
     "nav": {
       "overview": "Overview",
@@ -1103,7 +1103,7 @@
       "title": "Access Conditions",
       "minimumOperatingYears": "Minimum 2 years of operating history",
       "auditedFinancials": "Audited or reviewed financial statements required",
-      "securityDeposit": "10% security deposit on requested facility amount",
+      "securityDeposit": "Collatéral en espèces de 10% après approbation, avant l'envoi du montant approuvé",
       "kycAml": "Full KYC/AML and beneficial ownership disclosure",
       "mandateAlignment": "Investment thesis must align with pool mandate",
       "minimumTicket": "Minimum request USD $500,000",
@@ -1122,7 +1122,8 @@
       "subtitle": "Create your enterprise partner account to explore sovereign capital pools.",
       "fullName": "Nom complet",
       "phone": "Téléphone (facultatif)",
-      "submit": "Créer un compte partenaire",
+      "submit": "Créer un compte Capital Access",
+      "acceptTerms": "J'accepte les",
       "hasAccount": "Déjà inscrit ?",
       "error": "L'inscription a échoué. Veuillez réessayer.",
       "welcomeTitle": "Compte créé avec succès",
@@ -1159,7 +1160,7 @@
       "financialsPlaceholder": "Summarize audited financials — revenue trend, EBITDA, debt/equity ratio, key assets…",
       "review": "Review & Submit",
       "selectedPool": "Selected Pool",
-      "termsAccept": "I accept the 10% security deposit requirement, institutional review process, and confirm all information provided is accurate.",
+      "termsAccept": "J'accepte qu'après approbation, un collatéral en espèces de 10% soit viré sur le compte séquestre avant l'envoi du montant approuvé. Ce n'est pas une commission. J'accepte le processus d'examen institutionnel et je confirme que les informations fournies sont exactes.",
       "back": "Retour",
       "continue": "Continuer",
       "submit": "Envoyer la demande",
@@ -1167,7 +1168,7 @@
       "submittedTitle": "Application Submitted",
       "submittedDesc": "Your capital access request is now under institutional review. You will be notified upon approval or rejection.",
       "viewApplications": "View My Applications",
-      "termsAcceptBefore": "J'accepte l'exigence de dépôt de garantie de 10 % et les",
+      "termsAcceptBefore": "J'accepte qu'après approbation, un collatéral en espèces de 10% soit viré sur le compte séquestre avant l'envoi du montant approuvé. Ce n'est pas une commission. J'accepte les",
       "termsAcceptAfter": ", le processus d'examen institutionnel, et je confirme que les informations fournies sont exactes.",
       "operatingCountry": "Principal operating country",
       "yearsOperating": "Years of operation",
@@ -1218,7 +1219,7 @@
       "progress": "Onboarding Progress",
       "rm": "Relationship Manager",
       "escrowTitle": "Dépôt de garantie — instructions",
-      "escrowDesc": "Transfer exactly 10% of your approved facility amount to the escrow account below. Use the wire reference exactly as shown.",
+      "escrowDesc": "SBDV paie un compte que vous désignez ; cette trésorerie vient donc en premier. Les immeubles et autres actifs locaux ne sont pas acceptés. Virez exactement 10% du montant approuvé sur le compte séquestre ci-dessous. Il s'agit de votre trésorerie, non d'une commission, et elle ne porte pas intérêt. Après confirmation par SBDV, le montant approuvé est envoyé en totalité. Utilisez la référence de virement exactement comme indiquée.",
       "bank": "Banque",
       "account": "Titulaire",
       "wireReference": "Wire / Transfer Reference",
@@ -1266,7 +1267,7 @@
       "uploadSlip": "Upload Slip",
       "paymentSlipUploaded": "Payment slip on file",
       "slipRequiredFirst": "Upload your payment slip before submitting the wire reference.",
-      "awaitingAdminConfirm": "Our team will verify your transfer and unlock the documentation stage.",
+      "awaitingAdminConfirm": "Our team will verify your transfer. After it is confirmed, you will submit the bank account for the approved amount.",
       "beginOnboarding": "Begin Onboarding",
       "bankAddress": "Bank Address",
       "beneficiaryAddress": "Beneficiary Address",
@@ -1377,14 +1378,16 @@
       "applyTime": "1–2 semaines",
       "dd": "Examen des documents et des UBO",
       "ddTime": "2–4 semaines",
-      "kyc": "KYC après le dépôt de garantie",
+      "kyc": "KYC avant le dépôt de garantie",
       "kycTime": "5–10 jours ouvrables",
       "funding": "Clôture et mise à disposition des fonds",
       "fundingTime": "3–7 jours"
     },
     "settings": {
       "title": "Account Settings"
-    }
+    },
+    "yearlyInterestNote": "Les intérêts annuels sont calculés uniquement sur le montant approuvé, et non sur le collatéral en espèces.",
+    "amountDisbursed": "Montant versé"
   },
   "chat": {
     "open": "Interroger SBDV",

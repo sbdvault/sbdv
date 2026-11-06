@@ -1031,9 +1031,9 @@
       "title": "Capital estructurado para empresas cualificadas",
       "subtitle": "SBDV no es un banco. Una facilidad no es un depósito ni un compromiso hasta que se aprueba.",
       "applyAccess": "Solicitar acceso",
-      "partnerLogin": "Acceso de socios",
+      "partnerLogin": "Acceso a la cuenta",
       "eligibility": "Sociedades operativas con al menos dos años de historial, cuentas auditadas o revisadas, y una solicitud desde USD 500,000. La aprobación es discrecional.",
-      "collateralRule": "El 10% se solicita solo después de la aprobación. Es colateral en efectivo, no un honorario. Se devuelve íntegramente si SBDV rechaza la solicitud por un motivo que no sea el incumplimiento del solicitante ni un control de cumplimiento no superado. Solicitar no constituye un compromiso de préstamo."
+      "collateralRule": "SBDV paga a una cuenta que usted designa, por eso la garantía en efectivo va primero. No se aceptan inmuebles ni otros activos locales. El 10% se solicita solo después de la aprobación. La cuenta de depósito en garantía se muestra antes de que pague. Es su dinero, no una comisión, y no genera intereses. Una vez confirmado, se envía el importe aprobado completo. Si reembolsa en su totalidad, el saldo no utilizado se devuelve. Si incumple, puede aplicarse a lo vencido. Presentar la solicitud no es un compromiso de prestar."
     },
     "features": {
       "title": "Por qué las empresas eligen Capital Access",
@@ -1045,7 +1045,7 @@
       "enterpriseFocusTitle": "Concebido para sociedades operativas",
       "enterpriseFocusDesc": "Para empresas establecidas con estados financieros auditados o revisados y una tesis de inversión clara.",
       "structuredSecurityTitle": "Proceso sin sorpresa",
-      "structuredSecurityDesc": "10% de colateral en efectivo, look-through íntegro de KYC/UBO y aprobación discrecional conforme a las normas suizas de AML."
+      "structuredSecurityDesc": "Garantía en efectivo del 10% antes de enviar fondos. No se aceptan inmuebles ni otros activos locales. Revisión completa de KYC/UBO y aprobación discrecional conforme a las normas suizas contra el blanqueo."
     },
     "howItWorks": {
       "title": "How It Works",
@@ -1064,11 +1064,11 @@
       "reviewTitle": "Revisión institucional",
       "reviewDesc": "SBDV examina los documentos, los titulares reales y la alineación con el mandato. La aprobación es discrecional y no constituye un compromiso hasta que se emite.",
       "depositTitle": "Depósito de garantía y origen de los fondos",
-      "depositDesc": "Tras la aprobación, acepte las Condiciones de la facilidad, transfiera el colateral en efectivo del 10% y declare el origen de esos fondos.",
+      "depositDesc": "Tras la revisión KYC se muestra la cuenta de depósito en garantía. Transfiera el 10% del importe aprobado. Es su dinero, retenido como garantía, no una comisión. SBDV envía después el importe aprobado completo a la cuenta que usted designa.",
       "kycTitle": "Examen de KYC y de sanciones",
       "kycDesc": "Examen suizo de AML de la sociedad, los firmantes y los titulares reales últimos. Las jurisdicciones de alto riesgo reciben diligencia debida reforzada.",
       "fundingTitle": "Desembolso y reembolso",
-      "fundingDesc": "Indique una cuenta bancaria a nombre del prestatario (SWIFT más IBAN o número de cuenta local). Los fondos se liberan en USD; reembolse conforme al calendario de su panel."
+      "fundingDesc": "Indique una cuenta bancaria a nombre del prestatario (SWIFT más IBAN o número de cuenta local). El importe aprobado completo se libera en USD solo después de confirmarse la garantía en efectivo del 10%. Reembolse según el calendario de su panel."
     },
     "nav": {
       "overview": "Overview",
@@ -1103,7 +1103,7 @@
       "title": "Access Conditions",
       "minimumOperatingYears": "Minimum 2 years of operating history",
       "auditedFinancials": "Audited or reviewed financial statements required",
-      "securityDeposit": "10% security deposit on requested facility amount",
+      "securityDeposit": "Garantía en efectivo del 10% después de la aprobación, antes de enviar el importe aprobado",
       "kycAml": "Full KYC/AML and beneficial ownership disclosure",
       "mandateAlignment": "Investment thesis must align with pool mandate",
       "minimumTicket": "Minimum request USD $500,000",
@@ -1122,7 +1122,8 @@
       "subtitle": "Create your enterprise partner account to explore sovereign capital pools.",
       "fullName": "Nombre completo",
       "phone": "Teléfono (opcional)",
-      "submit": "Crear cuenta de socio",
+      "submit": "Crear cuenta de Capital Access",
+      "acceptTerms": "Acepto las",
       "hasAccount": "¿Ya está registrado?",
       "error": "El registro no se ha completado. Inténtelo de nuevo.",
       "welcomeTitle": "Cuenta creada correctamente",
@@ -1159,7 +1160,7 @@
       "financialsPlaceholder": "Summarize audited financials — revenue trend, EBITDA, debt/equity ratio, key assets…",
       "review": "Review & Submit",
       "selectedPool": "Selected Pool",
-      "termsAccept": "I accept the 10% security deposit requirement, institutional review process, and confirm all information provided is accurate.",
+      "termsAccept": "Acepto que, tras la aprobación, se transfiera una garantía en efectivo del 10% a la cuenta de depósito en garantía antes de enviar el importe aprobado. No es una comisión. Acepto el proceso de revisión institucional y confirmo que la información facilitada es exacta.",
       "back": "Atrás",
       "continue": "Continuar",
       "submit": "Enviar solicitud",
@@ -1167,7 +1168,7 @@
       "submittedTitle": "Application Submitted",
       "submittedDesc": "Your capital access request is now under institutional review. A confirmation email has been sent to your registered address.",
       "viewApplications": "View My Applications",
-      "termsAcceptBefore": "I accept the 10% security deposit requirement and the",
+      "termsAcceptBefore": "Acepto que, tras la aprobación, se transfiera una garantía en efectivo del 10% a la cuenta de depósito en garantía antes de enviar el importe aprobado. No es una comisión. Acepto los",
       "termsAcceptAfter": ", the institutional review process, and I confirm that all information provided is accurate.",
       "operatingCountry": "Principal operating country",
       "yearsOperating": "Years of operation",
@@ -1212,7 +1213,7 @@
       "progress": "Onboarding Progress",
       "rm": "Relationship Manager",
       "escrowTitle": "Security Deposit — Escrow Instructions",
-      "escrowDesc": "Transfer exactly 10% of your approved facility amount to the escrow account below. Use the wire reference exactly as shown.",
+      "escrowDesc": "SBDV paga a una cuenta que usted designa, por eso este efectivo va primero. No se aceptan inmuebles ni otros activos locales. Transfiera exactamente el 10% del importe aprobado a la cuenta de depósito en garantía que figura abajo. Es su dinero, no una comisión, y no genera intereses. Cuando SBDV lo confirme, se envía el importe aprobado completo. Use la referencia de transferencia exactamente como se indica.",
       "escrowPending": "Escrow payment details are being prepared by our capital desk. They will appear here as soon as your application is fully approved.",
       "bank": "Banco",
       "bankAddress": "Bank Address",
@@ -1230,7 +1231,7 @@
       "uploadSlip": "Upload Slip",
       "paymentSlipUploaded": "Payment slip on file",
       "slipRequiredFirst": "Upload your payment slip before submitting the wire reference.",
-      "awaitingAdminConfirm": "Our team will verify your transfer and unlock the documentation stage.",
+      "awaitingAdminConfirm": "Our team will verify your transfer. After it is confirmed, you will submit the bank account for the approved amount.",
       "documentsTitle": "Documentos requeridos",
       "documentsDesc": "Upload all four documents within 14 business days of deposit confirmation.",
       "upload": "Upload",
@@ -1377,14 +1378,16 @@
       "applyTime": "1–2 semanas",
       "dd": "Revisión de documentos y de UBO",
       "ddTime": "2–4 semanas",
-      "kyc": "KYC después del depósito",
+      "kyc": "KYC antes del depósito",
       "kycTime": "5–10 días hábiles",
       "funding": "Cierre y aportación",
       "fundingTime": "3–7 días"
     },
     "settings": {
       "title": "Account Settings"
-    }
+    },
+    "yearlyInterestNote": "El interés anual se calcula solo sobre el importe aprobado, no sobre la garantía en efectivo.",
+    "amountDisbursed": "Importe desembolsado"
   },
   "chat": {
     "open": "Preguntar a SBDV",

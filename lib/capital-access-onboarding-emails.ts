@@ -43,19 +43,19 @@ const phaseMessages: Record<string, { subject: string; title: string; body: stri
     body: `<p>We have received your documentation package. Our capital desk will review it and either approve with escrow instructions or request additional documents.</p>`,
   },
   AWAITING_DEPOSIT: {
-    subject: "Facility Approved — Security Deposit Required",
-    title: "Your facility is approved",
-    body: `<p>Your documents have been accepted and the facility is approved. Transfer your 10% security deposit using the escrow instructions in your <strong>Facility Dashboard</strong>. Include the wire reference exactly as shown.</p>`,
+    subject: "KYC Complete — Security Deposit Required",
+    title: "Wire the 10% cash collateral",
+    body: `<p>KYC review is complete. Transfer your 10% cash collateral using the escrow instructions in your <strong>Facility Dashboard</strong>. Include the wire reference exactly as shown. It is your cash, not a fee. After it is confirmed, you will submit the bank account for the approved amount.</p>`,
   },
   KYC_REVIEW: {
-    subject: "Deposit Confirmed — KYC Under Review",
+    subject: "Facility Approved — KYC Under Review",
     title: "Compliance review in progress",
-    body: `<p>Your security deposit has been verified. Our compliance team is conducting final KYC/AML verification. No action required.</p>`,
+    body: `<p>Your documents have been accepted and the facility is approved. Our compliance team is reviewing the company and its beneficial owners. No payment is due now. After this review, you will be asked to wire the 10% cash collateral.</p>`,
   },
   AWAITING_BANK_DETAILS: {
-    subject: "KYC Complete — Submit Disbursement Bank Details",
+    subject: "Deposit Confirmed — Submit Disbursement Bank Details",
     title: "Submit your disbursement bank account",
-    body: `<p>KYC review is complete. Please open <strong>Onboarding</strong> and submit the bank account in the borrower’s name where we should disburse your approved facility amount. SWIFT/BIC is required. Provide an IBAN if your bank uses one; otherwise enter the local account number and routing code.</p>`,
+    body: `<p>Your 10% cash collateral is confirmed. Please open <strong>Onboarding</strong> and submit the bank account in the borrower’s name where we should disburse your approved facility amount. SWIFT/BIC is required. Provide an IBAN if your bank uses one; otherwise enter the local account number and routing code.</p>`,
   },
   READY_FOR_DISBURSEMENT: {
     subject: "Bank Details Received — Disbursement Pending",

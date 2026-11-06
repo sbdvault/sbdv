@@ -1031,9 +1031,9 @@
       "title": "적격 기업을 위한 구조화 자본",
       "subtitle": "SBDV는 은행이 아닙니다. 시설은 예금이 아니며, 승인되기 전까지 약정이 아닙니다.",
       "applyAccess": "접근 신청",
-      "partnerLogin": "파트너 로그인",
+      "partnerLogin": "계정 로그인",
       "eligibility": "영업 이력이 2년 이상이고, 감사 또는 검토된 재무제표를 갖추며, USD 500,000부터 요청하는 사업회사입니다. 승인은 재량에 따릅니다.",
-      "collateralRule": "10%는 승인 후에만 요청됩니다. 이는 수수료가 아닌 현금 담보입니다. 신청인의 위반 또는 컴플라이언스 심사 실패 이외의 사유로 SBDV가 거절하는 경우 전액 반환됩니다. 신청은 대출 약정이 아닙니다."
+      "collateralRule": "SBDV는 귀하가 지정한 계좌로 지급합니다. 따라서 현금 담보가 먼저입니다. 주택이나 그 밖의 현지 자산은 받지 않습니다. 10%는 승인 후에만 요청됩니다. 지급 전에 에스크로 계좌가 표시됩니다. 이는 수수료가 아니라 귀하의 현금이며, 이자가 붙지 않습니다. 확인된 후 승인 금액 전액이 송금됩니다. 전액을 상환하면 사용되지 않은 잔액이 반환됩니다. 채무를 불이행하면 연체금에 충당될 수 있습니다. 신청은 대출 약속이 아닙니다."
     },
     "features": {
       "title": "기업이 Capital Access를 선택하는 이유",
@@ -1045,7 +1045,7 @@
       "enterpriseFocusTitle": "사업회사를 위하여",
       "enterpriseFocusDesc": "감사 또는 검토된 재무와 명확한 투자 방침을 갖춘, 확립된 기업을 위한 것입니다.",
       "structuredSecurityTitle": "예상 밖의 일 없는 절차",
-      "structuredSecurityDesc": "10% 현금 담보, 완전한 KYC/UBO 룩스루, 그리고 스위스 AML 기준 아래의 재량 승인입니다."
+      "structuredSecurityDesc": "자금을 보내기 전의 10% 현금 담보. 주택이나 그 밖의 현지 자산은 받지 않습니다. KYC/UBO 전면 심사와 스위스 자금세탁방지 기준에 따른 재량적 승인."
     },
     "howItWorks": {
       "title": "How It Works",
@@ -1064,11 +1064,11 @@
       "reviewTitle": "기관 심사",
       "reviewDesc": "SBDV는 문서, 실질 소유자 및 만데이트와의 정합을 심사합니다. 승인은 재량에 따르며, 발행되기 전까지 약정이 아닙니다.",
       "depositTitle": "보증금 및 자금의 출처",
-      "depositDesc": "승인 후 약정 조건을 수락하고, 10% 현금 담보를 전신 송금하며, 그 자금의 출처를 신고하십시오.",
+      "depositDesc": "KYC 심사 후 에스크로 계좌가 표시됩니다. 승인 금액의 10%를 송금하십시오. 이는 담보로 보유되는 귀하의 현금이며 수수료가 아닙니다. 그 후 SBDV는 승인 금액 전액을 귀하가 지정한 계좌로 송금합니다.",
       "kycTitle": "KYC 및 제재 심사",
       "kycDesc": "회사, 서명권자 및 최종 실질 소유자에 대하여 스위스 AML 심사를 합니다. 고위험 관할에는 강화된 실사를 적용합니다.",
       "fundingTitle": "자금 집행 및 상환",
-      "fundingDesc": "차주 명의의 은행 계좌(SWIFT와 IBAN 또는 현지 계좌번호)를 제출하십시오. 자금은 USD로 집행됩니다. 대시보드의 일정에 따라 상환하십시오."
+      "fundingDesc": "차주 명의의 은행 계좌(SWIFT와 IBAN 또는 현지 계좌번호)를 제출하십시오. 10% 현금 담보가 확인된 뒤에만 승인 금액 전액이 미국 달러로 지급됩니다. 대시보드의 일정에 따라 상환하십시오."
     },
     "nav": {
       "overview": "Overview",
@@ -1103,7 +1103,7 @@
       "title": "Access Conditions",
       "minimumOperatingYears": "Minimum 2 years of operating history",
       "auditedFinancials": "Audited or reviewed financial statements required",
-      "securityDeposit": "10% security deposit on requested facility amount",
+      "securityDeposit": "승인 후, 승인 금액이 송금되기 전의 10% 현금 담보",
       "kycAml": "Full KYC/AML and beneficial ownership disclosure",
       "mandateAlignment": "Investment thesis must align with pool mandate",
       "minimumTicket": "Minimum request USD $500,000",
@@ -1122,7 +1122,8 @@
       "subtitle": "Create your enterprise partner account to explore sovereign capital pools.",
       "fullName": "성명",
       "phone": "전화(선택)",
-      "submit": "파트너 계정 만들기",
+      "submit": "Capital Access 계정 만들기",
+      "acceptTerms": "다음에 동의합니다",
       "hasAccount": "이미 등록하셨습니까?",
       "error": "등록에 실패하였습니다. 다시 시도해 주십시오.",
       "welcomeTitle": "계정을 만들었습니다",
@@ -1159,7 +1160,7 @@
       "financialsPlaceholder": "Summarize audited financials — revenue trend, EBITDA, debt/equity ratio, key assets…",
       "review": "Review & Submit",
       "selectedPool": "Selected Pool",
-      "termsAccept": "I accept the 10% security deposit requirement, institutional review process, and confirm all information provided is accurate.",
+      "termsAccept": "승인 후 승인 금액이 송금되기 전에 10% 현금 담보를 에스크로 계좌로 송금하는 데 동의합니다. 이는 수수료가 아닙니다. 기관 심사 절차에 동의하며, 제공한 정보가 정확함을 확인합니다.",
       "back": "뒤로",
       "continue": "계속",
       "submit": "Submit Application",
@@ -1167,7 +1168,7 @@
       "submittedTitle": "Application Submitted",
       "submittedDesc": "Your capital access request is now under institutional review. A confirmation email has been sent to your registered address.",
       "viewApplications": "View My Applications",
-      "termsAcceptBefore": "I accept the 10% security deposit requirement and the",
+      "termsAcceptBefore": "승인 후 승인 금액이 송금되기 전에 10% 현금 담보를 에스크로 계좌로 송금하는 데 동의합니다. 이는 수수료가 아닙니다. 본인은 다음에 동의합니다:",
       "termsAcceptAfter": ", the institutional review process, and I confirm that all information provided is accurate.",
       "operatingCountry": "Principal operating country",
       "yearsOperating": "Years of operation",
@@ -1212,7 +1213,7 @@
       "progress": "Onboarding Progress",
       "rm": "Relationship Manager",
       "escrowTitle": "Security Deposit — Escrow Instructions",
-      "escrowDesc": "Transfer exactly 10% of your approved facility amount to the escrow account below. Use the wire reference exactly as shown.",
+      "escrowDesc": "SBDV는 귀하가 지정한 계좌로 지급합니다. 따라서 이 현금이 먼저입니다. 주택이나 그 밖의 현지 자산은 받지 않습니다. 승인 금액의 10%를 아래 에스크로 계좌로 정확히 송금하십시오. 이는 수수료가 아니라 귀하의 현금이며, 이자가 붙지 않습니다. SBDV가 확인한 후 승인 금액 전액이 송금됩니다. 송금 참조번호는 표시된 그대로 사용하십시오.",
       "escrowPending": "Escrow payment details are being prepared by our capital desk. They will appear here as soon as your application is fully approved.",
       "bank": "Bank",
       "bankAddress": "Bank Address",
@@ -1230,7 +1231,7 @@
       "uploadSlip": "Upload Slip",
       "paymentSlipUploaded": "Payment slip on file",
       "slipRequiredFirst": "Upload your payment slip before submitting the wire reference.",
-      "awaitingAdminConfirm": "Our team will verify your transfer and unlock the documentation stage.",
+      "awaitingAdminConfirm": "Our team will verify your transfer. After it is confirmed, you will submit the bank account for the approved amount.",
       "documentsTitle": "Required Documentation",
       "documentsDesc": "Upload all four documents within 14 business days of deposit confirmation.",
       "upload": "Upload",
@@ -1377,14 +1378,16 @@
       "applyTime": "1–2주",
       "dd": "문서 및 UBO 심사",
       "ddTime": "2–4주",
-      "kyc": "예치 후 KYC",
+      "kyc": "예치 전 KYC",
       "kycTime": "영업일 5–10일",
       "funding": "클로징 및 자금 집행",
       "fundingTime": "3–7일"
     },
     "settings": {
       "title": "Account Settings"
-    }
+    },
+    "yearlyInterestNote": "연이자는 승인 금액에만 부과되며, 현금 담보에는 부과되지 않습니다.",
+    "amountDisbursed": "지급 금액"
   },
   "chat": {
     "open": "SBDV에 문의",

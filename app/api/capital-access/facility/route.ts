@@ -31,7 +31,7 @@ export async function GET() {
       },
     });
 
-    // Legacy approved with no phase → deposit (old first step)
+    // Legacy approved with no phase start at KYC, before the deposit is requested
     await prisma.capitalAccessRequest.updateMany({
       where: {
         userId: session.user.id,
@@ -39,9 +39,21 @@ export async function GET() {
         onboardingPhase: null,
       },
       data: {
-        onboardingPhase: "AWAITING_DEPOSIT",
+        onboardingPhase: "KYC_REVIEW",
         relationshipManager: "Capital Access Desk",
       },
+    });
+
+    // Unconfirmed deposits that have not finished KYC move back so the bar stays truthful
+    await prisma.capitalAccessRequest.updateMany({
+      where: {
+        userId: session.user.id,
+        status: "APPROVED",
+        onboardingPhase: "AWAITING_DEPOSIT",
+        depositConfirmedAt: null,
+        kycCompletedAt: null,
+      },
+      data: { onboardingPhase: "KYC_REVIEW" },
     });
 
     const facilities = await prisma.capitalAccessRequest.findMany({

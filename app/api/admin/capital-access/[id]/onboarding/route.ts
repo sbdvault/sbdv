@@ -56,7 +56,10 @@ export async function PATCH(
     }
 
     if (action === "confirm_deposit" || action === "advance") {
-      let nextPhase = getNextAdminAction(facility.onboardingPhase);
+      let nextPhase = getNextAdminAction(facility.onboardingPhase, {
+        depositConfirmed: Boolean(facility.depositConfirmedAt),
+        kycComplete: Boolean(facility.kycCompletedAt),
+      });
       if (!nextPhase) {
         return NextResponse.json({ error: "Cannot advance from current phase" }, { status: 400 });
       }
@@ -115,7 +118,7 @@ export async function PATCH(
       if (facility.onboardingPhase === "AWAITING_DEPOSIT") {
         updateData.depositConfirmedAt = new Date();
       }
-      if (nextPhase === "AWAITING_BANK_DETAILS") {
+      if (facility.onboardingPhase === "KYC_REVIEW") {
         updateData.kycCompletedAt = new Date();
       }
       if (nextPhase === "DISBURSED") {

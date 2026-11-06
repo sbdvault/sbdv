@@ -60,6 +60,7 @@ interface Application {
   kycSanctionsScreen?: boolean;
   kycSofAccepted?: boolean;
   kycEnhancedDd?: boolean;
+  kycCompletedAt?: string | null;
   ubos?: {
     id: string;
     fullName: string;
@@ -380,7 +381,12 @@ export default function AdminCapitalAccessPage() {
             const isReviewing = reviewingId === app.id;
             const canApprove = app.status === "PENDING" || app.status === "UNDER_REVIEW";
             const needsEscrow = app.status === "APPROVED" && !app.escrow.configured;
-            const nextPhase = app.onboardingPhase ? getNextAdminAction(app.onboardingPhase) : null;
+            const nextPhase = app.onboardingPhase
+              ? getNextAdminAction(app.onboardingPhase, {
+                  depositConfirmed: Boolean(app.depositConfirmedAt),
+                  kycComplete: Boolean(app.kycCompletedAt),
+                })
+              : null;
             const docsComplete =
               app.docsComplete ??
               hasCompleteKycPack(app.documents.map((d) => d.type), app.ubos?.length ?? 0);
@@ -514,10 +520,10 @@ export default function AdminCapitalAccessPage() {
                       <p className="text-charcoal/40">{t("capitalAccess.yearlyInterest")}</p>
                       <p className="font-medium">{formatUsd(balances.yearlyInterestUsd)}</p>
                     </div>
-                    {balances.creditedTotalUsd != null && (
+                    {balances.disbursedAmountUsd != null && (
                       <div>
-                        <p className="text-charcoal/40">{t("capitalAccess.creditedTotal")}</p>
-                        <p className="font-medium">{formatUsd(balances.creditedTotalUsd)}</p>
+                        <p className="text-charcoal/40">{t("capitalAccess.amountDisbursed")}</p>
+                        <p className="font-medium">{formatUsd(balances.disbursedAmountUsd)}</p>
                       </div>
                     )}
                     <div>
@@ -723,7 +729,8 @@ export default function AdminCapitalAccessPage() {
                           className={`text-xs px-2 py-1 rounded ${
                             disbursedOrActive && (i <= phaseIndex || phase === "ACTIVE")
                               ? "bg-green-100 text-green-800"
-                              : i < phaseIndex
+                              : i < phaseIndex ||
+                                  (phase === "AWAITING_DEPOSIT" && Boolean(app.depositConfirmedAt))
                                 ? "bg-green-100 text-green-800"
                                 : i === phaseIndex
                                   ? "bg-gold/20 text-charcoal font-medium"

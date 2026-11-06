@@ -62,7 +62,7 @@ export async function GET(
 
     if (!facility.onboardingPhase) {
       const phase =
-        facility.status === "APPROVED" ? "AWAITING_DEPOSIT" : "AWAITING_DOCUMENTS";
+        facility.status === "APPROVED" ? "KYC_REVIEW" : "AWAITING_DOCUMENTS";
       await prisma.capitalAccessRequest.update({
         where: { id },
         data: {
@@ -72,6 +72,17 @@ export async function GET(
       });
       facility.onboardingPhase = phase;
       facility.relationshipManager = facility.relationshipManager || "Capital Access Desk";
+    } else if (
+      facility.status === "APPROVED" &&
+      facility.onboardingPhase === "AWAITING_DEPOSIT" &&
+      !facility.depositConfirmedAt &&
+      !facility.kycCompletedAt
+    ) {
+      await prisma.capitalAccessRequest.update({
+        where: { id },
+        data: { onboardingPhase: "KYC_REVIEW" },
+      });
+      facility.onboardingPhase = "KYC_REVIEW";
     }
 
     return NextResponse.json({

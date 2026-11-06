@@ -59,17 +59,16 @@ export interface FacilityBalances {
   collateralDueUsd: number;
   /** Confirmed collateral held. Zero until depositConfirmedAt. */
   collateralReceivedUsd: number;
-  /** Requested facility plus collateral, only after disbursement. */
-  creditedTotalUsd: number | null;
+  /** Approved amount paid to the borrower, only after disbursement. Collateral is not included. */
+  disbursedAmountUsd: number | null;
   /** Annual interest on the requested facility, not on collateral. */
   yearlyInterestUsd: number;
   interestBaseUsd: number;
 }
 
 /**
- * Dashboard figures for a facility. Interest and repayment stay on the
- * requested amount; collateral is added to the credited total only after
- * the facility is disbursed.
+ * Dashboard figures for a facility. Interest and the amount disbursed stay
+ * on the approved amount. The 10% cash collateral is held separately.
  */
 export function facilityBalances(input: {
   requestedAmountUsd: number;
@@ -79,14 +78,11 @@ export function facilityBalances(input: {
   disbursedAt: string | Date | null;
 }): FacilityBalances {
   const collateralReceivedUsd = input.depositConfirmedAt ? input.securityDepositUsd : 0;
-  const creditedTotalUsd = input.disbursedAt
-    ? input.requestedAmountUsd + input.securityDepositUsd
-    : null;
 
   return {
     collateralDueUsd: input.securityDepositUsd,
     collateralReceivedUsd,
-    creditedTotalUsd,
+    disbursedAmountUsd: input.disbursedAt ? input.requestedAmountUsd : null,
     yearlyInterestUsd: input.requestedAmountUsd * (input.interestRatePct / 100),
     interestBaseUsd: input.requestedAmountUsd,
   };

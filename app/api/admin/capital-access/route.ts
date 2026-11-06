@@ -33,6 +33,16 @@ export async function GET() {
       },
     });
 
+    await prisma.capitalAccessRequest.updateMany({
+      where: {
+        status: "APPROVED",
+        onboardingPhase: "AWAITING_DEPOSIT",
+        depositConfirmedAt: null,
+        kycCompletedAt: null,
+      },
+      data: { onboardingPhase: "KYC_REVIEW" },
+    });
+
     const applications = await prisma.capitalAccessRequest.findMany({
       orderBy: { createdAt: "desc" },
       include: {
@@ -259,7 +269,7 @@ export async function PATCH(request: Request) {
         adminNotes: adminNotes?.trim() || null,
         ...(status === "APPROVED" && escrowData
           ? {
-              onboardingPhase: "AWAITING_DEPOSIT",
+              onboardingPhase: "KYC_REVIEW",
               relationshipManager: "Capital Access Desk",
               escrowBankName: escrowData.escrowBankName,
               escrowBankAddress: escrowData.escrowBankAddress,
@@ -296,7 +306,7 @@ export async function PATCH(request: Request) {
             updated.user.email,
             updated.user.name,
             updated.companyName,
-            "AWAITING_DEPOSIT"
+            "KYC_REVIEW"
           ),
       ]);
     }

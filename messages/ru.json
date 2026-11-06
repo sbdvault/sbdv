@@ -1031,9 +1031,9 @@
       "title": "Структурированный капитал для квалифицированных предприятий",
       "subtitle": "SBDV не является банком. Линия не является вкладом и не является обязательством, пока не одобрена.",
       "applyAccess": "Подать заявку на доступ",
-      "partnerLogin": "Вход для партнёров",
+      "partnerLogin": "Вход в учётную запись",
       "eligibility": "Действующие компании с историей не менее двух лет, аудированной или прошедшей обзорную проверку отчётностью и запросом от USD 500,000. Одобрение осуществляется по усмотрению.",
-      "collateralRule": "Запрос на 10% направляется только после одобрения. Это денежное обеспечение, а не комиссия. Оно возвращается в полном объёме, если SBDV отказывает по основанию иному, чем нарушение со стороны заявителя или непрохождение проверки соответствия. Подача заявки не является обязательством предоставить заём."
+      "collateralRule": "SBDV платит на счёт, который указывает заёмщик, поэтому денежное обеспечение вносится первым. Дома и иные местные активы не принимаются. 10% запрашиваются только после одобрения. Эскроу-счёт показывается до платежа. Это ваши деньги, не комиссия, и на них не начисляются проценты. После подтверждения направляется вся одобренная сумма. При полном погашении неиспользованный остаток возвращается. При неисполнении он может быть зачтён в счёт просроченного. Подача заявки не является обязательством выдать заём."
     },
     "features": {
       "title": "Почему предприятия выбирают Capital Access",
@@ -1045,7 +1045,7 @@
       "enterpriseFocusTitle": "Создано для действующих компаний",
       "enterpriseFocusDesc": "Для состоявшихся предприятий с аудированной или прошедшей обзорную проверку отчётностью и ясным инвестиционным тезисом.",
       "structuredSecurityTitle": "Порядок без неожиданностей",
-      "structuredSecurityDesc": "10% денежного обеспечения, полная сквозная проверка KYC/UBO и одобрение по усмотрению по швейцарским стандартам AML."
+      "structuredSecurityDesc": "Денежное обеспечение 10% до отправки любых средств. Дома и иные местные активы не принимаются. Полная проверка KYC/UBO и одобрение по усмотрению SBDV в соответствии со швейцарскими нормами ПОД/ФТ."
     },
     "howItWorks": {
       "title": "How It Works",
@@ -1064,11 +1064,11 @@
       "reviewTitle": "Институциональная проверка",
       "reviewDesc": "SBDV проверяет документы, бенефициарных собственников и соответствие мандату. Одобрение осуществляется по усмотрению и не является обязательством, пока не выдано.",
       "depositTitle": "Обеспечительный взнос и происхождение средств",
-      "depositDesc": "После одобрения примите Условия линии, переведите 10% денежного обеспечения и заявите источник этих средств.",
+      "depositDesc": "После проверки KYC показывается эскроу-счёт. Перечислите 10% одобренной суммы. Это ваши деньги, удерживаемые как обеспечение, а не комиссия. Затем SBDV направляет всю одобренную сумму на счёт, который вы укажете.",
       "kycTitle": "Проверка KYC и санкций",
       "kycDesc": "Швейцарская проверка AML компании, подписантов и конечных бенефициарных собственников. К юрисдикциям повышенного риска применяется усиленная проверка.",
       "fundingTitle": "Выдача и погашение",
-      "fundingDesc": "Укажите банковский счёт на имя заёмщика (SWIFT и IBAN либо местный номер счёта). Средства выдаются в USD; погашение — по графику в вашей панели."
+      "fundingDesc": "Укажите банковский счёт на имя заёмщика (SWIFT плюс IBAN или местный номер счёта). Вся одобренная сумма выплачивается в USD только после подтверждения денежного обеспечения 10%. Погашение — по графику в вашей панели."
     },
     "nav": {
       "overview": "Overview",
@@ -1103,7 +1103,7 @@
       "title": "Access Conditions",
       "minimumOperatingYears": "Minimum 2 years of operating history",
       "auditedFinancials": "Audited or reviewed financial statements required",
-      "securityDeposit": "10% security deposit on requested facility amount",
+      "securityDeposit": "Денежное обеспечение 10% после одобрения, до отправки одобренной суммы",
       "kycAml": "Full KYC/AML and beneficial ownership disclosure",
       "mandateAlignment": "Investment thesis must align with pool mandate",
       "minimumTicket": "Minimum request USD $500,000",
@@ -1122,7 +1122,8 @@
       "subtitle": "Create your enterprise partner account to explore sovereign capital pools.",
       "fullName": "Полное имя",
       "phone": "Телефон (необязательно)",
-      "submit": "Создать учётную запись партнёра",
+      "submit": "Создать учётную запись Capital Access",
+      "acceptTerms": "Я принимаю",
       "hasAccount": "Уже зарегистрированы?",
       "error": "Регистрация не выполнена. Повторите попытку.",
       "welcomeTitle": "Учётная запись успешно создана",
@@ -1159,7 +1160,7 @@
       "financialsPlaceholder": "Summarize audited financials — revenue trend, EBITDA, debt/equity ratio, key assets…",
       "review": "Review & Submit",
       "selectedPool": "Selected Pool",
-      "termsAccept": "I accept the 10% security deposit requirement, institutional review process, and confirm all information provided is accurate.",
+      "termsAccept": "Я принимаю, что после одобрения денежное обеспечение 10% перечисляется на эскроу-счёт до отправки одобренной суммы. Это не комиссия. Я принимаю процедуру институциональной проверки и подтверждаю, что представленные сведения верны.",
       "back": "Назад",
       "continue": "Далее",
       "submit": "Submit Application",
@@ -1167,7 +1168,7 @@
       "submittedTitle": "Application Submitted",
       "submittedDesc": "Your capital access request is now under institutional review. A confirmation email has been sent to your registered address.",
       "viewApplications": "View My Applications",
-      "termsAcceptBefore": "I accept the 10% security deposit requirement and the",
+      "termsAcceptBefore": "Я принимаю, что после одобрения денежное обеспечение 10% перечисляется на эскроу-счёт до отправки одобренной суммы. Это не комиссия. Я принимаю",
       "termsAcceptAfter": ", the institutional review process, and I confirm that all information provided is accurate.",
       "operatingCountry": "Principal operating country",
       "yearsOperating": "Years of operation",
@@ -1212,7 +1213,7 @@
       "progress": "Onboarding Progress",
       "rm": "Relationship Manager",
       "escrowTitle": "Security Deposit — Escrow Instructions",
-      "escrowDesc": "Transfer exactly 10% of your approved facility amount to the escrow account below. Use the wire reference exactly as shown.",
+      "escrowDesc": "SBDV платит на счёт, который вы указываете, поэтому эти деньги вносятся первыми. Дома и иные местные активы не принимаются. Перечислите ровно 10% одобренной суммы на эскроу-счёт ниже. Это ваши деньги, не комиссия, и на них не начисляются проценты. После подтверждения SBDV направляется вся одобренная сумма. Укажите платёжную ссылку точно как показано.",
       "escrowPending": "Escrow payment details are being prepared by our capital desk. They will appear here as soon as your application is fully approved.",
       "bank": "Bank",
       "bankAddress": "Bank Address",
@@ -1230,7 +1231,7 @@
       "uploadSlip": "Upload Slip",
       "paymentSlipUploaded": "Payment slip on file",
       "slipRequiredFirst": "Upload your payment slip before submitting the wire reference.",
-      "awaitingAdminConfirm": "Our team will verify your transfer and unlock the documentation stage.",
+      "awaitingAdminConfirm": "Our team will verify your transfer. After it is confirmed, you will submit the bank account for the approved amount.",
       "documentsTitle": "Required Documentation",
       "documentsDesc": "Upload all four documents within 14 business days of deposit confirmation.",
       "upload": "Upload",
@@ -1377,14 +1378,16 @@
       "applyTime": "1–2 недели",
       "dd": "Проверка документов и UBO",
       "ddTime": "2–4 недели",
-      "kyc": "KYC после обеспечения",
+      "kyc": "KYC до обеспечения",
       "kycTime": "5–10 рабочих дней",
       "funding": "Закрытие и финансирование",
       "fundingTime": "3–7 дней"
     },
     "settings": {
       "title": "Account Settings"
-    }
+    },
+    "yearlyInterestNote": "Годовые проценты начисляются только на одобренную сумму, а не на денежное обеспечение.",
+    "amountDisbursed": "Выплаченная сумма"
   },
   "chat": {
     "open": "Спросить SBDV",

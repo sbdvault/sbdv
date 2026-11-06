@@ -1031,9 +1031,9 @@
       "title": "面向符合条件企业的结构化资本",
       "subtitle": "SBDV并非银行。资本便利并非存款，在获得批准之前亦不构成承诺。",
       "applyAccess": "申请准入",
-      "partnerLogin": "合作方登录",
+      "partnerLogin": "账户登录",
       "eligibility": "具有至少两年历史、经审计或审阅的账目，且申请额自 USD 500,000 起的经营中公司。批准为酌情决定。",
-      "collateralRule": "该10%仅在批准后方予要求。其为现金抵押，而非费用。若SBDV拒绝，且拒绝原因并非申请人违约或合规审查未通过，则该款项全额退还。提出申请并不构成放款承诺。"
+      "collateralRule": "SBDV向您指定的账户付款，因此须先提供现金抵押。不接受房产或其他当地资产。10%仅在核准后要求。付款前会向您展示托管账户。这是您的现金，不是费用，也不计息。经确认后，核准金额全额拨付。若您全额偿还，未使用的余额将退还。若您违约，可将其用于清偿逾期款项。提出申请并不构成放款承诺。"
     },
     "features": {
       "title": "企业为何选择Capital Access",
@@ -1045,7 +1045,7 @@
       "enterpriseFocusTitle": "为经营中的公司而设",
       "enterpriseFocusDesc": "面向具备经审计或审阅的财务报表以及明确投资论点的成熟企业。",
       "structuredSecurityTitle": "无意外的程序",
-      "structuredSecurityDesc": "10%现金抵押、完整的KYC/UBO穿透识别，以及依据瑞士AML标准的酌情批准。"
+      "structuredSecurityDesc": "任何资金拨付前须提供10%现金抵押。不接受房产或其他当地资产。完整的KYC/UBO审查，并依瑞士反洗钱标准酌情核准。"
     },
     "howItWorks": {
       "title": "How It Works",
@@ -1064,11 +1064,11 @@
       "reviewTitle": "机构审核",
       "reviewDesc": "SBDV审核文件、受益所有人以及与委托的一致性。批准为酌情决定，在正式作出之前不构成承诺。",
       "depositTitle": "保证金与资金来源",
-      "depositDesc": "批准后，请接受便利条款，电汇10%现金抵押，并申报该等资金的来源。",
+      "depositDesc": "KYC审查完成后将向您展示托管账户。请电汇核准金额的10%。这是您的现金，作为担保持有，不是费用。随后SBDV将核准金额全额拨付至您指定的账户。",
       "kycTitle": "KYC与制裁筛查",
       "kycDesc": "对公司、签署人及最终受益所有人进行瑞士AML审查。高风险司法辖区适用强化尽职调查。",
       "fundingTitle": "发放与偿还",
-      "fundingDesc": "提交借款人名义的银行账户（SWIFT以及IBAN或当地账号）。资金以USD发放；请按您面板中的时间表偿还。"
+      "fundingDesc": "请提供借款人名义的银行账户（SWIFT以及IBAN或当地账号）。仅在10%现金抵押确认后，核准金额才会以美元全额拨付。请按控制面板中的计划偿还。"
     },
     "nav": {
       "overview": "Overview",
@@ -1103,7 +1103,7 @@
       "title": "Access Conditions",
       "minimumOperatingYears": "Minimum 2 years of operating history",
       "auditedFinancials": "Audited or reviewed financial statements required",
-      "securityDeposit": "10% security deposit on requested facility amount",
+      "securityDeposit": "核准后、核准金额拨付前的10%现金抵押",
       "kycAml": "Full KYC/AML and beneficial ownership disclosure",
       "mandateAlignment": "Investment thesis must align with pool mandate",
       "minimumTicket": "Minimum request USD $500,000",
@@ -1122,7 +1122,8 @@
       "subtitle": "Create your enterprise partner account to explore sovereign capital pools.",
       "fullName": "姓名",
       "phone": "电话（选填）",
-      "submit": "创建合作方账户",
+      "submit": "创建 Capital Access 账户",
+      "acceptTerms": "我接受",
       "hasAccount": "已经注册？",
       "error": "注册未成功。请重试。",
       "welcomeTitle": "账户创建成功",
@@ -1159,7 +1160,7 @@
       "financialsPlaceholder": "Summarize audited financials — revenue trend, EBITDA, debt/equity ratio, key assets…",
       "review": "Review & Submit",
       "selectedPool": "Selected Pool",
-      "termsAccept": "I accept the 10% security deposit requirement, institutional review process, and confirm all information provided is accurate.",
+      "termsAccept": "我接受：核准后、核准金额拨付前，须将10%现金抵押电汇至托管账户。这不是费用。我接受机构审查程序，并确认所提供的信息准确。",
       "back": "返回",
       "continue": "继续",
       "submit": "Submit Application",
@@ -1167,7 +1168,7 @@
       "submittedTitle": "Application Submitted",
       "submittedDesc": "Your capital access request is now under institutional review. A confirmation email has been sent to your registered address.",
       "viewApplications": "View My Applications",
-      "termsAcceptBefore": "I accept the 10% security deposit requirement and the",
+      "termsAcceptBefore": "我接受：核准后、核准金额拨付前，须将10%现金抵押电汇至托管账户。这不是费用。我接受",
       "termsAcceptAfter": ", the institutional review process, and I confirm that all information provided is accurate.",
       "operatingCountry": "Principal operating country",
       "yearsOperating": "Years of operation",
@@ -1212,7 +1213,7 @@
       "progress": "Onboarding Progress",
       "rm": "Relationship Manager",
       "escrowTitle": "Security Deposit — Escrow Instructions",
-      "escrowDesc": "Transfer exactly 10% of your approved facility amount to the escrow account below. Use the wire reference exactly as shown.",
+      "escrowDesc": "SBDV向您指定的账户付款，因此须先支付这笔现金。不接受房产或其他当地资产。请将核准金额的10%准确电汇至下方托管账户。这是您的现金，不是费用，也不计息。SBDV确认后，核准金额将全额拨付。请严格按所示附言填写汇款参考号。",
       "escrowPending": "Escrow payment details are being prepared by our capital desk. They will appear here as soon as your application is fully approved.",
       "bank": "Bank",
       "bankAddress": "Bank Address",
@@ -1230,7 +1231,7 @@
       "uploadSlip": "Upload Slip",
       "paymentSlipUploaded": "Payment slip on file",
       "slipRequiredFirst": "Upload your payment slip before submitting the wire reference.",
-      "awaitingAdminConfirm": "Our team will verify your transfer and unlock the documentation stage.",
+      "awaitingAdminConfirm": "Our team will verify your transfer. After it is confirmed, you will submit the bank account for the approved amount.",
       "documentsTitle": "所需文件",
       "documentsDesc": "Upload all four documents within 14 business days of deposit confirmation.",
       "upload": "Upload",
@@ -1377,14 +1378,16 @@
       "applyTime": "1–2周",
       "dd": "文件与UBO审查",
       "ddTime": "2–4周",
-      "kyc": "缴付保证金后的KYC",
+      "kyc": "缴付保证金前的KYC",
       "kycTime": "5–10个工作日",
       "funding": "成交与放款",
       "fundingTime": "3–7天"
     },
     "settings": {
       "title": "Account Settings"
-    }
+    },
+    "yearlyInterestNote": "年利息仅按核准金额计算，不按现金抵押计算。",
+    "amountDisbursed": "已发放金额"
   },
   "chat": {
     "open": "询问SBDV",

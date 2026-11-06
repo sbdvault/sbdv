@@ -1031,9 +1031,9 @@
       "title": "適格企業のための構造化キャピタル",
       "subtitle": "SBDVは銀行ではありません。ファシリティは預金ではなく、承認されるまで確約ではありません。",
       "applyAccess": "アクセスを申請",
-      "partnerLogin": "パートナーログイン",
+      "partnerLogin": "アカウントログイン",
       "eligibility": "事業歴が2年以上あり、監査済みまたはレビュー済みの計算書類を備え、USD 500,000からの請求を行う事業会社です。承認は裁量によります。",
-      "collateralRule": "10%は、承認の後にのみ請求されます。これは現金担保であり、手数料ではありません。申請者の違反またはコンプライアンス審査の不合格以外の理由でSBDVが拒否する場合、全額返還されます。申請は、融資の確約ではありません。"
+      "collateralRule": "SBDVは、お客様が指定する口座へ支払います。そのため現金担保が先です。住宅その他の現地資産は受け付けません。10%は承認後にのみ請求されます。お支払いの前にエスクロー口座を提示します。これは手数料ではなく、お客様の現金であり、利息は付きません。確認後、承認金額の全額が送金されます。全額を返済された場合、未使用の残高は返還されます。不履行の場合、延滞分に充当できます。申請は融資の確約ではありません。"
     },
     "features": {
       "title": "企業がCapital Accessを選ぶ理由",
@@ -1045,7 +1045,7 @@
       "enterpriseFocusTitle": "事業会社のために",
       "enterpriseFocusDesc": "監査済みまたはレビュー済みの財務と、明確な投資方針を備えた、確立した企業のためです。",
       "structuredSecurityTitle": "想定外のない手続き",
-      "structuredSecurityDesc": "10%の現金担保、完全なKYC/UBOのルックスルー、およびスイスのAML基準の下での裁量による承認です。"
+      "structuredSecurityDesc": "資金を送る前の10%の現金担保。住宅その他の現地資産は受け付けません。KYC/UBOの完全な確認と、スイスのAML基準に基づく裁量による承認。"
     },
     "howItWorks": {
       "title": "How It Works",
@@ -1064,11 +1064,11 @@
       "reviewTitle": "機関としての審査",
       "reviewDesc": "SBDVは、文書、実質的支配者およびマンデートとの整合を審査します。承認は裁量により、発行されるまで確約ではありません。",
       "depositTitle": "保証金および資金の出所",
-      "depositDesc": "承認の後、ファシリティ条件を受諾し、10%の現金担保を電信送金し、その資金の出所を申告してください。",
+      "depositDesc": "KYC審査の後、エスクロー口座を提示します。承認金額の10%を送金してください。これは担保として保有するお客様の現金であり、手数料ではありません。その後、SBDVは承認金額の全額を、お客様が指定する口座へ送金します。",
       "kycTitle": "KYCおよび制裁審査",
       "kycDesc": "会社、署名権者および最終的実質的支配者について、スイスのAML審査を行います。高リスク法域には、強化デューデリジェンスを適用します。",
       "fundingTitle": "資金の解放および返済",
-      "fundingDesc": "借主名義の銀行口座（SWIFTに加え、IBANまたは現地口座番号）を提出してください。資金はUSDで解放されます。ダッシュボードのスケジュールに従って返済してください。"
+      "fundingDesc": "借入人名義の銀行口座（SWIFTに加え、IBANまたは現地口座番号）を提出してください。10%の現金担保が確認された後にのみ、承認金額の全額が米ドルで支払われます。返済はダッシュボードのスケジュールに従ってください。"
     },
     "nav": {
       "overview": "Overview",
@@ -1103,7 +1103,7 @@
       "title": "Access Conditions",
       "minimumOperatingYears": "Minimum 2 years of operating history",
       "auditedFinancials": "Audited or reviewed financial statements required",
-      "securityDeposit": "10% security deposit on requested facility amount",
+      "securityDeposit": "承認後、承認金額の送金前に差し入れる10%の現金担保",
       "kycAml": "Full KYC/AML and beneficial ownership disclosure",
       "mandateAlignment": "Investment thesis must align with pool mandate",
       "minimumTicket": "Minimum request USD $500,000",
@@ -1122,7 +1122,8 @@
       "subtitle": "Create your enterprise partner account to explore sovereign capital pools.",
       "fullName": "氏名",
       "phone": "電話（任意）",
-      "submit": "パートナー口座を作成",
+      "submit": "Capital Access口座を作成",
+      "acceptTerms": "次に同意します",
       "hasAccount": "すでにご登録済みですか？",
       "error": "登録に失敗しました。再度お試しください。",
       "welcomeTitle": "口座を作成しました",
@@ -1159,7 +1160,7 @@
       "financialsPlaceholder": "Summarize audited financials — revenue trend, EBITDA, debt/equity ratio, key assets…",
       "review": "Review & Submit",
       "selectedPool": "Selected Pool",
-      "termsAccept": "I accept the 10% security deposit requirement, institutional review process, and confirm all information provided is accurate.",
+      "termsAccept": "承認後、承認金額が送金される前に、10%の現金担保をエスクロー口座へ送金することを承諾します。これは手数料ではありません。機関審査の手続を承諾し、提供した情報が正確であることを確認します。",
       "back": "戻る",
       "continue": "続ける",
       "submit": "Submit Application",
@@ -1167,7 +1168,7 @@
       "submittedTitle": "Application Submitted",
       "submittedDesc": "Your capital access request is now under institutional review. A confirmation email has been sent to your registered address.",
       "viewApplications": "View My Applications",
-      "termsAcceptBefore": "I accept the 10% security deposit requirement and the",
+      "termsAcceptBefore": "承認後、承認金額が送金される前に、10%の現金担保をエスクロー口座へ送金することを承諾します。これは手数料ではありません。私は次を承諾します：",
       "termsAcceptAfter": ", the institutional review process, and I confirm that all information provided is accurate.",
       "operatingCountry": "Principal operating country",
       "yearsOperating": "Years of operation",
@@ -1212,7 +1213,7 @@
       "progress": "Onboarding Progress",
       "rm": "Relationship Manager",
       "escrowTitle": "Security Deposit — Escrow Instructions",
-      "escrowDesc": "Transfer exactly 10% of your approved facility amount to the escrow account below. Use the wire reference exactly as shown.",
+      "escrowDesc": "SBDVは、お客様が指定する口座へ支払います。そのため、この現金が先です。住宅その他の現地資産は受け付けません。承認金額の10%を、下記のエスクロー口座へ正確に送金してください。これは手数料ではなく、お客様の現金であり、利息は付きません。SBDVが確認した後、承認金額の全額が送金されます。振込参照番号は表示どおりに使用してください。",
       "escrowPending": "Escrow payment details are being prepared by our capital desk. They will appear here as soon as your application is fully approved.",
       "bank": "Bank",
       "bankAddress": "Bank Address",
@@ -1230,7 +1231,7 @@
       "uploadSlip": "Upload Slip",
       "paymentSlipUploaded": "Payment slip on file",
       "slipRequiredFirst": "Upload your payment slip before submitting the wire reference.",
-      "awaitingAdminConfirm": "Our team will verify your transfer and unlock the documentation stage.",
+      "awaitingAdminConfirm": "Our team will verify your transfer. After it is confirmed, you will submit the bank account for the approved amount.",
       "documentsTitle": "Required Documentation",
       "documentsDesc": "Upload all four documents within 14 business days of deposit confirmation.",
       "upload": "Upload",
@@ -1377,14 +1378,16 @@
       "applyTime": "1–2週間",
       "dd": "文書およびUBOの審査",
       "ddTime": "2–4週間",
-      "kyc": "保証金後のKYC",
+      "kyc": "保証金前のKYC",
       "kycTime": "5–10営業日",
       "funding": "クロージングおよび資金拠出",
       "fundingTime": "3–7日"
     },
     "settings": {
       "title": "Account Settings"
-    }
+    },
+    "yearlyInterestNote": "年利は、承認金額にのみ課され、現金担保には課されません。",
+    "amountDisbursed": "実行額"
   },
   "chat": {
     "open": "SBDVに尋ねる",

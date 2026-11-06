@@ -17,7 +17,6 @@ const privateClientLinks = [
 ] as const;
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [privateOpen, setPrivateOpen] = useState(false);
   const [mobilePrivateOpen, setMobilePrivateOpen] = useState(false);
@@ -32,12 +31,6 @@ export default function Navbar() {
   const authHref = sessionRole
     ? pathForRole(currentLocale, sessionRole)
     : null;
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
@@ -95,11 +88,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled || privateOpen || isOpen
-          ? "bg-off-white/95 backdrop-blur-md border-b border-charcoal/10"
-          : "bg-transparent"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 bg-off-white/95 backdrop-blur-md border-b border-charcoal/10"
       role="navigation"
       aria-label="Main navigation"
     >

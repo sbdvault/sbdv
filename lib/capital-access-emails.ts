@@ -179,15 +179,15 @@ export async function sendCapitalAccessDecisionEmail(params: {
         <p><strong>Approved facility:</strong> ${formatUsd(params.requestedAmountUsd)}</p>
         <p><strong>Next steps:</strong></p>
         <ol style="padding-left: 20px;">
-          <li><strong>Security deposit:</strong> Transfer ${formatUsd(params.securityDepositUsd)} (10%) to the designated escrow account. Instructions will follow from your relationship manager.</li>
-          <li><strong>Documentation:</strong> Submit final audited financials and signed facility agreement within 14 business days.</li>
-          <li><strong>Disbursement:</strong> Upon deposit confirmation and KYC completion, funds will be released per your approved investment mandate.</li>
+          <li><strong>KYC:</strong> Our compliance team reviews the company and its beneficial owners. No payment is due during this review.</li>
+          <li><strong>Security deposit:</strong> After KYC, transfer ${formatUsd(params.securityDepositUsd)} (10%) to the escrow account shown in your facility dashboard. It is your cash, not a fee.</li>
+          <li><strong>Disbursement:</strong> After the deposit is confirmed and your bank details are accepted, the full approved amount is sent to the account you present.</li>
           <li><strong>Contact:</strong> A dedicated relationship manager will reach out within 2 business days.</li>
         </ol>
         <p><a href="${siteUrl}/en/capital-access/portal/applications" style="display: inline-block; padding: 12px 24px; background: #D4AF37; color: #1a1a1a; text-decoration: none; font-weight: bold;">View Application</a></p>
         `
       ),
-      text: `Your capital access application (Ref ${ref}) has been approved. Next: pay security deposit of ${formatUsd(params.securityDepositUsd)}.`,
+      text: `Your capital access application (Ref ${ref}) has been approved. Next: KYC review. The 10% cash collateral is requested after that review.`,
     });
     return;
   }

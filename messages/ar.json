@@ -1031,9 +1031,9 @@
       "title": "رأس مال منظم للمؤسسات المؤهلة",
       "subtitle": "SBDV ليست مصرفًا. التسهيل ليس وديعة، وليس التزامًا إلى أن يُوافق عليه.",
       "applyAccess": "قدّموا لطلب الوصول",
-      "partnerLogin": "دخول الشركاء",
+      "partnerLogin": "تسجيل الدخول إلى الحساب",
       "eligibility": "شركات عاملة لها سنتان على الأقل من التاريخ، وحسابات مدققة أو مراجعة، وطلب من USD 500,000. الموافقة تقديرية.",
-      "collateralRule": "لا تُطلب نسبة 10% إلا بعد الموافقة. وهي ضمان نقدي وليست رسمًا. تُعاد بالكامل إذا رفضت SBDV لغير إخلال مقدم الطلب أو فشل فحص الامتثال. التقديم ليس التزامًا بالإقراض."
+      "collateralRule": "تدفع SBDV إلى حساب تحددونه، لذلك يأتي الضمان النقدي أولًا. لا تُقبل المنازل ولا الأصول المحلية الأخرى. لا تُطلب نسبة 10% إلا بعد الموافقة. يُعرض حساب الضمان قبل أن تدفعوا. إنه نقدكم، وليس رسمًا، ولا يدر فائدة. بعد تأكيده يُرسل المبلغ المعتمد كاملًا. إذا سددتم بالكامل، يُعاد الرصيد غير المستخدم. وإذا تخلفتم، يمكن استخدامه لما استحق. تقديم الطلب ليس التزامًا بالإقراض."
     },
     "features": {
       "title": "لماذا تختار المؤسسات Capital Access",
@@ -1045,7 +1045,7 @@
       "enterpriseFocusTitle": "مُعدّ للشركات العاملة",
       "enterpriseFocusDesc": "للمؤسسات الراسخة ذات البيانات المالية المدققة أو المراجعة وأطروحة استثمار واضحة.",
       "structuredSecurityTitle": "إجراء بلا مفاجآت",
-      "structuredSecurityDesc": "ضمان نقدي بنسبة 10%، وفحص كامل لـ KYC/UBO، وموافقة تقديرية وفق معايير AML السويسرية."
+      "structuredSecurityDesc": "ضمان نقدي بنسبة 10% قبل إرسال أي أموال. لا تُقبل المنازل ولا الأصول المحلية الأخرى. فحص كامل لمعرفة العميل والمستفيد الحقيقي، وموافقة تقديرية وفق معايير سويسرية لمكافحة غسل الأموال."
     },
     "howItWorks": {
       "title": "How It Works",
@@ -1064,11 +1064,11 @@
       "reviewTitle": "مراجعة مؤسسية",
       "reviewDesc": "تراجع SBDV المستندات والمالكين المنتفعين ومواءمة التفويض. الموافقة تقديرية وليست التزامًا إلى أن تُصدر.",
       "depositTitle": "وديعة الضمان ومصدر الأموال",
-      "depositDesc": "بعد الموافقة، اقبلوا شروط التسهيل، وحوّلوا الضمان النقدي بنسبة 10%، وصرّحوا بمصدر تلك الأموال.",
+      "depositDesc": "بعد مراجعة KYC يُعرض حساب الضمان. حوّلوا 10% من المبلغ المعتمد. إنه نقدكم، يُحتفظ به ضمانًا، وليس رسمًا. ثم ترسل SBDV المبلغ المعتمد كاملًا إلى الحساب الذي تحددونه.",
       "kycTitle": "فحص KYC والعقوبات",
       "kycDesc": "فحص AML سويسري للشركة والمفوضين بالتوقيع والمالكين المنتفعين النهائيين. تتلقى الولايات القضائية عالية المخاطر عناية واجبة معززة.",
       "fundingTitle": "الصرف والسداد",
-      "fundingDesc": "قدّموا حسابًا مصرفيًا باسم المقترض (SWIFT مع IBAN أو رقم الحساب المحلي). تُصرف الأموال بـ USD. سدّدوا وفق الجدول في لوحتكم."
+      "fundingDesc": "قدّموا حسابًا مصرفيًا باسم المقترض (SWIFT مع IBAN أو رقم حساب محلي). لا يُصرف المبلغ المعتمد كاملًا بالدولار الأمريكي إلا بعد تأكيد الضمان النقدي بنسبة 10%. السداد وفق الجدول في لوحتكم."
     },
     "nav": {
       "overview": "Overview",
@@ -1103,7 +1103,7 @@
       "title": "Access Conditions",
       "minimumOperatingYears": "Minimum 2 years of operating history",
       "auditedFinancials": "Audited or reviewed financial statements required",
-      "securityDeposit": "10% security deposit on requested facility amount",
+      "securityDeposit": "ضمان نقدي بنسبة 10% بعد الموافقة، وقبل إرسال المبلغ المعتمد",
       "kycAml": "Full KYC/AML and beneficial ownership disclosure",
       "mandateAlignment": "Investment thesis must align with pool mandate",
       "minimumTicket": "Minimum request USD $500,000",
@@ -1122,7 +1122,8 @@
       "subtitle": "Create your enterprise partner account to explore sovereign capital pools.",
       "fullName": "الاسم الكامل",
       "phone": "الهاتف (اختياري)",
-      "submit": "إنشاء حساب شريك",
+      "submit": "إنشاء حساب Capital Access",
+      "acceptTerms": "أقبل",
       "hasAccount": "هل أنتم مسجّلون؟",
       "error": "فشل التسجيل. يُرجى المحاولة مرة أخرى.",
       "welcomeTitle": "تم إنشاء الحساب بنجاح",
@@ -1159,7 +1160,7 @@
       "financialsPlaceholder": "Summarize audited financials — revenue trend, EBITDA, debt/equity ratio, key assets…",
       "review": "Review & Submit",
       "selectedPool": "Selected Pool",
-      "termsAccept": "I accept the 10% security deposit requirement, institutional review process, and confirm all information provided is accurate.",
+      "termsAccept": "أقبل بأنه بعد الموافقة يُحوَّل ضمان نقدي بنسبة 10% إلى حساب الضمان قبل إرسال المبلغ المعتمد. ليس رسمًا. وأقبل إجراءات المراجعة المؤسسية وأؤكد أن المعلومات المقدمة صحيحة.",
       "back": "رجوع",
       "continue": "متابعة",
       "submit": "Submit Application",
@@ -1167,7 +1168,7 @@
       "submittedTitle": "Application Submitted",
       "submittedDesc": "Your capital access request is now under institutional review. A confirmation email has been sent to your registered address.",
       "viewApplications": "View My Applications",
-      "termsAcceptBefore": "I accept the 10% security deposit requirement and the",
+      "termsAcceptBefore": "أقبل بأنه بعد الموافقة يُحوَّل ضمان نقدي بنسبة 10% إلى حساب الضمان قبل إرسال المبلغ المعتمد. ليس رسمًا. أقبل",
       "termsAcceptAfter": ", the institutional review process, and I confirm that all information provided is accurate.",
       "operatingCountry": "Principal operating country",
       "yearsOperating": "Years of operation",
@@ -1212,7 +1213,7 @@
       "progress": "Onboarding Progress",
       "rm": "Relationship Manager",
       "escrowTitle": "Security Deposit — Escrow Instructions",
-      "escrowDesc": "Transfer exactly 10% of your approved facility amount to the escrow account below. Use the wire reference exactly as shown.",
+      "escrowDesc": "تدفع SBDV إلى حساب تحددونه، لذلك يأتي هذا النقد أولًا. لا تُقبل المنازل ولا الأصول المحلية الأخرى. حوّلوا 10% من المبلغ المعتمد بالضبط إلى حساب الضمان أدناه. إنه نقدكم، وليس رسمًا، ولا يدر فائدة. بعد تأكيد SBDV يُرسل المبلغ المعتمد كاملًا. استخدموا مرجع التحويل كما هو مبيّن تمامًا.",
       "escrowPending": "Escrow payment details are being prepared by our capital desk. They will appear here as soon as your application is fully approved.",
       "bank": "Bank",
       "bankAddress": "Bank Address",
@@ -1230,7 +1231,7 @@
       "uploadSlip": "Upload Slip",
       "paymentSlipUploaded": "Payment slip on file",
       "slipRequiredFirst": "Upload your payment slip before submitting the wire reference.",
-      "awaitingAdminConfirm": "Our team will verify your transfer and unlock the documentation stage.",
+      "awaitingAdminConfirm": "Our team will verify your transfer. After it is confirmed, you will submit the bank account for the approved amount.",
       "documentsTitle": "Required Documentation",
       "documentsDesc": "Upload all four documents within 14 business days of deposit confirmation.",
       "upload": "Upload",
@@ -1377,14 +1378,16 @@
       "applyTime": "1–2 أسابيع",
       "dd": "مراجعة المستندات وUBO",
       "ddTime": "2–4 أسابيع",
-      "kyc": "KYC بعد الإيداع",
+      "kyc": "KYC قبل الإيداع",
       "kycTime": "5–10 أيام عمل",
       "funding": "الإغلاق والتمويل",
       "fundingTime": "3–7 أيام"
     },
     "settings": {
       "title": "Account Settings"
-    }
+    },
+    "yearlyInterestNote": "تُحتسب الفائدة السنوية على المبلغ المعتمد فقط، وليس على الضمان النقدي.",
+    "amountDisbursed": "المبلغ المصروف"
   },
   "chat": {
     "open": "اسألوا SBDV",

@@ -168,7 +168,7 @@ export default function FacilityRepaymentStatement({
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
           {[
-            [t("capitalAccess.creditedTotal"), balances.creditedTotalUsd != null ? formatUsd(balances.creditedTotalUsd) : "—"],
+            [t("capitalAccess.amountDisbursed"), balances.disbursedAmountUsd != null ? formatUsd(balances.disbursedAmountUsd) : "—"],
             [
               facility.depositConfirmedAt
                 ? t("capitalAccess.collateralReceived")

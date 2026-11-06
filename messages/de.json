@@ -1031,9 +1031,9 @@
       "title": "Strukturiertes Kapital für qualifizierte Unternehmen",
       "subtitle": "SBDV ist keine Bank. Eine Fazilität ist keine Einlage und bis zur Genehmigung keine Zusage.",
       "applyAccess": "Zugang beantragen",
-      "partnerLogin": "Partneranmeldung",
+      "partnerLogin": "Kontoanmeldung",
       "eligibility": "Operative Gesellschaften mit mindestens zwei Jahren Geschichte, geprüften oder einer prüferischen Durchsicht unterzogenen Abschlüssen und einem Antrag ab USD 500,000. Die Genehmigung steht im Ermessen.",
-      "collateralRule": "Die 10% werden erst nach der Genehmigung verlangt. Es handelt sich um Barsicherheit, nicht um eine Gebühr. Der Betrag wird in voller Höhe zurückerstattet, wenn SBDV ablehnt, ausser bei einer Verletzung durch den Antragsteller oder einer nicht bestandenen Compliance-Prüfung. Die Antragstellung ist keine Zusage, Kredit zu gewähren."
+      "collateralRule": "SBDV zahlt auf ein Konto, das Sie benennen. Deshalb kommt die Barsicherheit zuerst. Häuser und andere lokale Vermögenswerte werden nicht angenommen. Die 10% werden erst nach der Genehmigung verlangt. Das Treuhandkonto wird gezeigt, bevor Sie zahlen. Es ist Ihr Bargeld, keine Gebühr, und es wird nicht verzinst. Nach der Bestätigung wird der volle genehmigte Betrag überwiesen. Bei vollständiger Rückzahlung wird der nicht verwendete Rest zurückerstattet. Bei einem Verzug kann er auf überfällige Beträge angerechnet werden. Die Antragstellung ist keine Zusage, Kredit zu gewähren."
     },
     "features": {
       "title": "Warum Unternehmen Capital Access wählen",
@@ -1045,7 +1045,7 @@
       "enterpriseFocusTitle": "Für operative Gesellschaften gebaut",
       "enterpriseFocusDesc": "Für etablierte Unternehmen mit geprüften oder einer prüferischen Durchsicht unterzogenen Abschlüssen und einer klaren Investitionsthese.",
       "structuredSecurityTitle": "Ein Vorgang ohne Überraschung",
-      "structuredSecurityDesc": "Barsicherheit von 10%, vollständige Durchsicht KYC/UBO und Genehmigung nach Ermessen gemäss schweizerischen Standards AML."
+      "structuredSecurityDesc": "10% Barsicherheit, bevor Gelder gesendet werden. Häuser und andere lokale Vermögenswerte werden nicht angenommen. Vollständige KYC/UBO-Prüfung und Ermessensentscheidung nach schweizerischen Geldwäschereistandards."
     },
     "howItWorks": {
       "title": "How It Works",
@@ -1064,11 +1064,11 @@
       "reviewTitle": "Institutionelle Prüfung",
       "reviewDesc": "SBDV prüft die Unterlagen, die wirtschaftlich berechtigten Personen und die Ausrichtung auf das Mandat. Die Genehmigung steht im Ermessen und ist bis zu ihrer Erteilung keine Zusage.",
       "depositTitle": "Sicherheitsleistung und Herkunft der Mittel",
-      "depositDesc": "Nach der Genehmigung nehmen Sie die Fazilitätsbedingungen an, überweisen die Barsicherheit von 10% und legen die Herkunft dieser Mittel offen.",
+      "depositDesc": "Nach der KYC-Prüfung wird das Treuhandkonto gezeigt. Überweisen Sie 10% des genehmigten Betrags. Es ist Ihr Bargeld, als Sicherheit gehalten, keine Gebühr. SBDV sendet danach den vollen genehmigten Betrag auf das Konto, das Sie benennen.",
       "kycTitle": "Prüfung KYC und Sanktionen",
       "kycDesc": "Schweizerische Prüfung AML der Gesellschaft, der Zeichnungsberechtigten und der wirtschaftlich berechtigten Personen. Staaten mit erhöhtem Risiko unterliegen einer verstärkten Sorgfaltsprüfung.",
       "fundingTitle": "Auszahlung und Rückzahlung",
-      "fundingDesc": "Reichen Sie ein Bankkonto auf den Namen des Kreditnehmers ein (SWIFT sowie IBAN oder lokale Kontonummer). Die Mittel werden in USD freigegeben; die Rückzahlung erfolgt nach dem Plan in Ihrem Dashboard."
+      "fundingDesc": "Nennen Sie ein Bankkonto auf den Namen des Kreditnehmers (SWIFT sowie IBAN oder lokale Kontonummer). Der volle genehmigte Betrag wird in USD erst freigegeben, wenn die 10% Barsicherheit bestätigt ist. Die Rückzahlung erfolgt nach dem Plan in Ihrem Dashboard."
     },
     "nav": {
       "overview": "Overview",
@@ -1103,7 +1103,7 @@
       "title": "Access Conditions",
       "minimumOperatingYears": "Minimum 2 years of operating history",
       "auditedFinancials": "Audited or reviewed financial statements required",
-      "securityDeposit": "10% security deposit on requested facility amount",
+      "securityDeposit": "10% Barsicherheit nach der Genehmigung, bevor der genehmigte Betrag überwiesen wird",
       "kycAml": "Full KYC/AML and beneficial ownership disclosure",
       "mandateAlignment": "Investment thesis must align with pool mandate",
       "minimumTicket": "Minimum request USD $500,000",
@@ -1122,7 +1122,8 @@
       "subtitle": "Create your enterprise partner account to explore sovereign capital pools.",
       "fullName": "Vollständiger Name",
       "phone": "Telefon (fakultativ)",
-      "submit": "Partnerkonto erstellen",
+      "submit": "Capital-Access-Konto erstellen",
+      "acceptTerms": "Ich akzeptiere die",
       "hasAccount": "Bereits registriert?",
       "error": "Die Registrierung ist fehlgeschlagen. Bitte versuchen Sie es erneut.",
       "welcomeTitle": "Konto erfolgreich erstellt",
@@ -1159,7 +1160,7 @@
       "financialsPlaceholder": "Summarize audited financials — revenue trend, EBITDA, debt/equity ratio, key assets…",
       "review": "Prüfen und einreichen",
       "selectedPool": "Gewählter Pool",
-      "termsAccept": "I accept the 10% security deposit requirement, institutional review process, and confirm all information provided is accurate.",
+      "termsAccept": "Ich akzeptiere, dass nach der Genehmigung 10% Barsicherheit auf das Treuhandkonto überwiesen werden, bevor der genehmigte Betrag gesendet wird. Es handelt sich nicht um eine Gebühr. Ich akzeptiere das Prüfungsverfahren und bestätige, dass alle Angaben richtig sind.",
       "back": "Zurück",
       "continue": "Weiter",
       "submit": "Antrag einreichen",
@@ -1167,7 +1168,7 @@
       "submittedTitle": "Antrag eingereicht",
       "submittedDesc": "Your capital access request is now under institutional review. A confirmation email has been sent to your registered address.",
       "viewApplications": "Meine Anträge",
-      "termsAcceptBefore": "Ich akzeptiere die Sicherheitsleistung von 10 % und die",
+      "termsAcceptBefore": "Ich akzeptiere, dass nach der Genehmigung 10% Barsicherheit auf das Treuhandkonto überwiesen werden, bevor der genehmigte Betrag gesendet wird. Es handelt sich nicht um eine Gebühr. Ich akzeptiere die",
       "termsAcceptAfter": ", das institutionelle Prüfverfahren, und bestätige, dass alle Angaben richtig sind.",
       "operatingCountry": "Principal operating country",
       "yearsOperating": "Years of operation",
@@ -1212,7 +1213,7 @@
       "progress": "Onboarding",
       "rm": "Betreuer",
       "escrowTitle": "Sicherheitsleistung — Treuhandanweisung",
-      "escrowDesc": "Überweisen Sie genau 10 % des genehmigten Betrags auf das unten genannte Treuhandkonto. Verwenden Sie die Zahlungsreferenz genau wie angegeben.",
+      "escrowDesc": "SBDV zahlt auf ein Konto, das Sie benennen. Deshalb kommt dieses Bargeld zuerst. Häuser und andere lokale Vermögenswerte werden nicht angenommen. Überweisen Sie genau 10% des genehmigten Betrags auf das unten gezeigte Treuhandkonto. Es ist Ihr Bargeld, keine Gebühr, und es wird nicht verzinst. Nach der Bestätigung durch SBDV wird der volle genehmigte Betrag gesendet. Verwenden Sie die Zahlungsreferenz genau wie angegeben.",
       "escrowPending": "Escrow payment details are being prepared by our capital desk. They will appear here as soon as your application is fully approved.",
       "bank": "Bank",
       "bankAddress": "Bank Address",
@@ -1230,7 +1231,7 @@
       "uploadSlip": "Beleg hochladen",
       "paymentSlipUploaded": "Payment slip on file",
       "slipRequiredFirst": "Upload your payment slip before submitting the wire reference.",
-      "awaitingAdminConfirm": "Our team will verify your transfer and unlock the documentation stage.",
+      "awaitingAdminConfirm": "Our team will verify your transfer. After it is confirmed, you will submit the bank account for the approved amount.",
       "documentsTitle": "Erforderliche Unterlagen",
       "documentsDesc": "Upload all four documents within 14 business days of deposit confirmation.",
       "upload": "Hochladen",
@@ -1377,14 +1378,16 @@
       "applyTime": "1–2 Wochen",
       "dd": "Prüfung der Unterlagen und der UBO",
       "ddTime": "2–4 Wochen",
-      "kyc": "KYC nach der Sicherheitsleistung",
+      "kyc": "KYC vor der Sicherheitsleistung",
       "kycTime": "5–10 Arbeitstage",
       "funding": "Abschluss und Auszahlung",
       "fundingTime": "3–7 Tage"
     },
     "settings": {
       "title": "Account Settings"
-    }
+    },
+    "yearlyInterestNote": "Die jährlichen Zinsen werden nur auf den genehmigten Betrag berechnet, nicht auf die Barsicherheit.",
+    "amountDisbursed": "Ausgezahlter Betrag"
   },
   "chat": {
     "open": "Concierge öffnen",

@@ -24,6 +24,8 @@ export default function CapitalAccessRegisterPage() {
   });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [termsAccepted, setTermsAccepted] = useState(false);
+  const [collateralAccepted, setCollateralAccepted] = useState(false);
 
   const getLocalizedHref = (href: string) =>
     `/${(params?.locale as string) || locale || "en"}${href}`;
@@ -32,6 +34,11 @@ export default function CapitalAccessRegisterPage() {
     e.preventDefault();
     setLoading(true);
     setError("");
+
+    if (!termsAccepted || !collateralAccepted) {
+      setLoading(false);
+      return;
+    }
 
     if (isSanctionedCountry(form.country)) {
       setError(t("capitalAccess.request.sanctionedCountry"));
@@ -92,11 +99,6 @@ export default function CapitalAccessRegisterPage() {
               ? t("capitalAccess.register.welcomeBody")
               : t("capitalAccess.register.subtitle")}
           </p>
-          {!createdEmail && (
-            <p className="font-body text-sm text-charcoal/70 mt-4 text-left leading-relaxed">
-              {t("capitalAccess.hero.collateralRule")}
-            </p>
-          )}
         </div>
 
         <div className="bg-white border-2 border-gold/30 rounded-lg p-8 shadow-lg">
@@ -154,9 +156,47 @@ export default function CapitalAccessRegisterPage() {
               />
             </div>
 
+            <div className="space-y-3 pt-2">
+              <div className="flex items-start gap-3">
+                <input
+                  id="register-terms-accept"
+                  type="checkbox"
+                  checked={termsAccepted}
+                  onChange={(e) => setTermsAccepted(e.target.checked)}
+                  className="mt-1 accent-gold"
+                  required
+                />
+                <label htmlFor="register-terms-accept" className="font-body text-sm text-charcoal/80 leading-relaxed cursor-pointer">
+                  {t("capitalAccess.register.acceptTerms")}{" "}
+                  <Link
+                    href={getLocalizedHref("/capital-access/terms")}
+                    className="text-gold underline underline-offset-2 font-medium"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    {t("capitalAccess.facilityTerms.linkLabel")}
+                  </Link>
+                </label>
+              </div>
+              <div className="flex items-start gap-3">
+                <input
+                  id="register-collateral-accept"
+                  type="checkbox"
+                  checked={collateralAccepted}
+                  onChange={(e) => setCollateralAccepted(e.target.checked)}
+                  className="mt-1 accent-gold"
+                  required
+                />
+                <label htmlFor="register-collateral-accept" className="font-body text-sm text-charcoal/80 leading-relaxed cursor-pointer">
+                  {t("capitalAccess.hero.collateralRule")}
+                </label>
+              </div>
+            </div>
+
             <button
               type="submit"
-              disabled={loading}
+              disabled={loading || !termsAccepted || !collateralAccepted}
               className="w-full py-3 bg-gold text-charcoal font-body font-medium rounded-sm hover:bg-gold/90 disabled:opacity-50 mt-2"
             >
               {loading ? t("common.loading") : t("capitalAccess.register.submit")}

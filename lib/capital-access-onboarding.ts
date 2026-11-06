@@ -2,8 +2,8 @@ export const ONBOARDING_PHASES = [
   "AWAITING_DOCUMENTS",
   "DOCUMENTS_REVISION",
   "DOCUMENTS_SUBMITTED",
-  "AWAITING_DEPOSIT",
   "KYC_REVIEW",
+  "AWAITING_DEPOSIT",
   "AWAITING_BANK_DETAILS",
   "READY_FOR_DISBURSEMENT",
   "DISBURSED",
@@ -275,18 +275,23 @@ export function canBorrowerUploadDocuments(
 
 /**
  * Next phase after admin advance (post-approval path).
- * Docs are collected before approval; after deposit we go to KYC;
- * after KYC the borrower submits disbursement bank details.
+ * Docs are collected before approval. KYC is completed next.
+ * The 10% is requested only after KYC. Bank details follow the deposit.
  */
-export function getNextAdminAction(phase: string | null | undefined): OnboardingPhase | null {
+export function getNextAdminAction(
+  phase: string | null | undefined,
+  flags?: { depositConfirmed?: boolean; kycComplete?: boolean }
+): OnboardingPhase | null {
+  const depositConfirmed = Boolean(flags?.depositConfirmed);
+  const kycComplete = Boolean(flags?.kycComplete);
   switch (phase) {
     case "AWAITING_DEPOSIT":
-      return "KYC_REVIEW";
+      return kycComplete ? "AWAITING_BANK_DETAILS" : "KYC_REVIEW";
     case "AWAITING_DOCUMENTS":
       // Legacy post-deposit docs stage only (new apps leave this phase via approval)
       return "KYC_REVIEW";
     case "KYC_REVIEW":
-      return "AWAITING_BANK_DETAILS";
+      return depositConfirmed ? "AWAITING_BANK_DETAILS" : "AWAITING_DEPOSIT";
     case "AWAITING_BANK_DETAILS":
       return "READY_FOR_DISBURSEMENT";
     case "READY_FOR_DISBURSEMENT":

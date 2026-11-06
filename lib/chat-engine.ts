@@ -230,6 +230,8 @@ function replyApplicationStatus(ctx: ChatUserContext): string {
   if (approved) {
     if (approved.onboardingPhase === "AWAITING_DEPOSIT") {
       reply += `\n\nYour next step is the **security deposit** (${formatUsd(approved.securityDepositUsd)}). Ask me *"how do I make the payment?"* for wire instructions.`;
+    } else if (approved.onboardingPhase === "KYC_REVIEW") {
+      reply += `\n\n**KYC review** is in progress. No payment is due now. The 10% cash collateral is requested after that review.`;
     } else if (approved.onboardingPhase === "AWAITING_DOCUMENTS") {
       reply += `\n\nPlease upload the required documents and list beneficial owners in **Onboarding**, then click Submit Documents.`;
     } else {
@@ -242,6 +244,9 @@ function replyApplicationStatus(ctx: ChatUserContext): string {
 function replySecurityDeposit(ctx: ChatUserContext): string {
   if (ctx.role === "BORROWER") {
     const facility = getActiveBorrowerFacility(ctx);
+    if (facility?.onboardingPhase === "KYC_REVIEW") {
+      return `**${facility.company}** is in **KYC review**. The 10% cash collateral is requested after that review is finished. No payment is due now.`;
+    }
     if (facility?.onboardingPhase === "AWAITING_DEPOSIT" && facility.escrow) {
       const e = facility.escrow;
       return `Here’s how to complete your **security deposit** for **${facility.company}**:
@@ -265,29 +270,37 @@ function replySecurityDeposit(ctx: ChatUserContext): string {
 Need help after that? Ask about **documents** or **timeline**.`;
     }
     if (facility) {
-      return `Your **${facility.company}** facility is past the deposit stage (current phase: ${facility.onboardingPhase?.replace(/_/g, " ").toLowerCase() || "in progress"}). Check **My Facility** for your next action, or ask *"what's my application status?"*`;
+      const phase = facility.onboardingPhase?.replace(/_/g, " ").toLowerCase() || "in progress";
+      if (
+        facility.onboardingPhase === "AWAITING_DOCUMENTS" ||
+        facility.onboardingPhase === "DOCUMENTS_REVISION" ||
+        facility.onboardingPhase === "DOCUMENTS_SUBMITTED"
+      ) {
+        return `The 10% for **${facility.company}** is requested after approval and KYC review. Current step: **${phase}**.`;
+      }
+      return `Your **${facility.company}** facility is past the deposit stage (current phase: ${phase}). Check **My Facility** for your next action, or ask *"what's my application status?"*`;
     }
-    return "Once your Capital Access application is **approved**, your Facility Dashboard will show the escrow account assigned for your **10% security deposit**. Apply or check status at **Capital Access → Portal**.";
+    return "Once your Capital Access application is **approved**, KYC review comes first. After that review, your Facility Dashboard shows the escrow account for the **10% cash collateral**. Apply or check status at **Capital Access → Portal**.";
   }
-  return "The Capital Access Program requires a **10% security deposit** held in escrow before disbursement. After approval, escrow details appear in the Facility Dashboard for the partner to transfer funds and upload a payment slip.";
+  return "The Capital Access Program requires a **10% cash collateral** held in escrow before disbursement. It is requested after approval and KYC review. Escrow details then appear in the Facility Dashboard.";
 }
 
 function replyNextSteps(ctx: ChatUserContext): string {
   if (ctx.role === "BORROWER") {
     const facility = getActiveBorrowerFacility(ctx);
     if (!facility) {
-      return "Once you submit a request, onboarding follows: **documents → review/approval + escrow → 10% deposit → KYC → disbursement**. Submit an application at **Capital Access → New Request** if you haven't yet.";
+      return "Once you submit a request, onboarding follows: **documents → approval → KYC → 10% deposit → bank details → disbursement**. Submit an application at **Capital Access → New Request** if you haven't yet.";
     }
     switch (facility.onboardingPhase) {
       case "AWAITING_DOCUMENTS":
       case "DOCUMENTS_REVISION":
-        return `For **${facility.company}**, upload the **required documents** in **Onboarding** (PDF, DOC, or JPEG). Local-register extracts and certified translations are accepted:\n• Audited financials (2–3 years)\n• Incorporation / commercial register\n• Articles\n• Structure chart\n• Board resolution\n• Signed facility agreement\n• Capital deployment plan\n• Signatory ID\n• Beneficial-owner list in the portal\n\nThen click **Submit Documents**. After review and approval, you will receive escrow instructions for the 10% deposit.`;
+        return `For **${facility.company}**, upload the **required documents** in **Onboarding** (PDF, DOC, or JPEG). Local-register extracts and certified translations are accepted:\n• Audited financials (2–3 years)\n• Incorporation / commercial register\n• Articles\n• Structure chart\n• Board resolution\n• Signed facility agreement\n• Capital deployment plan\n• Signatory ID\n• Beneficial-owner list in the portal\n\nThen click **Submit Documents**. After review and approval, KYC comes next. The 10% deposit is requested only after KYC.`;
       case "DOCUMENTS_SUBMITTED":
         return `Your documentation package for **${facility.company}** has been **submitted** and is under review. No further upload is needed unless we request revisions.`;
       case "AWAITING_DEPOSIT":
-        return `For **${facility.company}**, you're at the **security deposit** stage.\n\n1. Wire ${formatUsd(facility.securityDepositUsd)} to the escrow account (see **My Facility** or ask *"how do I make the payment?"*)\n2. Submit your wire reference\n3. Our team confirms within 2–3 business days\n\nThen KYC review continues.`;
+        return `For **${facility.company}**, KYC is complete and you're at the **security deposit** stage.\n\n1. Wire ${formatUsd(facility.securityDepositUsd)} to the escrow account (see **My Facility** or ask *"how do I make the payment?"*)\n2. Submit your wire reference\n3. Our team confirms within 2–3 business days\n\nThen you submit the bank account for the approved amount.`;
       case "KYC_REVIEW":
-        return `**${facility.company}** is in **KYC review**. No action needed from you right now — our compliance team will contact you if anything further is required. Typical review: 5–10 business days.`;
+        return `**${facility.company}** is in **KYC review**. No payment is due now. After this review you will be asked to wire the 10% cash collateral. Our compliance team will contact you if anything further is required. Typical review: 5–10 business days.`;
       case "READY_FOR_DISBURSEMENT":
         return `**${facility.company}** has cleared compliance. Capital release is being processed — you'll receive confirmation when funds are disbursed.`;
       case "DISBURSED":
@@ -370,6 +383,9 @@ function conversationalFallback(message: string, messages: ChatMessage[], ctx: C
 
   if (ctx.role === "BORROWER") {
     const facility = getActiveBorrowerFacility(ctx);
+    if (facility?.onboardingPhase === "KYC_REVIEW") {
+      return `${prefix}**${facility.company}** is in KYC review. The 10% cash collateral is requested after that review. No payment is due now.`;
+    }
     if (facility?.onboardingPhase === "AWAITING_DEPOSIT") {
       return `${prefix}based on your approved **${facility.company}** facility, your immediate priority is the **${formatUsd(facility.securityDepositUsd)} security deposit**. I can walk you through the wire transfer step-by-step — shall I?`;
     }
@@ -491,7 +507,7 @@ function ruleBasedReply(message: string, messages: ChatMessage[], ctx: ChatUserC
   if (timelineQuery && ctx.role === "BORROWER") {
     const facility = getActiveBorrowerFacility(ctx);
     if (facility?.onboardingPhase === "AWAITING_DEPOSIT") {
-      return "After you submit your wire reference, deposit verification typically takes **2–3 business days**. Document review follows (allow **5–10 business days** for KYC). Total onboarding from deposit to disbursement is usually **2–4 weeks** depending on completeness.";
+      return "After you submit your wire reference, deposit verification typically takes **2–3 business days**. You then submit the bank account for the approved amount. Closing is usually a few more business days.";
     }
     return replyNextSteps(ctx);
   }
@@ -523,7 +539,7 @@ function ruleBasedReply(message: string, messages: ChatMessage[], ctx: ChatUserC
   }
 
   if (q.includes("capital access") || q.includes("borrow") || q.includes("loan")) {
-    return "**Capital Access Program** — qualified enterprises **worldwide** can apply for institutional sovereign capital. SBDV is not a bank.\n\n• Request: $500K – $100M, USD. Two years of operating history and audited or reviewed accounts.\n• Terms: 1–10 years, monthly or yearly repayment. Approval is discretionary.\n• The **10%** is requested only after approval. It is cash collateral, not a fee, and is returned in full if SBDV declines other than for the applicant’s breach or a failed compliance check.\n• Applying is not a commitment to lend.\n• Apply at **/capital-access/register**\n\nFlow: documents + UBOs → approval + escrow → deposit + origin of funds → KYC → disbursement.";
+    return "**Capital Access Program** — qualified enterprises **worldwide** can apply for institutional sovereign capital. SBDV is not a bank.\n\n• Request: $500K – $100M, USD. Two years of operating history and audited or reviewed accounts.\n• Terms: 1–10 years, monthly or yearly repayment. Approval is discretionary.\n• SBDV pays an account the borrower presents, so **10% cash collateral** comes first. Houses and other local assets are not accepted. It is requested only after approval, shown as an escrow transfer, and it is not a fee. After it is confirmed, the full approved amount is sent. Unused collateral is returned after full repayment, or applied if the borrower defaults.\n• Applying is not a commitment to lend.\n• Apply at **/capital-access/register**\n\nFlow: documents + UBOs → approval → KYC → deposit + origin of funds → bank details → disbursement.";
   }
 
   if (q.includes("wealth") || q.includes("invest") || q.includes("mandate") || q.includes("yield")) {

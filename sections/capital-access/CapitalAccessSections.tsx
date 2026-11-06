@@ -31,18 +31,10 @@ export default function CapitalAccessHeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="text-4xl md:text-5xl lg:text-6xl font-heading font-semibold mb-6 leading-tight"
+          className="text-4xl md:text-5xl lg:text-6xl font-heading font-semibold mb-10 leading-tight"
         >
           {t("capitalAccess.hero.title")}
         </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="font-body text-lg text-off-white/70 max-w-2xl mx-auto mb-10"
-        >
-          {t("capitalAccess.hero.subtitle")}
-        </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -61,19 +53,6 @@ export default function CapitalAccessHeroSection() {
           >
             {t("capitalAccess.hero.partnerLogin")}
           </Link>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="mt-10 max-w-2xl mx-auto text-left space-y-4"
-        >
-          <p className="font-body text-sm text-off-white/80 leading-relaxed">
-            {t("capitalAccess.hero.eligibility")}
-          </p>
-          <p className="font-body text-sm text-off-white leading-relaxed border border-gold/40 bg-gold/10 px-4 py-3">
-            {t("capitalAccess.hero.collateralRule")}
-          </p>
         </motion.div>
       </div>
     </section>
@@ -118,7 +97,7 @@ export function CapitalAccessFeaturesSection() {
 
 export function CapitalAccessHowItWorksSection() {
   const { t } = useTranslations();
-  const steps = ["prepare", "register", "submit", "review", "deposit", "kyc", "funding"] as const;
+  const steps = ["prepare", "register", "submit", "review", "kyc", "deposit", "funding"] as const;
   const who = ["worldwide", "enterprise", "ticket", "kyc", "sanctions", "currency"] as const;
   const timeline = [
     ["apply", "applyTime"],

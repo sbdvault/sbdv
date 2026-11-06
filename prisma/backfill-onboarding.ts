@@ -6,7 +6,7 @@ async function main() {
   const updated = await prisma.capitalAccessRequest.updateMany({
     where: { status: "APPROVED", onboardingPhase: null },
     data: {
-      onboardingPhase: "AWAITING_DEPOSIT",
+      onboardingPhase: "KYC_REVIEW",
       relationshipManager: "Capital Access Desk",
     },
   });

@@ -1031,9 +1031,9 @@
       "title": "Gestructureerd kapitaal voor gekwalificeerde ondernemingen",
       "subtitle": "SBDV is geen bank. Een faciliteit is geen deposito en geen toezegging tot zij is goedgekeurd.",
       "applyAccess": "Toegang aanvragen",
-      "partnerLogin": "Aanmelden als partner",
+      "partnerLogin": "Account aanmelden",
       "eligibility": "Operationele vennootschappen met ten minste twee jaar historie, gecontroleerde of beoordeelde jaarrekeningen, en een verzoek vanaf USD 500,000. Goedkeuring is discretionair.",
-      "collateralRule": "De 10% wordt pas na goedkeuring gevraagd. Het is contant onderpand, geen vergoeding. Het wordt volledig terugbetaald indien SBDV afwijst, behalve wanneer de afwijzing berust op een tekortkoming van de aanvrager of op een niet-geslaagde nalevingscontrole. Aanvragen is geen toezegging tot kredietverlening."
+      "collateralRule": "SBDV betaalt op een rekening die u opgeeft, dus het contante onderpand komt eerst. Huizen en andere lokale activa worden niet aanvaard. De 10% wordt pas na goedkeuring gevraagd. De escrowrekening wordt getoond voordat u betaalt. Het is uw geld, geen vergoeding, en het levert geen rente op. Na bevestiging wordt het volledige goedgekeurde bedrag overgemaakt. Bij volledige terugbetaling wordt het ongebruikte saldo teruggegeven. Bij wanbetaling kan het worden verrekend met wat achterstallig is. Een aanvraag is geen toezegging om te lenen."
     },
     "features": {
       "title": "Waarom ondernemingen voor Capital Access kiezen",
@@ -1045,7 +1045,7 @@
       "enterpriseFocusTitle": "Gebouwd voor operationele vennootschappen",
       "enterpriseFocusDesc": "Voor gevestigde ondernemingen met gecontroleerde of beoordeelde cijfers en een duidelijke beleggingsthese.",
       "structuredSecurityTitle": "Proces zonder verrassing",
-      "structuredSecurityDesc": "10% contant onderpand, volledig KYC/UBO-look-through en discretionaire goedkeuring volgens Zwitserse AML-normen."
+      "structuredSecurityDesc": "10% contant onderpand voordat enig bedrag wordt overgemaakt. Huizen en andere lokale activa worden niet aanvaard. Volledige KYC/UBO-controle en discretionaire goedkeuring volgens Zwitserse witwasnormen."
     },
     "howItWorks": {
       "title": "How It Works",
@@ -1064,11 +1064,11 @@
       "reviewTitle": "Institutionele toetsing",
       "reviewDesc": "SBDV beoordeelt documenten, uiteindelijk belanghebbenden en de aansluiting bij het mandaat. Goedkeuring is discretionair en is geen toezegging tot zij is verleend.",
       "depositTitle": "Zekerheidsstelling en herkomst van gelden",
-      "depositDesc": "Aanvaard na goedkeuring de Faciliteitsvoorwaarden, maak het contante onderpand van 10% over en verklaar de herkomst van die gelden.",
+      "depositDesc": "Na de KYC-beoordeling wordt de escrowrekening getoond. Maak 10% van het goedgekeurde bedrag over. Het is uw geld, aangehouden als zekerheid, geen vergoeding. SBDV maakt daarna het volledige goedgekeurde bedrag over naar de rekening die u opgeeft.",
       "kycTitle": "KYC- en sanctietoetsing",
       "kycDesc": "Zwitserse AML-toetsing van de vennootschap, de tekenbevoegden en de uiteindelijk belanghebbenden. Rechtsgebieden met verhoogd risico krijgen verscherpt cliëntenonderzoek.",
       "fundingTitle": "Uitbetaling en terugbetaling",
-      "fundingDesc": "Dien een bankrekening in op naam van de kredietnemer (SWIFT plus IBAN of lokaal rekeningnummer). Gelden worden in USD vrijgegeven; betaal terug volgens het schema in uw overzicht."
+      "fundingDesc": "Geef een bankrekening op naam van de kredietnemer op (SWIFT plus IBAN of lokaal rekeningnummer). Het volledige goedgekeurde bedrag wordt in USD pas vrijgegeven nadat het contante onderpand van 10% is bevestigd. Betaal terug volgens het schema in uw dashboard."
     },
     "nav": {
       "overview": "Overview",
@@ -1103,7 +1103,7 @@
       "title": "Access Conditions",
       "minimumOperatingYears": "Minimum 2 years of operating history",
       "auditedFinancials": "Audited or reviewed financial statements required",
-      "securityDeposit": "10% security deposit on requested facility amount",
+      "securityDeposit": "10% contant onderpand na goedkeuring, voordat het goedgekeurde bedrag wordt overgemaakt",
       "kycAml": "Full KYC/AML and beneficial ownership disclosure",
       "mandateAlignment": "Investment thesis must align with pool mandate",
       "minimumTicket": "Minimum request USD $500,000",
@@ -1122,7 +1122,8 @@
       "subtitle": "Create your enterprise partner account to explore sovereign capital pools.",
       "fullName": "Volledige naam",
       "phone": "Telefoon (optioneel)",
-      "submit": "Partneraccount aanmaken",
+      "submit": "Capital Access-account aanmaken",
+      "acceptTerms": "Ik aanvaard de",
       "hasAccount": "Al geregistreerd?",
       "error": "Registratie is mislukt. Probeer het opnieuw.",
       "welcomeTitle": "Account met succes aangemaakt",
@@ -1159,7 +1160,7 @@
       "financialsPlaceholder": "Summarize audited financials — revenue trend, EBITDA, debt/equity ratio, key assets…",
       "review": "Review & Submit",
       "selectedPool": "Selected Pool",
-      "termsAccept": "I accept the 10% security deposit requirement, institutional review process, and confirm all information provided is accurate.",
+      "termsAccept": "Ik aanvaard dat na goedkeuring 10% contant onderpand naar de escrowrekening wordt overgemaakt voordat het goedgekeurde bedrag wordt verzonden. Het is geen vergoeding. Ik aanvaard de institutionele beoordeling en bevestig dat alle verstrekte informatie juist is.",
       "back": "Terug",
       "continue": "Verder",
       "submit": "Submit Application",
@@ -1167,7 +1168,7 @@
       "submittedTitle": "Application Submitted",
       "submittedDesc": "Your capital access request is now under institutional review. You will be notified upon approval or rejection.",
       "viewApplications": "View My Applications",
-      "termsAcceptBefore": "I accept the 10% security deposit requirement and the",
+      "termsAcceptBefore": "Ik aanvaard dat na goedkeuring 10% contant onderpand naar de escrowrekening wordt overgemaakt voordat het goedgekeurde bedrag wordt verzonden. Het is geen vergoeding. Ik aanvaard de",
       "termsAcceptAfter": ", the institutional review process, and I confirm that all information provided is accurate.",
       "operatingCountry": "Principal operating country",
       "yearsOperating": "Years of operation",
@@ -1218,7 +1219,7 @@
       "progress": "Onboarding Progress",
       "rm": "Relationship Manager",
       "escrowTitle": "Security Deposit — Escrow Instructions",
-      "escrowDesc": "Transfer exactly 10% of your approved facility amount to the escrow account below. Use the wire reference exactly as shown.",
+      "escrowDesc": "SBDV betaalt op een rekening die u opgeeft, dus dit geld komt eerst. Huizen en andere lokale activa worden niet aanvaard. Maak exact 10% van het goedgekeurde bedrag over naar de escrowrekening hieronder. Het is uw geld, geen vergoeding, en het levert geen rente op. Nadat SBDV het heeft bevestigd, wordt het volledige goedgekeurde bedrag overgemaakt. Gebruik de betalingsreferentie exact zoals vermeld.",
       "bank": "Bank",
       "account": "Account Name",
       "wireReference": "Wire / Transfer Reference",
@@ -1266,7 +1267,7 @@
       "uploadSlip": "Upload Slip",
       "paymentSlipUploaded": "Payment slip on file",
       "slipRequiredFirst": "Upload your payment slip before submitting the wire reference.",
-      "awaitingAdminConfirm": "Our team will verify your transfer and unlock the documentation stage.",
+      "awaitingAdminConfirm": "Our team will verify your transfer. After it is confirmed, you will submit the bank account for the approved amount.",
       "beginOnboarding": "Begin Onboarding",
       "bankAddress": "Bank Address",
       "beneficiaryAddress": "Beneficiary Address",
@@ -1377,14 +1378,16 @@
       "applyTime": "1–2 weken",
       "dd": "Document- en UBO-toetsing",
       "ddTime": "2–4 weken",
-      "kyc": "KYC na de storting",
+      "kyc": "KYC vóór de storting",
       "kycTime": "5–10 werkdagen",
       "funding": "Afsluiting en storting",
       "fundingTime": "3–7 dagen"
     },
     "settings": {
       "title": "Account Settings"
-    }
+    },
+    "yearlyInterestNote": "De jaarlijkse rente wordt alleen over het goedgekeurde bedrag berekend, niet over het contante onderpand.",
+    "amountDisbursed": "Uitbetaald bedrag"
   },
   "chat": {
     "open": "Vraag SBDV",
