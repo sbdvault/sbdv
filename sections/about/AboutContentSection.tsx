@@ -26,6 +26,14 @@ export default function AboutContentSection() {
           <p className="mt-5 font-body text-lg leading-relaxed text-charcoal/75">
             {t("about.whoText")}
           </p>
+          <dl className="mt-8 space-y-1 font-body text-sm text-charcoal/75">
+            <div>{t("footer.legalName")}</div>
+            <div>{t("footer.offices.zurich.address")}</div>
+            <div>{t("footer.uid")}</div>
+            <div>{t("footer.registerNumber")}</div>
+            <div className="pt-2">{t("footer.board")}</div>
+            <div className="pt-2">{t("footer.notABank")}</div>
+          </dl>
         </motion.div>
 
         <div className="mt-16 grid grid-cols-1 gap-px bg-charcoal/10 md:grid-cols-2">

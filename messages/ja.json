@@ -23,14 +23,15 @@
   "hero": {
     "headline": "スイスの安全性。規律ある成長。",
     "subtext": "プライベートクライアントは、スイスのカストディまたはウェルス・マンデートを利用します。適格企業は、構造化キャピタル・ファシリティを申請できます。SBDVは銀行ではありません。",
-    "exploreCapital": "企業",
-    "privateClients": "プライベートクライアント",
+    "exploreCapital": "企業向け資本",
+    "privateClients": "金庫保管",
     "requestAccess": "アクセスを請求",
     "clientLogin": "クライアントログイン",
-    "investorRelations": "投資家向け情報"
+    "investorRelations": "投資家向け情報",
+    "wealthMandate": "ウェルス・マンデート"
   },
   "footer": {
-    "copyright": "Swiss Bullion Depository Vault — スイスの精密。世界の信頼。",
+    "copyright": "Swiss Bullion Depository Vault AG — スイスの精度。世界の信頼。",
     "headquarters": "本社",
     "globalOffices": "グローバルオフィス",
     "legal": "法務",
@@ -69,7 +70,12 @@
       }
     },
     "jurisdictionNote": "スイス法基盤。グローバル顧客のための多法域アクセス。",
-    "facilityTerms": "ファシリティ条件"
+    "facilityTerms": "ファシリティ条件",
+    "legalName": "Swiss Bullion Depository Vault AG",
+    "uid": "UID CHE-218.964.179",
+    "registerNumber": "商業登記 CH-291.7.217.861-9",
+    "board": "Peter B. Guggi、会長。Lucas Gardner、取締役。",
+    "notABank": "SBDVは銀行ではなく、FINMAの銀行免許を保有せず、預金の受入れまたは貸付けの許可を受けていません。"
   },
   "about": {
     "title": "概要",
@@ -116,7 +122,7 @@
       "privateText": "地金カストディのための金庫とセキュリティのメンバーシップ、ならびに元本を拠出し表示利回りを確認するお客様のための、別途の資産運用・投資マンデートです。",
       "capitalLabel": "企業",
       "capitalTitle": "Capital Access",
-      "capitalText": "適格企業向けの構造化ファシリティです。文書、10%の現金担保、スイスのAML審査、および確認された返済計画を備えます。承認は裁量によります。"
+      "capitalText": "二つの道があります。SBDVに保管していない会社は、書面による承認の後にのみ求められる4%の保証金付きファシリティを申請できます。すでに保管している顧客は、現金の保証金なしでその金属を担保に前貸しを受けられます。承認は裁量によります。"
     },
     "serveTitle": "お迎えするお客様",
     "serve": {
@@ -509,11 +515,12 @@
     }
   },
   "cta": {
-    "title": "二つの道。一つのスイス基準。",
-    "subtitle": "静かに守るべき資産のためのプライベートカストディ——または明確さをもって成長する企業向けの構造化キャピタル。",
+    "title": "三つの道。一つのスイス基準。",
+    "subtitle": "金庫保管、ウェルス・マンデート、または適格企業向けの資本ファシリティ。各申請は個別に審査します。",
     "button": "プライベート相談を予約",
-    "capitalButton": "Capital Access を見る",
-    "privateButton": "プライベートクライアント"
+    "capitalButton": "企業向け資本",
+    "privateButton": "金庫保管",
+    "wealthButton": "ウェルス・マンデート"
   },
   "home": {
     "swissStandardTitle": "スイス・スタンダード",
@@ -567,7 +574,7 @@
       }
     },
     "capitalTeaserTitle": "企業が成長するためのキャピタル",
-    "capitalTeaserDescription": "Capital Access Program は適格企業とマンデート整合のプールをつなぎます — 透明な条件、スイスの監督、申請からファシリティまでの案内付きプロセス。",
+    "capitalTeaserDescription": "保管していない会社は米ドルのファシリティを申請できます。4%の保証金は書面による承認の後にのみ求められます。すでに適格な金属を保管している顧客は、その現金を求められません。",
     "capitalTeaserButton": "Capital Access を見る",
     "capitalTeaserPoints": {
       "structure": "明確な構造",
@@ -575,7 +582,7 @@
       "oversight": "スイスの監督",
       "oversightDesc": "文書化された KYC、UBO ルックスルー、裁量レビュー。",
       "portal": "パートナーポータル",
-      "portalDesc": "申請・デポジット・返済を一箇所で追跡。"
+      "portalDesc": "申請、担保、返済を一か所で確認できます。"
     }
   },
   "common": {
@@ -599,12 +606,12 @@
     "termsIntro": "本条件は、SBDVウェブサイト、クライアントポータルおよび公開の申請経路の利用を規律します。SBDVはチューリッヒに本拠を置きます。本ウェブサイト条件はスイス法に準拠します。",
     "termsBody": "本ウェブサイト条件は、SBDVウェブサイトの利用、口座へのサインイン、および公開の申請経路に適用されます。これらは、金庫カストディ契約、ウェルス・マンデート、またはキャピタル・ファシリティを成立させるものではありません。金庫カストディおよびウェルス・マンデートは、当該関係のために別途発行される契約に基づいてのみ提供されます。Capital Accessのファシリティは、本ウェブサイト条件ではなく、ファシリティ条件に準拠します。\n\nSBDVは、スイスのチューリッヒに本拠を置きます。本ウェブサイト条件は、他の法を適用することとなる抵触法の規則を除き、スイスの実体法に準拠します。ウェブサイトの利用から生じる紛争については、チューリッヒの裁判所が管轄を有します。これは、ファシリティまたはマンデートの契約に定められた管轄を制限するものではありません。\n\n口座を作成し、またはポータルを利用することにより、お客様はスイスの本人確認およびマネーロンダリング防止の審査に同意するものとします。パスワードおよびサインイン用コードは、機密として保持しなければなりません。お客様の権限なく口座が利用されたと認められる場合は、連絡ページを通じて速やかにSBDVにお知らせください。\n\n世界各地の企業は、Capital Accessに申請することができます。申請の提出は融資の確約ではなく、個人向け消費者ローンではなく、有価証券の公募でもありません。SBDVは、その裁量により、申請を承認し、拒否し、または延期することができます。SBDVは、本ページへの掲示により、公開ウェブサイトを変更することができます。すでに受諾されたファシリティは、お客様が受諾したファシリティ条件に準拠し、本ページのその後の変更には準拠しません。",
     "regulatoryTitle": "規制上の開示",
-    "regulatoryIntro": "SBDVは、チューリッヒに本拠を置き、世界各地のお客様に仕える金庫およびキャピタル手配の機関です。スイスの銀行ではありません。",
-    "regulatoryBody": "SBDVは地金金庫のカストディを提供し、適格企業のために構造化キャピタル・ファシリティを手配します。Capital Accessは保護された銀行預金ではなく、預金保険制度の対象ではありません。保証金として保有される資金は契約上の現金担保であり、銀行におけるお客様名義の預金ではありません。\n\nプライベートクライアントのウェルス・マンデートは投資プログラムであり、銀行口座ではありません。表示されたマンデート利回りは保証された利息ではなく、停止または改定されることがあり、預金保険の対象ではありません。Bitcoinは資金拠出または払出しの経路としてのみ用いることができます。SBDVは暗号資産取引所を運営せず、お客様の秘密鍵を保有しません。Bitcoinによる移転は取消不能です。\n\nすべてのお客様は、スイス資金洗浄防止法（AMLA）に沿った本人確認、実質的支配者の確認およびマネーロンダリング防止の審査を受けます。最終的実質的支配者は自然人まで特定されます。審査は、お客様の設立国を問わず適用されます。\n\n投資およびポートフォリオ運用のサービスは、適切な免許を要する場合があり、または規制対象のパートナーを通じて提供される場合があります。SBDVはFINMAの銀行免許を有するとは主張しません。いかなるファシリティまたはマンデートの承認も裁量によります。\n\n包括的制裁の対象となる法域の個人および法人は、受け入れることができません。高リスク法域については、自動的な拒否ではなく、強化デューデリジェンスの対象となる場合があります。\n\nリスク開示：投資には、元本の損失の可能性を含むリスクが伴います。過去の実績は、将来の結果を示すものではありません。本ウェブサイトは、法務、税務、または投資の助言ではありません。",
-    "investorRelationsTitle": "投資家向け情報",
-    "investorRelationsIntro": "ガバナンス、透明性、および機関としての連絡です。",
-    "investorRelationsBody": "SBDVは、お客様およびステークホルダーに対する透明性に努めます。年次報告書、ガバナンス方針および機関としての開示は、利用可能となり次第、ここに公表します。機関としてのお問い合わせは、連絡ページを通じて投資家向け情報の担当までご連絡ください。",
-    "englishGoverns": "本ページの準拠言語は英語です。翻訳は閲覧のためのものです。適用される本文は、英語の本文です。"
+    "regulatoryIntro": "Swiss Bullion Depository Vault AG（UID CHE-218.964.179）の本店はBahnhofstrasse 45, 8001 チューリッヒです。スイスの銀行ではなく、FINMAの銀行免許を保有せず、預金の受入れまたは貸付けの許可を受けていません。",
+    "regulatoryBody": "Swiss Bullion Depository Vault AGは貴金属の金庫保管を行い、適格企業のために構造化された資本ファシリティを手配します。Capital Accessは保護された銀行預金ではなく、預金保険の対象ではありません。まだSBDVに保管していない会社は、書面による承認の後にのみ、承認額の4%の保証金を求められることがあります。その現金は契約上の担保であり、借主名義の銀行預金でも手数料でもありません。すでに適格な金または銀を保管している顧客は、その現金を求められません。前貸しは適格な金の75%および適格な銀の70%を上限とし、金属は返済まで顧客の名義で配分されたままです。現金送金の口座は、送金前にファシリティ契約に記載されます。条件を読むことにも申請することにも支払いは不要です。\n\n個人顧客のウェルス・マンデートは投資プログラムであり、銀行口座ではありません。表示されたマンデート利回りは保証利息ではなく、停止または改定されることがあり、預金保険の対象ではありません。ビットコインは入金または支払の経路としてのみ使えます。SBDVは暗号資産取引所を運営せず、顧客の秘密鍵を保管しません。ビットコインの送金は取り消せません。\n\nすべての顧客は、スイス資金洗浄防止法に従い、本人確認、実質的支配者および資金洗浄防止の審査を受けます。実質的支配者は自然人まで特定します。審査は設立国を問いません。\n\n投資およびポートフォリオ運用は、許可を要し、または規制されたパートナーを通じて提供されることがあります。SBDVはFINMAの銀行免許を主張しません。ファシリティまたはマンデートの承認は裁量によります。\n\n包括的に制裁された法域の個人および法人は受け入れられません。リスクの高い法域には強化された審査が適用されることがあります。\n\nリスク開示：投資には元本を失うリスクがあります。過去の実績は将来の結果を示すものではありません。本ウェブサイトは法律、税務または投資の助言ではありません。",
+    "investorRelationsTitle": "当社",
+    "investorRelationsIntro": "Swiss Bullion Depository Vault AGの法的同一性。",
+    "investorRelationsBody": "Swiss Bullion Depository Vault AG\nUID CHE-218.964.179\n商業登記 CH-291.7.217.861-9\nBahnhofstrasse 45, 8001 チューリッヒ、スイス\n\nPeter B. Guggi、会長\nLucas Gardner、取締役\n\nSBDVは銀行ではなく、FINMAの銀行免許を保有しません。ファシリティ条件と規制上の開示は本ウェブサイトに掲載されています。読むために支払いは不要です。",
+    "englishGoverns": "本ページは、お客様が選んだ言語で表示されます。"
   },
   "login": {
     "title": "顧客ログイン",
@@ -912,7 +919,7 @@
     },
     "capitalAccess": {
       "title": "Capital Access Requests",
-      "subtitle": "Review enterprise borrowing and investment applications against sovereign pools.",
+      "subtitle": "まず書類を審査し、その後承認します。4%の現金保証金は、申請者がまだ保管していない場合にのみ適用されます。",
       "empty": "No capital access requests submitted yet.",
       "review": "Mark Under Review",
       "reviewApplication": "Review Application",
@@ -925,7 +932,7 @@
       "pendingVerification": "pending verification",
       "documents": "Documents uploaded",
       "approveModalTitle": "Approve & Assign Escrow",
-      "approveModalDesc": "Enter the escrow account the partner must use for the security deposit of",
+      "approveModalDesc": "パートナーが次の保証金に使うエスクロー口座を入力してください。金額は",
       "approveWithEscrow": "Approve & Send Escrow Details",
       "beneficiary": "Beneficiary",
       "assignedEscrow": "Assigned Escrow Account",
@@ -945,7 +952,7 @@
       "requestExtraDesc": "If the package is incomplete or unsatisfactory, ask the borrower to upload or replace files.",
       "extraNotesPlaceholder": "Describe what is missing or what must be corrected…",
       "requestExtra": "Request Extra Documents",
-      "approveWithEscrowTitle": "Approve & assign escrow (10% deposit)",
+      "approveWithEscrowTitle": "承認し、保証金の口座を指定する",
       "approveRequiresDocs": "All five required documents must be on file before you can approve.",
       "approveRequiresSubmit": "Borrower must click Submit Documents before you can approve.",
       "disburseBank": "Disbursement bank account",
@@ -968,7 +975,8 @@
       "sofMissing": "Borrower has not declared origin of the security deposit",
       "operatingCountry": "Operating country",
       "yearsOperating": "Years operating",
-      "enhancedDdHint": "Consider enhanced due diligence for this jurisdiction"
+      "enhancedDdHint": "Consider enhanced due diligence for this jurisdiction",
+      "approveMetalDesc": "このファシリティは保管中の金属で担保されます。現金の保証金もエスクロー口座もありません。"
     },
     "settings": {
       "title": "Account Settings"
@@ -1029,46 +1037,49 @@
     "hero": {
       "badge": "機関キャピタル・プログラム",
       "title": "適格企業のための構造化キャピタル",
-      "subtitle": "SBDVは銀行ではありません。ファシリティは預金ではなく、承認されるまで確約ではありません。",
+      "subtitle": "SBDVは銀行ではなく、FINMAの銀行免許を保有しません。これらの条件を読むことにも申請することにも支払いは不要です。ファシリティは書面による承認の後にのみ存在します。",
       "applyAccess": "アクセスを申請",
       "partnerLogin": "アカウントログイン",
-      "eligibility": "事業歴が2年以上あり、監査済みまたはレビュー済みの計算書類を備え、USD 500,000からの請求を行う事業会社です。承認は裁量によります。",
-      "collateralRule": "SBDVは、お客様が指定する口座へ支払います。そのため現金担保が先です。住宅その他の現地資産は受け付けません。10%は承認後にのみ請求されます。お支払いの前にエスクロー口座を提示します。これは手数料ではなく、お客様の現金であり、利息は付きません。確認後、承認金額の全額が送金されます。全額を返済された場合、未使用の残高は返還されます。不履行の場合、延滞分に充当できます。申請は融資の確約ではありません。"
+      "eligibility": "二年以上の事業歴、監査済みまたはレビュー済みの計算書類、50万米ドル以上の申請がある事業会社。承認は裁量によります。",
+      "collateralRule": "登録にも申請にも支払いは不要です。まだSBDVに保管していない場合、承認額の4%の保証金は書面による承認の後にのみ、送金前にファシリティ契約で指定された口座に対して求められます。手数料ではありません。すでにSBDVに適格な金または銀を保管している場合、現金の保証金はありません。前貸しはその金の75%またはその銀の70%までで、金属は返済までお客様の名義のままです。申請は貸付けの約束ではありません。",
+      "companyDoor": "非金庫の顧客として登録",
+      "metalDoor": "金庫の顧客として登録",
+      "readTerms": "ファシリティ条件を読む"
     },
     "features": {
       "title": "企業がCapital Accessを選ぶ理由",
       "subtitle": "適格企業と、マンデートに整合したキャピタルとの間の、規律ある入口です。明確さを先に置きます。",
-      "globalPoolsTitle": "マンデートに整合したプール",
-      "globalPoolsDesc": "セクターと地域に合わせて組み合わされた、部分開示のソブリン級プールです。中身の見えない競売ではありません。",
+      "globalPoolsTitle": "二つの道",
+      "globalPoolsDesc": "4%の保証金付きの会社向けファシリティ、またはすでにSBDVに保管している金属を担保とする前貸し。一人の申請者は一つの道だけを使います。",
       "flexibleTermsTitle": "計画の前提となる条件",
       "flexibleTermsDesc": "1–10年にわたり、金額、期間、ならびに月次または年次の利息を定め、計算をリアルタイムで確認します。",
       "enterpriseFocusTitle": "事業会社のために",
       "enterpriseFocusDesc": "監査済みまたはレビュー済みの財務と、明確な投資方針を備えた、確立した企業のためです。",
-      "structuredSecurityTitle": "想定外のない手続き",
-      "structuredSecurityDesc": "資金を送る前の10%の現金担保。住宅その他の現地資産は受け付けません。KYC/UBOの完全な確認と、スイスのAML基準に基づく裁量による承認。"
+      "structuredSecurityTitle": "担保はあらかじめ示します",
+      "structuredSecurityDesc": "4%の現金は、SBDVに保管していない場合に限り、書面による承認の後にのみ求めます。すでに保管している場合、金属が担保であり、現金の保証金は取りません。"
     },
     "howItWorks": {
       "title": "How It Works",
       "registerTitle": "Register as a Capital Partner",
       "registerDesc": "Create your enterprise account and verify your company credentials.",
       "exploreTitle": "Explore Available Pools",
-      "exploreDesc": "お客様のセクターおよび地域に整合した、部分開示のソブリン・キャピタルプールを閲覧します。",
+      "exploreDesc": "会社向けファシリティまたは金属ファシリティを選び、金額、期間、返済を示してください。",
       "structureTitle": "Structure Your Request",
       "structureDesc": "融資金額、期間、返済頻度を定め、リアルタイムの利息計算を確認します。",
       "submitTitle": "Submit Company Profile",
-      "submitDesc": "Provide financials, investment areas, and accept the 10% security deposit condition.",
+      "submitDesc": "設立国と事業国、財務、権限ある署名者、および適用される担保の道を示してください。",
       "decisionTitle": "Await Institutional Review",
       "decisionDesc": "Your application enters our review queue. You will receive approval or rejection notification.",
       "prepareTitle": "書類を準備",
       "prepareDesc": "適格性を確認してください（企業、USD 500,000+、事業歴2年）。現地登録簿の抄本、監査済み計算書類、および実質的支配者の明細を揃えてください。現地の同等書類および認証翻訳を受け付けます。",
       "reviewTitle": "機関としての審査",
       "reviewDesc": "SBDVは、文書、実質的支配者およびマンデートとの整合を審査します。承認は裁量により、発行されるまで確約ではありません。",
-      "depositTitle": "保証金および資金の出所",
-      "depositDesc": "KYC審査の後、エスクロー口座を提示します。承認金額の10%を送金してください。これは担保として保有するお客様の現金であり、手数料ではありません。その後、SBDVは承認金額の全額を、お客様が指定する口座へ送金します。",
+      "depositTitle": "担保は承認の後にのみ",
+      "depositDesc": "SBDVに保管していない場合、4%の保証金の口座は承認後かつこれらの条件の承諾後に示されます。それより前に支払いは求めません。すでに保管している場合、現金は求めません。",
       "kycTitle": "KYCおよび制裁審査",
       "kycDesc": "会社、署名権者および最終的実質的支配者について、スイスのAML審査を行います。高リスク法域には、強化デューデリジェンスを適用します。",
       "fundingTitle": "資金の解放および返済",
-      "fundingDesc": "借入人名義の銀行口座（SWIFTに加え、IBANまたは現地口座番号）を提出してください。10%の現金担保が確認された後にのみ、承認金額の全額が米ドルで支払われます。返済はダッシュボードのスケジュールに従ってください。"
+      "fundingDesc": "借主名義の銀行口座を示してください。資金が放出される場合、米ドルでそこに送られます。金属の道では、金属は返済まで担保に供されたままです。"
     },
     "nav": {
       "overview": "Overview",
@@ -1082,14 +1093,14 @@
     },
     "overview": {
       "title": "Welcome to Capital Access",
-      "subtitle": "Explore sovereign capital pools and submit mandate-aligned investment requests for your enterprise.",
+      "subtitle": "会社向けファシリティまたは金属ファシリティを選び、申請してください。",
       "featuredPools": "Featured Capital Pools",
       "ctaTitle": "Ready to structure your request?",
       "ctaDesc": "Complete a guided application with live interest calculation and security deposit terms."
     },
     "steps": {
       "explore": "Explore Pools",
-      "exploreDesc": "Review partially disclosed sovereign capital available for enterprise deployment.",
+      "exploreDesc": "承認後に4%の保証金がある会社向けファシリティ、またはすでにSBDVに保管されている金属を担保とする前貸しを選んでください。",
       "apply": "Structure Request",
       "applyDesc": "Define amount, term, and repayment schedule with live APR calculation.",
       "review": "Institutional Review",
@@ -1097,13 +1108,13 @@
     },
     "pools": {
       "title": "Available Capital Pools",
-      "subtitle": "Institutional sovereign pools with limited disclosure. Full entity details available upon approved access."
+      "subtitle": "ファシリティは承認前に審査されます。完全な条件は申請前に公表されます。"
     },
     "conditions": {
       "title": "Access Conditions",
       "minimumOperatingYears": "Minimum 2 years of operating history",
       "auditedFinancials": "Audited or reviewed financial statements required",
-      "securityDeposit": "承認後、承認金額の送金前に差し入れる10%の現金担保",
+      "securityDeposit": "まだ保管していない場合は承認後に4%の保証金。すでに保管している場合は現金の保証金なし",
       "kycAml": "Full KYC/AML and beneficial ownership disclosure",
       "mandateAlignment": "Investment thesis must align with pool mandate",
       "minimumTicket": "Minimum request USD $500,000",
@@ -1119,7 +1130,7 @@
     "startRequest": "Start Capital Request",
     "register": {
       "title": "Capital Accessに登録",
-      "subtitle": "Create your enterprise partner account to explore sovereign capital pools.",
+      "subtitle": "認められる国から会社の口座を作成してください。",
       "fullName": "氏名",
       "phone": "電話（任意）",
       "submit": "Capital Access口座を作成",
@@ -1129,7 +1140,11 @@
       "welcomeTitle": "口座を作成しました",
       "welcomeBody": "Capital Accessの口座の準備ができました。作成したメールアドレスとパスワードでサインインしてください。",
       "welcomeEmail": "メール",
-      "goToLogin": "ログインへ"
+      "goToLogin": "ログインへ",
+      "whichDoor": "すでにSBDVに金属を保管していますか。",
+      "doorCompany": "非金庫の顧客として登録",
+      "doorMetal": "金庫の顧客として登録",
+      "doorLocked": "この登録は一つのファシリティのためです。"
     },
     "request": {
       "title": "資本申請",
@@ -1160,7 +1175,7 @@
       "financialsPlaceholder": "Summarize audited financials — revenue trend, EBITDA, debt/equity ratio, key assets…",
       "review": "Review & Submit",
       "selectedPool": "Selected Pool",
-      "termsAccept": "承認後、承認金額が送金される前に、10%の現金担保をエスクロー口座へ送金することを承諾します。これは手数料ではありません。機関審査の手続を承諾し、提供した情報が正確であることを確認します。",
+      "termsAccept": "ファシリティ条件を読みました。今は支払いが不要であることを理解します。会社向けファシリティでは、4%の保証金は書面による承認の後にのみ求められます。金属ファシリティでは現金の保証金は取りません。",
       "back": "戻る",
       "continue": "続ける",
       "submit": "Submit Application",
@@ -1168,7 +1183,7 @@
       "submittedTitle": "Application Submitted",
       "submittedDesc": "Your capital access request is now under institutional review. A confirmation email has been sent to your registered address.",
       "viewApplications": "View My Applications",
-      "termsAcceptBefore": "承認後、承認金額が送金される前に、10%の現金担保をエスクロー口座へ送金することを承諾します。これは手数料ではありません。私は次を承諾します：",
+      "termsAcceptBefore": "ファシリティ条件を読みました。今は支払いは不要です。次を承諾します：",
       "termsAcceptAfter": ", the institutional review process, and I confirm that all information provided is accurate.",
       "operatingCountry": "Principal operating country",
       "yearsOperating": "Years of operation",
@@ -1191,7 +1206,13 @@
       "capitalControls": "I confirm that the laws of our home country allow this company to take foreign USD capital, including any central-bank or capital-control rules that apply to us.",
       "sanctionsAttest": "I confirm that the company, its signatories, and its beneficial owners are not sanctioned persons and are not located, organised, or resident in a comprehensively sanctioned jurisdiction.",
       "sanctionedCountry": "SBDV cannot onboard applicants in comprehensively sanctioned jurisdictions.",
-      "attestationsRequired": "Please complete all attestations before submitting."
+      "attestationsRequired": "Please complete all attestations before submitting.",
+      "trackLabel": "どの担保が適用されるか",
+      "trackCash": "非金庫の顧客",
+      "trackCashDesc": "SBDVに保管していません。4%の保証金は書面による承認の後にのみ求められます。今は支払いは不要です。",
+      "trackMetal": "金庫の顧客",
+      "trackMetalDesc": "すでにSBDVに適格な金または銀を保管しています。現金の保証金はありません。前貸しはその金の75%またはその銀の70%までです。",
+      "trackMetalShort": "現金の保証金はありません。金属は担保に供されています。"
     },
     "applications": {
       "title": "My Applications",
@@ -1207,13 +1228,13 @@
     },
     "onboarding": {
       "title": "Facility Dashboard",
-      "subtitle": "Complete onboarding to activate your approved capital facility.",
+      "subtitle": "書類と受入れを完了し、資本ファシリティを有効にしてください。",
       "noFacility": "No Active Facility",
       "noFacilityDesc": "Once your capital access application is approved, your facility dashboard will appear here.",
       "progress": "Onboarding Progress",
       "rm": "Relationship Manager",
       "escrowTitle": "Security Deposit — Escrow Instructions",
-      "escrowDesc": "SBDVは、お客様が指定する口座へ支払います。そのため、この現金が先です。住宅その他の現地資産は受け付けません。承認金額の10%を、下記のエスクロー口座へ正確に送金してください。これは手数料ではなく、お客様の現金であり、利息は付きません。SBDVが確認した後、承認金額の全額が送金されます。振込参照番号は表示どおりに使用してください。",
+      "escrowDesc": "この口座は書面による承認の後にのみ示されます。表示された保証金を送金してください。手数料ではありません。この指示が表示される前に金額を送金しないでください。",
       "escrowPending": "Escrow payment details are being prepared by our capital desk. They will appear here as soon as your application is fully approved.",
       "bank": "Bank",
       "bankAddress": "Bank Address",
@@ -1235,7 +1256,7 @@
       "documentsTitle": "Required Documentation",
       "documentsDesc": "Upload all four documents within 14 business days of deposit confirmation.",
       "upload": "Upload",
-      "docsCompleteNote": "All documents uploaded. Our team will review and advance your onboarding.",
+      "docsCompleteNote": "すべての書類がアップロードされました。当チームが審査します。この段階で支払いは不要です。",
       "disbursementPending": "Disbursement in Progress",
       "disbursementDesc": "Your facility has cleared compliance. Capital release is being processed.",
       "disbursedOn": "Disbursed on",
@@ -1305,14 +1326,15 @@
       "uboEmpty": "Add at least one beneficial owner before submitting documents.",
       "uboSaved": "Beneficial owner saved.",
       "sofTitle": "Origin of the security deposit",
-      "sofDesc": "Declare how the 10% cash collateral will be funded. The remitting account must be in the borrower’s name.",
+      "sofDesc": "現金の保証金がある場合、その資金源を申告してください。送金元口座は借主名義でなければなりません。金属ファシリティに現金の保証金はありません。",
       "sofSource": "Source of funds",
       "sofOperating": "Company operating cash",
       "sofShareholder": "Shareholder loan",
       "sofAssetSale": "Sale of assets",
       "sofOther": "Other",
       "sofDetail": "Explanation",
-      "sofRequired": "Origin of funds is required before you submit the deposit."
+      "sofRequired": "Origin of funds is required before you submit the deposit.",
+      "kycReviewNote": "KYC審査が進行中です。今は支払いは不要です。"
     },
     "status": {
       "pending": "Pending Review",
@@ -1349,15 +1371,15 @@
     "facilityTerms": {
       "eyebrow": "Capital Accessプログラム",
       "pageTitle": "ファシリティ条件",
-      "intro": "本条件は、10%の保証金、利息、返済、債務不履行およびスイス法の準拠を含め、お客様のキャピタル・ファシリティを規律します。受諾の前に全文をお読みください。",
+      "intro": "本条件は、4%の保証金または保管金属の担保、利息、返済、不履行およびスイス法を含め、お客様の資本ファシリティを定めます。承諾前に全文をお読みください。読むために支払いは不要です。",
       "versionLabel": "文書",
       "effectiveLabel": "発効",
       "languageLabel": "準拠言語",
-      "governingNote": "本証書の準拠言語は英語です。翻訳が提供される場合、それは便宜のためのものにすぎません。",
+      "governingNote": "本条件は、お客様が選んだ言語で表示されます。",
       "contents": "目次",
       "acceptBefore": "私は読み、同意します",
       "linkLabel": "ファシリティ条件",
-      "acceptAfter": "、これには10%の保証金、利息、返済、債務不履行および準拠法の条項が含まれ、借主を拘束する権限を有することを確認します。",
+      "acceptAfter": "（保証金または金属担保、利息、返済、不履行および準拠法の定めを含みます）。借主を拘束する権限があることを確認します。",
       "acceptedNote": "ファシリティ条件を受諾しました",
       "print": "印刷または保存",
       "backFacility": "ファシリティのダッシュボードに戻る"
@@ -1386,8 +1408,43 @@
     "settings": {
       "title": "Account Settings"
     },
-    "yearlyInterestNote": "年利は、承認金額にのみ課され、現金担保には課されません。",
-    "amountDisbursed": "実行額"
+    "yearlyInterestNote": "年利は承認額にのみ計算され、現金の保証金には計算されません。",
+    "amountDisbursed": "実行額",
+    "doors": {
+      "readTerms": "ファシリティ条件を読む",
+      "register": "このファシリティに登録",
+      "noPayment": "このページを読むことにも申請することにも支払いは不要です。",
+      "company": {
+        "title": "非金庫の顧客",
+        "whoTitle": "対象",
+        "who": "SBDVに金属を保管していない事業会社。二年以上の事業歴、監査済みまたはレビュー済みの計算書類、50万米ドル以上の申請。個人向け貸付けではありません。",
+        "securityTitle": "担保",
+        "security": "書面による承認の後、かつ本条件を承諾した後にのみ、会社は承認額の4%を米ドルで支払います。手数料ではありません。口座は送金前にファシリティ契約に記載されます。SBDVが払出し前に拒否した場合、申請者の違反または申請者の情報による法令順守審査の不合格を除き、全額返還されます。",
+        "stepsTitle": "五つの手順",
+        "steps": [
+          "会社、所有者および書類を提出する。",
+          "SBDVが書類を審査する。承認は裁量による。",
+          "書面による承認は、まだ支払いの約束ではない。",
+          "ファシリティ条件を承諾する。その後にのみ4%の保証金が求められる。",
+          "会社名義の銀行口座を提出する。資金が放出される場合、そこへ送られる。"
+        ]
+      },
+      "metal": {
+        "title": "金庫の顧客",
+        "whoTitle": "対象",
+        "who": "すでにSBDVに適格な金または銀を保管している顧客で、二年以上の事業歴、監査済みまたはレビュー済みの計算書類、50万米ドル以上の申請がある事業会社を通じて申し込む方。",
+        "securityTitle": "担保",
+        "security": "現金の保証金はありません。前貸しは、すでに金庫にある適格な金の75%および適格な銀の70%までです。金属は顧客の名義で配分されたまま、返済まで担保に供されます。価格の下落により、追加の金属または一部返済が求められることがあります。前貸しが行われない場合、金属は担保に供されません。",
+        "stepsTitle": "五つの手順",
+        "steps": [
+          "適格な金または銀がすでにSBDVに保管されている。",
+          "会社、所有者および書類を提出する。",
+          "SBDVが書類を審査する。書面による承認は、まだ支払いの約束ではない。",
+          "金属が担保に供される。現金の保証金は求められない。",
+          "会社名義の銀行口座を提出する。金属は返済まで担保に供されたまま。"
+        ]
+      }
+    }
   },
   "chat": {
     "open": "SBDVに尋ねる",

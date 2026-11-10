@@ -1,7 +1,6 @@
-/** Governing instrument for the Capital Access facility. English prevails. */
+/** Governing instrument for the Capital Access facility. */
 
-export const FACILITY_TERMS_VERSION = "SBDV-CAP-FAC-2021.01";
-export const FACILITY_TERMS_EFFECTIVE = "1 January 2021";
+export const FACILITY_TERMS_VERSION = "SBDV-CAP-FAC";
 
 export type FacilityTermsArticle = {
   id: string;
@@ -16,7 +15,7 @@ export const facilityTermsArticles: FacilityTermsArticle[] = [
     paragraphs: [
       "These Capital Access Facility Terms and Conditions (these “Terms”) are issued by Swiss Bullion Depository Vault (“SBDV”, “we”, “us”) and apply to every enterprise borrower that applies for, is approved for, or draws a facility under the Capital Access Program (the “Borrower”, “you”).",
       "These Terms, together with the facility particulars shown in your Capital Access facility dashboard — including the approved amount, term, annual interest rate, repayment frequency, installment amount, and security deposit — form the facility agreement between SBDV and the Borrower (the “Facility”).",
-      "If there is any conflict between a marketing description and these Terms, these Terms prevail. If there is any conflict between a translation and the English text, the English text prevails.",
+      "If there is any conflict between a marketing description and these Terms, these Terms prevail. These Terms are read in the language selected on the site.",
     ],
   },
   {
@@ -36,7 +35,8 @@ export const facilityTermsArticles: FacilityTermsArticle[] = [
       "“Business Day” means a day on which banks are open for wholesale payments in Zurich and in the jurisdiction of the paying or receiving bank.",
       "“Disbursement” means payment by SBDV of the Approved Amount to the disbursement account you have submitted and we have accepted.",
       "“Installment” means each scheduled payment of principal and interest shown on the repayment schedule in your facility dashboard.",
-      "“Security Deposit” means a cash amount equal to ten percent (10%) of the Approved Amount, payable before Disbursement and held as continuing security for your obligations.",
+      "“Security Deposit” means a cash amount equal to four percent (4%) of the Approved Amount. It applies only to a company facility where the borrower does not already vault metal with SBDV. It is payable after written approval and after acceptance of these Terms, and before Disbursement, and it is held as continuing security for your obligations.",
+      "“Metal Facility” means a facility for a client who already vaults eligible gold or silver with SBDV. No Security Deposit is payable. The security is that metal, which remains allocated in the client’s name and pledged until the facility is repaid.",
       "“Wire Reference” means the unique payment reference assigned to the Facility, which must appear on every transfer.",
     ],
   },
@@ -54,20 +54,21 @@ export const facilityTermsArticles: FacilityTermsArticle[] = [
     id: "conditions",
     title: "5. Conditions before disbursement",
     paragraphs: [
-      "SBDV is not obliged to disburse unless, in form and substance satisfactory to SBDV: (a) these Terms have been accepted by a person authorised to bind the Borrower; (b) the required document package has been uploaded and accepted; (c) the Security Deposit has been received in cleared funds in the escrow account designated by SBDV, for the exact amount, with the Wire Reference; (d) know-your-customer, anti-money-laundering, and sanctions screening of the Borrower and its beneficial owners has been completed to SBDV’s satisfaction; and (e) disbursement bank details have been submitted and accepted.",
+      "SBDV is not obliged to disburse unless, in form and substance satisfactory to SBDV: (a) these Terms have been accepted by a person authorised to bind the Borrower; (b) the required document package has been uploaded and accepted; (c) for a company facility, the Security Deposit has been received in cleared funds in the account designated in the facility dashboard, for the exact amount, with the Wire Reference, or, for a Metal Facility, the vaulted metal is pledged on the terms in Article 6 and no Security Deposit is payable; (d) know-your-customer, anti-money-laundering, and sanctions screening of the Borrower and its beneficial owners has been completed to SBDV’s satisfaction; and (e) disbursement bank details have been submitted and accepted.",
       "SBDV may impose additional conditions, request further documents, or withdraw an approval that has not yet been disbursed if any condition ceases to be satisfied or if a material adverse change occurs.",
     ],
   },
   {
     id: "deposit",
-    title: "6. Security deposit",
+    title: "6. Security deposit and vaulted metal",
     paragraphs: [
-      "Before any Disbursement, you must transfer the Security Deposit — ten percent (10%) of the Approved Amount, in United States dollars — to the escrow account displayed in your facility dashboard. The amount, beneficiary, bank, IBAN or account number, SWIFT, and Wire Reference shown there are part of these Terms for your Facility.",
+      "A company that does not already vault metal with SBDV is on the company facility. Before any Disbursement, and only after written approval and acceptance of these Terms, you must transfer the Security Deposit — four percent (4%) of the Approved Amount, in United States dollars — to the account displayed in your facility dashboard. The amount, beneficiary, bank, IBAN or account number, SWIFT, and Wire Reference shown there are identified before you transfer and are part of these Terms for your Facility. No payment is due in order to read these Terms or to submit an application.",
       "You must transfer the exact amount. SBDV may reject a short payment, a payment without the Wire Reference, or a payment from an account that cannot be reconciled to the Borrower. You must upload a payment slip or bank confirmation and submit the bank’s wire reference through the portal. The Security Deposit is received only when SBDV confirms it in the facility dashboard.",
       "The Security Deposit is cash collateral. It is not a fee, not an advance of the Facility, and not a deposit with a bank for your account. It does not bear interest unless SBDV agrees otherwise in writing. You may not assign, pledge, or withdraw it.",
       "SBDV may apply the Security Deposit, without prior demand, to any overdue Installment, fee, cost, or other amount payable under the Facility, and to any loss arising from a breach. Any unused balance will be applied to the final amounts due, or returned to an account in the Borrower’s name, within fifteen (15) Business Days after the Facility has been repaid in full and all obligations have been released.",
       "If you withdraw after the Security Deposit has been confirmed and before Disbursement, SBDV will return the Security Deposit less any documented third-party or compliance costs, unless an event of default has occurred. If SBDV declines the Facility after the Security Deposit has been confirmed and before Disbursement, other than because of your breach or a failed compliance check caused by your information, the Security Deposit will be returned in full.",
       "A Security Deposit that cannot be accepted because of sanctions, source-of-funds concerns, or a material misrepresentation may be held, returned to the remitting bank, or otherwise dealt with as required by law. SBDV is not liable for delay caused by a correspondent bank or compliance review.",
+      "A client who already vaults eligible gold or silver with SBDV is on the Metal Facility. No Security Deposit is payable, and SBDV does not ask for a second cash deposit. The advance is limited to seventy-five percent (75%) of the value of eligible vaulted gold and seventy percent (70%) of the value of eligible vaulted silver. The metal remains allocated in the client’s name and is pledged until the facility is repaid. If the value of the metal falls far enough to exceed the agreed ratio, SBDV may require additional eligible metal or a partial repayment. After the facility is repaid in full and all obligations are released, the pledge is released. If no advance is made, the metal is not pledged.",
     ],
   },
   {
@@ -197,7 +198,7 @@ export const facilityTermsArticles: FacilityTermsArticle[] = [
     title: "22. Amendments and version",
     paragraphs: [
       "SBDV may amend these Terms for new facilities by publishing a new version. The version you accepted continues to govern your Facility, except that SBDV may make a change that is required by law or by a banking or compliance partner, or that does not materially increase your payment obligations, by notice in the portal.",
-      "The version of these Terms is identified as SBDV-CAP-FAC-2021.01 and is effective from 1 January 2021.",
+      "The version of these Terms is identified as SBDV-CAP-FAC.",
     ],
   },
   {

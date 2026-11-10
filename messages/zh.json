@@ -23,14 +23,15 @@
   "hero": {
     "headline": "瑞士安全。稳健增长。",
     "subtext": "私人客户使用瑞士托管或财富委托。符合条件的企业可申请结构化资本便利。SBDV并非银行。",
-    "exploreCapital": "企业",
-    "privateClients": "私人客户通道",
+    "exploreCapital": "面向企业的资本",
+    "privateClients": "金库保管",
     "requestAccess": "申请准入",
     "clientLogin": "客户登录",
-    "investorRelations": "投资者关系"
+    "investorRelations": "投资者关系",
+    "wealthMandate": "财富委托"
   },
   "footer": {
-    "copyright": "Swiss Bullion Depository Vault — 瑞士精准。全球信赖。",
+    "copyright": "Swiss Bullion Depository Vault AG — 瑞士精度。全球信任。",
     "headquarters": "总部",
     "globalOffices": "全球办事处",
     "legal": "法律",
@@ -69,7 +70,12 @@
       }
     },
     "jurisdictionNote": "瑞士法律基础。为全球客户提供多司法管辖区访问。",
-    "facilityTerms": "便利条款"
+    "facilityTerms": "便利条款",
+    "legalName": "Swiss Bullion Depository Vault AG",
+    "uid": "UID CHE-218.964.179",
+    "registerNumber": "商业登记 CH-291.7.217.861-9",
+    "board": "Peter B. Guggi，董事长。Lucas Gardner，董事。",
+    "notABank": "SBDV 不是银行，不持有 FINMA 银行牌照，亦未获许可吸收存款或发放贷款。"
   },
   "about": {
     "title": "关于",
@@ -116,7 +122,7 @@
       "privateText": "用于金条托管的「金库与安全」会籍，以及供客户注入本金并观察所载收益率的单独「财富与投资」委托。",
       "capitalLabel": "企业",
       "capitalTitle": "Capital Access",
-      "capitalText": "面向符合条件公司的结构化便利 — 文件、10%现金抵押、瑞士AML审查以及经确认的偿还计划。批准为酌情决定。"
+      "capitalText": "两条路径。尚未在 SBDV 保管的公司可以申请带有 4% 保证金的便利，该保证金仅在书面批准后才要求。已经保管的客户可以以其金属获得预支，无需现金保证金。批准由 SBDV 酌情决定。"
     },
     "serveTitle": "我们服务的对象",
     "serve": {
@@ -509,11 +515,12 @@
     }
   },
   "cta": {
-    "title": "两条路径。同一瑞士标准。",
-    "subtitle": "需要静默保全的私人托管——或为寻求清晰增长的企业提供结构化资本。",
+    "title": "三条路径。一个瑞士标准。",
+    "subtitle": "金库保管、财富委托，或面向合格企业的资本便利。每一项申请都单独审查。",
     "button": "预约私人咨询",
-    "capitalButton": "了解 Capital Access",
-    "privateButton": "私人客户通道"
+    "capitalButton": "面向企业的资本",
+    "privateButton": "金库保管",
+    "wealthButton": "财富委托"
   },
   "home": {
     "swissStandardTitle": "瑞士标准",
@@ -567,7 +574,7 @@
       }
     },
     "capitalTeaserTitle": "助力企业成长的资本",
-    "capitalTeaserDescription": "Capital Access Program 将合格企业与符合授权的资金池连接——条款透明、瑞士监督，从申请到设施全程有指引。",
+    "capitalTeaserDescription": "尚未保管的公司可以申请美元便利。4% 保证金仅在书面批准后才要求。已经保管合格金属的客户不缴纳该款项。",
     "capitalTeaserButton": "了解 Capital Access",
     "capitalTeaserPoints": {
       "structure": "结构清晰",
@@ -575,7 +582,7 @@
       "oversight": "瑞士监督",
       "oversightDesc": "文件化 KYC、UBO 穿透与酌情审查。",
       "portal": "合作伙伴门户",
-      "portalDesc": "在一处跟踪申请、保证金与还款。"
+      "portalDesc": "在一处跟踪申请、担保和偿还。"
     }
   },
   "common": {
@@ -599,12 +606,12 @@
     "termsIntro": "本条款规范您对SBDV网站、客户门户及公开申请渠道的使用。SBDV设于苏黎世。本网站条款受瑞士法律管辖。",
     "termsBody": "本网站条款适用于对SBDV网站、账户登录及公开申请渠道的使用。该等条款不设立金库托管协议、财富委托或资本便利。金库托管及财富委托仅根据为该关系另行出具的协议提供。Capital Access便利受便利条款与条件约束，不受本网站条款约束。\n\nSBDV设于瑞士苏黎世。本网站条款受瑞士实体法管辖，不包括将导致适用其他法律的法律冲突规则。苏黎世法院对因使用本网站而产生的争议拥有管辖权。这并不限制便利协议或委托协议中载明的任何管辖权。\n\n创建账户或使用门户，即表示您同意接受瑞士了解客户及反洗钱审查。您必须对密码及任何登录代码保密。若您认为账户在未经您授权的情况下被使用，请立即通过「联系」页面告知SBDV。\n\n世界各地的企业均可申请Capital Access。提交申请并不构成放款承诺，并非零售消费贷款，亦非证券公开发行。SBDV可酌情批准、拒绝或推迟申请。SBDV可通过在本页通知的方式修改公开网站。已经接受的便利仍受您所接受的便利条款约束，不受本页此后变更的约束。",
     "regulatoryTitle": "监管披露",
-    "regulatoryIntro": "SBDV是设于苏黎世的金库及资本安排机构，服务于世界各地的客户。其并非瑞士银行。",
-    "regulatoryBody": "SBDV提供金库金条托管，并为符合条件的企业安排结构化资本便利。Capital Access并非受保护的银行存款，不受存款保险计划覆盖。作为保证金持有的资金是合同项下的现金抵押，并非以您名义存放于银行的存款。\n\n私人客户的财富委托是投资安排，并非银行账户。所载委托收益率并非保证利息，可能暂停或修订，且不受存款保险覆盖。Bitcoin仅可用作注资或支付通道；SBDV不运营加密资产交易所，亦不持有客户私钥。以Bitcoin进行的划转不可撤销。\n\n所有客户均须接受与《瑞士反洗钱法》（AMLA）相符的了解客户、受益所有权及反洗钱审查。最终受益所有人须识别至自然人。无论客户的设立地国家为何，审查均适用。\n\n投资及投资组合管理服务可能需要适当牌照，或通过受监管的合作方提供。SBDV不声称持有FINMA银行牌照。任何便利或委托的批准均为酌情决定。\n\n处于全面制裁司法辖区的个人及实体不得被接纳。高风险司法辖区可适用强化尽职调查，而非自动拒绝。\n\n风险披露：投资涉及风险，包括可能损失本金。过往表现并非未来结果的指标。本网站不构成法律、税务或投资建议。",
-    "investorRelationsTitle": "投资者关系",
-    "investorRelationsIntro": "治理、透明与机构通信。",
-    "investorRelationsBody": "SBDV致力于对我们的客户及利益相关方保持透明。年度报告、治理政策及机构披露将于可供发布时刊载于此。机构事宜请通过联系页面与投资者关系团队联系。",
-    "englishGoverns": "本页的管辖语言为英文。译文供阅读。适用的文本为英文文本。"
+    "regulatoryIntro": "Swiss Bullion Depository Vault AG，UID CHE-218.964.179，注册办公地为 Bahnhofstrasse 45, 8001 苏黎世。其不是瑞士银行，不持有 FINMA 银行牌照，亦未获许可吸收存款或发放贷款。",
+    "regulatoryBody": "Swiss Bullion Depository Vault AG 提供贵金属金库保管，并为合格企业安排结构化资本便利。Capital Access 不是受保护的银行存款，不受存款保险覆盖。尚未在 SBDV 保管的公司，仅在书面批准后，才可能被要求缴纳已批金额 4% 的保证金。该现金是合同担保，不是以借款人名义存放在银行的存款，也不是费用。已经保管合格黄金或白银的客户不缴纳该款项。预支不超过合格黄金的 75% 和合格白银的 70%，金属在偿还前仍以客户名义分配。任何现金转账的账户在转账前于便利协议中载明。阅读条款和提出申请均无需付款。\n\n私人客户的财富委托是投资安排，不是银行账户。所述委托收益不是保证利息，可以暂停或调整，且不受存款保险覆盖。比特币只能作为入金或付款路径。SBDV 不经营加密货币交易所，也不保管客户私钥。比特币转账不可撤销。\n\n所有客户均依照瑞士《反洗钱法》接受身份、实际受益人和反洗钱审查。实际受益人识别至自然人。审查不因公司注册地而免除。\n\n投资和投资组合管理服务可能需要相应许可，或通过受监管的合作方提供。SBDV 不声称持有 FINMA 银行牌照。任何便利或委托的批准均为酌情决定。\n\n处于全面制裁司法辖区的个人和实体不能被接纳。较高风险司法辖区可能适用强化尽职调查。\n\n风险提示：投资有风险，包括可能损失本金。过往表现不代表未来结果。本网站不构成法律、税务或投资建议。",
+    "investorRelationsTitle": "本公司",
+    "investorRelationsIntro": "Swiss Bullion Depository Vault AG 的法律身份。",
+    "investorRelationsBody": "Swiss Bullion Depository Vault AG\nUID CHE-218.964.179\n商业登记 CH-291.7.217.861-9\nBahnhofstrasse 45, 8001 苏黎世，瑞士\n\nPeter B. Guggi，董事长\nLucas Gardner，董事\n\nSBDV 不是银行，不持有 FINMA 银行牌照。便利条款和监管披露已在本网站公布。阅读无需付款。",
+    "englishGoverns": "本页以您选择的语言显示。"
   },
   "login": {
     "title": "客户登录",
@@ -912,7 +919,7 @@
     },
     "capitalAccess": {
       "title": "Capital Access Requests",
-      "subtitle": "Review enterprise borrowing and investment applications against sovereign pools.",
+      "subtitle": "先审查文件，再批准。4% 现金保证金仅在申请人尚未保管时适用。",
       "empty": "No capital access requests submitted yet.",
       "review": "Mark Under Review",
       "reviewApplication": "Review Application",
@@ -925,7 +932,7 @@
       "pendingVerification": "pending verification",
       "documents": "Documents uploaded",
       "approveModalTitle": "Approve & Assign Escrow",
-      "approveModalDesc": "Enter the escrow account the partner must use for the security deposit of",
+      "approveModalDesc": "填写合作方必须用于以下保证金的托管账户，金额为",
       "approveWithEscrow": "Approve & Send Escrow Details",
       "beneficiary": "Beneficiary",
       "assignedEscrow": "Assigned Escrow Account",
@@ -945,7 +952,7 @@
       "requestExtraDesc": "If the package is incomplete or unsatisfactory, ask the borrower to upload or replace files.",
       "extraNotesPlaceholder": "Describe what is missing or what must be corrected…",
       "requestExtra": "Request Extra Documents",
-      "approveWithEscrowTitle": "Approve & assign escrow (10% deposit)",
+      "approveWithEscrowTitle": "批准并指定保证金账户",
       "approveRequiresDocs": "All five required documents must be on file before you can approve.",
       "approveRequiresSubmit": "Borrower must click Submit Documents before you can approve.",
       "disburseBank": "Disbursement bank account",
@@ -968,7 +975,8 @@
       "sofMissing": "Borrower has not declared origin of the security deposit",
       "operatingCountry": "Operating country",
       "yearsOperating": "Years operating",
-      "enhancedDdHint": "Consider enhanced due diligence for this jurisdiction"
+      "enhancedDdHint": "Consider enhanced due diligence for this jurisdiction",
+      "approveMetalDesc": "本便利以已保管金属作担保。没有现金保证金，也没有托管账户。"
     },
     "settings": {
       "title": "Account Settings"
@@ -1029,46 +1037,49 @@
     "hero": {
       "badge": "机构资本计划",
       "title": "面向符合条件企业的结构化资本",
-      "subtitle": "SBDV并非银行。资本便利并非存款，在获得批准之前亦不构成承诺。",
+      "subtitle": "SBDV 不是银行，不持有 FINMA 银行牌照。阅读这些条款和提出申请均无需付款。便利仅在书面批准后才存在。",
       "applyAccess": "申请准入",
       "partnerLogin": "账户登录",
-      "eligibility": "具有至少两年历史、经审计或审阅的账目，且申请额自 USD 500,000 起的经营中公司。批准为酌情决定。",
-      "collateralRule": "SBDV向您指定的账户付款，因此须先提供现金抵押。不接受房产或其他当地资产。10%仅在核准后要求。付款前会向您展示托管账户。这是您的现金，不是费用，也不计息。经确认后，核准金额全额拨付。若您全额偿还，未使用的余额将退还。若您违约，可将其用于清偿逾期款项。提出申请并不构成放款承诺。"
+      "eligibility": "经营至少两年、拥有经审计或审阅账目、申请金额自 50 万美元起的运营公司。批准由 SBDV 酌情决定。",
+      "collateralRule": "注册和申请均无需付款。如果您尚未在 SBDV 保管，已批金额 4% 的保证金仅在书面批准后才要求，并且只能转入便利协议在转账前列明的账户。这不是费用。如果您已在 SBDV 保管合格黄金或白银，则没有现金保证金：预支不超过该黄金的 75% 或该白银的 70%，金属在偿还前仍以您的名义持有。申请不是放贷承诺。",
+      "companyDoor": "以非金库客户注册",
+      "metalDoor": "以金库客户注册",
+      "readTerms": "阅读便利条款"
     },
     "features": {
       "title": "企业为何选择Capital Access",
       "subtitle": "符合条件的公司与同委托相一致的资本之间的克制通道 — 以清晰为先。",
-      "globalPoolsTitle": "与委托相一致的资金池",
-      "globalPoolsDesc": "按行业与地区匹配、部分披露的主权级资金池 — 而非黑箱式竞价。",
+      "globalPoolsTitle": "两条路径",
+      "globalPoolsDesc": "带有 4% 保证金的公司便利，或针对您已在 SBDV 保管的金属的预支。一名申请人只走一条路径。",
       "flexibleTermsTitle": "可据以规划的条款",
       "flexibleTermsDesc": "在1–10年的期限内确定金额、期限以及按月或按年计息，并提供实时计算。",
       "enterpriseFocusTitle": "为经营中的公司而设",
       "enterpriseFocusDesc": "面向具备经审计或审阅的财务报表以及明确投资论点的成熟企业。",
-      "structuredSecurityTitle": "无意外的程序",
-      "structuredSecurityDesc": "任何资金拨付前须提供10%现金抵押。不接受房产或其他当地资产。完整的KYC/UBO审查，并依瑞士反洗钱标准酌情核准。"
+      "structuredSecurityTitle": "担保事先说明",
+      "structuredSecurityDesc": "仅当您不在 SBDV 保管时才收取 4% 现金，且仅在书面批准之后。如果您已经保管，金属即为担保，不收取现金保证金。"
     },
     "howItWorks": {
       "title": "How It Works",
       "registerTitle": "Register as a Capital Partner",
       "registerDesc": "Create your enterprise account and verify your company credentials.",
       "exploreTitle": "Explore Available Pools",
-      "exploreDesc": "浏览与您的行业及地区相符、部分披露的主权资本池。",
+      "exploreDesc": "选择公司便利或金属便利，然后说明金额、期限和偿还方式。",
       "structureTitle": "Structure Your Request",
       "structureDesc": "确定贷款金额、期限、偿还频率，并查看实时利息计算。",
       "submitTitle": "Submit Company Profile",
-      "submitDesc": "Provide financials, investment areas, and accept the 10% security deposit condition.",
+      "submitDesc": "提供注册地和经营地、财务资料、授权签署人，并确认适用哪一种担保。",
       "decisionTitle": "Await Institutional Review",
       "decisionDesc": "Your application enters our review queue. You will receive approval or rejection notification.",
       "prepareTitle": "准备文件",
       "prepareDesc": "确认资格（企业、USD 500,000+、两年经营）。备妥当地登记摘录、经审计的账目以及受益所有人资料。接受当地等效文件及经认证的译文。",
       "reviewTitle": "机构审核",
       "reviewDesc": "SBDV审核文件、受益所有人以及与委托的一致性。批准为酌情决定，在正式作出之前不构成承诺。",
-      "depositTitle": "保证金与资金来源",
-      "depositDesc": "KYC审查完成后将向您展示托管账户。请电汇核准金额的10%。这是您的现金，作为担保持有，不是费用。随后SBDV将核准金额全额拨付至您指定的账户。",
+      "depositTitle": "担保仅在批准之后",
+      "depositDesc": "如果您不在 SBDV 保管，4% 保证金的账户在批准并接受这些条款后才会显示。在此之前不要求任何付款。如果您已经保管，不要求现金。",
       "kycTitle": "KYC与制裁筛查",
       "kycDesc": "对公司、签署人及最终受益所有人进行瑞士AML审查。高风险司法辖区适用强化尽职调查。",
       "fundingTitle": "发放与偿还",
-      "fundingDesc": "请提供借款人名义的银行账户（SWIFT以及IBAN或当地账号）。仅在10%现金抵押确认后，核准金额才会以美元全额拨付。请按控制面板中的计划偿还。"
+      "fundingDesc": "提供借款人名义的银行账户。资金如获发放，将以美元汇至该账户。在金属路径上，金属在偿还前保持质押。"
     },
     "nav": {
       "overview": "Overview",
@@ -1082,14 +1093,14 @@
     },
     "overview": {
       "title": "Welcome to Capital Access",
-      "subtitle": "Explore sovereign capital pools and submit mandate-aligned investment requests for your enterprise.",
+      "subtitle": "选择公司便利或金属便利，然后提交申请。",
       "featuredPools": "Featured Capital Pools",
       "ctaTitle": "Ready to structure your request?",
       "ctaDesc": "Complete a guided application with live interest calculation and security deposit terms."
     },
     "steps": {
       "explore": "Explore Pools",
-      "exploreDesc": "Review partially disclosed sovereign capital available for enterprise deployment.",
+      "exploreDesc": "选择在批准后收取 4% 保证金的公司便利，或针对已在 SBDV 保管的金属的预支。",
       "apply": "Structure Request",
       "applyDesc": "Define amount, term, and repayment schedule with live APR calculation.",
       "review": "Institutional Review",
@@ -1097,13 +1108,13 @@
     },
     "pools": {
       "title": "Available Capital Pools",
-      "subtitle": "Institutional sovereign pools with limited disclosure. Full entity details available upon approved access."
+      "subtitle": "便利在批准前审查。完整条款在您申请前公布。"
     },
     "conditions": {
       "title": "Access Conditions",
       "minimumOperatingYears": "Minimum 2 years of operating history",
       "auditedFinancials": "Audited or reviewed financial statements required",
-      "securityDeposit": "核准后、核准金额拨付前的10%现金抵押",
+      "securityDeposit": "尚未保管的，在批准后收取 4% 保证金；已经保管的，不收取现金保证金",
       "kycAml": "Full KYC/AML and beneficial ownership disclosure",
       "mandateAlignment": "Investment thesis must align with pool mandate",
       "minimumTicket": "Minimum request USD $500,000",
@@ -1119,7 +1130,7 @@
     "startRequest": "Start Capital Request",
     "register": {
       "title": "注册Capital Access",
-      "subtitle": "Create your enterprise partner account to explore sovereign capital pools.",
+      "subtitle": "从任何准许的国家设立企业账户。",
       "fullName": "姓名",
       "phone": "电话（选填）",
       "submit": "创建 Capital Access 账户",
@@ -1129,7 +1140,11 @@
       "welcomeTitle": "账户创建成功",
       "welcomeBody": "您的Capital Access账户已就绪。请使用刚刚创建的电子邮箱和密码登录。",
       "welcomeEmail": "电子邮箱",
-      "goToLogin": "前往登录"
+      "goToLogin": "前往登录",
+      "whichDoor": "您是否已在 SBDV 保管金属？",
+      "doorCompany": "以非金库客户注册",
+      "doorMetal": "以金库客户注册",
+      "doorLocked": "本次注册只适用于一种便利。"
     },
     "request": {
       "title": "资本申请",
@@ -1160,7 +1175,7 @@
       "financialsPlaceholder": "Summarize audited financials — revenue trend, EBITDA, debt/equity ratio, key assets…",
       "review": "Review & Submit",
       "selectedPool": "Selected Pool",
-      "termsAccept": "我接受：核准后、核准金额拨付前，须将10%现金抵押电汇至托管账户。这不是费用。我接受机构审查程序，并确认所提供的信息准确。",
+      "termsAccept": "我已阅读便利条款。我理解现在无需付款。如为公司便利，4% 保证金仅在书面批准后才要求。如为金属便利，不收取现金保证金。",
       "back": "返回",
       "continue": "继续",
       "submit": "Submit Application",
@@ -1168,7 +1183,7 @@
       "submittedTitle": "Application Submitted",
       "submittedDesc": "Your capital access request is now under institutional review. A confirmation email has been sent to your registered address.",
       "viewApplications": "View My Applications",
-      "termsAcceptBefore": "我接受：核准后、核准金额拨付前，须将10%现金抵押电汇至托管账户。这不是费用。我接受",
+      "termsAcceptBefore": "我已阅读便利条款。现在无需付款。我接受",
       "termsAcceptAfter": ", the institutional review process, and I confirm that all information provided is accurate.",
       "operatingCountry": "Principal operating country",
       "yearsOperating": "Years of operation",
@@ -1191,7 +1206,13 @@
       "capitalControls": "I confirm that the laws of our home country allow this company to take foreign USD capital, including any central-bank or capital-control rules that apply to us.",
       "sanctionsAttest": "I confirm that the company, its signatories, and its beneficial owners are not sanctioned persons and are not located, organised, or resident in a comprehensively sanctioned jurisdiction.",
       "sanctionedCountry": "SBDV cannot onboard applicants in comprehensively sanctioned jurisdictions.",
-      "attestationsRequired": "Please complete all attestations before submitting."
+      "attestationsRequired": "Please complete all attestations before submitting.",
+      "trackLabel": "适用哪一种担保",
+      "trackCash": "非金库客户",
+      "trackCashDesc": "您不在 SBDV 保管。4% 保证金仅在书面批准后才要求。现在无需付款。",
+      "trackMetal": "金库客户",
+      "trackMetalDesc": "您已在 SBDV 保管合格黄金或白银。没有现金保证金。预支不超过该黄金的 75% 或该白银的 70%。",
+      "trackMetalShort": "没有现金保证金。金属已质押。"
     },
     "applications": {
       "title": "我的申请",
@@ -1207,13 +1228,13 @@
     },
     "onboarding": {
       "title": "授信概览",
-      "subtitle": "Complete onboarding to activate your approved capital facility.",
+      "subtitle": "完成文件和准入，以启用资本便利。",
       "noFacility": "No Active Facility",
       "noFacilityDesc": "Once your capital access application is approved, your facility dashboard will appear here.",
       "progress": "Onboarding Progress",
       "rm": "Relationship Manager",
       "escrowTitle": "Security Deposit — Escrow Instructions",
-      "escrowDesc": "SBDV向您指定的账户付款，因此须先支付这笔现金。不接受房产或其他当地资产。请将核准金额的10%准确电汇至下方托管账户。这是您的现金，不是费用，也不计息。SBDV确认后，核准金额将全额拨付。请严格按所示附言填写汇款参考号。",
+      "escrowDesc": "该账户仅在书面批准后显示。请转入所示保证金金额。这不是费用。在本说明出现之前，请勿转入任何金额。",
       "escrowPending": "Escrow payment details are being prepared by our capital desk. They will appear here as soon as your application is fully approved.",
       "bank": "Bank",
       "bankAddress": "Bank Address",
@@ -1235,7 +1256,7 @@
       "documentsTitle": "所需文件",
       "documentsDesc": "Upload all four documents within 14 business days of deposit confirmation.",
       "upload": "Upload",
-      "docsCompleteNote": "All documents uploaded. Our team will review and advance your onboarding.",
+      "docsCompleteNote": "全部文件已上传。我方将审查。本阶段无需付款。",
       "disbursementPending": "Disbursement in Progress",
       "disbursementDesc": "Your facility has cleared compliance. Capital release is being processed.",
       "disbursedOn": "Disbursed on",
@@ -1305,14 +1326,15 @@
       "uboEmpty": "Add at least one beneficial owner before submitting documents.",
       "uboSaved": "Beneficial owner saved.",
       "sofTitle": "Origin of the security deposit",
-      "sofDesc": "Declare how the 10% cash collateral will be funded. The remitting account must be in the borrower’s name.",
+      "sofDesc": "说明任何现金保证金的资金来源。汇出账户必须为借款人名义。金属便利没有现金保证金。",
       "sofSource": "Source of funds",
       "sofOperating": "Company operating cash",
       "sofShareholder": "Shareholder loan",
       "sofAssetSale": "Sale of assets",
       "sofOther": "Other",
       "sofDetail": "Explanation",
-      "sofRequired": "Origin of funds is required before you submit the deposit."
+      "sofRequired": "Origin of funds is required before you submit the deposit.",
+      "kycReviewNote": "KYC 审查正在进行。现在无需付款。"
     },
     "status": {
       "pending": "Pending Review",
@@ -1349,15 +1371,15 @@
     "facilityTerms": {
       "eyebrow": "Capital Access计划",
       "pageTitle": "授信条款",
-      "intro": "本条款规范您的资本便利，包括10%保证金、利息、偿还、违约及瑞士管辖法律。接受前请全文阅读。",
+      "intro": "本条款规范您的资本便利，包括 4% 保证金或已保管金属的质押、利息、偿还、违约以及瑞士准据法。接受前请全文阅读。阅读无需付款。",
       "versionLabel": "文件",
       "effectiveLabel": "生效",
       "languageLabel": "管辖语言",
-      "governingNote": "本文件的管辖语言为英文。如提供译文，仅供便利。",
+      "governingNote": "本条款以您选择的语言显示。",
       "contents": "目录",
       "acceptBefore": "我已阅读并接受",
       "linkLabel": "授信条款",
-      "acceptAfter": "，包括10%保证金、利息、还款、违约及适用法律，并确认我有权约束借款人。",
+      "acceptAfter": "，包括保证金或金属质押、利息、偿还、违约和准据法条款，并确认我有权约束借款人。",
       "acceptedNote": "已接受便利条款与条件",
       "print": "打印或保存",
       "backFacility": "返回便利概览"
@@ -1386,8 +1408,43 @@
     "settings": {
       "title": "Account Settings"
     },
-    "yearlyInterestNote": "年利息仅按核准金额计算，不按现金抵押计算。",
-    "amountDisbursed": "已发放金额"
+    "yearlyInterestNote": "年利息只按已批金额计算，不按现金保证金计算。",
+    "amountDisbursed": "已发放金额",
+    "doors": {
+      "readTerms": "阅读便利条款",
+      "register": "为本便利注册",
+      "noPayment": "阅读本页和提出申请均无需付款。",
+      "company": {
+        "title": "非金库客户",
+        "whoTitle": "适用对象",
+        "who": "不在 SBDV 保管金属的运营公司。至少两年经营历史、经审计或审阅的账目，申请金额自 50 万美元起。这不是个人贷款。",
+        "securityTitle": "担保",
+        "security": "在书面批准之后，并且仅在接受本条款之后，公司以美元支付已批金额的 4%。这不是费用。账户在任何转账前于便利协议中载明。如果 SBDV 在拨付前拒绝，除申请人违约或因其信息导致合规检查未通过外，该款项全额退还。",
+        "stepsTitle": "五个步骤",
+        "steps": [
+          "提交公司、所有者及文件。",
+          "SBDV 审查档案。批准由 SBDV 酌情决定。",
+          "书面批准尚不是付款承诺。",
+          "接受便利条款。此后才要求 4% 保证金。",
+          "提交公司名义的银行账户。资金如获发放，将汇至该账户。"
+        ]
+      },
+      "metal": {
+        "title": "金库客户",
+        "whoTitle": "适用对象",
+        "who": "已在 SBDV 保管合格黄金或白银的客户，通过经营至少两年、拥有经审计或审阅账目、申请金额自 50 万美元起的运营公司提出。",
+        "securityTitle": "担保",
+        "security": "没有现金保证金。预支不超过已在金库中的合格黄金的 75% 和合格白银的 70%。金属仍以客户名义分配，并在偿还前质押。价格下跌可能要求追加金属或部分偿还。如果没有发放预支，金属不予质押。",
+        "stepsTitle": "五个步骤",
+        "steps": [
+          "合格黄金或白银已在 SBDV 保管。",
+          "提交公司、所有者及文件。",
+          "SBDV 审查档案。书面批准尚不是付款承诺。",
+          "金属予以质押。不要求现金保证金。",
+          "提交公司名义的银行账户。金属在偿还前保持质押。"
+        ]
+      }
+    }
   },
   "chat": {
     "open": "询问SBDV",

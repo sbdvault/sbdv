@@ -72,8 +72,14 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-off-white/10 pt-8 text-center">
-          <p className="font-body text-sm text-off-white/60">
+        <div className="border-t border-off-white/10 pt-8">
+          <p className="font-body text-sm text-off-white/80">{t("footer.legalName")}</p>
+          <p className="font-body text-sm text-off-white/60 mt-1">{t("footer.offices.zurich.address")}</p>
+          <p className="font-body text-sm text-off-white/60">{t("footer.uid")}</p>
+          <p className="font-body text-sm text-off-white/60">{t("footer.registerNumber")}</p>
+          <p className="font-body text-sm text-off-white/60 mt-2">{t("footer.board")}</p>
+          <p className="font-body text-sm text-off-white/60 mt-2">{t("footer.notABank")}</p>
+          <p className="font-body text-sm text-off-white/60 mt-6 text-center">
             © {currentYear} {t("footer.copyright")}
           </p>
         </div>

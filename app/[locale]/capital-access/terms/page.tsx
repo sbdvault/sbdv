@@ -13,7 +13,7 @@ export async function generateMetadata({
   return {
     title: pageTitle(locale, "capitalAccess.facilityTerms.pageTitle"),
     description:
-      "Facility terms governing the SBDV Capital Access program, including the 10% security deposit, interest, repayment, default, and Swiss governing law.",
+      "Facility terms for Swiss Bullion Depository Vault AG, including the 4% security deposit or the vaulted-metal pledge, interest, repayment, default, and Swiss governing law.",
   };
 }
 

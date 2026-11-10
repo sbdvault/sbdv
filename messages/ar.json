@@ -23,14 +23,15 @@
   "hero": {
     "headline": "أمان سويسري. نمو منضبط.",
     "subtext": "يستخدم العملاء الخاصون الحفظ السويسري أو تفويض ثروة. ويجوز للمؤسسات المؤهلة التقدم لتسهيل رأس مال منظم. SBDV ليست مصرفًا.",
-    "exploreCapital": "المؤسسات",
-    "privateClients": "وصول العملاء الخاصين",
+    "exploreCapital": "رأس مال للمؤسسات",
+    "privateClients": "حفظ في الخزينة",
     "requestAccess": "اطلبوا الوصول",
     "clientLogin": "دخول العملاء",
-    "investorRelations": "علاقات المستثمرين"
+    "investorRelations": "علاقات المستثمرين",
+    "wealthMandate": "تفويض للثروة"
   },
   "footer": {
-    "copyright": "Swiss Bullion Depository Vault — دقة سويسرية. ثقة عالمية.",
+    "copyright": "Swiss Bullion Depository Vault AG — دقة سويسرية. ثقة عالمية.",
     "headquarters": "المقر الرئيسي",
     "globalOffices": "المكاتب العالمية",
     "legal": "قانوني",
@@ -69,7 +70,12 @@
       }
     },
     "jurisdictionNote": "أساس قانوني سويسري. إمكانية الوصول عبر ولايات قضائية متعددة للعملاء العالميين.",
-    "facilityTerms": "شروط التسهيل"
+    "facilityTerms": "شروط التسهيل",
+    "legalName": "Swiss Bullion Depository Vault AG",
+    "uid": "UID CHE-218.964.179",
+    "registerNumber": "السجل التجاري CH-291.7.217.861-9",
+    "board": "Peter B. Guggi، رئيس. Lucas Gardner، مدير.",
+    "notABank": "SBDV ليست مصرفًا، ولا تحمل ترخيصًا مصرفيًا من FINMA، وليست مرخّصة لتلقّي الودائع أو للإقراض."
   },
   "about": {
     "title": "نبذة",
@@ -116,7 +122,7 @@
       "privateText": "عضوية الخزينة والأمن لحفظ السبائك، وتفويض منفصل للثروة والاستثمار للعملاء الذين يموّلون الأصل ويتابعون العائد المبيّن.",
       "capitalLabel": "المؤسسات",
       "capitalTitle": "Capital Access",
-      "capitalText": "تسهيلات منظمة للشركات المؤهلة — توثيق، وضمان نقدي بنسبة 10%، ومراجعة AML سويسرية، وخطة سداد مؤكدة. الموافقة تقديرية."
+      "capitalText": "مساران. يجوز لشركة لا تحفظ لدى SBDV أن تطلب تسهيلًا مع تأمين نقدي بنسبة 4%، ولا يُطلب إلا بعد موافقة خطية. ويجوز لعميل يحفظ أصلًا أن يحصل على سلفة مقابل ذلك المعدن من دون تأمين نقدي. الموافقة تقديرية."
     },
     "serveTitle": "من نخدم",
     "serve": {
@@ -509,11 +515,12 @@
     }
   },
   "cta": {
-    "title": "مساران. معيار سويسري واحد.",
-    "subtitle": "حفظ خاص لثروة يجب أن تبقى هادئة — أو رأس مال منظم للشركات المستعدة للنمو بوضوح.",
+    "title": "ثلاثة مسارات. معيار سويسري واحد.",
+    "subtitle": "حفظ في الخزينة، أو تفويض للثروة، أو تسهيل رأسمال لمؤسسة مؤهلة. يُنظر في كل طلب على حدة.",
     "button": "احجز استشارة خاصة",
-    "capitalButton": "استكشف Capital Access",
-    "privateButton": "وصول العملاء الخاصين"
+    "capitalButton": "رأس مال للمؤسسات",
+    "privateButton": "حفظ في الخزينة",
+    "wealthButton": "تفويض للثروة"
   },
   "home": {
     "swissStandardTitle": "المعيار السويسري",
@@ -567,7 +574,7 @@
       }
     },
     "capitalTeaserTitle": "رأس مال يُنمّي الشركات",
-    "capitalTeaserDescription": "يربط برنامج Capital Access الشركات المؤهلة بمجموعات رأس مال متوافقة مع التفويض — شروط شفافة وإشراف سويسري ومسار مُوجَّه من الطلب إلى التسهيل.",
+    "capitalTeaserDescription": "يجوز لشركة لا تحفظ أن تطلب تسهيلًا بالدولار الأمريكي. لا يُطلب التأمين النقدي بنسبة 4% إلا بعد موافقة خطية. والعميل الذي يحفظ أصلًا معدنًا مؤهلًا لا يدفع ذلك المبلغ.",
     "capitalTeaserButton": "استكشف Capital Access",
     "capitalTeaserPoints": {
       "structure": "هيكل واضح",
@@ -575,7 +582,7 @@
       "oversight": "إشراف سويسري",
       "oversightDesc": "KYC موثّق وفحص UBO ومراجعة تقديرية.",
       "portal": "بوابة الشركاء",
-      "portalDesc": "تتبّع الطلبات والودائع والسداد في مكان واحد."
+      "portalDesc": "متابعة الطلبات والضمان والسداد في مكان واحد."
     }
   },
   "common": {
@@ -599,12 +606,12 @@
     "termsIntro": "تحكم هذه الشروط استخدامكم لموقع SBDV وبوابات العملاء وقنوات التقديم العامة. تتخذ SBDV مقرها في زيورخ. تخضع شروط الموقع هذه للقانون السويسري.",
     "termsBody": "تسري شروط الموقع هذه على استخدام موقع SBDV، وتسجيل الدخول إلى الحساب، وقنوات التقديم العامة. وهي لا تنشئ اتفاقية حفظ في الخزينة، ولا تفويض ثروة، ولا تسهيل رأس مال. يُقدَّم حفظ الخزينة وتفويضات الثروة فقط بموجب الاتفاقية المنفصلة الصادرة لتلك العلاقة. تخضع تسهيلات Capital Access لشروط وأحكام التسهيل، لا لشروط الموقع هذه.\n\nتتخذ SBDV مقرها في زيورخ، سويسرا. تخضع شروط الموقع هذه للقوانين الموضوعية في سويسرا، مع استبعاد قواعد تنازع القوانين التي من شأنها تطبيق قانون آخر. لمحاكم زيورخ الولاية القضائية على المنازعات الناشئة عن استخدام الموقع. ولا يحد ذلك من أي ولاية قضائية منصوص عليها في اتفاقية تسهيل أو تفويض.\n\nبإنشاء حساب أو باستخدام بوابة، توافقون على الفحص السويسري لمعرفة العميل ومكافحة غسل الأموال. يجب الحفاظ على سرية كلمة المرور وأي رمز لتسجيل الدخول. إذا اعتقدتم أن حسابكم استُخدم دون تفويضكم، فأبلغوا SBDV دون إبطاء عبر صفحة الاتصال.\n\nيجوز للمؤسسات في أنحاء العالم التقدم إلى Capital Access. تقديم الطلب ليس التزامًا بالإقراض، وليس قرضًا استهلاكيًا للأفراد، وليس طرحًا عامًا لأوراق مالية. يجوز لـ SBDV أن توافق على الطلب أو ترفضه أو ترجئه وفق تقديرها. يجوز لـ SBDV تعديل الموقع العام بإشعار على هذه الصفحة. يبقى التسهيل الذي تم قبوله خاضعًا لشروط التسهيل التي قبلتموها، لا لتغيير لاحق في هذه الصفحة.",
     "regulatoryTitle": "الإفصاحات التنظيمية",
-    "regulatoryIntro": "SBDV مؤسسة خزينة وترتيب رأس مال مقرها زيورخ، وتخدم العملاء في أنحاء العالم. وهي ليست مصرفًا سويسريًا.",
-    "regulatoryBody": "تقدّم SBDV حفظ السبائك في الخزينة، وترتب تسهيلات رأس مال منظمة للمؤسسات المؤهلة. Capital Access ليست وديعة مصرفية محمية، ولا تشملها أنظمة تأمين الودائع. الأموال المحتفظ بها كوديعة ضمان هي ضمان نقدي تعاقدي، وليست وديعة باسمكم لدى مصرف.\n\nتفويضات الثروة للعملاء الخاصين برامج استثمارية، وليست حسابات مصرفية. عائد التفويض المبيّن ليس فائدة مضمونة، وقد يُوقف أو يُعدَّل، ولا يشمله تأمين الودائع. لا يجوز استخدام Bitcoin إلا كمسار للتمويل أو للصرف. لا تشغّل SBDV منصة لتداول الأصول المشفرة، ولا تحتفظ بالمفاتيح الخاصة للعملاء. التحويلات بـ Bitcoin لا رجعة فيها.\n\nيخضع جميع العملاء لفحص معرفة العميل والملكية الانتفاعية ومكافحة غسل الأموال، بما يتوافق مع القانون السويسري لمكافحة غسل الأموال (AMLA). يُحدَّد المالكون المنتفعون النهائيون حتى الأشخاص الطبيعيين. يسري الفحص بغض النظر عن بلد تأسيس العميل.\n\nقد تتطلب خدمات الاستثمار وإدارة المحافظ ترخيصًا مناسبًا، أو تُقدَّم عبر شركاء خاضعين للتنظيم. لا تدّعي SBDV ترخيصًا مصرفيًا من FINMA. الموافقة على أي تسهيل أو تفويض تقديرية.\n\nلا يمكن قبول الأشخاص والكيانات في الولايات القضائية الخاضعة لعقوبات شاملة. قد تخضع الولايات القضائية عالية المخاطر لعناية واجبة معززة بدل الرفض التلقائي.\n\nإفصاحات المخاطر: تنطوي الاستثمارات على مخاطر تشمل احتمال خسارة أصل المبلغ. الأداء السابق ليس مؤشرًا على النتائج المستقبلية. هذا الموقع ليس مشورة قانونية أو ضريبية أو استثمارية.",
-    "investorRelationsTitle": "علاقات المستثمرين",
-    "investorRelationsIntro": "حوكمة وشفافية ومراسلات مؤسسية.",
-    "investorRelationsBody": "تلتزم SBDV بالشفافية تجاه عملائها وأصحاب المصلحة. ستُنشر هنا التقارير السنوية وسياسات الحوكمة والإفصاحات المؤسسية متى أصبحت متاحة. للاستفسارات المؤسسية، يُرجى الاتصال بفريق علاقات المستثمرين عبر صفحة الاتصال.",
-    "englishGoverns": "اللغة الحاكمة لهذه الصفحة هي الإنجليزية. الترجمة للقراءة. النص الإنجليزي هو النص الذي يسري."
+    "regulatoryIntro": "Swiss Bullion Depository Vault AG، الرقم UID CHE-218.964.179، مقرها Bahnhofstrasse 45، 8001 زيورخ. ليست مصرفًا سويسريًا، ولا تحمل ترخيصًا مصرفيًا من FINMA، وليست مرخّصة لتلقّي الودائع أو للإقراض.",
+    "regulatoryBody": "تقدّم Swiss Bullion Depository Vault AG حفظ المعادن الثمينة في الخزينة وترتب تسهيلات رأسمال منظمة للمؤسسات المؤهلة. Capital Access ليس وديعة مصرفية محمية ولا يشمله ضمان الودائع. يجوز أن تُطلب من شركة لا تحفظ أصلًا لدى SBDV، وبعد الموافقة الخطية فقط، تأمين نقدي بنسبة 4% من المبلغ المعتمد. هذا النقد ضمان تعاقدي، وليس وديعة باسم المقترض لدى مصرف، وليس رسمًا. والعميل الذي يحفظ أصلًا ذهبًا أو فضة مؤهلين لا يدفع ذلك المبلغ. تقتصر السلفة على 75% من الذهب المؤهل و70% من الفضة المؤهلة، ويبقى المعدن مخصّصًا باسم العميل إلى حين السداد. يُسمّى حساب أي تحويل نقدي في اتفاقية التسهيل قبل أي تحويل. لا يستحق أي مبلغ لقراءة الشروط أو لتقديم الطلب.\n\nتفويضات الثروة للعملاء من الأفراد برامج استثمار وليست حسابات مصرفية. العائد المذكور للتفويض ليس فائدة مضمونة، ويجوز وقفه أو تعديله، ولا يشمله ضمان الودائع. لا تُستخدم بيتكوين إلا مسارًا للإيداع أو للدفع. لا تدير SBDV بورصة للأصول المشفّرة ولا تحفظ المفاتيح الخاصة للعملاء. تحويلات بيتكوين غير قابلة للرجوع.\n\nيخضع جميع العملاء للتحقق من الهوية ومن المستفيد الحقيقي ولمكافحة غسل الأموال وفق القانون السويسري. يُحدَّد المستفيدون الحقيقيون حتى الأشخاص الطبيعيين. يسري الفحص بصرف النظر عن بلد التأسيس.\n\nقد تتطلب خدمات الاستثمار وإدارة المحافظ ترخيصًا أو تُقدَّم عبر شركاء خاضعين للرقابة. لا تدّعي SBDV ترخيصًا مصرفيًا من FINMA. الموافقة على أي تسهيل أو تفويض تقديرية.\n\nلا يمكن قبول الأشخاص والكيانات في الولايات الخاضعة لعقوبات شاملة. قد تخضع الولايات ذات المخاطر الأعلى لعناية واجبة معززة.\n\nبيان المخاطر: ينطوي الاستثمار على خطر خسارة رأس المال. الأداء السابق لا يدل على النتائج المقبلة. هذا الموقع ليس مشورة قانونية أو ضريبية أو استثمارية.",
+    "investorRelationsTitle": "الشركة",
+    "investorRelationsIntro": "الهوية القانونية لـ Swiss Bullion Depository Vault AG.",
+    "investorRelationsBody": "Swiss Bullion Depository Vault AG\nUID CHE-218.964.179\nالسجل التجاري CH-291.7.217.861-9\nBahnhofstrasse 45، 8001 زيورخ، سويسرا\n\nPeter B. Guggi، رئيس\nLucas Gardner، مدير\n\nSBDV ليست مصرفًا ولا تحمل ترخيصًا مصرفيًا من FINMA. شروط التسهيل والإفصاحات التنظيمية منشورة على هذا الموقع. لا يستحق أي مبلغ لقراءتها.",
+    "englishGoverns": "تُعرض هذه الصفحة باللغة التي اخترتموها."
   },
   "login": {
     "title": "دخول العميل",
@@ -912,7 +919,7 @@
     },
     "capitalAccess": {
       "title": "Capital Access Requests",
-      "subtitle": "Review enterprise borrowing and investment applications against sovereign pools.",
+      "subtitle": "راجعوا الوثائق أولًا ثم وافقوا. لا ينطبق التأمين النقدي بنسبة 4% إلا إذا كان مقدم الطلب لا يحفظ أصلًا.",
       "empty": "No capital access requests submitted yet.",
       "review": "Mark Under Review",
       "reviewApplication": "Review Application",
@@ -925,7 +932,7 @@
       "pendingVerification": "pending verification",
       "documents": "Documents uploaded",
       "approveModalTitle": "Approve & Assign Escrow",
-      "approveModalDesc": "Enter the escrow account the partner must use for the security deposit of",
+      "approveModalDesc": "أدخلوا حساب الضمان الذي يجب أن يستخدمه الشريك للتأمين النقدي البالغ",
       "approveWithEscrow": "Approve & Send Escrow Details",
       "beneficiary": "Beneficiary",
       "assignedEscrow": "Assigned Escrow Account",
@@ -945,7 +952,7 @@
       "requestExtraDesc": "If the package is incomplete or unsatisfactory, ask the borrower to upload or replace files.",
       "extraNotesPlaceholder": "Describe what is missing or what must be corrected…",
       "requestExtra": "Request Extra Documents",
-      "approveWithEscrowTitle": "Approve & assign escrow (10% deposit)",
+      "approveWithEscrowTitle": "الموافقة وتعيين الحساب الخاص بالتأمين النقدي",
       "approveRequiresDocs": "All five required documents must be on file before you can approve.",
       "approveRequiresSubmit": "Borrower must click Submit Documents before you can approve.",
       "disburseBank": "Disbursement bank account",
@@ -968,7 +975,8 @@
       "sofMissing": "Borrower has not declared origin of the security deposit",
       "operatingCountry": "Operating country",
       "yearsOperating": "Years operating",
-      "enhancedDdHint": "Consider enhanced due diligence for this jurisdiction"
+      "enhancedDdHint": "Consider enhanced due diligence for this jurisdiction",
+      "approveMetalDesc": "هذا التسهيل مضمون بالمعدن المحفوظ. لا تأمين نقدي ولا حساب ضمان."
     },
     "settings": {
       "title": "Account Settings"
@@ -1029,46 +1037,49 @@
     "hero": {
       "badge": "برنامج رأس المال المؤسسي",
       "title": "رأس مال منظم للمؤسسات المؤهلة",
-      "subtitle": "SBDV ليست مصرفًا. التسهيل ليس وديعة، وليس التزامًا إلى أن يُوافق عليه.",
+      "subtitle": "SBDV ليست مصرفًا ولا تحمل ترخيصًا مصرفيًا من FINMA. لا يستحق أي مبلغ لقراءة هذه الشروط أو لتقديم الطلب. لا يوجد تسهيل إلا بعد موافقة خطية.",
       "applyAccess": "قدّموا لطلب الوصول",
       "partnerLogin": "تسجيل الدخول إلى الحساب",
-      "eligibility": "شركات عاملة لها سنتان على الأقل من التاريخ، وحسابات مدققة أو مراجعة، وطلب من USD 500,000. الموافقة تقديرية.",
-      "collateralRule": "تدفع SBDV إلى حساب تحددونه، لذلك يأتي الضمان النقدي أولًا. لا تُقبل المنازل ولا الأصول المحلية الأخرى. لا تُطلب نسبة 10% إلا بعد الموافقة. يُعرض حساب الضمان قبل أن تدفعوا. إنه نقدكم، وليس رسمًا، ولا يدر فائدة. بعد تأكيده يُرسل المبلغ المعتمد كاملًا. إذا سددتم بالكامل، يُعاد الرصيد غير المستخدم. وإذا تخلفتم، يمكن استخدامه لما استحق. تقديم الطلب ليس التزامًا بالإقراض."
+      "eligibility": "شركات عاملة منذ سنتين على الأقل، وبحسابات مدققة أو مراجعة، وبطلب من 500,000 دولار أمريكي. الموافقة تقديرية.",
+      "collateralRule": "لا يستحق أي مبلغ للتسجيل أو لتقديم الطلب. إذا كنتم لا تحفظون أصلًا لدى SBDV، لا يُطلب تأمين نقدي بنسبة 4% من المبلغ المعتمد إلا بعد موافقة خطية، وإلى الحساب المسمّى في اتفاقية التسهيل قبل التحويل فقط. ليس رسمًا. إذا كنتم تحفظون أصلًا ذهبًا أو فضة مؤهلين لدى SBDV، فلا تأمين نقدي: تبلغ السلفة حتى 75% من ذلك الذهب أو 70% من تلك الفضة، ويبقى المعدن باسمكم إلى حين السداد. الطلب ليس تعهدًا بالإقراض.",
+      "companyDoor": "التسجيل كعميل من غير عملاء الخزينة",
+      "metalDoor": "التسجيل كعميل للخزينة",
+      "readTerms": "قراءة شروط التسهيل"
     },
     "features": {
       "title": "لماذا تختار المؤسسات Capital Access",
       "subtitle": "بوابة منضبطة بين الشركات المؤهلة ورأس المال المتوافق مع التفويض — الوضوح أولًا.",
-      "globalPoolsTitle": "مجموعات متوافقة مع التفويض",
-      "globalPoolsDesc": "مجموعات بمستوى سيادي مفصح عنها جزئيًا، ومطابقة للقطاع والمنطقة — وليس مزادًا مغلقًا.",
+      "globalPoolsTitle": "مساران",
+      "globalPoolsDesc": "تسهيل لشركة مع تأمين نقدي بنسبة 4%، أو سلفة مقابل معدن تحفظونه أصلًا لدى SBDV. يستخدم مقدم الطلب مسارًا واحدًا.",
       "flexibleTermsTitle": "شروط يمكن التخطيط على أساسها",
       "flexibleTermsDesc": "حدّدوا المبلغ والأجل والفائدة الشهرية أو السنوية على مدى 1–10 سنوات، مع حسابات آنية.",
       "enterpriseFocusTitle": "مُعدّ للشركات العاملة",
       "enterpriseFocusDesc": "للمؤسسات الراسخة ذات البيانات المالية المدققة أو المراجعة وأطروحة استثمار واضحة.",
-      "structuredSecurityTitle": "إجراء بلا مفاجآت",
-      "structuredSecurityDesc": "ضمان نقدي بنسبة 10% قبل إرسال أي أموال. لا تُقبل المنازل ولا الأصول المحلية الأخرى. فحص كامل لمعرفة العميل والمستفيد الحقيقي، وموافقة تقديرية وفق معايير سويسرية لمكافحة غسل الأموال."
+      "structuredSecurityTitle": "الضمان مبيّن مسبقًا",
+      "structuredSecurityDesc": "4% نقدًا فقط إذا كنتم لا تحفظون لدى SBDV، وبعد الموافقة الخطية فقط. إذا كنتم تحفظون أصلًا، فالمعدن هو الضمان ولا يُؤخذ تأمين نقدي."
     },
     "howItWorks": {
       "title": "How It Works",
       "registerTitle": "Register as a Capital Partner",
       "registerDesc": "Create your enterprise account and verify your company credentials.",
       "exploreTitle": "Explore Available Pools",
-      "exploreDesc": "تصفحوا مجموعات رأس المال السيادي المفصح عنها جزئيًا، والمتوافقة مع قطاعكم ومنطقتكم.",
+      "exploreDesc": "اختاروا تسهيل الشركة أو تسهيل المعدن، ثم بيّنوا المبلغ والمدة والسداد.",
       "structureTitle": "Structure Your Request",
       "structureDesc": "حدّدوا مبلغ القرض والأجل ودورية السداد، وراجعوا حسابات الفائدة الآنية.",
       "submitTitle": "Submit Company Profile",
-      "submitDesc": "Provide financials, investment areas, and accept the 10% security deposit condition.",
+      "submitDesc": "بيّنوا بلدي التأسيس والنشاط والحسابات والموقّع المفوّض ومسار الضمان.",
       "decisionTitle": "Await Institutional Review",
       "decisionDesc": "Your application enters our review queue. You will receive approval or rejection notification.",
       "prepareTitle": "إعداد الملف",
       "prepareDesc": "أكدوا الأهلية (مؤسسة، USD 500,000+، سنتان من التشغيل). جهّزوا مستخرجات السجل المحلي والحسابات المدققة وبيانات المالك المستفيد. تُقبل المعادلات المحلية والترجمات المصدّقة.",
       "reviewTitle": "مراجعة مؤسسية",
       "reviewDesc": "تراجع SBDV المستندات والمالكين المنتفعين ومواءمة التفويض. الموافقة تقديرية وليست التزامًا إلى أن تُصدر.",
-      "depositTitle": "وديعة الضمان ومصدر الأموال",
-      "depositDesc": "بعد مراجعة KYC يُعرض حساب الضمان. حوّلوا 10% من المبلغ المعتمد. إنه نقدكم، يُحتفظ به ضمانًا، وليس رسمًا. ثم ترسل SBDV المبلغ المعتمد كاملًا إلى الحساب الذي تحددونه.",
+      "depositTitle": "الضمان بعد الموافقة فقط",
+      "depositDesc": "إذا كنتم لا تحفظون لدى SBDV، يُعرض حساب التأمين النقدي بنسبة 4% بعد الموافقة وبعد قبول هذه الشروط. لا يُطلب أي مبلغ قبل ذلك. إذا كنتم تحفظون أصلًا، لا يُطلب نقد.",
       "kycTitle": "فحص KYC والعقوبات",
       "kycDesc": "فحص AML سويسري للشركة والمفوضين بالتوقيع والمالكين المنتفعين النهائيين. تتلقى الولايات القضائية عالية المخاطر عناية واجبة معززة.",
       "fundingTitle": "الصرف والسداد",
-      "fundingDesc": "قدّموا حسابًا مصرفيًا باسم المقترض (SWIFT مع IBAN أو رقم حساب محلي). لا يُصرف المبلغ المعتمد كاملًا بالدولار الأمريكي إلا بعد تأكيد الضمان النقدي بنسبة 10%. السداد وفق الجدول في لوحتكم."
+      "fundingDesc": "قدّموا حسابًا مصرفيًا باسم المقترض. تُرسل الأموال، إن أُفرج عنها، إليه بالدولار الأمريكي. في مسار المعدن يبقى المعدن مرهونًا إلى حين السداد."
     },
     "nav": {
       "overview": "Overview",
@@ -1082,14 +1093,14 @@
     },
     "overview": {
       "title": "Welcome to Capital Access",
-      "subtitle": "Explore sovereign capital pools and submit mandate-aligned investment requests for your enterprise.",
+      "subtitle": "اختاروا تسهيل الشركة أو تسهيل المعدن ثم قدّموا الطلب.",
       "featuredPools": "Featured Capital Pools",
       "ctaTitle": "Ready to structure your request?",
       "ctaDesc": "Complete a guided application with live interest calculation and security deposit terms."
     },
     "steps": {
       "explore": "Explore Pools",
-      "exploreDesc": "Review partially disclosed sovereign capital available for enterprise deployment.",
+      "exploreDesc": "اختاروا تسهيل الشركة، مع تأمين نقدي بنسبة 4% بعد الموافقة، أو سلفة مقابل معدن محفوظ أصلًا لدى SBDV.",
       "apply": "Structure Request",
       "applyDesc": "Define amount, term, and repayment schedule with live APR calculation.",
       "review": "Institutional Review",
@@ -1097,13 +1108,13 @@
     },
     "pools": {
       "title": "Available Capital Pools",
-      "subtitle": "Institutional sovereign pools with limited disclosure. Full entity details available upon approved access."
+      "subtitle": "تُراجع التسهيلات قبل الموافقة. الشروط الكاملة منشورة قبل أن تقدّموا الطلب."
     },
     "conditions": {
       "title": "Access Conditions",
       "minimumOperatingYears": "Minimum 2 years of operating history",
       "auditedFinancials": "Audited or reviewed financial statements required",
-      "securityDeposit": "ضمان نقدي بنسبة 10% بعد الموافقة، وقبل إرسال المبلغ المعتمد",
+      "securityDeposit": "تأمين نقدي بنسبة 4% بعد الموافقة إذا كنتم لا تحفظون بعد؛ ولا تأمين نقدي إذا كنتم تحفظون أصلًا",
       "kycAml": "Full KYC/AML and beneficial ownership disclosure",
       "mandateAlignment": "Investment thesis must align with pool mandate",
       "minimumTicket": "Minimum request USD $500,000",
@@ -1119,7 +1130,7 @@
     "startRequest": "Start Capital Request",
     "register": {
       "title": "التسجيل في Capital Access",
-      "subtitle": "Create your enterprise partner account to explore sovereign capital pools.",
+      "subtitle": "أنشئوا حساب الشركة من أي بلد مسموح.",
       "fullName": "الاسم الكامل",
       "phone": "الهاتف (اختياري)",
       "submit": "إنشاء حساب Capital Access",
@@ -1129,7 +1140,11 @@
       "welcomeTitle": "تم إنشاء الحساب بنجاح",
       "welcomeBody": "حساب Capital Access جاهز. سجّلوا الدخول بالبريد وكلمة المرور اللذين أنشأتموهما للتو.",
       "welcomeEmail": "البريد الإلكتروني",
-      "goToLogin": "إلى تسجيل الدخول"
+      "goToLogin": "إلى تسجيل الدخول",
+      "whichDoor": "هل تحفظون أصلًا معدنًا لدى SBDV؟",
+      "doorCompany": "التسجيل كعميل من غير عملاء الخزينة",
+      "doorMetal": "التسجيل كعميل للخزينة",
+      "doorLocked": "هذا التسجيل لتسهيل واحد فقط."
     },
     "request": {
       "title": "طلب رأس المال",
@@ -1160,7 +1175,7 @@
       "financialsPlaceholder": "Summarize audited financials — revenue trend, EBITDA, debt/equity ratio, key assets…",
       "review": "Review & Submit",
       "selectedPool": "Selected Pool",
-      "termsAccept": "أقبل بأنه بعد الموافقة يُحوَّل ضمان نقدي بنسبة 10% إلى حساب الضمان قبل إرسال المبلغ المعتمد. ليس رسمًا. وأقبل إجراءات المراجعة المؤسسية وأؤكد أن المعلومات المقدمة صحيحة.",
+      "termsAccept": "قرأت شروط التسهيل. أفهم أنه لا يستحق أي مبلغ الآن. في تسهيل الشركة لا يُطلب تأمين نقدي بنسبة 4% إلا بعد موافقة خطية. في تسهيل المعدن لا يُؤخذ تأمين نقدي.",
       "back": "رجوع",
       "continue": "متابعة",
       "submit": "Submit Application",
@@ -1168,7 +1183,7 @@
       "submittedTitle": "Application Submitted",
       "submittedDesc": "Your capital access request is now under institutional review. A confirmation email has been sent to your registered address.",
       "viewApplications": "View My Applications",
-      "termsAcceptBefore": "أقبل بأنه بعد الموافقة يُحوَّل ضمان نقدي بنسبة 10% إلى حساب الضمان قبل إرسال المبلغ المعتمد. ليس رسمًا. أقبل",
+      "termsAcceptBefore": "قرأت شروط التسهيل. لا يستحق أي مبلغ الآن. أقبل",
       "termsAcceptAfter": ", the institutional review process, and I confirm that all information provided is accurate.",
       "operatingCountry": "Principal operating country",
       "yearsOperating": "Years of operation",
@@ -1191,7 +1206,13 @@
       "capitalControls": "I confirm that the laws of our home country allow this company to take foreign USD capital, including any central-bank or capital-control rules that apply to us.",
       "sanctionsAttest": "I confirm that the company, its signatories, and its beneficial owners are not sanctioned persons and are not located, organised, or resident in a comprehensively sanctioned jurisdiction.",
       "sanctionedCountry": "SBDV cannot onboard applicants in comprehensively sanctioned jurisdictions.",
-      "attestationsRequired": "Please complete all attestations before submitting."
+      "attestationsRequired": "Please complete all attestations before submitting.",
+      "trackLabel": "أي ضمان ينطبق",
+      "trackCash": "عميل من غير عملاء الخزينة",
+      "trackCashDesc": "لا تحفظون لدى SBDV. لا يُطلب تأمين نقدي بنسبة 4% إلا بعد موافقة خطية. لا يستحق أي مبلغ الآن.",
+      "trackMetal": "عميل للخزينة",
+      "trackMetalDesc": "تحفظون أصلًا ذهبًا أو فضة مؤهلين لدى SBDV. لا تأمين نقدي. تبلغ السلفة حتى 75% من ذلك الذهب أو 70% من تلك الفضة.",
+      "trackMetalShort": "لا تأمين نقدي. المعدن مرهون."
     },
     "applications": {
       "title": "My Applications",
@@ -1207,13 +1228,13 @@
     },
     "onboarding": {
       "title": "Facility Dashboard",
-      "subtitle": "Complete onboarding to activate your approved capital facility.",
+      "subtitle": "أكملوا الوثائق والقبول لتفعيل تسهيل رأس المال.",
       "noFacility": "No Active Facility",
       "noFacilityDesc": "Once your capital access application is approved, your facility dashboard will appear here.",
       "progress": "Onboarding Progress",
       "rm": "Relationship Manager",
       "escrowTitle": "Security Deposit — Escrow Instructions",
-      "escrowDesc": "تدفع SBDV إلى حساب تحددونه، لذلك يأتي هذا النقد أولًا. لا تُقبل المنازل ولا الأصول المحلية الأخرى. حوّلوا 10% من المبلغ المعتمد بالضبط إلى حساب الضمان أدناه. إنه نقدكم، وليس رسمًا، ولا يدر فائدة. بعد تأكيد SBDV يُرسل المبلغ المعتمد كاملًا. استخدموا مرجع التحويل كما هو مبيّن تمامًا.",
+      "escrowDesc": "لا يُعرض هذا الحساب إلا بعد موافقة خطية. حوّلوا مبلغ التأمين النقدي الظاهر. ليس رسمًا. لا تحوّلوا أي مبلغ قبل ظهور هذه التعليمات.",
       "escrowPending": "Escrow payment details are being prepared by our capital desk. They will appear here as soon as your application is fully approved.",
       "bank": "Bank",
       "bankAddress": "Bank Address",
@@ -1235,7 +1256,7 @@
       "documentsTitle": "Required Documentation",
       "documentsDesc": "Upload all four documents within 14 business days of deposit confirmation.",
       "upload": "Upload",
-      "docsCompleteNote": "All documents uploaded. Our team will review and advance your onboarding.",
+      "docsCompleteNote": "رُفعت جميع الوثائق. يراجعها فريقنا. لا يستحق أي مبلغ في هذه المرحلة.",
       "disbursementPending": "Disbursement in Progress",
       "disbursementDesc": "Your facility has cleared compliance. Capital release is being processed.",
       "disbursedOn": "Disbursed on",
@@ -1305,14 +1326,15 @@
       "uboEmpty": "Add at least one beneficial owner before submitting documents.",
       "uboSaved": "Beneficial owner saved.",
       "sofTitle": "Origin of the security deposit",
-      "sofDesc": "Declare how the 10% cash collateral will be funded. The remitting account must be in the borrower’s name.",
+      "sofDesc": "بيّنوا كيف سيُموَّل أي تأمين نقدي. يجب أن يكون الحساب المحوِّل باسم المقترض. تسهيل المعدن بلا تأمين نقدي.",
       "sofSource": "Source of funds",
       "sofOperating": "Company operating cash",
       "sofShareholder": "Shareholder loan",
       "sofAssetSale": "Sale of assets",
       "sofOther": "Other",
       "sofDetail": "Explanation",
-      "sofRequired": "Origin of funds is required before you submit the deposit."
+      "sofRequired": "Origin of funds is required before you submit the deposit.",
+      "kycReviewNote": "مراجعة اعرف عميلك جارية. لا يستحق أي مبلغ الآن."
     },
     "status": {
       "pending": "Pending Review",
@@ -1349,15 +1371,15 @@
     "facilityTerms": {
       "eyebrow": "برنامج Capital Access",
       "pageTitle": "شروط التسهيل",
-      "intro": "تحكم هذه الشروط تسهيل رأس المال الخاص بكم، بما في ذلك وديعة الضمان بنسبة 10% والفائدة والسداد والإخلال والقانون السويسري الواجب التطبيق. اقرأوها كاملة قبل القبول.",
+      "intro": "تحكم هذه الشروط تسهيل رأس المال، بما في ذلك التأمين النقدي بنسبة 4% أو رهن المعدن المحفوظ، والفائدة، والسداد، والإخلال، والقانون السويسري. اقرؤوها كاملة قبل القبول. لا يستحق أي مبلغ لقراءتها.",
       "versionLabel": "المستند",
       "effectiveLabel": "النفاذ",
       "languageLabel": "اللغة الحاكمة",
-      "governingNote": "اللغة الحاكمة لهذا الصك هي الإنجليزية. أي ترجمة، إن قُدّمت، هي للتيسير فحسب.",
+      "governingNote": "تُعرض هذه الشروط باللغة التي اخترتموها.",
       "contents": "المحتويات",
       "acceptBefore": "لقد قرأت وأقبل",
       "linkLabel": "شروط التسهيل",
-      "acceptAfter": "، بما في ذلك أحكام وديعة الضمان بنسبة 10% والفائدة والسداد والإخلال والقانون الواجب التطبيق، وأؤكد أنني مخوّل بإلزام المقترض.",
+      "acceptAfter": "، بما في ذلك التأمين النقدي أو رهن المعدن والفائدة والسداد والإخلال وأحكام القانون الواجب التطبيق، وأؤكد أنني مخوّل بإلزام المقترض.",
       "acceptedNote": "تم قبول شروط وأحكام التسهيل",
       "print": "طباعة أو حفظ",
       "backFacility": "العودة إلى لوحة التسهيل"
@@ -1386,8 +1408,43 @@
     "settings": {
       "title": "Account Settings"
     },
-    "yearlyInterestNote": "تُحتسب الفائدة السنوية على المبلغ المعتمد فقط، وليس على الضمان النقدي.",
-    "amountDisbursed": "المبلغ المصروف"
+    "yearlyInterestNote": "تُحتسب الفائدة السنوية على المبلغ المعتمد فقط، لا على تأمين نقدي.",
+    "amountDisbursed": "المبلغ المصروف",
+    "doors": {
+      "readTerms": "قراءة شروط التسهيل",
+      "register": "التسجيل لهذا التسهيل",
+      "noPayment": "لا يستحق أي مبلغ لقراءة هذه الصفحة أو لتقديم الطلب.",
+      "company": {
+        "title": "عميل من غير عملاء الخزينة",
+        "whoTitle": "لمن",
+        "who": "شركة عاملة لا تحفظ معدنًا لدى SBDV. سنتان على الأقل من النشاط، وحسابات مدققة أو مراجعة، وطلب من 500,000 دولار أمريكي. ليس قرضًا شخصيًا.",
+        "securityTitle": "الضمان",
+        "security": "بعد الموافقة الخطية، وبعد قبول هذه الشروط فقط، تدفع الشركة 4% من المبلغ المعتمد بالدولار الأمريكي. ليس رسمًا. يُسمّى الحساب في اتفاقية التسهيل قبل أي تحويل. إذا رفضت SBDV قبل الصرف، في غير حالة الإخلال أو فشل فحص الامتثال بسبب معلومات مقدم الطلب، يُعاد المبلغ كاملًا.",
+        "stepsTitle": "الخطوات الخمس",
+        "steps": [
+          "تقديم الشركة ومالكيها والوثائق.",
+          "تراجع SBDV الملف. الموافقة تقديرية.",
+          "الموافقة الخطية ليست بعد وعدًا بالدفع.",
+          "قبول شروط التسهيل. عندئذ فقط يُطلب التأمين النقدي بنسبة 4%.",
+          "تقديم حساب مصرفي باسم الشركة. تُرسل الأموال، إن أُفرج عنها، إليه."
+        ]
+      },
+      "metal": {
+        "title": "عميل للخزينة",
+        "whoTitle": "لمن",
+        "who": "عميل يحفظ أصلًا ذهبًا أو فضة مؤهلين لدى SBDV، عبر شركة عاملة منذ سنتين على الأقل، وبحسابات مدققة أو مراجعة، وبطلب من 500,000 دولار أمريكي.",
+        "securityTitle": "الضمان",
+        "security": "لا تأمين نقدي. تبلغ السلفة حتى 75% من الذهب المؤهل و70% من الفضة المؤهلة الموجودة أصلًا في الخزينة. يبقى المعدن مخصّصًا باسم العميل ومرهونًا إلى حين السداد. قد يقتضي هبوط السعر مزيدًا من المعدن أو سدادًا جزئيًا. إذا لم تُمنح سلفة، لا يُرهن المعدن.",
+        "stepsTitle": "الخطوات الخمس",
+        "steps": [
+          "الذهب أو الفضة المؤهلان محفوظان أصلًا لدى SBDV.",
+          "تقديم الشركة ومالكيها والوثائق.",
+          "تراجع SBDV الملف. الموافقة الخطية ليست بعد وعدًا بالدفع.",
+          "يُرهن المعدن. لا يُطلب تأمين نقدي.",
+          "تقديم حساب مصرفي باسم الشركة. يبقى المعدن مرهونًا إلى حين السداد."
+        ]
+      }
+    }
   },
   "chat": {
     "open": "اسألوا SBDV",

@@ -23,14 +23,15 @@
   "hero": {
     "headline": "스위스 안보. 규율 있는 성장.",
     "subtext": "프라이빗 클라이언트는 스위스 커스터디 또는 웰스 만데이트를 이용합니다. 적격 기업은 구조화 자본 시설을 신청할 수 있습니다. SBDV는 은행이 아닙니다.",
-    "exploreCapital": "기업",
-    "privateClients": "프라이빗 클라이언트 접근",
+    "exploreCapital": "기업을 위한 자본",
+    "privateClients": "금고 보관",
     "requestAccess": "접근 요청",
     "clientLogin": "고객 로그인",
-    "investorRelations": "투자자 관계"
+    "investorRelations": "투자자 관계",
+    "wealthMandate": "자산 위임"
   },
   "footer": {
-    "copyright": "Swiss Bullion Depository Vault — 스위스의 정밀. 세계의 신뢰.",
+    "copyright": "Swiss Bullion Depository Vault AG — 스위스의 정밀함. 세계의 신뢰.",
     "headquarters": "본사",
     "globalOffices": "글로벌 오피스",
     "legal": "법률",
@@ -69,7 +70,12 @@
       }
     },
     "jurisdictionNote": "스위스 법적 기반. 글로벌 고객을 위한 다관할권 접근성.",
-    "facilityTerms": "약정 조건"
+    "facilityTerms": "약정 조건",
+    "legalName": "Swiss Bullion Depository Vault AG",
+    "uid": "UID CHE-218.964.179",
+    "registerNumber": "상업등기 CH-291.7.217.861-9",
+    "board": "Peter B. Guggi, 회장. Lucas Gardner, 이사.",
+    "notABank": "SBDV는 은행이 아니며, FINMA 은행 인가를 보유하지 않고, 예금을 받거나 대출할 허가를 받지 않았습니다."
   },
   "about": {
     "title": "소개",
@@ -116,7 +122,7 @@
       "privateText": "지금 커스터디를 위한 금고와 보안 멤버십, 그리고 원금을 납입하고 표시 수익률을 확인하는 고객을 위한 별도의 자산 및 투자 만데이트입니다.",
       "capitalLabel": "기업",
       "capitalTitle": "Capital Access",
-      "capitalText": "적격 기업을 위한 구조화 시설입니다. 문서, 10% 현금 담보, 스위스 AML 심사 및 확인된 상환 계획을 갖춥니다. 승인은 재량에 따릅니다."
+      "capitalText": "두 가지 길이 있습니다. SBDV에 보관하지 않는 회사는 서면 승인 후에만 요구되는 4% 보증금이 있는 편의를 신청할 수 있습니다. 이미 보관하는 고객은 현금 보증금 없이 그 금속을 담보로 선급을 받을 수 있습니다. 승인은 재량입니다."
     },
     "serveTitle": "모시는 고객",
     "serve": {
@@ -509,11 +515,12 @@
     }
   },
   "cta": {
-    "title": "두 길. 하나의 스위스 기준.",
-    "subtitle": "조용히 지켜야 할 자산을 위한 프라이빗 커스터디 — 또는 명확하게 성장하려는 기업을 위한 구조화 자본.",
+    "title": "세 가지 길. 하나의 스위스 기준.",
+    "subtitle": "금고 보관, 자산 위임, 또는 적격 기업을 위한 자본 편의. 각 신청은 따로 심사합니다.",
     "button": "프라이빗 상담 예약",
-    "capitalButton": "Capital Access 살펴보기",
-    "privateButton": "프라이빗 클라이언트 접근"
+    "capitalButton": "기업을 위한 자본",
+    "privateButton": "금고 보관",
+    "wealthButton": "자산 위임"
   },
   "home": {
     "swissStandardTitle": "스위스 스탠더드",
@@ -567,7 +574,7 @@
       }
     },
     "capitalTeaserTitle": "기업이 성장하는 자본",
-    "capitalTeaserDescription": "Capital Access Program은 적격 기업을 만데이트에 맞는 풀과 연결합니다 — 투명한 조건, 스위스 감독, 신청부터 시설까지 안내된 경로.",
+    "capitalTeaserDescription": "보관하지 않는 회사는 미국 달러 편의를 신청할 수 있습니다. 4% 보증금은 서면 승인 후에만 요구됩니다. 이미 적격 금속을 보관하는 고객은 그 현금을 내지 않습니다.",
     "capitalTeaserButton": "Capital Access 살펴보기",
     "capitalTeaserPoints": {
       "structure": "명확한 구조",
@@ -575,7 +582,7 @@
       "oversight": "스위스 감독",
       "oversightDesc": "문서화된 KYC, UBO 룩스루, 재량 심사.",
       "portal": "파트너 포털",
-      "portalDesc": "신청·예치·상환을 한곳에서 추적합니다."
+      "portalDesc": "신청, 담보, 상환을 한곳에서 확인합니다."
     }
   },
   "common": {
@@ -599,12 +606,12 @@
     "termsIntro": "본 조건은 SBDV 웹사이트, 고객 포털 및 공개 신청 경로의 이용을 규율합니다. SBDV는 취리히에 소재합니다. 본 웹사이트 약관은 스위스법에 따릅니다.",
     "termsBody": "본 웹사이트 약관은 SBDV 웹사이트의 이용, 계정 로그인 및 공개 신청 경로에 적용됩니다. 본 약관은 금고 커스터디 계약, 웰스 만데이트 또는 자본 시설을 성립시키지 않습니다. 금고 커스터디와 웰스 만데이트는 해당 관계를 위하여 별도로 발행된 계약에 따라서만 제공됩니다. Capital Access 시설은 본 웹사이트 약관이 아니라 약정 조건에 따릅니다.\n\nSBDV는 스위스 취리히에 소재합니다. 본 웹사이트 약관은 다른 법을 적용하게 되는 저촉법 규칙을 제외하고 스위스 실체법에 따릅니다. 웹사이트 이용으로 발생하는 분쟁에 대하여는 취리히 법원이 관할을 가집니다. 이는 시설 또는 만데이트 계약에 명시된 관할을 제한하지 않습니다.\n\n계정을 만들거나 포털을 이용함으로써 고객은 스위스 고객 확인 및 자금세탁방지 심사에 동의합니다. 비밀번호와 로그인 코드는 비밀로 유지해야 합니다. 권한 없이 계정이 사용된 것으로 판단되면, 연락 페이지를 통하여 SBDV에 지체 없이 알려 주십시오.\n\n전 세계의 기업이 Capital Access를 신청할 수 있습니다. 신청서의 제출은 대출 약정이 아니며, 개인 소비자 대출이 아니고, 증권의 공개 모집도 아닙니다. SBDV는 재량에 따라 신청을 승인하거나, 거절하거나, 보류할 수 있습니다. SBDV는 이 페이지에 고지함으로써 공개 웹사이트를 변경할 수 있습니다. 이미 수락된 시설은 고객이 수락한 약정 조건에 따르며, 이 페이지의 이후 변경에 따르지 않습니다.",
     "regulatoryTitle": "규제 공시",
-    "regulatoryIntro": "SBDV는 취리히에 소재하며 전 세계 고객을 위하여 금고 업무와 자본 주선을 수행하는 기관입니다. 스위스 은행이 아닙니다.",
-    "regulatoryBody": "SBDV는 지금 금고 커스터디를 제공하고, 적격 기업을 위하여 구조화 자본 시설을 주선합니다. Capital Access는 보호되는 은행 예금이 아니며, 예금보험 제도의 적용을 받지 않습니다. 보증금으로 보유되는 자금은 계약상 현금 담보이며, 은행에서 고객 명의로 예치된 예금이 아닙니다.\n\n프라이빗 클라이언트의 웰스 만데이트는 투자 프로그램이며, 은행 계좌가 아닙니다. 표시된 만데이트 수익률은 보장된 이자가 아니며, 중단되거나 개정될 수 있고, 예금보험의 적용을 받지 않습니다. Bitcoin은 자금 납입 또는 지급의 경로로만 사용할 수 있습니다. SBDV는 암호자산 거래소를 운영하지 않으며, 고객의 개인 키를 보관하지 않습니다. Bitcoin 이전은 취소할 수 없습니다.\n\n모든 고객은 스위스 자금세탁방지법(AMLA)에 부합하는 고객 확인, 실질 소유자 확인 및 자금세탁방지 심사를 받습니다. 최종 실질 소유자는 자연인까지 특정됩니다. 심사는 고객의 설립 국가와 관계없이 적용됩니다.\n\n투자 및 포트폴리오 관리 서비스는 적절한 인가를 필요로 하거나, 규제 대상 파트너를 통하여 제공될 수 있습니다. SBDV는 FINMA 은행 인가를 주장하지 않습니다. 어떠한 시설 또는 만데이트의 승인도 재량에 따릅니다.\n\n포괄적 제재 대상 관할의 개인 및 법인은 수용할 수 없습니다. 고위험 관할은 자동 거절이 아니라 강화된 실사의 대상이 될 수 있습니다.\n\n위험 고지: 투자에는 원금 손실 가능성을 포함한 위험이 따릅니다. 과거 성과는 미래 결과를 나타내지 않습니다. 이 웹사이트는 법률, 세무 또는 투자 자문이 아닙니다.",
-    "investorRelationsTitle": "투자자 관계",
-    "investorRelationsIntro": "거버넌스, 투명성 및 기관 커뮤니케이션입니다.",
-    "investorRelationsBody": "SBDV는 고객 및 이해관계자에 대한 투명성을 지킵니다. 연차 보고서, 거버넌스 방침 및 기관 공시는 이용 가능해지는 대로 여기에 게시합니다. 기관 문의는 연락 페이지를 통하여 투자자 관계 담당에게 연락해 주십시오.",
-    "englishGoverns": "이 페이지의 준거 언어는 영어입니다. 번역은 열람을 위한 것입니다. 적용되는 본문은 영어 텍스트입니다."
+    "regulatoryIntro": "Swiss Bullion Depository Vault AG, UID CHE-218.964.179의 본점은 Bahnhofstrasse 45, 8001 취리히입니다. 스위스 은행이 아니며, FINMA 은행 인가를 보유하지 않고, 예금을 받거나 대출할 허가를 받지 않았습니다.",
+    "regulatoryBody": "Swiss Bullion Depository Vault AG는 귀금속 금고 보관을 제공하고 적격 기업을 위하여 구조화된 자본 편의를 주선합니다. Capital Access는 보호되는 은행 예금이 아니며 예금보험의 대상이 아닙니다. 아직 SBDV에 보관하지 않는 회사는 서면 승인 후에만 승인 금액의 4% 보증금을 요청받을 수 있습니다. 그 현금은 계약상 담보이며, 차주 명의의 은행 예금도 수수료도 아닙니다. 이미 적격 금 또는 은을 보관하는 고객은 그 현금을 내지 않습니다. 선급은 적격 금의 75%와 적격 은의 70%를 한도로 하며, 금속은 상환까지 고객 명의로 배정된 채 남습니다. 현금 이체의 계좌는 이체 전에 편의 계약에 적습니다. 조건을 읽거나 신청하는 데 지급할 금액은 없습니다.\n\n개인 고객의 자산 위임은 투자 프로그램이며 은행 계좌가 아닙니다. 표시된 위임 수익률은 보장 이자가 아니며, 중지되거나 조정될 수 있고 예금보험의 대상이 아닙니다. 비트코인은 입금 또는 지급의 경로로만 쓸 수 있습니다. SBDV는 암호자산 거래소를 운영하지 않으며 고객의 개인 키를 보관하지 않습니다. 비트코인 이체는 취소할 수 없습니다.\n\n모든 고객은 스위스 자금세탁방지법에 따라 신원, 실질적 소유자 및 자금세탁방지 심사를 받습니다. 실질적 소유자는 자연인까지 확인합니다. 심사는 설립 국가와 관계없이 적용됩니다.\n\n투자 및 포트폴리오 운용은 인가가 필요하거나 규제된 파트너를 통하여 제공될 수 있습니다. SBDV는 FINMA 은행 인가를 주장하지 않습니다. 편의 또는 위임의 승인은 재량입니다.\n\n포괄적으로 제재된 관할의 개인과 법인은 받아들일 수 없습니다. 위험이 높은 관할에는 강화된 심사가 적용될 수 있습니다.\n\n위험 고지: 투자에는 원금을 잃을 위험이 있습니다. 과거의 성과는 미래의 결과를 나타내지 않습니다. 이 웹사이트는 법률, 세무 또는 투자 자문이 아닙니다.",
+    "investorRelationsTitle": "회사",
+    "investorRelationsIntro": "Swiss Bullion Depository Vault AG의 법적 신원.",
+    "investorRelationsBody": "Swiss Bullion Depository Vault AG\nUID CHE-218.964.179\n상업등기 CH-291.7.217.861-9\nBahnhofstrasse 45, 8001 취리히, 스위스\n\nPeter B. Guggi, 회장\nLucas Gardner, 이사\n\nSBDV는 은행이 아니며 FINMA 은행 인가를 보유하지 않습니다. 편의 조건과 규제 공시는 이 웹사이트에 게시되어 있습니다. 읽는 데 지급할 금액은 없습니다.",
+    "englishGoverns": "이 페이지는 고객이 고른 언어로 표시됩니다."
   },
   "login": {
     "title": "고객 로그인",
@@ -912,7 +919,7 @@
     },
     "capitalAccess": {
       "title": "Capital Access Requests",
-      "subtitle": "Review enterprise borrowing and investment applications against sovereign pools.",
+      "subtitle": "먼저 서류를 심사한 다음 승인하십시오. 4% 현금 보증금은 신청자가 아직 보관하지 않을 때만 적용됩니다.",
       "empty": "No capital access requests submitted yet.",
       "review": "Mark Under Review",
       "reviewApplication": "Review Application",
@@ -925,7 +932,7 @@
       "pendingVerification": "pending verification",
       "documents": "Documents uploaded",
       "approveModalTitle": "Approve & Assign Escrow",
-      "approveModalDesc": "Enter the escrow account the partner must use for the security deposit of",
+      "approveModalDesc": "파트너가 다음 보증금에 사용해야 하는 에스크로 계좌를 입력하십시오. 금액은",
       "approveWithEscrow": "Approve & Send Escrow Details",
       "beneficiary": "Beneficiary",
       "assignedEscrow": "Assigned Escrow Account",
@@ -945,7 +952,7 @@
       "requestExtraDesc": "If the package is incomplete or unsatisfactory, ask the borrower to upload or replace files.",
       "extraNotesPlaceholder": "Describe what is missing or what must be corrected…",
       "requestExtra": "Request Extra Documents",
-      "approveWithEscrowTitle": "Approve & assign escrow (10% deposit)",
+      "approveWithEscrowTitle": "승인하고 보증금 계좌를 지정",
       "approveRequiresDocs": "All five required documents must be on file before you can approve.",
       "approveRequiresSubmit": "Borrower must click Submit Documents before you can approve.",
       "disburseBank": "Disbursement bank account",
@@ -968,7 +975,8 @@
       "sofMissing": "Borrower has not declared origin of the security deposit",
       "operatingCountry": "Operating country",
       "yearsOperating": "Years operating",
-      "enhancedDdHint": "Consider enhanced due diligence for this jurisdiction"
+      "enhancedDdHint": "Consider enhanced due diligence for this jurisdiction",
+      "approveMetalDesc": "이 편의는 보관 중인 금속으로 담보됩니다. 현금 보증금도 에스크로 계좌도 없습니다."
     },
     "settings": {
       "title": "Account Settings"
@@ -1029,46 +1037,49 @@
     "hero": {
       "badge": "기관 자본 프로그램",
       "title": "적격 기업을 위한 구조화 자본",
-      "subtitle": "SBDV는 은행이 아닙니다. 시설은 예금이 아니며, 승인되기 전까지 약정이 아닙니다.",
+      "subtitle": "SBDV는 은행이 아니며 FINMA 은행 인가를 보유하지 않습니다. 이 조건을 읽고 신청하는 데 지급할 금액은 없습니다. 편의는 서면 승인 후에만 존재합니다.",
       "applyAccess": "접근 신청",
       "partnerLogin": "계정 로그인",
-      "eligibility": "영업 이력이 2년 이상이고, 감사 또는 검토된 재무제표를 갖추며, USD 500,000부터 요청하는 사업회사입니다. 승인은 재량에 따릅니다.",
-      "collateralRule": "SBDV는 귀하가 지정한 계좌로 지급합니다. 따라서 현금 담보가 먼저입니다. 주택이나 그 밖의 현지 자산은 받지 않습니다. 10%는 승인 후에만 요청됩니다. 지급 전에 에스크로 계좌가 표시됩니다. 이는 수수료가 아니라 귀하의 현금이며, 이자가 붙지 않습니다. 확인된 후 승인 금액 전액이 송금됩니다. 전액을 상환하면 사용되지 않은 잔액이 반환됩니다. 채무를 불이행하면 연체금에 충당될 수 있습니다. 신청은 대출 약속이 아닙니다."
+      "eligibility": "최소 2년의 영업, 감사 또는 검토된 재무제표, 50만 미국 달러부터의 신청이 있는 영업 회사. 승인은 재량입니다.",
+      "collateralRule": "등록과 신청에 지급할 금액은 없습니다. 아직 SBDV에 보관하지 않으면, 승인 금액의 4% 보증금은 서면 승인 후에만, 이체 전에 편의 계약에 적힌 계좌로만 요구됩니다. 수수료가 아닙니다. 이미 SBDV에 적격 금 또는 은을 보관하면 현금 보증금은 없습니다. 선급은 그 금의 75% 또는 그 은의 70%까지이며, 금속은 상환까지 고객 명의로 남습니다. 신청은 대출 약속이 아닙니다.",
+      "companyDoor": "비금고 고객으로 등록",
+      "metalDoor": "금고 고객으로 등록",
+      "readTerms": "편의 조건 읽기"
     },
     "features": {
       "title": "기업이 Capital Access를 선택하는 이유",
       "subtitle": "적격 기업과 만데이트에 부합하는 자본 사이의 규율 있는 입구입니다. 명확함을 먼저 둡니다.",
-      "globalPoolsTitle": "만데이트에 부합하는 풀",
-      "globalPoolsDesc": "섹터와 지역에 맞춘 부분 공개의 소버린급 풀입니다. 블랙박스 경매가 아닙니다.",
+      "globalPoolsTitle": "두 가지 길",
+      "globalPoolsDesc": "4% 보증금이 있는 회사 편의, 또는 이미 SBDV에 보관하는 금속을 담보로 한 선급. 한 신청자는 한 길만 사용합니다.",
       "flexibleTermsTitle": "계획의 기준이 되는 조건",
       "flexibleTermsDesc": "1–10년에 걸쳐 금액, 기간, 그리고 월간 또는 연간 이자를 정하고, 실시간 계산을 확인합니다.",
       "enterpriseFocusTitle": "사업회사를 위하여",
       "enterpriseFocusDesc": "감사 또는 검토된 재무와 명확한 투자 방침을 갖춘, 확립된 기업을 위한 것입니다.",
-      "structuredSecurityTitle": "예상 밖의 일 없는 절차",
-      "structuredSecurityDesc": "자금을 보내기 전의 10% 현금 담보. 주택이나 그 밖의 현지 자산은 받지 않습니다. KYC/UBO 전면 심사와 스위스 자금세탁방지 기준에 따른 재량적 승인."
+      "structuredSecurityTitle": "담보는 미리 밝힙니다",
+      "structuredSecurityDesc": "4% 현금은 SBDV에 보관하지 않을 때만, 그리고 서면 승인 후에만 받습니다. 이미 보관하면 금속이 담보이며 현금 보증금은 받지 않습니다."
     },
     "howItWorks": {
       "title": "How It Works",
       "registerTitle": "Register as a Capital Partner",
       "registerDesc": "Create your enterprise account and verify your company credentials.",
       "exploreTitle": "Explore Available Pools",
-      "exploreDesc": "고객의 섹터 및 지역에 부합하는, 부분 공개의 소버린 자본 풀을 살펴봅니다.",
+      "exploreDesc": "회사 편의 또는 금속 편의를 고르고 금액, 기간, 상환을 적으십시오.",
       "structureTitle": "Structure Your Request",
       "structureDesc": "대출 금액, 기간, 상환 주기를 정하고, 실시간 이자 계산을 확인합니다.",
       "submitTitle": "Submit Company Profile",
-      "submitDesc": "Provide financials, investment areas, and accept the 10% security deposit condition.",
+      "submitDesc": "설립 국가와 영업 국가, 재무, 권한 있는 서명자, 적용되는 담보의 길을 적으십시오.",
       "decisionTitle": "Await Institutional Review",
       "decisionDesc": "Your application enters our review queue. You will receive approval or rejection notification.",
       "prepareTitle": "서류 준비",
       "prepareDesc": "적격성을 확인하십시오(기업, USD 500,000+, 영업 이력 2년). 현지 등기부 초본, 감사 재무제표 및 실질 소유자 명세를 준비하십시오. 현지의 동등 서류와 공인 번역을 접수합니다.",
       "reviewTitle": "기관 심사",
       "reviewDesc": "SBDV는 문서, 실질 소유자 및 만데이트와의 정합을 심사합니다. 승인은 재량에 따르며, 발행되기 전까지 약정이 아닙니다.",
-      "depositTitle": "보증금 및 자금의 출처",
-      "depositDesc": "KYC 심사 후 에스크로 계좌가 표시됩니다. 승인 금액의 10%를 송금하십시오. 이는 담보로 보유되는 귀하의 현금이며 수수료가 아닙니다. 그 후 SBDV는 승인 금액 전액을 귀하가 지정한 계좌로 송금합니다.",
+      "depositTitle": "담보는 승인 후에만",
+      "depositDesc": "SBDV에 보관하지 않으면 4% 보증금 계좌는 승인과 이 조건의 수락 후에 표시됩니다. 그 전에는 지급을 요구하지 않습니다. 이미 보관하면 현금을 요구하지 않습니다.",
       "kycTitle": "KYC 및 제재 심사",
       "kycDesc": "회사, 서명권자 및 최종 실질 소유자에 대하여 스위스 AML 심사를 합니다. 고위험 관할에는 강화된 실사를 적용합니다.",
       "fundingTitle": "자금 집행 및 상환",
-      "fundingDesc": "차주 명의의 은행 계좌(SWIFT와 IBAN 또는 현지 계좌번호)를 제출하십시오. 10% 현금 담보가 확인된 뒤에만 승인 금액 전액이 미국 달러로 지급됩니다. 대시보드의 일정에 따라 상환하십시오."
+      "fundingDesc": "차주 명의의 은행 계좌를 제출하십시오. 자금이 지급되면 미국 달러로 그 계좌에 보냅니다. 금속 길에서는 금속이 상환까지 담보로 남습니다."
     },
     "nav": {
       "overview": "Overview",
@@ -1082,14 +1093,14 @@
     },
     "overview": {
       "title": "Welcome to Capital Access",
-      "subtitle": "Explore sovereign capital pools and submit mandate-aligned investment requests for your enterprise.",
+      "subtitle": "회사 편의 또는 금속 편의를 고른 다음 신청하십시오.",
       "featuredPools": "Featured Capital Pools",
       "ctaTitle": "Ready to structure your request?",
       "ctaDesc": "Complete a guided application with live interest calculation and security deposit terms."
     },
     "steps": {
       "explore": "Explore Pools",
-      "exploreDesc": "Review partially disclosed sovereign capital available for enterprise deployment.",
+      "exploreDesc": "승인 후 4% 보증금이 있는 회사 편의, 또는 이미 SBDV에 보관된 금속을 담보로 한 선급을 고르십시오.",
       "apply": "Structure Request",
       "applyDesc": "Define amount, term, and repayment schedule with live APR calculation.",
       "review": "Institutional Review",
@@ -1097,13 +1108,13 @@
     },
     "pools": {
       "title": "Available Capital Pools",
-      "subtitle": "Institutional sovereign pools with limited disclosure. Full entity details available upon approved access."
+      "subtitle": "편의는 승인 전에 심사됩니다. 전체 조건은 신청 전에 공개됩니다."
     },
     "conditions": {
       "title": "Access Conditions",
       "minimumOperatingYears": "Minimum 2 years of operating history",
       "auditedFinancials": "Audited or reviewed financial statements required",
-      "securityDeposit": "승인 후, 승인 금액이 송금되기 전의 10% 현금 담보",
+      "securityDeposit": "아직 보관하지 않으면 승인 후 4% 보증금. 이미 보관하면 현금 보증금 없음",
       "kycAml": "Full KYC/AML and beneficial ownership disclosure",
       "mandateAlignment": "Investment thesis must align with pool mandate",
       "minimumTicket": "Minimum request USD $500,000",
@@ -1119,7 +1130,7 @@
     "startRequest": "Start Capital Request",
     "register": {
       "title": "Capital Access 등록",
-      "subtitle": "Create your enterprise partner account to explore sovereign capital pools.",
+      "subtitle": "허용된 국가에서 회사 계정을 만드십시오.",
       "fullName": "성명",
       "phone": "전화(선택)",
       "submit": "Capital Access 계정 만들기",
@@ -1129,7 +1140,11 @@
       "welcomeTitle": "계정을 만들었습니다",
       "welcomeBody": "Capital Access 계정이 준비되었습니다. 방금 만든 이메일과 비밀번호로 로그인하십시오.",
       "welcomeEmail": "이메일",
-      "goToLogin": "로그인으로"
+      "goToLogin": "로그인으로",
+      "whichDoor": "이미 SBDV에 금속을 보관하고 있습니까?",
+      "doorCompany": "비금고 고객으로 등록",
+      "doorMetal": "금고 고객으로 등록",
+      "doorLocked": "이 등록은 하나의 편의만을 위한 것입니다."
     },
     "request": {
       "title": "자본 신청",
@@ -1160,7 +1175,7 @@
       "financialsPlaceholder": "Summarize audited financials — revenue trend, EBITDA, debt/equity ratio, key assets…",
       "review": "Review & Submit",
       "selectedPool": "Selected Pool",
-      "termsAccept": "승인 후 승인 금액이 송금되기 전에 10% 현금 담보를 에스크로 계좌로 송금하는 데 동의합니다. 이는 수수료가 아닙니다. 기관 심사 절차에 동의하며, 제공한 정보가 정확함을 확인합니다.",
+      "termsAccept": "편의 조건을 읽었습니다. 지금은 지급할 금액이 없음을 이해합니다. 회사 편의에서는 4% 보증금이 서면 승인 후에만 요구됩니다. 금속 편의에서는 현금 보증금을 받지 않습니다.",
       "back": "뒤로",
       "continue": "계속",
       "submit": "Submit Application",
@@ -1168,7 +1183,7 @@
       "submittedTitle": "Application Submitted",
       "submittedDesc": "Your capital access request is now under institutional review. A confirmation email has been sent to your registered address.",
       "viewApplications": "View My Applications",
-      "termsAcceptBefore": "승인 후 승인 금액이 송금되기 전에 10% 현금 담보를 에스크로 계좌로 송금하는 데 동의합니다. 이는 수수료가 아닙니다. 본인은 다음에 동의합니다:",
+      "termsAcceptBefore": "편의 조건을 읽었습니다. 지금은 지급할 금액이 없습니다. 다음에 동의합니다:",
       "termsAcceptAfter": ", the institutional review process, and I confirm that all information provided is accurate.",
       "operatingCountry": "Principal operating country",
       "yearsOperating": "Years of operation",
@@ -1191,7 +1206,13 @@
       "capitalControls": "I confirm that the laws of our home country allow this company to take foreign USD capital, including any central-bank or capital-control rules that apply to us.",
       "sanctionsAttest": "I confirm that the company, its signatories, and its beneficial owners are not sanctioned persons and are not located, organised, or resident in a comprehensively sanctioned jurisdiction.",
       "sanctionedCountry": "SBDV cannot onboard applicants in comprehensively sanctioned jurisdictions.",
-      "attestationsRequired": "Please complete all attestations before submitting."
+      "attestationsRequired": "Please complete all attestations before submitting.",
+      "trackLabel": "어떤 담보가 적용되는가",
+      "trackCash": "비금고 고객",
+      "trackCashDesc": "SBDV에 보관하지 않습니다. 4% 보증금은 서면 승인 후에만 요구됩니다. 지금은 지급할 금액이 없습니다.",
+      "trackMetal": "금고 고객",
+      "trackMetalDesc": "이미 SBDV에 적격 금 또는 은을 보관합니다. 현금 보증금은 없습니다. 선급은 그 금의 75% 또는 그 은의 70%까지입니다.",
+      "trackMetalShort": "현금 보증금은 없습니다. 금속이 담보로 제공되었습니다."
     },
     "applications": {
       "title": "My Applications",
@@ -1207,13 +1228,13 @@
     },
     "onboarding": {
       "title": "Facility Dashboard",
-      "subtitle": "Complete onboarding to activate your approved capital facility.",
+      "subtitle": "서류와 심사를 마쳐 자본 편의를 활성화하십시오.",
       "noFacility": "No Active Facility",
       "noFacilityDesc": "Once your capital access application is approved, your facility dashboard will appear here.",
       "progress": "Onboarding Progress",
       "rm": "Relationship Manager",
       "escrowTitle": "Security Deposit — Escrow Instructions",
-      "escrowDesc": "SBDV는 귀하가 지정한 계좌로 지급합니다. 따라서 이 현금이 먼저입니다. 주택이나 그 밖의 현지 자산은 받지 않습니다. 승인 금액의 10%를 아래 에스크로 계좌로 정확히 송금하십시오. 이는 수수료가 아니라 귀하의 현금이며, 이자가 붙지 않습니다. SBDV가 확인한 후 승인 금액 전액이 송금됩니다. 송금 참조번호는 표시된 그대로 사용하십시오.",
+      "escrowDesc": "이 계좌는 서면 승인 후에만 표시됩니다. 표시된 보증금을 이체하십시오. 수수료가 아닙니다. 이 지시가 나타나기 전에 어떤 금액도 이체하지 마십시오.",
       "escrowPending": "Escrow payment details are being prepared by our capital desk. They will appear here as soon as your application is fully approved.",
       "bank": "Bank",
       "bankAddress": "Bank Address",
@@ -1235,7 +1256,7 @@
       "documentsTitle": "Required Documentation",
       "documentsDesc": "Upload all four documents within 14 business days of deposit confirmation.",
       "upload": "Upload",
-      "docsCompleteNote": "All documents uploaded. Our team will review and advance your onboarding.",
+      "docsCompleteNote": "모든 서류가 업로드되었습니다. 당사 팀이 심사합니다. 이 단계에서는 지급할 금액이 없습니다.",
       "disbursementPending": "Disbursement in Progress",
       "disbursementDesc": "Your facility has cleared compliance. Capital release is being processed.",
       "disbursedOn": "Disbursed on",
@@ -1305,14 +1326,15 @@
       "uboEmpty": "Add at least one beneficial owner before submitting documents.",
       "uboSaved": "Beneficial owner saved.",
       "sofTitle": "Origin of the security deposit",
-      "sofDesc": "Declare how the 10% cash collateral will be funded. The remitting account must be in the borrower’s name.",
+      "sofDesc": "현금 보증금이 있는 경우 그 자금 원천을 밝히십시오. 송금 계좌는 차주 명의여야 합니다. 금속 편의에는 현금 보증금이 없습니다.",
       "sofSource": "Source of funds",
       "sofOperating": "Company operating cash",
       "sofShareholder": "Shareholder loan",
       "sofAssetSale": "Sale of assets",
       "sofOther": "Other",
       "sofDetail": "Explanation",
-      "sofRequired": "Origin of funds is required before you submit the deposit."
+      "sofRequired": "Origin of funds is required before you submit the deposit.",
+      "kycReviewNote": "KYC 심사가 진행 중입니다. 지금은 지급할 금액이 없습니다."
     },
     "status": {
       "pending": "Pending Review",
@@ -1349,15 +1371,15 @@
     "facilityTerms": {
       "eyebrow": "Capital Access 프로그램",
       "pageTitle": "약정 조건",
-      "intro": "본 조건은 10% 보증금, 이자, 상환, 채무불이행 및 스위스 준거법을 포함하여 고객의 자본 시설을 규율합니다. 수락하기 전에 전문을 읽으십시오.",
+      "intro": "이 조건은 4% 보증금 또는 보관 금속의 담보, 이자, 상환, 채무불이행 및 스위스법을 포함하여 고객의 자본 편의를 정합니다. 수락 전에 전문을 읽으십시오. 읽는 데 지급할 금액은 없습니다.",
       "versionLabel": "문서",
       "effectiveLabel": "효력",
       "languageLabel": "준거 언어",
-      "governingNote": "이 문서의 준거 언어는 영어입니다. 번역이 제공되는 경우, 이는 편의를 위한 것일 뿐입니다.",
+      "governingNote": "이 조건은 고객이 고른 언어로 표시됩니다.",
       "contents": "목차",
       "acceptBefore": "나는 읽고 동의합니다",
       "linkLabel": "약정 조건",
-      "acceptAfter": ", 10% 보증금, 이자, 상환, 채무불이행 및 준거법 조항을 포함하며, 본인은 차주를 구속할 권한이 있음을 확인합니다.",
+      "acceptAfter": ", 보증금 또는 금속 담보, 이자, 상환, 채무불이행 및 준거법 조항을 포함하며, 본인이 차주를 구속할 권한이 있음을 확인합니다.",
       "acceptedNote": "약정 조건을 수락하였습니다",
       "print": "인쇄 또는 저장",
       "backFacility": "시설 대시보드로 돌아가기"
@@ -1386,8 +1408,43 @@
     "settings": {
       "title": "Account Settings"
     },
-    "yearlyInterestNote": "연이자는 승인 금액에만 부과되며, 현금 담보에는 부과되지 않습니다.",
-    "amountDisbursed": "지급 금액"
+    "yearlyInterestNote": "연이자는 승인 금액에만 계산되며 현금 보증금에는 계산되지 않습니다.",
+    "amountDisbursed": "지급 금액",
+    "doors": {
+      "readTerms": "편의 조건 읽기",
+      "register": "이 편의에 등록",
+      "noPayment": "이 페이지를 읽거나 신청하는 데 지급할 금액은 없습니다.",
+      "company": {
+        "title": "비금고 고객",
+        "whoTitle": "대상",
+        "who": "SBDV에 금속을 보관하지 않는 영업 회사. 최소 2년의 영업, 감사 또는 검토된 재무제표, 50만 미국 달러부터의 신청. 개인 대출이 아닙니다.",
+        "securityTitle": "담보",
+        "security": "서면 승인 후, 그리고 이 조건을 수락한 후에만, 회사는 승인 금액의 4%를 미국 달러로 지급합니다. 수수료가 아닙니다. 계좌는 이체 전에 편의 계약에 적습니다. SBDV가 지급 전에 거절하는 경우, 신청자의 위반 또는 신청자 정보로 인한 준법 심사 실패를 제외하고 전액 반환됩니다.",
+        "stepsTitle": "다섯 단계",
+        "steps": [
+          "회사, 소유자 및 서류를 제출합니다.",
+          "SBDV가 서류를 심사합니다. 승인은 재량입니다.",
+          "서면 승인은 아직 지급 약속이 아닙니다.",
+          "편의 조건을 수락합니다. 그 후에만 4% 보증금이 요구됩니다.",
+          "회사 명의의 은행 계좌를 제출합니다. 자금이 지급되면 그 계좌로 보냅니다."
+        ]
+      },
+      "metal": {
+        "title": "금고 고객",
+        "whoTitle": "대상",
+        "who": "이미 SBDV에 적격 금 또는 은을 보관하는 고객으로서, 최소 2년의 영업, 감사 또는 검토된 재무제표, 50만 미국 달러부터의 신청이 있는 영업 회사를 통하여 신청합니다.",
+        "securityTitle": "담보",
+        "security": "현금 보증금은 없습니다. 선급은 이미 금고에 있는 적격 금의 75%와 적격 은의 70%까지입니다. 금속은 고객 명의로 배정된 채 상환까지 담보로 남습니다. 가격 하락은 추가 금속 또는 일부 상환을 요구할 수 있습니다. 선급이 이루어지지 않으면 금속은 담보로 제공되지 않습니다.",
+        "stepsTitle": "다섯 단계",
+        "steps": [
+          "적격 금 또는 은이 이미 SBDV에 보관되어 있습니다.",
+          "회사, 소유자 및 서류를 제출합니다.",
+          "SBDV가 서류를 심사합니다. 서면 승인은 아직 지급 약속이 아닙니다.",
+          "금속이 담보로 제공됩니다. 현금 보증금은 요구되지 않습니다.",
+          "회사 명의의 은행 계좌를 제출합니다. 금속은 상환까지 담보로 남습니다."
+        ]
+      }
+    }
   },
   "chat": {
     "open": "SBDV에 문의",

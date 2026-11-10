@@ -44,18 +44,18 @@ const phaseMessages: Record<string, { subject: string; title: string; body: stri
   },
   AWAITING_DEPOSIT: {
     subject: "KYC Complete — Security Deposit Required",
-    title: "Wire the 10% cash collateral",
-    body: `<p>KYC review is complete. Transfer your 10% cash collateral using the escrow instructions in your <strong>Facility Dashboard</strong>. Include the wire reference exactly as shown. It is your cash, not a fee. After it is confirmed, you will submit the bank account for the approved amount.</p>`,
+    title: "Wire the security deposit",
+    body: `<p>KYC review is complete. If your facility uses a cash security deposit, transfer the amount shown in your <strong>Facility Dashboard</strong>. The account is identified there before you transfer. It is not a fee. A facility secured on vaulted metal has no cash deposit.</p>`,
   },
   KYC_REVIEW: {
     subject: "Facility Approved — KYC Under Review",
     title: "Compliance review in progress",
-    body: `<p>Your documents have been accepted and the facility is approved. Our compliance team is reviewing the company and its beneficial owners. No payment is due now. After this review, you will be asked to wire the 10% cash collateral.</p>`,
+    body: `<p>Your documents have been accepted and the facility is approved. Our compliance team is reviewing the company and its beneficial owners. No payment is due now.</p>`,
   },
   AWAITING_BANK_DETAILS: {
     subject: "Deposit Confirmed — Submit Disbursement Bank Details",
     title: "Submit your disbursement bank account",
-    body: `<p>Your 10% cash collateral is confirmed. Please open <strong>Onboarding</strong> and submit the bank account in the borrower’s name where we should disburse your approved facility amount. SWIFT/BIC is required. Provide an IBAN if your bank uses one; otherwise enter the local account number and routing code.</p>`,
+    body: `<p>The security step is complete. Please open <strong>Onboarding</strong> and submit the bank account in the borrower’s name where we should disburse the approved amount. SWIFT/BIC is required. Provide an IBAN if your bank uses one; otherwise enter the local account number and routing code.</p>`,
   },
   READY_FOR_DISBURSEMENT: {
     subject: "Bank Details Received — Disbursement Pending",

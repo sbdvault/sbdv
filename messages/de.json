@@ -23,14 +23,15 @@
   "hero": {
     "headline": "Schweizer Sicherheit. Diszipliniertes Wachstum.",
     "subtext": "Privatkunden nutzen die schweizerische Verwahrung oder ein Vermögensmandat. Qualifizierte Unternehmen können eine strukturierte Kapitalfazilität beantragen. SBDV ist keine Bank.",
-    "exploreCapital": "Unternehmen",
-    "privateClients": "Private-Client-Zugang",
+    "exploreCapital": "Kapital für Unternehmen",
+    "privateClients": "Tresorverwahrung",
     "requestAccess": "Zugang anfragen",
     "clientLogin": "Kunden-Login",
-    "investorRelations": "Anlegerbeziehungen"
+    "investorRelations": "Anlegerbeziehungen",
+    "wealthMandate": "Vermögensmandat"
   },
   "footer": {
-    "copyright": "Swiss Bullion Depository Vault — Schweizer Präzision. Globales Vertrauen.",
+    "copyright": "Swiss Bullion Depository Vault AG — Schweizer Präzision. Globales Vertrauen.",
     "headquarters": "Hauptsitz",
     "globalOffices": "Weltweite Büros",
     "legal": "Rechtliches",
@@ -69,7 +70,12 @@
       }
     },
     "jurisdictionNote": "Schweizer Rechtsgrundlage. Multi-jurisdiktioneller Zugang für globale Kunden.",
-    "facilityTerms": "Fazilitätsbedingungen"
+    "facilityTerms": "Fazilitätsbedingungen",
+    "legalName": "Swiss Bullion Depository Vault AG",
+    "uid": "UID CHE-218.964.179",
+    "registerNumber": "Handelsregister CH-291.7.217.861-9",
+    "board": "Peter B. Guggi, Präsident. Lucas Gardner, Direktor.",
+    "notABank": "SBDV ist keine Bank, besitzt keine FINMA-Banklizenz und ist nicht zum Entgegennehmen von Einlagen oder zur Kreditvergabe zugelassen."
   },
   "about": {
     "title": "Über uns",
@@ -116,7 +122,7 @@
       "privateText": "Mitgliedschaft Tresor & Sicherheit für die Verwahrung von Bullion, und ein gesondertes Mandat Vermögen & Anlage für Kunden, die Kapital einzahlen und die angegebene Rendite verfolgen.",
       "capitalLabel": "Unternehmen",
       "capitalTitle": "Capital Access",
-      "capitalText": "Strukturierte Fazilitäten für qualifizierte Gesellschaften — Dokumentation, Barsicherheit von 10%, schweizerische Prüfung AML und ein bestätigter Rückzahlungsplan. Die Genehmigung steht im Ermessen."
+      "capitalText": "Zwei Wege. Eine Gesellschaft, die nicht bei SBDV verwahrt, kann eine Fazilität mit einer Sicherheitsleistung von 4 % beantragen. Sie wird erst nach schriftlicher Genehmigung verlangt. Ein Kunde, der bereits verwahrt, kann gegen dieses Metall aufnehmen, ohne Barsicherheit. Die Genehmigung steht im Ermessen."
     },
     "serveTitle": "Wen wir betreuen",
     "serve": {
@@ -509,11 +515,12 @@
     }
   },
   "cta": {
-    "title": "Zwei Wege. Ein Schweizer Standard.",
-    "subtitle": "Private Custody für Vermögen, das still bleiben muss — oder strukturiertes Kapital für Unternehmen, die mit Klarheit wachsen wollen.",
+    "title": "Drei Wege. Ein Schweizer Standard.",
+    "subtitle": "Tresorverwahrung, ein Vermögensmandat oder eine Kapitalfazilität für ein qualifiziertes Unternehmen. Jedes Gesuch wird für sich geprüft.",
     "button": "Private Beratung buchen",
-    "capitalButton": "Capital Access entdecken",
-    "privateButton": "Private-Client-Zugang"
+    "capitalButton": "Kapital für Unternehmen",
+    "privateButton": "Tresorverwahrung",
+    "wealthButton": "Vermögensmandat"
   },
   "home": {
     "swissStandardTitle": "Der Schweizer Standard",
@@ -567,7 +574,7 @@
       }
     },
     "capitalTeaserTitle": "Kapital, mit dem Unternehmen wachsen",
-    "capitalTeaserDescription": "Das Capital Access Program verbindet qualifizierte Unternehmen mit mandate-aligned Pools — transparente Konditionen, Schweizer Oversight und ein geführter Weg vom Antrag bis zur Facility.",
+    "capitalTeaserDescription": "Eine Gesellschaft, die nicht verwahrt, kann eine Fazilität in USD beantragen. Eine Sicherheitsleistung von 4 % wird erst nach schriftlicher Genehmigung verlangt. Ein Kunde, der bereits geeignetes Metall verwahrt, zahlt diese Barsicherheit nicht.",
     "capitalTeaserButton": "Capital Access entdecken",
     "capitalTeaserPoints": {
       "structure": "Klare Struktur",
@@ -575,7 +582,7 @@
       "oversight": "Schweizer Oversight",
       "oversightDesc": "Dokumentierte KYC, UBO-Look-through und diskretionäre Prüfung.",
       "portal": "Partnerportal",
-      "portalDesc": "Anträge, Einlagen und Rückzahlung an einem Ort verfolgen."
+      "portalDesc": "Anträge, Sicherheit und Rückzahlung an einem Ort verfolgen."
     }
   },
   "common": {
@@ -599,12 +606,12 @@
     "termsIntro": "Diese Bedingungen regeln Ihre Nutzung der Website von SBDV, der Kundenportale und der öffentlichen Antragswege. SBDV hat seinen Sitz in Zürich. Diese Website-Bedingungen unterstehen schweizerischem Recht.",
     "termsBody": "Diese Website-Bedingungen gelten für die Nutzung der Website von SBDV, die Anmeldung zum Konto und die öffentlichen Antragswege. Sie begründen keinen Vertrag über die Tresorverwahrung, kein Vermögensmandat und keine Kapitalfazilität. Tresorverwahrung und Vermögensmandate werden ausschliesslich unter dem gesonderten Vertrag erbracht, der für diese Beziehung ausgestellt wird. Fazilitäten unter Capital Access unterstehen den Fazilitätsbedingungen, nicht diesen Website-Bedingungen.\n\nSBDV hat seinen Sitz in Zürich, Schweiz. Diese Website-Bedingungen unterstehen dem materiellen Recht der Schweiz, unter Ausschluss der Kollisionsnormen, die ein anderes Recht zur Anwendung brächten. Für Streitigkeiten aus der Nutzung der Website sind die Gerichte in Zürich zuständig. Das schränkt eine Zuständigkeit nicht ein, die in einem Fazilitäts- oder Mandatsvertrag festgelegt ist.\n\nMit der Eröffnung eines Kontos oder der Nutzung eines Portals erklären Sie sich mit der schweizerischen Prüfung der Kundenidentität und der Geldwäschereiprävention einverstanden. Sie haben Ihr Passwort und jeden Anmeldecode vertraulich zu halten. Wenn Sie annehmen, dass Ihr Konto ohne Ihre Befugnis verwendet wurde, teilen Sie dies SBDV umgehend über die Kontaktseite mit.\n\nUnternehmen weltweit können Capital Access beantragen. Die Einreichung eines Antrags ist keine Zusage, Kredit zu gewähren, kein Konsumentenkredit und kein öffentliches Angebot von Effekten. SBDV kann einen Antrag nach eigenem Ermessen genehmigen, ablehnen oder zurückstellen. SBDV kann die öffentliche Website durch Hinweis auf dieser Seite ändern. Eine bereits angenommene Fazilität bleibt den Fazilitätsbedingungen unterstellt, die Sie angenommen haben, nicht einer späteren Änderung dieser Seite.",
     "regulatoryTitle": "Regulatorische Hinweise",
-    "regulatoryIntro": "SBDV ist ein in Zürich ansässiges Haus für Tresorverwahrung und Kapitalvermittlung und dient Kunden weltweit. Es ist keine schweizerische Bank.",
-    "regulatoryBody": "SBDV bietet die Verwahrung von Bullion im Tresor und vermittelt strukturierte Kapitalfazilitäten für qualifizierte Unternehmen. Capital Access ist keine geschützte Bankeinlage und unterliegt keiner Einlagensicherung. Mittel, die als Sicherheitsleistung gehalten werden, sind vertragliche Barsicherheit und keine Einlage auf Ihren Namen bei einer Bank.\n\nVermögensmandate für Privatkunden sind Anlageprogramme, keine Bankkonten. Eine angegebene Mandatsrendite ist kein garantierter Zins, kann ausgesetzt oder angepasst werden und ist nicht von der Einlagensicherung erfasst. Bitcoin darf nur als Weg für die Einzahlung oder die Auszahlung dienen; SBDV betreibt keine Krypto-Börse und verwahrt keine privaten Schlüssel der Kunden. Übertragungen in Bitcoin sind unwiderruflich.\n\nSämtliche Kunden durchlaufen eine Prüfung der Identität, der wirtschaftlich berechtigten Personen und der Geldwäschereiprävention im Einklang mit dem schweizerischen Geldwäschereigesetz (AMLA). Wirtschaftlich berechtigte Personen werden bis auf natürliche Personen festgestellt. Die Prüfung gilt unabhängig vom Staat, in dem der Kunde errichtet ist.\n\nDienstleistungen der Anlage und der Portfolioverwaltung können eine geeignete Bewilligung erfordern oder über regulierte Partner erbracht werden. SBDV beansprucht keine Bankbewilligung der FINMA. Die Genehmigung einer Fazilität oder eines Mandats steht im Ermessen.\n\nPersonen und Einheiten in umfassend sanktionierten Staaten können nicht aufgenommen werden. Staaten mit erhöhtem Risiko können einer verstärkten Sorgfaltsprüfung unterliegen, statt automatisch abgelehnt zu werden.\n\nRisikohinweise: Anlagen sind mit Risiken verbunden, einschliesslich eines möglichen Verlusts des Kapitals. Die frühere Wertentwicklung lässt keine Schlüsse auf künftige Ergebnisse zu. Diese Website ist keine Rechts-, Steuer- oder Anlageberatung.",
-    "investorRelationsTitle": "Anlegerbeziehungen",
-    "investorRelationsIntro": "Governance, Transparenz und institutionelle Kommunikation.",
-    "investorRelationsBody": "SBDV verpflichtet sich zur Transparenz gegenüber seinen Kunden und Anspruchsgruppen. Jahresberichte, Governance-Richtlinien und institutionelle Offenlegungen werden hier veröffentlicht, sobald sie vorliegen. Für institutionelle Anfragen wenden Sie sich bitte über die Kontaktseite an unser Team für Anlegerbeziehungen.",
-    "englishGoverns": "Englisch ist die massgebende Sprache dieser Seite. Die Übersetzung dient der Lektüre. Es gilt der englische Text."
+    "regulatoryIntro": "Swiss Bullion Depository Vault AG, UID CHE-218.964.179, hat ihren Sitz an der Bahnhofstrasse 45, 8001 Zürich. Sie ist keine schweizerische Bank, besitzt keine FINMA-Banklizenz und ist nicht zum Entgegennehmen von Einlagen oder zur Kreditvergabe zugelassen.",
+    "regulatoryBody": "Swiss Bullion Depository Vault AG bietet die Verwahrung von Bullion im Tresor und vermittelt strukturierte Kapitalfazilitäten für qualifizierte Unternehmen. Capital Access ist keine geschützte Bankeinlage und unterliegt keiner Einlagensicherung. Eine Gesellschaft, die noch nicht bei SBDV verwahrt, kann erst nach schriftlicher Genehmigung um eine Sicherheitsleistung von 4 % des genehmigten Betrags gebeten werden. Dieses Bargeld ist vertragliche Sicherheit, keine Einlage auf den Namen des Kreditnehmers bei einer Bank und keine Gebühr. Ein Kunde, der bereits geeignetes Gold oder Silber verwahrt, zahlt diese Barsicherheit nicht. Der Vorschuss ist auf 75 % des geeigneten Goldes und 70 % des geeigneten Silbers begrenzt. Das Metall bleibt bis zur Rückzahlung auf den Namen des Kunden alloziert. Das Konto für eine Barüberweisung wird in der Fazilitätsvereinbarung genannt, bevor überwiesen wird. Für das Lesen der Bedingungen und für den Antrag ist keine Zahlung geschuldet.\n\nVermögensmandate für Privatkunden sind Anlageprogramme, keine Bankkonten. Eine angegebene Mandatsrendite ist kein garantierter Zins, kann ausgesetzt oder angepasst werden und ist nicht von der Einlagensicherung erfasst. Bitcoin darf nur als Weg für die Einzahlung oder die Auszahlung dienen. SBDV betreibt keine Krypto-Börse und verwahrt keine privaten Schlüssel der Kunden. Übertragungen in Bitcoin sind unwiderruflich.\n\nSämtliche Kunden durchlaufen eine Prüfung der Identität, der wirtschaftlich berechtigten Personen und der Geldwäschereiprävention im Einklang mit dem schweizerischen Geldwäschereigesetz (GwG). Wirtschaftlich berechtigte Personen werden bis auf natürliche Personen festgestellt. Die Prüfung gilt unabhängig vom Land der Gründung.\n\nAnlage- und Portfolioverwaltung können eine Bewilligung erfordern oder über beaufsichtigte Partner erbracht werden. SBDV beansprucht keine FINMA-Banklizenz. Die Genehmigung einer Fazilität oder eines Mandats steht im Ermessen.\n\nPersonen und Gesellschaften in umfassend sanktionierten Gebieten können nicht aufgenommen werden. In Gebieten mit erhöhtem Risiko kann eine verstärkte Sorgfaltsprüfung gelten.\n\nRisikohinweis: Anlagen bergen das Risiko eines Verlusts des Kapitals. Die vergangene Entwicklung lässt keinen Schluss auf die künftige zu. Diese Website ist keine Rechts-, Steuer- oder Anlageberatung.",
+    "investorRelationsTitle": "Das Haus",
+    "investorRelationsIntro": "Die rechtliche Identität der Swiss Bullion Depository Vault AG.",
+    "investorRelationsBody": "Swiss Bullion Depository Vault AG\nUID CHE-218.964.179\nHandelsregister CH-291.7.217.861-9\nBahnhofstrasse 45, 8001 Zürich, Schweiz\n\nPeter B. Guggi, Präsident\nLucas Gardner, Direktor\n\nSBDV ist keine Bank und besitzt keine FINMA-Banklizenz. Die Fazilitätsbedingungen und die regulatorischen Angaben sind auf dieser Website veröffentlicht. Für das Lesen ist keine Zahlung erforderlich.",
+    "englishGoverns": "Diese Seite wird in der Sprache gezeigt, die Sie gewählt haben."
   },
   "login": {
     "title": "Kundenlogin",
@@ -912,7 +919,7 @@
     },
     "capitalAccess": {
       "title": "Capital Access Requests",
-      "subtitle": "Review enterprise borrowing and investment applications against sovereign pools.",
+      "subtitle": "Zuerst die Unterlagen prüfen, dann genehmigen. Eine Barsicherheit von 4 % gilt nur, wenn der Antragsteller nicht bereits verwahrt.",
       "empty": "No capital access requests submitted yet.",
       "review": "Mark Under Review",
       "reviewApplication": "Review Application",
@@ -925,7 +932,7 @@
       "pendingVerification": "pending verification",
       "documents": "Documents uploaded",
       "approveModalTitle": "Approve & Assign Escrow",
-      "approveModalDesc": "Enter the escrow account the partner must use for the security deposit of",
+      "approveModalDesc": "Geben Sie das Treuhandkonto ein, das der Partner für die Sicherheitsleistung von",
       "approveWithEscrow": "Approve & Send Escrow Details",
       "beneficiary": "Beneficiary",
       "assignedEscrow": "Assigned Escrow Account",
@@ -945,7 +952,7 @@
       "requestExtraDesc": "If the package is incomplete or unsatisfactory, ask the borrower to upload or replace files.",
       "extraNotesPlaceholder": "Describe what is missing or what must be corrected…",
       "requestExtra": "Request Extra Documents",
-      "approveWithEscrowTitle": "Approve & assign escrow (10% deposit)",
+      "approveWithEscrowTitle": "Genehmigen und das Konto für die Sicherheitsleistung zuweisen",
       "approveRequiresDocs": "All five required documents must be on file before you can approve.",
       "approveRequiresSubmit": "Borrower must click Submit Documents before you can approve.",
       "disburseBank": "Disbursement bank account",
@@ -968,7 +975,8 @@
       "sofMissing": "Borrower has not declared origin of the security deposit",
       "operatingCountry": "Operating country",
       "yearsOperating": "Years operating",
-      "enhancedDdHint": "Consider enhanced due diligence for this jurisdiction"
+      "enhancedDdHint": "Consider enhanced due diligence for this jurisdiction",
+      "approveMetalDesc": "Diese Fazilität ist durch verwahrtes Metall gesichert. Keine Barsicherheit und kein Treuhandkonto."
     },
     "settings": {
       "title": "Account Settings"
@@ -1029,46 +1037,49 @@
     "hero": {
       "badge": "Institutionelles Kapitalprogramm",
       "title": "Strukturiertes Kapital für qualifizierte Unternehmen",
-      "subtitle": "SBDV ist keine Bank. Eine Fazilität ist keine Einlage und bis zur Genehmigung keine Zusage.",
+      "subtitle": "SBDV ist keine Bank und besitzt keine FINMA-Banklizenz. Das Lesen dieser Bedingungen und die Antragstellung erfordern keine Zahlung. Eine Fazilität besteht erst nach schriftlicher Genehmigung.",
       "applyAccess": "Zugang beantragen",
       "partnerLogin": "Kontoanmeldung",
-      "eligibility": "Operative Gesellschaften mit mindestens zwei Jahren Geschichte, geprüften oder einer prüferischen Durchsicht unterzogenen Abschlüssen und einem Antrag ab USD 500,000. Die Genehmigung steht im Ermessen.",
-      "collateralRule": "SBDV zahlt auf ein Konto, das Sie benennen. Deshalb kommt die Barsicherheit zuerst. Häuser und andere lokale Vermögenswerte werden nicht angenommen. Die 10% werden erst nach der Genehmigung verlangt. Das Treuhandkonto wird gezeigt, bevor Sie zahlen. Es ist Ihr Bargeld, keine Gebühr, und es wird nicht verzinst. Nach der Bestätigung wird der volle genehmigte Betrag überwiesen. Bei vollständiger Rückzahlung wird der nicht verwendete Rest zurückerstattet. Bei einem Verzug kann er auf überfällige Beträge angerechnet werden. Die Antragstellung ist keine Zusage, Kredit zu gewähren."
+      "eligibility": "Operative Gesellschaften mit mindestens zwei Jahren Tätigkeit, geprüfter oder durchgesehener Rechnung und einem Antrag ab USD 500'000. Die Genehmigung steht im Ermessen.",
+      "collateralRule": "Für die Registrierung und den Antrag ist keine Zahlung geschuldet. Wenn Sie nicht bereits bei SBDV verwahren, wird eine Sicherheitsleistung von 4 % des genehmigten Betrags erst nach schriftlicher Genehmigung verlangt, und nur auf das Konto, das in der Fazilitätsvereinbarung genannt ist, bevor Sie überweisen. Es ist keine Gebühr. Wenn Sie bereits geeignetes Gold oder Silber bei SBDV verwahren, gibt es keine Barsicherheit: der Vorschuss beträgt bis zu 75 % dieses Goldes oder 70 % dieses Silbers, und das Metall bleibt bis zur Rückzahlung auf Ihren Namen. Ein Antrag ist keine Zusage, Kredit zu gewähren.",
+      "companyDoor": "Als Nicht-Tresorkunde registrieren",
+      "metalDoor": "Als Tresorkunde registrieren",
+      "readTerms": "Fazilitätsbedingungen lesen"
     },
     "features": {
       "title": "Warum Unternehmen Capital Access wählen",
       "subtitle": "Ein disziplinierter Zugang zwischen qualifizierten Gesellschaften und mandatsgerechtem Kapital — Klarheit zuerst.",
-      "globalPoolsTitle": "Mandatsgerechte Pools",
-      "globalPoolsDesc": "Teilweise offengelegte Pools souveräner Qualität, abgestimmt auf Branche und Region — keine Auktion in einer Black Box.",
+      "globalPoolsTitle": "Zwei Wege",
+      "globalPoolsDesc": "Eine Gesellschaftsfazilität mit einer Sicherheitsleistung von 4 %, oder ein Vorschuss gegen Metall, das Sie bereits bei SBDV verwahren. Ein Antragsteller nutzt einen Weg.",
       "flexibleTermsTitle": "Konditionen, auf die Sie sich einrichten können",
       "flexibleTermsDesc": "Legen Sie Betrag, Laufzeit und monatliche oder jährliche Zinsen über 1–10 Jahre fest, mit laufenden Berechnungen.",
       "enterpriseFocusTitle": "Für operative Gesellschaften gebaut",
       "enterpriseFocusDesc": "Für etablierte Unternehmen mit geprüften oder einer prüferischen Durchsicht unterzogenen Abschlüssen und einer klaren Investitionsthese.",
-      "structuredSecurityTitle": "Ein Vorgang ohne Überraschung",
-      "structuredSecurityDesc": "10% Barsicherheit, bevor Gelder gesendet werden. Häuser und andere lokale Vermögenswerte werden nicht angenommen. Vollständige KYC/UBO-Prüfung und Ermessensentscheidung nach schweizerischen Geldwäschereistandards."
+      "structuredSecurityTitle": "Die Sicherheit steht vorher fest",
+      "structuredSecurityDesc": "4 % in bar nur, wenn Sie nicht bei SBDV verwahren, und erst nach schriftlicher Genehmigung. Wenn Sie bereits verwahren, ist das Metall die Sicherheit und es wird keine Barsicherheit genommen."
     },
     "howItWorks": {
       "title": "How It Works",
       "registerTitle": "Register as a Capital Partner",
       "registerDesc": "Create your enterprise account and verify your company credentials.",
       "exploreTitle": "Explore Available Pools",
-      "exploreDesc": "Sehen Sie teilweise offengelegte souveräne Kapitalpools ein, die auf Ihre Branche und Ihre Region ausgerichtet sind.",
+      "exploreDesc": "Wählen Sie die Gesellschaftsfazilität oder die Metallfazilität und nennen Sie Betrag, Laufzeit und Rückzahlung.",
       "structureTitle": "Structure Your Request",
       "structureDesc": "Legen Sie Kreditbetrag, Laufzeit und Rückzahlungshäufigkeit fest und prüfen Sie die laufenden Zinsberechnungen.",
       "submitTitle": "Submit Company Profile",
-      "submitDesc": "Provide financials, investment areas, and accept the 10% security deposit condition.",
+      "submitDesc": "Nennen Sie das Land der Gründung und der Tätigkeit, die Zahlen, die zeichnungsberechtigte Person und den Weg der Sicherheit.",
       "decisionTitle": "Await Institutional Review",
       "decisionDesc": "Your application enters our review queue. You will receive approval or rejection notification.",
       "prepareTitle": "Stellen Sie Ihr Dossier zusammen",
       "prepareDesc": "Prüfen Sie die Eignung (Unternehmen, USD 500,000+, zwei Jahre Geschäftstätigkeit). Stellen Sie Auszüge aus dem lokalen Register, geprüfte Abschlüsse und Angaben zu den wirtschaftlich berechtigten Personen zusammen. Lokale Entsprechungen und beglaubigte Übersetzungen werden akzeptiert.",
       "reviewTitle": "Institutionelle Prüfung",
       "reviewDesc": "SBDV prüft die Unterlagen, die wirtschaftlich berechtigten Personen und die Ausrichtung auf das Mandat. Die Genehmigung steht im Ermessen und ist bis zu ihrer Erteilung keine Zusage.",
-      "depositTitle": "Sicherheitsleistung und Herkunft der Mittel",
-      "depositDesc": "Nach der KYC-Prüfung wird das Treuhandkonto gezeigt. Überweisen Sie 10% des genehmigten Betrags. Es ist Ihr Bargeld, als Sicherheit gehalten, keine Gebühr. SBDV sendet danach den vollen genehmigten Betrag auf das Konto, das Sie benennen.",
+      "depositTitle": "Sicherheit, erst nach der Genehmigung",
+      "depositDesc": "Wenn Sie nicht bei SBDV verwahren, wird das Konto für die Sicherheitsleistung von 4 % nach der Genehmigung und nach Annahme dieser Bedingungen gezeigt. Vorher wird keine Zahlung verlangt. Wenn Sie bereits verwahren, wird kein Bargeld verlangt.",
       "kycTitle": "Prüfung KYC und Sanktionen",
       "kycDesc": "Schweizerische Prüfung AML der Gesellschaft, der Zeichnungsberechtigten und der wirtschaftlich berechtigten Personen. Staaten mit erhöhtem Risiko unterliegen einer verstärkten Sorgfaltsprüfung.",
       "fundingTitle": "Auszahlung und Rückzahlung",
-      "fundingDesc": "Nennen Sie ein Bankkonto auf den Namen des Kreditnehmers (SWIFT sowie IBAN oder lokale Kontonummer). Der volle genehmigte Betrag wird in USD erst freigegeben, wenn die 10% Barsicherheit bestätigt ist. Die Rückzahlung erfolgt nach dem Plan in Ihrem Dashboard."
+      "fundingDesc": "Nennen Sie ein Bankkonto auf den Namen des Kreditnehmers. Gelder, wenn sie freigegeben werden, gehen in US-Dollar dorthin. Beim Metallweg bleibt das Metall bis zur Rückzahlung verpfändet."
     },
     "nav": {
       "overview": "Overview",
@@ -1082,14 +1093,14 @@
     },
     "overview": {
       "title": "Welcome to Capital Access",
-      "subtitle": "Explore sovereign capital pools and submit mandate-aligned investment requests for your enterprise.",
+      "subtitle": "Wählen Sie die Gesellschaftsfazilität oder die Metallfazilität und stellen Sie dann den Antrag.",
       "featuredPools": "Featured Capital Pools",
       "ctaTitle": "Ready to structure your request?",
       "ctaDesc": "Complete a guided application with live interest calculation and security deposit terms."
     },
     "steps": {
       "explore": "Explore Pools",
-      "exploreDesc": "Review partially disclosed sovereign capital available for enterprise deployment.",
+      "exploreDesc": "Wählen Sie die Gesellschaftsfazilität mit einer Sicherheitsleistung von 4 % nach der Genehmigung oder einen Vorschuss gegen Metall, das bereits bei SBDV verwahrt ist.",
       "apply": "Structure Request",
       "applyDesc": "Define amount, term, and repayment schedule with live APR calculation.",
       "review": "Institutional Review",
@@ -1097,13 +1108,13 @@
     },
     "pools": {
       "title": "Available Capital Pools",
-      "subtitle": "Institutional sovereign pools with limited disclosure. Full entity details available upon approved access."
+      "subtitle": "Fazilitäten werden vor der Genehmigung geprüft. Die vollständigen Bedingungen stehen, bevor Sie beantragen."
     },
     "conditions": {
       "title": "Access Conditions",
       "minimumOperatingYears": "Minimum 2 years of operating history",
       "auditedFinancials": "Audited or reviewed financial statements required",
-      "securityDeposit": "10% Barsicherheit nach der Genehmigung, bevor der genehmigte Betrag überwiesen wird",
+      "securityDeposit": "4 % Sicherheitsleistung nach der Genehmigung, wenn Sie noch nicht verwahren; keine Barsicherheit, wenn Sie bereits verwahren",
       "kycAml": "Full KYC/AML and beneficial ownership disclosure",
       "mandateAlignment": "Investment thesis must align with pool mandate",
       "minimumTicket": "Minimum request USD $500,000",
@@ -1119,7 +1130,7 @@
     "startRequest": "Start Capital Request",
     "register": {
       "title": "Für Capital Access registrieren",
-      "subtitle": "Create your enterprise partner account to explore sovereign capital pools.",
+      "subtitle": "Eröffnen Sie das Konto der Gesellschaft aus jedem zugelassenen Land.",
       "fullName": "Vollständiger Name",
       "phone": "Telefon (fakultativ)",
       "submit": "Capital-Access-Konto erstellen",
@@ -1129,7 +1140,11 @@
       "welcomeTitle": "Konto erfolgreich erstellt",
       "welcomeBody": "Ihr Konto für Capital Access ist bereit. Melden Sie sich mit der E-Mail und dem Passwort an, die Sie soeben erstellt haben.",
       "welcomeEmail": "E-Mail",
-      "goToLogin": "Zur Anmeldung"
+      "goToLogin": "Zur Anmeldung",
+      "whichDoor": "Verwahren Sie bereits Metall bei SBDV?",
+      "doorCompany": "Als Nicht-Tresorkunde registrieren",
+      "doorMetal": "Als Tresorkunde registrieren",
+      "doorLocked": "Diese Registrierung gilt für eine Fazilität."
     },
     "request": {
       "title": "Kapitalantrag",
@@ -1160,7 +1175,7 @@
       "financialsPlaceholder": "Summarize audited financials — revenue trend, EBITDA, debt/equity ratio, key assets…",
       "review": "Prüfen und einreichen",
       "selectedPool": "Gewählter Pool",
-      "termsAccept": "Ich akzeptiere, dass nach der Genehmigung 10% Barsicherheit auf das Treuhandkonto überwiesen werden, bevor der genehmigte Betrag gesendet wird. Es handelt sich nicht um eine Gebühr. Ich akzeptiere das Prüfungsverfahren und bestätige, dass alle Angaben richtig sind.",
+      "termsAccept": "Ich habe die Fazilitätsbedingungen gelesen. Ich verstehe, dass jetzt keine Zahlung geschuldet ist. Bei einer Gesellschaftsfazilität wird eine Sicherheitsleistung von 4 % erst nach schriftlicher Genehmigung verlangt. Bei einer Metallfazilität wird keine Barsicherheit genommen.",
       "back": "Zurück",
       "continue": "Weiter",
       "submit": "Antrag einreichen",
@@ -1168,7 +1183,7 @@
       "submittedTitle": "Antrag eingereicht",
       "submittedDesc": "Your capital access request is now under institutional review. A confirmation email has been sent to your registered address.",
       "viewApplications": "Meine Anträge",
-      "termsAcceptBefore": "Ich akzeptiere, dass nach der Genehmigung 10% Barsicherheit auf das Treuhandkonto überwiesen werden, bevor der genehmigte Betrag gesendet wird. Es handelt sich nicht um eine Gebühr. Ich akzeptiere die",
+      "termsAcceptBefore": "Ich habe die Fazilitätsbedingungen gelesen. Jetzt ist keine Zahlung geschuldet. Ich akzeptiere die",
       "termsAcceptAfter": ", das institutionelle Prüfverfahren, und bestätige, dass alle Angaben richtig sind.",
       "operatingCountry": "Principal operating country",
       "yearsOperating": "Years of operation",
@@ -1191,7 +1206,13 @@
       "capitalControls": "I confirm that the laws of our home country allow this company to take foreign USD capital, including any central-bank or capital-control rules that apply to us.",
       "sanctionsAttest": "I confirm that the company, its signatories, and its beneficial owners are not sanctioned persons and are not located, organised, or resident in a comprehensively sanctioned jurisdiction.",
       "sanctionedCountry": "SBDV cannot onboard applicants in comprehensively sanctioned jurisdictions.",
-      "attestationsRequired": "Please complete all attestations before submitting."
+      "attestationsRequired": "Please complete all attestations before submitting.",
+      "trackLabel": "Welche Sicherheit gilt",
+      "trackCash": "Nicht-Tresorkunde",
+      "trackCashDesc": "Sie verwahren nicht bei SBDV. Eine Sicherheitsleistung von 4 % wird erst nach schriftlicher Genehmigung verlangt. Jetzt ist keine Zahlung geschuldet.",
+      "trackMetal": "Tresorkunde",
+      "trackMetalDesc": "Sie verwahren bereits geeignetes Gold oder Silber bei SBDV. Keine Barsicherheit. Der Vorschuss beträgt bis zu 75 % dieses Goldes oder 70 % dieses Silbers.",
+      "trackMetalShort": "Keine Barsicherheit. Das Metall ist verpfändet."
     },
     "applications": {
       "title": "Meine Anträge",
@@ -1207,13 +1228,13 @@
     },
     "onboarding": {
       "title": "Fazilitätsübersicht",
-      "subtitle": "Complete onboarding to activate your approved capital facility.",
+      "subtitle": "Schliessen Sie die Unterlagen und die Aufnahme ab, um die Kapitalfazilität zu aktivieren.",
       "noFacility": "No Active Facility",
       "noFacilityDesc": "Once your capital access application is approved, your facility dashboard will appear here.",
       "progress": "Onboarding",
       "rm": "Betreuer",
       "escrowTitle": "Sicherheitsleistung — Treuhandanweisung",
-      "escrowDesc": "SBDV zahlt auf ein Konto, das Sie benennen. Deshalb kommt dieses Bargeld zuerst. Häuser und andere lokale Vermögenswerte werden nicht angenommen. Überweisen Sie genau 10% des genehmigten Betrags auf das unten gezeigte Treuhandkonto. Es ist Ihr Bargeld, keine Gebühr, und es wird nicht verzinst. Nach der Bestätigung durch SBDV wird der volle genehmigte Betrag gesendet. Verwenden Sie die Zahlungsreferenz genau wie angegeben.",
+      "escrowDesc": "Dieses Konto wird erst nach schriftlicher Genehmigung gezeigt. Überweisen Sie den angezeigten Betrag der Sicherheitsleistung. Es ist keine Gebühr. Überweisen Sie nichts, bevor diese Anweisung erscheint.",
       "escrowPending": "Escrow payment details are being prepared by our capital desk. They will appear here as soon as your application is fully approved.",
       "bank": "Bank",
       "bankAddress": "Bank Address",
@@ -1235,7 +1256,7 @@
       "documentsTitle": "Erforderliche Unterlagen",
       "documentsDesc": "Upload all four documents within 14 business days of deposit confirmation.",
       "upload": "Hochladen",
-      "docsCompleteNote": "All documents uploaded. Our team will review and advance your onboarding.",
+      "docsCompleteNote": "Alle Unterlagen sind hochgeladen. Unser Team prüft sie. In diesem Schritt ist keine Zahlung geschuldet.",
       "disbursementPending": "Auszahlung läuft",
       "disbursementDesc": "Your facility has cleared compliance. Capital release is being processed.",
       "disbursedOn": "Ausgezahlt am",
@@ -1305,14 +1326,15 @@
       "uboEmpty": "Add at least one beneficial owner before submitting documents.",
       "uboSaved": "Beneficial owner saved.",
       "sofTitle": "Origin of the security deposit",
-      "sofDesc": "Declare how the 10% cash collateral will be funded. The remitting account must be in the borrower’s name.",
+      "sofDesc": "Erklären Sie, wie eine allfällige Barsicherheit finanziert wird. Das überweisende Konto muss auf den Namen des Kreditnehmers lauten. Eine Metallfazilität hat keine Barsicherheit.",
       "sofSource": "Source of funds",
       "sofOperating": "Company operating cash",
       "sofShareholder": "Shareholder loan",
       "sofAssetSale": "Sale of assets",
       "sofOther": "Other",
       "sofDetail": "Explanation",
-      "sofRequired": "Origin of funds is required before you submit the deposit."
+      "sofRequired": "Origin of funds is required before you submit the deposit.",
+      "kycReviewNote": "Die KYC-Prüfung läuft. Jetzt ist keine Zahlung geschuldet."
     },
     "status": {
       "pending": "In Prüfung",
@@ -1349,15 +1371,15 @@
     "facilityTerms": {
       "eyebrow": "Programm Capital Access",
       "pageTitle": "Bedingungen der Fazilität",
-      "intro": "Diese Bedingungen regeln Ihre Kapitalfazilität, einschliesslich der Sicherheitsleistung von 10%, der Zinsen, der Rückzahlung, des Verzugs und des schweizerischen anwendbaren Rechts. Lesen Sie sie vollständig, bevor Sie annehmen.",
+      "intro": "Diese Bedingungen regeln Ihre Kapitalfazilität, einschliesslich der Sicherheitsleistung von 4 % oder der Verpfändung des verwahrten Metalls, der Zinsen, der Rückzahlung, des Verzugs und des schweizerischen Rechts. Lesen Sie sie vollständig, bevor Sie annehmen. Für das Lesen ist keine Zahlung geschuldet.",
       "versionLabel": "Dokument",
       "effectiveLabel": "In Kraft",
       "languageLabel": "Massgebliche Sprache",
-      "governingNote": "Englisch ist die massgebliche Sprache dieses Dokuments. Eine Übersetzung dient nur der Orientierung.",
+      "governingNote": "Diese Bedingungen werden in der Sprache gezeigt, die Sie gewählt haben.",
       "contents": "Inhalt",
       "acceptBefore": "Ich habe gelesen und akzeptiere die",
       "linkLabel": "Bedingungen der Fazilität",
-      "acceptAfter": ", einschliesslich der Sicherheitsleistung von 10 %, der Zinsen, der Rückzahlung, des Verzugs und des anwendbaren Rechts, und bestätige, dass ich den Kreditnehmer binden darf.",
+      "acceptAfter": ", einschliesslich der Sicherheitsleistung oder der Metallverpfändung, der Zinsen, der Rückzahlung, des Verzugs und des anwendbaren Rechts, und ich bestätige, dass ich den Kreditnehmer verpflichten darf.",
       "acceptedNote": "Fazilitätsbedingungen angenommen",
       "print": "Drucken oder speichern",
       "backFacility": "Zur Fazilitätsübersicht"
@@ -1386,8 +1408,43 @@
     "settings": {
       "title": "Account Settings"
     },
-    "yearlyInterestNote": "Die jährlichen Zinsen werden nur auf den genehmigten Betrag berechnet, nicht auf die Barsicherheit.",
-    "amountDisbursed": "Ausgezahlter Betrag"
+    "yearlyInterestNote": "Die jährlichen Zinsen werden nur auf den genehmigten Betrag berechnet, nicht auf eine Barsicherheit.",
+    "amountDisbursed": "Ausgezahlter Betrag",
+    "doors": {
+      "readTerms": "Fazilitätsbedingungen lesen",
+      "register": "Für diese Fazilität registrieren",
+      "noPayment": "Für das Lesen dieser Seite und für den Antrag ist keine Zahlung geschuldet.",
+      "company": {
+        "title": "Nicht-Tresorkunde",
+        "whoTitle": "Für wen",
+        "who": "Eine operative Gesellschaft, die kein Metall bei SBDV verwahrt. Mindestens zwei Jahre Tätigkeit, geprüfte oder durchgesehene Rechnung und ein Antrag ab USD 500'000. Dies ist kein Privatkredit.",
+        "securityTitle": "Die Sicherheit",
+        "security": "Nach schriftlicher Genehmigung und erst nach Annahme dieser Bedingungen zahlt die Gesellschaft 4 % des genehmigten Betrags in US-Dollar. Es ist keine Gebühr. Das Konto wird in der Fazilitätsvereinbarung genannt, bevor überwiesen wird. Lehnt SBDV vor der Auszahlung ab, ausser bei Vertragsbruch oder einer gescheiterten Prüfung wegen der Angaben des Antragstellers, wird der Betrag vollständig zurückerstattet.",
+        "stepsTitle": "Die fünf Schritte",
+        "steps": [
+          "Die Gesellschaft, ihre Eigentümer und die Unterlagen einreichen.",
+          "SBDV prüft die Unterlagen. Die Genehmigung steht im Ermessen.",
+          "Die schriftliche Genehmigung ist noch kein Zahlungsversprechen.",
+          "Die Fazilitätsbedingungen annehmen. Erst dann wird die Sicherheitsleistung von 4 % verlangt.",
+          "Ein Bankkonto auf den Namen der Gesellschaft nennen. Gelder, wenn sie freigegeben werden, gehen dorthin."
+        ]
+      },
+      "metal": {
+        "title": "Tresorkunde",
+        "whoTitle": "Für wen",
+        "who": "Ein Kunde, der bereits geeignetes Gold oder Silber bei SBDV verwahrt, über eine operative Gesellschaft mit mindestens zwei Jahren Tätigkeit, geprüfter oder durchgesehener Rechnung und einem Antrag ab USD 500'000.",
+        "securityTitle": "Die Sicherheit",
+        "security": "Keine Barsicherheit. Der Vorschuss beträgt bis zu 75 % des geeigneten Goldes und 70 % des geeigneten Silbers, das bereits im Tresor liegt. Das Metall bleibt auf den Namen des Kunden alloziert und ist bis zur Rückzahlung verpfändet. Ein Preisrückgang kann mehr Metall oder eine Teilrückzahlung verlangen. Wird kein Vorschuss gewährt, wird das Metall nicht verpfändet.",
+        "stepsTitle": "Die fünf Schritte",
+        "steps": [
+          "Geeignetes Gold oder Silber ist bereits bei SBDV verwahrt.",
+          "Die Gesellschaft, ihre Eigentümer und die Unterlagen einreichen.",
+          "SBDV prüft die Unterlagen. Die schriftliche Genehmigung ist noch kein Zahlungsversprechen.",
+          "Das Metall wird verpfändet. Es wird keine Barsicherheit verlangt.",
+          "Ein Bankkonto auf den Namen der Gesellschaft nennen. Das Metall bleibt bis zur Rückzahlung verpfändet."
+        ]
+      }
+    }
   },
   "chat": {
     "open": "Concierge öffnen",

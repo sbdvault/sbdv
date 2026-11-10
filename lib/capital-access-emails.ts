@@ -101,7 +101,7 @@ export async function sendCapitalAccessSubmissionEmails(params: {
         <tr><td style="padding: 8px 0; color: #666;">Requested Amount</td><td style="padding: 8px 0;">${formatUsd(params.requestedAmountUsd)}</td></tr>
         <tr><td style="padding: 8px 0; color: #666;">Term</td><td style="padding: 8px 0;">${params.termYears} year(s)</td></tr>
         <tr><td style="padding: 8px 0; color: #666;">Interest Rate</td><td style="padding: 8px 0;">${params.interestRatePct}% APR</td></tr>
-        <tr><td style="padding: 8px 0; color: #666;">Security Deposit</td><td style="padding: 8px 0;">${formatUsd(params.securityDepositUsd)} (10%)</td></tr>
+        <tr><td style="padding: 8px 0; color: #666;">Security Deposit</td><td style="padding: 8px 0;">${params.securityDepositUsd > 0 ? `${formatUsd(params.securityDepositUsd)} (4%)` : "None. Vaulted metal is the security."}</td></tr>
         <tr><td style="padding: 8px 0; color: #666;">Repayment</td><td style="padding: 8px 0;">${params.repaymentFrequency === "MONTHLY" ? "Monthly" : "Yearly"}</td></tr>
       </table>
       <p><strong>What happens next:</strong></p>
@@ -180,14 +180,14 @@ export async function sendCapitalAccessDecisionEmail(params: {
         <p><strong>Next steps:</strong></p>
         <ol style="padding-left: 20px;">
           <li><strong>KYC:</strong> Our compliance team reviews the company and its beneficial owners. No payment is due during this review.</li>
-          <li><strong>Security deposit:</strong> After KYC, transfer ${formatUsd(params.securityDepositUsd)} (10%) to the escrow account shown in your facility dashboard. It is your cash, not a fee.</li>
+          <li><strong>Security deposit:</strong> ${params.securityDepositUsd > 0 ? `After KYC, transfer ${formatUsd(params.securityDepositUsd)} (4%) to the account shown in your facility dashboard. It is not a fee. The account is identified before you transfer.` : "No cash security deposit. Eligible metal already vaulted with SBDV is pledged until repayment."}</li>
           <li><strong>Disbursement:</strong> After the deposit is confirmed and your bank details are accepted, the full approved amount is sent to the account you present.</li>
           <li><strong>Contact:</strong> A dedicated relationship manager will reach out within 2 business days.</li>
         </ol>
         <p><a href="${siteUrl}/en/capital-access/portal/applications" style="display: inline-block; padding: 12px 24px; background: #D4AF37; color: #1a1a1a; text-decoration: none; font-weight: bold;">View Application</a></p>
         `
       ),
-      text: `Your capital access application (Ref ${ref}) has been approved. Next: KYC review. The 10% cash collateral is requested after that review.`,
+      text: `Your capital access application (Ref ${ref}) has been approved. Next: KYC review. ${params.securityDepositUsd > 0 ? "The 4% security deposit is requested after that review." : "No cash security deposit. Vaulted metal is the security."}`,
     });
     return;
   }

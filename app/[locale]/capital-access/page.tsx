@@ -16,7 +16,7 @@ export async function generateMetadata({
   return {
     title: pageTitle(locale, "capitalAccess.facilityTerms.eyebrow"),
     description:
-      "Qualified enterprises worldwide may apply for institutional capital. Structured USD facilities with Swiss KYC, a 10% security deposit, and mandate-aligned investment.",
+      "Structured USD facilities. A 4% security deposit applies only if the company does not already vault with SBDV, and only after written approval. SBDV is not a bank.",
   };
 }
 

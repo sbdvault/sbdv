@@ -23,14 +23,15 @@
   "hero": {
     "headline": "Segurança Suíça. Crescimento Disciplinado.",
     "subtext": "Os clientes privados utilizam custódia suíça ou um mandato patrimonial. As empresas qualificadas podem requerer uma facilidade de capital estruturada. A SBDV não é um banco.",
-    "exploreCapital": "Empresas",
-    "privateClients": "Acesso Clientes Privados",
+    "exploreCapital": "Capital para empresas",
+    "privateClients": "Custódia em cofre",
     "requestAccess": "Pedir acesso",
     "clientLogin": "Login do Cliente",
-    "investorRelations": "Relações com investidores"
+    "investorRelations": "Relações com investidores",
+    "wealthMandate": "Mandato patrimonial"
   },
   "footer": {
-    "copyright": "Swiss Bullion Depository Vault — Precisão suíça. Confiança global.",
+    "copyright": "Swiss Bullion Depository Vault AG — Precisão suíça. Confiança global.",
     "headquarters": "Sede",
     "globalOffices": "Escritórios Globais",
     "legal": "Jurídico",
@@ -69,7 +70,12 @@
       }
     },
     "jurisdictionNote": "Base jurídica suíça. Acessibilidade multi-jurisdicional para clientes globais.",
-    "facilityTerms": "Condições da facilidade"
+    "facilityTerms": "Condições da facilidade",
+    "legalName": "Swiss Bullion Depository Vault AG",
+    "uid": "UID CHE-218.964.179",
+    "registerNumber": "Registo comercial CH-291.7.217.861-9",
+    "board": "Peter B. Guggi, presidente. Lucas Gardner, diretor.",
+    "notABank": "A SBDV não é um banco, não detém uma licença bancária da FINMA e não está autorizada a receber depósitos nem a conceder crédito."
   },
   "about": {
     "title": "Sobre",
@@ -116,7 +122,7 @@
       "privateText": "Adesão a Cofre e segurança para a custódia de bullion, e um mandato distinto de Património e Investimento para clientes que financiam principal e acompanham o rendimento indicado.",
       "capitalLabel": "Empresas",
       "capitalTitle": "Capital Access",
-      "capitalText": "Facilidades estruturadas para sociedades qualificadas — documentação, 10% de colateral em numerário, análise suíça de AML e um plano de reembolso confirmado. A aprovação é discricionária."
+      "capitalText": "Duas vias. Uma sociedade que não custodia na SBDV pode pedir uma facilidade com um depósito de garantia de 4%, pedido só depois de aprovação escrita. Um cliente que já custodia pode obter um adiantamento sobre esse metal, sem depósito em numerário. A aprovação é discricionária."
     },
     "serveTitle": "A quem servimos",
     "serve": {
@@ -509,11 +515,12 @@
     }
   },
   "cta": {
-    "title": "Dois caminhos. Um padrão suíço.",
-    "subtitle": "Custody privada para património que deve permanecer discreto — ou capital estruturado para empresas prontas a crescer com clareza.",
+    "title": "Três vias. Um padrão suíço.",
+    "subtitle": "Custódia em cofre, um mandato patrimonial ou uma facilidade de capital para uma empresa qualificada. Cada pedido é examinado por si.",
     "button": "Agendar consulta privada",
-    "capitalButton": "Explorar Capital Access",
-    "privateButton": "Acesso Clientes Privados"
+    "capitalButton": "Capital para empresas",
+    "privateButton": "Custódia em cofre",
+    "wealthButton": "Mandato patrimonial"
   },
   "home": {
     "swissStandardTitle": "O padrão suíço",
@@ -567,7 +574,7 @@
       }
     },
     "capitalTeaserTitle": "Capital que faz empresas crescerem",
-    "capitalTeaserDescription": "O Capital Access Program liga empresas qualificadas a pools alinhados ao mandato — termos transparentes, supervisão suíça e um caminho guiado do pedido à facility.",
+    "capitalTeaserDescription": "Uma sociedade que não custodia pode pedir uma facilidade em USD. Um depósito de garantia de 4% só é pedido depois de aprovação escrita. Um cliente que já custodia metal elegível não entrega essa quantia.",
     "capitalTeaserButton": "Explorar Capital Access",
     "capitalTeaserPoints": {
       "structure": "Estrutura clara",
@@ -575,7 +582,7 @@
       "oversight": "Supervisão suíça",
       "oversightDesc": "KYC documentado, look-through UBO e revisão discricionária.",
       "portal": "Portal de parceiros",
-      "portalDesc": "Acompanhe pedidos, depósitos e reembolsos num só lugar."
+      "portalDesc": "Acompanhe pedidos, garantia e reembolso num só lugar."
     }
   },
   "common": {
@@ -599,12 +606,12 @@
     "termsIntro": "Estas condições regem a sua utilização do sítio web da SBDV, dos portais de clientes e dos canais públicos de pedido. A SBDV tem sede em Zurique. O direito suíço rege estas condições do sítio web.",
     "termsBody": "Estas condições do sítio web aplicam-se à utilização do sítio web da SBDV, ao início de sessão na conta e aos canais públicos de pedido. Não criam um contrato de custódia em cofre, um mandato patrimonial nem uma facilidade de capital. A custódia em cofre e os mandatos patrimoniais são prestados apenas ao abrigo do contrato separado emitido para essa relação. As facilidades Capital Access são regidas pelas Condições da facilidade, não por estas condições do sítio web.\n\nA SBDV tem sede em Zurique, Suíça. Estas condições do sítio web são regidas pelo direito material da Suíça, com exclusão das normas de conflitos de leis que aplicariam outro direito. Os tribunais de Zurique são competentes para os litígios decorrentes da utilização do sítio web. Isso não limita a competência estabelecida num contrato de facilidade ou de mandato.\n\nAo criar uma conta ou utilizar um portal, aceita a verificação suíça de conhecimento do cliente e de prevenção do branqueamento de capitais. Deve manter confidenciais a sua palavra-passe e qualquer código de início de sessão. Se considerar que a sua conta foi utilizada sem a sua autorização, informe a SBDV de imediato através da página Contacto.\n\nEmpresas de todo o mundo podem requerer o Capital Access. A apresentação de um pedido não é um compromisso de concessão de crédito, não é um empréstimo a consumidor e não é uma oferta pública de valores mobiliários. A SBDV pode aprovar, recusar ou diferir um pedido ao seu critério. A SBDV pode modificar o sítio web público mediante aviso nesta página. Uma facilidade já aceite permanece regida pelas Condições da facilidade que aceitou, não por uma alteração posterior desta página.",
     "regulatoryTitle": "Divulgações regulamentares",
-    "regulatoryIntro": "A SBDV é uma instituição com sede em Zurique de custódia em cofre e de organização de capital, ao serviço de clientes em todo o mundo. Não é um banco suíço.",
-    "regulatoryBody": "A SBDV presta custódia de bullion em cofre e organiza facilidades de capital estruturadas para empresas qualificadas. Capital Access não é um depósito bancário protegido e não está abrangido por sistemas de garantia de depósitos. Os fundos detidos como depósito de garantia são colateral em numerário contratual, não um depósito em seu nome num banco.\n\nOs mandatos patrimoniais de clientes privados são programas de investimento, não contas bancárias. Um rendimento de mandato indicado não é juro garantido, pode ser suspenso ou revisto e não está abrangido pela garantia de depósitos. Bitcoin só pode ser utilizado como via de financiamento ou de pagamento; a SBDV não opera uma plataforma de troca de criptoativos nem detém as chaves privadas dos clientes. As transferências em Bitcoin são irreversíveis.\n\nTodos os clientes são sujeitos a verificação de conhecimento do cliente, de beneficiário efetivo e de prevenção do branqueamento de capitais, em conformidade com a Lei suíça de combate ao branqueamento de capitais (AMLA). Os beneficiários efetivos últimos são identificados até à pessoa singular. A verificação aplica-se independentemente do país de constituição do cliente.\n\nOs serviços de investimento e de gestão de carteiras podem exigir licenciamento adequado ou ser prestados através de parceiros regulados. A SBDV não afirma dispor de uma licença bancária da FINMA. A aprovação de qualquer facilidade ou mandato é discricionária.\n\nPessoas e entidades de jurisdições sujeitas a sanções abrangentes não podem ser admitidas. As jurisdições de risco elevado podem ficar sujeitas a diligência reforçada, em vez de recusa automática.\n\nAdvertências de risco: os investimentos envolvem risco, incluindo a possível perda do principal. Os resultados passados não são indicativos de resultados futuros. Este sítio web não constitui aconselhamento jurídico, fiscal ou de investimento.",
-    "investorRelationsTitle": "Relações com investidores",
-    "investorRelationsIntro": "Governação, transparância e comunicações institucionais.",
-    "investorRelationsBody": "A SBDV mantém o compromisso de transparência perante os seus clientes e partes interessadas. Os relatórios anuais, as políticas de governação e as divulgações institucionais serão publicados aqui à medida que estejam disponíveis. Para pedidos institucionais, contacte a nossa equipa de relações com investidores através da página de contacto.",
-    "englishGoverns": "O inglês é a língua prevalecente desta página. A tradução destina-se à leitura. O texto inglês é o texto que se aplica."
+    "regulatoryIntro": "Swiss Bullion Depository Vault AG, UID CHE-218.964.179, tem sede na Bahnhofstrasse 45, 8001 Zurique. Não é um banco suíço, não detém uma licença bancária da FINMA e não está autorizada a receber depósitos nem a conceder crédito.",
+    "regulatoryBody": "A Swiss Bullion Depository Vault AG custodia metais preciosos em cofre e organiza facilidades de capital estruturadas para empresas qualificadas. O Capital Access não é um depósito bancário protegido e não está coberto por sistemas de garantia de depósitos. Uma sociedade que ainda não custodia na SBDV pode ser convidada, só depois de aprovação escrita, a entregar um depósito de garantia de 4% do montante aprovado. Esse dinheiro é uma garantia contratual, não um depósito em nome do mutuário num banco e não uma comissão. Um cliente que já custodia ouro ou prata elegível não entrega essa quantia. O adiantamento limita-se a 75% do ouro elegível e a 70% da prata elegível, e o metal permanece atribuído em nome do cliente até ao reembolso. A conta de qualquer transferência é indicada no contrato de facilidade antes de qualquer transferência. Não é devido qualquer pagamento para ler as condições ou para apresentar o pedido.\n\nOs mandatos patrimoniais de clientes privados são programas de investimento, não contas bancárias. Um rendimento de mandato indicado não é um juro garantido, pode ser suspenso ou revisto e não está coberto pela garantia de depósitos. A bitcoin só pode servir como via de entrada ou de pagamento. A SBDV não explora uma bolsa de criptoativos nem guarda as chaves privadas dos clientes. As transferências em bitcoin são irrevogáveis.\n\nTodos os clientes passam por identificação, beneficiário efetivo e prevenção do branqueamento nos termos da lei suíça contra o branqueamento (LBA). Os beneficiários efetivos são identificados até às pessoas singulares. O controlo aplica-se independentemente do país de constituição.\n\nOs serviços de investimento e de gestão de carteiras podem exigir uma autorização ou ser prestados por parceiros regulados. A SBDV não reivindica uma licença bancária da FINMA. A aprovação de uma facilidade ou de um mandato é discricionária.\n\nPessoas e entidades de jurisdições integralmente sancionadas não podem ser admitidas. Jurisdições de maior risco podem ficar sujeitas a diligência reforçada.\n\nAviso: um investimento comporta o risco de perda do capital. Os resultados passados não indicam os futuros. Este sítio não é aconselhamento jurídico, fiscal ou de investimento.",
+    "investorRelationsTitle": "A sociedade",
+    "investorRelationsIntro": "A identidade jurídica da Swiss Bullion Depository Vault AG.",
+    "investorRelationsBody": "Swiss Bullion Depository Vault AG\nUID CHE-218.964.179\nRegisto comercial CH-291.7.217.861-9\nBahnhofstrasse 45, 8001 Zurique, Suíça\n\nPeter B. Guggi, presidente\nLucas Gardner, diretor\n\nA SBDV não é um banco e não detém uma licença bancária da FINMA. As condições da facilidade e a informação regulatória estão publicadas neste sítio. Não é devido qualquer pagamento para as ler.",
+    "englishGoverns": "Esta página é mostrada na língua que escolheu."
   },
   "login": {
     "title": "Acesso de cliente",
@@ -912,7 +919,7 @@
     },
     "capitalAccess": {
       "title": "Capital Access Requests",
-      "subtitle": "Review enterprise borrowing and investment applications against sovereign pools.",
+      "subtitle": "Analise primeiro os documentos e aprove depois. Um depósito em numerário de 4% aplica-se só se o requerente ainda não custodiar.",
       "empty": "No capital access requests submitted yet.",
       "review": "Mark Under Review",
       "reviewApplication": "Review Application",
@@ -925,7 +932,7 @@
       "pendingVerification": "pending verification",
       "documents": "Documents uploaded",
       "approveModalTitle": "Approve & Assign Escrow",
-      "approveModalDesc": "Enter the escrow account the partner must use for the security deposit of",
+      "approveModalDesc": "Indique a conta de garantia que o parceiro deve usar para o depósito de garantia de",
       "approveWithEscrow": "Approve & Send Escrow Details",
       "beneficiary": "Beneficiary",
       "assignedEscrow": "Assigned Escrow Account",
@@ -945,7 +952,7 @@
       "requestExtraDesc": "If the package is incomplete or unsatisfactory, ask the borrower to upload or replace files.",
       "extraNotesPlaceholder": "Describe what is missing or what must be corrected…",
       "requestExtra": "Request Extra Documents",
-      "approveWithEscrowTitle": "Approve & assign escrow (10% deposit)",
+      "approveWithEscrowTitle": "Aprovar e indicar a conta do depósito de garantia",
       "approveRequiresDocs": "All five required documents must be on file before you can approve.",
       "approveRequiresSubmit": "Borrower must click Submit Documents before you can approve.",
       "disburseBank": "Disbursement bank account",
@@ -968,7 +975,8 @@
       "sofMissing": "Borrower has not declared origin of the security deposit",
       "operatingCountry": "Operating country",
       "yearsOperating": "Years operating",
-      "enhancedDdHint": "Consider enhanced due diligence for this jurisdiction"
+      "enhancedDdHint": "Consider enhanced due diligence for this jurisdiction",
+      "approveMetalDesc": "Esta facilidade é garantida pelo metal custodiado. Não há depósito em numerário nem conta de garantia."
     },
     "settings": {
       "title": "Account Settings"
@@ -1029,46 +1037,49 @@
     "hero": {
       "badge": "Programa de capital institucional",
       "title": "Capital estruturado para empresas qualificadas",
-      "subtitle": "A SBDV não é um banco. Uma facilidade não é um depósito nem um compromisso até ser aprovada.",
+      "subtitle": "A SBDV não é um banco e não detém uma licença bancária da FINMA. Ler estas condições e apresentar o pedido não exige qualquer pagamento. Uma facilidade só existe depois de aprovação escrita.",
       "applyAccess": "Requerer acesso",
       "partnerLogin": "Acesso à conta",
-      "eligibility": "Sociedades operacionais com pelo menos dois anos de historial, contas auditadas ou revistas, e um pedido a partir de USD 500,000. A aprovação é discricionária.",
-      "collateralRule": "A SBDV paga para uma conta que a empresa indica, por isso a garantia em dinheiro vem primeiro. Imóveis e outros ativos locais não são aceites. Os 10% só são pedidos após a aprovação. A conta de depósito é mostrada antes do pagamento. É dinheiro da empresa, não uma comissão, e não vence juros. Depois de confirmado, o montante aprovado é enviado na totalidade. Se reembolsar por inteiro, o saldo não utilizado é devolvido. Em caso de incumprimento, pode ser aplicado ao que estiver em atraso. Apresentar o pedido não é um compromisso de emprestar."
+      "eligibility": "Sociedades em atividade há pelo menos dois anos, contas auditadas ou revistas e um pedido a partir de USD 500.000. A aprovação é discricionária.",
+      "collateralRule": "Não é devido qualquer pagamento para se registar ou para pedir. Se ainda não custodia na SBDV, um depósito de garantia de 4% do montante aprovado só é pedido depois de aprovação escrita, e só para a conta indicada no contrato de facilidade antes da transferência. Não é uma comissão. Se já custodia ouro ou prata elegível na SBDV, não há depósito em numerário: o adiantamento vai até 75% desse ouro ou 70% dessa prata, e o metal permanece em seu nome até ao reembolso. Um pedido não é um compromisso de emprestar.",
+      "companyDoor": "Registar-se como cliente sem cofre",
+      "metalDoor": "Registar-se como cliente do cofre",
+      "readTerms": "Ler as condições da facilidade"
     },
     "features": {
       "title": "Porque é que as empresas escolhem o Capital Access",
       "subtitle": "Uma via disciplinada entre sociedades qualificadas e capital alinhado com o mandato — a clareza em primeiro lugar.",
-      "globalPoolsTitle": "Fundos alinhados com o mandato",
-      "globalPoolsDesc": "Fundos de grau soberano parcialmente divulgados, ajustados a setor e região — não um leilão opaco.",
+      "globalPoolsTitle": "Duas vias",
+      "globalPoolsDesc": "Uma facilidade de sociedade com um depósito de garantia de 4%, ou um adiantamento sobre o metal que já custodia na SBDV. Um requerente usa uma só via.",
       "flexibleTermsTitle": "Condições com que pode planear",
       "flexibleTermsDesc": "Defina montante, prazo e juros mensais ou anuais ao longo de 1–10 anos, com cálculos em tempo real.",
       "enterpriseFocusTitle": "Concebido para sociedades operacionais",
       "enterpriseFocusDesc": "Para empresas estabelecidas com demonstrações financeiras auditadas ou revistas e uma tese de investimento clara.",
-      "structuredSecurityTitle": "Processo sem surpresa",
-      "structuredSecurityDesc": "Garantia em dinheiro de 10% antes de quaisquer fundos serem enviados. Imóveis e outros ativos locais não são aceites. Verificação KYC/UBO completa e aprovação discricionária segundo as normas suíças de combate ao branqueamento."
+      "structuredSecurityTitle": "A garantia é dita de antemão",
+      "structuredSecurityDesc": "4% em numerário só se não custodiar na SBDV, e só depois de aprovação escrita. Se já custodia, o metal é a garantia e não se toma depósito em numerário."
     },
     "howItWorks": {
       "title": "How It Works",
       "registerTitle": "Register as a Capital Partner",
       "registerDesc": "Create your enterprise account and verify your company credentials.",
       "exploreTitle": "Explore Available Pools",
-      "exploreDesc": "Consulte fundos de capital soberano parcialmente divulgados, alinhados com o seu setor e a sua região.",
+      "exploreDesc": "Escolha a facilidade de sociedade ou a facilidade sobre metal e indique montante, prazo e reembolso.",
       "structureTitle": "Structure Your Request",
       "structureDesc": "Defina o montante do empréstimo, o prazo e a frequência de reembolso, e reveja os cálculos de juros em tempo real.",
       "submitTitle": "Submit Company Profile",
-      "submitDesc": "Provide financials, investment areas, and accept the 10% security deposit condition.",
+      "submitDesc": "Indique os países de constituição e de atividade, as contas, o signatário autorizado e a via da garantia.",
       "decisionTitle": "Await Institutional Review",
       "decisionDesc": "Your application enters our review queue. You will receive approval or rejection notification.",
       "prepareTitle": "Prepare o seu processo",
       "prepareDesc": "Confirme a elegibilidade (empresa, USD 500,000+, dois anos de atividade). Reúna certidões do registo local, contas auditadas e dados do beneficiário efetivo. Aceitam-se equivalentes locais e traduções certificadas.",
       "reviewTitle": "Análise institucional",
       "reviewDesc": "A SBDV analisa os documentos, os beneficiários efetivos e o alinhamento com o mandato. A aprovação é discricionária e não constitui um compromisso até ser emitida.",
-      "depositTitle": "Depósito de garantia e origem dos fundos",
-      "depositDesc": "Após a revisão KYC, a conta de depósito é mostrada. Transfira 10% do montante aprovado. É dinheiro da empresa, retido como garantia, não uma comissão. A SBDV envia depois o montante aprovado na totalidade para a conta que indicar.",
+      "depositTitle": "Garantia, só depois da aprovação",
+      "depositDesc": "Se não custodia na SBDV, a conta do depósito de garantia de 4% é mostrada depois da aprovação e da aceitação destas condições. Antes não é pedido qualquer pagamento. Se já custodia, não é pedido numerário.",
       "kycTitle": "Verificação de KYC e de sanções",
       "kycDesc": "Verificação suíça de AML da sociedade, dos signatários e dos beneficiários efetivos últimos. As jurisdições de risco elevado recebem diligência reforçada.",
       "fundingTitle": "Desembolso e reembolso",
-      "fundingDesc": "Indique uma conta bancária em nome do mutuário (SWIFT mais IBAN ou número de conta local). O montante aprovado só é libertado em USD depois de confirmada a garantia em dinheiro de 10%. Reembolse segundo o plano no seu painel."
+      "fundingDesc": "Indique uma conta bancária em nome do mutuário. Os fundos, se forem libertados, são enviados para lá em dólares dos EUA. Na via do metal, o metal permanece em penhor até ao reembolso."
     },
     "nav": {
       "overview": "Overview",
@@ -1082,14 +1093,14 @@
     },
     "overview": {
       "title": "Welcome to Capital Access",
-      "subtitle": "Explore sovereign capital pools and submit mandate-aligned investment requests for your enterprise.",
+      "subtitle": "Escolha a facilidade de sociedade ou a facilidade sobre metal e apresente depois o pedido.",
       "featuredPools": "Featured Capital Pools",
       "ctaTitle": "Ready to structure your request?",
       "ctaDesc": "Complete a guided application with live interest calculation and security deposit terms."
     },
     "steps": {
       "explore": "Explore Pools",
-      "exploreDesc": "Review partially disclosed sovereign capital available for enterprise deployment.",
+      "exploreDesc": "Escolha a facilidade de sociedade, com um depósito de garantia de 4% depois da aprovação, ou um adiantamento sobre metal já custodiado na SBDV.",
       "apply": "Structure Request",
       "applyDesc": "Define amount, term, and repayment schedule with live APR calculation.",
       "review": "Institutional Review",
@@ -1097,13 +1108,13 @@
     },
     "pools": {
       "title": "Available Capital Pools",
-      "subtitle": "Institutional sovereign pools with limited disclosure. Full entity details available upon approved access."
+      "subtitle": "As facilidades são examinadas antes da aprovação. As condições completas estão publicadas antes do pedido."
     },
     "conditions": {
       "title": "Access Conditions",
       "minimumOperatingYears": "Minimum 2 years of operating history",
       "auditedFinancials": "Audited or reviewed financial statements required",
-      "securityDeposit": "Garantia em dinheiro de 10% após a aprovação, antes de o montante aprovado ser enviado",
+      "securityDeposit": "Depósito de garantia de 4% depois da aprovação se ainda não custodia; nenhum depósito em numerário se já custodia",
       "kycAml": "Full KYC/AML and beneficial ownership disclosure",
       "mandateAlignment": "Investment thesis must align with pool mandate",
       "minimumTicket": "Minimum request USD $500,000",
@@ -1119,7 +1130,7 @@
     "startRequest": "Start Capital Request",
     "register": {
       "title": "Registar-se no Capital Access",
-      "subtitle": "Create your enterprise partner account to explore sovereign capital pools.",
+      "subtitle": "Crie a conta da sociedade a partir de qualquer país admitido.",
       "fullName": "Nome completo",
       "phone": "Telefone (opcional)",
       "submit": "Criar conta Capital Access",
@@ -1129,7 +1140,11 @@
       "welcomeTitle": "Conta criada com sucesso",
       "welcomeBody": "A sua conta Capital Access está pronta. Entre com o e-mail e a palavra-passe que acabou de criar.",
       "welcomeEmail": "E-mail",
-      "goToLogin": "Ir para o acesso"
+      "goToLogin": "Ir para o acesso",
+      "whichDoor": "Já custodia metal na SBDV?",
+      "doorCompany": "Registar-se como cliente sem cofre",
+      "doorMetal": "Registar-se como cliente do cofre",
+      "doorLocked": "Este registo é para uma só facilidade."
     },
     "request": {
       "title": "Pedido de capital",
@@ -1160,7 +1175,7 @@
       "financialsPlaceholder": "Summarize audited financials — revenue trend, EBITDA, debt/equity ratio, key assets…",
       "review": "Review & Submit",
       "selectedPool": "Selected Pool",
-      "termsAccept": "Aceito que, após a aprovação, uma garantia em dinheiro de 10% seja transferida para a conta de depósito antes de o montante aprovado ser enviado. Não é uma comissão. Aceito o processo de análise institucional e confirmo que as informações prestadas são exatas.",
+      "termsAccept": "Li as condições da facilidade. Compreendo que agora não é devido qualquer pagamento. Numa facilidade de sociedade, um depósito de garantia de 4% só é pedido depois de aprovação escrita. Numa facilidade sobre metal não se toma depósito em numerário.",
       "back": "Voltar",
       "continue": "Continuar",
       "submit": "Submit Application",
@@ -1168,7 +1183,7 @@
       "submittedTitle": "Application Submitted",
       "submittedDesc": "Your capital access request is now under institutional review. A confirmation email has been sent to your registered address.",
       "viewApplications": "View My Applications",
-      "termsAcceptBefore": "Aceito que, após a aprovação, uma garantia em dinheiro de 10% seja transferida para a conta de depósito antes de o montante aprovado ser enviado. Não é uma comissão. Aceito os",
+      "termsAcceptBefore": "Li as condições da facilidade. Agora não é devido qualquer pagamento. Aceito as",
       "termsAcceptAfter": ", the institutional review process, and I confirm that all information provided is accurate.",
       "operatingCountry": "Principal operating country",
       "yearsOperating": "Years of operation",
@@ -1191,7 +1206,13 @@
       "capitalControls": "I confirm that the laws of our home country allow this company to take foreign USD capital, including any central-bank or capital-control rules that apply to us.",
       "sanctionsAttest": "I confirm that the company, its signatories, and its beneficial owners are not sanctioned persons and are not located, organised, or resident in a comprehensively sanctioned jurisdiction.",
       "sanctionedCountry": "SBDV cannot onboard applicants in comprehensively sanctioned jurisdictions.",
-      "attestationsRequired": "Please complete all attestations before submitting."
+      "attestationsRequired": "Please complete all attestations before submitting.",
+      "trackLabel": "Que garantia se aplica",
+      "trackCash": "Cliente sem cofre",
+      "trackCashDesc": "Não custodia na SBDV. Um depósito de garantia de 4% só é pedido depois de aprovação escrita. Agora não é devido qualquer pagamento.",
+      "trackMetal": "Cliente do cofre",
+      "trackMetalDesc": "Já custodia ouro ou prata elegível na SBDV. Nenhum depósito em numerário. O adiantamento vai até 75% desse ouro ou 70% dessa prata.",
+      "trackMetalShort": "Nenhum depósito em numerário. O metal está em penhor."
     },
     "applications": {
       "title": "My Applications",
@@ -1207,13 +1228,13 @@
     },
     "onboarding": {
       "title": "Painel da facilidade",
-      "subtitle": "Complete onboarding to activate your approved capital facility.",
+      "subtitle": "Complete os documentos e a admissão para ativar a facilidade de capital.",
       "noFacility": "No Active Facility",
       "noFacilityDesc": "Once your capital access application is approved, your facility dashboard will appear here.",
       "progress": "Onboarding Progress",
       "rm": "Relationship Manager",
       "escrowTitle": "Security Deposit — Escrow Instructions",
-      "escrowDesc": "A SBDV paga para uma conta que a empresa indica, por isso este dinheiro vem primeiro. Imóveis e outros ativos locais não são aceites. Transfira exatamente 10% do montante aprovado para a conta de depósito abaixo. É dinheiro da empresa, não uma comissão, e não vence juros. Depois de a SBDV confirmar, o montante aprovado é enviado na totalidade. Utilize a referência da transferência exatamente como indicada.",
+      "escrowDesc": "Esta conta só é mostrada depois de aprovação escrita. Transfira o montante do depósito de garantia indicado. Não é uma comissão. Não transfira qualquer quantia antes de aparecer esta instrução.",
       "escrowPending": "Escrow payment details are being prepared by our capital desk. They will appear here as soon as your application is fully approved.",
       "bank": "Bank",
       "bankAddress": "Bank Address",
@@ -1235,7 +1256,7 @@
       "documentsTitle": "Required Documentation",
       "documentsDesc": "Upload all four documents within 14 business days of deposit confirmation.",
       "upload": "Upload",
-      "docsCompleteNote": "All documents uploaded. Our team will review and advance your onboarding.",
+      "docsCompleteNote": "Todos os documentos foram carregados. A nossa equipa examina-os. Nesta fase não é devido qualquer pagamento.",
       "disbursementPending": "Disbursement in Progress",
       "disbursementDesc": "Your facility has cleared compliance. Capital release is being processed.",
       "disbursedOn": "Disbursed on",
@@ -1305,14 +1326,15 @@
       "uboEmpty": "Add at least one beneficial owner before submitting documents.",
       "uboSaved": "Beneficial owner saved.",
       "sofTitle": "Origin of the security deposit",
-      "sofDesc": "Declare how the 10% cash collateral will be funded. The remitting account must be in the borrower’s name.",
+      "sofDesc": "Declare como será financiado um eventual depósito em numerário. A conta ordenante deve estar em nome do mutuário. Uma facilidade sobre metal não tem depósito em numerário.",
       "sofSource": "Source of funds",
       "sofOperating": "Company operating cash",
       "sofShareholder": "Shareholder loan",
       "sofAssetSale": "Sale of assets",
       "sofOther": "Other",
       "sofDetail": "Explanation",
-      "sofRequired": "Origin of funds is required before you submit the deposit."
+      "sofRequired": "Origin of funds is required before you submit the deposit.",
+      "kycReviewNote": "A revisão KYC está em curso. Agora não é devido qualquer pagamento."
     },
     "status": {
       "pending": "Pending Review",
@@ -1349,15 +1371,15 @@
     "facilityTerms": {
       "eyebrow": "Programa Capital Access",
       "pageTitle": "Condições da facilidade",
-      "intro": "Estas condições regem a sua facilidade de capital, incluindo o depósito de garantia de 10%, os juros, o reembolso, o incumprimento e a lei suíça aplicável. Leia-as na íntegra antes de aceitar.",
+      "intro": "Estas condições regem a sua facilidade de capital, incluindo o depósito de garantia de 4% ou o penhor do metal custodiado, os juros, o reembolso, o incumprimento e o direito suíço. Leia-as na íntegra antes de aceitar. Não é devido qualquer pagamento para as ler.",
       "versionLabel": "Documento",
       "effectiveLabel": "Em vigor",
       "languageLabel": "Língua prevalecente",
-      "governingNote": "O inglês é a língua prevalecente deste instrumento. Uma tradução, se for fornecida, serve apenas de conveniência.",
+      "governingNote": "Estas condições são mostradas na língua que escolheu.",
       "contents": "Conteúdo",
       "acceptBefore": "Li e aceito as",
       "linkLabel": "Condições da facilidade",
-      "acceptAfter": ", incluindo o depósito de garantia de 10%, os juros, o reembolso, o incumprimento e as disposições sobre a lei aplicável, e confirmo que estou autorizado a vincular o mutuário.",
+      "acceptAfter": ", incluindo o depósito de garantia ou o penhor do metal, os juros, o reembolso, o incumprimento e o direito aplicável, e confirmo que estou autorizado a vincular o mutuário.",
       "acceptedNote": "Condições da facilidade aceites",
       "print": "Imprimir ou guardar",
       "backFacility": "Voltar ao painel da facilidade"
@@ -1386,8 +1408,43 @@
     "settings": {
       "title": "Account Settings"
     },
-    "yearlyInterestNote": "Os juros anuais incidem apenas sobre o montante aprovado, não sobre a garantia em dinheiro.",
-    "amountDisbursed": "Montante desembolsado"
+    "yearlyInterestNote": "Os juros anuais são calculados só sobre o montante aprovado, não sobre um depósito em numerário.",
+    "amountDisbursed": "Montante desembolsado",
+    "doors": {
+      "readTerms": "Ler as condições da facilidade",
+      "register": "Registar-se para esta facilidade",
+      "noPayment": "Não é devido qualquer pagamento para ler esta página ou para apresentar o pedido.",
+      "company": {
+        "title": "Cliente sem cofre",
+        "whoTitle": "A quem se destina",
+        "who": "Uma sociedade em atividade que não custodia metal na SBDV. Pelo menos dois anos de atividade, contas auditadas ou revistas e um pedido a partir de USD 500.000. Não é um empréstimo pessoal.",
+        "securityTitle": "A garantia",
+        "security": "Depois da aprovação escrita, e só depois de aceitar estas condições, a sociedade paga 4% do montante aprovado em dólares dos EUA. Não é uma comissão. A conta é indicada no contrato de facilidade antes de qualquer transferência. Se a SBDV recusar antes do desembolso, salvo incumprimento ou uma verificação de conformidade falhada por causa da informação do requerente, a quantia é devolvida na íntegra.",
+        "stepsTitle": "Os cinco passos",
+        "steps": [
+          "Apresentar a sociedade, os seus titulares e os documentos.",
+          "A SBDV examina o processo. A aprovação é discricionária.",
+          "A aprovação escrita ainda não é uma promessa de pagamento.",
+          "Aceitar as condições da facilidade. Só então é pedido o depósito de garantia de 4%.",
+          "Indicar uma conta bancária em nome da sociedade. Os fundos, se forem libertados, são enviados para lá."
+        ]
+      },
+      "metal": {
+        "title": "Cliente do cofre",
+        "whoTitle": "A quem se destina",
+        "who": "Um cliente que já custodia ouro ou prata elegível na SBDV, através de uma sociedade em atividade há pelo menos dois anos, com contas auditadas ou revistas e um pedido a partir de USD 500.000.",
+        "securityTitle": "A garantia",
+        "security": "Nenhum depósito em numerário. O adiantamento vai até 75% do ouro elegível e 70% da prata elegível já no cofre. O metal permanece atribuído em nome do cliente e fica em penhor até ao reembolso. Uma queda de preço pode exigir mais metal ou um reembolso parcial. Se não for concedido qualquer adiantamento, o metal não é dado em penhor.",
+        "stepsTitle": "Os cinco passos",
+        "steps": [
+          "Ouro ou prata elegível já está custodiado na SBDV.",
+          "Apresentar a sociedade, os seus titulares e os documentos.",
+          "A SBDV examina o processo. A aprovação escrita ainda não é uma promessa de pagamento.",
+          "O metal é dado em penhor. Não é pedido qualquer depósito em numerário.",
+          "Indicar uma conta bancária em nome da sociedade. O metal permanece em penhor até ao reembolso."
+        ]
+      }
+    }
   },
   "chat": {
     "open": "Perguntar à SBDV",

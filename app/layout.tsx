@@ -74,8 +74,9 @@ export default function RootLayout({
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Swiss Bullion Depository Vault",
+    name: "Swiss Bullion Depository Vault AG",
     alternateName: "SBDV",
+    identifier: "CHE-218.964.179",
     url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.sbdvault.com",
     logo: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.sbdvault.com"}/logo.png`,
     description:

@@ -23,14 +23,20 @@
   "hero": {
     "headline": "Swiss Security. Disciplined Growth.",
     "subtext": "Private clients use Swiss custody or a wealth mandate. Qualified enterprises may apply for a structured capital facility. SBDV is not a bank.",
-    "exploreCapital": "Enterprises",
-    "privateClients": "Private clients",
+    "exploreCapital": "Capital for enterprises",
+    "privateClients": "Vault custody",
+    "wealthMandate": "Wealth mandate",
     "requestAccess": "Request Access",
     "clientLogin": "Client Login",
     "investorRelations": "Investor Relations"
   },
   "footer": {
-    "copyright": "Swiss Bullion Depository Vault — Swiss Precision. Global Trust.",
+    "copyright": "Swiss Bullion Depository Vault AG — Swiss Precision. Global Trust.",
+    "legalName": "Swiss Bullion Depository Vault AG",
+    "uid": "UID CHE-218.964.179",
+    "registerNumber": "Commercial register CH-291.7.217.861-9",
+    "board": "Peter B. Guggi, chairman. Lucas Gardner, director.",
+    "notABank": "SBDV is not a bank, does not hold a FINMA banking licence, and is not licensed to take deposits or to lend.",
     "headquarters": "Headquarters",
     "globalOffices": "Global Offices",
     "legal": "Legal",
@@ -76,7 +82,7 @@
     "eyebrow": "Zurich · Swiss institution",
     "heroTitle": "The Firm",
     "heroSubtitle": "One house, two practices: private wealth custody for discerning clients, and structured capital for qualified enterprises.",
-    "identityName": "Swiss Bullion Depository Vault",
+    "identityName": "Swiss Bullion Depository Vault AG",
     "identityNameLabel": "Name",
     "identitySeatLabel": "Seat",
     "whoTitle": "Who we are",
@@ -116,7 +122,7 @@
       "privateText": "Vault & Security membership for bullion custody, and a separate Wealth & Investment mandate for clients who fund principal and watch stated yield.",
       "capitalLabel": "Enterprises",
       "capitalTitle": "Capital Access",
-      "capitalText": "Structured facilities for qualified companies — documentation, 10% cash collateral, Swiss AML review, and a confirmed repayment plan. Approval is discretionary."
+      "capitalText": "Two doors. A company that does not vault with SBDV may apply for a facility with a 4% security deposit, requested only after written approval. A client who already vaults may borrow against that metal, with no cash deposit. Approval is discretionary."
     },
     "serveTitle": "Who we serve",
     "serve": {
@@ -509,15 +515,16 @@
     }
   },
   "cta": {
-    "title": "Two paths. One Swiss standard.",
-    "subtitle": "Private custody for wealth that must remain quiet — or structured capital for enterprises ready to grow with clarity.",
+    "title": "Three paths. One Swiss standard.",
+    "subtitle": "Vault custody, a wealth mandate, or a capital facility for a qualified enterprise. Each request is reviewed on its own terms.",
     "button": "Book a Private Consultation",
-    "capitalButton": "Explore Capital Access",
-    "privateButton": "Private Client Access"
+    "capitalButton": "Capital for enterprises",
+    "wealthButton": "Wealth mandate",
+    "privateButton": "Vault custody"
   },
   "home": {
     "capitalTeaserTitle": "Capital that lets enterprises grow",
-    "capitalTeaserDescription": "The Capital Access Program connects qualified companies to mandate-aligned pools — transparent terms, Swiss oversight, and a guided path from application to facility.",
+    "capitalTeaserDescription": "A company that does not vault may apply for a USD facility. A 4% security deposit is requested only after written approval. A client who already vaults eligible metal is not asked for that cash.",
     "capitalTeaserButton": "Explore Capital Access",
     "capitalTeaserPoints": {
       "structure": "Clear structure",
@@ -525,7 +532,7 @@
       "oversight": "Swiss oversight",
       "oversightDesc": "Documented KYC, UBO look-through, and discretionary review.",
       "portal": "Partner portal",
-      "portalDesc": "Track applications, deposits, and repayment in one place."
+      "portalDesc": "Track applications, security, and repayment in one place."
     },
     "swissStandardTitle": "The Swiss Standard",
     "swissStandard": {
@@ -598,13 +605,13 @@
     "termsTitle": "Terms of Service",
     "termsIntro": "These terms govern your use of the SBDV website, client portals, and public application channels. SBDV is seated in Zurich. Swiss law governs these website terms.",
     "termsBody": "These website terms apply to use of the SBDV website, account sign-in, and public application channels. They do not create a vault custody agreement, a wealth mandate, or a capital facility. Vault custody and wealth mandates are provided only under the separate agreement issued for that relationship. Capital Access facilities are governed by the Facility Terms and Conditions, not by these website terms.\n\nSBDV is seated in Zurich, Switzerland. These website terms are governed by the substantive laws of Switzerland, excluding conflict-of-law rules that would apply another law. The courts of Zurich have jurisdiction over disputes arising from use of the website. That does not limit any jurisdiction stated in a facility or mandate agreement.\n\nBy creating an account or using a portal you agree to Swiss know-your-customer and anti-money-laundering screening. You must keep your password and any sign-in code confidential. If you believe your account has been used without your authority, tell SBDV promptly through the Contact page.\n\nEnterprises worldwide may apply for Capital Access. Submitting an application is not a commitment to lend, is not a retail consumer loan, and is not a public securities offering. SBDV may approve, decline, or defer an application in its discretion. SBDV may modify the public website by notice on this page. A facility already accepted remains governed by the Facility Terms you accepted, not by a later change to this page.",
-    "englishGoverns": "English is the governing language of this page. The translation is for reading. The English text is the text that applies.",
+    "englishGoverns": "This page is shown in the language you selected.",
     "regulatoryTitle": "Regulatory Disclosures",
-    "regulatoryIntro": "SBDV is a Zurich-seated vault and capital-arranging institution serving clients worldwide. It is not a Swiss bank.",
-    "regulatoryBody": "SBDV provides bullion vault custody and arranges structured capital facilities for qualified enterprises. Capital Access is not a protected bank deposit and is not covered by deposit-insurance schemes. Funds held as a security deposit are contractual cash collateral, not a deposit in your name at a bank.\n\nPrivate-client wealth mandates are investment programmes, not bank accounts. A stated mandate yield is not guaranteed interest, may be paused or revised, and is not covered by deposit insurance. Bitcoin may be used only as a funding or payout rail; SBDV does not operate a crypto exchange or hold client private keys. Transfers in Bitcoin are irreversible.\n\nAll clients undergo know-your-customer, beneficial-ownership, and anti-money-laundering screening consistent with the Swiss Anti-Money Laundering Act (AMLA). Ultimate beneficial owners are identified to natural persons. Screening applies regardless of the client’s country of incorporation.\n\nInvestment and portfolio management services may require appropriate licensing or be provided through regulated partners. SBDV does not claim a FINMA banking licence. Approval of any facility or mandate is discretionary.\n\nPersons and entities in comprehensively sanctioned jurisdictions cannot be onboarded. High-risk jurisdictions may be subject to enhanced due diligence rather than automatic refusal.\n\nRisk disclosures: investments involve risk including possible loss of principal. Past performance is not indicative of future results. This website is not legal, tax, or investment advice.",
-    "investorRelationsTitle": "Investor Relations",
-    "investorRelationsIntro": "Governance, transparency, and institutional communications.",
-    "investorRelationsBody": "SBDV is committed to transparency with our clients and stakeholders. Annual reports, governance policies, and institutional disclosures will be published here as they become available. For institutional inquiries, please contact our investor relations team through the contact page."
+    "regulatoryIntro": "Swiss Bullion Depository Vault AG, UID CHE-218.964.179, is seated at Bahnhofstrasse 45, 8001 Zurich. It is not a Swiss bank, does not hold a FINMA banking licence, and is not licensed to take deposits or to lend.",
+    "regulatoryBody": "Swiss Bullion Depository Vault AG provides bullion vault custody and arranges structured capital facilities for qualified enterprises. Capital Access is not a protected bank deposit and is not covered by deposit-insurance schemes. A company that does not already vault with SBDV may be asked, only after written approval, for a security deposit of 4% of the approved amount. That cash is contractual collateral, not a deposit in the borrower's name at a bank, and not a fee. A client who already vaults eligible gold or silver is not asked for that cash. The advance is limited to 75% of eligible gold and 70% of eligible silver, and the metal stays allocated in the client's name until repayment. The account for any cash transfer is identified in the facility agreement before any transfer. No payment is due to read the terms or to apply.\n\nPrivate-client wealth mandates are investment programmes, not bank accounts. A stated mandate yield is not guaranteed interest, may be paused or revised, and is not covered by deposit insurance. Bitcoin may be used only as a funding or payout rail; SBDV does not operate a crypto exchange or hold client private keys. Transfers in Bitcoin are irreversible.\n\nAll clients undergo know-your-customer, beneficial-ownership, and anti-money-laundering screening consistent with the Swiss Anti-Money Laundering Act (AMLA). Ultimate beneficial owners are identified to natural persons. Screening applies regardless of the client’s country of incorporation.\n\nInvestment and portfolio management services may require appropriate licensing or be provided through regulated partners. SBDV does not claim a FINMA banking licence. Approval of any facility or mandate is discretionary.\n\nPersons and entities in comprehensively sanctioned jurisdictions cannot be onboarded. High-risk jurisdictions may be subject to enhanced due diligence rather than automatic refusal.\n\nRisk disclosures: investments involve risk including possible loss of principal. Past performance is not indicative of future results. This website is not legal, tax, or investment advice.",
+    "investorRelationsTitle": "The firm",
+    "investorRelationsIntro": "The legal identity of Swiss Bullion Depository Vault AG.",
+    "investorRelationsBody": "Swiss Bullion Depository Vault AG\nUID CHE-218.964.179\nCommercial register CH-291.7.217.861-9\nBahnhofstrasse 45, 8001 Zurich, Switzerland\n\nPeter B. Guggi, chairman\nLucas Gardner, director\n\nSBDV is not a bank and does not hold a FINMA banking licence. The Facility Terms and the regulatory disclosures are published on this website. No payment is required to read them."
   },
   "login": {
     "title": "Client Login",
@@ -1015,7 +1022,8 @@
     },
     "capitalAccess": {
       "title": "Capital Access Requests",
-      "subtitle": "Review documentation first, then approve with escrow for the 10% security deposit.",
+      "subtitle": "Review documentation first, then approve. A cash security deposit of 4% applies only when the applicant does not already vault.",
+      "approveWithEscrowTitle": "Approve and assign the account for the security deposit",
       "empty": "No capital access requests submitted yet.",
       "review": "Mark Under Review",
       "reviewApplication": "Review Documents",
@@ -1052,11 +1060,12 @@
       "requestExtraDesc": "If the package is incomplete or unsatisfactory, ask the borrower to upload or replace files.",
       "extraNotesPlaceholder": "Describe what is missing or what must be corrected…",
       "requestExtra": "Request Extra Documents",
-      "approveWithEscrowTitle": "Approve & assign escrow (10% deposit)",
+      "approveWithEscrowTitle": "Approve and assign the account for the security deposit",
       "approveRequiresDocs": "The required document pack and at least one beneficial owner must be on file before you can approve.",
       "approveRequiresSubmit": "Borrower must click Submit Documents before you can approve.",
       "approveModalTitle": "Approve & Assign Escrow",
       "approveModalDesc": "Enter the escrow account the partner must use for the security deposit of",
+      "approveMetalDesc": "This facility is secured on vaulted metal. No cash security deposit and no escrow account.",
       "approveWithEscrow": "Approve & Send Escrow Details",
       "beneficiary": "Beneficiary",
       "assignedEscrow": "Assigned Escrow Account",
@@ -1081,23 +1090,61 @@
     "hero": {
       "badge": "Institutional Capital Program",
       "title": "Structured capital for qualified enterprises",
-      "subtitle": "SBDV is not a bank. A facility is not a deposit and not a commitment until it is approved.",
+      "subtitle": "SBDV is not a bank and does not hold a FINMA banking licence. Reading these terms and applying require no payment. A facility exists only after written approval.",
       "applyAccess": "Apply for Access",
+      "companyDoor": "Register as a non-vault client",
+      "metalDoor": "Register as a vault client",
+      "readTerms": "Read the Facility Terms",
       "partnerLogin": "Account Login",
       "eligibility": "Operating companies with at least two years of history, audited or reviewed accounts, and a request from USD 500,000. Approval is discretionary.",
-      "collateralRule": "SBDV pays an account you present, so cash collateral comes first. Houses and other local assets are not accepted. The 10% is requested only after approval. The escrow account is shown before you pay. It is your cash, not a fee, and it does not earn interest. After it is confirmed, the full approved amount is sent. If you repay in full, the unused balance is returned. If you default, it can be applied to what is overdue. Applying is not a commitment to lend."
+      "collateralRule": "No payment is due to register or to apply. If you do not already vault with SBDV, a security deposit of 4% of the approved amount is requested only after written approval, and only to the account named in the facility agreement before you transfer. It is not a fee. If you already vault eligible gold or silver with SBDV, there is no cash deposit: the advance is up to 75% of that gold or 70% of that silver, and the metal stays in your name until repayment. Applying is not a commitment to lend."
+    },
+    "doors": {
+      "readTerms": "Read the Facility Terms",
+      "register": "Register for this facility",
+      "noPayment": "No payment is due to read this page or to apply.",
+      "company": {
+        "title": "Non-vault client",
+        "whoTitle": "Who it is for",
+        "who": "An operating company that does not vault metal with SBDV. At least two years of history, audited or reviewed accounts, and a request from USD 500,000. This is not a personal loan.",
+        "securityTitle": "The security",
+        "security": "After written approval, and only after these terms are accepted, the company pays 4% of the approved amount in US dollars. It is not a fee. The account is named in the facility agreement before any transfer. If SBDV declines before disbursement, other than for breach or a failed compliance check, it is returned in full.",
+        "stepsTitle": "The five steps",
+        "steps": [
+          "File the company, its owners, and the documents.",
+          "SBDV reviews the file. Approval is discretionary.",
+          "Written approval is not yet a promise to pay.",
+          "Accept the Facility Terms. Only then is the 4% security deposit requested.",
+          "Submit a bank account in the company’s name. Funds, if released, are sent there."
+        ]
+      },
+      "metal": {
+        "title": "Vault client",
+        "whoTitle": "Who it is for",
+        "who": "A client who already vaults eligible gold or silver with SBDV, through an operating company with at least two years of history, audited or reviewed accounts, and a request from USD 500,000.",
+        "securityTitle": "The security",
+        "security": "No cash deposit. The advance is up to 75% of eligible gold and 70% of eligible silver already in the vault. The metal stays allocated in the client’s name and is pledged until repayment. A fall in price can require more metal or a partial repayment. If no advance is made, the metal is not pledged.",
+        "stepsTitle": "The five steps",
+        "steps": [
+          "Eligible gold or silver is already vaulted with SBDV.",
+          "File the company, its owners, and the documents.",
+          "SBDV reviews the file. Written approval is not yet a promise to pay.",
+          "The metal is pledged. No cash deposit is requested.",
+          "Submit a bank account in the company’s name. The metal stays pledged until repayment."
+        ]
+      }
     },
     "features": {
       "title": "Why enterprises choose Capital Access",
       "subtitle": "A disciplined gateway between qualified companies and mandate-aligned capital — clarity first.",
-      "globalPoolsTitle": "Mandate-aligned pools",
-      "globalPoolsDesc": "Partially disclosed sovereign-grade pools matched to sector and region — not a black-box auction.",
+      "globalPoolsTitle": "Two doors",
+      "globalPoolsDesc": "A company facility with a 4% security deposit, or an advance against metal you already vault with SBDV. One applicant uses one door.",
       "flexibleTermsTitle": "Terms you can plan around",
-      "flexibleTermsDesc": "Define amount, term, and monthly or annual interest over 1–10 years with live calculations.",
+      "flexibleTermsDesc": "Define amount, term, and monthly or annual interest over 1–10 years with live calculations. The Facility Terms can be read before you register.",
       "enterpriseFocusTitle": "Built for operating companies",
-      "enterpriseFocusDesc": "For established enterprises with audited or reviewed financials and a clear investment thesis.",
-      "structuredSecurityTitle": "Process without surprise",
-      "structuredSecurityDesc": "10% cash collateral before any funds are sent. Houses and other local assets are not accepted. Full KYC/UBO look-through, and discretionary approval under Swiss AML standards."
+      "enterpriseFocusDesc": "For established enterprises with audited or reviewed financials and a clear use of funds.",
+      "structuredSecurityTitle": "Security stated in advance",
+      "structuredSecurityDesc": "4% cash only if you do not vault with SBDV, and only after written approval. If you already vault, the metal is the security and no cash deposit is taken."
     },
     "howItWorks": {
       "title": "How it works",
@@ -1106,19 +1153,19 @@
       "registerTitle": "Register and apply",
       "registerDesc": "Create your enterprise account from anywhere in the world, choose a capital pool, and structure amount, term, and repayment.",
       "exploreTitle": "Explore available pools",
-      "exploreDesc": "Browse partially disclosed sovereign capital pools aligned with your sector and region.",
+      "exploreDesc": "Choose the company facility or the metal facility, then state amount, term, and repayment.",
       "structureTitle": "Structure your request",
       "structureDesc": "Define loan amount, term, repayment frequency, and review live interest calculations.",
       "submitTitle": "Submit company and UBO profile",
-      "submitDesc": "Provide incorporation and operating countries, financials, authorised signatory, and accept the 10% security deposit condition.",
+      "submitDesc": "Provide incorporation and operating countries, financials, the authorised signatory, and confirm which security track applies.",
       "reviewTitle": "Institutional review",
-      "reviewDesc": "SBDV reviews documents, beneficial owners, and mandate alignment. Approval is discretionary and is not a commitment until issued.",
-      "depositTitle": "Security deposit and origin of funds",
-      "depositDesc": "After KYC review, the escrow account is shown. Wire 10% of the approved amount. It is your cash, held as security, not a fee. SBDV then sends the full approved amount to the account you present.",
+      "reviewDesc": "SBDV reviews documents, beneficial owners, and the use of funds. Approval is discretionary and is not a commitment until issued.",
+      "depositTitle": "Security, only after approval",
+      "depositDesc": "If you do not vault with SBDV, the account for the 4% security deposit is shown after approval and after these terms are accepted. No payment is asked for before that. If you already vault, no cash is requested.",
       "kycTitle": "KYC and sanctions screening",
       "kycDesc": "Swiss AML screening of the company, signatories, and ultimate beneficial owners. High-risk jurisdictions receive enhanced due diligence.",
       "fundingTitle": "Disbursement and repayment",
-      "fundingDesc": "Submit a bank account in the borrower’s name (SWIFT plus IBAN or local account number). The full approved amount is released in USD only after the 10% cash collateral is confirmed. Repay on the schedule in your dashboard."
+      "fundingDesc": "Submit a bank account in the borrower’s name. Funds, if released, are sent there in US dollars. On the metal track, the metal stays pledged until repayment."
     },
     "whoCanApply": {
       "title": "Who can apply",
@@ -1156,14 +1203,14 @@
     },
     "overview": {
       "title": "Welcome to Capital Access",
-      "subtitle": "Explore sovereign capital pools and submit mandate-aligned investment requests for your enterprise.",
+      "subtitle": "Choose the company facility or the metal facility, then submit the request.",
       "featuredPools": "Featured Capital Pools",
       "ctaTitle": "Ready to structure your request?",
       "ctaDesc": "Complete a guided application with live interest calculation and security deposit terms."
     },
     "steps": {
       "explore": "Explore Pools",
-      "exploreDesc": "Review partially disclosed sovereign capital available for enterprise deployment.",
+      "exploreDesc": "Choose the company facility, with a 4% security deposit after approval, or an advance against metal already vaulted with SBDV.",
       "apply": "Structure Request",
       "applyDesc": "Define amount, term, and repayment schedule with live APR calculation.",
       "review": "Institutional Review",
@@ -1171,13 +1218,13 @@
     },
     "pools": {
       "title": "Available Capital Pools",
-      "subtitle": "Institutional sovereign pools with limited disclosure. Full entity details available upon approved access."
+      "subtitle": "Facilities are reviewed before approval. Full terms are published before you apply."
     },
     "conditions": {
       "title": "Access Conditions",
       "minimumOperatingYears": "Minimum 2 years of operating history",
       "auditedFinancials": "Audited or reviewed financial statements required",
-      "securityDeposit": "10% cash collateral after approval, before the approved amount is sent",
+      "securityDeposit": "4% security deposit after approval if you do not already vault; no cash deposit if you do",
       "kycAml": "Full KYC/AML and beneficial ownership disclosure (worldwide applicants)",
       "mandateAlignment": "Investment thesis must align with pool mandate",
       "minimumTicket": "Minimum request USD $500,000",
@@ -1200,6 +1247,10 @@
     "startRequest": "Start Capital Request",
     "register": {
       "title": "Register for Capital Access",
+      "whichDoor": "Do you already vault metal with SBDV?",
+      "doorCompany": "Register as a non-vault client",
+      "doorMetal": "Register as a vault client",
+      "doorLocked": "This registration is for one facility only.",
       "subtitle": "Create your enterprise partner account from any permitted country.",
       "fullName": "Full Name",
       "phone": "Phone (optional)",
@@ -1217,6 +1268,12 @@
       "subtitle": "Complete this guided application to request institutional capital for your enterprise.",
       "selectPool": "Select Capital Pool",
       "loanTerms": "Loan & Interest Terms",
+      "trackLabel": "Which security applies",
+      "trackCash": "Non-vault client",
+      "trackCashDesc": "You do not vault with SBDV. A 4% security deposit is requested only after written approval. No payment is due now.",
+      "trackMetal": "Vault client",
+      "trackMetalDesc": "You already vault eligible gold or silver with SBDV. No cash deposit. The advance is up to 75% of that gold or 70% of that silver.",
+      "trackMetalShort": "No cash deposit. Metal pledged.",
       "amount": "Requested Amount",
       "term": "Loan Term",
       "year": "year",
@@ -1263,8 +1320,8 @@
       "financialsPlaceholder": "Summarize audited financials — revenue trend, EBITDA, debt/equity ratio, key assets…",
       "review": "Review & Submit",
       "selectedPool": "Selected Pool",
-      "termsAccept": "I accept that, after approval, 10% cash collateral is wired to the escrow account before the approved amount is sent. It is not a fee. I accept the institutional review process and confirm that all information provided is accurate.",
-      "termsAcceptBefore": "I accept that, after approval, 10% cash collateral is wired to the escrow account before the approved amount is sent. It is not a fee. I accept the",
+      "termsAccept": "I have read the Facility Terms. I understand that no payment is due now. If this is a company facility, a 4% security deposit is requested only after written approval. If this is a metal facility, no cash deposit is taken.",
+      "termsAcceptBefore": "I have read the Facility Terms. No payment is due now. I accept the",
       "termsAcceptAfter": ", the institutional review process, and I confirm that all information provided is accurate.",
       "back": "Back",
       "continue": "Continue",
@@ -1294,7 +1351,7 @@
       "progress": "Onboarding Progress",
       "rm": "Relationship Manager",
       "escrowTitle": "Security Deposit — Escrow Instructions",
-      "escrowDesc": "SBDV pays an account you present, so this cash comes first. Houses and other local assets are not accepted. Transfer exactly 10% of the approved amount to the escrow account below. It is your cash, not a fee, and it does not earn interest. After SBDV confirms it, the full approved amount is sent. Use the wire reference exactly as shown.",
+      "escrowDesc": "This account is shown only after written approval. Transfer the security deposit amount shown. It is not a fee. Do not transfer any amount before these instructions appear.",
       "escrowPending": "Escrow payment details are being prepared by our capital desk. They will appear here as soon as your application is fully approved.",
       "bank": "Bank",
       "bankAddress": "Bank Address",
@@ -1330,8 +1387,8 @@
       "submitDocsSuccess": "Documents submitted. Our team will review your package.",
       "submitDocsFailed": "Could not submit documents. Please try again.",
       "docsSubmittedNote": "Document package submitted — awaiting review.",
-      "docsCompleteNote": "All documents uploaded. Our team will review them. If approved, KYC review comes next. The 10% is requested after that review.",
-      "kycReviewNote": "KYC review is in progress. No payment is due now. After this review, the escrow account is shown and you wire 10% of the approved amount. It is your cash, not a fee.",
+      "docsCompleteNote": "All documents uploaded. Our team will review them. No payment is due at this stage.",
+      "kycReviewNote": "KYC review is in progress. No payment is due now.",
       "bankDetailsTitle": "Disbursement Bank Details",
       "bankDetailsDesc": "Enter the bank account in the borrower’s name where SBDV should disburse the approved amount. SWIFT/BIC is required. Provide an IBAN if your bank uses one; otherwise enter the local account number and routing code (ABA, sort code, or equivalent).",
       "ibanOptional": "IBAN (if used)",
@@ -1388,7 +1445,7 @@
       "uboEmpty": "Add at least one beneficial owner before submitting documents.",
       "uboSaved": "Beneficial owner saved.",
       "sofTitle": "Origin of the security deposit",
-      "sofDesc": "Declare how the 10% cash collateral will be funded. The remitting account must be in the borrower’s name.",
+      "sofDesc": "Declare how any cash security deposit will be funded. The remitting account must be in the borrower’s name. A metal facility has no cash deposit.",
       "sofSource": "Source of funds",
       "sofOperating": "Company operating cash",
       "sofShareholder": "Shareholder loan",
@@ -1400,15 +1457,15 @@
     "facilityTerms": {
       "eyebrow": "Capital Access Program",
       "pageTitle": "Facility Terms and Conditions",
-      "intro": "These terms govern your capital facility, including the 10% security deposit, interest, repayment, default, and Swiss governing law. Read them in full before you accept.",
+      "intro": "These terms govern your capital facility, including the 4% security deposit or the vaulted-metal pledge, interest, repayment, default, and Swiss governing law. Read them in full before you accept. No payment is due to read them.",
       "versionLabel": "Document",
       "effectiveLabel": "Effective",
       "languageLabel": "Governing language",
-      "governingNote": "English is the governing language of this instrument. A translation, if provided, is for convenience only.",
+      "governingNote": "These terms are shown in the language you selected.",
       "contents": "Contents",
       "acceptBefore": "I have read and accept the",
       "linkLabel": "Facility Terms and Conditions",
-      "acceptAfter": ", including the 10% security deposit, interest, repayment, default, and governing-law provisions, and I confirm that I am authorised to bind the borrower.",
+      "acceptAfter": ", including the security deposit or metal pledge, interest, repayment, default, and governing-law provisions, and I confirm that I am authorised to bind the borrower.",
       "acceptedNote": "Facility Terms and Conditions accepted",
       "print": "Print or save",
       "backFacility": "Return to facility dashboard"

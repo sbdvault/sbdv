@@ -236,22 +236,25 @@ export async function PATCH(request: Request) {
         );
       }
 
-      const validated = validateEscrowInput({
-        bankName: escrow?.bankName,
-        bankAddress: escrow?.bankAddress,
-        accountName: escrow?.accountName,
-        accountNumber: escrow?.accountNumber,
-        iban: escrow?.iban,
-        swift: escrow?.swift,
-        routing: escrow?.routing,
-        beneficiary: escrow?.beneficiary,
-        beneficiaryAddress: escrow?.beneficiaryAddress,
-        paymentReference: escrow?.paymentReference,
-      });
-      if (!validated.ok) {
-        return NextResponse.json({ error: validated.error }, { status: 400 });
+      const cashDepositRequired = withDocs.securityDepositUsd > 0;
+      if (cashDepositRequired) {
+        const validated = validateEscrowInput({
+          bankName: escrow?.bankName,
+          bankAddress: escrow?.bankAddress,
+          accountName: escrow?.accountName,
+          accountNumber: escrow?.accountNumber,
+          iban: escrow?.iban,
+          swift: escrow?.swift,
+          routing: escrow?.routing,
+          beneficiary: escrow?.beneficiary,
+          beneficiaryAddress: escrow?.beneficiaryAddress,
+          paymentReference: escrow?.paymentReference,
+        });
+        if (!validated.ok) {
+          return NextResponse.json({ error: validated.error }, { status: 400 });
+        }
+        escrowData = validated.data;
       }
-      escrowData = validated.data;
     }
 
     const existing = await prisma.capitalAccessRequest.findUnique({
@@ -267,21 +270,25 @@ export async function PATCH(request: Request) {
       data: {
         status,
         adminNotes: adminNotes?.trim() || null,
-        ...(status === "APPROVED" && escrowData
+        ...(status === "APPROVED"
           ? {
               onboardingPhase: "KYC_REVIEW",
               relationshipManager: "Capital Access Desk",
-              escrowBankName: escrowData.escrowBankName,
-              escrowBankAddress: escrowData.escrowBankAddress,
-              escrowAccountName: escrowData.escrowAccountName,
-              escrowAccountNumber: escrowData.escrowAccountNumber,
-              escrowIban: escrowData.escrowIban,
-              escrowSwift: escrowData.escrowSwift,
-              escrowRouting: escrowData.escrowRouting,
-              escrowBeneficiary: escrowData.escrowBeneficiary || existing.companyName,
-              escrowBeneficiaryAddress: escrowData.escrowBeneficiaryAddress,
-              escrowPaymentRef:
-                escrowData.escrowPaymentRef || `CAP-${String(id).slice(-8).toUpperCase()}`,
+              ...(escrowData
+                ? {
+                    escrowBankName: escrowData.escrowBankName,
+                    escrowBankAddress: escrowData.escrowBankAddress,
+                    escrowAccountName: escrowData.escrowAccountName,
+                    escrowAccountNumber: escrowData.escrowAccountNumber,
+                    escrowIban: escrowData.escrowIban,
+                    escrowSwift: escrowData.escrowSwift,
+                    escrowRouting: escrowData.escrowRouting,
+                    escrowBeneficiary: escrowData.escrowBeneficiary || existing.companyName,
+                    escrowBeneficiaryAddress: escrowData.escrowBeneficiaryAddress,
+                    escrowPaymentRef:
+                      escrowData.escrowPaymentRef || `CAP-${String(id).slice(-8).toUpperCase()}`,
+                  }
+                : {}),
             }
           : {}),
       },

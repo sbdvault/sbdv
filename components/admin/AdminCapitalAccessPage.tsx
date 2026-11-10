@@ -646,8 +646,12 @@ export default function AdminCapitalAccessPage() {
                         {t("admin.capitalAccess.approveWithEscrowTitle")}
                       </h3>
                       <p className="font-body text-sm text-charcoal/60 mb-4">
-                        {t("admin.capitalAccess.approveModalDesc")}{" "}
-                        <strong>{formatUsd(app.securityDepositUsd)}</strong>
+                        {app.securityDepositUsd > 0
+                          ? t("admin.capitalAccess.approveModalDesc")
+                          : t("admin.capitalAccess.approveMetalDesc")}{" "}
+                        {app.securityDepositUsd > 0 && (
+                          <strong>{formatUsd(app.securityDepositUsd)}</strong>
+                        )}
                       </p>
                       {!docsComplete && (
                         <p className="mb-3 font-body text-sm text-amber-800 bg-amber-50 p-3 rounded-sm">
@@ -659,7 +663,9 @@ export default function AdminCapitalAccessPage() {
                           {t("admin.capitalAccess.approveRequiresSubmit")}
                         </p>
                       )}
-                      <EscrowFieldsForm form={escrowForm} onChange={setEscrowForm} t={t} />
+                      {app.securityDepositUsd > 0 && (
+                        <EscrowFieldsForm form={escrowForm} onChange={setEscrowForm} t={t} />
+                      )}
                       <div className="flex flex-wrap gap-3 mt-5">
                         <button
                           onClick={() => submitApproval(app.id)}

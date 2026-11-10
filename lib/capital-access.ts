@@ -1,6 +1,9 @@
 /** Capital Access Program — institutional lending terms & pool teasers */
 
-export const SECURITY_DEPOSIT_PCT = 10;
+export const SECURITY_DEPOSIT_PCT = 4;
+export const GOLD_LTV_PCT = 75;
+export const SILVER_LTV_PCT = 70;
+export type SecurityTrack = "CASH" | "METAL";
 export const MIN_REQUEST_USD = 500_000;
 export const MAX_REQUEST_USD = 100_000_000;
 export const MIN_TERM_YEARS = 1;
@@ -33,10 +36,12 @@ export function calculateInterestRate(requestedUsd: number, termYears: number): 
 export function calculateCapitalTerms(
   requestedUsd: number,
   termYears: number,
-  repaymentFrequency: RepaymentFrequency
+  repaymentFrequency: RepaymentFrequency,
+  securityTrack: SecurityTrack = "CASH"
 ): CapitalTerms {
   const interestRatePct = calculateInterestRate(requestedUsd, termYears);
-  const securityDepositUsd = requestedUsd * (SECURITY_DEPOSIT_PCT / 100);
+  const securityDepositPct = securityTrack === "METAL" ? 0 : SECURITY_DEPOSIT_PCT;
+  const securityDepositUsd = requestedUsd * (securityDepositPct / 100);
   const totalInterestUsd = requestedUsd * (interestRatePct / 100) * termYears;
   const totalRepaymentUsd = requestedUsd + totalInterestUsd;
   const periods = repaymentFrequency === "MONTHLY" ? termYears * 12 : termYears;
@@ -44,7 +49,7 @@ export function calculateCapitalTerms(
 
   return {
     interestRatePct,
-    securityDepositPct: SECURITY_DEPOSIT_PCT,
+    securityDepositPct,
     securityDepositUsd,
     totalInterestUsd,
     totalRepaymentUsd,
@@ -55,7 +60,7 @@ export function calculateCapitalTerms(
 }
 
 export interface FacilityBalances {
-  /** 10% due until operations confirms the deposit. */
+  /** Cash security deposit due until operations confirms it. Zero on a metal facility. */
   collateralDueUsd: number;
   /** Confirmed collateral held. Zero until depositConfirmedAt. */
   collateralReceivedUsd: number;
@@ -68,7 +73,7 @@ export interface FacilityBalances {
 
 /**
  * Dashboard figures for a facility. Interest and the amount disbursed stay
- * on the approved amount. The 10% cash collateral is held separately.
+ * on the approved amount. Cash security deposit, when there is one, is held separately.
  */
 export function facilityBalances(input: {
   requestedAmountUsd: number;

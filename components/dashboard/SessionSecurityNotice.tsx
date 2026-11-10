@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useTranslations } from "@/hooks/useTranslations";
-import { isLoopbackIp, normalizeClientIp } from "@/lib/sign-in-display";
+import { isLoopbackIp } from "@/lib/sign-in-display";
 
 type SignInSnapshot = {
   at: string;
@@ -28,14 +28,10 @@ function formatWhen(iso: string, locale: string): string {
   }
 }
 
-function placeAndIp(
-  snapshot: SignInSnapshot,
-  localLabel: string
-): { place: string | null; ip: string | null } {
-  const ip = normalizeClientIp(snapshot.ip);
-  const place =
-    snapshot.location || (isLoopbackIp(snapshot.ip) ? localLabel : null);
-  return { place, ip };
+function placeOf(snapshot: SignInSnapshot, localLabel: string): string | null {
+  if (snapshot.location) return snapshot.location;
+  if (isLoopbackIp(snapshot.ip)) return localLabel;
+  return null;
 }
 
 function SessionMeta({
@@ -49,7 +45,7 @@ function SessionMeta({
   locale: string;
   localLabel: string;
 }) {
-  const { place, ip } = placeAndIp(snapshot, localLabel);
+  const place = placeOf(snapshot, localLabel);
 
   return (
     <span className="inline-flex items-baseline gap-1.5 whitespace-nowrap">
@@ -59,12 +55,6 @@ function SessionMeta({
         <>
           <span className="text-charcoal/25" aria-hidden>·</span>
           <span className="text-charcoal/70">{place}</span>
-        </>
-      )}
-      {ip && (
-        <>
-          <span className="text-charcoal/25" aria-hidden>·</span>
-          <span className="font-mono text-charcoal/80">{ip}</span>
         </>
       )}
     </span>

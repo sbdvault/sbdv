@@ -8,6 +8,7 @@ import {
   MAX_TERM_YEARS,
   MIN_OPERATING_YEARS,
   type RepaymentFrequency,
+  type SecurityTrack,
 } from "@/lib/capital-access";
 import { sendCapitalAccessSubmissionEmails } from "@/lib/capital-access-emails";
 import { sendOnboardingPhaseEmail } from "@/lib/capital-access-onboarding-emails";
@@ -88,7 +89,10 @@ export async function POST(request: Request) {
       termYears,
       repaymentFrequency,
       termsAccepted,
+      securityTrack: securityTrackRaw,
     } = body;
+
+    const securityTrack: SecurityTrack = securityTrackRaw === "METAL" ? "METAL" : "CASH";
 
     if (
       !poolId ||
@@ -154,7 +158,8 @@ export async function POST(request: Request) {
     const terms = calculateCapitalTerms(
       amount,
       term,
-      repaymentFrequency as RepaymentFrequency
+      repaymentFrequency as RepaymentFrequency,
+      securityTrack
     );
 
     const application = await prisma.capitalAccessRequest.create({
@@ -183,6 +188,7 @@ export async function POST(request: Request) {
         termYears: term,
         repaymentFrequency,
         interestRatePct: terms.interestRatePct,
+        securityTrack,
         securityDepositPct: terms.securityDepositPct,
         securityDepositUsd: terms.securityDepositUsd,
         totalInterestUsd: terms.totalInterestUsd,

@@ -231,7 +231,7 @@ function replyApplicationStatus(ctx: ChatUserContext): string {
     if (approved.onboardingPhase === "AWAITING_DEPOSIT") {
       reply += `\n\nYour next step is the **security deposit** (${formatUsd(approved.securityDepositUsd)}). Ask me *"how do I make the payment?"* for wire instructions.`;
     } else if (approved.onboardingPhase === "KYC_REVIEW") {
-      reply += `\n\n**KYC review** is in progress. No payment is due now. The 10% cash collateral is requested after that review.`;
+      reply += `\n\n**KYC review** is in progress. No payment is due now. The 4% security deposit is requested after that review.`;
     } else if (approved.onboardingPhase === "AWAITING_DOCUMENTS") {
       reply += `\n\nPlease upload the required documents and list beneficial owners in **Onboarding**, then click Submit Documents.`;
     } else {
@@ -245,13 +245,13 @@ function replySecurityDeposit(ctx: ChatUserContext): string {
   if (ctx.role === "BORROWER") {
     const facility = getActiveBorrowerFacility(ctx);
     if (facility?.onboardingPhase === "KYC_REVIEW") {
-      return `**${facility.company}** is in **KYC review**. The 10% cash collateral is requested after that review is finished. No payment is due now.`;
+      return `**${facility.company}** is in **KYC review**. The 4% security deposit is requested after that review is finished. No payment is due now.`;
     }
     if (facility?.onboardingPhase === "AWAITING_DEPOSIT" && facility.escrow) {
       const e = facility.escrow;
       return `Here’s how to complete your **security deposit** for **${facility.company}**:
 
-**Amount due:** ${formatUsd(facility.securityDepositUsd)} (10% of ${formatUsd(facility.amountUsd)} facility)
+**Amount due:** ${facility.securityDepositUsd > 0 ? formatUsd(facility.securityDepositUsd) + " (4% security deposit)" : "No cash deposit. Vaulted metal is the security."}
 
 **Wire to:**
 • Bank: ${e.bankName}${e.bankAddress ? `\n  ${e.bankAddress}` : ""}
@@ -276,31 +276,31 @@ Need help after that? Ask about **documents** or **timeline**.`;
         facility.onboardingPhase === "DOCUMENTS_REVISION" ||
         facility.onboardingPhase === "DOCUMENTS_SUBMITTED"
       ) {
-        return `The 10% for **${facility.company}** is requested after approval and KYC review. Current step: **${phase}**.`;
+        return `The 4% security deposit for **${facility.company}** is requested after approval and KYC review, unless the facility is secured on vaulted metal. Current step: **${phase}**.`;
       }
       return `Your **${facility.company}** facility is past the deposit stage (current phase: ${phase}). Check **My Facility** for your next action, or ask *"what's my application status?"*`;
     }
-    return "Once your Capital Access application is **approved**, KYC review comes first. After that review, your Facility Dashboard shows the escrow account for the **10% cash collateral**. Apply or check status at **Capital Access → Portal**.";
+    return "Once your Capital Access application is **approved**, KYC review comes first. After that review, your Facility Dashboard shows the escrow account for the **4% security deposit**. Apply or check status at **Capital Access → Portal**.";
   }
-  return "The Capital Access Program requires a **10% cash collateral** held in escrow before disbursement. It is requested after approval and KYC review. Escrow details then appear in the Facility Dashboard.";
+  return "The Capital Access Program requires a **4% security deposit** held in escrow before disbursement. It is requested after approval and KYC review. Escrow details then appear in the Facility Dashboard.";
 }
 
 function replyNextSteps(ctx: ChatUserContext): string {
   if (ctx.role === "BORROWER") {
     const facility = getActiveBorrowerFacility(ctx);
     if (!facility) {
-      return "Once you submit a request, onboarding follows: **documents → approval → KYC → 10% deposit → bank details → disbursement**. Submit an application at **Capital Access → New Request** if you haven't yet.";
+      return "Once you submit a request, onboarding follows: **documents → approval → KYC → 4% security deposit, or a pledge of vaulted metal → bank details → disbursement**. Submit an application at **Capital Access → New Request** if you haven't yet.";
     }
     switch (facility.onboardingPhase) {
       case "AWAITING_DOCUMENTS":
       case "DOCUMENTS_REVISION":
-        return `For **${facility.company}**, upload the **required documents** in **Onboarding** (PDF, DOC, or JPEG). Local-register extracts and certified translations are accepted:\n• Audited financials (2–3 years)\n• Incorporation / commercial register\n• Articles\n• Structure chart\n• Board resolution\n• Signed facility agreement\n• Capital deployment plan\n• Signatory ID\n• Beneficial-owner list in the portal\n\nThen click **Submit Documents**. After review and approval, KYC comes next. The 10% deposit is requested only after KYC.`;
+        return `For **${facility.company}**, upload the **required documents** in **Onboarding** (PDF, DOC, or JPEG). Local-register extracts and certified translations are accepted:\n• Audited financials (2–3 years)\n• Incorporation / commercial register\n• Articles\n• Structure chart\n• Board resolution\n• Signed facility agreement\n• Capital deployment plan\n• Signatory ID\n• Beneficial-owner list in the portal\n\nThen click **Submit Documents**. After review and approval, KYC comes next. The 4% security deposit is requested only after KYC, and only if you do not already vault with SBDV.`;
       case "DOCUMENTS_SUBMITTED":
         return `Your documentation package for **${facility.company}** has been **submitted** and is under review. No further upload is needed unless we request revisions.`;
       case "AWAITING_DEPOSIT":
         return `For **${facility.company}**, KYC is complete and you're at the **security deposit** stage.\n\n1. Wire ${formatUsd(facility.securityDepositUsd)} to the escrow account (see **My Facility** or ask *"how do I make the payment?"*)\n2. Submit your wire reference\n3. Our team confirms within 2–3 business days\n\nThen you submit the bank account for the approved amount.`;
       case "KYC_REVIEW":
-        return `**${facility.company}** is in **KYC review**. No payment is due now. After this review you will be asked to wire the 10% cash collateral. Our compliance team will contact you if anything further is required. Typical review: 5–10 business days.`;
+        return `**${facility.company}** is in **KYC review**. No payment is due now. After this review you will be asked to wire the 4% security deposit. Our compliance team will contact you if anything further is required. Typical review: 5–10 business days.`;
       case "READY_FOR_DISBURSEMENT":
         return `**${facility.company}** has cleared compliance. Capital release is being processed — you'll receive confirmation when funds are disbursed.`;
       case "DISBURSED":
@@ -320,10 +320,10 @@ function replyLoanTerms(ctx: ChatUserContext): string {
   if (ctx.role === "BORROWER") {
     const facility = getActiveBorrowerFacility(ctx) || getBorrowerApps(ctx)[0];
     if (facility) {
-      return `**${facility.company}** facility terms:\n\n• **Principal:** ${formatUsd(facility.amountUsd)}\n• **APR:** ${facility.apr}%\n• **Term:** ${facility.termYears} year${facility.termYears === 1 ? "" : "s"}\n• **Security deposit:** ${formatUsd(facility.securityDepositUsd)} (10%, held in escrow)\n• **Pool:** ${facility.pool}\n\nRepayment schedules appear in **My Facility** once disbursed. For deposit or onboarding steps, just ask.`;
+      return `**${facility.company}** facility terms:\n\n• **Principal:** ${formatUsd(facility.amountUsd)}\n• **APR:** ${facility.apr}%\n• **Term:** ${facility.termYears} year${facility.termYears === 1 ? "" : "s"}\n• **Security deposit:** ${facility.securityDepositUsd > 0 ? formatUsd(facility.securityDepositUsd) + " (4%)" : "None. Vaulted metal is pledged."}\n• **Pool:** ${facility.pool}\n\nRepayment schedules appear in **My Facility** once disbursed. For deposit or onboarding steps, just ask.`;
     }
   }
-  return "**Capital Access** terms overview:\n• $500K – $100M facility sizes\n• 1–10 year terms\n• Competitive institutional APR (pool-dependent)\n• **10% security deposit** in escrow\n• Monthly or annual repayment options\n\nApply at **/capital-access/register** to receive a tailored quote.";
+  return "**Capital Access** terms overview:\n• $500K – $100M facility sizes\n• 1–10 year terms\n• Competitive institutional APR (pool-dependent)\n• **4% security deposit** after approval if you do not already vault. No cash deposit if you do. The metal stays in your name.\n• Monthly or annual repayment options\n\nApply at **/capital-access/register** to receive a tailored quote.";
 }
 
 function replyOffTopic(message: string, ctx: ChatUserContext): string | null {
@@ -384,7 +384,7 @@ function conversationalFallback(message: string, messages: ChatMessage[], ctx: C
   if (ctx.role === "BORROWER") {
     const facility = getActiveBorrowerFacility(ctx);
     if (facility?.onboardingPhase === "KYC_REVIEW") {
-      return `${prefix}**${facility.company}** is in KYC review. The 10% cash collateral is requested after that review. No payment is due now.`;
+      return `${prefix}**${facility.company}** is in KYC review. The 4% security deposit is requested after that review. No payment is due now.`;
     }
     if (facility?.onboardingPhase === "AWAITING_DEPOSIT") {
       return `${prefix}based on your approved **${facility.company}** facility, your immediate priority is the **${formatUsd(facility.securityDepositUsd)} security deposit**. I can walk you through the wire transfer step-by-step — shall I?`;
@@ -490,7 +490,7 @@ function ruleBasedReply(message: string, messages: ChatMessage[], ctx: ChatUserC
 
   if (paymentQuery || q.includes("deposit") || q.includes("escrow") || q.includes("security deposit")) {
     if (!ctx.isAuthenticated) {
-      return "Security deposits apply to the **Capital Access Program** for enterprises — a 10% escrow held before disbursement. If you're a new visitor exploring options, ask *\"how do I get started?\"* and I'll guide you. For vault custody, see **Membership** instead.";
+      return "Security deposits apply to the **Capital Access Program** for enterprises — a 4% security deposit after approval, unless you already vault metal with SBDV. If you're a new visitor exploring options, ask *\"how do I get started?\"* and I'll guide you. For vault custody, see **Membership** instead.";
     }
     return replySecurityDeposit(ctx);
   }
@@ -539,7 +539,7 @@ function ruleBasedReply(message: string, messages: ChatMessage[], ctx: ChatUserC
   }
 
   if (q.includes("capital access") || q.includes("borrow") || q.includes("loan")) {
-    return "**Capital Access Program** — qualified enterprises **worldwide** can apply for institutional sovereign capital. SBDV is not a bank.\n\n• Request: $500K – $100M, USD. Two years of operating history and audited or reviewed accounts.\n• Terms: 1–10 years, monthly or yearly repayment. Approval is discretionary.\n• SBDV pays an account the borrower presents, so **10% cash collateral** comes first. Houses and other local assets are not accepted. It is requested only after approval, shown as an escrow transfer, and it is not a fee. After it is confirmed, the full approved amount is sent. Unused collateral is returned after full repayment, or applied if the borrower defaults.\n• Applying is not a commitment to lend.\n• Apply at **/capital-access/register**\n\nFlow: documents + UBOs → approval → KYC → deposit + origin of funds → bank details → disbursement.";
+    return "**Capital Access Program** — qualified enterprises may apply. SBDV is not a bank and does not hold a FINMA banking licence.\n\n• Request: $500K – $100M, USD. Two years of operating history and audited or reviewed accounts.\n• Terms: 1–10 years, monthly or yearly repayment. Approval is discretionary.\n• If you do not already vault with SBDV, a **4% security deposit** is requested only after written approval. It is not a fee. If you already vault eligible gold or silver, there is no cash deposit. The advance is up to 75% of that gold or 70% of that silver, and the metal stays in your name until repayment.\n• Applying is not a commitment to lend. No payment is due to apply.\n• Apply at **/capital-access/register**\n\nFlow: documents + UBOs → approval → KYC → security deposit or metal pledge → bank details → disbursement.";
   }
 
   if (q.includes("wealth") || q.includes("invest") || q.includes("mandate") || q.includes("yield")) {

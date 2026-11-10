@@ -3,17 +3,17 @@
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useTranslations } from "@/hooks/useTranslations";
-import {
-  FACILITY_TERMS_EFFECTIVE,
-  FACILITY_TERMS_VERSION,
-  facilityTermsArticles,
-} from "@/lib/facility-terms";
+import { FACILITY_TERMS_VERSION } from "@/lib/facility-terms";
+import { getFacilityTermsArticles } from "@/lib/facility-terms/index";
 
 export default function FacilityTermsDocument() {
   const { t, locale } = useTranslations();
   const params = useParams();
   const currentLocale = (params?.locale as string) || locale || "en";
   const facilityHref = `/${currentLocale}/capital-access/portal/facility`;
+  const languageName =
+    new Intl.DisplayNames([currentLocale], { type: "language" }).of(currentLocale) ?? currentLocale;
+  const facilityTermsArticles = getFacilityTermsArticles(currentLocale);
 
   return (
     <article className="bg-white">
@@ -27,18 +27,14 @@ export default function FacilityTermsDocument() {
         <p className="font-body text-charcoal/70 mt-4 max-w-2xl leading-relaxed">
           {t("capitalAccess.facilityTerms.intro")}
         </p>
-        <dl className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm font-body">
+        <dl className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm font-body">
           <div className="p-4 bg-off-white rounded-sm">
             <dt className="text-charcoal/45">{t("capitalAccess.facilityTerms.versionLabel")}</dt>
             <dd className="font-medium text-charcoal mt-1">{FACILITY_TERMS_VERSION}</dd>
           </div>
           <div className="p-4 bg-off-white rounded-sm">
-            <dt className="text-charcoal/45">{t("capitalAccess.facilityTerms.effectiveLabel")}</dt>
-            <dd className="font-medium text-charcoal mt-1">{FACILITY_TERMS_EFFECTIVE}</dd>
-          </div>
-          <div className="p-4 bg-off-white rounded-sm">
             <dt className="text-charcoal/45">{t("capitalAccess.facilityTerms.languageLabel")}</dt>
-            <dd className="font-medium text-charcoal mt-1">English</dd>
+            <dd className="font-medium text-charcoal mt-1">{languageName}</dd>
           </div>
         </dl>
         <p className="font-body text-xs text-charcoal/50 mt-4">
@@ -80,7 +76,7 @@ export default function FacilityTermsDocument() {
 
       <footer className="mt-14 pt-8 border-t border-charcoal/10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <p className="font-body text-xs text-charcoal/45">
-          {FACILITY_TERMS_VERSION} · {FACILITY_TERMS_EFFECTIVE}
+          {FACILITY_TERMS_VERSION}
         </p>
         <div className="flex flex-wrap gap-3">
           <button

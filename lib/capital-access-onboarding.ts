@@ -276,14 +276,16 @@ export function canBorrowerUploadDocuments(
 /**
  * Next phase after admin advance (post-approval path).
  * Docs are collected before approval. KYC is completed next.
- * The 10% is requested only after KYC. Bank details follow the deposit.
+ * The 4% security deposit is requested only after KYC, and only on a company facility.
+ * A metal facility has no cash deposit. Bank details follow.
  */
 export function getNextAdminAction(
   phase: string | null | undefined,
-  flags?: { depositConfirmed?: boolean; kycComplete?: boolean }
+  flags?: { depositConfirmed?: boolean; kycComplete?: boolean; securityDepositUsd?: number }
 ): OnboardingPhase | null {
   const depositConfirmed = Boolean(flags?.depositConfirmed);
   const kycComplete = Boolean(flags?.kycComplete);
+  const cashDepositRequired = (flags?.securityDepositUsd ?? 1) > 0;
   switch (phase) {
     case "AWAITING_DEPOSIT":
       return kycComplete ? "AWAITING_BANK_DETAILS" : "KYC_REVIEW";
@@ -291,7 +293,8 @@ export function getNextAdminAction(
       // Legacy post-deposit docs stage only (new apps leave this phase via approval)
       return "KYC_REVIEW";
     case "KYC_REVIEW":
-      return depositConfirmed ? "AWAITING_BANK_DETAILS" : "AWAITING_DEPOSIT";
+      if (!cashDepositRequired || depositConfirmed) return "AWAITING_BANK_DETAILS";
+      return "AWAITING_DEPOSIT";
     case "AWAITING_BANK_DETAILS":
       return "READY_FOR_DISBURSEMENT";
     case "READY_FOR_DISBURSEMENT":

@@ -23,11 +23,15 @@ export default function CapitalAccessPoolsPage() {
   const params = useParams();
   const [pools, setPools] = useState<Pool[]>([]);
   const [loading, setLoading] = useState(true);
+  const [metalTrack, setMetalTrack] = useState(false);
 
   const getLocalizedHref = (href: string) =>
     `/${(params?.locale as string) || locale || "en"}${href}`;
 
   useEffect(() => {
+    const query = new URLSearchParams(window.location.search).get("track");
+    const stored = sessionStorage.getItem("sbdv-capital-track");
+    setMetalTrack(query === "metal" || stored === "METAL");
     fetch("/api/capital-access/pools")
       .then((res) => res.json())
       .then((json) => setPools(json.pools || []))
@@ -59,7 +63,9 @@ export default function CapitalAccessPoolsPage() {
           ].map((key) => (
             <li key={key} className="flex items-start gap-2 font-body text-sm text-charcoal/70">
               <CheckCircle2 className="w-4 h-4 text-gold shrink-0 mt-0.5" />
-              {t(`capitalAccess.conditions.${key}`)}
+              {key === "securityDeposit" && metalTrack
+                ? t("capitalAccess.request.trackMetalShort")
+                : t(`capitalAccess.conditions.${key}`)}
             </li>
           ))}
         </ul>
@@ -110,12 +116,18 @@ export default function CapitalAccessPoolsPage() {
                   </div>
                   <div className="p-3 bg-off-white rounded-sm">
                     <p className="font-body text-xs text-charcoal/40">{t("capitalAccess.securityDeposit")}</p>
-                    <p className="font-heading font-semibold text-charcoal">{pool.securityDepositPct}%</p>
+                    <p className="font-body text-sm text-charcoal">
+                      {metalTrack
+                        ? t("capitalAccess.request.trackMetalShort")
+                        : t("capitalAccess.conditions.securityDeposit")}
+                    </p>
                   </div>
                 </div>
 
                 <Link
-                  href={getLocalizedHref(`/capital-access/portal/request?pool=${pool.id}`)}
+                  href={getLocalizedHref(
+                    `/capital-access/portal/request?pool=${pool.id}${metalTrack ? "&track=metal" : ""}`,
+                  )}
                   className="flex items-center justify-center gap-2 w-full py-3 bg-gold text-charcoal font-body font-medium rounded-sm hover:bg-gold/90 transition-colors"
                 >
                   {t("capitalAccess.requestFromPool")} <ArrowUpRight className="w-4 h-4" />

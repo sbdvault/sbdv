@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { useParams } from "next/navigation";
+import { useState, useEffect } from "react";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useTranslations } from "@/hooks/useTranslations";
@@ -13,6 +13,12 @@ import { Building2, AlertCircle, CheckCircle2 } from "lucide-react";
 export default function CapitalAccessRegisterPage() {
   const { t, locale } = useTranslations();
   const params = useParams();
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const rawTrack = searchParams.get("track");
+  const [track, setTrack] = useState<"metal" | "company" | null>(
+    rawTrack === "metal" ? "metal" : rawTrack === "company" ? "company" : null
+  );
   const [createdEmail, setCreatedEmail] = useState<string | null>(null);
   const [form, setForm] = useState({
     name: "",
@@ -30,12 +36,22 @@ export default function CapitalAccessRegisterPage() {
   const getLocalizedHref = (href: string) =>
     `/${(params?.locale as string) || locale || "en"}${href}`;
 
+  useEffect(() => {
+    if (!track) return;
+    sessionStorage.setItem("sbdv-capital-track", track === "metal" ? "METAL" : "CASH");
+  }, [track]);
+
+  const chooseTrack = (next: "metal" | "company") => {
+    setTrack(next);
+    router.replace(`${getLocalizedHref("/capital-access/register")}?track=${next}`);
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError("");
 
-    if (!termsAccepted || !collateralAccepted) {
+    if (!track || !termsAccepted || !collateralAccepted) {
       setLoading(false);
       return;
     }
@@ -109,11 +125,31 @@ export default function CapitalAccessRegisterPage() {
               </p>
               <p className="font-body font-medium text-charcoal mt-1 mb-8">{createdEmail}</p>
               <Link
-                href={getLocalizedHref("/login")}
+                href={`${getLocalizedHref("/login")}?track=${track ?? "company"}`}
                 className="inline-block w-full py-3 bg-gold text-charcoal font-body font-medium rounded-sm hover:bg-gold/90"
               >
                 {t("capitalAccess.register.goToLogin")}
               </Link>
+            </div>
+          ) : !track ? (
+            <div className="space-y-3">
+              <p className="font-body text-sm text-charcoal mb-4">
+                {t("capitalAccess.register.whichDoor")}
+              </p>
+              <button
+                type="button"
+                onClick={() => chooseTrack("company")}
+                className="w-full text-left px-4 py-4 border border-charcoal/15 rounded-sm font-body text-sm text-charcoal hover:border-gold"
+              >
+                {t("capitalAccess.register.doorCompany")}
+              </button>
+              <button
+                type="button"
+                onClick={() => chooseTrack("metal")}
+                className="w-full text-left px-4 py-4 border border-charcoal/15 rounded-sm font-body text-sm text-charcoal hover:border-gold"
+              >
+                {t("capitalAccess.register.doorMetal")}
+              </button>
             </div>
           ) : (
             <>
@@ -125,6 +161,12 @@ export default function CapitalAccessRegisterPage() {
           )}
 
           <form onSubmit={handleSubmit} className="space-y-4">
+            <p className="font-body text-sm text-charcoal">
+              {t("capitalAccess.register.doorLocked")}{" "}
+              {track === "metal"
+                ? t("capitalAccess.register.doorMetal")
+                : t("capitalAccess.register.doorCompany")}
+            </p>
             {[
               { key: "name", label: t("capitalAccess.register.fullName"), type: "text" },
               { key: "email", label: t("login.email"), type: "email" },

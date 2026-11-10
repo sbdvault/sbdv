@@ -42,16 +42,22 @@ export default function CapitalAccessHeroSection() {
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <Link
-            href={getLocalizedHref("/capital-access/register")}
+            href={getLocalizedHref("/capital-access/company")}
             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold text-charcoal font-body font-medium rounded-sm hover:bg-gold/90 transition-colors"
           >
-            {t("capitalAccess.hero.applyAccess")} <ArrowRight className="w-4 h-4" />
+            {t("capitalAccess.hero.companyDoor")} <ArrowRight className="w-4 h-4" />
           </Link>
           <Link
-            href={getLocalizedHref("/login")}
+            href={getLocalizedHref("/capital-access/metal")}
+            className="inline-flex items-center justify-center px-8 py-4 border border-gold text-gold font-body rounded-sm hover:bg-gold/10 transition-colors"
+          >
+            {t("capitalAccess.hero.metalDoor")}
+          </Link>
+          <Link
+            href={getLocalizedHref("/capital-access/terms")}
             className="inline-flex items-center justify-center px-8 py-4 border border-off-white/30 text-off-white font-body rounded-sm hover:bg-off-white/10 transition-colors"
           >
-            {t("capitalAccess.hero.partnerLogin")}
+            {t("capitalAccess.hero.readTerms")}
           </Link>
         </motion.div>
       </div>

@@ -284,7 +284,8 @@ model CapitalAccessRequest {
   termYears            Int
   repaymentFrequency   String
   interestRatePct      Float
-  securityDepositPct   Float    @default(10)
+  securityTrack        String   @default("CASH")
+  securityDepositPct   Float    @default(4)
   securityDepositUsd   Float
   totalInterestUsd     Float
   installmentUsd       Float

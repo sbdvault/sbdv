@@ -59,6 +59,7 @@ export async function PATCH(
       let nextPhase = getNextAdminAction(facility.onboardingPhase, {
         depositConfirmed: Boolean(facility.depositConfirmedAt),
         kycComplete: Boolean(facility.kycCompletedAt),
+        securityDepositUsd: facility.securityDepositUsd,
       });
       if (!nextPhase) {
         return NextResponse.json({ error: "Cannot advance from current phase" }, { status: 400 });

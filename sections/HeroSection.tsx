@@ -101,16 +101,22 @@ export default function HeroSection() {
           >
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
+                href={getLocalizedHref("/vault-security")}
+                className="px-8 py-3 border-2 border-gold text-gold font-body font-medium rounded-sm hover:bg-gold hover:text-charcoal transition-all duration-300"
+              >
+                {t("hero.privateClients")}
+              </Link>
+              <Link
+                href={getLocalizedHref("/wealth-investment")}
+                className="px-8 py-3 border-2 border-gold text-gold font-body font-medium rounded-sm hover:bg-gold hover:text-charcoal transition-all duration-300"
+              >
+                {t("hero.wealthMandate")}
+              </Link>
+              <Link
                 href={getLocalizedHref("/capital-access")}
                 className="gold-shimmer px-8 py-3 bg-gold text-charcoal font-body font-medium rounded-sm hover:bg-gold/90 transition-all duration-300 hover:shadow-lg"
               >
                 {t("hero.exploreCapital")}
-              </Link>
-              <Link
-                href={getLocalizedHref("/membership")}
-                className="px-8 py-3 border-2 border-gold text-gold font-body font-medium rounded-sm hover:bg-gold hover:text-charcoal transition-all duration-300"
-              >
-                {t("hero.privateClients")}
               </Link>
             </div>
             <Link

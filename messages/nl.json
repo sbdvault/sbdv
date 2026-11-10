@@ -23,14 +23,15 @@
   "hero": {
     "headline": "Zwitserse Veiligheid. Gedisciplineerde Groei.",
     "subtext": "Privécliënten gebruiken Zwitserse bewaring of een vermogensmandaat. Gekwalificeerde ondernemingen kunnen een gestructureerde kapitaalfaciliteit aanvragen. SBDV is geen bank.",
-    "exploreCapital": "Ondernemingen",
-    "privateClients": "Private Client Toegang",
+    "exploreCapital": "Kapitaal voor ondernemingen",
+    "privateClients": "Kluisbewaring",
     "requestAccess": "Toegang verzoeken",
     "clientLogin": "Klant Login",
-    "investorRelations": "Investeerdersrelaties"
+    "investorRelations": "Investeerdersrelaties",
+    "wealthMandate": "Vermogensmandaat"
   },
   "footer": {
-    "copyright": "Swiss Bullion Depository Vault — Zwitserse Precisie. Wereldwijd Vertrouwen.",
+    "copyright": "Swiss Bullion Depository Vault AG — Zwitserse precisie. Wereldwijd vertrouwen.",
     "headquarters": "Hoofdkantoor",
     "globalOffices": "Wereldwijde Kantoren",
     "legal": "Juridisch",
@@ -69,7 +70,12 @@
       }
     },
     "jurisdictionNote": "Zwitserse juridische basis. Multi-jurisdictionele toegankelijkheid voor wereldwijde cliënten.",
-    "facilityTerms": "Faciliteitsvoorwaarden"
+    "facilityTerms": "Faciliteitsvoorwaarden",
+    "legalName": "Swiss Bullion Depository Vault AG",
+    "uid": "UID CHE-218.964.179",
+    "registerNumber": "Handelsregister CH-291.7.217.861-9",
+    "board": "Peter B. Guggi, voorzitter. Lucas Gardner, directeur.",
+    "notABank": "SBDV is geen bank, heeft geen FINMA-bankvergunning en is niet vergund om deposito's aan te nemen of te lenen."
   },
   "about": {
     "title": "Over ons",
@@ -116,7 +122,7 @@
       "privateText": "Lidmaatschap Kluis & Beveiliging voor de bewaring van bullion, en een afzonderlijk mandaat Vermogen & Beleggen voor cliënten die hoofdsom storten en het vermelde rendement volgen.",
       "capitalLabel": "Ondernemingen",
       "capitalTitle": "Capital Access",
-      "capitalText": "Gestructureerde faciliteiten voor gekwalificeerde vennootschappen — documentatie, 10% contant onderpand, Zwitserse AML-toetsing en een bevestigd terugbetalingsplan. Goedkeuring is discretionair."
+      "capitalText": "Twee wegen. Een vennootschap die niet bij SBDV bewaart, kan een faciliteit aanvragen met een zekerheidsstelling van 4%, pas gevraagd na schriftelijke goedkeuring. Een cliënt die al bewaart, kan lenen tegen dat metaal, zonder contante zekerheid. Goedkeuring is discretionair."
     },
     "serveTitle": "Wie wij dienen",
     "serve": {
@@ -419,11 +425,12 @@
     }
   },
   "cta": {
-    "title": "Twee paden. Eén Zwitserse standaard.",
-    "subtitle": "Privé-custody voor vermogen dat stil moet blijven — of gestructureerd kapitaal voor ondernemingen die met helderheid willen groeien.",
+    "title": "Drie wegen. Eén Zwitserse standaard.",
+    "subtitle": "Kluisbewaring, een vermogensmandaat of een kapitaalfaciliteit voor een gekwalificeerde onderneming. Elk verzoek wordt op zichzelf beoordeeld.",
     "button": "Privéconsultatie boeken",
-    "capitalButton": "Ontdek Capital Access",
-    "privateButton": "Private Client Toegang"
+    "capitalButton": "Kapitaal voor ondernemingen",
+    "privateButton": "Kluisbewaring",
+    "wealthButton": "Vermogensmandaat"
   },
   "home": {
     "swissStandardTitle": "De Zwitserse standaard",
@@ -477,7 +484,7 @@
     "wealthTeaserDescription": "Voor private clients: portfoliomandaten, edelmetaalstrategie en geconsolideerde rapportage — geïntegreerd met Zwitserse custody via uw private portaal.",
     "wealthTeaserButton": "Ontdek Vermogensdiensten",
     "capitalTeaserTitle": "Kapitaal waarmee ondernemingen groeien",
-    "capitalTeaserDescription": "Het Capital Access Program verbindt gekwalificeerde bedrijven met mandate-aligned pools — transparante voorwaarden, Zwitsers toezicht en een begeleid pad van aanvraag tot facility.",
+    "capitalTeaserDescription": "Een vennootschap die niet bewaart, kan een faciliteit in USD aanvragen. Een zekerheidsstelling van 4% wordt pas gevraagd na schriftelijke goedkeuring. Een cliënt die al in aanmerking komend metaal bewaart, betaalt die som niet.",
     "capitalTeaserButton": "Ontdek Capital Access",
     "capitalTeaserPoints": {
       "structure": "Duidelijke structuur",
@@ -485,7 +492,7 @@
       "oversight": "Zwitsers toezicht",
       "oversightDesc": "Gedocumenteerde KYC, UBO look-through en discretionaire review.",
       "portal": "Partnerportaal",
-      "portalDesc": "Volg aanvragen, deposits en terugbetaling op één plek."
+      "portalDesc": "Aanvragen, zekerheid en aflossing op één plaats volgen."
     }
   },
   "common": {
@@ -599,12 +606,12 @@
     "termsIntro": "Deze voorwaarden beheersen uw gebruik van de website van SBDV, de cliëntenportalen en de openbare aanvraagkanalen. SBDV is gevestigd te Zürich. Op deze websitevoorwaarden is Zwitsers recht van toepassing.",
     "termsBody": "Deze websitevoorwaarden gelden voor het gebruik van de website van SBDV, het aanmelden bij een account en de openbare aanvraagkanalen. Zij scheppen geen overeenkomst van kluisbewaring, geen vermogensmandaat en geen kapitaalfaciliteit. Kluisbewaring en vermogensmandaten worden uitsluitend verleend op grond van de afzonderlijke overeenkomst die voor die relatie wordt uitgegeven. Faciliteiten onder Capital Access worden beheerst door de Voorwaarden van de faciliteit, niet door deze websitevoorwaarden.\n\nSBDV is gevestigd te Zürich, Zwitserland. Op deze websitevoorwaarden is het materiële recht van Zwitserland van toepassing, met uitsluiting van conflictenrecht dat een ander recht zou aanwijzen. De gerechten van Zürich zijn bevoegd voor geschillen die voortvloeien uit het gebruik van de website. Dat beperkt niet een bevoegdheid die in een faciliteits- of mandaatovereenkomst is bepaald.\n\nDoor een account aan te maken of een portaal te gebruiken, stemt u in met Zwitsers cliëntenonderzoek en antiwitwasonderzoek. U dient uw wachtwoord en elke aanmeldcode vertrouwelijk te houden. Indien u meent dat uw account zonder uw machtiging is gebruikt, stelt u SBDV onverwijld daarvan in kennis via de pagina Contact.\n\nOndernemingen wereldwijd kunnen Capital Access aanvragen. Het indienen van een aanvraag is geen toezegging tot kredietverlening, geen consumptief krediet en geen openbare aanbieding van effecten. SBDV kan een aanvraag naar eigen inzicht goedkeuren, afwijzen of aanhouden. SBDV kan de openbare website wijzigen door een mededeling op deze pagina. Een reeds aanvaarde faciliteit blijft beheerst door de Faciliteitsvoorwaarden die u hebt aanvaard, niet door een latere wijziging van deze pagina.",
     "regulatoryTitle": "Regelgevingsinformatie",
-    "regulatoryIntro": "SBDV is een te Zürich gevestigde instelling voor kluisbewaring en het regelen van kapitaal, ten dienste van cliënten wereldwijd. Zij is geen Zwitserse bank.",
-    "regulatoryBody": "SBDV verzorgt de bewaring van bullion in kluis en regelt gestructureerde kapitaalfaciliteiten voor gekwalificeerde ondernemingen. Capital Access is geen beschermd bankdeposito en valt niet onder depositogarantiestelsels. Gelden die als zekerheidsstelling worden aangehouden, zijn contractueel contant onderpand, geen deposito op uw naam bij een bank.\n\nVermogensmandaten voor privécliënten zijn beleggingsprogramma's, geen bankrekeningen. Een vermeld mandaatsrendement is geen gegarandeerde rente, kan worden opgeschort of herzien en valt niet onder de depositogarantie. Bitcoin mag uitsluitend als kanaal voor storting of uitbetaling worden gebruikt; SBDV exploiteert geen cryptobeurs en houdt geen privésleutels van cliënten aan. Overboekingen in Bitcoin zijn onomkeerbaar.\n\nAlle cliënten ondergaan cliëntenonderzoek, onderzoek naar het uiteindelijk belang en antiwitwastoetsing, in overeenstemming met de Zwitserse wet tegen het witwassen van geld (AMLA). Uiteindelijk belanghebbenden worden geïdentificeerd tot natuurlijke personen. De toetsing geldt ongeacht het land van oprichting van de cliënt.\n\nDiensten van belegging en portefeuillebeheer kunnen een passende vergunning vereisen of via gereguleerde partners worden verleend. SBDV beroept zich niet op een bankvergunning van FINMA. Goedkeuring van een faciliteit of een mandaat is discretionair.\n\nPersonen en entiteiten in volledig gesanctioneerde rechtsgebieden kunnen niet als cliënt worden aangenomen. Rechtsgebieden met een verhoogd risico kunnen aan verscherpt cliëntenonderzoek worden onderworpen, in plaats van automatisch te worden geweigerd.\n\nRisicomededelingen: beleggingen brengen risico mee, met inbegrip van mogelijk verlies van de hoofdsom. In het verleden behaalde resultaten bieden geen indicatie voor toekomstige resultaten. Deze website is geen juridisch, fiscaal of beleggingsadvies.",
-    "investorRelationsTitle": "Investeerdersrelaties",
-    "investorRelationsIntro": "Governance, transparantie en institutionele communicatie.",
-    "investorRelationsBody": "SBDV hecht aan transparantie jegens haar cliënten en belanghebbenden. Jaarverslagen, governancebeleid en institutionele mededelingen worden hier gepubliceerd zodra zij beschikbaar zijn. Voor institutionele vragen kunt u contact opnemen met ons team voor investeerdersrelaties via de contactpagina.",
-    "englishGoverns": "Engels is de leidende taal van deze pagina. De vertaling is bedoeld om te lezen. De Engelse tekst is de tekst die geldt."
+    "regulatoryIntro": "Swiss Bullion Depository Vault AG, UID CHE-218.964.179, is gevestigd aan de Bahnhofstrasse 45, 8001 Zürich. Zij is geen Zwitserse bank, heeft geen FINMA-bankvergunning en is niet vergund om deposito's aan te nemen of te lenen.",
+    "regulatoryBody": "Swiss Bullion Depository Vault AG bewaart edelmetaal in de kluis en regelt gestructureerde kapitaalfaciliteiten voor gekwalificeerde ondernemingen. Capital Access is geen beschermd bankdeposito en valt niet onder depositogarantie. Een vennootschap die nog niet bij SBDV bewaart, kan pas na schriftelijke goedkeuring worden gevraagd een zekerheidsstelling van 4% van het goedgekeurde bedrag te storten. Dat geld is contractuele zekerheid, geen deposito op naam van de kredietnemer bij een bank en geen vergoeding. Een cliënt die al in aanmerking komend goud of zilver bewaart, betaalt die som niet. Het voorschot is beperkt tot 75% van het in aanmerking komende goud en 70% van het in aanmerking komende zilver, en het metaal blijft tot de aflossing op naam van de cliënt toegewezen. De rekening voor een overboeking staat in de faciliteitsovereenkomst voordat wordt overgemaakt. Voor het lezen van de voorwaarden en voor de aanvraag is geen betaling verschuldigd.\n\nVermogensmandaten voor particuliere cliënten zijn beleggingsprogramma's, geen bankrekeningen. Een genoemd mandaatrendement is geen gegarandeerde rente, kan worden gepauzeerd of herzien en valt niet onder depositogarantie. Bitcoin mag alleen dienen als weg voor storting of uitbetaling. SBDV exploiteert geen cryptobeurs en bewaart geen privésleutels van cliënten. Overboekingen in bitcoin zijn onherroepelijk.\n\nAlle cliënten doorlopen identificatie, vaststelling van de uiteindelijk belanghebbende en witwaspreventie volgens de Zwitserse witwaswet (GwG). Uiteindelijk belanghebbenden worden tot natuurlijke personen vastgesteld. De toetsing geldt ongeacht het land van oprichting.\n\nBeleggings- en vermogensbeheerdiensten kunnen een vergunning vereisen of via gereguleerde partners worden verleend. SBDV beroept zich niet op een FINMA-bankvergunning. Goedkeuring van een faciliteit of een mandaat is discretionair.\n\nPersonen en entiteiten in volledig gesanctioneerde rechtsgebieden kunnen niet worden toegelaten. Rechtsgebieden met een hoger risico kunnen versterkte zorgvuldigheid ondergaan.\n\nRisicowaarschuwing: een belegging brengt het risico van verlies van kapitaal mee. Resultaten uit het verleden zeggen niets over de toekomst. Deze website is geen juridisch, fiscaal of beleggingsadvies.",
+    "investorRelationsTitle": "Het huis",
+    "investorRelationsIntro": "De juridische identiteit van Swiss Bullion Depository Vault AG.",
+    "investorRelationsBody": "Swiss Bullion Depository Vault AG\nUID CHE-218.964.179\nHandelsregister CH-291.7.217.861-9\nBahnhofstrasse 45, 8001 Zürich, Zwitserland\n\nPeter B. Guggi, voorzitter\nLucas Gardner, directeur\n\nSBDV is geen bank en heeft geen FINMA-bankvergunning. De faciliteitsvoorwaarden en de regelgevende informatie staan op deze website. Voor het lezen is geen betaling verschuldigd.",
+    "englishGoverns": "Deze pagina wordt getoond in de taal die u hebt gekozen."
   },
   "login": {
     "title": "Klantlogin",
@@ -912,7 +919,7 @@
     },
     "capitalAccess": {
       "title": "Capital Access Requests",
-      "subtitle": "Review enterprise borrowing and investment applications against sovereign pools.",
+      "subtitle": "Beoordeel eerst de documenten en keur daarna goed. Een contante zekerheid van 4% geldt alleen als de aanvrager nog niet bewaart.",
       "empty": "No capital access requests submitted yet.",
       "review": "Mark Under Review",
       "onboarding": "Post-Approval Onboarding",
@@ -921,7 +928,7 @@
       "documents": "Documents uploaded",
       "reviewApprove": "Review & Approve",
       "approveModalTitle": "Approve & Assign Escrow",
-      "approveModalDesc": "Enter the escrow account the partner must use for the security deposit of",
+      "approveModalDesc": "Vul de escrowrekening in die de partner moet gebruiken voor de zekerheidsstelling van",
       "approveWithEscrow": "Approve & Send Escrow Details",
       "beneficiary": "Beneficiary",
       "assignedEscrow": "Assigned Escrow Account",
@@ -945,7 +952,7 @@
       "requestExtraDesc": "If the package is incomplete or unsatisfactory, ask the borrower to upload or replace files.",
       "extraNotesPlaceholder": "Describe what is missing or what must be corrected…",
       "requestExtra": "Request Extra Documents",
-      "approveWithEscrowTitle": "Approve & assign escrow (10% deposit)",
+      "approveWithEscrowTitle": "Goedkeuren en de rekening voor de zekerheidsstelling aanwijzen",
       "approveRequiresDocs": "All five required documents must be on file before you can approve.",
       "approveRequiresSubmit": "Borrower must click Submit Documents before you can approve.",
       "disburseBank": "Disbursement bank account",
@@ -968,7 +975,8 @@
       "sofMissing": "Borrower has not declared origin of the security deposit",
       "operatingCountry": "Operating country",
       "yearsOperating": "Years operating",
-      "enhancedDdHint": "Consider enhanced due diligence for this jurisdiction"
+      "enhancedDdHint": "Consider enhanced due diligence for this jurisdiction",
+      "approveMetalDesc": "Deze faciliteit is gedekt door bewaard metaal. Geen contante zekerheid en geen escrowrekening."
     },
     "settings": {
       "title": "Account Settings"
@@ -1029,46 +1037,49 @@
     "hero": {
       "badge": "Institutioneel kapitaalprogramma",
       "title": "Gestructureerd kapitaal voor gekwalificeerde ondernemingen",
-      "subtitle": "SBDV is geen bank. Een faciliteit is geen deposito en geen toezegging tot zij is goedgekeurd.",
+      "subtitle": "SBDV is geen bank en heeft geen FINMA-bankvergunning. Het lezen van deze voorwaarden en het aanvragen vergen geen betaling. Een faciliteit bestaat pas na schriftelijke goedkeuring.",
       "applyAccess": "Toegang aanvragen",
       "partnerLogin": "Account aanmelden",
-      "eligibility": "Operationele vennootschappen met ten minste twee jaar historie, gecontroleerde of beoordeelde jaarrekeningen, en een verzoek vanaf USD 500,000. Goedkeuring is discretionair.",
-      "collateralRule": "SBDV betaalt op een rekening die u opgeeft, dus het contante onderpand komt eerst. Huizen en andere lokale activa worden niet aanvaard. De 10% wordt pas na goedkeuring gevraagd. De escrowrekening wordt getoond voordat u betaalt. Het is uw geld, geen vergoeding, en het levert geen rente op. Na bevestiging wordt het volledige goedgekeurde bedrag overgemaakt. Bij volledige terugbetaling wordt het ongebruikte saldo teruggegeven. Bij wanbetaling kan het worden verrekend met wat achterstallig is. Een aanvraag is geen toezegging om te lenen."
+      "eligibility": "Werkzame vennootschappen met minstens twee jaar bestaan, gecontroleerde of beoordeelde jaarrekening en een aanvraag vanaf USD 500.000. Goedkeuring is discretionair.",
+      "collateralRule": "Voor registratie en aanvraag is geen betaling verschuldigd. Als u nog niet bij SBDV bewaart, wordt een zekerheidsstelling van 4% van het goedgekeurde bedrag pas na schriftelijke goedkeuring gevraagd, en alleen op de rekening die in de faciliteitsovereenkomst staat voordat u overmaakt. Het is geen vergoeding. Als u al in aanmerking komend goud of zilver bij SBDV bewaart, is er geen contante zekerheid: het voorschot is tot 75% van dat goud of 70% van dat zilver, en het metaal blijft tot de aflossing op uw naam. Een aanvraag is geen toezegging om te lenen.",
+      "companyDoor": "Registreren als klant zonder kluis",
+      "metalDoor": "Registreren als kluiscliënt",
+      "readTerms": "Faciliteitsvoorwaarden lezen"
     },
     "features": {
       "title": "Waarom ondernemingen voor Capital Access kiezen",
       "subtitle": "Een gedisciplineerde toegang tussen gekwalificeerde vennootschappen en kapitaal in lijn met het mandaat — helderheid eerst.",
-      "globalPoolsTitle": "Pools in lijn met het mandaat",
-      "globalPoolsDesc": "Gedeeltelijk bekendgemaakte pools van soevereine graad, afgestemd op sector en regio — geen ondoorzichtige veiling.",
+      "globalPoolsTitle": "Twee wegen",
+      "globalPoolsDesc": "Een vennootschapsfaciliteit met een zekerheidsstelling van 4%, of een voorschot tegen metaal dat u al bij SBDV bewaart. Eén aanvrager gebruikt één weg.",
       "flexibleTermsTitle": "Voorwaarden waarop u kunt plannen",
       "flexibleTermsDesc": "Bepaal bedrag, looptijd en maandelijkse of jaarlijkse rente over 1–10 jaar, met live berekeningen.",
       "enterpriseFocusTitle": "Gebouwd voor operationele vennootschappen",
       "enterpriseFocusDesc": "Voor gevestigde ondernemingen met gecontroleerde of beoordeelde cijfers en een duidelijke beleggingsthese.",
-      "structuredSecurityTitle": "Proces zonder verrassing",
-      "structuredSecurityDesc": "10% contant onderpand voordat enig bedrag wordt overgemaakt. Huizen en andere lokale activa worden niet aanvaard. Volledige KYC/UBO-controle en discretionaire goedkeuring volgens Zwitserse witwasnormen."
+      "structuredSecurityTitle": "De zekerheid staat vooraf vast",
+      "structuredSecurityDesc": "4% in contanten alleen als u niet bij SBDV bewaart, en pas na schriftelijke goedkeuring. Als u al bewaart, is het metaal de zekerheid en wordt geen contante zekerheid genomen."
     },
     "howItWorks": {
       "title": "How It Works",
       "registerTitle": "Register as a Capital Partner",
       "registerDesc": "Create your enterprise account and verify your company credentials.",
       "exploreTitle": "Explore Available Pools",
-      "exploreDesc": "Bekijk gedeeltelijk bekendgemaakte soevereine kapitaalpools die aansluiten bij uw sector en regio.",
+      "exploreDesc": "Kies de vennootschapsfaciliteit of de metaalfaciliteit en noem bedrag, looptijd en aflossing.",
       "structureTitle": "Structure Your Request",
       "structureDesc": "Bepaal het kredietbedrag, de looptijd en de terugbetalingsfrequentie, en bekijk de live renteberekeningen.",
       "submitTitle": "Submit Company Profile",
-      "submitDesc": "Provide financials, investment areas, and accept the 10% security deposit condition.",
+      "submitDesc": "Noem het land van oprichting en van de werkzaamheid, de cijfers, de tekenbevoegde en de weg van de zekerheid.",
       "decisionTitle": "Await Institutional Review",
       "decisionDesc": "Your application enters our review queue. You will receive approval or rejection notification.",
       "prepareTitle": "Stel uw dossier samen",
       "prepareDesc": "Bevestig de ontvankelijkheid (onderneming, USD 500,000+, twee jaar activiteit). Verzamel uittreksels uit het lokale register, gecontroleerde jaarrekeningen en gegevens van de uiteindelijk belanghebbende. Lokale equivalenten en beëdigde vertalingen worden aanvaard.",
       "reviewTitle": "Institutionele toetsing",
       "reviewDesc": "SBDV beoordeelt documenten, uiteindelijk belanghebbenden en de aansluiting bij het mandaat. Goedkeuring is discretionair en is geen toezegging tot zij is verleend.",
-      "depositTitle": "Zekerheidsstelling en herkomst van gelden",
-      "depositDesc": "Na de KYC-beoordeling wordt de escrowrekening getoond. Maak 10% van het goedgekeurde bedrag over. Het is uw geld, aangehouden als zekerheid, geen vergoeding. SBDV maakt daarna het volledige goedgekeurde bedrag over naar de rekening die u opgeeft.",
+      "depositTitle": "Zekerheid, pas na de goedkeuring",
+      "depositDesc": "Als u niet bij SBDV bewaart, wordt de rekening voor de zekerheidsstelling van 4% getoond na de goedkeuring en na aanvaarding van deze voorwaarden. Daarvoor wordt geen betaling gevraagd. Als u al bewaart, wordt geen contant geld gevraagd.",
       "kycTitle": "KYC- en sanctietoetsing",
       "kycDesc": "Zwitserse AML-toetsing van de vennootschap, de tekenbevoegden en de uiteindelijk belanghebbenden. Rechtsgebieden met verhoogd risico krijgen verscherpt cliëntenonderzoek.",
       "fundingTitle": "Uitbetaling en terugbetaling",
-      "fundingDesc": "Geef een bankrekening op naam van de kredietnemer op (SWIFT plus IBAN of lokaal rekeningnummer). Het volledige goedgekeurde bedrag wordt in USD pas vrijgegeven nadat het contante onderpand van 10% is bevestigd. Betaal terug volgens het schema in uw dashboard."
+      "fundingDesc": "Noem een bankrekening op naam van de kredietnemer. Gelden, als ze worden vrijgegeven, gaan daarheen in Amerikaanse dollars. Bij de metaalweg blijft het metaal verpand tot de aflossing."
     },
     "nav": {
       "overview": "Overview",
@@ -1082,14 +1093,14 @@
     },
     "overview": {
       "title": "Welcome to Capital Access",
-      "subtitle": "Explore sovereign capital pools and submit mandate-aligned investment requests for your enterprise.",
+      "subtitle": "Kies de vennootschapsfaciliteit of de metaalfaciliteit en dien daarna het verzoek in.",
       "featuredPools": "Featured Capital Pools",
       "ctaTitle": "Ready to structure your request?",
       "ctaDesc": "Complete a guided application with live interest calculation and security deposit terms."
     },
     "steps": {
       "explore": "Explore Pools",
-      "exploreDesc": "Review partially disclosed sovereign capital available for enterprise deployment.",
+      "exploreDesc": "Kies de vennootschapsfaciliteit, met een zekerheidsstelling van 4% na de goedkeuring, of een voorschot tegen metaal dat al bij SBDV is bewaard.",
       "apply": "Structure Request",
       "applyDesc": "Define amount, term, and repayment schedule with live APR calculation.",
       "review": "Institutional Review",
@@ -1097,13 +1108,13 @@
     },
     "pools": {
       "title": "Available Capital Pools",
-      "subtitle": "Institutional sovereign pools with limited disclosure. Full entity details available upon approved access."
+      "subtitle": "Faciliteiten worden vóór de goedkeuring beoordeeld. De volledige voorwaarden staan voordat u aanvraagt."
     },
     "conditions": {
       "title": "Access Conditions",
       "minimumOperatingYears": "Minimum 2 years of operating history",
       "auditedFinancials": "Audited or reviewed financial statements required",
-      "securityDeposit": "10% contant onderpand na goedkeuring, voordat het goedgekeurde bedrag wordt overgemaakt",
+      "securityDeposit": "Zekerheidsstelling van 4% na de goedkeuring als u nog niet bewaart; geen contante zekerheid als u al bewaart",
       "kycAml": "Full KYC/AML and beneficial ownership disclosure",
       "mandateAlignment": "Investment thesis must align with pool mandate",
       "minimumTicket": "Minimum request USD $500,000",
@@ -1119,7 +1130,7 @@
     "startRequest": "Start Capital Request",
     "register": {
       "title": "Registreren voor Capital Access",
-      "subtitle": "Create your enterprise partner account to explore sovereign capital pools.",
+      "subtitle": "Open de rekening van de vennootschap vanuit elk toegelaten land.",
       "fullName": "Volledige naam",
       "phone": "Telefoon (optioneel)",
       "submit": "Capital Access-account aanmaken",
@@ -1129,7 +1140,11 @@
       "welcomeTitle": "Account met succes aangemaakt",
       "welcomeBody": "Uw account voor Capital Access is gereed. Meld u aan met het e-mailadres en het wachtwoord dat u zojuist hebt aangemaakt.",
       "welcomeEmail": "E-mail",
-      "goToLogin": "Naar aanmelden"
+      "goToLogin": "Naar aanmelden",
+      "whichDoor": "Bewaart u al metaal bij SBDV?",
+      "doorCompany": "Registreren als klant zonder kluis",
+      "doorMetal": "Registreren als kluiscliënt",
+      "doorLocked": "Deze registratie geldt voor één faciliteit."
     },
     "request": {
       "title": "Kapitaalaanvraag",
@@ -1160,7 +1175,7 @@
       "financialsPlaceholder": "Summarize audited financials — revenue trend, EBITDA, debt/equity ratio, key assets…",
       "review": "Review & Submit",
       "selectedPool": "Selected Pool",
-      "termsAccept": "Ik aanvaard dat na goedkeuring 10% contant onderpand naar de escrowrekening wordt overgemaakt voordat het goedgekeurde bedrag wordt verzonden. Het is geen vergoeding. Ik aanvaard de institutionele beoordeling en bevestig dat alle verstrekte informatie juist is.",
+      "termsAccept": "Ik heb de faciliteitsvoorwaarden gelezen. Ik begrijp dat nu geen betaling verschuldigd is. Bij een vennootschapsfaciliteit wordt een zekerheidsstelling van 4% pas na schriftelijke goedkeuring gevraagd. Bij een metaalfaciliteit wordt geen contante zekerheid genomen.",
       "back": "Terug",
       "continue": "Verder",
       "submit": "Submit Application",
@@ -1168,7 +1183,7 @@
       "submittedTitle": "Application Submitted",
       "submittedDesc": "Your capital access request is now under institutional review. You will be notified upon approval or rejection.",
       "viewApplications": "View My Applications",
-      "termsAcceptBefore": "Ik aanvaard dat na goedkeuring 10% contant onderpand naar de escrowrekening wordt overgemaakt voordat het goedgekeurde bedrag wordt verzonden. Het is geen vergoeding. Ik aanvaard de",
+      "termsAcceptBefore": "Ik heb de faciliteitsvoorwaarden gelezen. Nu is geen betaling verschuldigd. Ik aanvaard de",
       "termsAcceptAfter": ", the institutional review process, and I confirm that all information provided is accurate.",
       "operatingCountry": "Principal operating country",
       "yearsOperating": "Years of operation",
@@ -1191,7 +1206,13 @@
       "capitalControls": "I confirm that the laws of our home country allow this company to take foreign USD capital, including any central-bank or capital-control rules that apply to us.",
       "sanctionsAttest": "I confirm that the company, its signatories, and its beneficial owners are not sanctioned persons and are not located, organised, or resident in a comprehensively sanctioned jurisdiction.",
       "sanctionedCountry": "SBDV cannot onboard applicants in comprehensively sanctioned jurisdictions.",
-      "attestationsRequired": "Please complete all attestations before submitting."
+      "attestationsRequired": "Please complete all attestations before submitting.",
+      "trackLabel": "Welke zekerheid geldt",
+      "trackCash": "Klant zonder kluis",
+      "trackCashDesc": "U bewaart niet bij SBDV. Een zekerheidsstelling van 4% wordt pas na schriftelijke goedkeuring gevraagd. Nu is geen betaling verschuldigd.",
+      "trackMetal": "Kluiscliënt",
+      "trackMetalDesc": "U bewaart al in aanmerking komend goud of zilver bij SBDV. Geen contante zekerheid. Het voorschot is tot 75% van dat goud of 70% van dat zilver.",
+      "trackMetalShort": "Geen contante zekerheid. Het metaal is verpand."
     },
     "applications": {
       "title": "My Applications",
@@ -1213,13 +1234,13 @@
     },
     "onboarding": {
       "title": "Faciliteitsoverzicht",
-      "subtitle": "Complete onboarding to activate your approved capital facility.",
+      "subtitle": "Rond de documenten en de toelating af om de kapitaalfaciliteit te activeren.",
       "noFacility": "No Active Facility",
       "noFacilityDesc": "Once your capital access application is approved, your facility dashboard will appear here.",
       "progress": "Onboarding Progress",
       "rm": "Relationship Manager",
       "escrowTitle": "Security Deposit — Escrow Instructions",
-      "escrowDesc": "SBDV betaalt op een rekening die u opgeeft, dus dit geld komt eerst. Huizen en andere lokale activa worden niet aanvaard. Maak exact 10% van het goedgekeurde bedrag over naar de escrowrekening hieronder. Het is uw geld, geen vergoeding, en het levert geen rente op. Nadat SBDV het heeft bevestigd, wordt het volledige goedgekeurde bedrag overgemaakt. Gebruik de betalingsreferentie exact zoals vermeld.",
+      "escrowDesc": "Deze rekening wordt pas na schriftelijke goedkeuring getoond. Maak het getoonde bedrag van de zekerheidsstelling over. Het is geen vergoeding. Maak niets over voordat deze instructie verschijnt.",
       "bank": "Bank",
       "account": "Account Name",
       "wireReference": "Wire / Transfer Reference",
@@ -1231,7 +1252,7 @@
       "documentsTitle": "Required Documentation",
       "documentsDesc": "Upload all four documents within 14 business days of deposit confirmation.",
       "upload": "Upload",
-      "docsCompleteNote": "All documents uploaded. Our team will review and advance your onboarding.",
+      "docsCompleteNote": "Alle documenten zijn geüpload. Ons team beoordeelt ze. In deze stap is geen betaling verschuldigd.",
       "disbursementPending": "Disbursement in Progress",
       "disbursementDesc": "Your facility has cleared compliance. Capital release is being processed.",
       "disbursedOn": "Disbursed on",
@@ -1311,14 +1332,15 @@
       "uboEmpty": "Add at least one beneficial owner before submitting documents.",
       "uboSaved": "Beneficial owner saved.",
       "sofTitle": "Origin of the security deposit",
-      "sofDesc": "Declare how the 10% cash collateral will be funded. The remitting account must be in the borrower’s name.",
+      "sofDesc": "Verklaar hoe een eventuele contante zekerheid wordt gefinancierd. De opdrachtgevende rekening moet op naam van de kredietnemer staan. Een metaalfaciliteit heeft geen contante zekerheid.",
       "sofSource": "Source of funds",
       "sofOperating": "Company operating cash",
       "sofShareholder": "Shareholder loan",
       "sofAssetSale": "Sale of assets",
       "sofOther": "Other",
       "sofDetail": "Explanation",
-      "sofRequired": "Origin of funds is required before you submit the deposit."
+      "sofRequired": "Origin of funds is required before you submit the deposit.",
+      "kycReviewNote": "De KYC-beoordeling loopt. Nu is geen betaling verschuldigd."
     },
     "statement": {
       "liveFacility": "Live facility",
@@ -1349,15 +1371,15 @@
     "facilityTerms": {
       "eyebrow": "Programma Capital Access",
       "pageTitle": "Voorwaarden van de faciliteit",
-      "intro": "Deze voorwaarden beheersen uw kapitaalfaciliteit, met inbegrip van de zekerheidsstelling van 10%, de rente, de terugbetaling, het verzuim en Zwitsers toepasselijk recht. Lees ze volledig voordat u aanvaardt.",
+      "intro": "Deze voorwaarden regelen uw kapitaalfaciliteit, met inbegrip van de zekerheidsstelling van 4% of het pand op het bewaarde metaal, de rente, de aflossing, het verzuim en het Zwitserse recht. Lees ze volledig voordat u aanvaardt. Voor het lezen is geen betaling verschuldigd.",
       "versionLabel": "Document",
       "effectiveLabel": "Van kracht",
       "languageLabel": "Leidende taal",
-      "governingNote": "Engels is de leidende taal van dit instrument. Een vertaling, indien verstrekt, strekt uitsluitend tot gemak.",
+      "governingNote": "Deze voorwaarden worden getoond in de taal die u hebt gekozen.",
       "contents": "Inhoud",
       "acceptBefore": "Ik heb gelezen en aanvaard de",
       "linkLabel": "Voorwaarden van de faciliteit",
-      "acceptAfter": ", met inbegrip van de zekerheidsstelling van 10%, de rente, de terugbetaling, het verzuim en de bepalingen inzake toepasselijk recht, en ik bevestig dat ik bevoegd ben de kredietnemer te binden.",
+      "acceptAfter": ", met inbegrip van de zekerheidsstelling of het pand op het metaal, de rente, de aflossing, het verzuim en het toepasselijke recht, en ik bevestig dat ik de kredietnemer mag binden.",
       "acceptedNote": "Voorwaarden van de faciliteit aanvaard",
       "print": "Afdrukken of opslaan",
       "backFacility": "Terug naar het faciliteitsoverzicht"
@@ -1386,8 +1408,43 @@
     "settings": {
       "title": "Account Settings"
     },
-    "yearlyInterestNote": "De jaarlijkse rente wordt alleen over het goedgekeurde bedrag berekend, niet over het contante onderpand.",
-    "amountDisbursed": "Uitbetaald bedrag"
+    "yearlyInterestNote": "De jaarlijkse rente wordt alleen over het goedgekeurde bedrag berekend, niet over een contante zekerheid.",
+    "amountDisbursed": "Uitbetaald bedrag",
+    "doors": {
+      "readTerms": "Faciliteitsvoorwaarden lezen",
+      "register": "Registreren voor deze faciliteit",
+      "noPayment": "Voor het lezen van deze pagina en voor de aanvraag is geen betaling verschuldigd.",
+      "company": {
+        "title": "Klant zonder kluis",
+        "whoTitle": "Voor wie",
+        "who": "Een werkzame vennootschap die geen metaal bij SBDV bewaart. Minstens twee jaar werkzaamheid, gecontroleerde of beoordeelde jaarrekening en een aanvraag vanaf USD 500.000. Dit is geen particuliere lening.",
+        "securityTitle": "De zekerheid",
+        "security": "Na schriftelijke goedkeuring, en pas na aanvaarding van deze voorwaarden, betaalt de vennootschap 4% van het goedgekeurde bedrag in Amerikaanse dollars. Het is geen vergoeding. De rekening staat in de faciliteitsovereenkomst voordat wordt overgemaakt. Wijst SBDV vóór de uitbetaling af, behalve bij wanprestatie of een mislukte nalevingscontrole door de gegevens van de aanvrager, dan wordt het bedrag volledig terugbetaald.",
+        "stepsTitle": "De vijf stappen",
+        "steps": [
+          "De vennootschap, haar eigenaren en de documenten indienen.",
+          "SBDV beoordeelt het dossier. Goedkeuring is discretionair.",
+          "De schriftelijke goedkeuring is nog geen betalingsbelofte.",
+          "De faciliteitsvoorwaarden aanvaarden. Pas dan wordt de zekerheidsstelling van 4% gevraagd.",
+          "Een bankrekening op naam van de vennootschap noemen. Gelden, als ze worden vrijgegeven, gaan daarheen."
+        ]
+      },
+      "metal": {
+        "title": "Kluiscliënt",
+        "whoTitle": "Voor wie",
+        "who": "Een cliënt die al in aanmerking komend goud of zilver bij SBDV bewaart, via een werkzame vennootschap met minstens twee jaar bestaan, gecontroleerde of beoordeelde jaarrekening en een aanvraag vanaf USD 500.000.",
+        "securityTitle": "De zekerheid",
+        "security": "Geen contante zekerheid. Het voorschot is tot 75% van het in aanmerking komende goud en 70% van het in aanmerking komende zilver dat al in de kluis ligt. Het metaal blijft op naam van de cliënt toegewezen en is verpand tot de aflossing. Een prijsdaling kan meer metaal of een gedeeltelijke aflossing vergen. Wordt geen voorschot verstrekt, dan wordt het metaal niet verpand.",
+        "stepsTitle": "De vijf stappen",
+        "steps": [
+          "In aanmerking komend goud of zilver is al bij SBDV bewaard.",
+          "De vennootschap, haar eigenaren en de documenten indienen.",
+          "SBDV beoordeelt het dossier. De schriftelijke goedkeuring is nog geen betalingsbelofte.",
+          "Het metaal wordt verpand. Er wordt geen contante zekerheid gevraagd.",
+          "Een bankrekening op naam van de vennootschap noemen. Het metaal blijft verpand tot de aflossing."
+        ]
+      }
+    }
   },
   "chat": {
     "open": "Vraag SBDV",

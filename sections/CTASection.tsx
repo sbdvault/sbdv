@@ -32,17 +32,23 @@ export default function CTASection() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
+              href={getLocalizedHref("/vault-security")}
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-gold/50 text-off-white font-body font-medium rounded-sm hover:border-gold hover:text-gold transition-all duration-300"
+            >
+              {t("cta.privateButton")}
+            </Link>
+            <Link
+              href={getLocalizedHref("/wealth-investment")}
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-gold/50 text-off-white font-body font-medium rounded-sm hover:border-gold hover:text-gold transition-all duration-300"
+            >
+              {t("cta.wealthButton")}
+            </Link>
+            <Link
               href={getLocalizedHref("/capital-access")}
               className="gold-shimmer inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold text-charcoal font-body font-medium rounded-sm hover:bg-gold/90 transition-all duration-300"
             >
               {t("cta.capitalButton")}
               <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link
-              href={getLocalizedHref("/membership")}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-gold/50 text-off-white font-body font-medium rounded-sm hover:border-gold hover:text-gold transition-all duration-300"
-            >
-              {t("cta.privateButton")}
             </Link>
           </div>
         </motion.div>

@@ -12,6 +12,7 @@ import {
   MAX_TERM_YEARS,
   MIN_OPERATING_YEARS,
   type RepaymentFrequency,
+  type SecurityTrack,
 } from "@/lib/capital-access";
 import { ACCOUNTING_STANDARDS } from "@/lib/capital-access-onboarding";
 import { isSanctionedCountry } from "@/lib/countries";
@@ -32,14 +33,22 @@ export default function CapitalAccessRequestPage() {
   const params = useParams();
   const searchParams = useSearchParams();
   const preselectedPool = searchParams.get("pool");
+  const preselectedTrack = searchParams.get("track") === "metal" ? "METAL" : "CASH";
 
   const [step, setStep] = useState(0);
   const [pools, setPools] = useState<Pool[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [submitted, setSubmitted] = useState(false);
-
   const [poolId, setPoolId] = useState(preselectedPool || "");
+  const [securityTrack, setSecurityTrack] = useState<SecurityTrack>(preselectedTrack);
+
+  useEffect(() => {
+    const query = searchParams.get("track");
+    const stored = sessionStorage.getItem("sbdv-capital-track");
+    if (query === "metal" || (!query && stored === "METAL")) setSecurityTrack("METAL");
+    if (query === "company") setSecurityTrack("CASH");
+  }, [searchParams]);
   const [requestedAmountUsd, setRequestedAmountUsd] = useState("1000000");
   const [termYears, setTermYears] = useState("5");
   const [repaymentFrequency, setRepaymentFrequency] = useState<RepaymentFrequency>("YEARLY");
@@ -79,8 +88,8 @@ export default function CapitalAccessRequestPage() {
     const amount = parseFloat(requestedAmountUsd) || 0;
     const term = parseInt(termYears, 10) || 1;
     if (amount < MIN_REQUEST_USD) return null;
-    return calculateCapitalTerms(amount, term, repaymentFrequency);
-  }, [requestedAmountUsd, termYears, repaymentFrequency]);
+    return calculateCapitalTerms(amount, term, repaymentFrequency, securityTrack);
+  }, [requestedAmountUsd, termYears, repaymentFrequency, securityTrack]);
 
   const selectedPool = pools.find((p) => p.id === poolId);
 
@@ -117,6 +126,7 @@ export default function CapitalAccessRequestPage() {
           requestedAmountUsd: parseFloat(requestedAmountUsd),
           termYears: parseInt(termYears, 10),
           repaymentFrequency,
+          securityTrack,
           termsAccepted,
         }),
       });
@@ -208,6 +218,15 @@ export default function CapitalAccessRequestPage() {
               {t("capitalAccess.request.loanTerms")}
             </h2>
 
+            <div className="border border-charcoal/15 rounded-sm p-4">
+              <p className="font-body text-sm text-charcoal">
+                {t(securityTrack === "CASH" ? "capitalAccess.request.trackCash" : "capitalAccess.request.trackMetal")}
+              </p>
+              <p className="font-body text-xs text-charcoal/60 mt-1">
+                {t(securityTrack === "CASH" ? "capitalAccess.request.trackCashDesc" : "capitalAccess.request.trackMetalDesc")}
+              </p>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div>
                 <label className="block text-sm font-body font-medium text-charcoal mb-2">
@@ -280,7 +299,9 @@ export default function CapitalAccessRequestPage() {
                   <div>
                     <p className="font-body text-charcoal/50">{t("capitalAccess.securityDeposit")}</p>
                     <p className="font-heading font-semibold text-charcoal">
-                      {formatUsd(terms.securityDepositUsd)} ({terms.securityDepositPct}%)
+                      {securityTrack === "METAL"
+                        ? t("capitalAccess.request.trackMetalShort")
+                        : `${formatUsd(terms.securityDepositUsd)} (${terms.securityDepositPct}%)`}
                     </p>
                   </div>
                   <div>
@@ -501,7 +522,7 @@ export default function CapitalAccessRequestPage() {
                 <div><p className="text-charcoal/50">{t("capitalAccess.request.amount")}</p><p className="font-medium">{formatUsd(parseFloat(requestedAmountUsd))}</p></div>
                 <div><p className="text-charcoal/50">{t("capitalAccess.request.term")}</p><p className="font-medium">{termYears} {t("capitalAccess.request.years")}</p></div>
                 <div><p className="text-charcoal/50">{t("capitalAccess.request.apr")}</p><p className="font-medium">{terms?.interestRatePct}%</p></div>
-                <div><p className="text-charcoal/50">{t("capitalAccess.securityDeposit")}</p><p className="font-medium">{formatUsd(terms?.securityDepositUsd || 0)}</p></div>
+                <div><p className="text-charcoal/50">{t("capitalAccess.securityDeposit")}</p><p className="font-medium">{securityTrack === "METAL" ? t("capitalAccess.request.trackMetalShort") : formatUsd(terms?.securityDepositUsd || 0)}</p></div>
               </div>
               <div><p className="text-charcoal/50">{t("capitalAccess.request.companyName")}</p><p className="font-medium">{companyName}</p></div>
               <div><p className="text-charcoal/50">{t("capitalAccess.request.country")}</p><p className="font-medium">{country}</p></div>
